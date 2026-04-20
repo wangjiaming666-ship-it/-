@@ -1,0 +1,46 @@
+[
+  {
+    "rule_id": "gastroenterology_bilirubin_risk",
+    "lab_name": "bilirubin_total_24h",
+    "lab_purpose": "评估肝胆代谢受损与胆汁淤积风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "value": 2.0,
+      "operator": ">",
+      "unit": "mg/dL"
+    },
+    "high_risk_threshold": {
+      "value": 3.0,
+      "operator": ">",
+      "unit": "mg/dL"
+    },
+    "risk_message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+    "action": {
+      "moderate_risk": "降低肝代谢负担较重药物的优先级，并提示复核肝胆状态。",
+      "high_risk": "将病例标记为高肝胆风险，优先避免高肝毒性和高肝代谢负担组合。"
+    },
+    "threshold_basis": "结合消化专科样本分布（P75 约 1.8）和常用胆红素风险阈值设定。"
+  },
+  {
+    "rule_id": "gastroenterology_inr_risk",
+    "lab_name": "inr_24h",
+    "lab_purpose": "评估肝合成功能受损及消化道出血风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "value": 1.5,
+      "operator": ">",
+      "unit": ""
+    },
+    "high_risk_threshold": {
+      "value": 2.0,
+      "operator": ">",
+      "unit": ""
+    },
+    "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
+    "action": {
+      "moderate_risk": "对抗凝、侵袭性操作相关或易致出血方案降权。",
+      "high_risk": "将病例标记为高出血风险，暂停优先推荐相关高风险方案。"
+    },
+    "threshold_basis": "参考消化专科病例 INR 分布与常用肝病凝血风险阈值。"
+  }
+]

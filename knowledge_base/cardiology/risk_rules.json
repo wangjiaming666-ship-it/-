@@ -1,0 +1,48 @@
+[
+  {
+    "rule_id": "cardiology_potassium_risk",
+    "lab_name": "potassium_24h",
+    "lab_purpose": "评估电解质紊乱导致的心律失常风险",
+    "threshold_type": "range",
+    "moderate_risk_threshold": {
+      "low": 3.5,
+      "high": 5.0,
+      "unit": "mmol/L",
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "low": 3.0,
+      "high": 5.5,
+      "unit": "mmol/L",
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+    "action": {
+      "moderate_risk": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。",
+      "high_risk": "将相关方案标记为高风险，不作为优先推荐，建议先纠正电解质后再决策。"
+    },
+    "threshold_basis": "结合心血管专科样本分布与临床常用参考范围设定。"
+  },
+  {
+    "rule_id": "cardiology_inr_risk",
+    "lab_name": "inr_24h",
+    "lab_purpose": "评估抗凝相关出血风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "value": 1.5,
+      "operator": ">",
+      "unit": ""
+    },
+    "high_risk_threshold": {
+      "value": 2.0,
+      "operator": ">",
+      "unit": ""
+    },
+    "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+    "action": {
+      "moderate_risk": "对抗凝和联用抗血小板方案降权，并提示人工复核。",
+      "high_risk": "暂停优先推荐强化抗凝方案，标记为高出血风险病例。"
+    },
+    "threshold_basis": "参考心血管病例 INR 分布和临床凝血风险经验阈值。"
+  }
+]

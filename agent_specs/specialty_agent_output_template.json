@@ -1,0 +1,48 @@
+{
+  "template_name": "specialty_agent_output_template",
+  "template_version": "1.0",
+  "description": "六专科智能体统一输出模板",
+  "specialty_name": "肾内/泌尿",
+  "recommended_drugs_topk": [
+    {
+      "rank": 1,
+      "drug_name": "tamsulosin",
+      "confidence": 0.82,
+      "reason": "该药与当前泌尿梗阻相关核心病种匹配，且在本专科知识库中属于高频核心治疗药。 "
+    },
+    {
+      "rank": 2,
+      "drug_name": "ceftriaxone",
+      "confidence": 0.76,
+      "reason": "该药在泌尿系统感染和肾内相关感染病例中出现频率较高，适合作为候选治疗药物。 "
+    },
+    {
+      "rank": 3,
+      "drug_name": "furosemide",
+      "confidence": 0.63,
+      "reason": "该药在肾内相关液体负荷或梗阻伴容量管理场景中可作为辅助候选。 "
+    }
+  ],
+  "recommendation_reasons": {
+    "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+    "knowledge_support": "候选药物来自本专科 knowledge_base 中标注为核心治疗药的条目。",
+    "comorbidity_constraint": "已结合共病信息，对可能与其他系统疾病冲突的药物进行了降级处理。 "
+  },
+  "risk_alerts": [
+    {
+      "lab_name": "creatinine_24h",
+      "risk_level": "high",
+      "triggered_rule_id": "nephrology_creatinine_risk",
+      "message": "肌酐升高提示肾功能受损，需警惕肾毒性药物和需大量肾排泄药物。 ",
+      "action_taken": "已降低相关高风险药物的推荐优先级。 "
+    }
+  ],
+  "avoid_or_low_priority_drugs": [
+    {
+      "drug_name": "potential_nephrotoxic_drugs",
+      "reason": "当前检验值提示肾功能受损，高风险药物不应优先推荐。 "
+    }
+  ],
+  "overall_confidence": 0.79,
+  "summary_reason": "该专科建议以肾内/泌尿核心病种为主线生成候选方案，并依据风险规则对潜在高风险药物进行了降权。 "
+}

@@ -1,0 +1,55 @@
+{
+  "template_name": "specialty_agent_input_template",
+  "template_version": "1.0",
+  "description": "六专科智能体统一输入模板",
+  "patient_info": {
+    "subject_id": "10000001",
+    "hadm_id": "20000001",
+    "gender": "F",
+    "age": 68
+  },
+  "case_context": {
+    "primary_diagnosis": "Acute kidney failure, unspecified",
+    "specialty_name": "肾内/泌尿",
+    "specialty_related_diagnoses": [
+      "Acute kidney failure, unspecified",
+      "Hydronephrosis"
+    ],
+    "comorbidity_list": [
+      "Type 2 diabetes mellitus without complications",
+      "Essential (primary) hypertension"
+    ]
+  },
+  "key_labs": {
+    "creatinine_24h": 2.3,
+    "bun_24h": 26.0,
+    "potassium_24h": 4.8,
+    "sodium_24h": 141.0,
+    "glucose_24h": 165.0,
+    "inr_24h": null,
+    "bilirubin_total_24h": 1.0
+  },
+  "specialty_knowledge": {
+    "knowledge_base_dir": "c:\\Users\\wjm\\Desktop\\毕业论文\\knowledge_base\\nephrology",
+    "disease_catalog_file": "disease_catalog.csv",
+    "drug_catalog_file": "drug_catalog.csv",
+    "risk_rules_file": "risk_rules.json",
+    "disease_drug_map_file": "disease_drug_map.csv",
+    "example_cases_file": "example_cases.json"
+  },
+  "task_instruction": {
+    "goal": "根据病例信息和本专科知识库生成该专科的候选用药建议",
+    "required_outputs": [
+      "recommended_drugs_topk",
+      "recommendation_reasons",
+      "risk_alerts",
+      "avoid_or_low_priority_drugs",
+      "overall_confidence"
+    ],
+    "constraints": [
+      "优先依据本专科知识库中的核心病种和核心治疗药生成建议",
+      "共病仅作为约束条件，不应覆盖本专科核心问题",
+      "若关键检验触发风险规则，应输出风险提示并下调相关药物优先级"
+    ]
+  }
+}
