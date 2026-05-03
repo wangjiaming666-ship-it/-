@@ -37,7 +37,7 @@ def main() -> None:
     diagnosis_agent = DiagnosisAgent()
     specialty_agent = SpecialtyAgent(paths, llm_settings)
     mdt_agent = MDTDiscussionAgent()
-    safety_agent = SafetyAgent(paths)
+    safety_agent = SafetyAgent(paths, llm_settings)
 
     transcript: list[DialogueMessage] = []
     routing = diagnosis_agent.route(case_record)
