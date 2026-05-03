@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any
 
 import pandas as pd
@@ -48,16 +48,30 @@ class KnowledgeBaseIndex:
         if row.empty:
             raise KeyError(f"未找到专科知识库索引: {specialty_name}")
         item = row.iloc[0]
+        folder_name = str(item["folder_name"])
         return KnowledgeBaseEntry(
             specialty_name=specialty_name,
-            folder_name=str(item["folder_name"]),
-            disease_catalog=Path(item["disease_catalog"]),
-            drug_catalog=Path(item["drug_catalog"]),
-            lab_profile=Path(item["lab_profile"]),
-            risk_rules=Path(item["risk_rules"]),
-            disease_drug_map=Path(item["disease_drug_map"]),
-            example_cases=Path(item["example_cases"]),
+            folder_name=folder_name,
+            disease_catalog=self._resolve_index_path(item["disease_catalog"], folder_name),
+            drug_catalog=self._resolve_index_path(item["drug_catalog"], folder_name),
+            lab_profile=self._resolve_index_path(item["lab_profile"], folder_name),
+            risk_rules=self._resolve_index_path(item["risk_rules"], folder_name),
+            disease_drug_map=self._resolve_index_path(item["disease_drug_map"], folder_name),
+            example_cases=self._resolve_index_path(item["example_cases"], folder_name),
         )
+
+    def _resolve_index_path(self, raw_path: str, folder_name: str) -> Path:
+        candidate = Path(str(raw_path))
+        if candidate.exists():
+            return candidate
+
+        if not candidate.is_absolute():
+            repo_candidate = self.paths.root_dir / candidate
+            if repo_candidate.exists():
+                return repo_candidate
+
+        filename = PureWindowsPath(str(raw_path)).name
+        return self.paths.knowledge_base_dir / folder_name / filename
 
 
 class SpecialtyKnowledgeLoader:
