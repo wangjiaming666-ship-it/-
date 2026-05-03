@@ -603,7 +603,13 @@
     ],
     "triggered_risks": [],
     "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
-    "llm_safety_review": {}
+    "llm_safety_review": {
+      "enabled": true,
+      "provider": "cursor_cloud_agent",
+      "status": "failed",
+      "error": "Cursor Cloud API 鉴权失败；v1=Cursor Cloud API 请求失败: 401 {\"code\":\"internal\",\"message\":\"Error\"}; v0=Cursor Cloud API 请求失败: 401 {\"code\":\"internal\",\"message\":\"Error\"}",
+      "fallback": "使用规则型基线风险适配审核结果。"
+    }
   },
   "transcript": [
     {
@@ -1088,9 +1094,16 @@
         ],
         "triggered_risks": [],
         "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
-        "llm_safety_review": {}
+        "llm_safety_review": {
+          "enabled": true,
+          "provider": "cursor_cloud_agent",
+          "status": "failed",
+          "error": "Cursor Cloud API 鉴权失败；v1=Cursor Cloud API 请求失败: 401 {\"code\":\"internal\",\"message\":\"Error\"}; v0=Cursor Cloud API 请求失败: 401 {\"code\":\"internal\",\"message\":\"Error\"}",
+          "fallback": "使用规则型基线风险适配审核结果。"
+        }
       }
     }
   ],
-  "llm_enabled": false
+  "llm_enabled": false,
+  "cursor_enabled": true
 }
