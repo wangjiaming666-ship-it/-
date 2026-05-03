@@ -1,0 +1,477 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10000117",
+      "hadm_id": "22927623",
+      "gender": "F",
+      "age": 48
+    },
+    "primary_diagnosis": "Dysphagia, unspecified",
+    "active_specialties": [
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "消化": [
+        "Dysphagia, unspecified",
+        "Angiodysplasia of stomach and duodenum without bleeding",
+        "Diaphragmatic hernia without obstruction or gangrene",
+        "Nonrheumatic mitral (valve) prolapse",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Age-related osteoporosis without current pathological fracture",
+        "Anxiety disorder, unspecified",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other specified symptoms and signs involving the circulatory and respiratory systems"
+      ]
+    },
+    "comorbidity_list": [
+      "Age-related osteoporosis without current pathological fracture",
+      "Angiodysplasia of stomach and duodenum without bleeding",
+      "Anxiety disorder, unspecified",
+      "Diaphragmatic hernia without obstruction or gangrene",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Nonrheumatic mitral (valve) prolapse",
+      "Other specified symptoms and signs involving the circulatory and respiratory systems",
+      "Personal history of nicotine dependence"
+    ],
+    "key_labs": {
+      "creatinine_24h": 0.9,
+      "bun_24h": 8,
+      "potassium_24h": 3.6,
+      "sodium_24h": 142,
+      "glucose_24h": 85,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": 1
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "subject_id": "10000117",
+      "hadm_id": "22927623",
+      "gender": "F",
+      "anchor_age": 48,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "15/11/2181 02:05:00",
+      "dischtime": "15/11/2181 14:52:00",
+      "admission_type": "EU OBSERVATION",
+      "race": "WHITE",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Dysphagia, unspecified",
+      "comorbidity_list": "Age-related osteoporosis without current pathological fracture | Angiodysplasia of stomach and duodenum without bleeding | Anxiety disorder, unspecified | Diaphragmatic hernia without obstruction or gangrene | Gastro-esophageal reflux disease without esophagitis | Nonrheumatic mitral (valve) prolapse | Other specified symptoms and signs involving the circulatory and respiratory systems | Personal history of nicotine dependence",
+      "specialty_agents": "精神 | 消化 | 心血管",
+      "drug_list": "heparin | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.9,
+      "bun_24h": 8,
+      "potassium_24h": 3.6,
+      "sodium_24h": 142,
+      "glucose_24h": 85,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": 1
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "消化",
+      "心血管"
+    ],
+    "lead_specialty": "消化",
+    "specialty_related_diagnoses": {
+      "消化": [
+        "Dysphagia, unspecified",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Diaphragmatic hernia without obstruction or gangrene",
+        "Angiodysplasia of stomach and duodenum without bleeding"
+      ],
+      "心血管": [
+        "Nonrheumatic mitral (valve) prolapse",
+        "Other specified symptoms and signs involving the circulatory and respiratory systems"
+      ]
+    },
+    "rationale": "主诊断为未特指吞咽困难，且合并胃食管反流、膈疝等上消化道相关问题，首要由消化专科牵头评估。心血管候选中存在二尖瓣脱垂及循环/呼吸系统症状体征，需心血管专科参与排查相关风险。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.78,
+          "reason": "患者合并胃食管反流病和膈疝，均支持酸抑制治疗；pantoprazole 为本专科知识库高频核心药物，且当前肌酐、胆红素、INR 未提示明显用药禁忌。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.28,
+          "reason": "polyethylene glycol 为消化专科核心高频药物，但本病例未提供便秘、肠梗阻后恢复期或阿片相关便秘证据，因此仅作为低优先级候选，需有便秘适应证时再考虑。"
+        }
+      ],
+      "recommendation_reasons": {
+        "pantoprazole": "适配胃食管反流病、膈疝相关反流症状及可能反流相关吞咽不适；知识库中为消化专科核心药物，频次最高。",
+        "polyethylene glycol": "知识库中为消化专科核心药物，但病例诊断未显示便秘，因此不作为主要推荐。"
+      },
+      "risk_alerts": [
+        {
+          "risk_type": "肝胆代谢风险",
+          "severity": "low",
+          "evidence": "bilirubin_total_24h=1 mg/dL，未超过知识库中等风险阈值>2 mg/dL。",
+          "suggestion": "常规监测即可。"
+        },
+        {
+          "risk_type": "凝血及消化道出血风险",
+          "severity": "low_to_moderate",
+          "evidence": "INR=1.1 未超过风险阈值，但患者有胃十二指肠血管发育异常病史。",
+          "suggestion": "避免无明确适应证的抗凝、抗血小板及NSAIDs；若必须使用需评估出血风险。"
+        },
+        {
+          "risk_type": "吞咽困难相关给药风险",
+          "severity": "moderate",
+          "evidence": "主诊断为未特指吞咽困难。",
+          "suggestion": "优先确认吞咽安全性，必要时选择可安全吞服或替代剂型，避免大片剂或刺激食管药物。"
+        },
+        {
+          "risk_type": "骨质疏松与长期PPI风险",
+          "severity": "moderate",
+          "evidence": "合并年龄相关骨质疏松。",
+          "suggestion": "若使用pantoprazole，建议采用明确适应证下的最低有效剂量和合理疗程，并关注钙、维生素D及骨健康管理。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "heparin",
+          "reason": "同病例示例中出现过，但从消化专科角度并非治疗GERD、膈疝或吞咽困难的核心药物；患者有胃十二指肠血管发育异常，若无血栓预防或治疗适应证，不应作为消化专科推荐。"
+        },
+        {
+          "drug_name": "NSAIDs",
+          "reason": "可能增加胃黏膜损伤和消化道出血风险，血管发育异常背景下应低优先级或避免。"
+        },
+        {
+          "drug_name": "oral bisphosphonates",
+          "reason": "患者有吞咽困难和GERD，口服双膦酸盐可能刺激食管或加重上消化道不适，需谨慎。"
+        },
+        {
+          "drug_name": "polyethylene glycol",
+          "reason": "无便秘证据时不作为主要治疗药物，仅在出现便秘或排便困难时考虑。"
+        }
+      ],
+      "overall_confidence": 0.68,
+      "summary_reason": "本病例消化相关诊断以GERD、膈疝和吞咽困难为主，知识库核心药物中pantoprazole与当前疾病谱最匹配；实验室胆红素和INR未触发知识库风险阈值。由于disease_drug_map为空，且同hadm示例用药仅有heparin和冲管液，推荐需保守，主要支持酸抑制治疗并强调出血、吞咽安全和骨质疏松相关风险。",
+      "conversation_text": "王老师，基于提供的消化专科知识库和病例信息，首选候选药物为pantoprazole；polyethylene glycol因缺乏便秘证据仅列为低优先级候选。王老师，回答结束"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.45,
+          "reason": "知识库中 Nonrheumatic mitral (valve) prolapse 对应候选药物首位，且属于心血管核心风险控制药；但当前资料未提供心率、血压、心悸或室上性心动过速证据，因此仅作为有症状二尖瓣脱垂相关心悸/心率控制时的保守候选。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "heparin",
+          "confidence": 0.38,
+          "reason": "该患者同 hadm_id 的心血管多专科示例用药包含 heparin，且 heparin 为心血管核心药物；但当前诊断未提示血栓、房颤、肺栓塞或机械瓣等明确抗凝适应证，更适合作为住院血栓预防需人工复核的候选。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "furosemide",
+          "confidence": 0.28,
+          "reason": "知识库中二尖瓣脱垂相关映射包含 furosemide，且为心血管核心药物；但当前未见心衰、容量超负荷、水肿或肺淤血证据，且钾 3.6 mmol/L 接近低正常，故仅低置信度保留。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "aspirin",
+          "confidence": 0.22,
+          "reason": "知识库中二尖瓣脱垂映射包含 aspirin，且为核心心血管药；但当前无冠心病、卒中、急性冠脉综合征或明确抗血小板适应证，同时存在胃十二指肠血管发育不良和 GERD，出血/胃肠道风险使其优先级较低。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "warfarin",
+          "confidence": 0.12,
+          "reason": "知识库中二尖瓣脱垂映射包含 warfarin，但当前无房颤、血栓栓塞、机械瓣或长期抗凝适应证；虽 INR 1.1 未提示凝血异常，胃肠道血管发育不良仍使经验性抗凝不宜优先。"
+        }
+      ],
+      "recommendation_reasons": {
+        "knowledge_match": "本例专科相关诊断主要为 Nonrheumatic mitral (valve) prolapse，知识库 disease_drug_map 中对应候选为 metoprolol tartrate、furosemide、aspirin、amiodarone、warfarin，其中 metoprolol tartrate 与 furosemide 为候选药物对前两位。",
+        "case_similarity": "知识库同 hadm_id 22927623 的多专科示例用药为 heparin 和 sodium chloride 0.9% flush，提示真实世界住院场景可能使用 heparin，但不能直接推断为二尖瓣脱垂治疗因果。",
+        "lab_safety": "肌酐 0.9、BUN 8、INR 1.1 基本未提示肾功能或凝血高危；钾 3.6 mmol/L 在规则正常范围内但接近下限，使用利尿剂或影响心律药物时需复核电解质。",
+        "clinical_conservatism": "主诊断为吞咽困难，心血管诊断较轻且缺少心衰、心律失常、冠脉事件、血栓或高血压等治疗触发信息，因此推荐整体偏保守。"
+      },
+      "risk_alerts": [
+        {
+          "type": "electrolyte_monitoring",
+          "severity": "low_to_moderate",
+          "message": "potassium_24h 为 3.6 mmol/L，未触发知识库低钾风险阈值，但接近下限；若使用 furosemide 或抗心律失常相关药物，应复查钾镁并避免诱发心律失常。",
+          "related_drugs": [
+            "furosemide",
+            "amiodarone"
+          ]
+        },
+        {
+          "type": "bleeding_gastrointestinal",
+          "severity": "moderate",
+          "message": "患者有胃和十二指肠血管发育不良、GERD 和膈疝病史，抗凝或抗血小板药物可能增加胃肠道出血或不适风险；虽 INR 1.1 未升高，仍建议人工复核适应证。",
+          "related_drugs": [
+            "heparin",
+            "warfarin",
+            "aspirin"
+          ]
+        },
+        {
+          "type": "indication_uncertainty",
+          "severity": "moderate",
+          "message": "当前无明确房颤、静脉血栓、肺栓塞、急性冠脉综合征、心衰或容量负荷证据，心血管药物推荐主要来自知识库共现和二尖瓣脱垂映射，治疗因果证据不足。",
+          "related_drugs": [
+            "heparin",
+            "warfarin",
+            "aspirin",
+            "furosemide",
+            "amiodarone"
+          ]
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "warfarin",
+          "reason": "缺少明确抗凝适应证，且存在胃肠道血管发育不良背景；不建议经验性优先使用。"
+        },
+        {
+          "drug_name": "aspirin",
+          "reason": "无明确冠心病、卒中或急性冠脉综合征信息，且胃肠道出血/刺激风险较高，低优先级。"
+        },
+        {
+          "drug_name": "amiodarone",
+          "reason": "知识库虽列入二尖瓣脱垂候选，但当前未提供房颤、室上性/室性心律失常或心电不稳定证据，且有心律、电解质和多系统不良反应风险，暂不优先。"
+        },
+        {
+          "drug_name": "furosemide",
+          "reason": "无心衰、容量超负荷或肺淤血证据，且钾接近低正常，若无容量管理需求不建议优先。"
+        },
+        {
+          "drug_name": "heparin sodium",
+          "reason": "与 heparin 类似，当前无明确治疗性抗凝适应证；如仅为住院 VTE 预防需结合活动能力、操作计划和出血风险复核。"
+        }
+      ],
+      "overall_confidence": 0.36,
+      "summary_reason": "本例心血管相关信息主要是非风湿性二尖瓣脱垂，知识库支持 metoprolol tartrate、furosemide 等候选，但患者主诊断为吞咽困难，未见心衰、心律失常、冠脉事件或血栓证据；同病例示例出现 heparin 更可能反映住院预防或共现用药。实验室总体安全，但胃肠道血管发育不良使抗凝/抗血小板方案需降权，因此整体置信度偏低并建议保守复核。",
+      "conversation_text": "王老师，本次基于心血管知识库、二尖瓣脱垂映射、同病例示例用药和风险规则生成候选药物；由于明确心血管治疗适应证不足，建议以保守候选和人工复核为主。王老师，回答结束"
+    }
+  ],
+  "candidate_plans": [
+    {
+      "plan_id": "plan_1",
+      "plan_name": "主专科优先方案",
+      "drugs": [
+        "pantoprazole"
+      ],
+      "supporting_specialties": [
+        "消化"
+      ],
+      "rationale": "以消化专科为主导，患者主诊断为吞咽困难，并合并胃食管反流病和膈疝，pantoprazole与反流相关症状及上消化道疾病谱最匹配；当前胆红素、INR和肌酐未提示明显禁忌，但需注意吞咽安全、骨质疏松背景下长期PPI风险，并采用最低有效剂量和合理疗程。",
+      "aggregate_score": 0.76
+    },
+    {
+      "plan_id": "plan_2",
+      "plan_name": "多专科平衡方案",
+      "drugs": [
+        "pantoprazole",
+        "metoprolol tartrate"
+      ],
+      "supporting_specialties": [
+        "消化",
+        "心血管"
+      ],
+      "rationale": "在保留消化主线酸抑制治疗的基础上，纳入心血管专科对二尖瓣脱垂相关心悸或心率控制的候选建议；metoprolol tartrate仅适用于存在心悸、心动过速或血压心率适应证时，需复核生命体征，避免在无症状或低血压、心动过缓情况下经验性使用。",
+      "aggregate_score": 0.58
+    },
+    {
+      "plan_id": "plan_3",
+      "plan_name": "保守低风险方案",
+      "drugs": [
+        "pantoprazole"
+      ],
+      "supporting_specialties": [
+        "消化",
+        "心血管"
+      ],
+      "rationale": "选择证据最集中且风险相对可控的pantoprazole，暂不纳入heparin、warfarin、aspirin、furosemide或polyethylene glycol；原因是当前缺少明确抗凝、抗血小板、容量管理或便秘适应证，且患者存在胃十二指肠血管发育异常、GERD、吞咽困难和骨质疏松等风险因素。",
+      "aggregate_score": 0.7
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_3",
+      "plan_name": "保守低风险方案",
+      "drugs": [
+        "pantoprazole"
+      ],
+      "supporting_specialties": [
+        "消化",
+        "心血管"
+      ],
+      "rationale": "安全审核后优先选择仅包含pantoprazole的保守方案。该方案适配GERD、膈疝及可能反流相关吞咽不适，同时未加入缺乏明确适应证且在本病例中风险较高的抗凝、抗血小板、利尿剂或β受体阻滞剂。首24小时肌酐0.9、BUN 8、INR 1.1、胆红素1、钾3.6整体为入院早期基线风险背景，未提示pantoprazole禁忌；但需关注吞咽安全、骨质疏松背景下长期PPI风险，并采用最低有效剂量和合理疗程。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "rank": 1,
+        "plan_id": "plan_3",
+        "plan_name": "保守低风险方案",
+        "drugs": [
+          "pantoprazole"
+        ],
+        "supporting_specialties": [
+          "消化",
+          "心血管"
+        ],
+        "original_aggregate_score": 0.7,
+        "safety_adjusted_score": 0.82,
+        "decision": "推荐",
+        "rationale": "与消化主诉和GERD、膈疝背景匹配，且主动排除heparin、warfarin、aspirin、furosemide、polyethylene glycol等缺乏适应证或风险较高药物；对心血管专科风险提示采取保守复核策略，安全性最佳。"
+      },
+      {
+        "rank": 2,
+        "plan_id": "plan_1",
+        "plan_name": "主专科优先方案",
+        "drugs": [
+          "pantoprazole"
+        ],
+        "supporting_specialties": [
+          "消化"
+        ],
+        "original_aggregate_score": 0.76,
+        "safety_adjusted_score": 0.78,
+        "decision": "可接受备选",
+        "rationale": "药物选择与plan_3相同，适配消化主诊断和GERD/膈疝风险背景；但仅体现消化专科支持，对心血管低证据候选药物的降权和规避表达不如plan_3完整。"
+      },
+      {
+        "rank": 3,
+        "plan_id": "plan_2",
+        "plan_name": "多专科平衡方案",
+        "drugs": [
+          "pantoprazole",
+          "metoprolol tartrate"
+        ],
+        "supporting_specialties": [
+          "消化",
+          "心血管"
+        ],
+        "original_aggregate_score": 0.58,
+        "safety_adjusted_score": 0.5,
+        "decision": "不优先",
+        "rationale": "pantoprazole部分合理，但metoprolol tartrate缺少心悸、心动过速、高血压或明确心率控制适应证；在未提供生命体征和症状触发条件时经验性加入β受体阻滞剂会增加低血压、心动过缓和不必要用药风险。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_type": "吞咽困难相关给药风险",
+        "severity": "moderate",
+        "evidence": "主诊断为Dysphagia, unspecified。",
+        "affected_plans": [
+          "plan_1",
+          "plan_2",
+          "plan_3"
+        ],
+        "related_drugs": [
+          "pantoprazole",
+          "metoprolol tartrate"
+        ],
+        "interpretation": "该风险属于入院基线临床背景，不应归因于候选药物；方案需确认吞咽安全和剂型可行性。",
+        "recommendation": "给药前评估吞咽能力，必要时选择可安全吞服或替代剂型。"
+      },
+      {
+        "risk_type": "骨质疏松与长期PPI风险",
+        "severity": "moderate",
+        "evidence": "合并Age-related osteoporosis without current pathological fracture，候选方案均含pantoprazole。",
+        "affected_plans": [
+          "plan_1",
+          "plan_2",
+          "plan_3"
+        ],
+        "related_drugs": [
+          "pantoprazole"
+        ],
+        "interpretation": "pantoprazole有明确消化适应证，但长期使用可能不利于骨健康；该风险要求限定疗程而非禁用。",
+        "recommendation": "使用最低有效剂量和合理疗程，关注钙、维生素D及骨健康管理。"
+      },
+      {
+        "risk_type": "胃肠道出血风险背景",
+        "severity": "moderate",
+        "evidence": "存在胃和十二指肠血管发育异常；INR 1.1为早期基线，未提示凝血异常。",
+        "affected_plans": [
+          "plan_2"
+        ],
+        "related_drugs": [
+          "heparin",
+          "warfarin",
+          "aspirin"
+        ],
+        "interpretation": "候选方案未直接包含抗凝或抗血小板药，但心血管专科低优先药物提示中存在相关药物，安全审核需明确排除经验性使用。",
+        "recommendation": "无明确血栓、房颤、ACS、卒中或VTE预防充分依据时，避免抗凝和抗血小板药物。"
+      },
+      {
+        "risk_type": "心血管适应证不足",
+        "severity": "moderate",
+        "evidence": "仅有非风湿性二尖瓣脱垂病史，未提供心悸、心动过速、心衰、容量超负荷、冠脉事件、血栓或高血压证据。",
+        "affected_plans": [
+          "plan_2"
+        ],
+        "related_drugs": [
+          "metoprolol tartrate",
+          "furosemide",
+          "aspirin",
+          "warfarin",
+          "heparin",
+          "amiodarone"
+        ],
+        "interpretation": "首24小时检验值未构成心血管药物启动依据；plan_2加入metoprolol需症状或生命体征支持。",
+        "recommendation": "暂不经验性加入metoprolol；若出现心悸、心动过速或血压心率适应证，再复核使用。"
+      },
+      {
+        "risk_type": "电解质监测风险",
+        "severity": "low_to_moderate",
+        "evidence": "potassium_24h=3.6 mmol/L，属于入院早期基线且接近低正常。",
+        "affected_plans": [],
+        "related_drugs": [
+          "furosemide",
+          "amiodarone"
+        ],
+        "interpretation": "当前入选最终方案不含利尿剂或抗心律失常药，因此该风险未直接限制pantoprazole方案。",
+        "recommendation": "若后续考虑furosemide或抗心律失常药，需复查钾镁并评估心律风险。"
+      }
+    ],
+    "safety_summary": "首24小时检验异常或临界值作为患者入院早期基线风险背景处理，不直接归因于候选药物。本例肾功能、INR、胆红素、血糖和钠总体未提示pantoprazole禁忌；主要安全约束来自吞咽困难、胃十二指肠血管发育异常、骨质疏松以及心血管用药适应证不足。综合消化获益与心血管低证据风险，最终选择plan_3，避免无明确适应证的metoprolol、抗凝、抗血小板、利尿剂和泻药。王老师，回答结束",
+    "safety_review_source": "基于输入病例关键检验值、共病列表、消化与心血管专科risk_alerts、avoid_or_low_priority_drugs及candidate_plans进行安全复核"
+  },
+  "cursor_mode": "cloud_agents_rest_v0"
+}
