@@ -11,7 +11,7 @@ import type {
   SafetyResult,
   SpecialtyAgentResult,
 } from "./types.js";
-import { parsePipeList, writeJsonFile } from "./utils.js";
+import { writeJsonFile } from "./utils.js";
 
 function getArg(name: string, defaultValue = ""): string {
   const index = process.argv.indexOf(name);
