@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import path from "node:path";
 
 import { parse } from "csv-parse/sync";
 
@@ -38,6 +39,21 @@ function readCsv(filePath: string): Array<Record<string, string>> {
     columns: true,
     skip_empty_lines: true,
   }) as Array<Record<string, string>>;
+}
+
+function resolveKnowledgePath(rawPath: string, folderName: string): string {
+  if (fs.existsSync(rawPath)) {
+    return rawPath;
+  }
+  if (!path.isAbsolute(rawPath)) {
+    const repoPath = path.join(KNOWLEDGE_BASE_DIR, "..", rawPath);
+    if (fs.existsSync(repoPath)) {
+      return repoPath;
+    }
+  }
+
+  const fileName = path.win32.basename(rawPath);
+  return path.join(KNOWLEDGE_BASE_DIR, folderName, fileName);
 }
 
 function normalizeSpecialtyName(value: string): string {
@@ -85,15 +101,15 @@ export class KnowledgeBaseIndex {
   private readonly rows: KnowledgeBaseEntry[];
 
   constructor() {
-    this.rows = readCsv(`${KNOWLEDGE_BASE_DIR}\\kb_index.csv`).map((row) => ({
+    this.rows = readCsv(path.join(KNOWLEDGE_BASE_DIR, "kb_index.csv")).map((row) => ({
       specialty_name: normalizeSpecialtyName(row.specialty_name ?? row["\uFEFFspecialty_name"] ?? ""),
       folder_name: row.folder_name,
-      disease_catalog: row.disease_catalog,
-      drug_catalog: row.drug_catalog,
-      lab_profile: row.lab_profile,
-      risk_rules: row.risk_rules,
-      disease_drug_map: row.disease_drug_map,
-      example_cases: row.example_cases,
+      disease_catalog: resolveKnowledgePath(row.disease_catalog, row.folder_name),
+      drug_catalog: resolveKnowledgePath(row.drug_catalog, row.folder_name),
+      lab_profile: resolveKnowledgePath(row.lab_profile, row.folder_name),
+      risk_rules: resolveKnowledgePath(row.risk_rules, row.folder_name),
+      disease_drug_map: resolveKnowledgePath(row.disease_drug_map, row.folder_name),
+      example_cases: resolveKnowledgePath(row.example_cases, row.folder_name),
     }));
   }
 

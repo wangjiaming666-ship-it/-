@@ -1,0 +1,901 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10001401",
+      "hadm_id": "20144849",
+      "gender": "F",
+      "age": 89.0
+    },
+    "primary_diagnosis": "Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter",
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter",
+        "Hyperlipidemia, unspecified",
+        "Personal history of other venous thrombosis and embolism",
+        "Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "肾内/泌尿": [
+        "Crossing vessel and stricture of ureter without hydronephrosis",
+        "Hypothyroidism, unspecified",
+        "Personal history of pulmonary embolism"
+      ],
+      "消化": [
+        "Essential (primary) hypertension",
+        "Personal history of malignant neoplasm of bladder",
+        "Presence of left artificial knee joint"
+      ],
+      "心血管": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Personal history of nicotine dependence",
+        "Unspecified place or not applicable"
+      ]
+    },
+    "comorbidity_list": [
+      "Crossing vessel and stricture of ureter without hydronephrosis",
+      "Essential (primary) hypertension",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Hypothyroidism, unspecified",
+      "Personal history of malignant neoplasm of bladder",
+      "Personal history of nicotine dependence",
+      "Personal history of other venous thrombosis and embolism",
+      "Personal history of pulmonary embolism",
+      "Presence of left artificial knee joint",
+      "Unspecified place or not applicable",
+      "Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+    ],
+    "key_labs": {
+      "creatinine_24h": 2.2,
+      "bun_24h": 42.0,
+      "potassium_24h": 4.3,
+      "sodium_24h": 141.0,
+      "glucose_24h": 111.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": NaN
+    },
+    "raw_case_summary": {
+      "subject_id": "10001401",
+      "hadm_id": "20144849",
+      "gender": "F",
+      "anchor_age": 89,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "20/11/2136 14:20:00",
+      "dischtime": "23/11/2136 14:00:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter",
+      "comorbidity_list": "Crossing vessel and stricture of ureter without hydronephrosis | Essential (primary) hypertension | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Hypothyroidism, unspecified | Personal history of malignant neoplasm of bladder | Personal history of nicotine dependence | Personal history of other venous thrombosis and embolism | Personal history of pulmonary embolism | Presence of left artificial knee joint | Unspecified place or not applicable | Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "specialty_agents": "内分泌/代谢 | 肾内/泌尿 | 消化 | 心血管",
+      "drug_list": "acetaminophen | atorvastatin | bag | ceftriaxone | docusate sodium | heparin | influenza vaccine high-dose quadrivalent | levothyroxine sodium | lorazepam | losartan potassium | magnesium sulfate | multivitamins | omeprazole | ondansetron | polyethylene glycol | potassium chl 20 meq / 1000 ml d5 1/2 ns | senna | sodium chloride 0.9%  flush | vial",
+      "creatinine_24h": 2.2,
+      "bun_24h": 42.0,
+      "potassium_24h": 4.3,
+      "sodium_24h": 141.0,
+      "glucose_24h": 111.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "消化",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter",
+        "Hyperlipidemia, unspecified",
+        "Personal history of other venous thrombosis and embolism",
+        "Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "肾内/泌尿": [
+        "Crossing vessel and stricture of ureter without hydronephrosis",
+        "Hypothyroidism, unspecified",
+        "Personal history of pulmonary embolism"
+      ],
+      "消化": [
+        "Essential (primary) hypertension",
+        "Personal history of malignant neoplasm of bladder",
+        "Presence of left artificial knee joint"
+      ],
+      "心血管": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Personal history of nicotine dependence",
+        "Unspecified place or not applicable"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.72,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "vitamin d",
+          "confidence": 0.67,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.62,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.57,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
+      "summary_reason": "内分泌/代谢智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter, Hyperlipidemia, unspecified, Personal history of other venous thrombosis and embolism 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+    },
+    {
+      "specialty_name": "肾内/泌尿",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "lidocaine jelly 2% (glydo)",
+          "confidence": 0.77,
+          "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "neutra-phos",
+          "confidence": 0.72,
+          "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.67,
+          "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "creatinine_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "nephrology_creatinine_risk",
+          "message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+          "action_taken": "降低潜在肾毒性药物优先级，并提示考虑剂量调整。"
+        },
+        {
+          "lab_name": "bun_24h",
+          "risk_level": "high",
+          "triggered_rule_id": "nephrology_bun_risk",
+          "message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+          "action_taken": "标记为高风险病例，建议优先保留更保守、更易监测的治疗方案。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "insulin",
+          "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "d5 1/2ns",
+          "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.73,
+      "summary_reason": "肾内/泌尿智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Crossing vessel and stricture of ureter without hydronephrosis, Hypothyroidism, unspecified, Personal history of pulmonary embolism 生成候选药物，当前首选药物包括 lidocaine jelly 2% (glydo), neutra-phos, calcium carbonate。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        },
+        {
+          "rank": 2,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.65,
+      "summary_reason": "消化智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Essential (primary) hypertension, Personal history of malignant neoplasm of bladder, Presence of left artificial knee joint 生成候选药物，当前首选药物包括 pantoprazole, polyethylene glycol。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "furosemide",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        },
+        {
+          "rank": 3,
+          "drug_name": "heparin",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        },
+        {
+          "rank": 4,
+          "drug_name": "aspirin",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        },
+        {
+          "rank": 5,
+          "drug_name": "warfarin",
+          "confidence": 0.95,
+          "reason": "来自本专科核心治疗药目录"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.89,
+      "summary_reason": "心血管智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Gastro-esophageal reflux disease without esophagitis, Personal history of nicotine dependence, Unspecified place or not applicable 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+    }
+  ],
+  "candidate_plans": [
+    {
+      "plan_id": "plan_a",
+      "plan_name": "主专科优先方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+      "aggregate_score": 12.02
+    },
+    {
+      "plan_id": "plan_b",
+      "plan_name": "多专科平衡方案",
+      "drugs": [
+        "calcium carbonate",
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "优先保留被多个专科共同推荐的候选药物。",
+      "aggregate_score": 12.02
+    },
+    {
+      "plan_id": "plan_c",
+      "plan_name": "保守低负荷方案",
+      "drugs": [
+        "calcium carbonate",
+        "insulin",
+        "levothyroxine sodium"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "减少药物数量，保留共识度较高的少量核心药物。",
+      "aggregate_score": 7.93
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_a",
+      "plan_name": "主专科优先方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+      "aggregate_score": 7.02
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_a",
+        "plan_name": "主专科优先方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 12.02,
+        "risk_penalty": 5,
+        "final_score": 7.02,
+        "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。"
+      },
+      {
+        "plan_id": "plan_b",
+        "plan_name": "多专科平衡方案",
+        "drugs": [
+          "calcium carbonate",
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 12.02,
+        "risk_penalty": 5,
+        "final_score": 7.02,
+        "rationale": "优先保留被多个专科共同推荐的候选药物。"
+      },
+      {
+        "plan_id": "plan_c",
+        "plan_name": "保守低负荷方案",
+        "drugs": [
+          "calcium carbonate",
+          "insulin",
+          "levothyroxine sodium"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 7.93,
+        "risk_penalty": 5,
+        "final_score": 2.9299999999999997,
+        "rationale": "减少药物数量，保留共识度较高的少量核心药物。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "specialty_name": "肾内/泌尿",
+        "rule_id": "nephrology_creatinine_risk",
+        "lab_name": "creatinine_24h",
+        "lab_value": 2.2,
+        "risk_level": "moderate",
+        "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+      },
+      {
+        "specialty_name": "肾内/泌尿",
+        "rule_id": "nephrology_bun_risk",
+        "lab_name": "bun_24h",
+        "lab_value": 42.0,
+        "risk_level": "high",
+        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+      }
+    ],
+    "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿",
+          "消化",
+          "心血管"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter",
+            "Hyperlipidemia, unspecified",
+            "Personal history of other venous thrombosis and embolism",
+            "Urinary catheterization as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+          ],
+          "肾内/泌尿": [
+            "Crossing vessel and stricture of ureter without hydronephrosis",
+            "Hypothyroidism, unspecified",
+            "Personal history of pulmonary embolism"
+          ],
+          "消化": [
+            "Essential (primary) hypertension",
+            "Personal history of malignant neoplasm of bladder",
+            "Presence of left artificial knee joint"
+          ],
+          "心血管": [
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Personal history of nicotine dependence",
+            "Unspecified place or not applicable"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.72,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "vitamin d",
+            "confidence": 0.67,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.62,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.57,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
+        "summary_reason": "内分泌/代谢智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other specified complication of genitourinary prosthetic devices, implants and grafts, initial encounter, Hyperlipidemia, unspecified, Personal history of other venous thrombosis and embolism 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "肾内/泌尿_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "肾内/泌尿",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "lidocaine jelly 2% (glydo)",
+            "confidence": 0.77,
+            "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "neutra-phos",
+            "confidence": 0.72,
+            "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.67,
+            "reason": "与诊断 Crossing vessel and stricture of ureter without hydronephrosis 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "creatinine_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "nephrology_creatinine_risk",
+            "message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+            "action_taken": "降低潜在肾毒性药物优先级，并提示考虑剂量调整。"
+          },
+          {
+            "lab_name": "bun_24h",
+            "risk_level": "high",
+            "triggered_rule_id": "nephrology_bun_risk",
+            "message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+            "action_taken": "标记为高风险病例，建议优先保留更保守、更易监测的治疗方案。"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "insulin",
+            "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "d5 1/2ns",
+            "reason": "在 Crossing vessel and stricture of ureter without hydronephrosis 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.73,
+        "summary_reason": "肾内/泌尿智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Crossing vessel and stricture of ureter without hydronephrosis, Hypothyroidism, unspecified, Personal history of pulmonary embolism 生成候选药物，当前首选药物包括 lidocaine jelly 2% (glydo), neutra-phos, calcium carbonate。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "消化_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "消化",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "pantoprazole",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          },
+          {
+            "rank": 2,
+            "drug_name": "polyethylene glycol",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.65,
+        "summary_reason": "消化智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Essential (primary) hypertension, Personal history of malignant neoplasm of bladder, Presence of left artificial knee joint 生成候选药物，当前首选药物包括 pantoprazole, polyethylene glycol。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "furosemide",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          },
+          {
+            "rank": 3,
+            "drug_name": "heparin",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          },
+          {
+            "rank": 4,
+            "drug_name": "aspirin",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          },
+          {
+            "rank": 5,
+            "drug_name": "warfarin",
+            "confidence": 0.95,
+            "reason": "来自本专科核心治疗药目录"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.89,
+        "summary_reason": "心血管智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Gastro-esophageal reflux disease without esophagitis, Personal history of nicotine dependence, Unspecified place or not applicable 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "coordination_agent",
+      "message_type": "candidate_plans",
+      "content": {
+        "plans": [
+          {
+            "plan_id": "plan_a",
+            "plan_name": "主专科优先方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+            "aggregate_score": 12.02
+          },
+          {
+            "plan_id": "plan_b",
+            "plan_name": "多专科平衡方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "优先保留被多个专科共同推荐的候选药物。",
+            "aggregate_score": 12.02
+          },
+          {
+            "plan_id": "plan_c",
+            "plan_name": "保守低负荷方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "减少药物数量，保留共识度较高的少量核心药物。",
+            "aggregate_score": 7.93
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "plan_a",
+          "plan_name": "主专科优先方案",
+          "drugs": [
+            "insulin",
+            "levothyroxine sodium",
+            "vitamin d",
+            "sodium bicarbonate",
+            "calcium carbonate"
+          ],
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "肾内/泌尿"
+          ],
+          "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+          "aggregate_score": 7.02
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "plan_a",
+            "plan_name": "主专科优先方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 12.02,
+            "risk_penalty": 5,
+            "final_score": 7.02,
+            "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。"
+          },
+          {
+            "plan_id": "plan_b",
+            "plan_name": "多专科平衡方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 12.02,
+            "risk_penalty": 5,
+            "final_score": 7.02,
+            "rationale": "优先保留被多个专科共同推荐的候选药物。"
+          },
+          {
+            "plan_id": "plan_c",
+            "plan_name": "保守低负荷方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 7.93,
+            "risk_penalty": 5,
+            "final_score": 2.9299999999999997,
+            "rationale": "减少药物数量，保留共识度较高的少量核心药物。"
+          }
+        ],
+        "triggered_risks": [
+          {
+            "specialty_name": "肾内/泌尿",
+            "rule_id": "nephrology_creatinine_risk",
+            "lab_name": "creatinine_24h",
+            "lab_value": 2.2,
+            "risk_level": "moderate",
+            "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+          },
+          {
+            "specialty_name": "肾内/泌尿",
+            "rule_id": "nephrology_bun_risk",
+            "lab_name": "bun_24h",
+            "lab_value": 42.0,
+            "risk_level": "high",
+            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+          }
+        ],
+        "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+      }
+    }
+  ],
+  "llm_enabled": false
+}

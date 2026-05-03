@@ -1,0 +1,1339 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10000947",
+      "hadm_id": "27880650",
+      "gender": "M",
+      "age": 60.0
+    },
+    "primary_diagnosis": "Malignant neoplasm of ascending colon",
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Malignant neoplasm of ascending colon",
+        "Benign prostatic hyperplasia without lower urinary tract symptoms",
+        "Dehydration",
+        "Hyperlipidemia, unspecified",
+        "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified",
+        "Coagulation defect, unspecified",
+        "Essential (primary) hypertension",
+        "Iron deficiency anemia, unspecified"
+      ],
+      "心血管": [
+        "Anemia in neoplastic disease",
+        "Contact with and (suspected) exposure to COVID-19",
+        "Fever, unspecified",
+        "Nontoxic single thyroid nodule"
+      ]
+    },
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Anemia in neoplastic disease",
+      "Benign prostatic hyperplasia without lower urinary tract symptoms",
+      "Coagulation defect, unspecified",
+      "Contact with and (suspected) exposure to COVID-19",
+      "Dehydration",
+      "Essential (primary) hypertension",
+      "Fever, unspecified",
+      "Hyperlipidemia, unspecified",
+      "Iron deficiency anemia, unspecified",
+      "Nontoxic single thyroid nodule",
+      "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.5,
+      "bun_24h": 14.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 134.0,
+      "glucose_24h": 156.0,
+      "inr_24h": 1.9,
+      "bilirubin_total_24h": 0.5
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "subject_id": "10000947",
+      "hadm_id": "27880650",
+      "gender": "M",
+      "anchor_age": 60,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "9/5/2121 10:02:00",
+      "dischtime": "13/5/2121 16:20:00",
+      "admission_type": "EW EMER.",
+      "race": "BLACK/AFRICAN AMERICAN",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Malignant neoplasm of ascending colon",
+      "comorbidity_list": "Acute kidney failure, unspecified | Anemia in neoplastic disease | Benign prostatic hyperplasia without lower urinary tract symptoms | Coagulation defect, unspecified | Contact with and (suspected) exposure to COVID-19 | Dehydration | Essential (primary) hypertension | Fever, unspecified | Hyperlipidemia, unspecified | Iron deficiency anemia, unspecified | Nontoxic single thyroid nodule | Secondary malignant neoplasm of liver and intrahepatic bile duct",
+      "specialty_agents": "内分泌/代谢 | 肾内/泌尿 | 心血管 | 肿瘤/血液",
+      "drug_list": "acetaminophen | amlodipine | atorvastatin | enoxaparin (prophylaxis) | finasteride | lactated ringers | lisinopril | ondansetron | oxycodone (immediate release) | polyethylene glycol | senna | sodium chloride 0.9%  flush | tamsulosin",
+      "creatinine_24h": 1.5,
+      "bun_24h": 14.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 134.0,
+      "glucose_24h": 156.0,
+      "inr_24h": 1.9,
+      "bilirubin_total_24h": 0.5
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Malignant neoplasm of ascending colon",
+        "Benign prostatic hyperplasia without lower urinary tract symptoms",
+        "Dehydration",
+        "Hyperlipidemia, unspecified",
+        "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified",
+        "Coagulation defect, unspecified",
+        "Essential (primary) hypertension",
+        "Iron deficiency anemia, unspecified"
+      ],
+      "心血管": [
+        "Anemia in neoplastic disease",
+        "Contact with and (suspected) exposure to COVID-19",
+        "Fever, unspecified",
+        "Nontoxic single thyroid nodule"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.72,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "vitamin d",
+          "confidence": 0.67,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.62,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.57,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "sodium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "endocrinology_sodium_risk",
+          "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
+          "action_taken": "对强化补液和快速纠正方案降权，提示人工复核。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant neoplasm of ascending colon, Benign prostatic hyperplasia without lower urinary tract symptoms, Dehydration 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+    },
+    {
+      "specialty_name": "肾内/泌尿",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.77,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "tamsulosin",
+          "confidence": 0.72,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "ceftriaxone",
+          "confidence": 0.67,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "labetalol",
+          "confidence": 0.62,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "nifedipine (extended release)",
+          "confidence": 0.57,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "heparin",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
+      "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Coagulation defect, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "furosemide",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 3,
+          "drug_name": "heparin",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 4,
+          "drug_name": "aspirin",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 5,
+          "drug_name": "warfarin",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "inr_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "cardiology_inr_risk",
+          "message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+          "action_taken": "对抗凝和联用抗血小板方案降权，并提示人工复核。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.92,
+      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Anemia in neoplastic disease, Contact with and (suspected) exposure to COVID-19, Fever, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "肾内/泌尿",
+        "accepted_drugs": [
+          "calcium carbonate",
+          "tamsulosin",
+          "ceftriaxone",
+          "labetalol",
+          "nifedipine (extended release)"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "肾内/泌尿建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "furosemide",
+          "metoprolol tartrate",
+          "aspirin",
+          "warfarin"
+        ],
+        "cautioned_drugs": [
+          "heparin"
+        ],
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。",
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 3 个专科：内分泌/代谢, 肾内/泌尿, 心血管。",
+      "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate",
+          "tamsulosin"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "aggregate_score": 13.59
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate",
+          "tamsulosin"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "aggregate_score": 13.59
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "calcium carbonate",
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "aggregate_score": 9.9
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate",
+        "tamsulosin"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+      "aggregate_score": 13.59
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate",
+        "tamsulosin"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+      "aggregate_score": 13.59
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "calcium carbonate",
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+      "aggregate_score": 9.9
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate",
+        "tamsulosin"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+      "aggregate_score": 11.59
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate",
+          "tamsulosin"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 13.59,
+        "baseline_risk_penalty": 2,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 2,
+        "final_score": 11.59,
+        "patient_context_flags": [
+          "入院早期钠异常: 134.0",
+          "入院早期肌酐升高: 1.5",
+          "入院早期 INR 升高: 1.9"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，levothyroxine sodium, sodium bicarbonate 可能影响水电解质或容量状态，建议监测并人工复核。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate",
+          "tamsulosin"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 13.59,
+        "baseline_risk_penalty": 2,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 2,
+        "final_score": 11.59,
+        "patient_context_flags": [
+          "入院早期钠异常: 134.0",
+          "入院早期肌酐升高: 1.5",
+          "入院早期 INR 升高: 1.9"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，levothyroxine sodium, sodium bicarbonate 可能影响水电解质或容量状态，建议监测并人工复核。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "calcium carbonate",
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "aggregate_score": 9.9,
+        "baseline_risk_penalty": 2,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 2,
+        "final_score": 7.9,
+        "patient_context_flags": [
+          "入院早期钠异常: 134.0",
+          "入院早期肌酐升高: 1.5",
+          "入院早期 INR 升高: 1.9"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，levothyroxine sodium 可能影响水电解质或容量状态，建议监测并人工复核。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "specialty_name": "内分泌/代谢",
+        "rule_id": "endocrinology_sodium_risk",
+        "lab_name": "sodium_24h",
+        "lab_value": 134.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "心血管",
+        "rule_id": "cardiology_inr_risk",
+        "lab_name": "inr_24h",
+        "lab_value": 1.9,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿",
+          "心血管"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Malignant neoplasm of ascending colon",
+            "Benign prostatic hyperplasia without lower urinary tract symptoms",
+            "Dehydration",
+            "Hyperlipidemia, unspecified",
+            "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+          ],
+          "肾内/泌尿": [
+            "Acute kidney failure, unspecified",
+            "Coagulation defect, unspecified",
+            "Essential (primary) hypertension",
+            "Iron deficiency anemia, unspecified"
+          ],
+          "心血管": [
+            "Anemia in neoplastic disease",
+            "Contact with and (suspected) exposure to COVID-19",
+            "Fever, unspecified",
+            "Nontoxic single thyroid nodule"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.72,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "vitamin d",
+            "confidence": 0.67,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.62,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.57,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "sodium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "endocrinology_sodium_risk",
+            "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
+            "action_taken": "对强化补液和快速纠正方案降权，提示人工复核。"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant neoplasm of ascending colon, Benign prostatic hyperplasia without lower urinary tract symptoms, Dehydration 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "肾内/泌尿_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "肾内/泌尿",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.77,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "tamsulosin",
+            "confidence": 0.72,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "ceftriaxone",
+            "confidence": 0.67,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "labetalol",
+            "confidence": 0.62,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "nifedipine (extended release)",
+            "confidence": 0.57,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "heparin",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
+        "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Coagulation defect, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "furosemide",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 3,
+            "drug_name": "heparin",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 4,
+            "drug_name": "aspirin",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 5,
+            "drug_name": "warfarin",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "inr_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "cardiology_inr_risk",
+            "message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+            "action_taken": "对抗凝和联用抗血小板方案降权，并提示人工复核。"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.92,
+        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Anemia in neoplastic disease, Contact with and (suspected) exposure to COVID-19, Fever, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "肾内/泌尿_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "肾内/泌尿",
+        "accepted_drugs": [
+          "calcium carbonate",
+          "tamsulosin",
+          "ceftriaxone",
+          "labetalol",
+          "nifedipine (extended release)"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "肾内/泌尿建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "心血管_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "furosemide",
+          "metoprolol tartrate",
+          "aspirin",
+          "warfarin"
+        ],
+        "cautioned_drugs": [
+          "heparin"
+        ],
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。",
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 3 个专科：内分泌/代谢, 肾内/泌尿, 心血管。",
+          "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate",
+              "tamsulosin"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "aggregate_score": 13.59
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate",
+              "tamsulosin"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "aggregate_score": 13.59
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "aggregate_score": 9.9
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "insulin",
+            "levothyroxine sodium",
+            "vitamin d",
+            "sodium bicarbonate",
+            "calcium carbonate",
+            "tamsulosin"
+          ],
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "肾内/泌尿"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+          "aggregate_score": 11.59
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate",
+              "tamsulosin"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 13.59,
+            "baseline_risk_penalty": 2,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 2,
+            "final_score": 11.59,
+            "patient_context_flags": [
+              "入院早期钠异常: 134.0",
+              "入院早期肌酐升高: 1.5",
+              "入院早期 INR 升高: 1.9"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，levothyroxine sodium, sodium bicarbonate 可能影响水电解质或容量状态，建议监测并人工复核。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate",
+              "tamsulosin"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 13.59,
+            "baseline_risk_penalty": 2,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 2,
+            "final_score": 11.59,
+            "patient_context_flags": [
+              "入院早期钠异常: 134.0",
+              "入院早期肌酐升高: 1.5",
+              "入院早期 INR 升高: 1.9"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，levothyroxine sodium, sodium bicarbonate 可能影响水电解质或容量状态，建议监测并人工复核。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "calcium carbonate",
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "肾内/泌尿"
+            ],
+            "aggregate_score": 9.9,
+            "baseline_risk_penalty": 2,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 2,
+            "final_score": 7.9,
+            "patient_context_flags": [
+              "入院早期钠异常: 134.0",
+              "入院早期肌酐升高: 1.5",
+              "入院早期 INR 升高: 1.9"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，levothyroxine sodium 可能影响水电解质或容量状态，建议监测并人工复核。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ],
+        "triggered_risks": [
+          {
+            "specialty_name": "内分泌/代谢",
+            "rule_id": "endocrinology_sodium_risk",
+            "lab_name": "sodium_24h",
+            "lab_value": 134.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "心血管",
+            "rule_id": "cardiology_inr_risk",
+            "lab_name": "inr_24h",
+            "lab_value": 1.9,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": false
+}

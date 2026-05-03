@@ -131,9 +131,11 @@ def summarize_kb(kb_index: pd.DataFrame) -> pd.DataFrame:
                 "核心治疗药": drug_role_counts.get("核心治疗药", 0),
                 "支持治疗药": drug_role_counts.get("支持治疗药", 0),
                 "通用辅助药": drug_role_counts.get("通用辅助药", 0),
-                "可直接使用": mapping_quality_counts.get("可直接使用", 0),
+                "候选证据充分": mapping_quality_counts.get("候选证据充分", 0)
+                + mapping_quality_counts.get("可直接使用", 0),
                 "仅保留低优先级方案": mapping_quality_counts.get("仅保留低优先级方案", 0),
-                "背景共病映射": mapping_quality_counts.get("背景共病", 0),
+                "仅用于诊断评估": mapping_quality_counts.get("仅用于诊断评估", 0)
+                + mapping_quality_counts.get("背景共病", 0),
                 "风险规则数": len(risk_rules) if isinstance(risk_rules, list) else 0,
                 "单专科示例数": len(single_examples) if isinstance(single_examples, list) else 0,
                 "多专科示例数": len(multi_examples) if isinstance(multi_examples, list) else 0,
@@ -269,8 +271,8 @@ def main() -> None:
     saved_files.append(
         plot_stacked_bar(
             summary_df,
-            columns=["可直接使用", "仅保留低优先级方案", "背景共病映射"],
-            title="六专科病药映射质量分布",
+            columns=["候选证据充分", "仅保留低优先级方案", "仅用于诊断评估"],
+            title="六专科病药共现证据分布",
             ylabel="映射条目数",
             colors=["#14B8A6", "#F97316", "#A855F7"],
             output_path=output_dir / "03_mapping_quality_distribution.png",

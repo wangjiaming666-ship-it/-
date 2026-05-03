@@ -11,7 +11,7 @@ import type {
   SafetyResult,
   SpecialtyAgentResult,
 } from "./types.js";
-import { parsePipeList, writeJsonFile } from "./utils.js";
+import { writeJsonFile } from "./utils.js";
 
 function getArg(name: string, defaultValue = ""): string {
   const index = process.argv.indexOf(name);
@@ -190,10 +190,11 @@ function evaluateRiskLevel(rule: any, labValue: number | null | undefined): stri
   return null;
 }
 
-function runSafetyAgent(
+function runSafetyFallback(
   caseRecord: CaseRecord,
   candidatePlans: CandidatePlan[],
   specialtyResults: SpecialtyAgentResult[],
+  fallbackReason?: string,
 ): SafetyResult {
   const triggeredRisks: Array<Record<string, unknown>> = [];
   for (const specialty of caseRecord.active_specialties) {
@@ -248,8 +249,50 @@ function runSafetyAgent(
     },
     ranked_plans: rankedPlans,
     triggered_risks: triggeredRisks,
-    safety_summary: "安全智能体已基于 risk_rules.json 对候选方案做中高风险筛查和排序。",
+    safety_summary: fallbackReason
+      ? `Cursor 安全智能体调用失败，已回退到 risk_rules.json 规则筛查和排序：${fallbackReason}`
+      : "安全智能体已基于 risk_rules.json 对候选方案做中高风险筛查和排序。",
+    safety_review_source: "rule_fallback",
   };
+}
+
+async function runSafetyAgent(
+  caseRecord: CaseRecord,
+  candidatePlans: CandidatePlan[],
+  specialtyResults: SpecialtyAgentResult[],
+): Promise<SafetyResult> {
+  const payload = {
+    patient_info: caseRecord.patient_info,
+    primary_diagnosis: caseRecord.primary_diagnosis,
+    active_specialties: caseRecord.active_specialties,
+    comorbidity_list: caseRecord.comorbidity_list,
+    key_labs: caseRecord.key_labs,
+    candidate_plans: candidatePlans,
+    specialty_results: specialtyResults,
+  };
+  const prompt = buildJsonPrompt(
+    "安全审核智能体",
+    [
+      "你需要像 MDT 安全审核成员一样复核候选方案。",
+      "请基于病例关键检验值、共病、各专科风险提示、不建议药物和候选方案，识别触发风险、重排候选方案，并给出最终方案。",
+      "注意：首 24 小时检验异常代表患者入院早期基线风险背景，不要把它直接归因于候选药物；请说明方案是否适配这些基线风险。",
+      "final_plan 必须来自 ranked_plans 中的某一个候选方案。",
+    ].join("\n"),
+    payload,
+    "{ final_plan: {plan_id:string, plan_name:string, drugs:string[], supporting_specialties:string[], rationale:string, aggregate_score:number}, ranked_plans: Record<string,unknown>[], triggered_risks: Record<string,unknown>[], safety_summary: string, safety_review_source?: string }",
+  );
+
+  try {
+    const text = await runCursorAgent(prompt);
+    const result = parseJsonText<SafetyResult>(text);
+    return {
+      ...result,
+      safety_review_source: result.safety_review_source ?? "cursor_agent",
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return runSafetyFallback(caseRecord, candidatePlans, specialtyResults, message);
+  }
 }
 
 async function main() {
@@ -267,7 +310,7 @@ async function main() {
   }
 
   const candidatePlans = await runCoordinationAgent(caseRecord, routing, specialtyResults);
-  const safetyResult = runSafetyAgent(caseRecord, candidatePlans, specialtyResults);
+  const safetyResult = await runSafetyAgent(caseRecord, candidatePlans, specialtyResults);
 
   const outputPath =
     output || path.join(OUTPUTS_DIR, `${caseRecord.patient_info.hadm_id}_cursor_dialogue.json`);

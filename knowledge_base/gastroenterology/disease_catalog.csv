@@ -1,21 +1,21 @@
-﻿specialty_name,diagnosis_name,frequency,is_core_disease,disease_role,review_status,notes
-消化,Gastro-esophageal reflux disease without esophagitis,1366,1,核心病种,保留,命中专科核心病种关键词
-消化,Herpes simplex without mention of complication,650,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-消化,Acute and subacute necrosis of liver,642,1,核心病种,保留,命中专科核心病种关键词
-消化,"Constipation, unspecified",364,1,核心病种,保留,命中专科核心病种关键词
-消化,Herpes zoster without mention of complication,353,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-消化,Abscess of anal and rectal regions,309,1,核心病种,保留,命中专科核心病种关键词
-消化,Unspecified acute appendicitis,255,1,核心病种,保留,命中专科核心病种关键词
-消化,Obstruction of bile duct,190,1,核心病种,保留,命中专科核心病种关键词
-消化,"Ulcerative colitis, unspecified, without complications",165,0,背景共病,降级保留,术后/并发症/过程性疾病，降级为背景共病
-消化,"Crohn's disease, unspecified, without complications",144,0,背景共病,降级保留,术后/并发症/过程性疾病，降级为背景共病
-消化,Peritoneal adhesions (postprocedural) (postinfection),121,0,背景共病,降级保留,术后/并发症/过程性疾病，降级为背景共病
-消化,"Ileus, unspecified",109,1,核心病种,保留,命中专科核心病种关键词
-消化,Other postprocedural complications and disorders of digestive system,109,0,背景共病,降级保留,术后/并发症/过程性疾病，降级为背景共病
-消化,Diverticulitis of large intestine with perforation and abscess without bleeding,105,1,核心病种,保留,命中专科核心病种关键词
-消化,Other chronic pancreatitis,99,1,核心病种,保留,命中专科核心病种关键词
-消化,Irritable bowel syndrome without diarrhea,95,1,核心病种,保留,命中专科核心病种关键词
-消化,"Noninfective gastroenteritis and colitis, unspecified",94,1,核心病种,保留,命中专科核心病种关键词
-消化,Other appendicitis,86,1,核心病种,保留,命中专科核心病种关键词
-消化,Peritoneal abscess,86,1,核心病种,保留,命中专科核心病种关键词
-消化,Diaphragmatic hernia without obstruction or gangrene,82,1,核心病种,保留,命中专科核心病种关键词
+﻿specialty_name,diagnosis_name,frequency,is_core_disease,disease_role,diagnosis_relevance,diagnosis_relevance_label,diagnosis_evidence_basis,agent_use,review_status,notes
+消化,Gastro-esophageal reflux disease without esophagitis,1366,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Herpes simplex without mention of complication,650,0,应剔除项,low_relevance_or_noise,低相关或噪声,exclude_keyword,仅保留追溯，不进入专科诊断评估和推荐依据,已剔除,明显跨专科或无助于专科知识库，已自动剔除
+消化,Acute and subacute necrosis of liver,642,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,"Constipation, unspecified",364,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Herpes zoster without mention of complication,353,0,应剔除项,low_relevance_or_noise,低相关或噪声,exclude_keyword,仅保留追溯，不进入专科诊断评估和推荐依据,已剔除,明显跨专科或无助于专科知识库，已自动剔除
+消化,Abscess of anal and rectal regions,309,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Unspecified acute appendicitis,255,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Obstruction of bile duct,190,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,"Ulcerative colitis, unspecified, without complications",165,0,背景共病,specialty_related_condition,专科相关状态,background_keyword,用于解释病例复杂度和风险，不作为主要疾病推荐依据,降级保留,术后/并发症/过程性疾病，降级为背景共病
+消化,"Crohn's disease, unspecified, without complications",144,0,背景共病,specialty_related_condition,专科相关状态,background_keyword,用于解释病例复杂度和风险，不作为主要疾病推荐依据,降级保留,术后/并发症/过程性疾病，降级为背景共病
+消化,Peritoneal adhesions (postprocedural) (postinfection),121,0,背景共病,specialty_related_condition,专科相关状态,background_keyword,用于解释病例复杂度和风险，不作为主要疾病推荐依据,降级保留,术后/并发症/过程性疾病，降级为背景共病
+消化,"Ileus, unspecified",109,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Other postprocedural complications and disorders of digestive system,109,0,背景共病,specialty_related_condition,专科相关状态,background_keyword,用于解释病例复杂度和风险，不作为主要疾病推荐依据,降级保留,术后/并发症/过程性疾病，降级为背景共病
+消化,Diverticulitis of large intestine with perforation and abscess without bleeding,105,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Other chronic pancreatitis,99,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Irritable bowel syndrome without diarrhea,95,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,"Noninfective gastroenteritis and colitis, unspecified",94,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Other appendicitis,86,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Peritoneal abscess,86,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+消化,Diaphragmatic hernia without obstruction or gangrene,82,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词

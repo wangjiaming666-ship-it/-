@@ -20,6 +20,12 @@ class CaseRecord:
     specialty_diagnosis_map: dict[str, list[str]]
     comorbidity_list: list[str]
     key_labs: dict[str, float | None]
+    past_history: dict[str, Any] = field(default_factory=dict)
+    key_vitals: dict[str, float | None] = field(default_factory=dict)
+    procedure_features: dict[str, Any] = field(default_factory=dict)
+    microbiology_features: dict[str, Any] = field(default_factory=dict)
+    icu_features: dict[str, Any] = field(default_factory=dict)
+    outcome_features: dict[str, Any] = field(default_factory=dict)
     raw_case_summary: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -95,6 +101,7 @@ class SafetyScreeningResult:
     ranked_plans: list[dict[str, Any]]
     triggered_risks: list[dict[str, Any]]
     safety_summary: str
+    llm_safety_review: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -102,6 +109,7 @@ class SafetyScreeningResult:
             "ranked_plans": self.ranked_plans,
             "triggered_risks": self.triggered_risks,
             "safety_summary": self.safety_summary,
+            "llm_safety_review": self.llm_safety_review,
         }
 
 
