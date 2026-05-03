@@ -29,6 +29,24 @@ LAB_COLUMNS = [
     "bilirubin_total_24h",
 ]
 
+DRUG_CATALOG_TOP_N = 20
+DRUG_CATALOG_EXCLUDED_ROLES: set[str] = set()
+
+DIAGNOSIS_RELEVANCE_LABELS = {
+    "primary_specialty_disease": "专科主要疾病",
+    "specialty_related_condition": "专科相关状态",
+    "cross_specialty_comorbidity": "跨专科合并症",
+    "low_relevance_or_noise": "低相关或噪声",
+}
+
+TREATMENT_ROLE_LABELS = {
+    "disease_directed_therapy": "疾病直接治疗",
+    "risk_modifying_therapy": "风险控制治疗",
+    "supportive_or_symptomatic_therapy": "支持/对症治疗",
+    "general_inpatient_medication": "住院通用药物",
+    "low_priority_or_uncertain": "低优先级或不确定",
+}
+
 SUPPORTIVE_DRUGS = {
     "acetaminophen": "支持治疗药",
     "acetaminophen iv": "支持治疗药",
@@ -649,7 +667,6 @@ REQUIRED_INPUTS = [
     "cleaned_diagnosis_specialty_detail_6.csv",
     "cleaned_prescriptions.csv",
     "specialty_top_diagnoses_clean.csv",
-    "specialty_top_drugs_clean.csv",
     "cohort_first24h_labs.csv",
 ]
 
@@ -713,26 +730,90 @@ def contains_any(text: str, keywords: list[str]) -> bool:
     return any(keyword in normalized for keyword in keywords)
 
 
-def review_diagnosis(specialty_name: str, diagnosis_name: str) -> tuple[int, str, str]:
+def review_diagnosis(specialty_name: str, diagnosis_name: str) -> tuple[int, str, str, str, str, str]:
     normalized = str(diagnosis_name).strip().lower()
     if contains_any(normalized, SPECIALTY_EXCLUDE_DISEASE_KEYWORDS.get(specialty_name, [])):
-        return 0, "应剔除项", "明显跨专科或无助于专科知识库，已自动剔除"
+        return (
+            0,
+            "应剔除项",
+            "明显跨专科或无助于专科知识库，已自动剔除",
+            "low_relevance_or_noise",
+            "exclude_keyword",
+            "仅保留追溯，不进入专科诊断评估和推荐依据",
+        )
     if contains_any(normalized, BACKGROUND_DISEASE_KEYWORDS):
-        return 0, "背景共病", "术后/并发症/过程性疾病，降级为背景共病"
+        return (
+            0,
+            "背景共病",
+            "术后/并发症/过程性疾病，降级为背景共病",
+            "specialty_related_condition",
+            "background_keyword",
+            "用于解释病例复杂度和风险，不作为主要疾病推荐依据",
+        )
     if contains_any(normalized, SPECIALTY_CORE_DISEASE_KEYWORDS.get(specialty_name, [])):
-        return 1, "核心病种", "命中专科核心病种关键词"
-    return 0, "背景共病", "未命中明显专科核心关键词，保留为背景共病"
+        return (
+            1,
+            "核心病种",
+            "命中专科核心病种关键词",
+            "primary_specialty_disease",
+            "specialty_keyword",
+            "作为专科诊断评估的主要依据",
+        )
+    return (
+        0,
+        "背景共病",
+        "未命中明显专科核心关键词，保留为背景共病",
+        "cross_specialty_comorbidity",
+        "frequency_only",
+        "提示可能存在跨专科合并症，进入 MDT 协商时供其他专科复核",
+    )
 
 
-def review_drug(specialty_name: str, drug_name: str) -> tuple[int, str, str, str]:
+def review_drug(specialty_name: str, drug_name: str) -> tuple[int, str, str, str, str, str, str]:
     normalized = str(drug_name).strip().lower()
     if normalized in SUPPORTIVE_DRUGS:
-        return 0, SUPPORTIVE_DRUGS[normalized], "降级保留", "住院常见支持治疗药"
+        return (
+            0,
+            SUPPORTIVE_DRUGS[normalized],
+            "降级保留",
+            "住院常见支持治疗药",
+            "supportive_or_symptomatic_therapy",
+            "supportive_drug_list",
+            "用于对症或支持治疗，不作为疾病直接治疗证据",
+        )
     if normalized in EXACT_GENERIC_DRUGS or contains_any(normalized, GENERIC_AUXILIARY_KEYWORDS):
-        return 0, "通用辅助药", "降级保留", "通用液体/溶媒/辅助项"
+        return (
+            0,
+            "通用辅助药",
+            "降级保留",
+            "通用液体/溶媒/辅助项",
+            "general_inpatient_medication",
+            "generic_medication_rule",
+            "住院通用药物或溶媒，不作为专科治疗证据",
+        )
     if contains_any(normalized, SPECIALTY_CORE_DRUG_KEYWORDS.get(specialty_name, [])):
-        return 1, "核心治疗药", "保留", "命中专科核心药物关键词"
-    return 0, "支持治疗药", "降级保留", "未命中专科核心药关键词，暂按支持治疗药保留"
+        role = "risk_modifying_therapy" if contains_any(
+            normalized,
+            ["warfarin", "heparin", "apixaban", "enoxaparin", "insulin", "furosemide", "metoprolol", "labetalol"],
+        ) else "disease_directed_therapy"
+        return (
+            1,
+            "核心治疗药",
+            "保留",
+            "命中专科核心药物关键词",
+            role,
+            "specialty_drug_keyword",
+            "可作为专科建议候选药物，但需结合诊断和安全规则复核",
+        )
+    return (
+        0,
+        "支持治疗药",
+        "降级保留",
+        "未命中专科核心药关键词，暂按支持治疗药保留",
+        "low_priority_or_uncertain",
+        "frequency_only",
+        "仅作为真实世界用药候选证据，需人工或 MDT 复核",
+    )
 
 
 def build_disease_catalog() -> None:
@@ -751,6 +832,10 @@ def build_disease_catalog() -> None:
         review = sub["diagnosis_name"].apply(lambda x: review_diagnosis(specialty_name, x))
         sub["is_core_disease"] = review.apply(lambda x: x[0])
         sub["disease_role"] = review.apply(lambda x: x[1])
+        sub["diagnosis_relevance"] = review.apply(lambda x: x[3])
+        sub["diagnosis_relevance_label"] = sub["diagnosis_relevance"].map(DIAGNOSIS_RELEVANCE_LABELS)
+        sub["diagnosis_evidence_basis"] = review.apply(lambda x: x[4])
+        sub["agent_use"] = review.apply(lambda x: x[5])
         sub["review_status"] = sub["disease_role"].map(
             {
                 "核心病种": "保留",
@@ -768,6 +853,10 @@ def build_disease_catalog() -> None:
                     "frequency",
                     "is_core_disease",
                     "disease_role",
+                    "diagnosis_relevance",
+                    "diagnosis_relevance_label",
+                    "diagnosis_evidence_basis",
+                    "agent_use",
                     "review_status",
                     "notes",
                 ]
@@ -793,6 +882,10 @@ def build_disease_catalog() -> None:
                 "frequency",
                 "is_core_disease",
                 "disease_role",
+                "diagnosis_relevance",
+                "diagnosis_relevance_label",
+                "diagnosis_evidence_basis",
+                "agent_use",
                 "review_status",
                 "notes",
             ]
@@ -804,12 +897,30 @@ def build_disease_catalog() -> None:
 
 
 def build_drug_catalog() -> None:
-    top_drugs = read_csv_flexible(
-        "specialty_top_drugs_clean.csv",
-        usecols=["specialty_group", "drug_name", "freq"],
+    single_cases = read_csv_flexible(
+        "single_specialty_cases.csv",
+        usecols=["subject_id", "hadm_id", "specialty_group"],
     )
-    if "freq" in top_drugs.columns:
-        top_drugs["freq"] = to_numeric(top_drugs["freq"])
+    prescriptions = read_csv_flexible(
+        "cleaned_prescriptions.csv",
+        usecols=["subject_id", "hadm_id", "drug_name"],
+    )
+    top_drugs = (
+        single_cases.merge(
+            prescriptions,
+            on=["subject_id", "hadm_id"],
+            how="inner",
+        )
+        .dropna(subset=["drug_name"])
+        .groupby(["specialty_group", "drug_name"])
+        .size()
+        .reset_index(name="freq")
+    )
+    top_drugs["freq"] = to_numeric(top_drugs["freq"])
+    top_drugs = top_drugs.sort_values(
+        by=["specialty_group", "freq", "drug_name"],
+        ascending=[True, False, True],
+    )
 
     for specialty_name, folder in SPECIALTY_DIRS.items():
         sub = top_drugs[top_drugs["specialty_group"] == specialty_name].copy()
@@ -821,6 +932,11 @@ def build_drug_catalog() -> None:
         sub["drug_role"] = review.apply(lambda x: x[1])
         sub["review_status"] = review.apply(lambda x: x[2])
         sub["notes"] = review.apply(lambda x: x[3])
+        sub["treatment_role"] = review.apply(lambda x: x[4])
+        sub["treatment_role_label"] = sub["treatment_role"].map(TREATMENT_ROLE_LABELS)
+        sub["treatment_evidence_basis"] = review.apply(lambda x: x[5])
+        sub["agent_use"] = review.apply(lambda x: x[6])
+        sub = sub[~sub["drug_role"].isin(DRUG_CATALOG_EXCLUDED_ROLES)].head(DRUG_CATALOG_TOP_N)
         sub.rename(columns={"freq": "frequency"})[
             [
                 "specialty_name",
@@ -828,6 +944,10 @@ def build_drug_catalog() -> None:
                 "frequency",
                 "is_core_drug",
                 "drug_role",
+                "treatment_role",
+                "treatment_role_label",
+                "treatment_evidence_basis",
+                "agent_use",
                 "review_status",
                 "notes",
             ]
@@ -874,6 +994,84 @@ def build_lab_profile() -> None:
             )
         pd.DataFrame(rows).to_csv(
             KB_DIR / folder / "lab_profile.csv",
+            index=False,
+            encoding="utf-8-sig",
+        )
+
+
+def build_all_lab_profile() -> None:
+    all_labs = safe_read_csv(
+        "cohort_first24h_labs_all_long.csv",
+        usecols=[
+            "subject_id",
+            "hadm_id",
+            "itemid",
+            "lab_label",
+            "fluid",
+            "category",
+            "unit",
+            "lab_record_count",
+            "min_valuenum",
+            "mean_valuenum",
+            "max_valuenum",
+        ],
+    )
+    if all_labs is None:
+        return
+
+    single_cases = read_csv_flexible(
+        "single_specialty_cases.csv",
+        usecols=["subject_id", "hadm_id", "specialty_group"],
+    )
+    merged = single_cases.merge(all_labs, on=["subject_id", "hadm_id"], how="inner")
+    if merged.empty:
+        return
+
+    for value_col in ["lab_record_count", "min_valuenum", "mean_valuenum", "max_valuenum"]:
+        if value_col in merged.columns:
+            merged[value_col] = to_numeric(merged[value_col])
+
+    for specialty_name, folder in SPECIALTY_DIRS.items():
+        sub = merged[merged["specialty_group"] == specialty_name].copy()
+        if sub.empty:
+            continue
+        grouped = (
+            sub.groupby(["itemid", "lab_label", "fluid", "category", "unit"], dropna=False)
+            .agg(
+                case_count=("hadm_id", "nunique"),
+                raw_lab_record_count=("lab_record_count", "sum"),
+                min_value=("min_valuenum", "min"),
+                mean_value=("mean_valuenum", "mean"),
+                max_value=("max_valuenum", "max"),
+            )
+            .reset_index()
+        )
+        total_cases = single_cases[single_cases["specialty_group"] == specialty_name]["hadm_id"].nunique()
+        grouped["coverage_pct"] = (
+            grouped["case_count"] * 100.0 / total_cases if total_cases else 0
+        )
+        grouped["specialty_name"] = specialty_name
+        grouped = grouped.sort_values(
+            ["coverage_pct", "case_count", "lab_label"],
+            ascending=[False, False, True],
+        )
+        grouped[
+            [
+                "specialty_name",
+                "itemid",
+                "lab_label",
+                "fluid",
+                "category",
+                "unit",
+                "case_count",
+                "coverage_pct",
+                "raw_lab_record_count",
+                "min_value",
+                "mean_value",
+                "max_value",
+            ]
+        ].to_csv(
+            KB_DIR / folder / "lab_profile_all.csv",
             index=False,
             encoding="utf-8-sig",
         )
@@ -944,6 +1142,10 @@ def build_disease_drug_map() -> None:
         rows = []
         for diagnosis_name, group in sub.groupby("diagnosis_name", sort=False):
             disease_role = disease_review.get((specialty_name, diagnosis_name), (0, "背景共病", ""))[1]
+            diagnosis_relevance = disease_review.get(
+                (specialty_name, diagnosis_name),
+                (0, "背景共病", "", "cross_specialty_comorbidity"),
+            )[3]
             if disease_role == "应剔除项":
                 continue
             if disease_role != "核心病种":
@@ -951,13 +1153,15 @@ def build_disease_drug_map() -> None:
                     {
                         "specialty_name": specialty_name,
                         "diagnosis_name": diagnosis_name,
+                        "diagnosis_relevance": diagnosis_relevance,
                         "recommended_drugs": "",
                         "candidate_drug_pairs": "",
                         "avoid_or_low_priority_drugs": "",
                         "evidence_source": "single_specialty_cooccurrence",
                         "top_drug_evidence": "",
-                        "mapping_quality": "背景共病",
-                        "notes": "该诊断被标记为背景共病，不作为专科核心推荐依据",
+                        "mapping_quality": "仅用于诊断评估",
+                        "evidence_interpretation": "共现仅提示病例背景或跨专科合并症，不作为治疗因果证据",
+                        "notes": "该诊断不是本专科主要疾病，可用于诊断评估和 MDT 协商背景",
                     }
                 )
                 continue
@@ -968,16 +1172,26 @@ def build_disease_drug_map() -> None:
             group["drug_role"] = group["drug_name"].apply(
                 lambda x: drug_review.get((specialty_name, x), (0, "支持治疗药", "", ""))[1]
             )
-            kept_group = group[group["drug_role"] == "核心治疗药"].head(5)
-            low_priority_group = group[group["drug_role"] != "核心治疗药"].head(5)
+            group["treatment_role"] = group["drug_name"].apply(
+                lambda x: drug_review.get((specialty_name, x), (0, "", "", "", "low_priority_or_uncertain"))[4]
+            )
+            kept_group = group[
+                group["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
+            ].head(5)
+            low_priority_group = group[
+                ~group["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
+            ].head(5)
             recommended_drugs = " | ".join(kept_group["drug_name"].astype(str).tolist())
             low_priority_drugs = " | ".join(low_priority_group["drug_name"].astype(str).tolist())
             evidence = " | ".join(
                 f"{row.drug_name}({int(row.cooccurrence)})" for row in kept_group.itertuples()
             )
-            mapping_quality = "可直接使用" if recommended_drugs else "仅保留低优先级方案"
+            treatment_roles = " | ".join(
+                f"{row.drug_name}:{row.treatment_role}" for row in kept_group.itertuples()
+            )
+            mapping_quality = "候选证据充分" if recommended_drugs else "仅保留低优先级方案"
             notes = (
-                "已优先保留核心治疗药，支持治疗药和通用辅助药移入低优先级"
+                "已优先保留疾病直接治疗或风险控制药物，支持/通用药物移入低优先级"
                 if low_priority_drugs and recommended_drugs
                 else "当前未识别到明确核心治疗药，仅保留低优先级方案供参考"
             )
@@ -985,12 +1199,15 @@ def build_disease_drug_map() -> None:
                 {
                     "specialty_name": specialty_name,
                     "diagnosis_name": diagnosis_name,
+                    "diagnosis_relevance": diagnosis_relevance,
                     "recommended_drugs": recommended_drugs,
                     "candidate_drug_pairs": " | ".join(kept_group["drug_name"].astype(str).tolist()[:2]),
                     "avoid_or_low_priority_drugs": low_priority_drugs,
                     "evidence_source": "single_specialty_cooccurrence",
                     "top_drug_evidence": evidence,
+                    "treatment_role_evidence": treatment_roles,
                     "mapping_quality": mapping_quality,
+                    "evidence_interpretation": "单专科住院共现可作为真实世界候选证据，不代表治疗因果或临床指南推荐",
                     "notes": notes,
                 }
             )
@@ -1066,6 +1283,7 @@ def build_kb_index() -> None:
                 "disease_catalog": str(base / "disease_catalog.csv"),
                 "drug_catalog": str(base / "drug_catalog.csv"),
                 "lab_profile": str(base / "lab_profile.csv"),
+                "lab_profile_all": str(base / "lab_profile_all.csv"),
                 "risk_rules": str(base / "risk_rules.json"),
                 "disease_drug_map": str(base / "disease_drug_map.csv"),
                 "example_cases": str(base / "example_cases.json"),
@@ -1080,6 +1298,7 @@ def main() -> None:
     build_disease_catalog()
     build_drug_catalog()
     build_lab_profile()
+    build_all_lab_profile()
     build_risk_rules()
     build_disease_drug_map()
     build_example_cases()

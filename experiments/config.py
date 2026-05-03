@@ -23,6 +23,13 @@ class ExperimentPaths:
         default_factory=lambda: ROOT_DIR / "cleaned_diagnosis_specialty_detail_6.csv"
     )
     labs_file: Path = field(default_factory=lambda: ROOT_DIR / "cohort_first24h_labs.csv")
+    vitals_file: Path = field(default_factory=lambda: ROOT_DIR / "cohort_first24h_vitals.csv")
+    past_history_file: Path = field(default_factory=lambda: ROOT_DIR / "past_history_flags.csv")
+    comorbidity_summary_file: Path = field(default_factory=lambda: ROOT_DIR / "comorbidity_summary.csv")
+    procedure_features_file: Path = field(default_factory=lambda: ROOT_DIR / "procedure_features.csv")
+    microbiology_features_file: Path = field(default_factory=lambda: ROOT_DIR / "microbiology_features.csv")
+    icu_features_file: Path = field(default_factory=lambda: ROOT_DIR / "icu_features.csv")
+    outcome_features_file: Path = field(default_factory=lambda: ROOT_DIR / "outcome_features.csv")
     case_summary_file: Path = field(default_factory=lambda: ROOT_DIR / "case_summary.csv")
     kb_index_file: Path = field(default_factory=lambda: ROOT_DIR / "knowledge_base" / "kb_index.csv")
     input_template_file: Path = field(

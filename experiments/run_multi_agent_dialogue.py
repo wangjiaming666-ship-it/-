@@ -6,8 +6,8 @@ from pathlib import Path
 
 from experiments.case_builder import CaseBuilder
 from experiments.config import ExperimentPaths, LLMSettings
-from experiments.coordination_agent import CoordinationAgent
 from experiments.diagnosis_agent import DiagnosisAgent
+from experiments.mdt_discussion_agent import MDTDiscussionAgent
 from experiments.safety_agent import SafetyAgent
 from experiments.schemas import DialogueMessage
 from experiments.specialty_agent import SpecialtyAgent
@@ -36,7 +36,7 @@ def main() -> None:
 
     diagnosis_agent = DiagnosisAgent()
     specialty_agent = SpecialtyAgent(paths, llm_settings)
-    coordination_agent = CoordinationAgent(llm_settings)
+    mdt_agent = MDTDiscussionAgent()
     safety_agent = SafetyAgent(paths)
 
     transcript: list[DialogueMessage] = []
@@ -63,20 +63,34 @@ def main() -> None:
             )
         )
 
-    candidate_plans = coordination_agent.coordinate(case_record, routing, specialty_results)
+    mdt_result = mdt_agent.discuss(case_record, routing, specialty_results)
+    for review in mdt_result.review_round:
+        transcript.append(
+            DialogueMessage(
+                round_id=2,
+                speaker=f"{review.reviewer_specialty}_agent",
+                message_type="cross_review",
+                content=review.to_dict(),
+            )
+        )
+
+    candidate_plans = mdt_result.candidate_plans
     transcript.append(
         DialogueMessage(
-            round_id=2,
-            speaker="coordination_agent",
-            message_type="candidate_plans",
-            content={"plans": [plan.to_dict() for plan in candidate_plans]},
+            round_id=3,
+            speaker="mdt_discussion",
+            message_type="consensus_plans",
+            content={
+                "consensus_notes": mdt_result.consensus_notes,
+                "plans": [plan.to_dict() for plan in candidate_plans],
+            },
         )
     )
 
     safety_result = safety_agent.screen(case_record, candidate_plans, specialty_results)
     transcript.append(
         DialogueMessage(
-            round_id=3,
+            round_id=4,
             speaker="safety_agent",
             message_type="screening",
             content=safety_result.to_dict(),
@@ -87,6 +101,7 @@ def main() -> None:
         "case_record": case_record.to_dict(),
         "routing": routing.to_dict(),
         "specialty_results": [item.to_dict() for item in specialty_results],
+        "mdt_discussion": mdt_result.to_dict(),
         "candidate_plans": [item.to_dict() for item in candidate_plans],
         "safety_result": safety_result.to_dict(),
         "transcript": [item.to_dict() for item in transcript],

@@ -20,6 +20,12 @@ class CaseRecord:
     specialty_diagnosis_map: dict[str, list[str]]
     comorbidity_list: list[str]
     key_labs: dict[str, float | None]
+    past_history: dict[str, Any] = field(default_factory=dict)
+    key_vitals: dict[str, float | None] = field(default_factory=dict)
+    procedure_features: dict[str, Any] = field(default_factory=dict)
+    microbiology_features: dict[str, Any] = field(default_factory=dict)
+    icu_features: dict[str, Any] = field(default_factory=dict)
+    outcome_features: dict[str, Any] = field(default_factory=dict)
     raw_case_summary: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:

@@ -72,6 +72,8 @@ class SpecialtyAgent:
             "specialty_name": specialty_name,
             "specialty_related_diagnoses": routing.specialty_related_diagnoses.get(specialty_name, []),
             "comorbidity_list": case_record.comorbidity_list,
+            "past_history": case_record.past_history,
+            "key_vitals": case_record.key_vitals,
         }
         payload["key_labs"] = case_record.key_labs
         payload["specialty_knowledge"] = prompt_payload
@@ -116,11 +118,17 @@ class SpecialtyAgent:
 
         if not drug_scores:
             core_drugs = kb["drug_catalog"]
-            core_drugs = core_drugs[core_drugs["drug_role"] == "核心治疗药"].head(5)
+            if "treatment_role" in core_drugs.columns:
+                core_drugs = core_drugs[
+                    core_drugs["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
+                ].head(5)
+            else:
+                core_drugs = core_drugs[core_drugs["drug_role"] == "核心治疗药"].head(5)
             for _, row in core_drugs.iterrows():
                 drug = str(row["drug_name"])
                 drug_scores[drug] = float(row.get("frequency", 1)) / 1000.0
-                drug_reasons.setdefault(drug, []).append("来自本专科核心治疗药目录")
+                role = row.get("treatment_role_label", row.get("drug_role", "专科治疗角色"))
+                drug_reasons.setdefault(drug, []).append(f"来自本专科药物治疗知识库，角色为 {role}")
 
         sorted_drugs = sorted(drug_scores.items(), key=lambda item: item[1], reverse=True)[:5]
         recommendations = [
@@ -142,7 +150,7 @@ class SpecialtyAgent:
             2,
         )
         conversation_text = (
-            f"{specialty_name}智能体认为当前病例应优先围绕 {', '.join(diagnoses[:3]) or '本专科核心病种'} "
+            f"{specialty_name}智能体认为当前病例应优先围绕 {', '.join(diagnoses[:3]) or '本专科主要问题'} "
             f"生成候选药物，当前首选药物包括 {', '.join([r.drug_name for r in recommendations[:3]])}。"
         )
 
@@ -150,14 +158,15 @@ class SpecialtyAgent:
             specialty_name=specialty_name,
             recommended_drugs_topk=recommendations,
             recommendation_reasons={
-                "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
-                "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
-                "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。",
+                "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+                "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+                "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+                "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。",
             },
             risk_alerts=risk_alerts,
             avoid_or_low_priority_drugs=avoid_or_low_priority,
             overall_confidence=overall_confidence,
-            summary_reason=f"{specialty_name}智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+            summary_reason=f"{specialty_name}智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
             conversation_text=conversation_text,
         )
 

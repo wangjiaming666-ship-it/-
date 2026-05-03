@@ -27,9 +27,29 @@ class CaseBuilder:
         self.admissions = safe_read_csv(paths.admissions_file)
         self.diagnoses = safe_read_csv(paths.diagnoses_file)
         self.labs = safe_read_csv(paths.labs_file)
+        self.vitals = safe_read_csv(paths.vitals_file)
+        self.past_history = safe_read_csv(paths.past_history_file)
+        self.comorbidity_summary = safe_read_csv(paths.comorbidity_summary_file)
+        self.procedure_features = safe_read_csv(paths.procedure_features_file)
+        self.microbiology_features = safe_read_csv(paths.microbiology_features_file)
+        self.icu_features = safe_read_csv(paths.icu_features_file)
+        self.outcome_features = safe_read_csv(paths.outcome_features_file)
         self.case_summary = safe_read_csv(paths.case_summary_file)
 
-        for frame in [self.multi_cases, self.admissions, self.diagnoses, self.labs, self.case_summary]:
+        for frame in [
+            self.multi_cases,
+            self.admissions,
+            self.diagnoses,
+            self.labs,
+            self.vitals,
+            self.past_history,
+            self.comorbidity_summary,
+            self.procedure_features,
+            self.microbiology_features,
+            self.icu_features,
+            self.outcome_features,
+            self.case_summary,
+        ]:
             if frame is not None:
                 for col in ["subject_id", "hadm_id"]:
                     if col in frame.columns:
@@ -56,6 +76,12 @@ class CaseBuilder:
         primary_diagnosis = self._infer_primary_diagnosis(diagnoses)
         comorbidities = self._infer_comorbidities(diagnoses, primary_diagnosis)
         labs = self._load_labs(subject_id, hadm_id)
+        past_history = self._load_feature_row(self.past_history, subject_id, hadm_id)
+        key_vitals = self._load_vitals(subject_id, hadm_id)
+        procedure_features = self._load_feature_row(self.procedure_features, subject_id, hadm_id)
+        microbiology_features = self._load_feature_row(self.microbiology_features, subject_id, hadm_id)
+        icu_features = self._load_feature_row(self.icu_features, subject_id, hadm_id)
+        outcome_features = self._load_feature_row(self.outcome_features, subject_id, hadm_id)
         summary = self._load_case_summary(hadm_id)
 
         return CaseRecord(
@@ -65,6 +91,12 @@ class CaseBuilder:
             specialty_diagnosis_map=specialty_map,
             comorbidity_list=comorbidities,
             key_labs=labs,
+            past_history=past_history,
+            key_vitals=key_vitals,
+            procedure_features=procedure_features,
+            microbiology_features=microbiology_features,
+            icu_features=icu_features,
+            outcome_features=outcome_features,
             raw_case_summary=summary,
         )
 
@@ -128,6 +160,26 @@ class CaseBuilder:
         values = diagnoses["long_title"].dropna().astype(str).drop_duplicates().tolist()
         return [item for item in values if item != primary_diagnosis]
 
+    def _load_feature_row(
+        self,
+        frame: pd.DataFrame | None,
+        subject_id: str,
+        hadm_id: str,
+    ) -> dict[str, Any]:
+        if frame is None:
+            return {}
+        matched = frame[
+            (frame["subject_id"] == subject_id) & (frame["hadm_id"] == hadm_id)
+        ]
+        if matched.empty:
+            return {}
+        row = matched.iloc[0].fillna("")
+        return {
+            key: self._normalize_feature_value(value)
+            for key, value in row.to_dict().items()
+            if key not in {"subject_id", "hadm_id"}
+        }
+
     def _load_labs(self, subject_id: str, hadm_id: str) -> dict[str, float | None]:
         default_labs = {
             "creatinine_24h": None,
@@ -150,6 +202,42 @@ class CaseBuilder:
             default_labs[key] = self._to_float(row.get(key))
         return default_labs
 
+    def _load_vitals(self, subject_id: str, hadm_id: str) -> dict[str, float | None]:
+        default_vitals = {
+            "heart_rate_min_24h": None,
+            "heart_rate_mean_24h": None,
+            "heart_rate_max_24h": None,
+            "respiratory_rate_min_24h": None,
+            "respiratory_rate_mean_24h": None,
+            "respiratory_rate_max_24h": None,
+            "temperature_f_min_24h": None,
+            "temperature_f_mean_24h": None,
+            "temperature_f_max_24h": None,
+            "spo2_min_24h": None,
+            "spo2_mean_24h": None,
+            "spo2_max_24h": None,
+            "sbp_min_24h": None,
+            "sbp_mean_24h": None,
+            "sbp_max_24h": None,
+            "dbp_min_24h": None,
+            "dbp_mean_24h": None,
+            "dbp_max_24h": None,
+            "mbp_min_24h": None,
+            "mbp_mean_24h": None,
+            "mbp_max_24h": None,
+        }
+        if self.vitals is None:
+            return default_vitals
+        matched = self.vitals[
+            (self.vitals["subject_id"] == subject_id) & (self.vitals["hadm_id"] == hadm_id)
+        ]
+        if matched.empty:
+            return default_vitals
+        row = matched.iloc[0]
+        for key in default_vitals:
+            default_vitals[key] = self._to_float(row.get(key))
+        return default_vitals
+
     def _load_case_summary(self, hadm_id: str) -> dict[str, Any]:
         if self.case_summary is None or "hadm_id" not in self.case_summary.columns:
             return {}
@@ -167,3 +255,14 @@ class CaseBuilder:
             return float(value)
         except Exception:  # noqa: BLE001
             return None
+
+    @staticmethod
+    def _normalize_feature_value(value: Any) -> Any:
+        if value is None or value == "":
+            return None
+        try:
+            if pd.isna(value):
+                return None
+        except TypeError:
+            pass
+        return value

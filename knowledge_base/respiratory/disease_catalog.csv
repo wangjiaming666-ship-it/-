@@ -1,21 +1,21 @@
-﻿specialty_name,diagnosis_name,frequency,is_core_disease,disease_role,review_status,notes
-呼吸,"Chronic airway obstruction, not elsewhere classified",10804,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Pneumonia, organism unspecified",8170,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Postinflammatory pulmonary fibrosis,1401,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Unspecified asthma, uncomplicated",951,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Pulmonary congestion and hypostasis,527,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Acute pharyngitis,296,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Bronchitis, not specified as acute or chronic",270,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Unspecified viral meningitis,221,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-呼吸,Asbestosis,195,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Pneumonia, unspecified organism",138,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Chronic obstructive pulmonary disease, unspecified",109,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Acute respiratory failure with hypoxia,97,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia],94,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Peritonsillar abscess,75,0,背景共病,降级保留,未命中明显专科核心关键词，保留为背景共病
-呼吸,"Acute upper respiratory infection, unspecified",67,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Unspecified asthma with (acute) exacerbation,65,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Pleural effusion, not elsewhere classified",61,1,核心病种,保留,命中专科核心病种关键词
-呼吸,"Emphysema, unspecified",57,1,核心病种,保留,命中专科核心病种关键词
-呼吸,Deviated nasal septum,52,0,背景共病,降级保留,未命中明显专科核心关键词，保留为背景共病
-呼吸,"Mild intermittent asthma, uncomplicated",48,1,核心病种,保留,命中专科核心病种关键词
+﻿specialty_name,diagnosis_name,frequency,is_core_disease,disease_role,diagnosis_relevance,diagnosis_relevance_label,diagnosis_evidence_basis,agent_use,review_status,notes
+呼吸,"Chronic airway obstruction, not elsewhere classified",10804,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Pneumonia, organism unspecified",8170,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Postinflammatory pulmonary fibrosis,1401,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Unspecified asthma, uncomplicated",951,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Pulmonary congestion and hypostasis,527,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Acute pharyngitis,296,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Bronchitis, not specified as acute or chronic",270,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Unspecified viral meningitis,221,0,应剔除项,low_relevance_or_noise,低相关或噪声,exclude_keyword,仅保留追溯，不进入专科诊断评估和推荐依据,已剔除,明显跨专科或无助于专科知识库，已自动剔除
+呼吸,Asbestosis,195,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Pneumonia, unspecified organism",138,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Chronic obstructive pulmonary disease, unspecified",109,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Acute respiratory failure with hypoxia,97,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Pneumococcal pneumonia [Streptococcus pneumoniae pneumonia],94,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Peritonsillar abscess,75,0,背景共病,cross_specialty_comorbidity,跨专科合并症,frequency_only,提示可能存在跨专科合并症，进入 MDT 协商时供其他专科复核,降级保留,未命中明显专科核心关键词，保留为背景共病
+呼吸,"Acute upper respiratory infection, unspecified",67,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Unspecified asthma with (acute) exacerbation,65,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Pleural effusion, not elsewhere classified",61,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,"Emphysema, unspecified",57,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
+呼吸,Deviated nasal septum,52,0,背景共病,cross_specialty_comorbidity,跨专科合并症,frequency_only,提示可能存在跨专科合并症，进入 MDT 协商时供其他专科复核,降级保留,未命中明显专科核心关键词，保留为背景共病
+呼吸,"Mild intermittent asthma, uncomplicated",48,1,核心病种,primary_specialty_disease,专科主要疾病,specialty_keyword,作为专科诊断评估的主要依据,保留,命中专科核心病种关键词
