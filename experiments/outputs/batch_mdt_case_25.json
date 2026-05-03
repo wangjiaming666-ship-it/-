@@ -1,0 +1,1231 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10001667",
+      "hadm_id": "22672901",
+      "gender": "F",
+      "age": 86.0
+    },
+    "primary_diagnosis": "Dysarthria and anarthria",
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Dysarthria and anarthria",
+        "Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Other specified heart block",
+        "Unspecified diastolic (congestive) heart failure"
+      ],
+      "消化": [
+        "Abnormal results of thyroid function studies",
+        "Do not resuscitate",
+        "Other amnesia",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Deficiency of other specified B group vitamins",
+        "Hypertensive heart disease with heart failure",
+        "Other hyperlipidemia",
+        "Unspecified atrial fibrillation"
+      ]
+    },
+    "comorbidity_list": [
+      "Abnormal results of thyroid function studies",
+      "Deficiency of other specified B group vitamins",
+      "Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding",
+      "Do not resuscitate",
+      "Hypertensive heart disease with heart failure",
+      "Long term (current) use of antithrombotics/antiplatelets",
+      "Other amnesia",
+      "Other hyperlipidemia",
+      "Other specified heart block",
+      "Personal history of nicotine dependence",
+      "Unspecified atrial fibrillation",
+      "Unspecified diastolic (congestive) heart failure"
+    ],
+    "key_labs": {
+      "creatinine_24h": 0.7,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.9,
+      "sodium_24h": 143.0,
+      "glucose_24h": 102.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.9
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "subject_id": "10001667",
+      "hadm_id": "22672901",
+      "gender": "F",
+      "anchor_age": 86,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "22/8/2173 17:16:00",
+      "dischtime": "24/8/2173 16:45:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Dysarthria and anarthria",
+      "comorbidity_list": "Abnormal results of thyroid function studies | Deficiency of other specified B group vitamins | Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding | Do not resuscitate | Hypertensive heart disease with heart failure | Long term (current) use of antithrombotics/antiplatelets | Other amnesia | Other hyperlipidemia | Other specified heart block | Personal history of nicotine dependence | Unspecified atrial fibrillation | Unspecified diastolic (congestive) heart failure",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管",
+      "drug_list": "acetaminophen | apixaban | atenolol | atorvastatin | bisacodyl | cyanocobalamin | dextrose 50% | digoxin | docusate sodium | glucagon | glucose gel | heparin | hydralazine | insulin | levofloxacin | losartan potassium | polyethylene glycol | ramelteon | senna | simethicone | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.7,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.9,
+      "sodium_24h": 143.0,
+      "glucose_24h": 102.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.9
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Dysarthria and anarthria",
+        "Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Other specified heart block",
+        "Unspecified diastolic (congestive) heart failure"
+      ],
+      "消化": [
+        "Abnormal results of thyroid function studies",
+        "Do not resuscitate",
+        "Other amnesia",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Deficiency of other specified B group vitamins",
+        "Hypertensive heart disease with heart failure",
+        "Other hyperlipidemia",
+        "Unspecified atrial fibrillation"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 2,
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 3,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.79,
+      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Dysarthria and anarthria, Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 2,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.68,
+      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Abnormal results of thyroid function studies, Do not resuscitate, Other amnesia 生成候选药物，当前首选药物包括 pantoprazole, polyethylene glycol。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "furosemide",
+          "confidence": 0.95,
+          "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.95,
+          "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "warfarin",
+          "confidence": 0.93,
+          "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "metoprolol succinate xl",
+          "confidence": 0.73,
+          "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "heparin",
+          "confidence": 0.73,
+          "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Hypertensive heart disease with heart failure 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
+      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Deficiency of other specified B group vitamins, Hypertensive heart disease with heart failure, Other hyperlipidemia 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, warfarin。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 3 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "polyethylene glycol"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 2 个无明显冲突候选药物。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "furosemide",
+          "metoprolol tartrate",
+          "warfarin",
+          "metoprolol succinate xl",
+          "heparin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 3 个专科：内分泌/代谢, 消化, 心血管。",
+      "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole",
+          "polyethylene glycol",
+          "furosemide"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管",
+          "消化"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "aggregate_score": 12.75
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole",
+          "polyethylene glycol",
+          "furosemide"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管",
+          "消化"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "aggregate_score": 12.75
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "aggregate_score": 8.85
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "pantoprazole",
+        "polyethylene glycol",
+        "furosemide"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管",
+        "消化"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+      "aggregate_score": 12.75
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "pantoprazole",
+        "polyethylene glycol",
+        "furosemide"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管",
+        "消化"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+      "aggregate_score": 12.75
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "pantoprazole"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+      "aggregate_score": 8.85
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "pantoprazole",
+        "polyethylene glycol",
+        "furosemide"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管",
+        "消化"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+      "aggregate_score": 12.75
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole",
+          "polyethylene glycol",
+          "furosemide"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管",
+          "消化"
+        ],
+        "aggregate_score": 12.75,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 0,
+        "final_score": 12.75,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "polyethylene glycol",
+            "potential_impacts": [
+              "通便/肠道准备相关药物，需结合容量和电解质状态"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole",
+          "polyethylene glycol",
+          "furosemide"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管",
+          "消化"
+        ],
+        "aggregate_score": 12.75,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 0,
+        "final_score": 12.75,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "polyethylene glycol",
+            "potential_impacts": [
+              "通便/肠道准备相关药物，需结合容量和电解质状态"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "pantoprazole"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "aggregate_score": 8.85,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
+        "risk_penalty": 0,
+        "final_score": 8.85,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "消化",
+          "心血管"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Dysarthria and anarthria",
+            "Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding",
+            "Long term (current) use of antithrombotics/antiplatelets",
+            "Other specified heart block",
+            "Unspecified diastolic (congestive) heart failure"
+          ],
+          "消化": [
+            "Abnormal results of thyroid function studies",
+            "Do not resuscitate",
+            "Other amnesia",
+            "Personal history of nicotine dependence"
+          ],
+          "心血管": [
+            "Deficiency of other specified B group vitamins",
+            "Hypertensive heart disease with heart failure",
+            "Other hyperlipidemia",
+            "Unspecified atrial fibrillation"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 2,
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 3,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.79,
+        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Dysarthria and anarthria, Diverticulosis of intestine, part unspecified, without perforation or abscess without bleeding, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "消化_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "消化",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "pantoprazole",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 2,
+            "drug_name": "polyethylene glycol",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.68,
+        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Abnormal results of thyroid function studies, Do not resuscitate, Other amnesia 生成候选药物，当前首选药物包括 pantoprazole, polyethylene glycol。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "furosemide",
+            "confidence": 0.95,
+            "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.95,
+            "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "warfarin",
+            "confidence": 0.93,
+            "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "metoprolol succinate xl",
+            "confidence": 0.73,
+            "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "heparin",
+            "confidence": 0.73,
+            "reason": "与诊断 Hypertensive heart disease with heart failure 在知识库中存在映射；与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Hypertensive heart disease with heart failure 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
+        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Deficiency of other specified B group vitamins, Hypertensive heart disease with heart failure, Other hyperlipidemia 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, warfarin。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 3 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "消化_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "polyethylene glycol"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 2 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "心血管_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "furosemide",
+          "metoprolol tartrate",
+          "warfarin",
+          "metoprolol succinate xl",
+          "heparin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 3 个专科：内分泌/代谢, 消化, 心血管。",
+          "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole",
+              "polyethylene glycol",
+              "furosemide"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管",
+              "消化"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "aggregate_score": 12.75
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole",
+              "polyethylene glycol",
+              "furosemide"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管",
+              "消化"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "aggregate_score": 12.75
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "aggregate_score": 8.85
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "insulin",
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "pantoprazole",
+            "polyethylene glycol",
+            "furosemide"
+          ],
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "心血管",
+            "消化"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+          "aggregate_score": 12.75
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole",
+              "polyethylene glycol",
+              "furosemide"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管",
+              "消化"
+            ],
+            "aggregate_score": 12.75,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 0,
+            "final_score": 12.75,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "polyethylene glycol",
+                "potential_impacts": [
+                  "通便/肠道准备相关药物，需结合容量和电解质状态"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole",
+              "polyethylene glycol",
+              "furosemide"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管",
+              "消化"
+            ],
+            "aggregate_score": 12.75,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 0,
+            "final_score": 12.75,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "polyethylene glycol",
+                "potential_impacts": [
+                  "通便/肠道准备相关药物，需结合容量和电解质状态"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "pantoprazole"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "aggregate_score": 8.85,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
+            "risk_penalty": 0,
+            "final_score": 8.85,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": false
+}
