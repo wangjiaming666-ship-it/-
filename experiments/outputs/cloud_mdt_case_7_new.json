@@ -430,8 +430,48 @@
           "心血管"
         ],
         "aggregate_score": 11.870000000000001,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
         "risk_penalty": 0,
         "final_score": 11.870000000000001,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "heparin",
+            "potential_impacts": [
+              "涉及抗凝或抗血小板相关出血风险"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
       },
       {
@@ -450,8 +490,48 @@
           "心血管"
         ],
         "aggregate_score": 11.870000000000001,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
         "risk_penalty": 0,
         "final_score": 11.870000000000001,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "heparin",
+            "potential_impacts": [
+              "涉及抗凝或抗血小板相关出血风险"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
       },
       {
@@ -467,13 +547,38 @@
           "内分泌/代谢"
         ],
         "aggregate_score": 8.18,
+        "baseline_risk_penalty": 0,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
         "risk_penalty": 0,
         "final_score": 8.18,
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
       }
     ],
     "triggered_risks": [],
-    "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
   },
   "transcript": [
     {
@@ -791,8 +896,48 @@
               "心血管"
             ],
             "aggregate_score": 11.870000000000001,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
             "risk_penalty": 0,
             "final_score": 11.870000000000001,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "heparin",
+                "potential_impacts": [
+                  "涉及抗凝或抗血小板相关出血风险"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
           },
           {
@@ -811,8 +956,48 @@
               "心血管"
             ],
             "aggregate_score": 11.870000000000001,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
             "risk_penalty": 0,
             "final_score": 11.870000000000001,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "heparin",
+                "potential_impacts": [
+                  "涉及抗凝或抗血小板相关出血风险"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
           },
           {
@@ -828,13 +1013,38 @@
               "内分泌/代谢"
             ],
             "aggregate_score": 8.18,
+            "baseline_risk_penalty": 0,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
             "risk_penalty": 0,
             "final_score": 8.18,
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
           }
         ],
         "triggered_risks": [],
-        "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
       }
     }
   ],

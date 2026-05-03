@@ -627,8 +627,70 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 15.17,
+        "baseline_risk_penalty": 10,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
         "risk_penalty": 10,
         "final_score": 5.17,
+        "patient_context_flags": [
+          "入院早期肌酐升高: 2.1",
+          "入院早期 INR 升高: 2.1"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "omeprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "polyethylene glycol",
+            "potential_impacts": [
+              "通便/肠道准备相关药物，需结合容量和电解质状态"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
       },
       {
@@ -649,8 +711,70 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 15.35,
+        "baseline_risk_penalty": 10,
+        "avoid_drug_penalty": 1,
+        "medication_context_penalty": 0,
         "risk_penalty": 11,
         "final_score": 4.35,
+        "patient_context_flags": [
+          "入院早期肌酐升高: 2.1",
+          "入院早期 INR 升高: 2.1"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "omeprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
       },
       {
@@ -669,8 +793,54 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 11.780000000000001,
+        "baseline_risk_penalty": 10,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 0,
         "risk_penalty": 10,
         "final_score": 1.7800000000000011,
+        "patient_context_flags": [
+          "入院早期肌酐升高: 2.1",
+          "入院早期 INR 升高: 2.1"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
       }
     ],
@@ -681,7 +851,11 @@
         "lab_name": "creatinine_24h",
         "lab_value": 2.1,
         "risk_level": "moderate",
-        "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "肾内/泌尿",
@@ -689,7 +863,11 @@
         "lab_name": "bun_24h",
         "lab_value": 41.0,
         "risk_level": "high",
-        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "消化",
@@ -697,7 +875,11 @@
         "lab_name": "inr_24h",
         "lab_value": 2.1,
         "risk_level": "high",
-        "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "心血管",
@@ -705,10 +887,15 @@
         "lab_name": "inr_24h",
         "lab_value": 2.1,
         "risk_level": "high",
-        "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
-    "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
   },
   "transcript": [
     {
@@ -1198,8 +1385,70 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 15.17,
+            "baseline_risk_penalty": 10,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
             "risk_penalty": 10,
             "final_score": 5.17,
+            "patient_context_flags": [
+              "入院早期肌酐升高: 2.1",
+              "入院早期 INR 升高: 2.1"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "omeprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "polyethylene glycol",
+                "potential_impacts": [
+                  "通便/肠道准备相关药物，需结合容量和电解质状态"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
           },
           {
@@ -1220,8 +1469,70 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 15.35,
+            "baseline_risk_penalty": 10,
+            "avoid_drug_penalty": 1,
+            "medication_context_penalty": 0,
             "risk_penalty": 11,
             "final_score": 4.35,
+            "patient_context_flags": [
+              "入院早期肌酐升高: 2.1",
+              "入院早期 INR 升高: 2.1"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "omeprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
           },
           {
@@ -1240,8 +1551,54 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 11.780000000000001,
+            "baseline_risk_penalty": 10,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 0,
             "risk_penalty": 10,
             "final_score": 1.7800000000000011,
+            "patient_context_flags": [
+              "入院早期肌酐升高: 2.1",
+              "入院早期 INR 升高: 2.1"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
           }
         ],
@@ -1252,7 +1609,11 @@
             "lab_name": "creatinine_24h",
             "lab_value": 2.1,
             "risk_level": "moderate",
-            "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "肾内/泌尿",
@@ -1260,7 +1621,11 @@
             "lab_name": "bun_24h",
             "lab_value": 41.0,
             "risk_level": "high",
-            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "消化",
@@ -1268,7 +1633,11 @@
             "lab_name": "inr_24h",
             "lab_value": 2.1,
             "risk_level": "high",
-            "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "心血管",
@@ -1276,10 +1645,15 @@
             "lab_name": "inr_24h",
             "lab_value": 2.1,
             "risk_level": "high",
-            "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],
-        "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
       }
     }
   ],

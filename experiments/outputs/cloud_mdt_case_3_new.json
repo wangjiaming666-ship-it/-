@@ -591,7 +591,7 @@
         "肾内/泌尿"
       ],
       "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
-      "aggregate_score": 7.310000000000002
+      "aggregate_score": 6.310000000000002
     },
     "ranked_plans": [
       {
@@ -611,8 +611,56 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 16.310000000000002,
+        "baseline_risk_penalty": 9,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 1,
         "risk_penalty": 9,
-        "final_score": 7.310000000000002,
+        "final_score": 6.310000000000002,
+        "patient_context_flags": [
+          "入院早期钾异常: 5.1",
+          "入院早期肌酐升高: 2.5",
+          "入院早期血糖异常: 259.0"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "moderate",
+            "suggested_action": "保留但需加强血糖监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
       },
       {
@@ -632,8 +680,56 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 16.310000000000002,
+        "baseline_risk_penalty": 9,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 1,
         "risk_penalty": 9,
-        "final_score": 7.310000000000002,
+        "final_score": 6.310000000000002,
+        "patient_context_flags": [
+          "入院早期钾异常: 5.1",
+          "入院早期肌酐升高: 2.5",
+          "入院早期血糖异常: 259.0"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "moderate",
+            "suggested_action": "保留但需加强血糖监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
       },
       {
@@ -651,8 +747,56 @@
           "肾内/泌尿"
         ],
         "aggregate_score": 12.16,
+        "baseline_risk_penalty": 9,
+        "avoid_drug_penalty": 0,
+        "medication_context_penalty": 1,
         "risk_penalty": 9,
-        "final_score": 3.16,
+        "final_score": 2.16,
+        "patient_context_flags": [
+          "入院早期钾异常: 5.1",
+          "入院早期肌酐升高: 2.5",
+          "入院早期血糖异常: 259.0"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "furosemide",
+            "potential_impacts": [
+              "可能影响容量状态和水电解质平衡"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "moderate",
+            "suggested_action": "保留但需加强血糖监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
+        "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
       }
     ],
@@ -663,7 +807,11 @@
         "lab_name": "glucose_24h",
         "lab_value": 259.0,
         "risk_level": "high",
-        "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "肾内/泌尿",
@@ -671,7 +819,11 @@
         "lab_name": "creatinine_24h",
         "lab_value": 2.5,
         "risk_level": "moderate",
-        "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "肾内/泌尿",
@@ -679,7 +831,11 @@
         "lab_name": "bun_24h",
         "lab_value": 44.0,
         "risk_level": "high",
-        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "肾内/泌尿",
@@ -687,7 +843,11 @@
         "lab_name": "potassium_24h",
         "lab_value": 5.1,
         "risk_level": "moderate",
-        "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "心血管",
@@ -695,10 +855,15 @@
         "lab_name": "potassium_24h",
         "lab_value": 5.1,
         "risk_level": "moderate",
-        "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。"
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
-    "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
   },
   "transcript": [
     {
@@ -1157,7 +1322,7 @@
             "肾内/泌尿"
           ],
           "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
-          "aggregate_score": 7.310000000000002
+          "aggregate_score": 6.310000000000002
         },
         "ranked_plans": [
           {
@@ -1177,8 +1342,56 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 16.310000000000002,
+            "baseline_risk_penalty": 9,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 1,
             "risk_penalty": 9,
-            "final_score": 7.310000000000002,
+            "final_score": 6.310000000000002,
+            "patient_context_flags": [
+              "入院早期钾异常: 5.1",
+              "入院早期肌酐升高: 2.5",
+              "入院早期血糖异常: 259.0"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "moderate",
+                "suggested_action": "保留但需加强血糖监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
           },
           {
@@ -1198,8 +1411,56 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 16.310000000000002,
+            "baseline_risk_penalty": 9,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 1,
             "risk_penalty": 9,
-            "final_score": 7.310000000000002,
+            "final_score": 6.310000000000002,
+            "patient_context_flags": [
+              "入院早期钾异常: 5.1",
+              "入院早期肌酐升高: 2.5",
+              "入院早期血糖异常: 259.0"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "moderate",
+                "suggested_action": "保留但需加强血糖监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
           },
           {
@@ -1217,8 +1478,56 @@
               "肾内/泌尿"
             ],
             "aggregate_score": 12.16,
+            "baseline_risk_penalty": 9,
+            "avoid_drug_penalty": 0,
+            "medication_context_penalty": 1,
             "risk_penalty": 9,
-            "final_score": 3.16,
+            "final_score": 2.16,
+            "patient_context_flags": [
+              "入院早期钾异常: 5.1",
+              "入院早期肌酐升高: 2.5",
+              "入院早期血糖异常: 259.0"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "furosemide",
+                "potential_impacts": [
+                  "可能影响容量状态和水电解质平衡"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "moderate",
+                "suggested_action": "保留但需加强血糖监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期血糖异常，insulin 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。",
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
+            "safety_interpretation": "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
           }
         ],
@@ -1229,7 +1538,11 @@
             "lab_name": "glucose_24h",
             "lab_value": 259.0,
             "risk_level": "high",
-            "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "肾内/泌尿",
@@ -1237,7 +1550,11 @@
             "lab_name": "creatinine_24h",
             "lab_value": 2.5,
             "risk_level": "moderate",
-            "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "肾内/泌尿",
@@ -1245,7 +1562,11 @@
             "lab_name": "bun_24h",
             "lab_value": 44.0,
             "risk_level": "high",
-            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "肾内/泌尿",
@@ -1253,7 +1574,11 @@
             "lab_name": "potassium_24h",
             "lab_value": 5.1,
             "risk_level": "moderate",
-            "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "心血管",
@@ -1261,10 +1586,15 @@
             "lab_name": "potassium_24h",
             "lab_value": 5.1,
             "risk_level": "moderate",
-            "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。"
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],
-        "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
       }
     }
   ],
