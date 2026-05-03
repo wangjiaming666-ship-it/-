@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from experiments.case_builder import CaseBuilder
-from experiments.config import ExperimentPaths, LLMSettings
+from experiments.config import CursorSettings, ExperimentPaths, LLMSettings
 from experiments.diagnosis_agent import DiagnosisAgent
 from experiments.mdt_discussion_agent import MDTDiscussionAgent
 from experiments.safety_agent import SafetyAgent
@@ -26,6 +26,7 @@ def main() -> None:
     paths = ExperimentPaths()
     paths.outputs_dir.mkdir(parents=True, exist_ok=True)
     llm_settings = LLMSettings()
+    cursor_settings = CursorSettings()
 
     builder = CaseBuilder(paths)
     case_record = (
@@ -37,7 +38,7 @@ def main() -> None:
     diagnosis_agent = DiagnosisAgent()
     specialty_agent = SpecialtyAgent(paths, llm_settings)
     mdt_agent = MDTDiscussionAgent()
-    safety_agent = SafetyAgent(paths, llm_settings)
+    safety_agent = SafetyAgent(paths, llm_settings, cursor_settings)
 
     transcript: list[DialogueMessage] = []
     routing = diagnosis_agent.route(case_record)
@@ -106,6 +107,7 @@ def main() -> None:
         "safety_result": safety_result.to_dict(),
         "transcript": [item.to_dict() for item in transcript],
         "llm_enabled": llm_settings.enabled,
+        "cursor_enabled": cursor_settings.enabled,
     }
 
     output_path = Path(args.output) if args.output else paths.outputs_dir / f"{case_record.patient_info.hadm_id}.json"

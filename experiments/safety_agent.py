@@ -3,7 +3,8 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from experiments.config import ExperimentPaths, LLMSettings
+from experiments.config import CursorSettings, ExperimentPaths, LLMSettings
+from experiments.cursor_client import CursorCloudAgentClient
 from experiments.knowledge_base import KnowledgeBaseIndex, SpecialtyKnowledgeLoader
 from experiments.llm_client import OpenAICompatibleClient
 from experiments.schemas import CandidatePlan, CaseRecord, SafetyScreeningResult, SpecialtyAgentResult
@@ -259,13 +260,24 @@ def _to_float(value: Any) -> float | None:
 
 
 class SafetyAgent:
-    def __init__(self, paths: ExperimentPaths, llm_settings: LLMSettings | None = None) -> None:
+    def __init__(
+        self,
+        paths: ExperimentPaths,
+        llm_settings: LLMSettings | None = None,
+        cursor_settings: CursorSettings | None = None,
+    ) -> None:
         self.kb_index = KnowledgeBaseIndex(paths)
         self.kb_loader = SpecialtyKnowledgeLoader(self.kb_index)
         self.llm_settings = llm_settings
         self.llm_client = (
             OpenAICompatibleClient(llm_settings)
             if llm_settings is not None and llm_settings.enabled
+            else None
+        )
+        self.cursor_settings = cursor_settings or CursorSettings()
+        self.cursor_client = (
+            CursorCloudAgentClient(self.cursor_settings)
+            if self.cursor_settings.enabled
             else None
         )
 
@@ -331,7 +343,27 @@ class SafetyAgent:
         ranked_plans = sorted(ranked_plans, key=lambda item: item["final_score"], reverse=True)
         llm_safety_review: dict[str, Any] = {}
         preferred_plan_id: str | None = None
-        if self.llm_client is not None:
+        if self.cursor_client is not None:
+            try:
+                llm_safety_review = self._review_with_cursor(
+                    case_record=case_record,
+                    ranked_plans=ranked_plans,
+                    triggered_risks=triggered_risks,
+                    specialty_outputs=specialty_outputs,
+                    patient_safety_context=patient_safety_context,
+                )
+                candidate_id = llm_safety_review.get("preferred_plan_id")
+                if isinstance(candidate_id, str) and any(plan["plan_id"] == candidate_id for plan in ranked_plans):
+                    preferred_plan_id = candidate_id
+            except Exception as exc:  # noqa: BLE001
+                llm_safety_review = {
+                    "enabled": True,
+                    "provider": "cursor_cloud_agent",
+                    "status": "failed",
+                    "error": str(exc),
+                    "fallback": "使用规则型基线风险适配审核结果。",
+                }
+        elif self.llm_client is not None:
             try:
                 llm_safety_review = self._review_with_llm(
                     case_record=case_record,
@@ -413,5 +445,58 @@ class SafetyAgent:
         }
         result = self.llm_client.chat_json(system_prompt, json.dumps(payload, ensure_ascii=False, indent=2))
         result["enabled"] = True
+        result["provider"] = "openai_compatible"
         result["status"] = result.get("status", "completed")
         return result
+
+    def _review_with_cursor(
+        self,
+        case_record: CaseRecord,
+        ranked_plans: list[dict[str, Any]],
+        triggered_risks: list[dict[str, Any]],
+        specialty_outputs: list[SpecialtyAgentResult],
+        patient_safety_context: dict[str, Any],
+    ) -> dict[str, Any]:
+        prompt = self._build_safety_review_prompt(
+            case_record=case_record,
+            ranked_plans=ranked_plans,
+            triggered_risks=triggered_risks,
+            specialty_outputs=specialty_outputs,
+            patient_safety_context=patient_safety_context,
+        )
+        result = self.cursor_client.run_json_prompt(prompt)
+        result["enabled"] = True
+        result["provider"] = "cursor_cloud_agent"
+        result["status"] = result.get("status", "completed")
+        return result
+
+    def _build_safety_review_prompt(
+        self,
+        case_record: CaseRecord,
+        ranked_plans: list[dict[str, Any]],
+        triggered_risks: list[dict[str, Any]],
+        specialty_outputs: list[SpecialtyAgentResult],
+        patient_safety_context: dict[str, Any],
+    ) -> str:
+        payload = {
+            "case_record": case_record.to_dict(),
+            "patient_safety_context": patient_safety_context,
+            "ranked_plans_from_rules": ranked_plans,
+            "baseline_risks_from_rules": triggered_risks,
+            "specialty_outputs": [item.to_dict() for item in specialty_outputs],
+            "instruction": (
+                "请复核规则型安全审核结果。preferred_plan_id 必须来自 ranked_plans_from_rules。"
+                "请重点说明基线风险与候选药物因果无关，只用于方案适配审核。"
+            ),
+        }
+        return "\n\n".join(
+            [
+                "你现在扮演 MDT 多智能体系统中的安全审核智能体，具备临床安全审核技能。",
+                "你的任务不是判断药物导致了入院早期检验异常，而是基于首24小时检验识别患者基线风险，并评估候选方案与该风险背景是否适配。",
+                "安全审核技能清单：1. 区分基线风险和药物不良反应；2. 综合患者指标、既往史、生命体征、操作、微生物、ICU 暴露和候选药物影响做适配性审核；3. 对可能加重风险背景的候选药物给出监测、降权或人工复核建议；4. 中度风险以提示和监测为主，高风险才建议显著降权或排除；5. 不得编造病例中不存在的检查、诊断或药物。",
+                "你必须严格输出 JSON，不允许输出 Markdown，不允许输出额外解释。",
+                "输出字段：status, preferred_plan_id, baseline_risk_assessment, medication_fit_review, monitoring_recommendations, human_review_required, safety_explanation。",
+                "输入数据如下：",
+                json.dumps(payload, ensure_ascii=False, indent=2),
+            ]
+        )

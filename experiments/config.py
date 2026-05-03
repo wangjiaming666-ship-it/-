@@ -74,6 +74,21 @@ class LLMSettings:
         return bool(self.api_key)
 
 
+@dataclass
+class CursorSettings:
+    api_key: str | None = field(default_factory=lambda: os.getenv("CURSOR_API_KEY"))
+    repo_url: str | None = field(default_factory=lambda: os.getenv("CURSOR_CLOUD_REPO_URL"))
+    repo_ref: str = field(default_factory=lambda: os.getenv("CURSOR_CLOUD_REPO_REF", "main"))
+    model: str = field(default_factory=lambda: os.getenv("CURSOR_MODEL", "default"))
+    poll_seconds: float = field(default_factory=lambda: float(os.getenv("CURSOR_CLOUD_POLL_SECONDS", "5")))
+    timeout_seconds: int = field(default_factory=lambda: int(os.getenv("CURSOR_CLOUD_TIMEOUT_SECONDS", "600")))
+    api_base: str = field(default_factory=lambda: os.getenv("CURSOR_API_BASE", "https://api.cursor.com"))
+
+    @property
+    def enabled(self) -> bool:
+        return bool(self.api_key and self.repo_url)
+
+
 ACTIVE_SPECIALTIES = [
     "心血管",
     "神经",
