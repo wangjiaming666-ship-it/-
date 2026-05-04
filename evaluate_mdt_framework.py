@@ -90,8 +90,36 @@ def extract_final_drugs(data: dict[str, Any]) -> set[str]:
     return {normalize_drug(value) for value in final_plan.get("drugs", []) if normalize_drug(value)}
 
 
+def extract_layered_drugs(data: dict[str, Any], include_review: bool = True) -> set[str]:
+    final_plan = data.get("safety_result", {}).get("final_plan", {})
+    layers = final_plan.get("medication_layers") or {}
+    layer_names = [
+        "disease_directed_therapy",
+        "risk_modifying_therapy",
+        "supportive_or_symptomatic_therapy",
+        "general_inpatient_medication",
+    ]
+    if include_review:
+        layer_names.append("requires_review")
+
+    drugs: set[str] = set()
+    for layer_name in layer_names:
+        for value in layers.get(layer_name, []) or []:
+            drug = normalize_drug(value)
+            if drug:
+                drugs.add(drug)
+    return drugs
+
+
+def extract_evaluation_drugs(data: dict[str, Any]) -> tuple[set[str], str]:
+    layered_drugs = extract_layered_drugs(data, include_review=False)
+    if layered_drugs:
+        return layered_drugs, "medication_layers"
+    return extract_final_drugs(data), "final_plan.drugs"
+
+
 def extract_recommended_drugs(data: dict[str, Any]) -> set[str]:
-    drugs = set(extract_final_drugs(data))
+    drugs, _ = extract_evaluation_drugs(data)
     for result in data.get("specialty_results", []):
         for item in result.get("recommended_drugs_topk", []):
             drug = normalize_drug(item.get("drug_name"))
@@ -113,7 +141,38 @@ def extract_avoid_drugs(data: dict[str, Any]) -> set[str]:
 def drug_roles(drugs: set[str], role_map: dict[str, set[str]]) -> set[str]:
     roles = set()
     for drug in drugs:
-        roles.update(role_map.get(drug, {"unknown"}))
+        mapped = role_map.get(drug)
+        if mapped:
+            roles.update(mapped)
+        else:
+            roles.add(infer_treatment_role(drug))
+    return roles
+
+
+def infer_treatment_role(drug: str) -> str:
+    normalized = normalize_drug(drug)
+    if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "influenza vaccine", "vaccine", "d5w"]):
+        return "general_inpatient_medication"
+    if any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam", "fentanyl", "ramelteon", "artificial tears"]):
+        return "supportive_or_symptomatic_therapy"
+    if any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "insulin", "furosemide", "torsemide", "metoprolol", "labetalol", "nifedipine", "atorvastatin", "diltiazem", "hydrochlorothiazide", "amlodipine"]):
+        return "risk_modifying_therapy"
+    if any(keyword in normalized for keyword in ["pantoprazole", "omeprazole", "levothyroxine", "calcium carbonate", "ceftriaxone", "metronidazole", "ciprofloxacin", "albuterol", "ipratropium", "prednisone", "methylprednisolone", "tamsulosin", "cefazolin", "cefepime", "vancomycin", "azithromycin"]):
+        return "disease_directed_therapy"
+    return "low_priority_or_uncertain"
+
+
+def roles_from_medication_layers(data: dict[str, Any]) -> set[str]:
+    final_plan = data.get("safety_result", {}).get("final_plan", {})
+    layers = final_plan.get("medication_layers") or {}
+    roles = set()
+    for layer_name, values in layers.items():
+        if not values:
+            continue
+        if layer_name == "requires_review":
+            roles.add("low_priority_or_uncertain")
+        else:
+            roles.add(layer_name)
     return roles
 
 
@@ -129,18 +188,19 @@ def evaluate_case(
 ) -> dict[str, Any]:
     hadm_id = str(data.get("case_record", {}).get("patient_info", {}).get("hadm_id", ""))
     final_drugs = extract_final_drugs(data)
+    evaluation_drugs, evaluation_drug_source = extract_evaluation_drugs(data)
     all_recommended = extract_recommended_drugs(data)
     true_drugs = true_prescriptions.get(hadm_id, set())
     avoid_drugs = extract_avoid_drugs(data)
 
-    intersection = final_drugs & true_drugs
-    union = final_drugs | true_drugs
-    precision = safe_ratio(len(intersection), len(final_drugs))
+    intersection = evaluation_drugs & true_drugs
+    union = evaluation_drugs | true_drugs
+    precision = safe_ratio(len(intersection), len(evaluation_drugs))
     recall = safe_ratio(len(intersection), len(true_drugs))
     f1 = safe_ratio(2 * precision * recall, precision + recall)
     jaccard = safe_ratio(len(intersection), len(union))
 
-    final_roles = drug_roles(final_drugs, role_map)
+    final_roles = roles_from_medication_layers(data) or drug_roles(evaluation_drugs, role_map)
     true_roles = drug_roles(true_drugs, role_map)
     role_intersection = final_roles & true_roles
     role_coverage = safe_ratio(len(role_intersection), len(true_roles))
@@ -159,6 +219,8 @@ def evaluate_case(
         "hadm_id": hadm_id,
         "active_specialty_count": len(data.get("routing", {}).get("active_specialties", [])),
         "final_drug_count": len(final_drugs),
+        "evaluation_drug_source": evaluation_drug_source,
+        "evaluation_drug_count": len(evaluation_drugs),
         "true_prescription_count": len(true_drugs),
         "drug_overlap_count": len(intersection),
         "drug_precision": precision,
@@ -176,6 +238,7 @@ def evaluate_case(
         "medication_impact_review_count": medication_reviews,
         "final_avoid_drug_overlap_count": len(final_avoid_overlap),
         "final_drugs": " | ".join(sorted(final_drugs)),
+        "evaluation_drugs": " | ".join(sorted(evaluation_drugs)),
         "true_drugs_sample": " | ".join(sorted(list(true_drugs))[:20]),
         "final_roles": " | ".join(sorted(final_roles)),
         "true_roles": " | ".join(sorted(true_roles)),
@@ -269,6 +332,7 @@ def main() -> None:
         "role_coverage",
         "active_specialty_count",
         "final_drug_count",
+        "evaluation_drug_count",
         "true_prescription_count",
         "mdt_review_count",
         "mdt_candidate_plan_count",

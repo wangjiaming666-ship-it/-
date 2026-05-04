@@ -167,9 +167,19 @@ class MDTDiscussionAgent:
         conservative_drugs = self._dedupe(
             [drug for drug in sorted_drugs if drug.lower() not in cautioned_drugs]
         )[:4]
-        consensus_layers = self._build_medication_layers(consensus_drugs, cautioned_drugs)
-        lead_first_layers = self._build_medication_layers(lead_first_drugs, cautioned_drugs)
-        conservative_layers = self._build_medication_layers(conservative_drugs, cautioned_drugs)
+        contextual_layers = self._collect_contextual_layer_candidates(specialty_results)
+        consensus_layers = self._merge_medication_layers(
+            self._build_medication_layers(consensus_drugs, cautioned_drugs),
+            contextual_layers,
+        )
+        lead_first_layers = self._merge_medication_layers(
+            self._build_medication_layers(lead_first_drugs, cautioned_drugs),
+            contextual_layers,
+        )
+        conservative_layers = self._merge_medication_layers(
+            self._build_medication_layers(conservative_drugs, cautioned_drugs),
+            contextual_layers,
+        )
 
         return [
             CandidatePlan(
@@ -200,6 +210,40 @@ class MDTDiscussionAgent:
                 aggregate_score=sum(vote_counter.get(drug, 0) for drug in conservative_drugs),
             ),
         ]
+
+    def _collect_contextual_layer_candidates(
+        self,
+        specialty_results: list[SpecialtyAgentResult],
+    ) -> dict[str, list[str]]:
+        layers = {
+            "disease_directed_therapy": [],
+            "risk_modifying_therapy": [],
+            "supportive_or_symptomatic_therapy": [],
+            "general_inpatient_medication": [],
+            "requires_review": [],
+        }
+        for result in specialty_results:
+            for item in result.avoid_or_low_priority_drugs:
+                drug = item.drug_name
+                normalized = drug.lower()
+                if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "vaccine"]):
+                    layers["general_inpatient_medication"].append(drug)
+                elif any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam"]):
+                    layers["supportive_or_symptomatic_therapy"].append(drug)
+                elif any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "furosemide", "metoprolol"]):
+                    layers["requires_review"].append(drug)
+        return {key: self._dedupe(values)[:6] for key, values in layers.items()}
+
+    def _merge_medication_layers(
+        self,
+        base_layers: dict[str, list[str]],
+        extra_layers: dict[str, list[str]],
+    ) -> dict[str, list[str]]:
+        merged = {key: list(values) for key, values in base_layers.items()}
+        for key, values in extra_layers.items():
+            merged.setdefault(key, [])
+            merged[key] = self._dedupe(merged[key] + values)
+        return merged
 
     def _build_medication_layers(
         self,
