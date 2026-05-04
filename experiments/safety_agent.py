@@ -313,34 +313,43 @@ class SafetyAgent:
             avoid_penalty = sum(1 for drug in plan.drugs if drug.lower() in avoid_drugs)
             baseline_risk_penalty = high_risk_count * 3 + moderate_risk_count
             risk_penalty = baseline_risk_penalty + avoid_penalty
-            final_score = plan.aggregate_score - risk_penalty
+            internal_priority_score = plan.aggregate_score - risk_penalty
             adaptation_notes = build_plan_adaptation_notes(plan, triggered_risks)
             medication_impacts = assess_medication_impacts(plan, patient_safety_context)
             medication_penalty = sum(2 if item["severity"] == "high" else 1 for item in medication_impacts if item["severity"] != "low")
-            final_score -= medication_penalty
+            internal_priority_score -= medication_penalty
+            review_flags = []
+            if high_risk_count:
+                review_flags.append("存在高风险基线指标")
+            if moderate_risk_count:
+                review_flags.append("存在中度基线风险")
+            if avoid_penalty:
+                review_flags.append("包含低优先级或需避免药物")
+            if medication_penalty:
+                review_flags.append("候选药物与患者风险背景存在适配性问题")
+            if not review_flags:
+                review_flags.append("未发现明确安全冲突")
             ranked_plans.append(
                 {
                     "plan_id": plan.plan_id,
                     "plan_name": plan.plan_name,
                     "drugs": plan.drugs,
+                    "medication_layers": plan.medication_layers,
                     "supporting_specialties": plan.supporting_specialties,
-                    "aggregate_score": plan.aggregate_score,
-                    "baseline_risk_penalty": baseline_risk_penalty,
-                    "avoid_drug_penalty": avoid_penalty,
-                    "medication_context_penalty": medication_penalty,
-                    "risk_penalty": risk_penalty,
-                    "final_score": final_score,
+                    "_internal_priority_score": internal_priority_score,
+                    "review_flags": review_flags,
+                    "safety_decision": "需人工复核" if high_risk_count or medication_penalty >= 2 else "可作为候选",
                     "patient_context_flags": patient_safety_context["context_flags"],
                     "medication_impact_review": medication_impacts,
                     "plan_adaptation_notes": adaptation_notes,
                     "safety_interpretation": (
-                        "安全评分综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。"
+                        "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。"
                     ),
                     "rationale": plan.rationale,
                 }
             )
 
-        ranked_plans = sorted(ranked_plans, key=lambda item: item["final_score"], reverse=True)
+        ranked_plans = sorted(ranked_plans, key=lambda item: item["_internal_priority_score"], reverse=True)
         llm_safety_review: dict[str, Any] = {}
         preferred_plan_id: str | None = None
         if self.cursor_client is not None:
@@ -388,9 +397,10 @@ class SafetyAgent:
             plan_id=top["plan_id"],
             plan_name=top["plan_name"],
             drugs=top["drugs"],
+            medication_layers=top.get("medication_layers", {}),
             supporting_specialties=top["supporting_specialties"],
             rationale=top["rationale"],
-            aggregate_score=float(top["final_score"]),
+            aggregate_score=float(top["_internal_priority_score"]),
         )
         summary = (
             "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，"
@@ -402,9 +412,15 @@ class SafetyAgent:
                 "检验异常被解释为入院早期基线风险，不归因于候选药物。"
             )
 
+        public_ranked_plans = []
+        for index, plan in enumerate(ranked_plans, start=1):
+            public_plan = {key: value for key, value in plan.items() if key != "_internal_priority_score"}
+            public_plan["priority_order"] = index
+            public_ranked_plans.append(public_plan)
+
         return SafetyScreeningResult(
             final_plan=final_plan,
-            ranked_plans=ranked_plans,
+            ranked_plans=public_ranked_plans,
             triggered_risks=triggered_risks,
             safety_summary=summary,
             llm_safety_review=llm_safety_review,

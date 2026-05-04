@@ -90,9 +90,17 @@ class CandidatePlan:
     supporting_specialties: list[str]
     rationale: str
     aggregate_score: float
+    medication_layers: dict[str, list[str]] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        return {
+            "plan_id": self.plan_id,
+            "plan_name": self.plan_name,
+            "drugs": self.drugs,
+            "medication_layers": self.medication_layers,
+            "supporting_specialties": self.supporting_specialties,
+            "rationale": self.rationale,
+        }
 
 
 @dataclass

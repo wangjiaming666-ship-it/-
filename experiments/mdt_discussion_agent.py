@@ -167,12 +167,16 @@ class MDTDiscussionAgent:
         conservative_drugs = self._dedupe(
             [drug for drug in sorted_drugs if drug.lower() not in cautioned_drugs]
         )[:4]
+        consensus_layers = self._build_medication_layers(consensus_drugs, cautioned_drugs)
+        lead_first_layers = self._build_medication_layers(lead_first_drugs, cautioned_drugs)
+        conservative_layers = self._build_medication_layers(conservative_drugs, cautioned_drugs)
 
         return [
             CandidatePlan(
                 plan_id="mdt_consensus",
                 plan_name="MDT多专科共识方案",
                 drugs=consensus_drugs,
+                medication_layers=consensus_layers,
                 supporting_specialties=sorted({name for drug in consensus_drugs for name in supporters.get(drug, set())}),
                 rationale="由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
                 aggregate_score=sum(vote_counter.get(drug, 0) for drug in consensus_drugs),
@@ -181,6 +185,7 @@ class MDTDiscussionAgent:
                 plan_id="lead_specialty_adjusted",
                 plan_name="主专科优先修订方案",
                 drugs=lead_first_drugs,
+                medication_layers=lead_first_layers,
                 supporting_specialties=sorted({name for drug in lead_first_drugs for name in supporters.get(drug, set())}),
                 rationale="在MDT共识基础上适度突出初始主导专科意见。",
                 aggregate_score=sum(vote_counter.get(drug, 0) for drug in lead_first_drugs),
@@ -189,11 +194,41 @@ class MDTDiscussionAgent:
                 plan_id="conservative_consensus",
                 plan_name="保守低冲突方案",
                 drugs=conservative_drugs,
+                medication_layers=conservative_layers,
                 supporting_specialties=sorted({name for drug in conservative_drugs for name in supporters.get(drug, set())}),
                 rationale="剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
                 aggregate_score=sum(vote_counter.get(drug, 0) for drug in conservative_drugs),
             ),
         ]
+
+    def _build_medication_layers(
+        self,
+        drugs: list[str],
+        cautioned_drugs: set[str],
+    ) -> dict[str, list[str]]:
+        layers = {
+            "disease_directed_therapy": [],
+            "risk_modifying_therapy": [],
+            "supportive_or_symptomatic_therapy": [],
+            "general_inpatient_medication": [],
+            "requires_review": [],
+        }
+        for drug in drugs:
+            normalized = drug.lower()
+            if normalized in cautioned_drugs:
+                layers["requires_review"].append(drug)
+                continue
+            if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "vaccine"]):
+                layers["general_inpatient_medication"].append(drug)
+            elif any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "insulin", "furosemide", "torsemide", "metoprolol", "labetalol", "nifedipine", "atorvastatin"]):
+                layers["risk_modifying_therapy"].append(drug)
+            elif any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam"]):
+                layers["supportive_or_symptomatic_therapy"].append(drug)
+            elif any(keyword in normalized for keyword in ["pantoprazole", "omeprazole", "levothyroxine", "calcium carbonate", "ceftriaxone", "metronidazole", "ciprofloxacin", "albuterol", "ipratropium", "prednisone", "tamsulosin"]):
+                layers["disease_directed_therapy"].append(drug)
+            else:
+                layers["requires_review"].append(drug)
+        return layers
 
     def _build_consensus_notes(
         self,
