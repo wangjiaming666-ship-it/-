@@ -5,15 +5,15 @@
     "lab_purpose": "评估高血糖、低血糖及代谢失衡风险",
     "threshold_type": "bidirectional",
     "moderate_risk_threshold": {
-      "low": 70,
-      "high": 180,
       "unit": "mg/dL",
+      "low": 70.0,
+      "high": 180.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 54,
-      "high": 250,
       "unit": "mg/dL",
+      "low": 54.0,
+      "high": 250.0,
       "outside_range_is_high_risk": true
     },
     "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
@@ -21,7 +21,8 @@
       "moderate_risk": "调整降糖相关方案优先级，并提示复核血糖监测频率。",
       "high_risk": "将病例标记为高代谢风险，暂停优先推荐可能进一步加重波动的方案。"
     },
-    "threshold_basis": "参考内分泌专科样本中位数与住院血糖管理常用阈值。"
+    "reference_source": "American Diabetes Association Standards of Care",
+    "threshold_basis": "参考 ADA 糖尿病诊疗标准中低血糖分级和住院血糖管理目标设置。"
   },
   {
     "rule_id": "endocrinology_sodium_risk",
@@ -29,15 +30,15 @@
     "lab_purpose": "评估代谢紊乱相关水电解质失衡风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
-      "low": 135,
-      "high": 145,
       "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 130,
-      "high": 150,
       "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
       "outside_range_is_high_risk": true
     },
     "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
@@ -45,6 +46,7 @@
       "moderate_risk": "对强化补液和快速纠正方案降权，提示人工复核。",
       "high_risk": "标记为高风险病例，建议先处理水钠紊乱后再排序推荐方案。"
     },
-    "threshold_basis": "参考内分泌代谢患者常用电解质管理阈值。"
+    "reference_source": "MedlinePlus sodium blood test; Merck Manual electrolyte disorders",
+    "threshold_basis": "参考公开临床知识源中的血钠参考范围和水电解质紊乱风险解释。"
   }
 ]

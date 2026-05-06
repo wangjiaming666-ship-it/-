@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Iterable
 
@@ -9,6 +10,7 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 KB_DIR = BASE_DIR / "knowledge_base"
+REFERENCE_DIR = KB_DIR / "reference"
 
 SPECIALTY_DIRS = {
     "心血管": "cardiology",
@@ -69,6 +71,11 @@ GENERIC_AUXILIARY_KEYWORDS = [
     "dextrose",
     "ringer",
     "flush",
+    "lock flush",
+    "line flush",
+    "catheter flush",
+    "irrigation",
+    "diluent",
     "mini bag plus",
     "sterile water",
     "influenza vaccine",
@@ -82,6 +89,14 @@ GENERIC_AUXILIARY_KEYWORDS = [
 EXACT_GENERIC_DRUGS = {
     "ns",
     "sw",
+}
+
+DRUG_PREFIX_KEYWORDS = {
+    "d5",
+    "d10",
+    "lamotrig",
+    "methylpred",
+    "umeclidin",
 }
 
 BACKGROUND_DISEASE_KEYWORDS = [
@@ -673,6 +688,7 @@ REQUIRED_INPUTS = [
 
 def ensure_dirs() -> None:
     KB_DIR.mkdir(parents=True, exist_ok=True)
+    REFERENCE_DIR.mkdir(parents=True, exist_ok=True)
     for folder in SPECIALTY_DIRS.values():
         (KB_DIR / folder).mkdir(parents=True, exist_ok=True)
 
@@ -725,9 +741,152 @@ def to_numeric(series: pd.Series) -> pd.Series:
     return pd.to_numeric(series, errors="coerce")
 
 
+def read_reference_csv(file_name: str) -> pd.DataFrame:
+    path = REFERENCE_DIR / file_name
+    if not path.exists() or path.stat().st_size == 0:
+        return pd.DataFrame()
+    last_error: Exception | None = None
+    for encoding in ("utf-8-sig", "utf-8", "gb18030"):
+        try:
+            return pd.read_csv(path, encoding=encoding, dtype=str).fillna("")
+        except Exception as exc:  # noqa: BLE001
+            last_error = exc
+    raise RuntimeError(f"无法读取外部药物参考表 {path}: {last_error}") from last_error
+
+
 def contains_any(text: str, keywords: list[str]) -> bool:
     normalized = str(text).strip().lower()
     return any(keyword in normalized for keyword in keywords)
+
+
+def normalize_drug_text(text: str) -> str:
+    normalized = str(text).strip().lower()
+    normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+NORMALIZED_SUPPORTIVE_DRUGS = {
+    normalize_drug_text(name): role for name, role in SUPPORTIVE_DRUGS.items()
+}
+
+SPECIALTY_DRUG_REFERENCE = read_reference_csv("specialty_drug_reference.csv")
+SUPPORTIVE_DRUG_REFERENCE = read_reference_csv("supportive_drug_reference.csv")
+RISK_RULE_REFERENCE = read_reference_csv("risk_rule_reference.csv")
+
+
+def drug_keyword_matches(text: str, keyword: str) -> bool:
+    normalized_text = normalize_drug_text(text)
+    normalized_keyword = normalize_drug_text(keyword)
+    if not normalized_text or not normalized_keyword:
+        return False
+    if normalized_keyword in DRUG_PREFIX_KEYWORDS:
+        return re.search(rf"\b{re.escape(normalized_keyword)}[a-z0-9]*\b", normalized_text) is not None
+    return re.search(rf"\b{re.escape(normalized_keyword)}\b", normalized_text) is not None
+
+
+def drug_matches_any(text: str, keywords: Iterable[str]) -> bool:
+    return any(drug_keyword_matches(text, keyword) for keyword in keywords)
+
+
+def split_reference_terms(value: object) -> list[str]:
+    if value is None:
+        return []
+    terms = []
+    for term in str(value).split("|"):
+        cleaned = term.strip()
+        if cleaned:
+            terms.append(cleaned)
+    return terms
+
+
+def reference_terms(row: pd.Series) -> list[str]:
+    terms = split_reference_terms(row.get("standard_drug_name", ""))
+    terms.extend(split_reference_terms(row.get("aliases", "")))
+    return terms
+
+
+def find_supportive_reference(drug_name: str) -> pd.Series | None:
+    if SUPPORTIVE_DRUG_REFERENCE.empty:
+        return None
+    for _, row in SUPPORTIVE_DRUG_REFERENCE.iterrows():
+        if drug_matches_any(drug_name, reference_terms(row)):
+            return row
+    return None
+
+
+def find_specialty_drug_reference(specialty_name: str, drug_name: str) -> pd.Series | None:
+    if SPECIALTY_DRUG_REFERENCE.empty:
+        return None
+    sub = SPECIALTY_DRUG_REFERENCE[
+        SPECIALTY_DRUG_REFERENCE["specialty_name"].astype(str) == specialty_name
+    ]
+    for _, row in sub.iterrows():
+        if drug_matches_any(drug_name, reference_terms(row)):
+            return row
+    return None
+
+
+def parse_optional_float(value: object) -> float | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def build_threshold(row: pd.Series, prefix: str, threshold_type: str) -> dict[str, object]:
+    unit = str(row.get("unit", "")).strip()
+    if threshold_type in {"range", "bidirectional"}:
+        low = parse_optional_float(row.get(f"{prefix}_low"))
+        high = parse_optional_float(row.get(f"{prefix}_high"))
+        threshold: dict[str, object] = {"unit": unit}
+        if low is not None:
+            threshold["low"] = low
+        if high is not None:
+            threshold["high"] = high
+        threshold[f"outside_range_is_{prefix}_risk"] = True
+        return threshold
+    value = parse_optional_float(row.get(f"{prefix}_value"))
+    operator = str(row.get(f"{prefix}_operator", "")).strip()
+    threshold = {"unit": unit}
+    if value is not None:
+        threshold["value"] = value
+    if operator:
+        threshold["operator"] = operator
+    return threshold
+
+
+def build_risk_rules_from_reference() -> dict[str, list[dict[str, object]]]:
+    if RISK_RULE_REFERENCE.empty:
+        return {}
+    rules: dict[str, list[dict[str, object]]] = {specialty: [] for specialty in SPECIALTY_DIRS}
+    for _, row in RISK_RULE_REFERENCE.iterrows():
+        specialty_name = str(row.get("specialty_name", "")).strip()
+        if specialty_name not in rules:
+            continue
+        threshold_type = str(row.get("threshold_type", "")).strip()
+        rules[specialty_name].append(
+            {
+                "rule_id": str(row.get("rule_id", "")).strip(),
+                "lab_name": str(row.get("lab_name", "")).strip(),
+                "lab_purpose": str(row.get("lab_purpose", "")).strip(),
+                "threshold_type": threshold_type,
+                "moderate_risk_threshold": build_threshold(row, "moderate", threshold_type),
+                "high_risk_threshold": build_threshold(row, "high", threshold_type),
+                "risk_message": str(row.get("risk_message", "")).strip(),
+                "action": {
+                    "moderate_risk": str(row.get("moderate_action", "")).strip(),
+                    "high_risk": str(row.get("high_action", "")).strip(),
+                },
+                "reference_source": str(row.get("reference_source", "")).strip(),
+                "threshold_basis": str(row.get("threshold_basis", "")).strip(),
+            }
+        )
+    return rules
 
 
 def review_diagnosis(specialty_name: str, diagnosis_name: str) -> tuple[int, str, str, str, str, str]:
@@ -771,17 +930,38 @@ def review_diagnosis(specialty_name: str, diagnosis_name: str) -> tuple[int, str
 
 def review_drug(specialty_name: str, drug_name: str) -> tuple[int, str, str, str, str, str, str]:
     normalized = str(drug_name).strip().lower()
-    if normalized in SUPPORTIVE_DRUGS:
+    normalized_drug = normalize_drug_text(drug_name)
+    supportive_reference = find_supportive_reference(normalized)
+    if supportive_reference is not None:
+        treatment_role = str(
+            supportive_reference.get("treatment_role", "supportive_or_symptomatic_therapy")
+        )
+        drug_role = "通用辅助药" if treatment_role == "general_inpatient_medication" else "支持治疗药"
+        agent_use = (
+            "住院通用药物或溶媒，不作为专科治疗证据"
+            if treatment_role == "general_inpatient_medication"
+            else "用于对症或支持治疗，不作为疾病直接治疗证据"
+        )
         return (
             0,
-            SUPPORTIVE_DRUGS[normalized],
+            drug_role,
+            "降级保留",
+            f"外部辅助药物参考表：{supportive_reference.get('supportive_category', '')}",
+            treatment_role,
+            "external_supportive_drug_reference",
+            agent_use,
+        )
+    if normalized_drug in NORMALIZED_SUPPORTIVE_DRUGS:
+        return (
+            0,
+            NORMALIZED_SUPPORTIVE_DRUGS[normalized_drug],
             "降级保留",
             "住院常见支持治疗药",
             "supportive_or_symptomatic_therapy",
             "supportive_drug_list",
             "用于对症或支持治疗，不作为疾病直接治疗证据",
         )
-    if normalized in EXACT_GENERIC_DRUGS or contains_any(normalized, GENERIC_AUXILIARY_KEYWORDS):
+    if normalized_drug in EXACT_GENERIC_DRUGS or drug_matches_any(normalized, GENERIC_AUXILIARY_KEYWORDS):
         return (
             0,
             "通用辅助药",
@@ -791,8 +971,29 @@ def review_drug(specialty_name: str, drug_name: str) -> tuple[int, str, str, str
             "generic_medication_rule",
             "住院通用药物或溶媒，不作为专科治疗证据",
         )
-    if contains_any(normalized, SPECIALTY_CORE_DRUG_KEYWORDS.get(specialty_name, [])):
-        role = "risk_modifying_therapy" if contains_any(
+    specialty_reference = find_specialty_drug_reference(specialty_name, normalized)
+    if specialty_reference is not None:
+        treatment_role = str(
+            specialty_reference.get("treatment_role", "disease_directed_therapy")
+        )
+        is_core = 1 if treatment_role in {"disease_directed_therapy", "risk_modifying_therapy"} else 0
+        drug_role = "核心治疗药" if is_core else "支持治疗药"
+        agent_use = (
+            "可作为专科建议候选药物，但需结合诊断和安全规则复核"
+            if is_core
+            else "作为专科相关支持治疗候选，需结合病例背景复核"
+        )
+        return (
+            is_core,
+            drug_role,
+            "保留" if is_core else "降级保留",
+            f"外部疾病相关药物参考表：{specialty_reference.get('disease_context', '')}",
+            treatment_role,
+            "external_specialty_drug_reference",
+            agent_use,
+        )
+    if drug_matches_any(normalized, SPECIALTY_CORE_DRUG_KEYWORDS.get(specialty_name, [])):
+        role = "risk_modifying_therapy" if drug_matches_any(
             normalized,
             ["warfarin", "heparin", "apixaban", "enoxaparin", "insulin", "furosemide", "metoprolol", "labetalol"],
         ) else "disease_directed_therapy"
@@ -800,9 +1001,9 @@ def review_drug(specialty_name: str, drug_name: str) -> tuple[int, str, str, str
             1,
             "核心治疗药",
             "保留",
-            "命中专科核心药物关键词",
+            "标准化药名命中专科核心药物通用名规则",
             role,
-            "specialty_drug_keyword",
+            "specialty_drug_name_rule",
             "可作为专科建议候选药物，但需结合诊断和安全规则复核",
         )
     return (
@@ -936,7 +1137,19 @@ def build_drug_catalog() -> None:
         sub["treatment_role_label"] = sub["treatment_role"].map(TREATMENT_ROLE_LABELS)
         sub["treatment_evidence_basis"] = review.apply(lambda x: x[5])
         sub["agent_use"] = review.apply(lambda x: x[6])
-        sub = sub[~sub["drug_role"].isin(DRUG_CATALOG_EXCLUDED_ROLES)].head(DRUG_CATALOG_TOP_N)
+        retained = sub[~sub["drug_role"].isin(DRUG_CATALOG_EXCLUDED_ROLES)].copy()
+        frequent_drugs = retained.head(DRUG_CATALOG_TOP_N)
+        core_reference_drugs = retained[
+            (retained["is_core_drug"] == 1)
+            & retained["treatment_evidence_basis"].isin(
+                ["external_specialty_drug_reference", "specialty_drug_name_rule"]
+            )
+        ]
+        sub = (
+            pd.concat([frequent_drugs, core_reference_drugs], ignore_index=True)
+            .drop_duplicates(subset=["specialty_group", "drug_name"])
+            .sort_values(["freq", "drug_name"], ascending=[False, True])
+        )
         sub.rename(columns={"freq": "frequency"})[
             [
                 "specialty_name",
@@ -1078,9 +1291,11 @@ def build_all_lab_profile() -> None:
 
 
 def build_risk_rules() -> None:
+    reference_rules = build_risk_rules_from_reference()
     for specialty_name, folder in SPECIALTY_DIRS.items():
+        rules = reference_rules.get(specialty_name) or RISK_RULES.get(specialty_name, [])
         with open(KB_DIR / folder / "risk_rules.json", "w", encoding="utf-8") as file:
-            json.dump(RISK_RULES.get(specialty_name, []), file, ensure_ascii=False, indent=2)
+            json.dump(rules, file, ensure_ascii=False, indent=2)
 
 
 def build_disease_drug_map() -> None:

@@ -1,21 +1,89 @@
 ﻿specialty_name,drug_name,frequency,is_core_drug,drug_role,treatment_role,treatment_role_label,treatment_evidence_basis,agent_use,review_status,notes
 心血管,insulin,42721,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-心血管,potassium chloride,36459,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-心血管,acetaminophen,29227,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,furosemide,24608,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-心血管,metoprolol tartrate,24034,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-心血管,heparin,21484,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-心血管,docusate sodium,19599,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,magnesium sulfate,17305,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-心血管,senna,17008,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,hydromorphone (dilaudid),15445,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,aspirin,14837,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
+心血管,potassium chloride,36459,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：electrolyte_repletion
+心血管,acetaminophen,29227,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：analgesic_antipyretic
+心血管,furosemide,24608,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|volume overload|edema
+心血管,metoprolol tartrate,24034,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypertension|heart failure|arrhythmia
+心血管,heparin,21484,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,docusate sodium,19599,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
+心血管,magnesium sulfate,17305,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：electrolyte_repletion
+心血管,senna,17008,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
+心血管,hydromorphone (dilaudid),15445,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+心血管,aspirin,14837,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
 心血管,vancomycin,13138,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-心血管,oxycodone (immediate release),12616,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,bisacodyl,12214,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,warfarin,12066,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-心血管,lorazepam,11963,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,ondansetron,11503,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,morphine sulfate,11209,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-心血管,heparin sodium,9515,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-心血管,dextrose 50%,9391,0,通用辅助药,general_inpatient_medication,住院通用药物,generic_medication_rule,住院通用药物或溶媒，不作为专科治疗证据,降级保留,通用液体/溶媒/辅助项
+心血管,oxycodone (immediate release),12616,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+心血管,bisacodyl,12214,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
+心血管,warfarin,12066,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：atrial fibrillation|venous thromboembolism|valve disease
+心血管,lorazepam,11963,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：anxiolytic_sedative
+心血管,ondansetron,11503,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：antiemetic
+心血管,morphine sulfate,11209,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+心血管,heparin sodium,9515,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,dextrose 50%,9391,0,通用辅助药,general_inpatient_medication,住院通用药物,external_supportive_drug_reference,住院通用药物或溶媒，不作为专科治疗证据,降级保留,外部辅助药物参考表：fluid_or_hypoglycemia_support
+心血管,lisinopril,9302,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypertension|heart failure|coronary artery disease
+心血管,hydralazine,8925,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,atorvastatin,7804,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hyperlipidemia|coronary artery disease|stroke prevention
+心血管,metoprolol succinate xl,5923,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypertension|heart failure|arrhythmia
+心血管,clopidogrel,5354,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|post stent antiplatelet therapy
+心血管,amiodarone,4046,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,labetalol,3892,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,aspirin ec,3266,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,carvedilol,3002,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|hypertension
+心血管,enoxaparin sodium,2912,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,diltiazem,2519,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,torsemide,2135,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,hydrochlorothiazide,1974,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,spironolactone,1853,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|ascites|edema
+心血管,digoxin,1571,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,valsartan,1419,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,captopril,1173,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,alteplase (catheter clearance),992,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,diltiazem extended-release,868,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,metoprolol,757,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypertension|heart failure|arrhythmia
+心血管,heparin dwell (1000 units/ml),724,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,apixaban,646,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：atrial fibrillation|venous thromboembolism
+心血管,enoxaparin (prophylaxis),404,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,heparin (hemodialysis),324,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,alteplase,274,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,ticagrelor,271,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|post stent antiplatelet therapy
+心血管,clopidogrel bisulfate,124,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|post stent antiplatelet therapy
+心血管,enoxaparin (treatment),119,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,dipyridamole-aspirin,118,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,alteplase 1mg/1ml ( clearance ie. temp tlcl ),114,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,metoprolol xl (toprol xl),112,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypertension|heart failure|arrhythmia
+心血管,triamterene-hydrochlorothiazide,82,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,aspirin desensitization (angioedema),76,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,heparin (iabp),58,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,heparin (crrt machine priming),51,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,furosemide-heart failure,43,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|volume overload|edema
+心血管,aspirin (buffered),31,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,sacubitril-valsartan (24mg-26mg),28,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,aspirin desensitization (aerd),20,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,aspirin desensitization (urticaria/angioedema),20,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,sacubitril-valsartan (49mg-51mg),18,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,aspirin-caffeine-butalbital,17,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,clopidogrel desensitization,11,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|post stent antiplatelet therapy
+心血管,heparin (for ip use),6,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,heparin (impella),6,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,sacubitril-valsartan (97mg-103mg),6,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,alteplase 1mg/5ml ( clearance ie. indwelling port ),4,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,enoxaparin,4,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,triamterene-hydrochlorothiazide (37.5/25),4,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,heparin topical (100 units/ml),3,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,aspirin (rectal),2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,carvedilol phosphate,2,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|hypertension
+心血管,*nf* warfarin,1,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：atrial fibrillation|venous thromboembolism|valve disease
+心血管,alteplase 1mg,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,amiodarone oral suspension,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,aspirin desensitizati,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|ischemic stroke prevention
+心血管,atorvastatin 40mg tab,1,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hyperlipidemia|coronary artery disease|stroke prevention
+心血管,brilinta,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|post stent antiplatelet therapy
+心血管,clopidogrel 150 mg,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|post stent antiplatelet therapy
+心血管,clopidogrel 75 mg,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：acute coronary syndrome|coronary artery disease|post stent antiplatelet therapy
+心血管,digoxin immune fab,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,diltiazem hcl,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,diovan- hctz(valsartan-hydrochlorothiazide),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,heparin (via anti-xa monitoring),1,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,heparin crrt,1,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：venous thromboembolism|acute coronary syndrome|anticoagulation
+心血管,hydralazine 20mg/1ml 1ml vial,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+心血管,lasix,1,1,核心治疗药,risk_modifying_therapy,风险控制治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：heart failure|volume overload|edema
+心血管,sacubitril/valsartan (lcz6969),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则

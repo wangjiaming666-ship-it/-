@@ -1,21 +1,75 @@
 ﻿specialty_name,drug_name,frequency,is_core_drug,drug_role,treatment_role,treatment_role_label,treatment_evidence_basis,agent_use,review_status,notes
-内分泌/代谢,insulin,8601,1,核心治疗药,risk_modifying_therapy,风险控制治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-内分泌/代谢,acetaminophen,6341,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,potassium chloride,3873,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-内分泌/代谢,docusate sodium,3785,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,ondansetron,3509,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,oxycodone (immediate release),3478,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,senna,3086,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
+内分泌/代谢,insulin,8601,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,acetaminophen,6341,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：analgesic_antipyretic
+内分泌/代谢,potassium chloride,3873,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：electrolyte_repletion
+内分泌/代谢,docusate sodium,3785,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
+内分泌/代谢,ondansetron,3509,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：antiemetic
+内分泌/代谢,oxycodone (immediate release),3478,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+内分泌/代谢,senna,3086,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
 内分泌/代谢,heparin,2848,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-内分泌/代谢,hydromorphone (dilaudid),2776,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,lorazepam,2722,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,bisacodyl,2351,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,magnesium sulfate,2270,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-内分泌/代谢,levothyroxine sodium,1715,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-内分泌/代谢,calcium carbonate,1702,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_keyword,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,命中专科核心药物关键词
-内分泌/代谢,influenza vaccine quadrivalent,1664,0,通用辅助药,general_inpatient_medication,住院通用药物,generic_medication_rule,住院通用药物或溶媒，不作为专科治疗证据,降级保留,通用液体/溶媒/辅助项
-内分泌/代谢,ibuprofen,1663,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
+内分泌/代谢,hydromorphone (dilaudid),2776,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+内分泌/代谢,lorazepam,2722,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：anxiolytic_sedative
+内分泌/代谢,bisacodyl,2351,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：bowel_regimen
+内分泌/代谢,magnesium sulfate,2270,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：electrolyte_repletion
+内分泌/代谢,levothyroxine sodium,1715,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,calcium carbonate,1702,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,influenza vaccine quadrivalent,1664,0,通用辅助药,general_inpatient_medication,住院通用药物,external_supportive_drug_reference,住院通用药物或溶媒，不作为专科治疗证据,降级保留,外部辅助药物参考表：vaccine
+内分泌/代谢,ibuprofen,1663,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：analgesic_antipyretic
 内分泌/代谢,vancomycin,1267,0,支持治疗药,low_priority_or_uncertain,低优先级或不确定,frequency_only,仅作为真实世界用药候选证据，需人工或 MDT 复核,降级保留,未命中专科核心药关键词，暂按支持治疗药保留
-内分泌/代谢,simethicone,1219,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,morphine sulfate,1214,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
-内分泌/代谢,ketorolac,1186,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,supportive_drug_list,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,住院常见支持治疗药
+内分泌/代谢,simethicone,1219,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：gastrointestinal_symptom_relief
+内分泌/代谢,morphine sulfate,1214,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：pain_control
+内分泌/代谢,ketorolac,1186,0,支持治疗药,supportive_or_symptomatic_therapy,支持/对症治疗,external_supportive_drug_reference,用于对症或支持治疗，不作为疾病直接治疗证据,降级保留,外部辅助药物参考表：analgesic_antipyretic
+内分泌/代谢,prednisone,550,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,sodium bicarbonate,525,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,insulin human regular,208,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,hydrocortisone na succ.,190,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,methylprednisolone sodium succ,184,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,hydrocortisone,169,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,cyanocobalamin,161,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,insulin pump (self administering medication),153,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,atenolol,91,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,propranolol,91,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,desmopressin acetate,53,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes insipidus|hyponatremia risk context
+内分泌/代谢,hydrocortisone (rectal) 2.5% cream,45,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,cholestyramine,42,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,methylprednisolone,41,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,methimazole,28,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hyperthyroidism
+内分泌/代谢,hydrocortisone cream 1%,21,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,hydrocortisone cream 0.5%,15,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,methylprednisolone na suc,14,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,desmopressin nasal,9,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes insipidus|hyponatremia risk context
+内分泌/代谢,hydrocortisone cream 2.5%,9,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,insulin (regular) for hyperkalemia,9,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,levothyroxine,8,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,calcium carbonate suspension,7,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,hydrocortisone oint 2.5%,7,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,propranolol la,6,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,toujeo solostar u-300 insulin,5,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,humalog kwikpen insulin,4,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,hydrocortisone acetate 10%  foam,4,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,levemir u-100 insulin,4,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,hydrocortisone acetate ointment 1%,3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,hydrocortisone na succinate,3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,hydrocortisone oint 0.5%,3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,hydrocortisone val. cream 0.2%,3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,insulin aspart *nf*,3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin glargine  (cvicu protocol),3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin reg human (novolin r),3,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,calcium carbonate (tums),2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,hydrocortisone acetate suppository,2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,hydrocortisone enema,2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：adrenal insufficiency|steroid replacement
+内分泌/代谢,novolog u-100 insulin aspart,2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,synthroid 75 mcg,2,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,cyanocobalamin (vitamin b-12),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,specialty_drug_name_rule,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,标准化药名命中专科核心药物通用名规则
+内分泌/代谢,fiasp flextouch u-100 insulin,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin aspart u-100,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin degludec,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin glargine,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin lispro,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,insulin lispro (for insulin pump),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,lantus solostar u-100 insulin,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,levothyroxine (t-4),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,levothyroxine sodium (synthroid),1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,stoujeo solostar u-300 insulin,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：diabetes|hyperglycemia|diabetic ketoacidosis
+内分泌/代谢,synthroid,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism
+内分泌/代谢,synthroid 75 mcg tab,1,1,核心治疗药,disease_directed_therapy,疾病直接治疗,external_specialty_drug_reference,可作为专科建议候选药物，但需结合诊断和安全规则复核,保留,外部疾病相关药物参考表：hypothyroidism

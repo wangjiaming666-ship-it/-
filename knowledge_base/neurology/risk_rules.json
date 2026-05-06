@@ -5,21 +5,22 @@
     "lab_purpose": "评估颅内出血及神经系统出血扩展风险",
     "threshold_type": "upper_bound",
     "moderate_risk_threshold": {
+      "unit": "",
       "value": 1.5,
-      "operator": ">",
-      "unit": ""
+      "operator": ">"
     },
     "high_risk_threshold": {
+      "unit": "",
       "value": 2.0,
-      "operator": ">",
-      "unit": ""
+      "operator": ">"
     },
     "risk_message": "INR 升高时，颅内出血扩展或侵袭性神经操作相关出血风险增加。",
     "action": {
       "moderate_risk": "对抗凝、抗血小板及侵袭性治疗相关方案降权。",
       "high_risk": "将病例标记为高出血风险，暂停优先推荐相关高风险方案。"
     },
-    "threshold_basis": "结合神经专科病例分布和神经系统出血风险控制经验阈值。"
+    "reference_source": "DailyMed anticoagulant labels; stroke and bleeding risk clinical references",
+    "threshold_basis": "参考抗凝药物说明书和神经系统出血风险控制经验阈值。"
   },
   {
     "rule_id": "neurology_sodium_risk",
@@ -27,15 +28,15 @@
     "lab_purpose": "评估意识状态、癫痫阈值及脑水肿相关风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
-      "low": 135,
-      "high": 145,
       "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 130,
-      "high": 150,
       "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
       "outside_range_is_high_risk": true
     },
     "risk_message": "钠离子异常可能诱发意识障碍、癫痫发作阈值改变或脑水肿风险上升。",
@@ -43,6 +44,7 @@
       "moderate_risk": "增加风险提示，降低可能加重电解质紊乱方案的优先级。",
       "high_risk": "将病例标记为高风险，建议先纠正钠异常后再进行方案排序。"
     },
-    "threshold_basis": "参考神经专科常用电解质安全范围并结合样本四分位数。"
+    "reference_source": "MedlinePlus sodium blood test; Merck Manual electrolyte disorders",
+    "threshold_basis": "参考公开临床知识源中的血钠参考范围和神经系统水电解质风险解释。"
   }
 ]
