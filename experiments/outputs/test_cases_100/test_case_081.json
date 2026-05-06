@@ -1,0 +1,1172 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "12229881",
+      "hadm_id": "26508803",
+      "gender": null,
+      "age": null
+    },
+    "primary_diagnosis": "Unknown primary diagnosis",
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [],
+      "消化": []
+    },
+    "comorbidity_list": [],
+    "key_labs": {
+      "creatinine_24h": null,
+      "bun_24h": null,
+      "potassium_24h": null,
+      "sodium_24h": null,
+      "glucose_24h": null,
+      "inr_24h": null,
+      "bilirubin_total_24h": null
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {}
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [],
+      "消化": []
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 2,
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 3,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 4,
+          "drug_name": "prednisone",
+          "confidence": 0.63,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 5,
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.62,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.8,
+      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metronidazole",
+          "confidence": 0.95,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 3,
+          "drug_name": "omeprazole",
+          "confidence": 0.89,
+          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+        },
+        {
+          "rank": 4,
+          "drug_name": "ciprofloxacin iv",
+          "confidence": 0.8,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        },
+        {
+          "rank": 5,
+          "drug_name": "ciprofloxacin hcl",
+          "confidence": 0.8,
+          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [],
+      "overall_confidence": 0.8,
+      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "metronidazole",
+          "omeprazole",
+          "ciprofloxacin iv",
+          "ciprofloxacin hcl"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 2 个专科：内分泌/代谢, 消化。",
+      "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate",
+          "pantoprazole"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone",
+            "pantoprazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate",
+          "pantoprazole"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone",
+            "pantoprazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": []
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "prednisone",
+        "sodium bicarbonate",
+        "pantoprazole"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "pantoprazole"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "supportive_or_symptomatic_therapy": [],
+        "general_inpatient_medication": [],
+        "requires_review": [
+          "sodium bicarbonate"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "prednisone",
+        "sodium bicarbonate",
+        "pantoprazole"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "pantoprazole"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "supportive_or_symptomatic_therapy": [],
+        "general_inpatient_medication": [],
+        "requires_review": [
+          "sodium bicarbonate"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "prednisone"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "supportive_or_symptomatic_therapy": [],
+        "general_inpatient_medication": [],
+        "requires_review": []
+      },
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "calcium carbonate",
+        "prednisone",
+        "sodium bicarbonate",
+        "pantoprazole"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "pantoprazole"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "supportive_or_symptomatic_therapy": [],
+        "general_inpatient_medication": [],
+        "requires_review": [
+          "sodium bicarbonate"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate",
+          "pantoprazole"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone",
+            "pantoprazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate",
+          "pantoprazole"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone",
+            "pantoprazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "pantoprazole",
+            "potential_impacts": [
+              "胃酸抑制相关支持/治疗药物，通常安全性较高"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "supportive_or_symptomatic_therapy": [],
+          "general_inpatient_medication": [],
+          "requires_review": []
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine sodium",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [],
+          "消化": []
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 2,
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 3,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 4,
+            "drug_name": "prednisone",
+            "confidence": 0.63,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 5,
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.62,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.8,
+        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "消化_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "消化",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "pantoprazole",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metronidazole",
+            "confidence": 0.95,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 3,
+            "drug_name": "omeprazole",
+            "confidence": 0.89,
+            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          },
+          {
+            "rank": 4,
+            "drug_name": "ciprofloxacin iv",
+            "confidence": 0.8,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          },
+          {
+            "rank": 5,
+            "drug_name": "ciprofloxacin hcl",
+            "confidence": 0.8,
+            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
+          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [],
+        "overall_confidence": 0.8,
+        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "calcium carbonate",
+          "prednisone",
+          "sodium bicarbonate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "消化_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "metronidazole",
+          "omeprazole",
+          "ciprofloxacin iv",
+          "ciprofloxacin hcl"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 2 个专科：内分泌/代谢, 消化。",
+          "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone",
+              "sodium bicarbonate",
+              "pantoprazole"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone",
+                "pantoprazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone",
+              "sodium bicarbonate",
+              "pantoprazole"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone",
+                "pantoprazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": []
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "insulin",
+            "levothyroxine sodium",
+            "calcium carbonate",
+            "prednisone",
+            "sodium bicarbonate",
+            "pantoprazole"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone",
+              "pantoprazole"
+            ],
+            "risk_modifying_therapy": [
+              "insulin"
+            ],
+            "supportive_or_symptomatic_therapy": [],
+            "general_inpatient_medication": [],
+            "requires_review": [
+              "sodium bicarbonate"
+            ]
+          },
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "消化"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone",
+              "sodium bicarbonate",
+              "pantoprazole"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone",
+                "pantoprazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone",
+              "sodium bicarbonate",
+              "pantoprazole"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone",
+                "pantoprazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "消化"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "pantoprazole",
+                "potential_impacts": [
+                  "胃酸抑制相关支持/治疗药物，通常安全性较高"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "calcium carbonate",
+              "prednisone"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine sodium",
+                "calcium carbonate",
+                "prednisone"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "supportive_or_symptomatic_therapy": [],
+              "general_inpatient_medication": [],
+              "requires_review": []
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine sodium",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": false
+}
