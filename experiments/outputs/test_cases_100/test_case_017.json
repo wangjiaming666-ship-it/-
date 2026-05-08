@@ -3,29 +3,56 @@
     "patient_info": {
       "subject_id": "10071847",
       "hadm_id": "22771062",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 89.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Atrioventricular block, complete",
     "active_specialties": [
       "内分泌/代谢",
       "肾内/泌尿",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Atrioventricular block, complete",
+        "Essential (primary) hypertension",
+        "Other fall on same level, initial encounter",
+        "Syncope and collapse"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+        "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+      ],
+      "心血管": [
+        "Cardiac arrest due to underlying cardiac condition",
+        "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+        "Sidewalk as the place of occurrence of the external cause",
+        "Vitamin D deficiency, unspecified"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Cardiac arrest due to underlying cardiac condition",
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+      "Other fall on same level, initial encounter",
+      "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+      "Sidewalk as the place of occurrence of the external cause",
+      "Syncope and collapse",
+      "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture",
+      "Vitamin D deficiency, unspecified"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +82,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 17,
+      "subject_id": "10071847",
+      "hadm_id": "22771062",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "gender": "F",
+      "anchor_age": 89,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "2/4/2131 22:42:00",
+      "dischtime": "5/4/2131 17:35:00",
+      "admission_type": "URGENT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Atrioventricular block, complete",
+      "comorbidity_list": "Acute kidney failure, unspecified | Cardiac arrest due to underlying cardiac condition | Essential (primary) hypertension | Hyperlipidemia, unspecified | Multiple fractures of ribs, right side, initial encounter for closed fracture | Other fall on same level, initial encounter | Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture | Sidewalk as the place of occurrence of the external cause | Syncope and collapse | Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture | Vitamin D deficiency, unspecified",
+      "specialty_agents": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "drug_list": "acetaminophen | bisacodyl | brimonidine | carvedilol | docusate sodium | heparin | hydralazine | iso-osmotic dextrose | lidocaine 5% patch | lisinopril | metoprolol tartrate | ondansetron | oxycodone (immediate release) | pneumococcal 23-valent polysaccharide vaccine | senna | simvastatin | sodium chloride 0.9%  flush | vancomycin",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +118,24 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Atrioventricular block, complete",
+        "Essential (primary) hypertension",
+        "Other fall on same level, initial encounter",
+        "Syncope and collapse"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+        "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+      ],
+      "心血管": [
+        "Cardiac arrest due to underlying cardiac condition",
+        "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+        "Sidewalk as the place of occurrence of the external cause",
+        "Vitamin D deficiency, unspecified"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -114,9 +182,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.92,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atrioventricular block, complete, Essential (primary) hypertension, Other fall on same level, initial encounter 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "肾内/泌尿",
@@ -124,32 +192,32 @@
         {
           "rank": 1,
           "drug_name": "calcium carbonate",
-          "confidence": 0.85,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "furosemide",
-          "confidence": 0.79,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "tamsulosin",
+          "confidence": 0.72,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
           "drug_name": "ceftriaxone",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.67,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "tamsulosin",
-          "confidence": 0.71,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "labetalol",
+          "confidence": 0.62,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "neutra-phos",
-          "confidence": 0.6,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "nifedipine (extended release)",
+          "confidence": 0.57,
+          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -159,43 +227,64 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "heparin",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Hyperlipidemia, unspecified, Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.77,
+          "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "heparin",
+          "confidence": 0.72,
+          "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.67,
+          "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lisinopril",
+          "confidence": 0.62,
+          "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
         },
         {
           "rank": 5,
           "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.57,
+          "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -205,10 +294,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride replacement (critical care and oncology)",
+          "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Cardiac arrest due to underlying cardiac condition, Multiple fractures of ribs, right side, initial encounter for closed fracture, Sidewalk as the place of occurrence of the external cause 生成候选药物，当前首选药物包括 metoprolol tartrate, heparin, aspirin。"
     }
   ],
   "mdt_discussion": {
@@ -226,43 +336,44 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "calcium carbonate",
-          "furosemide",
-          "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "ceftriaxone",
+          "labetalol",
+          "nifedipine (extended release)"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
+          "lisinopril",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
       "本次MDT协商共纳入 3 个专科：内分泌/代谢, 肾内/泌尿, 心血管。",
       "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
       "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
     ],
     "candidate_plans": [
@@ -275,27 +386,33 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "furosemide"
+          "tamsulosin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "prednisone",
+            "tamsulosin"
           ],
           "risk_modifying_therapy": [
-            "insulin",
-            "furosemide"
+            "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "sodium bicarbonate",
+            "heparin"
           ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
@@ -309,27 +426,33 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "furosemide"
+          "tamsulosin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "prednisone",
+            "tamsulosin"
           ],
           "risk_modifying_therapy": [
-            "insulin",
-            "furosemide"
+            "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "sodium bicarbonate",
+            "heparin"
           ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
@@ -339,26 +462,33 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -375,27 +505,33 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "furosemide"
+        "tamsulosin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone"
+          "prednisone",
+          "tamsulosin"
         ],
         "risk_modifying_therapy": [
-          "insulin",
-          "furosemide"
+          "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "sodium bicarbonate",
+          "heparin"
         ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
@@ -409,27 +545,33 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "furosemide"
+        "tamsulosin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone"
+          "prednisone",
+          "tamsulosin"
         ],
         "risk_modifying_therapy": [
-          "insulin",
-          "furosemide"
+          "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "sodium bicarbonate",
+          "heparin"
         ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
@@ -439,26 +581,33 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "calcium carbonate",
-        "furosemide",
         "insulin",
-        "levothyroxine sodium"
+        "levothyroxine sodium",
+        "prednisone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "calcium carbonate",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "heparin"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -474,27 +623,33 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "furosemide"
+        "tamsulosin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone"
+          "prednisone",
+          "tamsulosin"
         ],
         "risk_modifying_therapy": [
-          "insulin",
-          "furosemide"
+          "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "sodium bicarbonate",
+          "heparin"
         ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
@@ -509,27 +664,33 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "furosemide"
+          "tamsulosin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "prednisone",
+            "tamsulosin"
           ],
           "risk_modifying_therapy": [
-            "insulin",
-            "furosemide"
+            "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "sodium bicarbonate",
+            "heparin"
           ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -558,14 +719,6 @@
             "drug_name": "calcium carbonate",
             "potential_impacts": [
               "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -585,27 +738,33 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "furosemide"
+          "tamsulosin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "prednisone",
+            "tamsulosin"
           ],
           "risk_modifying_therapy": [
-            "insulin",
-            "furosemide"
+            "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "sodium bicarbonate",
+            "heparin"
           ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -637,14 +796,6 @@
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
           }
         ],
         "plan_adaptation_notes": [],
@@ -657,26 +808,33 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -689,14 +847,6 @@
             "drug_name": "calcium carbonate",
             "potential_impacts": [
               "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -741,9 +891,24 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "肾内/泌尿": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Atrioventricular block, complete",
+            "Essential (primary) hypertension",
+            "Other fall on same level, initial encounter",
+            "Syncope and collapse"
+          ],
+          "肾内/泌尿": [
+            "Acute kidney failure, unspecified",
+            "Hyperlipidemia, unspecified",
+            "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+            "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+          ],
+          "心血管": [
+            "Cardiac arrest due to underlying cardiac condition",
+            "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+            "Sidewalk as the place of occurrence of the external cause",
+            "Vitamin D deficiency, unspecified"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -794,9 +959,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.92,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atrioventricular block, complete, Essential (primary) hypertension, Other fall on same level, initial encounter 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -809,32 +974,32 @@
           {
             "rank": 1,
             "drug_name": "calcium carbonate",
-            "confidence": 0.85,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "furosemide",
-            "confidence": 0.79,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "tamsulosin",
+            "confidence": 0.72,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
             "drug_name": "ceftriaxone",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.67,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "tamsulosin",
-            "confidence": 0.71,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "labetalol",
+            "confidence": 0.62,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "neutra-phos",
-            "confidence": 0.6,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "nifedipine (extended release)",
+            "confidence": 0.57,
+            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -844,10 +1009,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "heparin",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Hyperlipidemia, unspecified, Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
       }
     },
     {
@@ -859,33 +1045,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.77,
+            "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "heparin",
+            "confidence": 0.72,
+            "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.67,
+            "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lisinopril",
+            "confidence": 0.62,
+            "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
           },
           {
             "rank": 5,
             "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.57,
+            "reason": "与诊断 Cardiac arrest due to underlying cardiac condition 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -895,10 +1081,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride replacement (critical care and oncology)",
+            "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Cardiac arrest due to underlying cardiac condition 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Cardiac arrest due to underlying cardiac condition, Multiple fractures of ribs, right side, initial encounter for closed fracture, Sidewalk as the place of occurrence of the external cause 生成候选药物，当前首选药物包括 metoprolol tartrate, heparin, aspirin。"
       }
     },
     {
@@ -918,7 +1125,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -929,16 +1136,16 @@
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "calcium carbonate",
-          "furosemide",
-          "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "ceftriaxone",
+          "labetalol",
+          "nifedipine (extended release)"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -948,17 +1155,18 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
+          "lisinopril",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     },
     {
@@ -969,7 +1177,7 @@
         "consensus_notes": [
           "本次MDT协商共纳入 3 个专科：内分泌/代谢, 肾内/泌尿, 心血管。",
           "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
           "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
         ],
         "plans": [
@@ -982,27 +1190,33 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "furosemide"
+              "tamsulosin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "prednisone",
+                "tamsulosin"
               ],
               "risk_modifying_therapy": [
-                "insulin",
-                "furosemide"
+                "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "sodium bicarbonate",
+                "heparin"
               ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
@@ -1016,27 +1230,33 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "furosemide"
+              "tamsulosin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "prednisone",
+                "tamsulosin"
               ],
               "risk_modifying_therapy": [
-                "insulin",
-                "furosemide"
+                "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "sodium bicarbonate",
+                "heparin"
               ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
@@ -1046,26 +1266,33 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -1087,27 +1314,33 @@
             "calcium carbonate",
             "prednisone",
             "sodium bicarbonate",
-            "furosemide"
+            "tamsulosin"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
               "levothyroxine sodium",
               "calcium carbonate",
-              "prednisone"
+              "prednisone",
+              "tamsulosin"
             ],
             "risk_modifying_therapy": [
-              "insulin",
-              "furosemide"
+              "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "docusate sodium",
+              "ondansetron",
+              "senna"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
-              "sodium bicarbonate"
+              "sodium bicarbonate",
+              "heparin"
             ]
           },
           "supporting_specialties": [
             "内分泌/代谢",
-            "心血管",
             "肾内/泌尿"
           ],
           "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
@@ -1122,27 +1355,33 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "furosemide"
+              "tamsulosin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "prednisone",
+                "tamsulosin"
               ],
               "risk_modifying_therapy": [
-                "insulin",
-                "furosemide"
+                "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "sodium bicarbonate",
+                "heparin"
               ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1171,14 +1410,6 @@
                 "drug_name": "calcium carbonate",
                 "potential_impacts": [
                   "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1198,27 +1429,33 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "furosemide"
+              "tamsulosin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "prednisone",
+                "tamsulosin"
               ],
               "risk_modifying_therapy": [
-                "insulin",
-                "furosemide"
+                "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "sodium bicarbonate",
+                "heparin"
               ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1250,14 +1487,6 @@
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
               }
             ],
             "plan_adaptation_notes": [],
@@ -1270,26 +1499,33 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1302,14 +1538,6 @@
                 "drug_name": "calcium carbonate",
                 "potential_impacts": [
                   "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

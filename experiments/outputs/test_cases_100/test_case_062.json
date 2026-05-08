@@ -3,29 +3,50 @@
     "patient_info": {
       "subject_id": "14170994",
       "hadm_id": "24241088",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 61.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Other spondylosis, lumbar region",
     "active_specialties": [
       "内分泌/代谢",
       "神经",
       "消化"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "消化": []
+      "内分泌/代谢": [
+        "Other spondylosis, lumbar region",
+        "Major depressive disorder, single episode, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "神经": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other acute postprocedural pain",
+        "Spinal stenosis, lumbosacral region"
+      ],
+      "消化": [
+        "Hyperlipidemia, unspecified",
+        "Other intervertebral disc degeneration, lumbar region",
+        "Spondylolisthesis, lumbar region"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Major depressive disorder, single episode, unspecified",
+      "Other acute postprocedural pain",
+      "Other intervertebral disc degeneration, lumbar region",
+      "Personal history of nicotine dependence",
+      "Spinal stenosis, lumbosacral region",
+      "Spondylolisthesis, lumbar region"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +76,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 62,
+      "subject_id": "14170994",
+      "hadm_id": "24241088",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 神经 | 消化",
+      "gender": "F",
+      "anchor_age": 61,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "11/8/2153 00:00:00",
+      "dischtime": "17/8/2153 17:42:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Other spondylosis, lumbar region",
+      "comorbidity_list": "Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Major depressive disorder, single episode, unspecified | Other acute postprocedural pain | Other intervertebral disc degeneration, lumbar region | Personal history of nicotine dependence | Spinal stenosis, lumbosacral region | Spondylolisthesis, lumbar region",
+      "specialty_agents": "精神 | 内分泌/代谢 | 神经 | 消化",
+      "drug_list": "0.9% sodium chl (yellow cadd) | 0.9% sodium chloride | acetaminophen | atorvastatin | bag | bupivacaine 0.1% | cefazolin | citalopram | docusate sodium | gabapentin | hydromorphone | hydromorphone (dilaudid) | iso-osmotic dextrose | lactated ringers | magnesium sulfate | methylnaltrexone | morphine sulfate | omeprazole | oxycodone (immediate release) | potassium chl 20 meq / 1000 ml ns | potassium chloride | senna | sodium chloride 0.9% | sodium chloride 0.9%  flush | tramadol",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +112,21 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "消化": []
+      "内分泌/代谢": [
+        "Other spondylosis, lumbar region",
+        "Major depressive disorder, single episode, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "神经": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other acute postprocedural pain",
+        "Spinal stenosis, lumbosacral region"
+      ],
+      "消化": [
+        "Hyperlipidemia, unspecified",
+        "Other intervertebral disc degeneration, lumbar region",
+        "Spondylolisthesis, lumbar region"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -114,9 +173,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Major depressive disorder, single episode, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
@@ -160,9 +219,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Gastro-esophageal reflux disease without esophagitis, Other acute postprocedural pain, Spinal stenosis, lumbosacral region 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
     },
     {
       "specialty_name": "消化",
@@ -206,9 +265,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Hyperlipidemia, unspecified, Other intervertebral disc degeneration, lumbar region, Spondylolisthesis, lumbar region 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     }
   ],
   "mdt_discussion": {
@@ -226,7 +285,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "神经",
@@ -241,7 +300,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "消化",
@@ -256,7 +315,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -704,9 +763,21 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "神经": [],
-          "消化": []
+          "内分泌/代谢": [
+            "Other spondylosis, lumbar region",
+            "Major depressive disorder, single episode, unspecified",
+            "Personal history of nicotine dependence"
+          ],
+          "神经": [
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Other acute postprocedural pain",
+            "Spinal stenosis, lumbosacral region"
+          ],
+          "消化": [
+            "Hyperlipidemia, unspecified",
+            "Other intervertebral disc degeneration, lumbar region",
+            "Spondylolisthesis, lumbar region"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -757,9 +828,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Major depressive disorder, single episode, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -808,9 +879,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Gastro-esophageal reflux disease without esophagitis, Other acute postprocedural pain, Spinal stenosis, lumbosacral region 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
       }
     },
     {
@@ -859,9 +930,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Hyperlipidemia, unspecified, Other intervertebral disc degeneration, lumbar region, Spondylolisthesis, lumbar region 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -881,7 +952,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -901,7 +972,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -921,7 +992,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {

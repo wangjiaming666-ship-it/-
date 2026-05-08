@@ -1,7 +1,7 @@
-category,metric,mean,median,case_count,note
-处方一致性与治疗角色,药名 Precision,0.3488,0.3636,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
-处方一致性与治疗角色,药名 Recall,0.2027,0.1835,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
-处方一致性与治疗角色,药名 F1,0.2381,0.2308,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
-处方一致性与治疗角色,药名 Jaccard,0.1405,0.1304,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
-处方一致性与治疗角色,治疗角色 Precision,0.8873,1.0,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
-处方一致性与治疗角色,治疗角色 Coverage,0.9262,1.0,100,基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计
+category,metric,mean,median,case_count,source
+处方一致性与治疗角色,drug_precision,0.2083,0.1667,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list
+处方一致性与治疗角色,drug_recall,0.0462,0.0435,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list
+处方一致性与治疗角色,drug_f1,0.0725,0.07,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list
+处方一致性与治疗角色,drug_jaccard,0.0386,0.0363,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list
+处方一致性与治疗角色,role_precision,0.7077,0.75,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list
+处方一致性与治疗角色,role_coverage,0.511,0.5,100,experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list

@@ -3,29 +3,62 @@
     "patient_info": {
       "subject_id": "18637523",
       "hadm_id": "22401016",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 75.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Dizziness and giddiness",
     "active_specialties": [
       "内分泌/代谢",
       "消化",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Dizziness and giddiness",
+        "Chronic or unspecified duodenal ulcer with hemorrhage",
+        "Hyperparathyroidism, unspecified",
+        "Personal history of nicotine dependence",
+        "Type 2 diabetes mellitus with hypoglycemia without coma"
+      ],
+      "消化": [
+        "Acute posthemorrhagic anemia",
+        "Constipation, unspecified",
+        "Iron deficiency anemia secondary to blood loss (chronic)",
+        "Presence of artificial knee joint, bilateral",
+        "Unspecified place in unspecified non-institutional (private) residence as the place of occurrence of the external cause"
+      ],
+      "心血管": [
+        "Adverse effect of other antihypertensive drugs, initial encounter",
+        "Essential (primary) hypertension",
+        "Other fatigue",
+        "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+        "Weakness"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute posthemorrhagic anemia",
+      "Adverse effect of other antihypertensive drugs, initial encounter",
+      "Chronic or unspecified duodenal ulcer with hemorrhage",
+      "Constipation, unspecified",
+      "Essential (primary) hypertension",
+      "Hyperparathyroidism, unspecified",
+      "Iron deficiency anemia secondary to blood loss (chronic)",
+      "Other fatigue",
+      "Personal history of nicotine dependence",
+      "Presence of artificial knee joint, bilateral",
+      "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+      "Type 2 diabetes mellitus with hypoglycemia without coma",
+      "Unspecified place in unspecified non-institutional (private) residence as the place of occurrence of the external cause",
+      "Weakness"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 0.8,
+      "bun_24h": 10.0,
+      "potassium_24h": 4.4,
+      "sodium_24h": 142.0,
+      "glucose_24h": 78.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +88,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 50,
+      "subject_id": "18637523",
+      "hadm_id": "22401016",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "F",
+      "anchor_age": 75,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "21/11/2157 19:40:00",
+      "dischtime": "24/11/2157 15:48:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Dizziness and giddiness",
+      "comorbidity_list": "Acute posthemorrhagic anemia | Adverse effect of other antihypertensive drugs, initial encounter | Chronic or unspecified duodenal ulcer with hemorrhage | Constipation, unspecified | Essential (primary) hypertension | Hyperparathyroidism, unspecified | Iron deficiency anemia secondary to blood loss (chronic) | Other fatigue | Personal history of nicotine dependence | Presence of artificial knee joint, bilateral | Type 2 diabetes mellitus with diabetic neuropathy, unspecified | Type 2 diabetes mellitus with hypoglycemia without coma | Unspecified place in unspecified non-institutional (private) residence as the place of occurrence of the external cause | Weakness",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管",
+      "drug_list": "acetaminophen | atorvastatin | bag | bisacodyl | d5 1/2ns | gabapentin | lidocaine 5% patch | magnesium sulfate | omeprazole | oxycodone (immediate release) | pantoprazole | polyethylene glycol | ramelteon | senna | sodium chloride 0.9%  flush | vial",
+      "creatinine_24h": 0.8,
+      "bun_24h": 10.0,
+      "potassium_24h": 4.4,
+      "sodium_24h": 142.0,
+      "glucose_24h": 78.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +124,27 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Dizziness and giddiness",
+        "Chronic or unspecified duodenal ulcer with hemorrhage",
+        "Hyperparathyroidism, unspecified",
+        "Personal history of nicotine dependence",
+        "Type 2 diabetes mellitus with hypoglycemia without coma"
+      ],
+      "消化": [
+        "Acute posthemorrhagic anemia",
+        "Constipation, unspecified",
+        "Iron deficiency anemia secondary to blood loss (chronic)",
+        "Presence of artificial knee joint, bilateral",
+        "Unspecified place in unspecified non-institutional (private) residence as the place of occurrence of the external cause"
+      ],
+      "心血管": [
+        "Adverse effect of other antihypertensive drugs, initial encounter",
+        "Essential (primary) hypertension",
+        "Other fatigue",
+        "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+        "Weakness"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -77,33 +154,33 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "insulin",
+          "drug_name": "calcium carbonate",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
+          "drug_name": "insulin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.83,
+          "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "insulin human regular",
+          "confidence": 0.67,
+          "reason": "与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
+          "drug_name": "atenolol",
           "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -113,10 +190,43 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "enoxaparin (prophylaxis)",
+          "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "dextrose 50%",
+          "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "glucagon",
+          "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "glucose gel",
+          "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Dizziness and giddiness, Chronic or unspecified duodenal ulcer with hemorrhage, Hyperparathyroidism, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, insulin, levothyroxine sodium。"
     },
     {
       "specialty_name": "消化",
@@ -124,32 +234,32 @@
         {
           "rank": 1,
           "drug_name": "pantoprazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metronidazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "lactulose",
+          "confidence": 0.72,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "omeprazole",
-          "confidence": 0.89,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "metronidazole",
+          "confidence": 0.67,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "ciprofloxacin iv",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "omeprazole",
+          "confidence": 0.62,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.57,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -159,43 +269,64 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "polyethylene glycol",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Constipation, unspecified, Iron deficiency anemia secondary to blood loss (chronic) 生成候选药物，当前首选药物包括 pantoprazole, lactulose, metronidazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "heparin",
+          "confidence": 0.77,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 2,
           "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.72,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.67,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lisinopril",
+          "confidence": 0.62,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "hydralazine",
+          "confidence": 0.57,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -205,10 +336,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Adverse effect of other antihypertensive drugs, initial encounter, Essential (primary) hypertension, Other fatigue 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
     }
   ],
   "mdt_discussion": {
@@ -216,47 +368,47 @@
       {
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "insulin human regular",
+          "atenolol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
+          "lactulose",
           "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -270,27 +422,37 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
+          "insulin human regular",
+          "atenolol",
           "pantoprazole"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone",
+            "levothyroxine sodium",
             "pantoprazole"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
           "requires_review": [
-            "sodium bicarbonate"
+            "atenolol",
+            "enoxaparin (prophylaxis)"
           ]
         },
         "supporting_specialties": [
@@ -303,27 +465,37 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
+          "insulin human regular",
+          "atenolol",
           "pantoprazole"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone",
+            "levothyroxine sodium",
             "pantoprazole"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
           "requires_review": [
-            "sodium bicarbonate"
+            "atenolol",
+            "enoxaparin (prophylaxis)"
           ]
         },
         "supporting_specialties": [
@@ -336,23 +508,34 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "insulin human regular"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "levothyroxine sodium"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
+          "requires_review": [
+            "enoxaparin (prophylaxis)"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -366,27 +549,37 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
+        "calcium carbonate",
         "insulin",
         "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
+        "insulin human regular",
+        "atenolol",
         "pantoprazole"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone",
+          "levothyroxine sodium",
           "pantoprazole"
         ],
         "risk_modifying_therapy": [
-          "insulin"
+          "insulin",
+          "insulin human regular"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna",
+          "lorazepam"
+        ],
+        "general_inpatient_medication": [
+          "dextrose 50%"
+        ],
         "requires_review": [
-          "sodium bicarbonate"
+          "atenolol",
+          "enoxaparin (prophylaxis)"
         ]
       },
       "supporting_specialties": [
@@ -399,27 +592,37 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
+        "calcium carbonate",
         "insulin",
         "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
+        "insulin human regular",
+        "atenolol",
         "pantoprazole"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone",
+          "levothyroxine sodium",
           "pantoprazole"
         ],
         "risk_modifying_therapy": [
-          "insulin"
+          "insulin",
+          "insulin human regular"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna",
+          "lorazepam"
+        ],
+        "general_inpatient_medication": [
+          "dextrose 50%"
+        ],
         "requires_review": [
-          "sodium bicarbonate"
+          "atenolol",
+          "enoxaparin (prophylaxis)"
         ]
       },
       "supporting_specialties": [
@@ -432,23 +635,34 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
+        "calcium carbonate",
         "insulin",
         "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone"
+        "insulin human regular"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone"
+          "levothyroxine sodium"
         ],
         "risk_modifying_therapy": [
-          "insulin"
+          "insulin",
+          "insulin human regular"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna",
+          "lorazepam"
+        ],
+        "general_inpatient_medication": [
+          "dextrose 50%"
+        ],
+        "requires_review": [
+          "enoxaparin (prophylaxis)"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢"
@@ -461,27 +675,37 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
+        "calcium carbonate",
         "insulin",
         "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
+        "insulin human regular",
+        "atenolol",
         "pantoprazole"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
           "calcium carbonate",
-          "prednisone",
+          "levothyroxine sodium",
           "pantoprazole"
         ],
         "risk_modifying_therapy": [
-          "insulin"
+          "insulin",
+          "insulin human regular"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "ondansetron",
+          "senna",
+          "lorazepam"
+        ],
+        "general_inpatient_medication": [
+          "dextrose 50%"
+        ],
         "requires_review": [
-          "sodium bicarbonate"
+          "atenolol",
+          "enoxaparin (prophylaxis)"
         ]
       },
       "supporting_specialties": [
@@ -495,27 +719,37 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
+          "insulin human regular",
+          "atenolol",
           "pantoprazole"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone",
+            "levothyroxine sodium",
             "pantoprazole"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
           "requires_review": [
-            "sodium bicarbonate"
+            "atenolol",
+            "enoxaparin (prophylaxis)"
           ]
         },
         "supporting_specialties": [
@@ -528,6 +762,14 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
           {
             "drug_name": "insulin",
             "potential_impacts": [
@@ -545,9 +787,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "insulin human regular",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -570,27 +812,37 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
+          "insulin human regular",
+          "atenolol",
           "pantoprazole"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone",
+            "levothyroxine sodium",
             "pantoprazole"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
           "requires_review": [
-            "sodium bicarbonate"
+            "atenolol",
+            "enoxaparin (prophylaxis)"
           ]
         },
         "supporting_specialties": [
@@ -603,6 +855,14 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
           {
             "drug_name": "insulin",
             "potential_impacts": [
@@ -620,9 +880,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "insulin human regular",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -645,23 +905,34 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "insulin human regular"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
             "calcium carbonate",
-            "prednisone"
+            "levothyroxine sodium"
           ],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin human regular"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "ondansetron",
+            "senna",
+            "lorazepam"
+          ],
+          "general_inpatient_medication": [
+            "dextrose 50%"
+          ],
+          "requires_review": [
+            "enoxaparin (prophylaxis)"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -672,6 +943,14 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
+          {
+            "drug_name": "calcium carbonate",
+            "potential_impacts": [
+              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
           {
             "drug_name": "insulin",
             "potential_impacts": [
@@ -689,9 +968,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "insulin human regular",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -720,9 +999,27 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "消化": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Dizziness and giddiness",
+            "Chronic or unspecified duodenal ulcer with hemorrhage",
+            "Hyperparathyroidism, unspecified",
+            "Personal history of nicotine dependence",
+            "Type 2 diabetes mellitus with hypoglycemia without coma"
+          ],
+          "消化": [
+            "Acute posthemorrhagic anemia",
+            "Constipation, unspecified",
+            "Iron deficiency anemia secondary to blood loss (chronic)",
+            "Presence of artificial knee joint, bilateral",
+            "Unspecified place in unspecified non-institutional (private) residence as the place of occurrence of the external cause"
+          ],
+          "心血管": [
+            "Adverse effect of other antihypertensive drugs, initial encounter",
+            "Essential (primary) hypertension",
+            "Other fatigue",
+            "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+            "Weakness"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -736,33 +1033,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "insulin",
+            "drug_name": "calcium carbonate",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "insulin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.83,
+            "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "insulin human regular",
+            "confidence": 0.67,
+            "reason": "与诊断 Type 2 diabetes mellitus with hypoglycemia without coma 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
+            "drug_name": "atenolol",
             "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "与诊断 Hyperparathyroidism, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -772,10 +1069,43 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "enoxaparin (prophylaxis)",
+            "reason": "在 Hyperparathyroidism, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "dextrose 50%",
+            "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "glucagon",
+            "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "glucose gel",
+            "reason": "在 Type 2 diabetes mellitus with hypoglycemia without coma 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Dizziness and giddiness, Chronic or unspecified duodenal ulcer with hemorrhage, Hyperparathyroidism, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, insulin, levothyroxine sodium。"
       }
     },
     {
@@ -788,32 +1118,32 @@
           {
             "rank": 1,
             "drug_name": "pantoprazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metronidazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "lactulose",
+            "confidence": 0.72,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "omeprazole",
-            "confidence": 0.89,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "metronidazole",
+            "confidence": 0.67,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "ciprofloxacin iv",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "omeprazole",
+            "confidence": 0.62,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.57,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -823,10 +1153,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "polyethylene glycol",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Constipation, unspecified, Iron deficiency anemia secondary to blood loss (chronic) 生成候选药物，当前首选药物包括 pantoprazole, lactulose, metronidazole。"
       }
     },
     {
@@ -838,33 +1189,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "heparin",
+            "confidence": 0.77,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 2,
             "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.72,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.67,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lisinopril",
+            "confidence": 0.62,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "hydralazine",
+            "confidence": 0.57,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -874,10 +1225,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Adverse effect of other antihypertensive drugs, initial encounter, Essential (primary) hypertension, Other fatigue 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
       }
     },
     {
@@ -887,17 +1259,17 @@
       "content": {
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
+          "calcium carbonate",
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "insulin human regular",
+          "atenolol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -908,16 +1280,16 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
+          "lactulose",
           "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -927,17 +1299,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -956,27 +1328,37 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
+              "insulin human regular",
+              "atenolol",
               "pantoprazole"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone",
+                "levothyroxine sodium",
                 "pantoprazole"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
               "requires_review": [
-                "sodium bicarbonate"
+                "atenolol",
+                "enoxaparin (prophylaxis)"
               ]
             },
             "supporting_specialties": [
@@ -989,27 +1371,37 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
+              "insulin human regular",
+              "atenolol",
               "pantoprazole"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone",
+                "levothyroxine sodium",
                 "pantoprazole"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
               "requires_review": [
-                "sodium bicarbonate"
+                "atenolol",
+                "enoxaparin (prophylaxis)"
               ]
             },
             "supporting_specialties": [
@@ -1022,23 +1414,34 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "insulin human regular"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "levothyroxine sodium"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
+              "requires_review": [
+                "enoxaparin (prophylaxis)"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"
@@ -1057,27 +1460,37 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
+            "calcium carbonate",
             "insulin",
             "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone",
-            "sodium bicarbonate",
+            "insulin human regular",
+            "atenolol",
             "pantoprazole"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "levothyroxine sodium",
               "calcium carbonate",
-              "prednisone",
+              "levothyroxine sodium",
               "pantoprazole"
             ],
             "risk_modifying_therapy": [
-              "insulin"
+              "insulin",
+              "insulin human regular"
             ],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "docusate sodium",
+              "ondansetron",
+              "senna",
+              "lorazepam"
+            ],
+            "general_inpatient_medication": [
+              "dextrose 50%"
+            ],
             "requires_review": [
-              "sodium bicarbonate"
+              "atenolol",
+              "enoxaparin (prophylaxis)"
             ]
           },
           "supporting_specialties": [
@@ -1091,27 +1504,37 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
+              "insulin human regular",
+              "atenolol",
               "pantoprazole"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone",
+                "levothyroxine sodium",
                 "pantoprazole"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
               "requires_review": [
-                "sodium bicarbonate"
+                "atenolol",
+                "enoxaparin (prophylaxis)"
               ]
             },
             "supporting_specialties": [
@@ -1124,6 +1547,14 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
               {
                 "drug_name": "insulin",
                 "potential_impacts": [
@@ -1141,9 +1572,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "insulin human regular",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1166,27 +1597,37 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
+              "insulin human regular",
+              "atenolol",
               "pantoprazole"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone",
+                "levothyroxine sodium",
                 "pantoprazole"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
               "requires_review": [
-                "sodium bicarbonate"
+                "atenolol",
+                "enoxaparin (prophylaxis)"
               ]
             },
             "supporting_specialties": [
@@ -1199,6 +1640,14 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
               {
                 "drug_name": "insulin",
                 "potential_impacts": [
@@ -1216,9 +1665,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "insulin human regular",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1241,23 +1690,34 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
+              "calcium carbonate",
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "insulin human regular"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
                 "calcium carbonate",
-                "prednisone"
+                "levothyroxine sodium"
               ],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin human regular"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "ondansetron",
+                "senna",
+                "lorazepam"
+              ],
+              "general_inpatient_medication": [
+                "dextrose 50%"
+              ],
+              "requires_review": [
+                "enoxaparin (prophylaxis)"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"
@@ -1268,6 +1728,14 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
+              {
+                "drug_name": "calcium carbonate",
+                "potential_impacts": [
+                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
               {
                 "drug_name": "insulin",
                 "potential_impacts": [
@@ -1285,9 +1753,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "insulin human regular",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

@@ -3,29 +3,62 @@
     "patient_info": {
       "subject_id": "19944391",
       "hadm_id": "23373001",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 58.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Malignant poorly differentiated neuroendocrine tumors",
     "active_specialties": [
       "内分泌/代谢",
       "消化",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Malignant poorly differentiated neuroendocrine tumors",
+        "Acquired coagulation factor deficiency",
+        "Do not resuscitate",
+        "Hypercalcemia",
+        "Obstruction of bile duct"
+      ],
+      "消化": [
+        "Abnormal weight loss",
+        "Body mass index [BMI] 32.0-32.9, adult",
+        "Encounter for palliative care",
+        "Hyperlipidemia, unspecified",
+        "Other secondary neuroendocrine tumors"
+      ],
+      "心血管": [
+        "Acidosis",
+        "Dermatitis, unspecified",
+        "Essential (primary) hypertension",
+        "Hypomagnesemia",
+        "Unspecified right bundle-branch block"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Abnormal weight loss",
+      "Acidosis",
+      "Acquired coagulation factor deficiency",
+      "Body mass index [BMI] 32.0-32.9, adult",
+      "Dermatitis, unspecified",
+      "Do not resuscitate",
+      "Encounter for palliative care",
+      "Essential (primary) hypertension",
+      "Hypercalcemia",
+      "Hyperlipidemia, unspecified",
+      "Hypomagnesemia",
+      "Obstruction of bile duct",
+      "Other secondary neuroendocrine tumors",
+      "Unspecified right bundle-branch block"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.0,
+      "bun_24h": 20.0,
+      "potassium_24h": 4.3,
+      "sodium_24h": 138.0,
+      "glucose_24h": 93.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 10.9
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +88,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 22,
+      "subject_id": "19944391",
+      "hadm_id": "23373001",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 58,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "24/12/2119 19:17:00",
+      "dischtime": "8/1/2120 20:00:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "ASIAN - CHINESE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Malignant poorly differentiated neuroendocrine tumors",
+      "comorbidity_list": "Abnormal weight loss | Acidosis | Acquired coagulation factor deficiency | Body mass index [BMI] 32.0-32.9, adult | Dermatitis, unspecified | Do not resuscitate | Encounter for palliative care | Essential (primary) hypertension | Hypercalcemia | Hyperlipidemia, unspecified | Hypomagnesemia | Obstruction of bile duct | Other secondary neuroendocrine tumors | Unspecified right bundle-branch block",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.9% sodium chloride | 5% dextrose | allopurinol | aluminum-magnesium hydrox.-simethicone | bag | bisacodyl | dexamethasone | dextrose 5% | docusate sodium | filgrastim-sndz | fluorouracil | fosaprepitant | heparin | heparin flush (10 units/ml) | heparin flush (100 units/ml) | hydromorphone (dilaudid) | ibuprofen | influenza vaccine quadrivalent | iso-osmotic dextrose | lactated ringers | lactulose | leucovorin calcium | lidocaine 1% (for picc/midline insertions) | lorazepam | magnesium sulfate | methylphenidate (ritalin) | metoprolol succinate xl | ondansetron | ondansetron odt | oxaliplatin | oxycodone (immediate release) | pantoprazole | phosphorus | phytonadione | piperacillin-tazobactam | polyethylene glycol | potassium chloride | potassium citrate | ramelteon | senna | sodium chloride 0.9% | sodium chloride 0.9%  flush | sterile water | syringe | vitamin d2 (ergocalciferol) | zoledronic acid",
+      "creatinine_24h": 1.0,
+      "bun_24h": 20.0,
+      "potassium_24h": 4.3,
+      "sodium_24h": 138.0,
+      "glucose_24h": 93.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 10.9
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +124,27 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Malignant poorly differentiated neuroendocrine tumors",
+        "Acquired coagulation factor deficiency",
+        "Do not resuscitate",
+        "Hypercalcemia",
+        "Obstruction of bile duct"
+      ],
+      "消化": [
+        "Abnormal weight loss",
+        "Body mass index [BMI] 32.0-32.9, adult",
+        "Encounter for palliative care",
+        "Hyperlipidemia, unspecified",
+        "Other secondary neuroendocrine tumors"
+      ],
+      "心血管": [
+        "Acidosis",
+        "Dermatitis, unspecified",
+        "Essential (primary) hypertension",
+        "Hypomagnesemia",
+        "Unspecified right bundle-branch block"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -114,9 +191,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant poorly differentiated neuroendocrine tumors, Acquired coagulation factor deficiency, Do not resuscitate 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "消化",
@@ -158,44 +235,52 @@
         "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
-      "risk_alerts": [],
+      "risk_alerts": [
+        {
+          "lab_name": "bilirubin_total_24h",
+          "risk_level": "high",
+          "triggered_rule_id": "gastroenterology_bilirubin_risk",
+          "message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+          "action_taken": "将病例标记为高肝胆风险，优先避免高肝毒性和高肝代谢负担组合。"
+        }
+      ],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Abnormal weight loss, Body mass index [BMI] 32.0-32.9, adult, Encounter for palliative care 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "heparin",
+          "confidence": 0.77,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 2,
           "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.72,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.67,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lisinopril",
+          "confidence": 0.62,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "hydralazine",
+          "confidence": 0.57,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -205,10 +290,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Acidosis, Dermatitis, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
     }
   ],
   "mdt_discussion": {
@@ -226,7 +332,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "消化",
@@ -239,24 +345,24 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "消化建议未发现明显跨专科冲突。"
+          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -287,7 +393,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -320,7 +431,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -350,7 +466,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -383,7 +504,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -416,7 +542,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -446,7 +577,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": []
       },
@@ -478,7 +614,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -512,7 +653,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -523,10 +669,12 @@
           "消化"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在高风险基线指标"
         ],
-        "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "safety_decision": "需人工复核",
+        "patient_context_flags": [
+          "入院早期总胆红素升高: 10.9"
+        ],
         "medication_impact_review": [
           {
             "drug_name": "insulin",
@@ -561,7 +709,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
         "priority_order": 1
@@ -587,7 +737,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -598,10 +753,12 @@
           "消化"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在高风险基线指标"
         ],
-        "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "safety_decision": "需人工复核",
+        "patient_context_flags": [
+          "入院早期总胆红素升高: 10.9"
+        ],
         "medication_impact_review": [
           {
             "drug_name": "insulin",
@@ -636,7 +793,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
         "priority_order": 2
@@ -659,7 +818,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -667,10 +831,12 @@
           "内分泌/代谢"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在高风险基线指标"
         ],
-        "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "safety_decision": "需人工复核",
+        "patient_context_flags": [
+          "入院早期总胆红素升高: 10.9"
+        ],
         "medication_impact_review": [
           {
             "drug_name": "insulin",
@@ -697,13 +863,28 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
         "priority_order": 3
       }
     ],
-    "triggered_risks": [],
+    "triggered_risks": [
+      {
+        "specialty_name": "消化",
+        "rule_id": "gastroenterology_bilirubin_risk",
+        "lab_name": "bilirubin_total_24h",
+        "lab_value": 10.9,
+        "risk_level": "high",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
     "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
     "llm_safety_review": {}
   },
@@ -720,9 +901,27 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "消化": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Malignant poorly differentiated neuroendocrine tumors",
+            "Acquired coagulation factor deficiency",
+            "Do not resuscitate",
+            "Hypercalcemia",
+            "Obstruction of bile duct"
+          ],
+          "消化": [
+            "Abnormal weight loss",
+            "Body mass index [BMI] 32.0-32.9, adult",
+            "Encounter for palliative care",
+            "Hyperlipidemia, unspecified",
+            "Other secondary neuroendocrine tumors"
+          ],
+          "心血管": [
+            "Acidosis",
+            "Dermatitis, unspecified",
+            "Essential (primary) hypertension",
+            "Hypomagnesemia",
+            "Unspecified right bundle-branch block"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -773,9 +972,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant poorly differentiated neuroendocrine tumors, Acquired coagulation factor deficiency, Do not resuscitate 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -822,11 +1021,19 @@
           "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
-        "risk_alerts": [],
+        "risk_alerts": [
+          {
+            "lab_name": "bilirubin_total_24h",
+            "risk_level": "high",
+            "triggered_rule_id": "gastroenterology_bilirubin_risk",
+            "message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+            "action_taken": "将病例标记为高肝胆风险，优先避免高肝毒性和高肝代谢负担组合。"
+          }
+        ],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Abnormal weight loss, Body mass index [BMI] 32.0-32.9, adult, Encounter for palliative care 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -838,33 +1045,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "heparin",
+            "confidence": 0.77,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 2,
             "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.72,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.67,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lisinopril",
+            "confidence": 0.62,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "hydralazine",
+            "confidence": 0.57,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -874,10 +1081,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Acidosis, Dermatitis, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
       }
     },
     {
@@ -897,7 +1125,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -915,9 +1143,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "消化建议未发现明显跨专科冲突。"
+          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -927,17 +1155,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -973,7 +1201,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1006,7 +1239,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1036,7 +1274,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },
@@ -1074,7 +1317,12 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "senna",
+              "docusate sodium"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "sodium bicarbonate"
@@ -1108,7 +1356,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1119,10 +1372,12 @@
               "消化"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在高风险基线指标"
             ],
-            "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "safety_decision": "需人工复核",
+            "patient_context_flags": [
+              "入院早期总胆红素升高: 10.9"
+            ],
             "medication_impact_review": [
               {
                 "drug_name": "insulin",
@@ -1157,7 +1412,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
             "priority_order": 1
@@ -1183,7 +1440,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1194,10 +1456,12 @@
               "消化"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在高风险基线指标"
             ],
-            "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "safety_decision": "需人工复核",
+            "patient_context_flags": [
+              "入院早期总胆红素升高: 10.9"
+            ],
             "medication_impact_review": [
               {
                 "drug_name": "insulin",
@@ -1232,7 +1496,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
             "priority_order": 2
@@ -1255,7 +1521,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },
@@ -1263,10 +1534,12 @@
               "内分泌/代谢"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在高风险基线指标"
             ],
-            "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "safety_decision": "需人工复核",
+            "patient_context_flags": [
+              "入院早期总胆红素升高: 10.9"
+            ],
             "medication_impact_review": [
               {
                 "drug_name": "insulin",
@@ -1293,13 +1566,28 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肝胆代谢风险背景，需复核肝代谢负担较重药物。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
             "priority_order": 3
           }
         ],
-        "triggered_risks": [],
+        "triggered_risks": [
+          {
+            "specialty_name": "消化",
+            "rule_id": "gastroenterology_bilirubin_risk",
+            "lab_name": "bilirubin_total_24h",
+            "lab_value": 10.9,
+            "risk_level": "high",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
         "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
         "llm_safety_review": {}
       }

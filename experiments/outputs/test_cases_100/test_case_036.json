@@ -3,29 +3,76 @@
     "patient_info": {
       "subject_id": "12161387",
       "hadm_id": "20535307",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 52.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Major depressive disorder, recurrent severe without psychotic features",
     "active_specialties": [
       "内分泌/代谢",
       "消化",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Major depressive disorder, recurrent severe without psychotic features",
+        "Calcaneal spur, right foot",
+        "Exposure to other specified factors, subsequent encounter",
+        "Generalized anxiety disorder",
+        "Juvenile osteochondrosis of tarsus, right ankle",
+        "Nicotine dependence, cigarettes, uncomplicated",
+        "Personal history of pulmonary embolism",
+        "Unspecified superficial injury of scalp, subsequent encounter"
+      ],
+      "消化": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Constipation, unspecified",
+        "Family history of other mental and behavioral disorders",
+        "Hyperglycemia, unspecified",
+        "Liver transplant status",
+        "Pain in left foot",
+        "Personal history of self-harm"
+      ],
+      "心血管": [
+        "Alcohol abuse, uncomplicated",
+        "Essential (primary) hypertension",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Infectious gastroenteritis and colitis, unspecified",
+        "Long term (current) use of anticoagulants",
+        "Pain in right foot",
+        "Unspecified protein-calorie malnutrition"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+      "Alcohol abuse, uncomplicated",
+      "Calcaneal spur, right foot",
+      "Constipation, unspecified",
+      "Essential (primary) hypertension",
+      "Exposure to other specified factors, subsequent encounter",
+      "Family history of other mental and behavioral disorders",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Generalized anxiety disorder",
+      "Hyperglycemia, unspecified",
+      "Infectious gastroenteritis and colitis, unspecified",
+      "Juvenile osteochondrosis of tarsus, right ankle",
+      "Liver transplant status",
+      "Long term (current) use of anticoagulants",
+      "Nicotine dependence, cigarettes, uncomplicated",
+      "Pain in left foot",
+      "Pain in right foot",
+      "Personal history of pulmonary embolism",
+      "Personal history of self-harm",
+      "Unspecified protein-calorie malnutrition",
+      "Unspecified superficial injury of scalp, subsequent encounter"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.2,
+      "bun_24h": 41.0,
+      "potassium_24h": 4.5,
+      "sodium_24h": 144.0,
+      "glucose_24h": 111.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +102,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 36,
+      "subject_id": "12161387",
+      "hadm_id": "20535307",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "F",
+      "anchor_age": 52,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "4/7/2171 20:03:00",
+      "dischtime": "19/7/2171 16:00:00",
+      "admission_type": "URGENT",
+      "race": "WHITE",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Major depressive disorder, recurrent severe without psychotic features",
+      "comorbidity_list": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter | Alcohol abuse, uncomplicated | Calcaneal spur, right foot | Constipation, unspecified | Essential (primary) hypertension | Exposure to other specified factors, subsequent encounter | Family history of other mental and behavioral disorders | Gastro-esophageal reflux disease without esophagitis | Generalized anxiety disorder | Hyperglycemia, unspecified | Infectious gastroenteritis and colitis, unspecified | Juvenile osteochondrosis of tarsus, right ankle | Liver transplant status | Long term (current) use of anticoagulants | Nicotine dependence, cigarettes, uncomplicated | Pain in left foot | Pain in right foot | Personal history of pulmonary embolism | Personal history of self-harm | Unspecified protein-calorie malnutrition | Unspecified superficial injury of scalp, subsequent encounter",
+      "specialty_agents": "精神 | 内分泌/代谢 | 消化 | 心血管",
+      "drug_list": "acetaminophen | apixaban | azathioprine | bisacodyl | carvedilol | ciprofloxacin hcl | dextrose 50% | gabapentin | glucagon | glucose gel | hydromorphone (dilaudid) | hydroxyzine | influenza vaccine quadrivalent | insulin | magnesium oxide | metronidazole | mirtazapine | multivitamins w/minerals | pancrelipase 5000 | pantoprazole | pantoprazole (granules for dr suspension) | promethazine | ramelteon | sarna lotion | senna | sevelamer carbonate | simethicone | sodium bicarbonate | sulfameth/trimethoprim ss | tacrolimus | valganciclovir | venlafaxine xr",
+      "creatinine_24h": 1.2,
+      "bun_24h": 41.0,
+      "potassium_24h": 4.5,
+      "sodium_24h": 144.0,
+      "glucose_24h": 111.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +138,34 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Major depressive disorder, recurrent severe without psychotic features",
+        "Calcaneal spur, right foot",
+        "Exposure to other specified factors, subsequent encounter",
+        "Generalized anxiety disorder",
+        "Juvenile osteochondrosis of tarsus, right ankle",
+        "Nicotine dependence, cigarettes, uncomplicated",
+        "Personal history of pulmonary embolism",
+        "Unspecified superficial injury of scalp, subsequent encounter"
+      ],
+      "消化": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Constipation, unspecified",
+        "Family history of other mental and behavioral disorders",
+        "Hyperglycemia, unspecified",
+        "Liver transplant status",
+        "Pain in left foot",
+        "Personal history of self-harm"
+      ],
+      "心血管": [
+        "Alcohol abuse, uncomplicated",
+        "Essential (primary) hypertension",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Infectious gastroenteritis and colitis, unspecified",
+        "Long term (current) use of anticoagulants",
+        "Pain in right foot",
+        "Unspecified protein-calorie malnutrition"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -114,9 +212,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Major depressive disorder, recurrent severe without psychotic features, Calcaneal spur, right foot, Exposure to other specified factors, subsequent encounter 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "消化",
@@ -124,32 +222,32 @@
         {
           "rank": 1,
           "drug_name": "pantoprazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metronidazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "lactulose",
+          "confidence": 0.72,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "omeprazole",
-          "confidence": 0.89,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "metronidazole",
+          "confidence": 0.67,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "ciprofloxacin iv",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "omeprazole",
+          "confidence": 0.62,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.57,
+          "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -159,43 +257,64 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "polyethylene glycol",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Constipation, unspecified, Family history of other mental and behavioral disorders 生成候选药物，当前首选药物包括 pantoprazole, lactulose, metronidazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "heparin",
+          "confidence": 0.77,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 2,
           "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.72,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.67,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lisinopril",
+          "confidence": 0.62,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "hydralazine",
+          "confidence": 0.57,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -205,10 +324,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Alcohol abuse, uncomplicated, Essential (primary) hypertension, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
     }
   ],
   "mdt_discussion": {
@@ -226,37 +366,37 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 8 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
+          "lactulose",
           "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -287,7 +427,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -320,7 +467,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -350,7 +504,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -383,7 +544,14 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "lorazepam",
+          "polyethylene glycol",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -416,7 +584,14 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "lorazepam",
+          "polyethylene glycol",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -446,7 +621,14 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "lorazepam",
+          "polyethylene glycol",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": []
       },
@@ -478,7 +660,14 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "lorazepam",
+          "polyethylene glycol",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -512,7 +701,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -587,7 +783,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -659,7 +862,14 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "lorazepam",
+            "polyethylene glycol",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -720,9 +930,34 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "消化": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Major depressive disorder, recurrent severe without psychotic features",
+            "Calcaneal spur, right foot",
+            "Exposure to other specified factors, subsequent encounter",
+            "Generalized anxiety disorder",
+            "Juvenile osteochondrosis of tarsus, right ankle",
+            "Nicotine dependence, cigarettes, uncomplicated",
+            "Personal history of pulmonary embolism",
+            "Unspecified superficial injury of scalp, subsequent encounter"
+          ],
+          "消化": [
+            "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+            "Constipation, unspecified",
+            "Family history of other mental and behavioral disorders",
+            "Hyperglycemia, unspecified",
+            "Liver transplant status",
+            "Pain in left foot",
+            "Personal history of self-harm"
+          ],
+          "心血管": [
+            "Alcohol abuse, uncomplicated",
+            "Essential (primary) hypertension",
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Infectious gastroenteritis and colitis, unspecified",
+            "Long term (current) use of anticoagulants",
+            "Pain in right foot",
+            "Unspecified protein-calorie malnutrition"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -773,9 +1008,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Major depressive disorder, recurrent severe without psychotic features, Calcaneal spur, right foot, Exposure to other specified factors, subsequent encounter 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -788,32 +1023,32 @@
           {
             "rank": 1,
             "drug_name": "pantoprazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metronidazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "lactulose",
+            "confidence": 0.72,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "omeprazole",
-            "confidence": 0.89,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "metronidazole",
+            "confidence": 0.67,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "ciprofloxacin iv",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "omeprazole",
+            "confidence": 0.62,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.57,
+            "reason": "与诊断 Constipation, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -823,10 +1058,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "polyethylene glycol",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Constipation, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Constipation, unspecified, Family history of other mental and behavioral disorders 生成候选药物，当前首选药物包括 pantoprazole, lactulose, metronidazole。"
       }
     },
     {
@@ -838,33 +1094,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "heparin",
+            "confidence": 0.77,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 2,
             "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.72,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.67,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lisinopril",
+            "confidence": 0.62,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "hydralazine",
+            "confidence": 0.57,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -874,10 +1130,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Alcohol abuse, uncomplicated, Essential (primary) hypertension, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
       }
     },
     {
@@ -897,7 +1174,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 8 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -908,16 +1185,16 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
+          "lactulose",
           "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -927,17 +1204,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
           "heparin",
+          "metoprolol tartrate",
           "aspirin",
-          "warfarin"
+          "lisinopril",
+          "hydralazine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -973,7 +1250,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1006,7 +1290,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1036,7 +1327,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },
@@ -1074,7 +1372,14 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "senna",
+              "lorazepam",
+              "polyethylene glycol",
+              "docusate sodium",
+              "oxycodone (immediate release)"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "sodium bicarbonate"
@@ -1108,7 +1413,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1183,7 +1495,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1255,7 +1574,14 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "lorazepam",
+                "polyethylene glycol",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },

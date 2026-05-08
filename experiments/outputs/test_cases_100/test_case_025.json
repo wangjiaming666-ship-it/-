@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "12402952",
       "hadm_id": "23428687",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 74.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
     "active_specialties": [
       "呼吸",
       "内分泌/代谢",
@@ -15,21 +15,88 @@
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "呼吸": [
+        "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Atherosclerosis of coronary artery bypass graft(s) without angina pectoris",
+        "Coronary atherosclerosis due to calcified coronary lesion",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Personal history of nicotine dependence",
+        "Unspecified asthma, uncomplicated"
+      ],
+      "内分泌/代谢": [
+        "Acute kidney failure, unspecified",
+        "Atherosclerosis of other arteries",
+        "Encounter for examination for normal comparison and control in clinical research program",
+        "Major depressive disorder, single episode, unspecified",
+        "Other disorders of phosphorus metabolism",
+        "Postprocedural hematoma of skin and subcutaneous tissue following other procedure"
+      ],
+      "神经": [
+        "Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+        "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "Hypercalcemia",
+        "Non-ST elevation (NSTEMI) myocardial infarction",
+        "Other herpesviral infection",
+        "Restless legs syndrome"
+      ],
+      "肾内/泌尿": [
+        "Anemia, unspecified",
+        "Body mass index [BMI] 34.0-34.9, adult",
+        "Hyperlipidemia, unspecified",
+        "Nonrheumatic mitral (valve) insufficiency",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+        "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+      ],
+      "心血管": [
+        "Aneurysm of heart",
+        "Chronic kidney disease, unspecified",
+        "Ischemic cardiomyopathy",
+        "Obesity, unspecified",
+        "Other place in hospital as the place of occurrence of the external cause",
+        "Type 2 diabetes mellitus with hypoglycemia without coma"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+      "Anemia, unspecified",
+      "Aneurysm of heart",
+      "Atherosclerosis of coronary artery bypass graft(s) without angina pectoris",
+      "Atherosclerosis of other arteries",
+      "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "Body mass index [BMI] 34.0-34.9, adult",
+      "Chronic kidney disease, unspecified",
+      "Coronary atherosclerosis due to calcified coronary lesion",
+      "Encounter for examination for normal comparison and control in clinical research program",
+      "Hypercalcemia",
+      "Hyperlipidemia, unspecified",
+      "Ischemic cardiomyopathy",
+      "Long term (current) use of antithrombotics/antiplatelets",
+      "Major depressive disorder, single episode, unspecified",
+      "Non-ST elevation (NSTEMI) myocardial infarction",
+      "Nonrheumatic mitral (valve) insufficiency",
+      "Obesity, unspecified",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Other disorders of phosphorus metabolism",
+      "Other herpesviral infection",
+      "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "Other place in hospital as the place of occurrence of the external cause",
+      "Personal history of nicotine dependence",
+      "Postprocedural hematoma of skin and subcutaneous tissue following other procedure",
+      "Restless legs syndrome",
+      "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "Type 2 diabetes mellitus with hypoglycemia without coma",
+      "Unspecified asthma, uncomplicated"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.4,
+      "bun_24h": 38.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 139.0,
+      "glucose_24h": 166.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -59,7 +126,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 25,
+      "subject_id": "12402952",
+      "hadm_id": "23428687",
+      "specialty_cnt": 5,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 心血管",
+      "gender": "F",
+      "anchor_age": 74,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "17/4/2162 13:22:00",
+      "dischtime": "4/5/2162 19:10:00",
+      "admission_type": "URGENT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "comorbidity_list": "Acute kidney failure, unspecified | Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure | Anemia, unspecified | Aneurysm of heart | Atherosclerosis of coronary artery bypass graft(s) without angina pectoris | Atherosclerosis of other arteries | Atherosclerotic heart disease of native coronary artery without angina pectoris | Body mass index [BMI] 34.0-34.9, adult | Chronic kidney disease, unspecified | Coronary atherosclerosis due to calcified coronary lesion | Encounter for examination for normal comparison and control in clinical research program | Hypercalcemia | Hyperlipidemia, unspecified | Ischemic cardiomyopathy | Long term (current) use of antithrombotics/antiplatelets | Major depressive disorder, single episode, unspecified | Non-ST elevation (NSTEMI) myocardial infarction | Nonrheumatic mitral (valve) insufficiency | Obesity, unspecified | Obstructive sleep apnea (adult) (pediatric) | Other disorders of phosphorus metabolism | Other herpesviral infection | Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure | Other place in hospital as the place of occurrence of the external cause | Personal history of nicotine dependence | Postprocedural hematoma of skin and subcutaneous tissue following other procedure | Restless legs syndrome | Type 2 diabetes mellitus with diabetic chronic kidney disease | Type 2 diabetes mellitus with hypoglycemia without coma | Unspecified asthma, uncomplicated",
+      "specialty_agents": "呼吸 | 精神 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 心血管",
+      "drug_list": "0.9% sodium chloride | 5% dextrose | acetaminophen | acyclovir | albuterol inhaler | ascorbic acid | aspirin | atropine sulfate | bag | bisacodyl | calcium carbonate | carvedilol | clopidogrel | dextrose 50% | docusate sodium | ferric gluconate | furosemide | glucagon | glucose gel | heparin | heparin sodium | insulin | lisinopril | magnesium oxide | magnesium sulfate | metoprolol succinate xl | metoprolol tartrate | montelukast | multivitamins | ondansetron | polyethylene glycol | potassium chloride | ropinirole | rosuvastatin calcium | senna | sertraline | sodium chloride 0.9% | sodium chloride 0.9%  flush | torsemide",
+      "creatinine_24h": 1.4,
+      "bun_24h": 38.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 139.0,
+      "glucose_24h": 166.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -71,11 +164,47 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "呼吸": [
+        "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Atherosclerosis of coronary artery bypass graft(s) without angina pectoris",
+        "Coronary atherosclerosis due to calcified coronary lesion",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Personal history of nicotine dependence",
+        "Unspecified asthma, uncomplicated"
+      ],
+      "内分泌/代谢": [
+        "Acute kidney failure, unspecified",
+        "Atherosclerosis of other arteries",
+        "Encounter for examination for normal comparison and control in clinical research program",
+        "Major depressive disorder, single episode, unspecified",
+        "Other disorders of phosphorus metabolism",
+        "Postprocedural hematoma of skin and subcutaneous tissue following other procedure"
+      ],
+      "神经": [
+        "Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+        "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "Hypercalcemia",
+        "Non-ST elevation (NSTEMI) myocardial infarction",
+        "Other herpesviral infection",
+        "Restless legs syndrome"
+      ],
+      "肾内/泌尿": [
+        "Anemia, unspecified",
+        "Body mass index [BMI] 34.0-34.9, adult",
+        "Hyperlipidemia, unspecified",
+        "Nonrheumatic mitral (valve) insufficiency",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+        "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+      ],
+      "心血管": [
+        "Aneurysm of heart",
+        "Chronic kidney disease, unspecified",
+        "Ischemic cardiomyopathy",
+        "Obesity, unspecified",
+        "Other place in hospital as the place of occurrence of the external cause",
+        "Type 2 diabetes mellitus with hypoglycemia without coma"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -85,33 +214,33 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "albuterol 0.083% neb soln",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "albuterol inhaler",
+          "confidence": 0.77,
+          "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "ipratropium bromide neb",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "fluticasone propionate 110mcg",
+          "confidence": 0.72,
+          "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "prednisone",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "albuterol 0.083% neb soln",
+          "confidence": 0.67,
+          "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "azithromycin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "prednisone",
+          "confidence": 0.62,
+          "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "albuterol inhaler",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ipratropium-albuterol neb",
+          "confidence": 0.57,
+          "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -121,10 +250,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease, Atherosclerosis of coronary artery bypass graft(s) without angina pectoris, Coronary atherosclerosis due to calcified coronary lesion 生成候选药物，当前首选药物包括 albuterol inhaler, fluticasone propionate 110mcg, albuterol 0.083% neb soln。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -132,32 +282,32 @@
         {
           "rank": 1,
           "drug_name": "insulin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.72,
+          "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
         },
         {
           "rank": 3,
           "drug_name": "calcium carbonate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.67,
+          "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
         },
         {
           "rank": 4,
           "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.62,
+          "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "insulin human regular",
+          "confidence": 0.57,
+          "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -167,10 +317,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride replacement (critical care and oncology)",
+          "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Atherosclerosis of other arteries, Encounter for examination for normal comparison and control in clinical research program 生成候选药物，当前首选药物包括 insulin, sodium bicarbonate, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
@@ -214,9 +385,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure, Atherosclerotic heart disease of native coronary artery without angina pectoris, Hypercalcemia 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
     },
     {
       "specialty_name": "肾内/泌尿",
@@ -258,44 +429,52 @@
         "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
-      "risk_alerts": [],
+      "risk_alerts": [
+        {
+          "lab_name": "bun_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "nephrology_bun_risk",
+          "message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+          "action_taken": "增加风险提示，降低高代谢负担方案优先级。"
+        }
+      ],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Anemia, unspecified, Body mass index [BMI] 34.0-34.9, adult, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "aspirin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "atorvastatin",
+          "confidence": 0.93,
+          "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "warfarin",
+          "confidence": 0.77,
+          "reason": "与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "heparin",
+          "confidence": 0.73,
+          "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "metoprolol succinate xl",
+          "confidence": 0.67,
+          "reason": "与诊断 Aneurysm of heart 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -305,10 +484,43 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride replacement (critical care and oncology)",
+          "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "calcium gluconate",
+          "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "bivalirudin",
+          "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Aneurysm of heart, Chronic kidney disease, unspecified, Ischemic cardiomyopathy 生成候选药物，当前首选药物包括 aspirin, atorvastatin, warfarin。"
     }
   ],
   "mdt_discussion": {
@@ -316,32 +528,32 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
+          "albuterol inhaler",
+          "fluticasone propionate 110mcg",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
           "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "ipratropium-albuterol neb"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate"
+          "insulin human regular"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "神经",
@@ -356,7 +568,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "肾内/泌尿",
@@ -369,24 +581,24 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "肾内/泌尿建议未发现明显跨专科冲突。"
+          "肾内/泌尿触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
           "aspirin",
-          "warfarin"
+          "atorvastatin",
+          "warfarin",
+          "heparin",
+          "metoprolol succinate xl"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -400,27 +612,33 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "fluticasone propionate 110mcg",
+          "albuterol 0.083% neb soln",
+          "prednisone",
+          "ipratropium-albuterol neb",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "albuterol inhaler",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
             "prednisone",
-            "albuterol inhaler"
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "azithromycin"
+            "fluticasone propionate 110mcg"
           ]
         },
         "supporting_specialties": [
@@ -433,27 +651,33 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "fluticasone propionate 110mcg",
+          "albuterol 0.083% neb soln",
+          "prednisone",
+          "ipratropium-albuterol neb",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "albuterol inhaler",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
             "prednisone",
-            "albuterol inhaler"
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "azithromycin"
+            "fluticasone propionate 110mcg"
           ]
         },
         "supporting_specialties": [
@@ -468,26 +692,31 @@
         "drugs": [
           "prednisone",
           "calcium carbonate",
-          "furosemide",
-          "albuterol 0.083% neb soln"
+          "albuterol inhaler",
+          "fluticasone propionate 110mcg"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "prednisone",
             "calcium carbonate",
-            "albuterol 0.083% neb soln"
+            "albuterol inhaler"
           ],
-          "risk_modifying_therapy": [
-            "furosemide"
+          "risk_modifying_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
           ],
-          "supportive_or_symptomatic_therapy": [],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "fluticasone propionate 110mcg"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
           "呼吸",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -499,27 +728,33 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "fluticasone propionate 110mcg",
+        "albuterol 0.083% neb soln",
+        "prednisone",
+        "ipratropium-albuterol neb",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "albuterol inhaler",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
           "prednisone",
-          "albuterol inhaler"
+          "ipratropium-albuterol neb"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "docusate sodium",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "azithromycin"
+          "fluticasone propionate 110mcg"
         ]
       },
       "supporting_specialties": [
@@ -532,27 +767,33 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "fluticasone propionate 110mcg",
+        "albuterol 0.083% neb soln",
+        "prednisone",
+        "ipratropium-albuterol neb",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "albuterol inhaler",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
           "prednisone",
-          "albuterol inhaler"
+          "ipratropium-albuterol neb"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "docusate sodium",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "azithromycin"
+          "fluticasone propionate 110mcg"
         ]
       },
       "supporting_specialties": [
@@ -567,26 +808,31 @@
       "drugs": [
         "prednisone",
         "calcium carbonate",
-        "furosemide",
-        "albuterol 0.083% neb soln"
+        "albuterol inhaler",
+        "fluticasone propionate 110mcg"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "prednisone",
           "calcium carbonate",
-          "albuterol 0.083% neb soln"
+          "albuterol inhaler"
         ],
-        "risk_modifying_therapy": [
-          "furosemide"
+        "risk_modifying_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "docusate sodium",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron"
         ],
-        "supportive_or_symptomatic_therapy": [],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "fluticasone propionate 110mcg"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
         "呼吸",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -597,27 +843,33 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "fluticasone propionate 110mcg",
+        "albuterol 0.083% neb soln",
+        "prednisone",
+        "ipratropium-albuterol neb",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "albuterol inhaler",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
           "prednisone",
-          "albuterol inhaler"
+          "ipratropium-albuterol neb"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "docusate sodium",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "azithromycin"
+          "fluticasone propionate 110mcg"
         ]
       },
       "supporting_specialties": [
@@ -631,27 +883,33 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "fluticasone propionate 110mcg",
+          "albuterol 0.083% neb soln",
+          "prednisone",
+          "ipratropium-albuterol neb",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "albuterol inhaler",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
             "prednisone",
-            "albuterol inhaler"
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "azithromycin"
+            "fluticasone propionate 110mcg"
           ]
         },
         "supporting_specialties": [
@@ -659,7 +917,7 @@
           "呼吸"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
@@ -673,7 +931,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
         "priority_order": 1
@@ -682,27 +942,33 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "fluticasone propionate 110mcg",
+          "albuterol 0.083% neb soln",
+          "prednisone",
+          "ipratropium-albuterol neb",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "albuterol inhaler",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
             "prednisone",
-            "albuterol inhaler"
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "azithromycin"
+            "fluticasone propionate 110mcg"
           ]
         },
         "supporting_specialties": [
@@ -710,7 +976,7 @@
           "呼吸"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
@@ -724,7 +990,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
         "priority_order": 2
@@ -735,30 +1003,35 @@
         "drugs": [
           "prednisone",
           "calcium carbonate",
-          "furosemide",
-          "albuterol 0.083% neb soln"
+          "albuterol inhaler",
+          "fluticasone propionate 110mcg"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "prednisone",
             "calcium carbonate",
-            "albuterol 0.083% neb soln"
+            "albuterol inhaler"
           ],
-          "risk_modifying_therapy": [
-            "furosemide"
+          "risk_modifying_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "docusate sodium",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron"
           ],
-          "supportive_or_symptomatic_therapy": [],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "fluticasone propionate 110mcg"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
           "呼吸",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
@@ -770,23 +1043,30 @@
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
         "priority_order": 3
       }
     ],
-    "triggered_risks": [],
+    "triggered_risks": [
+      {
+        "specialty_name": "肾内/泌尿",
+        "rule_id": "nephrology_bun_risk",
+        "lab_name": "bun_24h",
+        "lab_value": 38.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
     "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
     "llm_safety_review": {}
   },
@@ -805,11 +1085,47 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "内分泌/代谢": [],
-          "神经": [],
-          "肾内/泌尿": [],
-          "心血管": []
+          "呼吸": [
+            "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+            "Atherosclerosis of coronary artery bypass graft(s) without angina pectoris",
+            "Coronary atherosclerosis due to calcified coronary lesion",
+            "Long term (current) use of antithrombotics/antiplatelets",
+            "Obstructive sleep apnea (adult) (pediatric)",
+            "Personal history of nicotine dependence",
+            "Unspecified asthma, uncomplicated"
+          ],
+          "内分泌/代谢": [
+            "Acute kidney failure, unspecified",
+            "Atherosclerosis of other arteries",
+            "Encounter for examination for normal comparison and control in clinical research program",
+            "Major depressive disorder, single episode, unspecified",
+            "Other disorders of phosphorus metabolism",
+            "Postprocedural hematoma of skin and subcutaneous tissue following other procedure"
+          ],
+          "神经": [
+            "Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+            "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+            "Hypercalcemia",
+            "Non-ST elevation (NSTEMI) myocardial infarction",
+            "Other herpesviral infection",
+            "Restless legs syndrome"
+          ],
+          "肾内/泌尿": [
+            "Anemia, unspecified",
+            "Body mass index [BMI] 34.0-34.9, adult",
+            "Hyperlipidemia, unspecified",
+            "Nonrheumatic mitral (valve) insufficiency",
+            "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+            "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+          ],
+          "心血管": [
+            "Aneurysm of heart",
+            "Chronic kidney disease, unspecified",
+            "Ischemic cardiomyopathy",
+            "Obesity, unspecified",
+            "Other place in hospital as the place of occurrence of the external cause",
+            "Type 2 diabetes mellitus with hypoglycemia without coma"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -823,33 +1139,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "albuterol 0.083% neb soln",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "albuterol inhaler",
+            "confidence": 0.77,
+            "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "ipratropium bromide neb",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "fluticasone propionate 110mcg",
+            "confidence": 0.72,
+            "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "prednisone",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "albuterol 0.083% neb soln",
+            "confidence": 0.67,
+            "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "azithromycin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "prednisone",
+            "confidence": 0.62,
+            "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "albuterol inhaler",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ipratropium-albuterol neb",
+            "confidence": 0.57,
+            "reason": "与诊断 Unspecified asthma, uncomplicated 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -859,10 +1175,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "在 Unspecified asthma, uncomplicated 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease, Atherosclerosis of coronary artery bypass graft(s) without angina pectoris, Coronary atherosclerosis due to calcified coronary lesion 生成候选药物，当前首选药物包括 albuterol inhaler, fluticasone propionate 110mcg, albuterol 0.083% neb soln。"
       }
     },
     {
@@ -875,32 +1212,32 @@
           {
             "rank": 1,
             "drug_name": "insulin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.72,
+            "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
           },
           {
             "rank": 3,
             "drug_name": "calcium carbonate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.67,
+            "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
           },
           {
             "rank": 4,
             "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.62,
+            "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "insulin human regular",
+            "confidence": 0.57,
+            "reason": "与诊断 Other disorders of phosphorus metabolism 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -910,10 +1247,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride replacement (critical care and oncology)",
+            "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Other disorders of phosphorus metabolism 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Atherosclerosis of other arteries, Encounter for examination for normal comparison and control in clinical research program 生成候选药物，当前首选药物包括 insulin, sodium bicarbonate, calcium carbonate。"
       }
     },
     {
@@ -962,9 +1320,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure, Atherosclerotic heart disease of native coronary artery without angina pectoris, Hypercalcemia 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
       }
     },
     {
@@ -1011,11 +1369,19 @@
           "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
-        "risk_alerts": [],
+        "risk_alerts": [
+          {
+            "lab_name": "bun_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "nephrology_bun_risk",
+            "message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+            "action_taken": "增加风险提示，降低高代谢负担方案优先级。"
+          }
+        ],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Anemia, unspecified, Body mass index [BMI] 34.0-34.9, adult, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
       }
     },
     {
@@ -1027,33 +1393,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "aspirin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "atorvastatin",
+            "confidence": 0.93,
+            "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "warfarin",
+            "confidence": 0.77,
+            "reason": "与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "heparin",
+            "confidence": 0.73,
+            "reason": "与诊断 Aneurysm of heart 在知识库中存在映射；与诊断 Ischemic cardiomyopathy 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "metoprolol succinate xl",
+            "confidence": 0.67,
+            "reason": "与诊断 Aneurysm of heart 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -1063,10 +1429,43 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride replacement (critical care and oncology)",
+            "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "calcium gluconate",
+            "reason": "在 Aneurysm of heart 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "bivalirudin",
+            "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Ischemic cardiomyopathy 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Aneurysm of heart, Chronic kidney disease, unspecified, Ischemic cardiomyopathy 生成候选药物，当前首选药物包括 aspirin, atorvastatin, warfarin。"
       }
     },
     {
@@ -1076,17 +1475,17 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
+          "albuterol inhaler",
+          "fluticasone propionate 110mcg",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
           "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "ipratropium-albuterol neb"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1097,16 +1496,16 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate"
+          "insulin human regular"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1126,7 +1525,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1144,9 +1543,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "肾内/泌尿建议未发现明显跨专科冲突。"
+          "肾内/泌尿触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1156,17 +1555,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
           "aspirin",
-          "warfarin"
+          "atorvastatin",
+          "warfarin",
+          "heparin",
+          "metoprolol succinate xl"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1185,27 +1584,33 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "fluticasone propionate 110mcg",
+              "albuterol 0.083% neb soln",
+              "prednisone",
+              "ipratropium-albuterol neb",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "albuterol inhaler",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
                 "prednisone",
-                "albuterol inhaler"
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "azithromycin"
+                "fluticasone propionate 110mcg"
               ]
             },
             "supporting_specialties": [
@@ -1218,27 +1623,33 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "fluticasone propionate 110mcg",
+              "albuterol 0.083% neb soln",
+              "prednisone",
+              "ipratropium-albuterol neb",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "albuterol inhaler",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
                 "prednisone",
-                "albuterol inhaler"
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "azithromycin"
+                "fluticasone propionate 110mcg"
               ]
             },
             "supporting_specialties": [
@@ -1253,26 +1664,31 @@
             "drugs": [
               "prednisone",
               "calcium carbonate",
-              "furosemide",
-              "albuterol 0.083% neb soln"
+              "albuterol inhaler",
+              "fluticasone propionate 110mcg"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "prednisone",
                 "calcium carbonate",
-                "albuterol 0.083% neb soln"
+                "albuterol inhaler"
               ],
-              "risk_modifying_therapy": [
-                "furosemide"
+              "risk_modifying_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
               ],
-              "supportive_or_symptomatic_therapy": [],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "fluticasone propionate 110mcg"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
               "呼吸",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -1289,27 +1705,33 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "azithromycin",
             "albuterol inhaler",
+            "fluticasone propionate 110mcg",
+            "albuterol 0.083% neb soln",
+            "prednisone",
+            "ipratropium-albuterol neb",
             "insulin"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
+              "albuterol inhaler",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
               "prednisone",
-              "albuterol inhaler"
+              "ipratropium-albuterol neb"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "docusate sodium",
+              "oxycodone (immediate release)",
+              "senna",
+              "ondansetron"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
-              "azithromycin"
+              "fluticasone propionate 110mcg"
             ]
           },
           "supporting_specialties": [
@@ -1323,27 +1745,33 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "fluticasone propionate 110mcg",
+              "albuterol 0.083% neb soln",
+              "prednisone",
+              "ipratropium-albuterol neb",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "albuterol inhaler",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
                 "prednisone",
-                "albuterol inhaler"
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "azithromycin"
+                "fluticasone propionate 110mcg"
               ]
             },
             "supporting_specialties": [
@@ -1351,7 +1779,7 @@
               "呼吸"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
@@ -1365,7 +1793,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
             "priority_order": 1
@@ -1374,27 +1804,33 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "fluticasone propionate 110mcg",
+              "albuterol 0.083% neb soln",
+              "prednisone",
+              "ipratropium-albuterol neb",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "albuterol inhaler",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
                 "prednisone",
-                "albuterol inhaler"
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "azithromycin"
+                "fluticasone propionate 110mcg"
               ]
             },
             "supporting_specialties": [
@@ -1402,7 +1838,7 @@
               "呼吸"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
@@ -1416,7 +1852,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
             "priority_order": 2
@@ -1427,30 +1865,35 @@
             "drugs": [
               "prednisone",
               "calcium carbonate",
-              "furosemide",
-              "albuterol 0.083% neb soln"
+              "albuterol inhaler",
+              "fluticasone propionate 110mcg"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "prednisone",
                 "calcium carbonate",
-                "albuterol 0.083% neb soln"
+                "albuterol inhaler"
               ],
-              "risk_modifying_therapy": [
-                "furosemide"
+              "risk_modifying_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "docusate sodium",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron"
               ],
-              "supportive_or_symptomatic_therapy": [],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "fluticasone propionate 110mcg"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
               "呼吸",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
@@ -1462,23 +1905,30 @@
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
             "priority_order": 3
           }
         ],
-        "triggered_risks": [],
+        "triggered_risks": [
+          {
+            "specialty_name": "肾内/泌尿",
+            "rule_id": "nephrology_bun_risk",
+            "lab_name": "bun_24h",
+            "lab_value": 38.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
         "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
         "llm_safety_review": {}
       }

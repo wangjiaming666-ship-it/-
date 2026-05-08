@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "12875284",
       "hadm_id": "20948912",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 60.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Multiple myeloma not having achieved remission",
     "active_specialties": [
       "内分泌/代谢",
       "神经",
@@ -15,21 +15,78 @@
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Multiple myeloma not having achieved remission",
+        "Body mass index [BMI] 32.0-32.9, adult",
+        "Fever presenting with conditions classified elsewhere",
+        "Major depressive disorder, single episode, unspecified",
+        "Patient room in hospital as the place of occurrence of the external cause",
+        "Toxic gastroenteritis and colitis"
+      ],
+      "神经": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Candidal stomatitis",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Metabolic syndrome",
+        "Polyneuropathy, unspecified"
+      ],
+      "肾内/泌尿": [
+        "Anemia due to antineoplastic chemotherapy",
+        "Chronic kidney disease, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Nausea",
+        "Rash and other nonspecific skin eruption"
+      ],
+      "消化": [
+        "Anorexia",
+        "Dehydration",
+        "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Obesity, unspecified",
+        "Sialoadenitis, unspecified"
+      ],
+      "心血管": [
+        "Antineoplastic chemotherapy induced pancytopenia",
+        "Encounter for examination for normal comparison and control in clinical research program",
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Oral mucositis (ulcerative) due to antineoplastic therapy",
+        "Tachycardia, unspecified"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+      "Anemia due to antineoplastic chemotherapy",
+      "Anorexia",
+      "Antineoplastic chemotherapy induced pancytopenia",
+      "Body mass index [BMI] 32.0-32.9, adult",
+      "Candidal stomatitis",
+      "Chronic kidney disease, unspecified",
+      "Dehydration",
+      "Encounter for examination for normal comparison and control in clinical research program",
+      "Fever presenting with conditions classified elsewhere",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+      "Major depressive disorder, single episode, unspecified",
+      "Metabolic syndrome",
+      "Nausea",
+      "Obesity, unspecified",
+      "Oral mucositis (ulcerative) due to antineoplastic therapy",
+      "Patient room in hospital as the place of occurrence of the external cause",
+      "Polyneuropathy, unspecified",
+      "Rash and other nonspecific skin eruption",
+      "Sialoadenitis, unspecified",
+      "Tachycardia, unspecified",
+      "Toxic gastroenteritis and colitis"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.1,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 141.0,
+      "glucose_24h": 106.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.2
     },
     "past_history": {},
     "key_vitals": {
@@ -59,7 +116,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 24,
+      "subject_id": "12875284",
+      "hadm_id": "20948912",
+      "specialty_cnt": 5,
+      "specialty_list": "内分泌/代谢 | 神经 | 肾内/泌尿 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 60,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "13/2/2134 13:14:00",
+      "dischtime": "6/3/2134 12:19:00",
+      "admission_type": "ELECTIVE",
+      "race": "WHITE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Multiple myeloma not having achieved remission",
+      "comorbidity_list": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter | Anemia due to antineoplastic chemotherapy | Anorexia | Antineoplastic chemotherapy induced pancytopenia | Body mass index [BMI] 32.0-32.9, adult | Candidal stomatitis | Chronic kidney disease, unspecified | Dehydration | Encounter for examination for normal comparison and control in clinical research program | Fever presenting with conditions classified elsewhere | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease | Hyperuricemia without signs of inflammatory arthritis and tophaceous disease | Major depressive disorder, single episode, unspecified | Metabolic syndrome | Nausea | Obesity, unspecified | Oral mucositis (ulcerative) due to antineoplastic therapy | Patient room in hospital as the place of occurrence of the external cause | Polyneuropathy, unspecified | Rash and other nonspecific skin eruption | Sialoadenitis, unspecified | Tachycardia, unspecified | Toxic gastroenteritis and colitis",
+      "specialty_agents": "精神 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 消化 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.9% sodium chloride | 0.9% sodium chloride (mini bag plus) | 5% dextrose | acetaminophen | acetaminophen iv | acyclovir | allopurinol | aluminum hydroxide suspension | amlodipine | bag | bupropion | caphosol | carbamide peroxide 6.5% | cefepime | ciprofloxacin hcl | ciprofloxacin iv | clotrimazole | cyanocobalamin | dexamethasone | dexamethasone sod phosphate | diphenhydramine | enoxaparin sodium | epinephrine 1:1000 | filgrastim | fluconazole | fosaprepitant | furosemide | glutamine | heparin flush (10 units/ml) | hydrocortisone na succ. | iso-osmotic dextrose | iso-osmotic sodium chloride | labetalol | loperamide | lorazepam | magnesium sulfate | melphalan | meperidine | nystatin oral suspension | olanzapine | omeprazole | ondansetron | oxycodone (immediate release) | pantoprazole | phosphorus | potassium chloride | sertraline | sodium chloride 0.9% | sodium chloride 0.9%  flush | sodium fluoride 1.1% (dental gel) | soln | sterile water | trazodone | ursodiol | vancomycin | vial",
+      "creatinine_24h": 1.1,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 141.0,
+      "glucose_24h": 106.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.2
+    }
   },
   "routing": {
     "active_specialties": [
@@ -71,11 +154,42 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Multiple myeloma not having achieved remission",
+        "Body mass index [BMI] 32.0-32.9, adult",
+        "Fever presenting with conditions classified elsewhere",
+        "Major depressive disorder, single episode, unspecified",
+        "Patient room in hospital as the place of occurrence of the external cause",
+        "Toxic gastroenteritis and colitis"
+      ],
+      "神经": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Candidal stomatitis",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Metabolic syndrome",
+        "Polyneuropathy, unspecified"
+      ],
+      "肾内/泌尿": [
+        "Anemia due to antineoplastic chemotherapy",
+        "Chronic kidney disease, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Nausea",
+        "Rash and other nonspecific skin eruption"
+      ],
+      "消化": [
+        "Anorexia",
+        "Dehydration",
+        "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Obesity, unspecified",
+        "Sialoadenitis, unspecified"
+      ],
+      "心血管": [
+        "Antineoplastic chemotherapy induced pancytopenia",
+        "Encounter for examination for normal comparison and control in clinical research program",
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Oral mucositis (ulcerative) due to antineoplastic therapy",
+        "Tachycardia, unspecified"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -122,9 +236,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Multiple myeloma not having achieved remission, Body mass index [BMI] 32.0-32.9, adult, Fever presenting with conditions classified elsewhere 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
@@ -132,32 +246,32 @@
         {
           "rank": 1,
           "drug_name": "gabapentin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "diazepam",
+          "confidence": 0.72,
+          "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.67,
+          "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "pregabalin",
+          "confidence": 0.62,
+          "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "diazepam - ciwa protocol",
+          "confidence": 0.57,
+          "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -167,43 +281,64 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "hydromorphone (dilaudid)",
+          "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Candidal stomatitis, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 gabapentin, diazepam, levetiracetam。"
     },
     {
       "specialty_name": "肾内/泌尿",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.85,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.77,
+          "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "furosemide",
-          "confidence": 0.79,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "tamsulosin",
+          "confidence": 0.72,
+          "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "calcium carbonate",
+          "confidence": 0.67,
+          "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "tamsulosin",
-          "confidence": 0.71,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lidocaine jelly 2% (urojet)",
+          "confidence": 0.62,
+          "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "neutra-phos",
-          "confidence": 0.6,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "tramadol",
+          "confidence": 0.57,
+          "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -213,10 +348,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "heparin",
+          "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Anemia due to antineoplastic chemotherapy, Chronic kidney disease, unspecified, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
     },
     {
       "specialty_name": "消化",
@@ -260,9 +416,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Anorexia, Dehydration, Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     },
     {
       "specialty_name": "心血管",
@@ -306,9 +462,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Antineoplastic chemotherapy induced pancytopenia, Encounter for examination for normal comparison and control in clinical research program, Hyperuricemia without signs of inflammatory arthritis and tophaceous disease 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -326,37 +482,37 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
           "diazepam",
-          "baclofen"
+          "levetiracetam",
+          "pregabalin",
+          "diazepam - ciwa protocol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "calcium carbonate",
+          "lidocaine jelly 2% (urojet)",
+          "tramadol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "消化",
@@ -371,28 +527,29 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
           "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
       "本次MDT协商共纳入 5 个专科：内分泌/代谢, 神经, 肾内/泌尿, 消化, 心血管。",
       "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
       "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
     ],
     "candidate_plans": [
@@ -416,11 +573,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "gabapentin",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -450,11 +615,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "gabapentin",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -469,26 +642,34 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -516,11 +697,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron",
+          "hydromorphone (dilaudid)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "gabapentin",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -550,11 +739,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron",
+          "hydromorphone (dilaudid)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "gabapentin",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -569,26 +766,34 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "calcium carbonate",
-        "furosemide",
         "insulin",
-        "levothyroxine sodium"
+        "levothyroxine sodium",
+        "prednisone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "calcium carbonate",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron",
+          "hydromorphone (dilaudid)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "heparin"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -615,11 +820,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "ondansetron",
+          "hydromorphone (dilaudid)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "gabapentin",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -650,11 +863,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "gabapentin",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -718,11 +939,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "gabapentin",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -771,26 +1000,34 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "ondansetron",
+            "hydromorphone (dilaudid)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -803,14 +1040,6 @@
             "drug_name": "calcium carbonate",
             "potential_impacts": [
               "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -857,11 +1086,42 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "神经": [],
-          "肾内/泌尿": [],
-          "消化": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Multiple myeloma not having achieved remission",
+            "Body mass index [BMI] 32.0-32.9, adult",
+            "Fever presenting with conditions classified elsewhere",
+            "Major depressive disorder, single episode, unspecified",
+            "Patient room in hospital as the place of occurrence of the external cause",
+            "Toxic gastroenteritis and colitis"
+          ],
+          "神经": [
+            "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+            "Candidal stomatitis",
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Metabolic syndrome",
+            "Polyneuropathy, unspecified"
+          ],
+          "肾内/泌尿": [
+            "Anemia due to antineoplastic chemotherapy",
+            "Chronic kidney disease, unspecified",
+            "Hyperlipidemia, unspecified",
+            "Nausea",
+            "Rash and other nonspecific skin eruption"
+          ],
+          "消化": [
+            "Anorexia",
+            "Dehydration",
+            "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+            "Obesity, unspecified",
+            "Sialoadenitis, unspecified"
+          ],
+          "心血管": [
+            "Antineoplastic chemotherapy induced pancytopenia",
+            "Encounter for examination for normal comparison and control in clinical research program",
+            "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+            "Oral mucositis (ulcerative) due to antineoplastic therapy",
+            "Tachycardia, unspecified"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -912,9 +1172,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Multiple myeloma not having achieved remission, Body mass index [BMI] 32.0-32.9, adult, Fever presenting with conditions classified elsewhere 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -927,32 +1187,32 @@
           {
             "rank": 1,
             "drug_name": "gabapentin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "diazepam",
+            "confidence": 0.72,
+            "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.67,
+            "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "pregabalin",
+            "confidence": 0.62,
+            "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "diazepam - ciwa protocol",
+            "confidence": 0.57,
+            "reason": "与诊断 Polyneuropathy, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -962,10 +1222,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "hydromorphone (dilaudid)",
+            "reason": "在 Polyneuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Candidal stomatitis, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 gabapentin, diazepam, levetiracetam。"
       }
     },
     {
@@ -977,33 +1258,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.85,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.77,
+            "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "furosemide",
-            "confidence": 0.79,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "tamsulosin",
+            "confidence": 0.72,
+            "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "calcium carbonate",
+            "confidence": 0.67,
+            "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "tamsulosin",
-            "confidence": 0.71,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lidocaine jelly 2% (urojet)",
+            "confidence": 0.62,
+            "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "neutra-phos",
-            "confidence": 0.6,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "tramadol",
+            "confidence": 0.57,
+            "reason": "与诊断 Chronic kidney disease, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -1013,10 +1294,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "heparin",
+            "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Chronic kidney disease, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Anemia due to antineoplastic chemotherapy, Chronic kidney disease, unspecified, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
       }
     },
     {
@@ -1065,9 +1367,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Anorexia, Dehydration, Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -1116,9 +1418,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Antineoplastic chemotherapy induced pancytopenia, Encounter for examination for normal comparison and control in clinical research program, Hyperuricemia without signs of inflammatory arthritis and tophaceous disease 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -1138,7 +1440,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1149,16 +1451,16 @@
         "reviewer_specialty": "神经",
         "accepted_drugs": [
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
           "diazepam",
-          "baclofen"
+          "levetiracetam",
+          "pregabalin",
+          "diazepam - ciwa protocol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1168,17 +1470,17 @@
       "content": {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "calcium carbonate",
+          "lidocaine jelly 2% (urojet)",
+          "tramadol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1198,7 +1500,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1210,15 +1512,16 @@
         "accepted_drugs": [
           "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     },
     {
@@ -1229,7 +1532,7 @@
         "consensus_notes": [
           "本次MDT协商共纳入 5 个专科：内分泌/代谢, 神经, 肾内/泌尿, 消化, 心血管。",
           "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
           "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
         ],
         "plans": [
@@ -1253,11 +1556,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "gabapentin",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1287,11 +1598,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "gabapentin",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1306,26 +1625,34 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -1358,11 +1685,19 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "senna",
+              "ondansetron",
+              "hydromorphone (dilaudid)",
+              "docusate sodium"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "sodium bicarbonate",
-              "gabapentin"
+              "gabapentin",
+              "heparin"
             ]
           },
           "supporting_specialties": [
@@ -1393,11 +1728,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "gabapentin",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1461,11 +1804,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "gabapentin",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1514,26 +1865,34 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "ondansetron",
+                "hydromorphone (dilaudid)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1546,14 +1905,6 @@
                 "drug_name": "calcium carbonate",
                 "potential_impacts": [
                   "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

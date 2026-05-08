@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "16846998",
       "hadm_id": "28929178",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 52.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Stenosis of peripheral vascular stent, initial encounter",
     "active_specialties": [
       "内分泌/代谢",
       "神经",
@@ -14,20 +14,58 @@
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Stenosis of peripheral vascular stent, initial encounter",
+        "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "Encounter for screening for other viral diseases",
+        "Old myocardial infarction",
+        "Unspecified place or not applicable"
+      ],
+      "神经": [
+        "Age-related osteoporosis without current pathological fracture",
+        "Benign prostatic hyperplasia without lower urinary tract symptoms",
+        "Epilepsy, unspecified, not intractable, without status epilepticus",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "肾内/泌尿": [
+        "Asymptomatic human immunodeficiency virus [HIV] infection status",
+        "Chronic kidney disease, stage 3 (moderate)",
+        "Hyperlipidemia, unspecified",
+        "Parkinson's disease"
+      ],
+      "心血管": [
+        "Atherosclerosis of native arteries of extremities with intermittent claudication, right leg",
+        "Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+        "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Personal history of nicotine dependence"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Age-related osteoporosis without current pathological fracture",
+      "Asymptomatic human immunodeficiency virus [HIV] infection status",
+      "Atherosclerosis of native arteries of extremities with intermittent claudication, right leg",
+      "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "Benign prostatic hyperplasia without lower urinary tract symptoms",
+      "Chronic kidney disease, stage 3 (moderate)",
+      "Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+      "Encounter for screening for other viral diseases",
+      "Epilepsy, unspecified, not intractable, without status epilepticus",
+      "Hyperlipidemia, unspecified",
+      "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "Old myocardial infarction",
+      "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "Parkinson's disease",
+      "Personal history of nicotine dependence",
+      "Unspecified place or not applicable"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.2,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.7,
+      "sodium_24h": 135.0,
+      "glucose_24h": 118.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -57,7 +95,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 56,
+      "subject_id": "16846998",
+      "hadm_id": "28929178",
+      "specialty_cnt": 4,
+      "specialty_list": "内分泌/代谢 | 神经 | 肾内/泌尿 | 心血管",
+      "gender": "M",
+      "anchor_age": 52,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "30/4/2185 05:54:00",
+      "dischtime": "3/5/2185 17:18:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Stenosis of peripheral vascular stent, initial encounter",
+      "comorbidity_list": "Age-related osteoporosis without current pathological fracture | Asymptomatic human immunodeficiency virus [HIV] infection status | Atherosclerosis of native arteries of extremities with intermittent claudication, right leg | Atherosclerotic heart disease of native coronary artery without angina pectoris | Benign prostatic hyperplasia without lower urinary tract symptoms | Chronic kidney disease, stage 3 (moderate) | Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety | Encounter for screening for other viral diseases | Epilepsy, unspecified, not intractable, without status epilepticus | Hyperlipidemia, unspecified | Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease | Old myocardial infarction | Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure | Parkinson's disease | Personal history of nicotine dependence | Unspecified place or not applicable",
+      "specialty_agents": "精神 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 心血管",
+      "drug_list": "acetaminophen | aspirin | bag | chlorthalidone | clopidogrel | cobicistat | darunavir | emtricitabine-tenofovir alafen (200mg-25mg) *descovy* | folic acid | heparin | hydralazine | hydromorphone (dilaudid) | iso-osmotic dextrose | lactated ringers | levetiracetam | magnesium sulfate | neutra-phos | oxycodone (immediate release) | ramelteon | rosuvastatin calcium | vancomycin | verapamil sr",
+      "creatinine_24h": 1.2,
+      "bun_24h": 13.0,
+      "potassium_24h": 3.7,
+      "sodium_24h": 135.0,
+      "glucose_24h": 118.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -68,10 +132,31 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Stenosis of peripheral vascular stent, initial encounter",
+        "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+        "Encounter for screening for other viral diseases",
+        "Old myocardial infarction",
+        "Unspecified place or not applicable"
+      ],
+      "神经": [
+        "Age-related osteoporosis without current pathological fracture",
+        "Benign prostatic hyperplasia without lower urinary tract symptoms",
+        "Epilepsy, unspecified, not intractable, without status epilepticus",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "肾内/泌尿": [
+        "Asymptomatic human immunodeficiency virus [HIV] infection status",
+        "Chronic kidney disease, stage 3 (moderate)",
+        "Hyperlipidemia, unspecified",
+        "Parkinson's disease"
+      ],
+      "心血管": [
+        "Atherosclerosis of native arteries of extremities with intermittent claudication, right leg",
+        "Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+        "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+        "Personal history of nicotine dependence"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -118,42 +203,42 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Stenosis of peripheral vascular stent, initial encounter, Atherosclerotic heart disease of native coronary artery without angina pectoris, Encounter for screening for other viral diseases 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "gabapentin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lamotrigine",
+          "confidence": 0.72,
+          "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lacosamide",
+          "confidence": 0.67,
+          "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "gabapentin",
+          "confidence": 0.62,
+          "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "oxcarbazepine",
+          "confidence": 0.57,
+          "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -163,10 +248,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Age-related osteoporosis without current pathological fracture, Benign prostatic hyperplasia without lower urinary tract symptoms, Epilepsy, unspecified, not intractable, without status epilepticus 生成候选药物，当前首选药物包括 levetiracetam, lamotrigine, lacosamide。"
     },
     {
       "specialty_name": "肾内/泌尿",
@@ -174,32 +280,32 @@
         {
           "rank": 1,
           "drug_name": "calcium carbonate",
-          "confidence": 0.85,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "furosemide",
-          "confidence": 0.79,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "tramadol (ultram)",
+          "confidence": 0.72,
+          "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
         },
         {
           "rank": 3,
           "drug_name": "ceftriaxone",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.67,
+          "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "tamsulosin",
-          "confidence": 0.71,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "labetalol",
+          "confidence": 0.62,
+          "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "neutra-phos",
-          "confidence": 0.6,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lidocaine jelly 2% (urojet)",
+          "confidence": 0.57,
+          "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -209,10 +315,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "heparin",
+          "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "hydromorphone (dilaudid)",
+          "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Asymptomatic human immunodeficiency virus [HIV] infection status, Chronic kidney disease, stage 3 (moderate), Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, tramadol (ultram), ceftriaxone。"
     },
     {
       "specialty_name": "心血管",
@@ -256,9 +383,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.92,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Atherosclerosis of native arteries of extremities with intermittent claudication, right leg, Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety, Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -276,58 +403,59 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "lamotrigine",
+          "lacosamide",
+          "gabapentin",
+          "oxcarbazepine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "calcium carbonate",
-          "furosemide",
+          "tramadol (ultram)",
           "ceftriaxone",
-          "tamsulosin",
-          "neutra-phos"
+          "labetalol",
+          "lidocaine jelly 2% (urojet)"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
           "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
       "本次MDT协商共纳入 4 个专科：内分泌/代谢, 神经, 肾内/泌尿, 心血管。",
       "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
       "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
     ],
     "candidate_plans": [
@@ -340,7 +468,7 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
@@ -351,11 +479,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "levetiracetam",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -374,7 +510,7 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
@@ -385,11 +521,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "levetiracetam",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -404,26 +548,34 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -440,7 +592,7 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "gabapentin"
+        "levetiracetam"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
@@ -451,11 +603,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "lorazepam",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -474,7 +634,7 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "gabapentin"
+        "levetiracetam"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
@@ -485,11 +645,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "lorazepam",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -504,26 +672,34 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "calcium carbonate",
-        "furosemide",
         "insulin",
-        "levothyroxine sodium"
+        "levothyroxine sodium",
+        "prednisone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "calcium carbonate",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "lorazepam",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "heparin"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -539,7 +715,7 @@
         "calcium carbonate",
         "prednisone",
         "sodium bicarbonate",
-        "gabapentin"
+        "levetiracetam"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
@@ -550,11 +726,19 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "lorazepam",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam",
+          "heparin"
         ]
       },
       "supporting_specialties": [
@@ -574,7 +758,7 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
@@ -585,11 +769,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "levetiracetam",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -642,7 +834,7 @@
           "calcium carbonate",
           "prednisone",
           "sodium bicarbonate",
-          "gabapentin"
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
@@ -653,11 +845,19 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate",
-            "gabapentin"
+            "levetiracetam",
+            "heparin"
           ]
         },
         "supporting_specialties": [
@@ -706,26 +906,34 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "calcium carbonate",
-          "furosemide",
           "insulin",
-          "levothyroxine sodium"
+          "levothyroxine sodium",
+          "prednisone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "calcium carbonate",
-            "levothyroxine sodium"
+            "levothyroxine sodium",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "lorazepam",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "heparin"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -738,14 +946,6 @@
             "drug_name": "calcium carbonate",
             "potential_impacts": [
               "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -791,10 +991,31 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "神经": [],
-          "肾内/泌尿": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Stenosis of peripheral vascular stent, initial encounter",
+            "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+            "Encounter for screening for other viral diseases",
+            "Old myocardial infarction",
+            "Unspecified place or not applicable"
+          ],
+          "神经": [
+            "Age-related osteoporosis without current pathological fracture",
+            "Benign prostatic hyperplasia without lower urinary tract symptoms",
+            "Epilepsy, unspecified, not intractable, without status epilepticus",
+            "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+          ],
+          "肾内/泌尿": [
+            "Asymptomatic human immunodeficiency virus [HIV] infection status",
+            "Chronic kidney disease, stage 3 (moderate)",
+            "Hyperlipidemia, unspecified",
+            "Parkinson's disease"
+          ],
+          "心血管": [
+            "Atherosclerosis of native arteries of extremities with intermittent claudication, right leg",
+            "Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+            "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+            "Personal history of nicotine dependence"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -845,9 +1066,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Stenosis of peripheral vascular stent, initial encounter, Atherosclerotic heart disease of native coronary artery without angina pectoris, Encounter for screening for other viral diseases 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -859,33 +1080,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "gabapentin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lamotrigine",
+            "confidence": 0.72,
+            "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lacosamide",
+            "confidence": 0.67,
+            "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "gabapentin",
+            "confidence": 0.62,
+            "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "oxcarbazepine",
+            "confidence": 0.57,
+            "reason": "与诊断 Epilepsy, unspecified, not intractable, without status epilepticus 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -895,10 +1116,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Epilepsy, unspecified, not intractable, without status epilepticus 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Age-related osteoporosis without current pathological fracture, Benign prostatic hyperplasia without lower urinary tract symptoms, Epilepsy, unspecified, not intractable, without status epilepticus 生成候选药物，当前首选药物包括 levetiracetam, lamotrigine, lacosamide。"
       }
     },
     {
@@ -911,32 +1153,32 @@
           {
             "rank": 1,
             "drug_name": "calcium carbonate",
-            "confidence": 0.85,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "furosemide",
-            "confidence": 0.79,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "tramadol (ultram)",
+            "confidence": 0.72,
+            "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
           },
           {
             "rank": 3,
             "drug_name": "ceftriaxone",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.67,
+            "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "tamsulosin",
-            "confidence": 0.71,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "labetalol",
+            "confidence": 0.62,
+            "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "neutra-phos",
-            "confidence": 0.6,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lidocaine jelly 2% (urojet)",
+            "confidence": 0.57,
+            "reason": "与诊断 Chronic kidney disease, stage 3 (moderate) 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -946,10 +1188,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "heparin",
+            "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "hydromorphone (dilaudid)",
+            "reason": "在 Chronic kidney disease, stage 3 (moderate) 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Asymptomatic human immunodeficiency virus [HIV] infection status, Chronic kidney disease, stage 3 (moderate), Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, tramadol (ultram), ceftriaxone。"
       }
     },
     {
@@ -998,9 +1261,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.92,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Atherosclerosis of native arteries of extremities with intermittent claudication, right leg, Dementia in other diseases classified elsewhere, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety, Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -1020,7 +1283,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1030,17 +1293,17 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "lamotrigine",
+          "lacosamide",
+          "gabapentin",
+          "oxcarbazepine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1051,16 +1314,16 @@
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "calcium carbonate",
-          "furosemide",
+          "tramadol (ultram)",
           "ceftriaxone",
-          "tamsulosin",
-          "neutra-phos"
+          "labetalol",
+          "lidocaine jelly 2% (urojet)"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1072,15 +1335,16 @@
         "accepted_drugs": [
           "furosemide",
           "metoprolol tartrate",
-          "heparin",
           "aspirin",
           "warfarin"
         ],
-        "cautioned_drugs": [],
-        "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+        "cautioned_drugs": [
+          "heparin"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "conflict_notes": [
+          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 4 个无明显冲突候选药物。"
       }
     },
     {
@@ -1091,7 +1355,7 @@
         "consensus_notes": [
           "本次MDT协商共纳入 4 个专科：内分泌/代谢, 神经, 肾内/泌尿, 心血管。",
           "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
           "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
         ],
         "plans": [
@@ -1104,7 +1368,7 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "gabapentin"
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
@@ -1115,11 +1379,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "levetiracetam",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1138,7 +1410,7 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "gabapentin"
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
@@ -1149,11 +1421,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "levetiracetam",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1168,26 +1448,34 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -1209,7 +1497,7 @@
             "calcium carbonate",
             "prednisone",
             "sodium bicarbonate",
-            "gabapentin"
+            "levetiracetam"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
@@ -1220,11 +1508,19 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "lorazepam",
+              "docusate sodium",
+              "senna",
+              "hydromorphone (dilaudid)"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "sodium bicarbonate",
-              "gabapentin"
+              "levetiracetam",
+              "heparin"
             ]
           },
           "supporting_specialties": [
@@ -1244,7 +1540,7 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "gabapentin"
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
@@ -1255,11 +1551,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "levetiracetam",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1312,7 +1616,7 @@
               "calcium carbonate",
               "prednisone",
               "sodium bicarbonate",
-              "gabapentin"
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
@@ -1323,11 +1627,19 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate",
-                "gabapentin"
+                "levetiracetam",
+                "heparin"
               ]
             },
             "supporting_specialties": [
@@ -1376,26 +1688,34 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "calcium carbonate",
-              "furosemide",
               "insulin",
-              "levothyroxine sodium"
+              "levothyroxine sodium",
+              "prednisone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "calcium carbonate",
-                "levothyroxine sodium"
+                "levothyroxine sodium",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "lorazepam",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "heparin"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1408,14 +1728,6 @@
                 "drug_name": "calcium carbonate",
                 "potential_impacts": [
                   "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

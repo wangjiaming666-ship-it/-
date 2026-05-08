@@ -1,50 +1,50 @@
 [
   {
     "category": "处方一致性与治疗角色",
-    "metric": "药名 Precision",
-    "mean": 0.3488,
-    "median": 0.3636,
+    "metric": "drug_precision",
+    "mean": 0.2083,
+    "median": 0.1667,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   },
   {
     "category": "处方一致性与治疗角色",
-    "metric": "药名 Recall",
-    "mean": 0.2027,
-    "median": 0.1835,
+    "metric": "drug_recall",
+    "mean": 0.0462,
+    "median": 0.0435,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   },
   {
     "category": "处方一致性与治疗角色",
-    "metric": "药名 F1",
-    "mean": 0.2381,
-    "median": 0.2308,
+    "metric": "drug_f1",
+    "mean": 0.0725,
+    "median": 0.07,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   },
   {
     "category": "处方一致性与治疗角色",
-    "metric": "药名 Jaccard",
-    "mean": 0.1405,
-    "median": 0.1304,
+    "metric": "drug_jaccard",
+    "mean": 0.0386,
+    "median": 0.0363,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   },
   {
     "category": "处方一致性与治疗角色",
-    "metric": "治疗角色 Precision",
-    "mean": 0.8873,
-    "median": 1.0,
+    "metric": "role_precision",
+    "mean": 0.7077,
+    "median": 0.75,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   },
   {
     "category": "处方一致性与治疗角色",
-    "metric": "治疗角色 Coverage",
-    "mean": 0.9262,
-    "median": 1.0,
+    "metric": "role_coverage",
+    "mean": 0.511,
+    "median": 0.5,
     "case_count": 100,
-    "note": "基于本地授权 MIMIC-IV 数据环境运行 100 例多专科病例后聚合统计"
+    "source": "experiments/outputs/test_cases_100/*.json + raw_case_summary.drug_list"
   }
 ]

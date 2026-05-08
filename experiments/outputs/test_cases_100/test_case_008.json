@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "10265021",
       "hadm_id": "20035624",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 57.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Sepsis, unspecified organism",
     "active_specialties": [
       "呼吸",
       "内分泌/代谢",
@@ -15,21 +15,54 @@
       "消化"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "消化": []
+      "呼吸": [
+        "Sepsis, unspecified organism",
+        "Hypothyroidism, unspecified",
+        "Pneumonitis due to inhalation of food and vomit"
+      ],
+      "内分泌/代谢": [
+        "Acute kidney failure, unspecified",
+        "Major depressive disorder, single episode, unspecified",
+        "Thrombocytopenia, unspecified"
+      ],
+      "神经": [
+        "Chronic hepatitis, unspecified",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Unspecified bacterial pneumonia"
+      ],
+      "肾内/泌尿": [
+        "Down syndrome, unspecified",
+        "Other constipation",
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+      ],
+      "消化": [
+        "Dysphagia, oropharyngeal phase",
+        "Pain in leg, unspecified"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Chronic hepatitis, unspecified",
+      "Down syndrome, unspecified",
+      "Dysphagia, oropharyngeal phase",
+      "Hypothyroidism, unspecified",
+      "Major depressive disorder, single episode, unspecified",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Other constipation",
+      "Pain in leg, unspecified",
+      "Pneumonitis due to inhalation of food and vomit",
+      "Thrombocytopenia, unspecified",
+      "Unspecified bacterial pneumonia",
+      "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.4,
+      "bun_24h": 17.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 145.0,
+      "glucose_24h": 89.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.5
     },
     "past_history": {},
     "key_vitals": {
@@ -59,7 +92,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 8,
+      "subject_id": "10265021",
+      "hadm_id": "20035624",
+      "specialty_cnt": 5,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 消化",
+      "gender": "M",
+      "anchor_age": 57,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "14/1/2112 00:08:00",
+      "dischtime": "16/1/2112 14:50:00",
+      "admission_type": "DIRECT EMER.",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Sepsis, unspecified organism",
+      "comorbidity_list": "Acute kidney failure, unspecified | Chronic hepatitis, unspecified | Down syndrome, unspecified | Dysphagia, oropharyngeal phase | Hypothyroidism, unspecified | Major depressive disorder, single episode, unspecified | Obstructive sleep apnea (adult) (pediatric) | Other constipation | Pain in leg, unspecified | Pneumonitis due to inhalation of food and vomit | Thrombocytopenia, unspecified | Unspecified bacterial pneumonia | Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+      "specialty_agents": "呼吸 | 精神 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 消化",
+      "drug_list": "0.45% sodium chloride | acetaminophen | azithromycin | ceftriaxone | docusate sodium | heparin | influenza vaccine quadrivalent | lactated ringers | levofloxacin | levothyroxine sodium | mirtazapine | olanzapine | ondansetron | senna | sodium chloride 0.9%  flush | tamsulosin | vial",
+      "creatinine_24h": 1.4,
+      "bun_24h": 17.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 145.0,
+      "glucose_24h": 89.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.5
+    }
   },
   "routing": {
     "active_specialties": [
@@ -71,11 +130,30 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "肾内/泌尿": [],
-      "消化": []
+      "呼吸": [
+        "Sepsis, unspecified organism",
+        "Hypothyroidism, unspecified",
+        "Pneumonitis due to inhalation of food and vomit"
+      ],
+      "内分泌/代谢": [
+        "Acute kidney failure, unspecified",
+        "Major depressive disorder, single episode, unspecified",
+        "Thrombocytopenia, unspecified"
+      ],
+      "神经": [
+        "Chronic hepatitis, unspecified",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Unspecified bacterial pneumonia"
+      ],
+      "肾内/泌尿": [
+        "Down syndrome, unspecified",
+        "Other constipation",
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+      ],
+      "消化": [
+        "Dysphagia, oropharyngeal phase",
+        "Pain in leg, unspecified"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -85,33 +163,33 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "albuterol 0.083% neb soln",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ipratropium-albuterol neb",
+          "confidence": 0.77,
+          "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "ipratropium bromide neb",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "albuterol 0.083% neb soln",
+          "confidence": 0.72,
+          "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "prednisone",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "albuterol inhaler",
+          "confidence": 0.67,
+          "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "azithromycin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.62,
+          "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "albuterol inhaler",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "prednisone",
+          "confidence": 0.57,
+          "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -121,10 +199,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "vancomycin",
+          "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Sepsis, unspecified organism, Hypothyroidism, unspecified, Pneumonitis due to inhalation of food and vomit 生成候选药物，当前首选药物包括 ipratropium-albuterol neb, albuterol 0.083% neb soln, albuterol inhaler。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -168,9 +267,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Major depressive disorder, single episode, unspecified, Thrombocytopenia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
@@ -178,32 +277,32 @@
         {
           "rank": 1,
           "drug_name": "gabapentin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "diazepam",
+          "confidence": 0.72,
+          "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lamotrigine",
+          "confidence": 0.67,
+          "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "lacosamide",
+          "confidence": 0.62,
+          "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.57,
+          "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -213,10 +312,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "hydromorphone (dilaudid)",
+          "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Chronic hepatitis, unspecified, Obstructive sleep apnea (adult) (pediatric), Unspecified bacterial pneumonia 生成候选药物，当前首选药物包括 gabapentin, diazepam, lamotrigine。"
     },
     {
       "specialty_name": "肾内/泌尿",
@@ -260,9 +380,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Down syndrome, unspecified, Other constipation, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
     },
     {
       "specialty_name": "消化",
@@ -306,9 +426,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.86,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Dysphagia, oropharyngeal phase, Pain in leg, unspecified 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     }
   ],
   "mdt_discussion": {
@@ -316,17 +436,17 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "内分泌/代谢",
@@ -341,22 +461,22 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
           "diazepam",
-          "baclofen"
+          "lamotrigine",
+          "lacosamide",
+          "levetiracetam"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "肾内/泌尿",
@@ -371,7 +491,7 @@
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "消化",
@@ -386,7 +506,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -400,32 +520,39 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "ipratropium-albuterol neb",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol inhaler",
+            "ceftriaxone",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": [
-            "azithromycin"
-          ]
+          "requires_review": []
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "呼吸"
+          "呼吸",
+          "肾内/泌尿"
         ],
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
       },
@@ -433,32 +560,39 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "ipratropium-albuterol neb",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol inhaler",
+            "ceftriaxone",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": [
-            "azithromycin"
-          ]
+          "requires_review": []
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "呼吸"
+          "呼吸",
+          "肾内/泌尿"
         ],
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
       },
@@ -466,20 +600,27 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
           "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "ceftriaxone",
+          "prednisone",
+          "ipratropium-albuterol neb"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
             "calcium carbonate",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "ceftriaxone",
+            "prednisone",
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -497,32 +638,39 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
+        "ipratropium-albuterol neb",
         "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "ceftriaxone",
+        "prednisone",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "lorazepam",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": [
-          "azithromycin"
-        ]
+        "requires_review": []
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "呼吸"
+        "呼吸",
+        "肾内/泌尿"
       ],
       "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
     },
@@ -530,32 +678,39 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
+        "ipratropium-albuterol neb",
         "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "ceftriaxone",
+        "prednisone",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "lorazepam",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": [
-          "azithromycin"
-        ]
+        "requires_review": []
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "呼吸"
+        "呼吸",
+        "肾内/泌尿"
       ],
       "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
     },
@@ -563,20 +718,27 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "prednisone",
         "calcium carbonate",
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb"
+        "ceftriaxone",
+        "prednisone",
+        "ipratropium-albuterol neb"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
           "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "ceftriaxone",
+          "prednisone",
+          "ipratropium-albuterol neb"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "lorazepam",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": []
       },
@@ -593,32 +755,39 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
+        "ipratropium-albuterol neb",
         "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
         "albuterol inhaler",
+        "ceftriaxone",
+        "prednisone",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "lorazepam",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "senna",
+          "hydromorphone (dilaudid)"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": [
-          "azithromycin"
-        ]
+        "requires_review": []
       },
       "supporting_specialties": [
         "内分泌/代谢",
-        "呼吸"
+        "呼吸",
+        "肾内/泌尿"
       ],
       "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
     },
@@ -627,32 +796,39 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "ipratropium-albuterol neb",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol inhaler",
+            "ceftriaxone",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": [
-            "azithromycin"
-          ]
+          "requires_review": []
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "呼吸"
+          "呼吸",
+          "肾内/泌尿"
         ],
         "review_flags": [
           "未发现明确安全冲突"
@@ -678,32 +854,39 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
           "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
+            "ipratropium-albuterol neb",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol inhaler",
+            "ceftriaxone",
+            "prednisone"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": [
-            "azithromycin"
-          ]
+          "requires_review": []
         },
         "supporting_specialties": [
           "内分泌/代谢",
-          "呼吸"
+          "呼吸",
+          "肾内/泌尿"
         ],
         "review_flags": [
           "未发现明确安全冲突"
@@ -729,20 +912,27 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
           "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "ceftriaxone",
+          "prednisone",
+          "ipratropium-albuterol neb"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
             "calcium carbonate",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "ceftriaxone",
+            "prednisone",
+            "ipratropium-albuterol neb"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "lorazepam",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "senna",
+            "hydromorphone (dilaudid)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": []
         },
@@ -791,11 +981,30 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "内分泌/代谢": [],
-          "神经": [],
-          "肾内/泌尿": [],
-          "消化": []
+          "呼吸": [
+            "Sepsis, unspecified organism",
+            "Hypothyroidism, unspecified",
+            "Pneumonitis due to inhalation of food and vomit"
+          ],
+          "内分泌/代谢": [
+            "Acute kidney failure, unspecified",
+            "Major depressive disorder, single episode, unspecified",
+            "Thrombocytopenia, unspecified"
+          ],
+          "神经": [
+            "Chronic hepatitis, unspecified",
+            "Obstructive sleep apnea (adult) (pediatric)",
+            "Unspecified bacterial pneumonia"
+          ],
+          "肾内/泌尿": [
+            "Down syndrome, unspecified",
+            "Other constipation",
+            "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+          ],
+          "消化": [
+            "Dysphagia, oropharyngeal phase",
+            "Pain in leg, unspecified"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -809,33 +1018,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "albuterol 0.083% neb soln",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ipratropium-albuterol neb",
+            "confidence": 0.77,
+            "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "ipratropium bromide neb",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "albuterol 0.083% neb soln",
+            "confidence": 0.72,
+            "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "prednisone",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "albuterol inhaler",
+            "confidence": 0.67,
+            "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "azithromycin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.62,
+            "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "albuterol inhaler",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "prednisone",
+            "confidence": 0.57,
+            "reason": "与诊断 Pneumonitis due to inhalation of food and vomit 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -845,10 +1054,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "vancomycin",
+            "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Pneumonitis due to inhalation of food and vomit 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Sepsis, unspecified organism, Hypothyroidism, unspecified, Pneumonitis due to inhalation of food and vomit 生成候选药物，当前首选药物包括 ipratropium-albuterol neb, albuterol 0.083% neb soln, albuterol inhaler。"
       }
     },
     {
@@ -897,9 +1127,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Major depressive disorder, single episode, unspecified, Thrombocytopenia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -912,32 +1142,32 @@
           {
             "rank": 1,
             "drug_name": "gabapentin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "diazepam",
+            "confidence": 0.72,
+            "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lamotrigine",
+            "confidence": 0.67,
+            "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "lacosamide",
+            "confidence": 0.62,
+            "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.57,
+            "reason": "与诊断 Obstructive sleep apnea (adult) (pediatric) 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -947,10 +1177,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "hydromorphone (dilaudid)",
+            "reason": "在 Obstructive sleep apnea (adult) (pediatric) 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Chronic hepatitis, unspecified, Obstructive sleep apnea (adult) (pediatric), Unspecified bacterial pneumonia 生成候选药物，当前首选药物包括 gabapentin, diazepam, lamotrigine。"
       }
     },
     {
@@ -999,9 +1250,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Down syndrome, unspecified, Other constipation, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
       }
     },
     {
@@ -1050,9 +1301,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.86,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Dysphagia, oropharyngeal phase, Pain in leg, unspecified 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -1062,17 +1313,17 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
+          "ipratropium-albuterol neb",
           "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "albuterol inhaler",
+          "ceftriaxone",
+          "prednisone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1092,7 +1343,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1103,16 +1354,16 @@
         "reviewer_specialty": "神经",
         "accepted_drugs": [
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
           "diazepam",
-          "baclofen"
+          "lamotrigine",
+          "lacosamide",
+          "levetiracetam"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1132,7 +1383,7 @@
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "肾内/泌尿与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1152,7 +1403,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1171,32 +1422,39 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
+              "ipratropium-albuterol neb",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "ceftriaxone",
+              "prednisone",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "ipratropium-albuterol neb",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol inhaler",
+                "ceftriaxone",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": [
-                "azithromycin"
-              ]
+              "requires_review": []
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "呼吸"
+              "呼吸",
+              "肾内/泌尿"
             ],
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
           },
@@ -1204,32 +1462,39 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
+              "ipratropium-albuterol neb",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "ceftriaxone",
+              "prednisone",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "ipratropium-albuterol neb",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol inhaler",
+                "ceftriaxone",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": [
-                "azithromycin"
-              ]
+              "requires_review": []
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "呼吸"
+              "呼吸",
+              "肾内/泌尿"
             ],
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
           },
@@ -1237,20 +1502,27 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
               "calcium carbonate",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb"
+              "ceftriaxone",
+              "prednisone",
+              "ipratropium-albuterol neb"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
                 "calcium carbonate",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "ceftriaxone",
+                "prednisone",
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },
@@ -1273,32 +1545,39 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
+            "ipratropium-albuterol neb",
             "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "azithromycin",
             "albuterol inhaler",
+            "ceftriaxone",
+            "prednisone",
             "insulin"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
+              "ipratropium-albuterol neb",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "albuterol inhaler"
+              "albuterol inhaler",
+              "ceftriaxone",
+              "prednisone"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "lorazepam",
+              "oxycodone (immediate release)",
+              "docusate sodium",
+              "senna",
+              "hydromorphone (dilaudid)"
+            ],
             "general_inpatient_medication": [],
-            "requires_review": [
-              "azithromycin"
-            ]
+            "requires_review": []
           },
           "supporting_specialties": [
             "内分泌/代谢",
-            "呼吸"
+            "呼吸",
+            "肾内/泌尿"
           ],
           "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
         },
@@ -1307,32 +1586,39 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
+              "ipratropium-albuterol neb",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "ceftriaxone",
+              "prednisone",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "ipratropium-albuterol neb",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol inhaler",
+                "ceftriaxone",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": [
-                "azithromycin"
-              ]
+              "requires_review": []
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "呼吸"
+              "呼吸",
+              "肾内/泌尿"
             ],
             "review_flags": [
               "未发现明确安全冲突"
@@ -1358,32 +1644,39 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
+              "ipratropium-albuterol neb",
               "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
               "albuterol inhaler",
+              "ceftriaxone",
+              "prednisone",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
+                "ipratropium-albuterol neb",
                 "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol inhaler",
+                "ceftriaxone",
+                "prednisone"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": [
-                "azithromycin"
-              ]
+              "requires_review": []
             },
             "supporting_specialties": [
               "内分泌/代谢",
-              "呼吸"
+              "呼吸",
+              "肾内/泌尿"
             ],
             "review_flags": [
               "未发现明确安全冲突"
@@ -1409,20 +1702,27 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
               "calcium carbonate",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb"
+              "ceftriaxone",
+              "prednisone",
+              "ipratropium-albuterol neb"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
                 "calcium carbonate",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "ceftriaxone",
+                "prednisone",
+                "ipratropium-albuterol neb"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "lorazepam",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "senna",
+                "hydromorphone (dilaudid)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": []
             },

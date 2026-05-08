@@ -3,27 +3,39 @@
     "patient_info": {
       "subject_id": "13834871",
       "hadm_id": "21398053",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 80.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Urinary tract infection, site not specified",
     "active_specialties": [
       "肾内/泌尿",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "肾内/泌尿": [],
-      "心血管": []
+      "肾内/泌尿": [
+        "Urinary tract infection, site not specified",
+        "Essential (primary) hypertension",
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+      ],
+      "心血管": [
+        "Encounter for immunization",
+        "Hypotension, unspecified"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Encounter for immunization",
+      "Essential (primary) hypertension",
+      "Hypotension, unspecified",
+      "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 0.7,
+      "bun_24h": 10.0,
+      "potassium_24h": 4.0,
+      "sodium_24h": 143.0,
+      "glucose_24h": 87.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -53,7 +65,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 100,
+      "subject_id": "13834871",
+      "hadm_id": "21398053",
+      "specialty_cnt": 2,
+      "specialty_list": "肾内/泌尿 | 心血管",
+      "gender": "F",
+      "anchor_age": 80,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "7/3/2170 01:29:00",
+      "dischtime": "7/3/2170 17:50:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Urinary tract infection, site not specified",
+      "comorbidity_list": "Encounter for immunization | Essential (primary) hypertension | Hypotension, unspecified | Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+      "specialty_agents": "精神 | 肾内/泌尿 | 心血管",
+      "drug_list": "acetaminophen | ceftriaxone | ciprofloxacin hcl | haloperidol | heparin | influenza vaccine quadrivalent | olanzapine | sodium chloride 0.9%  flush | vial",
+      "creatinine_24h": 0.7,
+      "bun_24h": 10.0,
+      "potassium_24h": 4.0,
+      "sodium_24h": 143.0,
+      "glucose_24h": 87.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -62,8 +100,15 @@
     ],
     "lead_specialty": "肾内/泌尿",
     "specialty_related_diagnoses": {
-      "肾内/泌尿": [],
-      "心血管": []
+      "肾内/泌尿": [
+        "Urinary tract infection, site not specified",
+        "Essential (primary) hypertension",
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+      ],
+      "心血管": [
+        "Encounter for immunization",
+        "Hypotension, unspecified"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 肾内/泌尿。"
   },
@@ -73,33 +118,33 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.85,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.77,
+          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "furosemide",
-          "confidence": 0.79,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "tamsulosin",
+          "confidence": 0.72,
+          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "calcium carbonate",
+          "confidence": 0.67,
+          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "tamsulosin",
-          "confidence": 0.71,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "neutra-phos",
+          "confidence": 0.62,
+          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "neutra-phos",
-          "confidence": 0.6,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "tramadol",
+          "confidence": 0.57,
+          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -109,10 +154,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "hydromorphone (dilaudid)",
+          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
       "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Essential (primary) hypertension, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
     },
     {
       "specialty_name": "心血管",
@@ -156,9 +222,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.86,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -166,17 +232,17 @@
       {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "calcium carbonate",
+          "neutra-phos",
+          "tramadol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "肾内/泌尿与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "心血管",
@@ -191,7 +257,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -205,27 +271,33 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
+          "calcium carbonate",
           "neutra-phos",
-          "metoprolol tartrate"
+          "tramadol",
+          "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
-            "metoprolol tartrate"
+            "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "neutra-phos",
+            "tramadol"
           ]
         },
         "supporting_specialties": [
@@ -238,27 +310,33 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
+          "calcium carbonate",
           "neutra-phos",
-          "metoprolol tartrate"
+          "tramadol",
+          "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
-            "metoprolol tartrate"
+            "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "neutra-phos",
+            "tramadol"
           ]
         },
         "supporting_specialties": [
@@ -271,26 +349,31 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "furosemide",
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate",
+          "neutra-phos"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
-          "risk_modifying_therapy": [
-            "furosemide"
+          "risk_modifying_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
           ],
-          "supportive_or_symptomatic_therapy": [],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "neutra-phos"
+          ]
         },
         "supporting_specialties": [
-          "心血管",
           "肾内/泌尿"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -302,27 +385,33 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "calcium carbonate",
-        "furosemide",
         "ceftriaxone",
         "tamsulosin",
+        "calcium carbonate",
         "neutra-phos",
-        "metoprolol tartrate"
+        "tramadol",
+        "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
-          "metoprolol tartrate"
+          "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "hydromorphone (dilaudid)",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "neutra-phos"
+          "neutra-phos",
+          "tramadol"
         ]
       },
       "supporting_specialties": [
@@ -335,27 +424,33 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "calcium carbonate",
-        "furosemide",
         "ceftriaxone",
         "tamsulosin",
+        "calcium carbonate",
         "neutra-phos",
-        "metoprolol tartrate"
+        "tramadol",
+        "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
-          "metoprolol tartrate"
+          "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "hydromorphone (dilaudid)",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "neutra-phos"
+          "neutra-phos",
+          "tramadol"
         ]
       },
       "supporting_specialties": [
@@ -368,26 +463,31 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "furosemide",
-        "calcium carbonate",
         "ceftriaxone",
-        "tamsulosin"
+        "tamsulosin",
+        "calcium carbonate",
+        "neutra-phos"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate"
         ],
-        "risk_modifying_therapy": [
-          "furosemide"
+        "risk_modifying_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "hydromorphone (dilaudid)",
+          "ondansetron"
         ],
-        "supportive_or_symptomatic_therapy": [],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "neutra-phos"
+        ]
       },
       "supporting_specialties": [
-        "心血管",
         "肾内/泌尿"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -398,27 +498,33 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "calcium carbonate",
-        "furosemide",
         "ceftriaxone",
         "tamsulosin",
+        "calcium carbonate",
         "neutra-phos",
-        "metoprolol tartrate"
+        "tramadol",
+        "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate"
         ],
         "risk_modifying_therapy": [
-          "furosemide",
-          "metoprolol tartrate"
+          "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "docusate sodium",
+          "hydromorphone (dilaudid)",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
-          "neutra-phos"
+          "neutra-phos",
+          "tramadol"
         ]
       },
       "supporting_specialties": [
@@ -432,27 +538,33 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
+          "calcium carbonate",
           "neutra-phos",
-          "metoprolol tartrate"
+          "tramadol",
+          "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
-            "metoprolol tartrate"
+            "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "neutra-phos",
+            "tramadol"
           ]
         },
         "supporting_specialties": [
@@ -491,27 +603,33 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
+          "calcium carbonate",
           "neutra-phos",
-          "metoprolol tartrate"
+          "tramadol",
+          "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
-            "furosemide",
-            "metoprolol tartrate"
+            "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "neutra-phos",
+            "tramadol"
           ]
         },
         "supporting_specialties": [
@@ -550,26 +668,31 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "furosemide",
-          "calcium carbonate",
           "ceftriaxone",
-          "tamsulosin"
+          "tamsulosin",
+          "calcium carbonate",
+          "neutra-phos"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
             "ceftriaxone",
-            "tamsulosin"
+            "tamsulosin",
+            "calcium carbonate"
           ],
-          "risk_modifying_therapy": [
-            "furosemide"
+          "risk_modifying_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "docusate sodium",
+            "hydromorphone (dilaudid)",
+            "ondansetron"
           ],
-          "supportive_or_symptomatic_therapy": [],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "neutra-phos"
+          ]
         },
         "supporting_specialties": [
-          "心血管",
           "肾内/泌尿"
         ],
         "review_flags": [
@@ -578,14 +701,6 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
           {
             "drug_name": "calcium carbonate",
             "potential_impacts": [
@@ -617,8 +732,15 @@
         ],
         "lead_specialty": "肾内/泌尿",
         "specialty_related_diagnoses": {
-          "肾内/泌尿": [],
-          "心血管": []
+          "肾内/泌尿": [
+            "Urinary tract infection, site not specified",
+            "Essential (primary) hypertension",
+            "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+          ],
+          "心血管": [
+            "Encounter for immunization",
+            "Hypotension, unspecified"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 肾内/泌尿。"
       }
@@ -632,33 +754,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.85,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.77,
+            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "furosemide",
-            "confidence": 0.79,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "tamsulosin",
+            "confidence": 0.72,
+            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "calcium carbonate",
+            "confidence": 0.67,
+            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "tamsulosin",
-            "confidence": 0.71,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "neutra-phos",
+            "confidence": 0.62,
+            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "neutra-phos",
-            "confidence": 0.6,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "tramadol",
+            "confidence": 0.57,
+            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -668,10 +790,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "hydromorphone (dilaudid)",
+            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
         "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 calcium carbonate, furosemide, ceftriaxone。"
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Essential (primary) hypertension, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
       }
     },
     {
@@ -720,9 +863,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.86,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -732,17 +875,17 @@
       "content": {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
-          "furosemide",
           "ceftriaxone",
           "tamsulosin",
-          "neutra-phos"
+          "calcium carbonate",
+          "neutra-phos",
+          "tramadol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "肾内/泌尿建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "肾内/泌尿与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "肾内/泌尿与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -762,7 +905,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -781,27 +924,33 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "calcium carbonate",
-              "furosemide",
               "ceftriaxone",
               "tamsulosin",
+              "calcium carbonate",
               "neutra-phos",
-              "metoprolol tartrate"
+              "tramadol",
+              "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
-                "metoprolol tartrate"
+                "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "neutra-phos",
+                "tramadol"
               ]
             },
             "supporting_specialties": [
@@ -814,27 +963,33 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "calcium carbonate",
-              "furosemide",
               "ceftriaxone",
               "tamsulosin",
+              "calcium carbonate",
               "neutra-phos",
-              "metoprolol tartrate"
+              "tramadol",
+              "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
-                "metoprolol tartrate"
+                "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "neutra-phos",
+                "tramadol"
               ]
             },
             "supporting_specialties": [
@@ -847,26 +1002,31 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "furosemide",
-              "calcium carbonate",
               "ceftriaxone",
-              "tamsulosin"
+              "tamsulosin",
+              "calcium carbonate",
+              "neutra-phos"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
-              "risk_modifying_therapy": [
-                "furosemide"
+              "risk_modifying_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
               ],
-              "supportive_or_symptomatic_therapy": [],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "neutra-phos"
+              ]
             },
             "supporting_specialties": [
-              "心血管",
               "肾内/泌尿"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -883,27 +1043,33 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "calcium carbonate",
-            "furosemide",
             "ceftriaxone",
             "tamsulosin",
+            "calcium carbonate",
             "neutra-phos",
-            "metoprolol tartrate"
+            "tramadol",
+            "furosemide"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "calcium carbonate",
               "ceftriaxone",
-              "tamsulosin"
+              "tamsulosin",
+              "calcium carbonate"
             ],
             "risk_modifying_therapy": [
-              "furosemide",
-              "metoprolol tartrate"
+              "furosemide"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "docusate sodium",
+              "hydromorphone (dilaudid)",
+              "ondansetron"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
-              "neutra-phos"
+              "neutra-phos",
+              "tramadol"
             ]
           },
           "supporting_specialties": [
@@ -917,27 +1083,33 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "calcium carbonate",
-              "furosemide",
               "ceftriaxone",
               "tamsulosin",
+              "calcium carbonate",
               "neutra-phos",
-              "metoprolol tartrate"
+              "tramadol",
+              "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
-                "metoprolol tartrate"
+                "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "neutra-phos",
+                "tramadol"
               ]
             },
             "supporting_specialties": [
@@ -976,27 +1148,33 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "calcium carbonate",
-              "furosemide",
               "ceftriaxone",
               "tamsulosin",
+              "calcium carbonate",
               "neutra-phos",
-              "metoprolol tartrate"
+              "tramadol",
+              "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
-                "furosemide",
-                "metoprolol tartrate"
+                "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "neutra-phos",
+                "tramadol"
               ]
             },
             "supporting_specialties": [
@@ -1035,26 +1213,31 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "furosemide",
-              "calcium carbonate",
               "ceftriaxone",
-              "tamsulosin"
+              "tamsulosin",
+              "calcium carbonate",
+              "neutra-phos"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
                 "ceftriaxone",
-                "tamsulosin"
+                "tamsulosin",
+                "calcium carbonate"
               ],
-              "risk_modifying_therapy": [
-                "furosemide"
+              "risk_modifying_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "docusate sodium",
+                "hydromorphone (dilaudid)",
+                "ondansetron"
               ],
-              "supportive_or_symptomatic_therapy": [],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "neutra-phos"
+              ]
             },
             "supporting_specialties": [
-              "心血管",
               "肾内/泌尿"
             ],
             "review_flags": [
@@ -1063,14 +1246,6 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
               {
                 "drug_name": "calcium carbonate",
                 "potential_impacts": [

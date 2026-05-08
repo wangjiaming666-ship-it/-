@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "17125285",
       "hadm_id": "27933860",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 44.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
     "active_specialties": [
       "呼吸",
       "内分泌/代谢",
@@ -15,21 +15,56 @@
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "消化": [],
-      "心血管": []
+      "呼吸": [
+        "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Major depressive disorder, single episode, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Anxiety disorder, unspecified",
+        "Gastroparesis",
+        "Migraine, unspecified, not intractable, without status migrainosus"
+      ],
+      "神经": [
+        "Emphysema, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Essential (primary) hypertension",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy"
+      ],
+      "心血管": [
+        "Family history of ischemic heart disease and other diseases of the circulatory system",
+        "Long term (current) use of insulin",
+        "Unspecified atrial fibrillation"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Anxiety disorder, unspecified",
+      "Emphysema, unspecified",
+      "Essential (primary) hypertension",
+      "Family history of ischemic heart disease and other diseases of the circulatory system",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Gastroparesis",
+      "Hyperlipidemia, unspecified",
+      "Long term (current) use of antithrombotics/antiplatelets",
+      "Long term (current) use of insulin",
+      "Major depressive disorder, single episode, unspecified",
+      "Migraine, unspecified, not intractable, without status migrainosus",
+      "Personal history of nicotine dependence",
+      "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy",
+      "Unspecified atrial fibrillation"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.2,
+      "bun_24h": 21.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 137.0,
+      "glucose_24h": 153.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -59,7 +94,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 76,
+      "subject_id": "17125285",
+      "hadm_id": "27933860",
+      "specialty_cnt": 5,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 神经 | 消化 | 心血管",
+      "gender": "F",
+      "anchor_age": 44,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "24/6/2170 14:35:00",
+      "dischtime": "25/6/2170 13:09:00",
+      "admission_type": "DIRECT OBSERVATION",
+      "race": "OTHER",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+      "comorbidity_list": "Anxiety disorder, unspecified | Emphysema, unspecified | Essential (primary) hypertension | Family history of ischemic heart disease and other diseases of the circulatory system | Gastro-esophageal reflux disease without esophagitis | Gastroparesis | Hyperlipidemia, unspecified | Long term (current) use of antithrombotics/antiplatelets | Long term (current) use of insulin | Major depressive disorder, single episode, unspecified | Migraine, unspecified, not intractable, without status migrainosus | Personal history of nicotine dependence | Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy | Unspecified atrial fibrillation",
+      "specialty_agents": "呼吸 | 精神 | 内分泌/代谢 | 神经 | 消化 | 心血管",
+      "drug_list": "acetaminophen | acetaminophen-caff-butalbital | albuterol inhaler | apixaban | aspirin | atropine sulfate | cepacol (sore throat lozenge) | clopidogrel | creon 12 | dextrose 50% | gabapentin | glucagon | glucose gel | heparin | hydrocodone-acetaminophen (5mg-325mg) | insulin | isosorbide mononitrate (extended release) | lisinopril | metoprolol tartrate | omeprazole | ondansetron | polyethylene glycol | ramelteon | senna | sodium chloride | sodium chloride 0.9% | sodium chloride 0.9%  flush | topiramate (topamax)",
+      "creatinine_24h": 1.2,
+      "bun_24h": 21.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 137.0,
+      "glucose_24h": 153.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -71,11 +132,31 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "内分泌/代谢": [],
-      "神经": [],
-      "消化": [],
-      "心血管": []
+      "呼吸": [
+        "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Major depressive disorder, single episode, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Anxiety disorder, unspecified",
+        "Gastroparesis",
+        "Migraine, unspecified, not intractable, without status migrainosus"
+      ],
+      "神经": [
+        "Emphysema, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Essential (primary) hypertension",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy"
+      ],
+      "心血管": [
+        "Family history of ischemic heart disease and other diseases of the circulatory system",
+        "Long term (current) use of insulin",
+        "Unspecified atrial fibrillation"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -122,9 +203,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery with unstable angina pectoris, Gastro-esophageal reflux disease without esophagitis, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -168,9 +249,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Anxiety disorder, unspecified, Gastroparesis, Migraine, unspecified, not intractable, without status migrainosus 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     },
     {
       "specialty_name": "神经",
@@ -214,9 +295,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Emphysema, unspecified, Hyperlipidemia, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
     },
     {
       "specialty_name": "消化",
@@ -260,42 +341,42 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.89,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Essential (primary) hypertension, Long term (current) use of antithrombotics/antiplatelets, Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.77,
+          "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "furosemide",
+          "confidence": 0.72,
+          "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "warfarin",
+          "confidence": 0.67,
+          "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "heparin",
+          "confidence": 0.62,
+          "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "metoprolol succinate xl",
+          "confidence": 0.57,
+          "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -305,10 +386,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Family history of ischemic heart disease and other diseases of the circulatory system, Long term (current) use of insulin, Unspecified atrial fibrillation 生成候选药物，当前首选药物包括 metoprolol tartrate, furosemide, warfarin。"
     }
   ],
   "mdt_discussion": {
@@ -326,7 +428,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "内分泌/代谢",
@@ -341,7 +443,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "神经",
@@ -356,7 +458,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "消化",
@@ -371,22 +473,22 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
+          "furosemide",
+          "warfarin",
           "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol succinate xl"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -417,7 +519,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -450,7 +557,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -478,7 +590,12 @@
             "ipratropium bromide neb"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -514,7 +631,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin"
@@ -547,7 +669,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin"
@@ -575,7 +702,12 @@
           "ipratropium bromide neb"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin"
@@ -610,7 +742,12 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "docusate sodium",
+          "oxycodone (immediate release)"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin"
@@ -644,7 +781,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -695,7 +837,12 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -741,7 +888,12 @@
             "ipratropium bromide neb"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "docusate sodium",
+            "oxycodone (immediate release)"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -782,11 +934,31 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "内分泌/代谢": [],
-          "神经": [],
-          "消化": [],
-          "心血管": []
+          "呼吸": [
+            "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Major depressive disorder, single episode, unspecified"
+          ],
+          "内分泌/代谢": [
+            "Anxiety disorder, unspecified",
+            "Gastroparesis",
+            "Migraine, unspecified, not intractable, without status migrainosus"
+          ],
+          "神经": [
+            "Emphysema, unspecified",
+            "Hyperlipidemia, unspecified",
+            "Personal history of nicotine dependence"
+          ],
+          "消化": [
+            "Essential (primary) hypertension",
+            "Long term (current) use of antithrombotics/antiplatelets",
+            "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy"
+          ],
+          "心血管": [
+            "Family history of ischemic heart disease and other diseases of the circulatory system",
+            "Long term (current) use of insulin",
+            "Unspecified atrial fibrillation"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -837,9 +1009,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery with unstable angina pectoris, Gastro-esophageal reflux disease without esophagitis, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
       }
     },
     {
@@ -888,9 +1060,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Anxiety disorder, unspecified, Gastroparesis, Migraine, unspecified, not intractable, without status migrainosus 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -939,9 +1111,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Emphysema, unspecified, Hyperlipidemia, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
       }
     },
     {
@@ -990,9 +1162,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.89,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Essential (primary) hypertension, Long term (current) use of antithrombotics/antiplatelets, Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -1004,33 +1176,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.77,
+            "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "furosemide",
+            "confidence": 0.72,
+            "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "warfarin",
+            "confidence": 0.67,
+            "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "heparin",
+            "confidence": 0.62,
+            "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "metoprolol succinate xl",
+            "confidence": 0.57,
+            "reason": "与诊断 Unspecified atrial fibrillation 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -1040,10 +1212,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Unspecified atrial fibrillation 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Family history of ischemic heart disease and other diseases of the circulatory system, Long term (current) use of insulin, Unspecified atrial fibrillation 生成候选药物，当前首选药物包括 metoprolol tartrate, furosemide, warfarin。"
       }
     },
     {
@@ -1063,7 +1256,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1083,7 +1276,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1103,7 +1296,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1123,7 +1316,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1133,17 +1326,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
+          "furosemide",
+          "warfarin",
           "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol succinate xl"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1179,7 +1372,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1212,7 +1410,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1240,7 +1443,12 @@
                 "ipratropium bromide neb"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1281,7 +1489,12 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "senna",
+              "docusate sodium",
+              "oxycodone (immediate release)"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "azithromycin"
@@ -1315,7 +1528,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1366,7 +1584,12 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1412,7 +1635,12 @@
                 "ipratropium bromide neb"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "docusate sodium",
+                "oxycodone (immediate release)"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"

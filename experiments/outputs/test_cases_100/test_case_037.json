@@ -3,29 +3,56 @@
     "patient_info": {
       "subject_id": "19840300",
       "hadm_id": "27892544",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 75.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
     "active_specialties": [
       "内分泌/代谢",
       "消化",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Encounter for antineoplastic chemotherapy",
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified",
+        "Mantle cell lymphoma, lymph nodes of multiple sites"
+      ],
+      "消化": [
+        "Acidosis",
+        "Fluid overload, unspecified",
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Myelophthisis"
+      ],
+      "心血管": [
+        "Dysuria",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Mantle cell lymphoma, extranodal and solid organ sites",
+        "Nausea"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acidosis",
+      "Dysuria",
+      "Essential (primary) hypertension",
+      "Fluid overload, unspecified",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+      "Mantle cell lymphoma, extranodal and solid organ sites",
+      "Mantle cell lymphoma, lymph nodes of multiple sites",
+      "Myelophthisis",
+      "Nausea"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.1,
+      "bun_24h": 17.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 137.0,
+      "glucose_24h": 88.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.4
     },
     "past_history": {},
     "key_vitals": {
@@ -55,7 +82,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 37,
+      "subject_id": "19840300",
+      "hadm_id": "27892544",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 75,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "8/5/2180 14:56:00",
+      "dischtime": "11/5/2180 16:05:00",
+      "admission_type": "ELECTIVE",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
+      "comorbidity_list": "Acidosis | Dysuria | Essential (primary) hypertension | Fluid overload, unspecified | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Hyperuricemia without signs of inflammatory arthritis and tophaceous disease | Mantle cell lymphoma, extranodal and solid organ sites | Mantle cell lymphoma, lymph nodes of multiple sites | Myelophthisis | Nausea",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.45% sodium chloride | 0.9% sodium chloride | 5% dextrose | acyclovir | allopurinol | cepacol (sore throat lozenge) | cyclophosphamide | dexamethasone sod phosphate | diltiazem extended-release | doxorubicin | durezol | heparin flush (10 units/ml) | heparin flush (100 units/ml) | hydrochlorothiazide | ibrutinib | losartan potassium | omeprazole | ondansetron | potassium chloride | prednisone | prolensa | sodium chloride 0.9% | sodium chloride 0.9%  flush | syringe (chemo) | vincristine (oncovin)",
+      "creatinine_24h": 1.1,
+      "bun_24h": 17.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 137.0,
+      "glucose_24h": 88.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.4
+    }
   },
   "routing": {
     "active_specialties": [
@@ -65,9 +118,24 @@
     ],
     "lead_specialty": "内分泌/代谢",
     "specialty_related_diagnoses": {
-      "内分泌/代谢": [],
-      "消化": [],
-      "心血管": []
+      "内分泌/代谢": [
+        "Encounter for antineoplastic chemotherapy",
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified",
+        "Mantle cell lymphoma, lymph nodes of multiple sites"
+      ],
+      "消化": [
+        "Acidosis",
+        "Fluid overload, unspecified",
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Myelophthisis"
+      ],
+      "心血管": [
+        "Dysuria",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Mantle cell lymphoma, extranodal and solid organ sites",
+        "Nausea"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
   },
@@ -78,32 +146,32 @@
         {
           "rank": 1,
           "drug_name": "insulin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
           "drug_name": "levothyroxine sodium",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.72,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.67,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "calcium carbonate",
+          "confidence": 0.62,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "prednisone",
+          "confidence": 0.57,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -113,10 +181,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.92,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Encounter for antineoplastic chemotherapy, Essential (primary) hypertension, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, sodium bicarbonate。"
     },
     {
       "specialty_name": "消化",
@@ -160,9 +249,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.92,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Acidosis, Fluid overload, unspecified, Hyperuricemia without signs of inflammatory arthritis and tophaceous disease 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     },
     {
       "specialty_name": "心血管",
@@ -206,9 +295,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.92,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Dysuria, Gastro-esophageal reflux disease without esophagitis, Mantle cell lymphoma, extranodal and solid organ sites 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -218,15 +307,15 @@
         "accepted_drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "prednisone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "消化",
@@ -241,7 +330,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
@@ -256,7 +345,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -272,9 +361,9 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate",
           "pantoprazole"
         ],
         "medication_layers": {
@@ -287,7 +376,13 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -305,9 +400,9 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate",
           "pantoprazole"
         ],
         "medication_layers": {
@@ -320,7 +415,13 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -338,21 +439,28 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "sodium bicarbonate",
+          "calcium carbonate"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -368,9 +476,9 @@
       "drugs": [
         "insulin",
         "levothyroxine sodium",
+        "sodium bicarbonate",
         "calcium carbonate",
         "prednisone",
-        "sodium bicarbonate",
         "pantoprazole"
       ],
       "medication_layers": {
@@ -383,7 +491,13 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -401,9 +515,9 @@
       "drugs": [
         "insulin",
         "levothyroxine sodium",
+        "sodium bicarbonate",
         "calcium carbonate",
         "prednisone",
-        "sodium bicarbonate",
         "pantoprazole"
       ],
       "medication_layers": {
@@ -416,7 +530,13 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -434,21 +554,28 @@
       "drugs": [
         "insulin",
         "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone"
+        "sodium bicarbonate",
+        "calcium carbonate"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "calcium carbonate"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
-        "requires_review": []
+        "requires_review": [
+          "sodium bicarbonate"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢"
@@ -463,9 +590,9 @@
       "drugs": [
         "insulin",
         "levothyroxine sodium",
+        "sodium bicarbonate",
         "calcium carbonate",
         "prednisone",
-        "sodium bicarbonate",
         "pantoprazole"
       ],
       "medication_layers": {
@@ -478,7 +605,13 @@
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "oxycodone (immediate release)",
+          "senna",
+          "docusate sodium",
+          "ondansetron"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "sodium bicarbonate"
@@ -497,9 +630,9 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate",
           "pantoprazole"
         ],
         "medication_layers": {
@@ -512,7 +645,13 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -572,9 +711,9 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
           "prednisone",
-          "sodium bicarbonate",
           "pantoprazole"
         ],
         "medication_layers": {
@@ -587,7 +726,13 @@
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "sodium bicarbonate"
@@ -647,21 +792,28 @@
         "drugs": [
           "insulin",
           "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "sodium bicarbonate",
+          "calcium carbonate"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "calcium carbonate"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "oxycodone (immediate release)",
+            "senna",
+            "docusate sodium",
+            "ondansetron"
+          ],
           "general_inpatient_medication": [],
-          "requires_review": []
+          "requires_review": [
+            "sodium bicarbonate"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -720,9 +872,24 @@
         ],
         "lead_specialty": "内分泌/代谢",
         "specialty_related_diagnoses": {
-          "内分泌/代谢": [],
-          "消化": [],
-          "心血管": []
+          "内分泌/代谢": [
+            "Encounter for antineoplastic chemotherapy",
+            "Essential (primary) hypertension",
+            "Hyperlipidemia, unspecified",
+            "Mantle cell lymphoma, lymph nodes of multiple sites"
+          ],
+          "消化": [
+            "Acidosis",
+            "Fluid overload, unspecified",
+            "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+            "Myelophthisis"
+          ],
+          "心血管": [
+            "Dysuria",
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Mantle cell lymphoma, extranodal and solid organ sites",
+            "Nausea"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
       }
@@ -737,32 +904,32 @@
           {
             "rank": 1,
             "drug_name": "insulin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
             "drug_name": "levothyroxine sodium",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.72,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.67,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "calcium carbonate",
+            "confidence": 0.62,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "prednisone",
+            "confidence": 0.57,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -772,10 +939,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.92,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Encounter for antineoplastic chemotherapy, Essential (primary) hypertension, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, sodium bicarbonate。"
       }
     },
     {
@@ -824,9 +1012,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.92,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Acidosis, Fluid overload, unspecified, Hyperuricemia without signs of inflammatory arthritis and tophaceous disease 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -875,9 +1063,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.92,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Dysuria, Gastro-esophageal reflux disease without esophagitis, Mantle cell lymphoma, extranodal and solid organ sites 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -889,15 +1077,15 @@
         "accepted_drugs": [
           "insulin",
           "levothyroxine sodium",
+          "sodium bicarbonate",
           "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "prednisone"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -917,7 +1105,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -937,7 +1125,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -958,9 +1146,9 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
+              "sodium bicarbonate",
               "calcium carbonate",
               "prednisone",
-              "sodium bicarbonate",
               "pantoprazole"
             ],
             "medication_layers": {
@@ -973,7 +1161,13 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -991,9 +1185,9 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
+              "sodium bicarbonate",
               "calcium carbonate",
               "prednisone",
-              "sodium bicarbonate",
               "pantoprazole"
             ],
             "medication_layers": {
@@ -1006,7 +1200,13 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1024,21 +1224,28 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "sodium bicarbonate",
+              "calcium carbonate"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"
@@ -1059,9 +1266,9 @@
           "drugs": [
             "insulin",
             "levothyroxine sodium",
+            "sodium bicarbonate",
             "calcium carbonate",
             "prednisone",
-            "sodium bicarbonate",
             "pantoprazole"
           ],
           "medication_layers": {
@@ -1074,7 +1281,13 @@
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "oxycodone (immediate release)",
+              "senna",
+              "docusate sodium",
+              "ondansetron"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "sodium bicarbonate"
@@ -1093,9 +1306,9 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
+              "sodium bicarbonate",
               "calcium carbonate",
               "prednisone",
-              "sodium bicarbonate",
               "pantoprazole"
             ],
             "medication_layers": {
@@ -1108,7 +1321,13 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1168,9 +1387,9 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
+              "sodium bicarbonate",
               "calcium carbonate",
               "prednisone",
-              "sodium bicarbonate",
               "pantoprazole"
             ],
             "medication_layers": {
@@ -1183,7 +1402,13 @@
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "sodium bicarbonate"
@@ -1243,21 +1468,28 @@
             "drugs": [
               "insulin",
               "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "sodium bicarbonate",
+              "calcium carbonate"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "calcium carbonate"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "oxycodone (immediate release)",
+                "senna",
+                "docusate sodium",
+                "ondansetron"
+              ],
               "general_inpatient_medication": [],
-              "requires_review": []
+              "requires_review": [
+                "sodium bicarbonate"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"

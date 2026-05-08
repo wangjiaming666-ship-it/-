@@ -3,27 +3,69 @@
     "patient_info": {
       "subject_id": "12876250",
       "hadm_id": "22633810",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 75.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Subarachnoid hemorrhage",
     "active_specialties": [
       "呼吸",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "心血管": []
+      "呼吸": [
+        "Subarachnoid hemorrhage",
+        "Congestive heart failure, unspecified",
+        "Coronary atherosclerosis of native coronary artery",
+        "Intracerebral hemorrhage",
+        "Mitral valve disorders",
+        "Osteoporosis, unspecified",
+        "Other musculoskeletal symptoms referable to limbs",
+        "Other specified visual disturbances",
+        "Personal history of venous thrombosis and embolism",
+        "Unspecified essential hypertension"
+      ],
+      "心血管": [
+        "Chronic airway obstruction, not elsewhere classified",
+        "Constipation, unspecified",
+        "Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site",
+        "Long-term (current) use of anticoagulants",
+        "Neurologic neglect syndrome",
+        "Other and unspecified hyperlipidemia",
+        "Other specified cardiac dysrhythmias",
+        "Personal history of pulmonary embolism",
+        "Subdural hemorrhage",
+        "Urinary tract infection, site not specified"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Chronic airway obstruction, not elsewhere classified",
+      "Congestive heart failure, unspecified",
+      "Constipation, unspecified",
+      "Coronary atherosclerosis of native coronary artery",
+      "Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site",
+      "Intracerebral hemorrhage",
+      "Long-term (current) use of anticoagulants",
+      "Mitral valve disorders",
+      "Neurologic neglect syndrome",
+      "Osteoporosis, unspecified",
+      "Other and unspecified hyperlipidemia",
+      "Other musculoskeletal symptoms referable to limbs",
+      "Other specified cardiac dysrhythmias",
+      "Other specified visual disturbances",
+      "Personal history of pulmonary embolism",
+      "Personal history of venous thrombosis and embolism",
+      "Subdural hemorrhage",
+      "Unspecified essential hypertension",
+      "Urinary tract infection, site not specified"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 0.7,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.4,
+      "sodium_24h": 141.0,
+      "glucose_24h": 179.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -53,7 +95,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 12,
+      "subject_id": "12876250",
+      "hadm_id": "22633810",
+      "specialty_cnt": 2,
+      "specialty_list": "呼吸 | 心血管",
+      "gender": "F",
+      "anchor_age": 75,
+      "anchor_year_group": "2011 - 2013",
+      "admittime": "30/12/2132 05:30:00",
+      "dischtime": "3/1/2133 14:35:00",
+      "admission_type": "URGENT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Subarachnoid hemorrhage",
+      "comorbidity_list": "Chronic airway obstruction, not elsewhere classified | Congestive heart failure, unspecified | Constipation, unspecified | Coronary atherosclerosis of native coronary artery | Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site | Intracerebral hemorrhage | Long-term (current) use of anticoagulants | Mitral valve disorders | Neurologic neglect syndrome | Osteoporosis, unspecified | Other and unspecified hyperlipidemia | Other musculoskeletal symptoms referable to limbs | Other specified cardiac dysrhythmias | Other specified visual disturbances | Personal history of pulmonary embolism | Personal history of venous thrombosis and embolism | Subdural hemorrhage | Unspecified essential hypertension | Urinary tract infection, site not specified",
+      "specialty_agents": "呼吸 | 心血管",
+      "drug_list": "0.9% sodium chloride | 5% dextrose | acetaminophen | acetaminophen iv | bisacodyl | ciprofloxacin hcl | ciprofloxacin iv | dextrose 50% | famotidine | glucagon | glucose gel | hydralazine | hydromorphone (dilaudid) | insulin | ipratropium bromide mdi | iso-osmotic sodium chloride | lisinopril | metoprolol tartrate | ondansetron | phosphorus | potassium chloride | potassium chloride replacement (critical care and oncology) | pravastatin | prochlorperazine | sodium chloride 0.9% | sodium chloride 0.9%  flush | sw | tramadol (ultram)",
+      "creatinine_24h": 0.7,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.4,
+      "sodium_24h": 141.0,
+      "glucose_24h": 179.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -62,8 +130,30 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "心血管": []
+      "呼吸": [
+        "Subarachnoid hemorrhage",
+        "Congestive heart failure, unspecified",
+        "Coronary atherosclerosis of native coronary artery",
+        "Intracerebral hemorrhage",
+        "Mitral valve disorders",
+        "Osteoporosis, unspecified",
+        "Other musculoskeletal symptoms referable to limbs",
+        "Other specified visual disturbances",
+        "Personal history of venous thrombosis and embolism",
+        "Unspecified essential hypertension"
+      ],
+      "心血管": [
+        "Chronic airway obstruction, not elsewhere classified",
+        "Constipation, unspecified",
+        "Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site",
+        "Long-term (current) use of anticoagulants",
+        "Neurologic neglect syndrome",
+        "Other and unspecified hyperlipidemia",
+        "Other specified cardiac dysrhythmias",
+        "Personal history of pulmonary embolism",
+        "Subdural hemorrhage",
+        "Urinary tract infection, site not specified"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -108,11 +198,19 @@
         "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
-      "risk_alerts": [],
+      "risk_alerts": [
+        {
+          "lab_name": "potassium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "respiratory_potassium_risk",
+          "message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
+          "action_taken": "增加监测提示，并降低可能加重电解质紊乱方案的优先级。"
+        }
+      ],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Subarachnoid hemorrhage, Congestive heart failure, unspecified, Coronary atherosclerosis of native coronary artery 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
     },
     {
       "specialty_name": "心血管",
@@ -154,11 +252,19 @@
         "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
-      "risk_alerts": [],
+      "risk_alerts": [
+        {
+          "lab_name": "potassium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "cardiology_potassium_risk",
+          "message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+          "action_taken": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。"
+        }
+      ],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Chronic airway obstruction, not elsewhere classified, Constipation, unspecified, Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -174,9 +280,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "呼吸建议未发现明显跨专科冲突。"
+          "呼吸触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 10 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "心血管",
@@ -189,9 +295,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 10 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -458,10 +564,12 @@
           "心血管"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "patient_context_flags": [
+          "入院早期钾异常: 3.4"
+        ],
         "medication_impact_review": [
           {
             "drug_name": "furosemide",
@@ -472,7 +580,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
         "priority_order": 1
@@ -509,10 +619,12 @@
           "心血管"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "patient_context_flags": [
+          "入院早期钾异常: 3.4"
+        ],
         "medication_impact_review": [
           {
             "drug_name": "furosemide",
@@ -523,7 +635,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
         "priority_order": 2
@@ -554,18 +668,47 @@
           "呼吸"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
-        "patient_context_flags": [],
+        "patient_context_flags": [
+          "入院早期钾异常: 3.4"
+        ],
         "medication_impact_review": [],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
         "priority_order": 3
       }
     ],
-    "triggered_risks": [],
+    "triggered_risks": [
+      {
+        "specialty_name": "呼吸",
+        "rule_id": "respiratory_potassium_risk",
+        "lab_name": "potassium_24h",
+        "lab_value": 3.4,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "心血管",
+        "rule_id": "cardiology_potassium_risk",
+        "lab_name": "potassium_24h",
+        "lab_value": 3.4,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
     "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
     "llm_safety_review": {}
   },
@@ -581,8 +724,30 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "心血管": []
+          "呼吸": [
+            "Subarachnoid hemorrhage",
+            "Congestive heart failure, unspecified",
+            "Coronary atherosclerosis of native coronary artery",
+            "Intracerebral hemorrhage",
+            "Mitral valve disorders",
+            "Osteoporosis, unspecified",
+            "Other musculoskeletal symptoms referable to limbs",
+            "Other specified visual disturbances",
+            "Personal history of venous thrombosis and embolism",
+            "Unspecified essential hypertension"
+          ],
+          "心血管": [
+            "Chronic airway obstruction, not elsewhere classified",
+            "Constipation, unspecified",
+            "Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site",
+            "Long-term (current) use of anticoagulants",
+            "Neurologic neglect syndrome",
+            "Other and unspecified hyperlipidemia",
+            "Other specified cardiac dysrhythmias",
+            "Personal history of pulmonary embolism",
+            "Subdural hemorrhage",
+            "Urinary tract infection, site not specified"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -631,11 +796,19 @@
           "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
-        "risk_alerts": [],
+        "risk_alerts": [
+          {
+            "lab_name": "potassium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "respiratory_potassium_risk",
+            "message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
+            "action_taken": "增加监测提示，并降低可能加重电解质紊乱方案的优先级。"
+          }
+        ],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Subarachnoid hemorrhage, Congestive heart failure, unspecified, Coronary atherosclerosis of native coronary artery 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
       }
     },
     {
@@ -682,11 +855,19 @@
           "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
-        "risk_alerts": [],
+        "risk_alerts": [
+          {
+            "lab_name": "potassium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "cardiology_potassium_risk",
+            "message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+            "action_taken": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。"
+          }
+        ],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Chronic airway obstruction, not elsewhere classified, Constipation, unspecified, Friedländer's bacillus infection in conditions classified elsewhere and of unspecified site 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -704,9 +885,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "呼吸建议未发现明显跨专科冲突。"
+          "呼吸触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 10 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -724,9 +905,9 @@
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议未发现明显跨专科冲突。"
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 10 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -908,10 +1089,12 @@
               "心血管"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "patient_context_flags": [
+              "入院早期钾异常: 3.4"
+            ],
             "medication_impact_review": [
               {
                 "drug_name": "furosemide",
@@ -922,7 +1105,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
             "priority_order": 1
@@ -959,10 +1144,12 @@
               "心血管"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "patient_context_flags": [
+              "入院早期钾异常: 3.4"
+            ],
             "medication_impact_review": [
               {
                 "drug_name": "furosemide",
@@ -973,7 +1160,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
             "priority_order": 2
@@ -1004,18 +1193,47 @@
               "呼吸"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
-            "patient_context_flags": [],
+            "patient_context_flags": [
+              "入院早期钾异常: 3.4"
+            ],
             "medication_impact_review": [],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
             "priority_order": 3
           }
         ],
-        "triggered_risks": [],
+        "triggered_risks": [
+          {
+            "specialty_name": "呼吸",
+            "rule_id": "respiratory_potassium_risk",
+            "lab_name": "potassium_24h",
+            "lab_value": 3.4,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "心血管",
+            "rule_id": "cardiology_potassium_risk",
+            "lab_name": "potassium_24h",
+            "lab_value": 3.4,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
         "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
         "llm_safety_review": {}
       }

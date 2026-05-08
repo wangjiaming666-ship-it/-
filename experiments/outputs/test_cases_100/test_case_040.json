@@ -3,10 +3,10 @@
     "patient_info": {
       "subject_id": "16579495",
       "hadm_id": "26276807",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 57.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
     "active_specialties": [
       "呼吸",
       "神经",
@@ -14,20 +14,70 @@
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "神经": [],
-      "消化": [],
-      "心血管": []
+      "呼吸": [
+        "Encounter for antineoplastic chemotherapy",
+        "Anemia in neoplastic disease",
+        "Neoplasm related pain (acute) (chronic)",
+        "Peptic ulcer, site unspecified, unspecified as acute or chronic, without hemorrhage or perforation",
+        "Pleurodynia",
+        "Secondary malignant neoplasm of unspecified lung"
+      ],
+      "神经": [
+        "Acute embolism and thrombosis of left internal jugular vein",
+        "Essential (primary) hypertension",
+        "Other pulmonary embolism without acute cor pulmonale",
+        "Personal history of irradiation",
+        "Presence of other vascular implants and grafts",
+        "Thrombocytopenia, unspecified"
+      ],
+      "消化": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Long term (current) use of anticoagulants",
+        "Other secondary thrombocytopenia",
+        "Personal history of nicotine dependence",
+        "Prosthetic and other implants, materials and accessory cardiovascular devices associated with adverse incidents",
+        "Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter"
+      ],
+      "心血管": [
+        "Anemia due to antineoplastic chemotherapy",
+        "Malignant neoplasm of anterior mediastinum",
+        "Paroxysmal atrial fibrillation",
+        "Pleural effusion, not elsewhere classified",
+        "Secondary malignant neoplasm of bone"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute embolism and thrombosis of left internal jugular vein",
+      "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+      "Anemia due to antineoplastic chemotherapy",
+      "Anemia in neoplastic disease",
+      "Essential (primary) hypertension",
+      "Long term (current) use of anticoagulants",
+      "Malignant neoplasm of anterior mediastinum",
+      "Neoplasm related pain (acute) (chronic)",
+      "Other pulmonary embolism without acute cor pulmonale",
+      "Other secondary thrombocytopenia",
+      "Paroxysmal atrial fibrillation",
+      "Peptic ulcer, site unspecified, unspecified as acute or chronic, without hemorrhage or perforation",
+      "Personal history of irradiation",
+      "Personal history of nicotine dependence",
+      "Pleural effusion, not elsewhere classified",
+      "Pleurodynia",
+      "Presence of other vascular implants and grafts",
+      "Prosthetic and other implants, materials and accessory cardiovascular devices associated with adverse incidents",
+      "Secondary malignant neoplasm of bone",
+      "Secondary malignant neoplasm of unspecified lung",
+      "Thrombocytopenia, unspecified",
+      "Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 0.7,
+      "bun_24h": 11.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 140.0,
+      "glucose_24h": 114.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.2
     },
     "past_history": {},
     "key_vitals": {
@@ -57,7 +107,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 40,
+      "subject_id": "16579495",
+      "hadm_id": "26276807",
+      "specialty_cnt": 4,
+      "specialty_list": "呼吸 | 神经 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 57,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "16/2/2171 08:47:00",
+      "dischtime": "20/2/2171 18:00:00",
+      "admission_type": "ELECTIVE",
+      "race": "ASIAN - CHINESE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
+      "comorbidity_list": "Acute embolism and thrombosis of left internal jugular vein | Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter | Anemia due to antineoplastic chemotherapy | Anemia in neoplastic disease | Essential (primary) hypertension | Long term (current) use of anticoagulants | Malignant neoplasm of anterior mediastinum | Neoplasm related pain (acute) (chronic) | Other pulmonary embolism without acute cor pulmonale | Other secondary thrombocytopenia | Paroxysmal atrial fibrillation | Peptic ulcer, site unspecified, unspecified as acute or chronic, without hemorrhage or perforation | Personal history of irradiation | Personal history of nicotine dependence | Pleural effusion, not elsewhere classified | Pleurodynia | Presence of other vascular implants and grafts | Prosthetic and other implants, materials and accessory cardiovascular devices associated with adverse incidents | Secondary malignant neoplasm of bone | Secondary malignant neoplasm of unspecified lung | Thrombocytopenia, unspecified | Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter",
+      "specialty_agents": "呼吸 | 神经 | 消化 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.45% sodium chloride | 0.9% sodium chloride | 5% dextrose | acetaminophen | dexamethasone sod phosphate | diphenhydramine | enoxaparin sodium | fosaprepitant | furosemide | heparin flush (10 units/ml) | heparin flush (100 units/ml) | ifosfamide | liposomal doxorubicin (doxil) | lorazepam | mesna | metoprolol succinate xl | ondansetron | oxycodone (immediate release) | polyethylene glycol | prochlorperazine | senna | simethicone | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.7,
+      "bun_24h": 11.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 140.0,
+      "glucose_24h": 114.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.2
+    }
   },
   "routing": {
     "active_specialties": [
@@ -68,10 +144,37 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "神经": [],
-      "消化": [],
-      "心血管": []
+      "呼吸": [
+        "Encounter for antineoplastic chemotherapy",
+        "Anemia in neoplastic disease",
+        "Neoplasm related pain (acute) (chronic)",
+        "Peptic ulcer, site unspecified, unspecified as acute or chronic, without hemorrhage or perforation",
+        "Pleurodynia",
+        "Secondary malignant neoplasm of unspecified lung"
+      ],
+      "神经": [
+        "Acute embolism and thrombosis of left internal jugular vein",
+        "Essential (primary) hypertension",
+        "Other pulmonary embolism without acute cor pulmonale",
+        "Personal history of irradiation",
+        "Presence of other vascular implants and grafts",
+        "Thrombocytopenia, unspecified"
+      ],
+      "消化": [
+        "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+        "Long term (current) use of anticoagulants",
+        "Other secondary thrombocytopenia",
+        "Personal history of nicotine dependence",
+        "Prosthetic and other implants, materials and accessory cardiovascular devices associated with adverse incidents",
+        "Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter"
+      ],
+      "心血管": [
+        "Anemia due to antineoplastic chemotherapy",
+        "Malignant neoplasm of anterior mediastinum",
+        "Paroxysmal atrial fibrillation",
+        "Pleural effusion, not elsewhere classified",
+        "Secondary malignant neoplasm of bone"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -118,9 +221,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Encounter for antineoplastic chemotherapy, Anemia in neoplastic disease, Neoplasm related pain (acute) (chronic) 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
     },
     {
       "specialty_name": "神经",
@@ -164,9 +267,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute embolism and thrombosis of left internal jugular vein, Essential (primary) hypertension, Other pulmonary embolism without acute cor pulmonale 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
     },
     {
       "specialty_name": "消化",
@@ -210,42 +313,42 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Long term (current) use of anticoagulants, Other secondary thrombocytopenia 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.77,
+          "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "warfarin",
+          "confidence": 0.72,
+          "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "furosemide",
+          "confidence": 0.67,
+          "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "metoprolol succinate xl",
+          "confidence": 0.62,
+          "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.57,
+          "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -255,10 +358,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.95,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Anemia due to antineoplastic chemotherapy, Malignant neoplasm of anterior mediastinum, Paroxysmal atrial fibrillation 生成候选药物，当前首选药物包括 metoprolol tartrate, warfarin, furosemide。"
     }
   ],
   "mdt_discussion": {
@@ -276,7 +400,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "神经",
@@ -291,7 +415,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "消化",
@@ -306,22 +430,22 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "warfarin",
+          "furosemide",
+          "metoprolol succinate xl",
+          "aspirin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -350,7 +474,12 @@
             "albuterol inhaler"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin",
@@ -382,7 +511,12 @@
             "albuterol inhaler"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin",
@@ -411,7 +545,12 @@
             "prednisone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -444,7 +583,12 @@
           "albuterol inhaler"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "oxycodone (immediate release)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin",
@@ -476,7 +620,12 @@
           "albuterol inhaler"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "oxycodone (immediate release)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin",
@@ -505,7 +654,12 @@
           "prednisone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "oxycodone (immediate release)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin"
@@ -537,7 +691,12 @@
           "albuterol inhaler"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "senna",
+          "oxycodone (immediate release)",
+          "docusate sodium"
+        ],
         "general_inpatient_medication": [],
         "requires_review": [
           "azithromycin",
@@ -570,7 +729,12 @@
             "albuterol inhaler"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin",
@@ -611,7 +775,12 @@
             "albuterol inhaler"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin",
@@ -649,7 +818,12 @@
             "prednisone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "senna",
+            "oxycodone (immediate release)",
+            "docusate sodium"
+          ],
           "general_inpatient_medication": [],
           "requires_review": [
             "azithromycin"
@@ -688,10 +862,37 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "神经": [],
-          "消化": [],
-          "心血管": []
+          "呼吸": [
+            "Encounter for antineoplastic chemotherapy",
+            "Anemia in neoplastic disease",
+            "Neoplasm related pain (acute) (chronic)",
+            "Peptic ulcer, site unspecified, unspecified as acute or chronic, without hemorrhage or perforation",
+            "Pleurodynia",
+            "Secondary malignant neoplasm of unspecified lung"
+          ],
+          "神经": [
+            "Acute embolism and thrombosis of left internal jugular vein",
+            "Essential (primary) hypertension",
+            "Other pulmonary embolism without acute cor pulmonale",
+            "Personal history of irradiation",
+            "Presence of other vascular implants and grafts",
+            "Thrombocytopenia, unspecified"
+          ],
+          "消化": [
+            "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+            "Long term (current) use of anticoagulants",
+            "Other secondary thrombocytopenia",
+            "Personal history of nicotine dependence",
+            "Prosthetic and other implants, materials and accessory cardiovascular devices associated with adverse incidents",
+            "Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter"
+          ],
+          "心血管": [
+            "Anemia due to antineoplastic chemotherapy",
+            "Malignant neoplasm of anterior mediastinum",
+            "Paroxysmal atrial fibrillation",
+            "Pleural effusion, not elsewhere classified",
+            "Secondary malignant neoplasm of bone"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -742,9 +943,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Encounter for antineoplastic chemotherapy, Anemia in neoplastic disease, Neoplasm related pain (acute) (chronic) 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
       }
     },
     {
@@ -793,9 +994,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute embolism and thrombosis of left internal jugular vein, Essential (primary) hypertension, Other pulmonary embolism without acute cor pulmonale 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
       }
     },
     {
@@ -844,9 +1045,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter, Long term (current) use of anticoagulants, Other secondary thrombocytopenia 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
       }
     },
     {
@@ -858,33 +1059,33 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.77,
+            "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "warfarin",
+            "confidence": 0.72,
+            "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "furosemide",
+            "confidence": 0.67,
+            "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "metoprolol succinate xl",
+            "confidence": 0.62,
+            "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.57,
+            "reason": "与诊断 Paroxysmal atrial fibrillation 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -894,10 +1095,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Paroxysmal atrial fibrillation 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.95,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Anemia due to antineoplastic chemotherapy, Malignant neoplasm of anterior mediastinum, Paroxysmal atrial fibrillation 生成候选药物，当前首选药物包括 metoprolol tartrate, warfarin, furosemide。"
       }
     },
     {
@@ -917,7 +1139,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -937,7 +1159,7 @@
         "conflict_notes": [
           "神经建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "神经与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -957,7 +1179,7 @@
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "消化与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -967,17 +1189,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
           "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "warfarin",
+          "furosemide",
+          "metoprolol succinate xl",
+          "aspirin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1011,7 +1233,12 @@
                 "albuterol inhaler"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin",
@@ -1043,7 +1270,12 @@
                 "albuterol inhaler"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin",
@@ -1072,7 +1304,12 @@
                 "prednisone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"
@@ -1110,7 +1347,12 @@
               "albuterol inhaler"
             ],
             "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [],
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "senna",
+              "oxycodone (immediate release)",
+              "docusate sodium"
+            ],
             "general_inpatient_medication": [],
             "requires_review": [
               "azithromycin",
@@ -1143,7 +1385,12 @@
                 "albuterol inhaler"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin",
@@ -1184,7 +1431,12 @@
                 "albuterol inhaler"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin",
@@ -1222,7 +1474,12 @@
                 "prednisone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "senna",
+                "oxycodone (immediate release)",
+                "docusate sodium"
+              ],
               "general_inpatient_medication": [],
               "requires_review": [
                 "azithromycin"

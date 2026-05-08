@@ -3,27 +3,39 @@
     "patient_info": {
       "subject_id": "10096381",
       "hadm_id": "29951795",
-      "gender": null,
-      "age": null
+      "gender": "M",
+      "age": 43.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Gastrointestinal hemorrhage, unspecified",
     "active_specialties": [
       "消化",
       "心血管"
     ],
     "specialty_diagnosis_map": {
-      "消化": [],
-      "心血管": []
+      "消化": [
+        "Gastrointestinal hemorrhage, unspecified",
+        "Essential (primary) hypertension",
+        "Polyp of colon"
+      ],
+      "心血管": [
+        "Acute posthemorrhagic anemia",
+        "Personal history of nicotine dependence"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "Acute posthemorrhagic anemia",
+      "Essential (primary) hypertension",
+      "Personal history of nicotine dependence",
+      "Polyp of colon"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 1.0,
+      "bun_24h": 15.0,
+      "potassium_24h": 4.1,
+      "sodium_24h": 138.0,
+      "glucose_24h": 96.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -53,7 +65,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 74,
+      "subject_id": "10096381",
+      "hadm_id": "29951795",
+      "specialty_cnt": 2,
+      "specialty_list": "消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 43,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "16/10/2189 01:52:00",
+      "dischtime": "17/10/2189 16:05:00",
+      "admission_type": "EW EMER.",
+      "race": "WHITE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Gastrointestinal hemorrhage, unspecified",
+      "comorbidity_list": "Acute posthemorrhagic anemia | Essential (primary) hypertension | Personal history of nicotine dependence | Polyp of colon",
+      "specialty_agents": "消化 | 心血管",
+      "drug_list": "acetaminophen | docusate sodium | influenza vaccine quadrivalent | moviprep | senna | sodium chloride 0.9%  flush",
+      "creatinine_24h": 1.0,
+      "bun_24h": 15.0,
+      "potassium_24h": 4.1,
+      "sodium_24h": 138.0,
+      "glucose_24h": 96.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -62,8 +100,15 @@
     ],
     "lead_specialty": "消化",
     "specialty_related_diagnoses": {
-      "消化": [],
-      "心血管": []
+      "消化": [
+        "Gastrointestinal hemorrhage, unspecified",
+        "Essential (primary) hypertension",
+        "Polyp of colon"
+      ],
+      "心血管": [
+        "Acute posthemorrhagic anemia",
+        "Personal history of nicotine dependence"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 消化。"
   },
@@ -74,32 +119,32 @@
         {
           "rank": 1,
           "drug_name": "pantoprazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
         },
         {
           "rank": 2,
-          "drug_name": "metronidazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "omeprazole",
+          "confidence": 0.72,
+          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
         },
         {
           "rank": 3,
-          "drug_name": "omeprazole",
-          "confidence": 0.89,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ceftriaxone",
+          "confidence": 0.67,
+          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
         },
         {
           "rank": 4,
-          "drug_name": "ciprofloxacin iv",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "lactulose",
+          "confidence": 0.62,
+          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
         },
         {
           "rank": 5,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "methylprednisolone sodium succ",
+          "confidence": 0.57,
+          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
         }
       ],
       "recommendation_reasons": {
@@ -109,10 +154,31 @@
         "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "influenza vaccine quadrivalent",
+          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
       "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension, Polyp of colon 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, ceftriaxone。"
     },
     {
       "specialty_name": "心血管",
@@ -156,9 +222,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.86,
       "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
     }
   ],
   "mdt_discussion": {
@@ -167,16 +233,16 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "心血管",
@@ -191,7 +257,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -206,26 +272,32 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl",
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ",
           "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv",
-            "ciprofloxacin hcl"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
             "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose",
+            "methylprednisolone sodium succ"
+          ]
         },
         "supporting_specialties": [
           "心血管",
@@ -238,26 +310,32 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl",
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ",
           "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv",
-            "ciprofloxacin hcl"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
             "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose",
+            "methylprednisolone sodium succ"
+          ]
         },
         "supporting_specialties": [
           "心血管",
@@ -270,21 +348,27 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv"
+          "ceftriaxone",
+          "lactulose"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose"
+          ]
         },
         "supporting_specialties": [
           "消化"
@@ -299,26 +383,32 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "pantoprazole",
-        "metronidazole",
         "omeprazole",
-        "ciprofloxacin iv",
-        "ciprofloxacin hcl",
+        "ceftriaxone",
+        "lactulose",
+        "methylprednisolone sodium succ",
         "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
           "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "ondansetron"
+        ],
+        "general_inpatient_medication": [
+          "influenza vaccine quadrivalent"
+        ],
+        "requires_review": [
+          "lactulose",
+          "methylprednisolone sodium succ"
+        ]
       },
       "supporting_specialties": [
         "心血管",
@@ -331,26 +421,32 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "pantoprazole",
-        "metronidazole",
         "omeprazole",
-        "ciprofloxacin iv",
-        "ciprofloxacin hcl",
+        "ceftriaxone",
+        "lactulose",
+        "methylprednisolone sodium succ",
         "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
           "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "ondansetron"
+        ],
+        "general_inpatient_medication": [
+          "influenza vaccine quadrivalent"
+        ],
+        "requires_review": [
+          "lactulose",
+          "methylprednisolone sodium succ"
+        ]
       },
       "supporting_specialties": [
         "心血管",
@@ -363,21 +459,27 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "pantoprazole",
-        "metronidazole",
         "omeprazole",
-        "ciprofloxacin iv"
+        "ceftriaxone",
+        "lactulose"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "ondansetron"
+        ],
+        "general_inpatient_medication": [
+          "influenza vaccine quadrivalent"
+        ],
+        "requires_review": [
+          "lactulose"
+        ]
       },
       "supporting_specialties": [
         "消化"
@@ -391,26 +493,32 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "pantoprazole",
-        "metronidazole",
         "omeprazole",
-        "ciprofloxacin iv",
-        "ciprofloxacin hcl",
+        "ceftriaxone",
+        "lactulose",
+        "methylprednisolone sodium succ",
         "furosemide"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
           "furosemide"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "supportive_or_symptomatic_therapy": [
+          "acetaminophen",
+          "ondansetron"
+        ],
+        "general_inpatient_medication": [
+          "influenza vaccine quadrivalent"
+        ],
+        "requires_review": [
+          "lactulose",
+          "methylprednisolone sodium succ"
+        ]
       },
       "supporting_specialties": [
         "心血管",
@@ -424,26 +532,32 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl",
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ",
           "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv",
-            "ciprofloxacin hcl"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
             "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose",
+            "methylprednisolone sodium succ"
+          ]
         },
         "supporting_specialties": [
           "心血管",
@@ -467,22 +581,6 @@
             "drug_name": "omeprazole",
             "potential_impacts": [
               "胃酸抑制相关支持/治疗药物，通常安全性较高"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "ciprofloxacin iv",
-            "potential_impacts": [
-              "抗感染药物需结合肾功能、培养和耐药结果复核"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "ciprofloxacin hcl",
-            "potential_impacts": [
-              "抗感染药物需结合肾功能、培养和耐药结果复核"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -506,26 +604,32 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl",
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ",
           "furosemide"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv",
-            "ciprofloxacin hcl"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
             "furosemide"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose",
+            "methylprednisolone sodium succ"
+          ]
         },
         "supporting_specialties": [
           "心血管",
@@ -554,22 +658,6 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "ciprofloxacin iv",
-            "potential_impacts": [
-              "抗感染药物需结合肾功能、培养和耐药结果复核"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "ciprofloxacin hcl",
-            "potential_impacts": [
-              "抗感染药物需结合肾功能、培养和耐药结果复核"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
             "drug_name": "furosemide",
             "potential_impacts": [
               "可能影响容量状态和水电解质平衡"
@@ -588,21 +676,27 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv"
+          "ceftriaxone",
+          "lactulose"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "supportive_or_symptomatic_therapy": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "general_inpatient_medication": [
+            "influenza vaccine quadrivalent"
+          ],
+          "requires_review": [
+            "lactulose"
+          ]
         },
         "supporting_specialties": [
           "消化"
@@ -625,14 +719,6 @@
             "drug_name": "omeprazole",
             "potential_impacts": [
               "胃酸抑制相关支持/治疗药物，通常安全性较高"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "ciprofloxacin iv",
-            "potential_impacts": [
-              "抗感染药物需结合肾功能、培养和耐药结果复核"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -660,8 +746,15 @@
         ],
         "lead_specialty": "消化",
         "specialty_related_diagnoses": {
-          "消化": [],
-          "心血管": []
+          "消化": [
+            "Gastrointestinal hemorrhage, unspecified",
+            "Essential (primary) hypertension",
+            "Polyp of colon"
+          ],
+          "心血管": [
+            "Acute posthemorrhagic anemia",
+            "Personal history of nicotine dependence"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 消化。"
       }
@@ -676,32 +769,32 @@
           {
             "rank": 1,
             "drug_name": "pantoprazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
           },
           {
             "rank": 2,
-            "drug_name": "metronidazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "omeprazole",
+            "confidence": 0.72,
+            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
           },
           {
             "rank": 3,
-            "drug_name": "omeprazole",
-            "confidence": 0.89,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ceftriaxone",
+            "confidence": 0.67,
+            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
           },
           {
             "rank": 4,
-            "drug_name": "ciprofloxacin iv",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "lactulose",
+            "confidence": 0.62,
+            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
           },
           {
             "rank": 5,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "methylprednisolone sodium succ",
+            "confidence": 0.57,
+            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
           }
         ],
         "recommendation_reasons": {
@@ -711,10 +804,31 @@
           "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "magnesium sulfate",
+            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "influenza vaccine quadrivalent",
+            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
         "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension, Polyp of colon 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, ceftriaxone。"
       }
     },
     {
@@ -763,9 +877,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.86,
         "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
       }
     },
     {
@@ -776,16 +890,16 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "ceftriaxone",
+          "lactulose",
+          "methylprednisolone sodium succ"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "消化建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "消化与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -805,7 +919,7 @@
         "conflict_notes": [
           "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 2 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -825,26 +939,32 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv",
-              "ciprofloxacin hcl",
+              "ceftriaxone",
+              "lactulose",
+              "methylprednisolone sodium succ",
               "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv",
-                "ciprofloxacin hcl"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
                 "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose",
+                "methylprednisolone sodium succ"
+              ]
             },
             "supporting_specialties": [
               "心血管",
@@ -857,26 +977,32 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv",
-              "ciprofloxacin hcl",
+              "ceftriaxone",
+              "lactulose",
+              "methylprednisolone sodium succ",
               "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv",
-                "ciprofloxacin hcl"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
                 "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose",
+                "methylprednisolone sodium succ"
+              ]
             },
             "supporting_specialties": [
               "心血管",
@@ -889,21 +1015,27 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv"
+              "ceftriaxone",
+              "lactulose"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose"
+              ]
             },
             "supporting_specialties": [
               "消化"
@@ -923,26 +1055,32 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "pantoprazole",
-            "metronidazole",
             "omeprazole",
-            "ciprofloxacin iv",
-            "ciprofloxacin hcl",
+            "ceftriaxone",
+            "lactulose",
+            "methylprednisolone sodium succ",
             "furosemide"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv",
-              "ciprofloxacin hcl"
+              "ceftriaxone"
             ],
             "risk_modifying_therapy": [
               "furosemide"
             ],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
-            "requires_review": []
+            "supportive_or_symptomatic_therapy": [
+              "acetaminophen",
+              "ondansetron"
+            ],
+            "general_inpatient_medication": [
+              "influenza vaccine quadrivalent"
+            ],
+            "requires_review": [
+              "lactulose",
+              "methylprednisolone sodium succ"
+            ]
           },
           "supporting_specialties": [
             "心血管",
@@ -956,26 +1094,32 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv",
-              "ciprofloxacin hcl",
+              "ceftriaxone",
+              "lactulose",
+              "methylprednisolone sodium succ",
               "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv",
-                "ciprofloxacin hcl"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
                 "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose",
+                "methylprednisolone sodium succ"
+              ]
             },
             "supporting_specialties": [
               "心血管",
@@ -999,22 +1143,6 @@
                 "drug_name": "omeprazole",
                 "potential_impacts": [
                   "胃酸抑制相关支持/治疗药物，通常安全性较高"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "ciprofloxacin iv",
-                "potential_impacts": [
-                  "抗感染药物需结合肾功能、培养和耐药结果复核"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "ciprofloxacin hcl",
-                "potential_impacts": [
-                  "抗感染药物需结合肾功能、培养和耐药结果复核"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1038,26 +1166,32 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv",
-              "ciprofloxacin hcl",
+              "ceftriaxone",
+              "lactulose",
+              "methylprednisolone sodium succ",
               "furosemide"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv",
-                "ciprofloxacin hcl"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
                 "furosemide"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose",
+                "methylprednisolone sodium succ"
+              ]
             },
             "supporting_specialties": [
               "心血管",
@@ -1086,22 +1220,6 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "ciprofloxacin iv",
-                "potential_impacts": [
-                  "抗感染药物需结合肾功能、培养和耐药结果复核"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "ciprofloxacin hcl",
-                "potential_impacts": [
-                  "抗感染药物需结合肾功能、培养和耐药结果复核"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
                 "drug_name": "furosemide",
                 "potential_impacts": [
                   "可能影响容量状态和水电解质平衡"
@@ -1120,21 +1238,27 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "pantoprazole",
-              "metronidazole",
               "omeprazole",
-              "ciprofloxacin iv"
+              "ceftriaxone",
+              "lactulose"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
                 "pantoprazole",
-                "metronidazole",
                 "omeprazole",
-                "ciprofloxacin iv"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "supportive_or_symptomatic_therapy": [
+                "acetaminophen",
+                "ondansetron"
+              ],
+              "general_inpatient_medication": [
+                "influenza vaccine quadrivalent"
+              ],
+              "requires_review": [
+                "lactulose"
+              ]
             },
             "supporting_specialties": [
               "消化"
@@ -1157,14 +1281,6 @@
                 "drug_name": "omeprazole",
                 "potential_impacts": [
                   "胃酸抑制相关支持/治疗药物，通常安全性较高"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "ciprofloxacin iv",
-                "potential_impacts": [
-                  "抗感染药物需结合肾功能、培养和耐药结果复核"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

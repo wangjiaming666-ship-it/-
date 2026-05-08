@@ -3,27 +3,49 @@
     "patient_info": {
       "subject_id": "18817606",
       "hadm_id": "21617693",
-      "gender": null,
-      "age": null
+      "gender": "F",
+      "age": 34.0
     },
-    "primary_diagnosis": "Unknown primary diagnosis",
+    "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
     "active_specialties": [
       "呼吸",
       "内分泌/代谢"
     ],
     "specialty_diagnosis_map": {
-      "呼吸": [],
-      "内分泌/代谢": []
+      "呼吸": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+        "Personal history of COVID-19",
+        "Single live birth",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      "内分泌/代谢": [
+        "38 weeks gestation of pregnancy",
+        "Diseases of the respiratory system complicating childbirth",
+        "Second degree perineal laceration during delivery",
+        "Streptococcus B carrier state complicating childbirth",
+        "Unspecified asthma, uncomplicated"
+      ]
     },
-    "comorbidity_list": [],
+    "comorbidity_list": [
+      "38 weeks gestation of pregnancy",
+      "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+      "Diseases of the respiratory system complicating childbirth",
+      "Personal history of COVID-19",
+      "Second degree perineal laceration during delivery",
+      "Single live birth",
+      "Streptococcus B carrier state complicating childbirth",
+      "Type 2 diabetes mellitus without complications",
+      "Unspecified asthma, uncomplicated"
+    ],
     "key_labs": {
-      "creatinine_24h": null,
-      "bun_24h": null,
-      "potassium_24h": null,
-      "sodium_24h": null,
-      "glucose_24h": null,
-      "inr_24h": null,
-      "bilirubin_total_24h": null
+      "creatinine_24h": 0.6,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
     },
     "past_history": {},
     "key_vitals": {
@@ -53,7 +75,33 @@
     "microbiology_features": {},
     "icu_features": {},
     "outcome_features": {},
-    "raw_case_summary": {}
+    "raw_case_summary": {
+      "sample_id": 32,
+      "subject_id": "18817606",
+      "hadm_id": "21617693",
+      "specialty_cnt": 2,
+      "specialty_list": "呼吸 | 内分泌/代谢",
+      "gender": "F",
+      "anchor_age": 34,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "14/9/2180 09:21:00",
+      "dischtime": "17/9/2180 13:02:00",
+      "admission_type": "URGENT",
+      "race": "OTHER",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
+      "comorbidity_list": "38 weeks gestation of pregnancy | Abnormality in fetal heart rate and rhythm complicating labor and delivery | Diseases of the respiratory system complicating childbirth | Personal history of COVID-19 | Second degree perineal laceration during delivery | Single live birth | Streptococcus B carrier state complicating childbirth | Type 2 diabetes mellitus without complications | Unspecified asthma, uncomplicated",
+      "specialty_agents": "呼吸 | 内分泌/代谢",
+      "drug_list": "acetaminophen | albuterol inhaler | calcium carbonate | dermoplast spray | docusate sodium | enoxaparin sodium | fluticasone-salmeterol diskus (250/50) | fluticasone propionate 110mcg | ibuprofen | lactated ringers | ondansetron | simethicone | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.6,
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
   },
   "routing": {
     "active_specialties": [
@@ -62,8 +110,20 @@
     ],
     "lead_specialty": "呼吸",
     "specialty_related_diagnoses": {
-      "呼吸": [],
-      "内分泌/代谢": []
+      "呼吸": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+        "Personal history of COVID-19",
+        "Single live birth",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      "内分泌/代谢": [
+        "38 weeks gestation of pregnancy",
+        "Diseases of the respiratory system complicating childbirth",
+        "Second degree perineal laceration during delivery",
+        "Streptococcus B carrier state complicating childbirth",
+        "Unspecified asthma, uncomplicated"
+      ]
     },
     "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
   },
@@ -110,9 +170,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery, Personal history of COVID-19 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -156,9 +216,9 @@
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.8,
+      "overall_confidence": 0.95,
       "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth, Second degree perineal laceration during delivery 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
     }
   ],
   "mdt_discussion": {
@@ -176,7 +236,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "内分泌/代谢",
@@ -191,7 +251,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
@@ -584,8 +644,20 @@
         ],
         "lead_specialty": "呼吸",
         "specialty_related_diagnoses": {
-          "呼吸": [],
-          "内分泌/代谢": []
+          "呼吸": [
+            "Pre-existing type 2 diabetes mellitus, in childbirth",
+            "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+            "Personal history of COVID-19",
+            "Single live birth",
+            "Type 2 diabetes mellitus without complications"
+          ],
+          "内分泌/代谢": [
+            "38 weeks gestation of pregnancy",
+            "Diseases of the respiratory system complicating childbirth",
+            "Second degree perineal laceration during delivery",
+            "Streptococcus B carrier state complicating childbirth",
+            "Unspecified asthma, uncomplicated"
+          ]
         },
         "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
       }
@@ -636,9 +708,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery, Personal history of COVID-19 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
       }
     },
     {
@@ -687,9 +759,9 @@
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.8,
+        "overall_confidence": 0.95,
         "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 本专科主要问题 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth, Second degree perineal laceration during delivery 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
       }
     },
     {
@@ -709,7 +781,7 @@
         "conflict_notes": [
           "呼吸建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "呼吸与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -729,7 +801,7 @@
         "conflict_notes": [
           "内分泌/代谢建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "内分泌/代谢与当前病例 0 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
