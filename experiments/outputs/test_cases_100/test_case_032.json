@@ -133,46 +133,79 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "albuterol 0.083% neb soln",
+          "drug_name": "albuterol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
         },
         {
           "rank": 2,
-          "drug_name": "ipratropium bromide neb",
+          "drug_name": "ipratropium",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
         },
         {
           "rank": 3,
-          "drug_name": "prednisone",
+          "drug_name": "budesonide",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
         },
         {
           "rank": 4,
-          "drug_name": "azithromycin",
+          "drug_name": "fluticasone",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
         },
         {
           "rank": 5,
-          "drug_name": "albuterol inhaler",
+          "drug_name": "salmeterol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery, Personal history of COVID-19 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -181,44 +214,77 @@
           "rank": 1,
           "drug_name": "insulin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
+          "drug_name": "metformin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
+          "drug_name": "glipizide",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "insulin glargine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "insulin lispro",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth, Second degree perineal laceration during delivery 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     }
   ],
   "mdt_discussion": {
@@ -226,11 +292,11 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -242,10 +308,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -265,27 +331,45 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler",
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
@@ -298,27 +382,45 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler",
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
@@ -331,26 +433,43 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "azithromycin"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
-          "内分泌/代谢",
           "呼吸"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -362,27 +481,45 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
-        "albuterol inhaler",
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
         ]
       },
       "supporting_specialties": [
@@ -395,27 +532,45 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
-        "albuterol inhaler",
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
         ]
       },
       "supporting_specialties": [
@@ -428,26 +583,43 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "prednisone",
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "azithromycin"
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin"
+          "budesonide",
+          "fluticasone",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
         ]
       },
       "supporting_specialties": [
-        "内分泌/代谢",
         "呼吸"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -458,27 +630,45 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin",
-        "albuterol inhaler",
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
         ]
       },
       "supporting_specialties": [
@@ -492,27 +682,45 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler",
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
@@ -543,27 +751,45 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler",
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
@@ -594,26 +820,43 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "azithromycin"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
           ]
         },
         "supporting_specialties": [
-          "内分泌/代谢",
           "呼吸"
         ],
         "review_flags": [
@@ -671,46 +914,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "albuterol 0.083% neb soln",
+            "drug_name": "albuterol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
           },
           {
             "rank": 2,
-            "drug_name": "ipratropium bromide neb",
+            "drug_name": "ipratropium",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
           },
           {
             "rank": 3,
-            "drug_name": "prednisone",
+            "drug_name": "budesonide",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
           },
           {
             "rank": 4,
-            "drug_name": "azithromycin",
+            "drug_name": "fluticasone",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
           },
           {
             "rank": 5,
-            "drug_name": "albuterol inhaler",
+            "drug_name": "salmeterol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery, Personal history of COVID-19 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
       }
     },
     {
@@ -724,44 +1000,77 @@
             "rank": 1,
             "drug_name": "insulin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "metformin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
+            "drug_name": "glipizide",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "insulin glargine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "insulin lispro",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth, Second degree perineal laceration during delivery 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -771,11 +1080,11 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin",
-          "albuterol inhaler"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -792,10 +1101,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -820,27 +1129,45 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
-              "albuterol inhaler",
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
@@ -853,27 +1180,45 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
-              "albuterol inhaler",
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
@@ -886,26 +1231,43 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "azithromycin"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
-              "内分泌/代谢",
               "呼吸"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
@@ -922,27 +1284,45 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "azithromycin",
-            "albuterol inhaler",
+            "albuterol",
+            "ipratropium",
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
             "insulin"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "albuterol inhaler"
+              "albuterol",
+              "ipratropium"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "azithromycin"
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "ibuprofen",
+              "ketorolac",
+              "vitamin d"
             ]
           },
           "supporting_specialties": [
@@ -956,27 +1336,45 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
-              "albuterol inhaler",
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
@@ -1007,27 +1405,45 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin",
-              "albuterol inhaler",
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
@@ -1058,26 +1474,43 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "azithromycin"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
               ]
             },
             "supporting_specialties": [
-              "内分泌/代谢",
               "呼吸"
             ],
             "review_flags": [

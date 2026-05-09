@@ -181,138 +181,237 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "albuterol 0.083% neb soln",
+          "drug_name": "oseltamivir",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
         },
         {
           "rank": 2,
-          "drug_name": "ipratropium bromide neb",
+          "drug_name": "methylprednisolone",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；systemic glucocorticoid with anti inflammatory effect"
         },
         {
           "rank": 3,
-          "drug_name": "prednisone",
+          "drug_name": "azithromycin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
         },
         {
           "rank": 4,
-          "drug_name": "azithromycin",
+          "drug_name": "ceftriaxone",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
         },
         {
           "rank": 5,
-          "drug_name": "albuterol inhaler",
+          "drug_name": "piperacillin tazobactam",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Aneurysm of other specified arteries, Contusion of bladder, initial encounter 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Major laceration of liver, initial encounter, Aneurysm of other specified arteries 生成候选药物，当前首选药物包括 oseltamivir, methylprednisolone, azithromycin。"
     },
     {
       "specialty_name": "神经",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "gabapentin",
+          "drug_name": "donepezil",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
+          "drug_name": "alteplase",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
+          "drug_name": "memantine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "phenytoin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Auditory hallucinations, Contusion of lung, unspecified, initial encounter 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Acute posthemorrhagic anemia, Auditory hallucinations 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "norepinephrine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；alpha and beta adrenergic agonist raises vascular tone and blood pressure"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "clopidogrel",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ticagrelor",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reversibly inhibits platelet P2Y12 receptor"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "nitroglycerin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute respiratory distress syndrome, Car driver injured in collision with other type car in traffic accident, initial encounter, Delirium due to known physiological condition 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Acute respiratory distress syndrome, Car driver injured in collision with other type car in traffic accident, initial encounter 生成候选药物，当前首选药物包括 norepinephrine, aspirin, clopidogrel。"
     }
   ],
   "mdt_discussion": {
@@ -320,11 +419,11 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler"
+          "ceftriaxone",
+          "piperacillin tazobactam"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -335,11 +434,11 @@
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -350,11 +449,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
+          "norepinephrine",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "ticagrelor",
+          "nitroglycerin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -374,26 +473,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler",
-          "gabapentin"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin",
-            "gabapentin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -406,26 +527,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler",
-          "gabapentin"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin",
-            "gabapentin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -438,22 +581,44 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin"
+          "oseltamivir",
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "oseltamivir",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -468,26 +633,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
+        "methylprednisolone",
         "azithromycin",
-        "albuterol inhaler",
-        "gabapentin"
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin",
-          "gabapentin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -500,26 +687,48 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
+        "methylprednisolone",
         "azithromycin",
-        "albuterol inhaler",
-        "gabapentin"
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin",
-          "gabapentin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -532,22 +741,44 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
-        "azithromycin"
+        "oseltamivir",
+        "methylprednisolone",
+        "azithromycin",
+        "ceftriaxone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone"
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin"
+          "oseltamivir",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -561,26 +792,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
+        "methylprednisolone",
         "azithromycin",
-        "albuterol inhaler",
-        "gabapentin"
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [],
-        "general_inpatient_medication": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "azithromycin",
-          "gabapentin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -594,26 +847,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler",
-          "gabapentin"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin",
-            "gabapentin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -635,26 +910,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler",
-          "gabapentin"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin",
-            "gabapentin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -676,22 +973,44 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "azithromycin"
+          "oseltamivir",
+          "methylprednisolone",
+          "azithromycin",
+          "ceftriaxone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone"
+            "methylprednisolone",
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [],
-          "general_inpatient_medication": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "azithromycin"
+            "oseltamivir",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -769,46 +1088,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "albuterol 0.083% neb soln",
+            "drug_name": "oseltamivir",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
           },
           {
             "rank": 2,
-            "drug_name": "ipratropium bromide neb",
+            "drug_name": "methylprednisolone",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；systemic glucocorticoid with anti inflammatory effect"
           },
           {
             "rank": 3,
-            "drug_name": "prednisone",
+            "drug_name": "azithromycin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
           },
           {
             "rank": 4,
-            "drug_name": "azithromycin",
+            "drug_name": "ceftriaxone",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
           },
           {
             "rank": 5,
-            "drug_name": "albuterol inhaler",
+            "drug_name": "piperacillin tazobactam",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Aneurysm of other specified arteries, Contusion of bladder, initial encounter 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Major laceration of liver, initial encounter, Aneurysm of other specified arteries 生成候选药物，当前首选药物包括 oseltamivir, methylprednisolone, azithromycin。"
       }
     },
     {
@@ -820,46 +1172,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "gabapentin",
+            "drug_name": "donepezil",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
+            "drug_name": "alteplase",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
+            "drug_name": "memantine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "phenytoin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Auditory hallucinations, Contusion of lung, unspecified, initial encounter 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Acute posthemorrhagic anemia, Auditory hallucinations 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
       }
     },
     {
@@ -871,46 +1256,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "norepinephrine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；alpha and beta adrenergic agonist raises vascular tone and blood pressure"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "clopidogrel",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ticagrelor",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reversibly inhibits platelet P2Y12 receptor"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "nitroglycerin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute respiratory distress syndrome, Car driver injured in collision with other type car in traffic accident, initial encounter, Delirium due to known physiological condition 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Major laceration of liver, initial encounter, Acute respiratory distress syndrome, Car driver injured in collision with other type car in traffic accident, initial encounter 生成候选药物，当前首选药物包括 norepinephrine, aspirin, clopidogrel。"
       }
     },
     {
@@ -920,11 +1338,11 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
+          "methylprednisolone",
           "azithromycin",
-          "albuterol inhaler"
+          "ceftriaxone",
+          "piperacillin tazobactam"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -940,11 +1358,11 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -960,11 +1378,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
+          "norepinephrine",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "ticagrelor",
+          "nitroglycerin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -989,26 +1407,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
+              "methylprednisolone",
               "azithromycin",
-              "albuterol inhaler",
-              "gabapentin"
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin",
-                "gabapentin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1021,26 +1461,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
+              "methylprednisolone",
               "azithromycin",
-              "albuterol inhaler",
-              "gabapentin"
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin",
-                "gabapentin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1053,22 +1515,44 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin"
+              "oseltamivir",
+              "methylprednisolone",
+              "azithromycin",
+              "ceftriaxone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "oseltamivir",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1088,26 +1572,48 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
+            "oseltamivir",
+            "methylprednisolone",
             "azithromycin",
-            "albuterol inhaler",
-            "gabapentin"
+            "ceftriaxone",
+            "piperacillin tazobactam",
+            "donepezil"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "albuterol inhaler"
+              "methylprednisolone",
+              "azithromycin",
+              "ceftriaxone"
             ],
             "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "azithromycin",
-              "gabapentin"
+              "oseltamivir",
+              "piperacillin tazobactam",
+              "donepezil",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1121,26 +1627,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
+              "methylprednisolone",
               "azithromycin",
-              "albuterol inhaler",
-              "gabapentin"
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin",
-                "gabapentin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1162,26 +1690,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
+              "methylprednisolone",
               "azithromycin",
-              "albuterol inhaler",
-              "gabapentin"
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin",
-                "gabapentin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1203,22 +1753,44 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "azithromycin"
+              "oseltamivir",
+              "methylprednisolone",
+              "azithromycin",
+              "ceftriaxone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone"
+                "methylprednisolone",
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [],
-              "general_inpatient_medication": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "azithromycin"
+                "oseltamivir",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [

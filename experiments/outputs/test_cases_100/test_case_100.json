@@ -119,112 +119,157 @@
         {
           "rank": 1,
           "drug_name": "ceftriaxone",
-          "confidence": 0.77,
-          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
         },
         {
           "rank": 2,
-          "drug_name": "tamsulosin",
-          "confidence": 0.72,
-          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+          "drug_name": "gentamicin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis at 30S ribosome"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.67,
-          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+          "drug_name": "trimethoprim sulfamethoxazole",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits sequential folate synthesis in bacteria"
         },
         {
           "rank": 4,
-          "drug_name": "neutra-phos",
-          "confidence": 0.62,
-          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+          "drug_name": "nitrofurantoin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；bacterial nitrofuran reduction damages DNA and ribosomal proteins"
         },
         {
           "rank": 5,
-          "drug_name": "tramadol",
-          "confidence": 0.57,
-          "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+          "drug_name": "levofloxacin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial DNA gyrase and topoisomerase IV"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
+          "drug_name": "phenazopyridine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
           "drug_name": "acetaminophen",
-          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "docusate sodium",
-          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "hydromorphone (dilaudid)",
-          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.89,
-      "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Essential (primary) hypertension, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
+      "overall_confidence": 0.95,
+      "summary_reason": "肾内/泌尿智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Urinary tract infection, site not specified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 ceftriaxone, gentamicin, trimethoprim sulfamethoxazole。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "metoprolol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
+          "drug_name": "carvedilol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
+          "drug_name": "lisinopril",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
+          "drug_name": "losartan",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
+          "drug_name": "amlodipine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.86,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
     }
   ],
   "mdt_discussion": {
@@ -233,10 +278,10 @@
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -247,11 +292,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -272,32 +317,46 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol",
-          "furosemide"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos",
-            "tramadol"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "levofloxacin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -311,32 +370,46 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol",
-          "furosemide"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos",
-            "tramadol"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "levofloxacin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -350,27 +423,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -386,32 +473,46 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "ceftriaxone",
-        "tamsulosin",
-        "calcium carbonate",
-        "neutra-phos",
-        "tramadol",
-        "furosemide"
+        "gentamicin",
+        "trimethoprim sulfamethoxazole",
+        "nitrofurantoin",
+        "levofloxacin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
-          "hydromorphone (dilaudid)",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "neutra-phos",
-          "tramadol"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "phenazopyridine",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -425,32 +526,46 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "ceftriaxone",
-        "tamsulosin",
-        "calcium carbonate",
-        "neutra-phos",
-        "tramadol",
-        "furosemide"
+        "gentamicin",
+        "trimethoprim sulfamethoxazole",
+        "nitrofurantoin",
+        "levofloxacin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
-          "hydromorphone (dilaudid)",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "neutra-phos",
-          "tramadol"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "phenazopyridine",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -464,27 +579,41 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "ceftriaxone",
-        "tamsulosin",
-        "calcium carbonate",
-        "neutra-phos"
+        "gentamicin",
+        "trimethoprim sulfamethoxazole",
+        "nitrofurantoin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
-          "hydromorphone (dilaudid)",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "neutra-phos"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "phenazopyridine",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -499,32 +628,46 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "ceftriaxone",
-        "tamsulosin",
-        "calcium carbonate",
-        "neutra-phos",
-        "tramadol",
-        "furosemide"
+        "gentamicin",
+        "trimethoprim sulfamethoxazole",
+        "nitrofurantoin",
+        "levofloxacin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate"
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
-          "hydromorphone (dilaudid)",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "neutra-phos",
-          "tramadol"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "phenazopyridine",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -539,32 +682,46 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol",
-          "furosemide"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos",
-            "tramadol"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "levofloxacin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -578,17 +735,9 @@
         "patient_context_flags": [],
         "medication_impact_review": [
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "gentamicin",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -604,32 +753,46 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol",
-          "furosemide"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos",
-            "tramadol"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "levofloxacin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -643,17 +806,9 @@
         "patient_context_flags": [],
         "medication_impact_review": [
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "gentamicin",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -669,27 +824,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate"
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
-            "hydromorphone (dilaudid)",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "neutra-phos"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "phenazopyridine",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -702,9 +871,9 @@
         "patient_context_flags": [],
         "medication_impact_review": [
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "gentamicin",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -755,66 +924,78 @@
           {
             "rank": 1,
             "drug_name": "ceftriaxone",
-            "confidence": 0.77,
-            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
           },
           {
             "rank": 2,
-            "drug_name": "tamsulosin",
-            "confidence": 0.72,
-            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+            "drug_name": "gentamicin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis at 30S ribosome"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.67,
-            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+            "drug_name": "trimethoprim sulfamethoxazole",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits sequential folate synthesis in bacteria"
           },
           {
             "rank": 4,
-            "drug_name": "neutra-phos",
-            "confidence": 0.62,
-            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+            "drug_name": "nitrofurantoin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；bacterial nitrofuran reduction damages DNA and ribosomal proteins"
           },
           {
             "rank": 5,
-            "drug_name": "tramadol",
-            "confidence": 0.57,
-            "reason": "与诊断 Urinary tract infection, site not specified 在知识库中存在映射"
+            "drug_name": "levofloxacin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial DNA gyrase and topoisomerase IV"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
+            "drug_name": "phenazopyridine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
             "drug_name": "acetaminophen",
-            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "docusate sodium",
-            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "hydromorphone (dilaudid)",
-            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Urinary tract infection, site not specified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.89,
-        "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Essential (primary) hypertension, Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety 生成候选药物，当前首选药物包括 ceftriaxone, tamsulosin, calcium carbonate。"
+        "overall_confidence": 0.95,
+        "summary_reason": "肾内/泌尿智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Urinary tract infection, site not specified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 ceftriaxone, gentamicin, trimethoprim sulfamethoxazole。"
       }
     },
     {
@@ -826,46 +1007,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "metoprolol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
+            "drug_name": "carvedilol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
+            "drug_name": "lisinopril",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
+            "drug_name": "losartan",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
+            "drug_name": "amlodipine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.86,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Urinary tract infection, site not specified, Encounter for immunization, Hypotension, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
       }
     },
     {
@@ -876,10 +1090,10 @@
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
           "ceftriaxone",
-          "tamsulosin",
-          "calcium carbonate",
-          "neutra-phos",
-          "tramadol"
+          "gentamicin",
+          "trimethoprim sulfamethoxazole",
+          "nitrofurantoin",
+          "levofloxacin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -895,11 +1109,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -925,32 +1139,46 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos",
-              "tramadol",
-              "furosemide"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin",
+              "levofloxacin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos",
-                "tramadol"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "levofloxacin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -964,32 +1192,46 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos",
-              "tramadol",
-              "furosemide"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin",
+              "levofloxacin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos",
-                "tramadol"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "levofloxacin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1003,27 +1245,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1044,32 +1300,46 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "ceftriaxone",
-            "tamsulosin",
-            "calcium carbonate",
-            "neutra-phos",
-            "tramadol",
-            "furosemide"
+            "gentamicin",
+            "trimethoprim sulfamethoxazole",
+            "nitrofurantoin",
+            "levofloxacin",
+            "metoprolol"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate"
+              "ceftriaxone"
             ],
             "risk_modifying_therapy": [
-              "furosemide"
+              "metoprolol"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "oxycodone (immediate release)",
-              "docusate sodium",
-              "hydromorphone (dilaudid)",
-              "ondansetron"
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "neutra-phos",
-              "tramadol"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin",
+              "levofloxacin",
+              "phenazopyridine",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1084,32 +1354,46 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos",
-              "tramadol",
-              "furosemide"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin",
+              "levofloxacin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos",
-                "tramadol"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "levofloxacin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1123,17 +1407,9 @@
             "patient_context_flags": [],
             "medication_impact_review": [
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "gentamicin",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1149,32 +1425,46 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos",
-              "tramadol",
-              "furosemide"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin",
+              "levofloxacin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos",
-                "tramadol"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "levofloxacin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1188,17 +1478,9 @@
             "patient_context_flags": [],
             "medication_impact_review": [
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "gentamicin",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1214,27 +1496,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "ceftriaxone",
-              "tamsulosin",
-              "calcium carbonate",
-              "neutra-phos"
+              "gentamicin",
+              "trimethoprim sulfamethoxazole",
+              "nitrofurantoin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "ceftriaxone",
-                "tamsulosin",
-                "calcium carbonate"
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
-                "hydromorphone (dilaudid)",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "neutra-phos"
+                "gentamicin",
+                "trimethoprim sulfamethoxazole",
+                "nitrofurantoin",
+                "phenazopyridine",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1247,9 +1543,9 @@
             "patient_context_flags": [],
             "medication_impact_review": [
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "gentamicin",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

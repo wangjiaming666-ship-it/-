@@ -178,46 +178,79 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "albuterol 0.083% neb soln",
+          "drug_name": "oseltamivir",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
         },
         {
           "rank": 2,
-          "drug_name": "ipratropium bromide neb",
+          "drug_name": "azithromycin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
         },
         {
           "rank": 3,
-          "drug_name": "prednisone",
+          "drug_name": "ceftriaxone",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
         },
         {
           "rank": 4,
-          "drug_name": "azithromycin",
+          "drug_name": "piperacillin tazobactam",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
         },
         {
           "rank": 5,
-          "drug_name": "albuterol inhaler",
+          "drug_name": "vancomycin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits gram positive bacterial cell wall synthesis"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Delirium due to known physiological condition, Hypovolemia 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Secondary malignant neoplasm of left lung, Delirium due to known physiological condition 生成候选药物，当前首选药物包括 oseltamivir, azithromycin, ceftriaxone。"
     },
     {
       "specialty_name": "内分泌/代谢",
@@ -225,179 +258,236 @@
         {
           "rank": 1,
           "drug_name": "insulin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "methimazole",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acquired absence of bilateral breasts and nipples, Essential (primary) hypertension, Long term (current) use of anticoagulants 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Acquired absence of bilateral breasts and nipples, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     },
     {
       "specialty_name": "肾内/泌尿",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "calcium carbonate",
+          "drug_name": "tamsulosin",
           "confidence": 0.77,
-          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；relaxes smooth muscle in prostate and bladder neck"
         },
         {
           "rank": 2,
-          "drug_name": "tamsulosin",
-          "confidence": 0.72,
-          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          "drug_name": "finasteride",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces dihydrotestosterone and prostate volume"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.67,
-          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          "drug_name": "calcium carbonate",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；binds dietary phosphate and provides calcium"
         },
         {
           "rank": 4,
-          "drug_name": "labetalol",
-          "confidence": 0.62,
-          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          "drug_name": "sevelamer",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；binds phosphate in gastrointestinal tract"
         },
         {
           "rank": 5,
-          "drug_name": "nifedipine (extended release)",
-          "confidence": 0.57,
-          "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+          "drug_name": "calcitriol",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；active vitamin D receptor agonist increases calcium absorption"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
+          "drug_name": "phenazopyridine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
           "drug_name": "acetaminophen",
-          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "heparin",
-          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "docusate sodium",
-          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Hemoptysis, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
+      "summary_reason": "肾内/泌尿智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Acute kidney failure, unspecified, Hemoptysis 生成候选药物，当前首选药物包括 tamsulosin, finasteride, calcium carbonate。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "heparin",
-          "confidence": 0.77,
-          "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+          "drug_name": "metoprolol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 2,
-          "drug_name": "warfarin",
-          "confidence": 0.72,
-          "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+          "drug_name": "carvedilol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 3,
-          "drug_name": "heparin sodium",
-          "confidence": 0.67,
-          "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+          "drug_name": "lisinopril",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         },
         {
           "rank": 4,
-          "drug_name": "enoxaparin sodium",
-          "confidence": 0.62,
-          "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+          "drug_name": "losartan",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
         },
         {
           "rank": 5,
-          "drug_name": "aspirin",
-          "confidence": 0.57,
-          "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+          "drug_name": "amlodipine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "gabapentin",
-          "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "influenza vaccine quadrivalent",
-          "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Chronic embolism and thrombosis of left femoral vein, Hyperlipidemia, unspecified, Malignant pleural effusion 生成候选药物，当前首选药物包括 heparin, warfarin, heparin sodium。"
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Chronic embolism and thrombosis of left femoral vein, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
     }
   ],
   "mdt_discussion": {
@@ -405,11 +495,11 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -421,10 +511,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -435,11 +525,11 @@
       {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
           "tamsulosin",
-          "ceftriaxone",
-          "labetalol",
-          "nifedipine (extended release)"
+          "finasteride",
+          "calcium carbonate",
+          "sevelamer",
+          "calcitriol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -450,24 +540,23 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "warfarin",
-          "heparin sodium",
-          "enoxaparin sodium",
-          "aspirin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
-        "cautioned_drugs": [
-          "heparin"
-        ],
+        "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+          "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
       "本次MDT协商共纳入 4 个专科：呼吸, 内分泌/代谢, 肾内/泌尿, 心血管。",
       "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
-      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
       "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
     ],
     "candidate_plans": [
@@ -475,36 +564,52 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "azithromycin",
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
@@ -517,36 +622,52 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "azithromycin",
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
@@ -559,37 +680,51 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "calcium carbonate",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
-          "内分泌/代谢",
-          "呼吸",
-          "肾内/泌尿"
+          "呼吸"
         ],
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
       }
@@ -600,36 +735,52 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
         "azithromycin",
-        "albuterol inhaler",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
           "ondansetron",
           "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
         ],
         "requires_review": [
-          "azithromycin",
-          "heparin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d",
+          "phenazopyridine"
         ]
       },
       "supporting_specialties": [
@@ -642,36 +793,52 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
         "azithromycin",
-        "albuterol inhaler",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
           "ondansetron",
           "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
         ],
         "requires_review": [
-          "azithromycin",
-          "heparin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d",
+          "phenazopyridine"
         ]
       },
       "supporting_specialties": [
@@ -684,37 +851,51 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "prednisone",
-        "calcium carbonate",
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb"
+        "oseltamivir",
+        "azithromycin",
+        "ceftriaxone",
+        "piperacillin tazobactam"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "azithromycin",
+          "ceftriaxone"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
           "ondansetron",
           "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
         ],
         "requires_review": [
-          "heparin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d",
+          "phenazopyridine"
         ]
       },
       "supporting_specialties": [
-        "内分泌/代谢",
-        "呼吸",
-        "肾内/泌尿"
+        "呼吸"
       ],
       "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
     }
@@ -724,36 +905,52 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "albuterol 0.083% neb soln",
-        "ipratropium bromide neb",
-        "prednisone",
+        "oseltamivir",
         "azithromycin",
-        "albuterol inhaler",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
         "insulin"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
-          "albuterol inhaler"
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "docusate sodium",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
           "ondansetron",
           "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
         ],
         "requires_review": [
-          "azithromycin",
-          "heparin"
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d",
+          "phenazopyridine"
         ]
       },
       "supporting_specialties": [
@@ -767,36 +964,52 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "azithromycin",
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
@@ -809,6 +1022,14 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
+          {
+            "drug_name": "vancomycin",
+            "potential_impacts": [
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
           {
             "drug_name": "insulin",
             "potential_impacts": [
@@ -827,36 +1048,52 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
           "insulin"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
-            "albuterol inhaler"
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "azithromycin",
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
@@ -869,6 +1106,14 @@
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [
+          {
+            "drug_name": "vancomycin",
+            "potential_impacts": [
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
           {
             "drug_name": "insulin",
             "potential_impacts": [
@@ -887,53 +1132,58 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "calcium carbonate",
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb"
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "calcium carbonate",
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb"
+            "azithromycin",
+            "ceftriaxone"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "docusate sodium",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
             "ondansetron",
             "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
           ],
           "requires_review": [
-            "heparin"
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d",
+            "phenazopyridine"
           ]
         },
         "supporting_specialties": [
-          "内分泌/代谢",
-          "呼吸",
-          "肾内/泌尿"
+          "呼吸"
         ],
         "review_flags": [
           "未发现明确安全冲突"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
-        "medication_impact_review": [
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          }
-        ],
+        "medication_impact_review": [],
         "plan_adaptation_notes": [],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
@@ -1000,46 +1250,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "albuterol 0.083% neb soln",
+            "drug_name": "oseltamivir",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
           },
           {
             "rank": 2,
-            "drug_name": "ipratropium bromide neb",
+            "drug_name": "azithromycin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
           },
           {
             "rank": 3,
-            "drug_name": "prednisone",
+            "drug_name": "ceftriaxone",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
           },
           {
             "rank": 4,
-            "drug_name": "azithromycin",
+            "drug_name": "piperacillin tazobactam",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
           },
           {
             "rank": 5,
-            "drug_name": "albuterol inhaler",
+            "drug_name": "vancomycin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits gram positive bacterial cell wall synthesis"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Delirium due to known physiological condition, Hypovolemia 生成候选药物，当前首选药物包括 albuterol 0.083% neb soln, ipratropium bromide neb, prednisone。"
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Secondary malignant neoplasm of left lung, Delirium due to known physiological condition 生成候选药物，当前首选药物包括 oseltamivir, azithromycin, ceftriaxone。"
       }
     },
     {
@@ -1052,45 +1335,78 @@
           {
             "rank": 1,
             "drug_name": "insulin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "methimazole",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Acquired absence of bilateral breasts and nipples, Essential (primary) hypertension, Long term (current) use of anticoagulants 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Acquired absence of bilateral breasts and nipples, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -1102,67 +1418,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "calcium carbonate",
+            "drug_name": "tamsulosin",
             "confidence": 0.77,
-            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；relaxes smooth muscle in prostate and bladder neck"
           },
           {
             "rank": 2,
-            "drug_name": "tamsulosin",
-            "confidence": 0.72,
-            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+            "drug_name": "finasteride",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces dihydrotestosterone and prostate volume"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.67,
-            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+            "drug_name": "calcium carbonate",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；binds dietary phosphate and provides calcium"
           },
           {
             "rank": 4,
-            "drug_name": "labetalol",
-            "confidence": 0.62,
-            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+            "drug_name": "sevelamer",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；binds phosphate in gastrointestinal tract"
           },
           {
             "rank": 5,
-            "drug_name": "nifedipine (extended release)",
-            "confidence": 0.57,
-            "reason": "与诊断 Acute kidney failure, unspecified 在知识库中存在映射"
+            "drug_name": "calcitriol",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；active vitamin D receptor agonist increases calcium absorption"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
+            "drug_name": "phenazopyridine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
             "drug_name": "acetaminophen",
-            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "heparin",
-            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "docusate sodium",
-            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Acute kidney failure, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "肾内/泌尿智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Acute kidney failure, unspecified, Hemoptysis, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 calcium carbonate, tamsulosin, ceftriaxone。"
+        "summary_reason": "肾内/泌尿智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "肾内/泌尿智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Acute kidney failure, unspecified, Hemoptysis 生成候选药物，当前首选药物包括 tamsulosin, finasteride, calcium carbonate。"
       }
     },
     {
@@ -1174,67 +1502,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "heparin",
-            "confidence": 0.77,
-            "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+            "drug_name": "metoprolol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 2,
-            "drug_name": "warfarin",
-            "confidence": 0.72,
-            "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+            "drug_name": "carvedilol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 3,
-            "drug_name": "heparin sodium",
-            "confidence": 0.67,
-            "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+            "drug_name": "lisinopril",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           },
           {
             "rank": 4,
-            "drug_name": "enoxaparin sodium",
-            "confidence": 0.62,
-            "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+            "drug_name": "losartan",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
           },
           {
             "rank": 5,
-            "drug_name": "aspirin",
-            "confidence": 0.57,
-            "reason": "与诊断 Chronic embolism and thrombosis of left femoral vein 在知识库中存在映射"
+            "drug_name": "amlodipine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "gabapentin",
-            "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "influenza vaccine quadrivalent",
-            "reason": "在 Chronic embolism and thrombosis of left femoral vein 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Chronic embolism and thrombosis of left femoral vein, Hyperlipidemia, unspecified, Malignant pleural effusion 生成候选药物，当前首选药物包括 heparin, warfarin, heparin sodium。"
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Secondary malignant neoplasm of left lung, Chronic embolism and thrombosis of left femoral vein, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
       }
     },
     {
@@ -1244,11 +1584,11 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "albuterol 0.083% neb soln",
-          "ipratropium bromide neb",
-          "prednisone",
+          "oseltamivir",
           "azithromycin",
-          "albuterol inhaler"
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1265,10 +1605,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1284,11 +1624,11 @@
       "content": {
         "reviewer_specialty": "肾内/泌尿",
         "accepted_drugs": [
-          "calcium carbonate",
           "tamsulosin",
-          "ceftriaxone",
-          "labetalol",
-          "nifedipine (extended release)"
+          "finasteride",
+          "calcium carbonate",
+          "sevelamer",
+          "calcitriol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1304,18 +1644,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "warfarin",
-          "heparin sodium",
-          "enoxaparin sodium",
-          "aspirin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
-        "cautioned_drugs": [
-          "heparin"
-        ],
+        "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+          "心血管建议未发现明显跨专科冲突。"
         ],
-        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1326,7 +1665,7 @@
         "consensus_notes": [
           "本次MDT协商共纳入 4 个专科：呼吸, 内分泌/代谢, 肾内/泌尿, 心血管。",
           "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
-          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
           "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
         ],
         "plans": [
@@ -1334,36 +1673,52 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
               "azithromycin",
-              "albuterol inhaler",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "azithromycin",
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
@@ -1376,36 +1731,52 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
               "azithromycin",
-              "albuterol inhaler",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "azithromycin",
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
@@ -1418,37 +1789,51 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "calcium carbonate",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb"
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "calcium carbonate",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
-              "内分泌/代谢",
-              "呼吸",
-              "肾内/泌尿"
+              "呼吸"
             ],
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
           }
@@ -1464,36 +1849,52 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "albuterol 0.083% neb soln",
-            "ipratropium bromide neb",
-            "prednisone",
+            "oseltamivir",
             "azithromycin",
-            "albuterol inhaler",
+            "ceftriaxone",
+            "piperacillin tazobactam",
+            "vancomycin",
             "insulin"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
-              "albuterol inhaler"
+              "azithromycin",
+              "ceftriaxone",
+              "vancomycin"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "oxycodone (immediate release)",
-              "docusate sodium",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
               "ondansetron",
               "senna"
             ],
-            "general_inpatient_medication": [
-              "influenza vaccine quadrivalent"
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush",
+              "lactated ringer"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [
+              "multivitamin",
+              "thiamine"
             ],
             "requires_review": [
-              "azithromycin",
-              "heparin"
+              "oseltamivir",
+              "piperacillin tazobactam",
+              "ibuprofen",
+              "ketorolac",
+              "vitamin d",
+              "phenazopyridine"
             ]
           },
           "supporting_specialties": [
@@ -1507,36 +1908,52 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
               "azithromycin",
-              "albuterol inhaler",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "azithromycin",
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
@@ -1549,6 +1966,14 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
+              {
+                "drug_name": "vancomycin",
+                "potential_impacts": [
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
               {
                 "drug_name": "insulin",
                 "potential_impacts": [
@@ -1567,36 +1992,52 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb",
-              "prednisone",
+              "oseltamivir",
               "azithromycin",
-              "albuterol inhaler",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
               "insulin"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb",
-                "prednisone",
-                "albuterol inhaler"
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "azithromycin",
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
@@ -1609,6 +2050,14 @@
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [
+              {
+                "drug_name": "vancomycin",
+                "potential_impacts": [
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
               {
                 "drug_name": "insulin",
                 "potential_impacts": [
@@ -1627,53 +2076,58 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "calcium carbonate",
-              "albuterol 0.083% neb soln",
-              "ipratropium bromide neb"
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "calcium carbonate",
-                "albuterol 0.083% neb soln",
-                "ipratropium bromide neb"
+                "azithromycin",
+                "ceftriaxone"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "docusate sodium",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
                 "ondansetron",
                 "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
               ],
               "requires_review": [
-                "heparin"
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d",
+                "phenazopyridine"
               ]
             },
             "supporting_specialties": [
-              "内分泌/代谢",
-              "呼吸",
-              "肾内/泌尿"
+              "呼吸"
             ],
             "review_flags": [
               "未发现明确安全冲突"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
-            "medication_impact_review": [
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              }
-            ],
+            "medication_impact_review": [],
             "plan_adaptation_notes": [],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",

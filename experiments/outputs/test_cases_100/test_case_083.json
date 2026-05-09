@@ -170,91 +170,157 @@
         {
           "rank": 1,
           "drug_name": "insulin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "prednisone",
-          "confidence": 0.63,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
         },
         {
           "rank": 5,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.62,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "methimazole",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Contact with and (suspected) exposure to other viral communicable diseases, Gastritis, unspecified, without bleeding 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Angiodysplasia of colon with hemorrhage, Contact with and (suspected) exposure to other viral communicable diseases 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     },
     {
       "specialty_name": "神经",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "gabapentin",
+          "drug_name": "donepezil",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
+          "drug_name": "alteplase",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
+          "drug_name": "memantine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "phenytoin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Diverticulosis of large intestine without perforation or abscess without bleeding, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Acute posthemorrhagic anemia, Diverticulosis of large intestine without perforation or abscess without bleeding 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
     },
     {
       "specialty_name": "消化",
@@ -263,132 +329,156 @@
           "rank": 1,
           "drug_name": "pantoprazole",
           "confidence": 0.77,
-          "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 2,
-          "drug_name": "metronidazole",
-          "confidence": 0.72,
-          "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+          "drug_name": "omeprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 3,
-          "drug_name": "omeprazole",
-          "confidence": 0.67,
-          "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+          "drug_name": "famotidine",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
         },
         {
           "rank": 4,
-          "drug_name": "methylprednisolone sodium succ",
-          "confidence": 0.62,
-          "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+          "drug_name": "lactulose",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
         },
         {
           "rank": 5,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.57,
-          "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+          "drug_name": "rifaximin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
           "drug_name": "lorazepam",
-          "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "acetaminophen iv",
-          "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "hydromorphone (dilaudid)",
-          "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.92,
-      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 Age-related nuclear cataract, bilateral, Duodenitis without bleeding, Insomnia, unspecified 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Age-related nuclear cataract, bilateral, Duodenitis without bleeding 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "heparin",
-          "confidence": 0.77,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "metoprolol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.72,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "carvedilol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 3,
-          "drug_name": "aspirin",
-          "confidence": 0.67,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "lisinopril",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         },
         {
           "rank": 4,
-          "drug_name": "lisinopril",
-          "confidence": 0.62,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "losartan",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
         },
         {
           "rank": 5,
-          "drug_name": "hydralazine",
-          "confidence": 0.57,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "amlodipine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "docusate sodium",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "potassium chloride",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.92,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Congenital insufficiency of aortic valve, Essential (primary) hypertension, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Congenital insufficiency of aortic valve, Essential (primary) hypertension 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
     }
   ],
   "mdt_discussion": {
@@ -397,10 +487,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -411,11 +501,11 @@
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -427,10 +517,10 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "methylprednisolone sodium succ",
-          "ciprofloxacin hcl"
+          "famotidine",
+          "lactulose",
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -441,11 +531,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "heparin",
-          "metoprolol tartrate",
-          "aspirin",
+          "metoprolol",
+          "carvedilol",
           "lisinopril",
-          "hydralazine"
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -466,33 +556,44 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine",
+            "methimazole"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -506,33 +607,44 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine",
+            "methimazole"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -546,29 +658,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "levothyroxine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -583,33 +707,44 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "levothyroxine",
+          "methimazole"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
-          "acetaminophen iv",
-          "hydromorphone (dilaudid)",
-          "oxycodone (immediate release)"
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -623,33 +758,44 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "levothyroxine",
+          "methimazole"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
-          "acetaminophen iv",
-          "hydromorphone (dilaudid)",
-          "oxycodone (immediate release)"
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -663,29 +809,41 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone"
+        "metformin",
+        "glipizide",
+        "levothyroxine"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "levothyroxine"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
-          "acetaminophen iv",
-          "hydromorphone (dilaudid)",
-          "oxycodone (immediate release)"
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
-        "requires_review": []
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
       },
       "supporting_specialties": [
         "内分泌/代谢"
@@ -699,33 +857,44 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "prednisone",
-        "sodium bicarbonate",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "levothyroxine",
+          "methimazole"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
-          "acetaminophen iv",
-          "hydromorphone (dilaudid)",
-          "oxycodone (immediate release)"
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -740,33 +909,44 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine",
+            "methimazole"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -788,17 +968,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
               "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -814,33 +986,44 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine",
+            "methimazole"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -862,17 +1045,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
               "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -888,29 +1063,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "levothyroxine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
+            "levothyroxine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
-            "acetaminophen iv",
-            "hydromorphone (dilaudid)",
-            "oxycodone (immediate release)"
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
-          "requires_review": []
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
         },
         "supporting_specialties": [
           "内分泌/代谢"
@@ -930,17 +1117,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
               "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -1010,45 +1189,78 @@
           {
             "rank": 1,
             "drug_name": "insulin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "prednisone",
-            "confidence": 0.63,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
           },
           {
             "rank": 5,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.62,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "methimazole",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Contact with and (suspected) exposure to other viral communicable diseases, Gastritis, unspecified, without bleeding 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Angiodysplasia of colon with hemorrhage, Contact with and (suspected) exposure to other viral communicable diseases 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -1060,46 +1272,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "gabapentin",
+            "drug_name": "donepezil",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
+            "drug_name": "alteplase",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
+            "drug_name": "memantine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "phenytoin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Diverticulosis of large intestine without perforation or abscess without bleeding, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Acute posthemorrhagic anemia, Diverticulosis of large intestine without perforation or abscess without bleeding 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
       }
     },
     {
@@ -1113,65 +1358,77 @@
             "rank": 1,
             "drug_name": "pantoprazole",
             "confidence": 0.77,
-            "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 2,
-            "drug_name": "metronidazole",
-            "confidence": 0.72,
-            "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+            "drug_name": "omeprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 3,
-            "drug_name": "omeprazole",
-            "confidence": 0.67,
-            "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+            "drug_name": "famotidine",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
           },
           {
             "rank": 4,
-            "drug_name": "methylprednisolone sodium succ",
-            "confidence": 0.62,
-            "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+            "drug_name": "lactulose",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
           },
           {
             "rank": 5,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.57,
-            "reason": "与诊断 Duodenitis without bleeding 在知识库中存在映射"
+            "drug_name": "rifaximin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
             "drug_name": "lorazepam",
-            "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "acetaminophen iv",
-            "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "hydromorphone (dilaudid)",
-            "reason": "在 Duodenitis without bleeding 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.92,
-        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 Age-related nuclear cataract, bilateral, Duodenitis without bleeding, Insomnia, unspecified 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Age-related nuclear cataract, bilateral, Duodenitis without bleeding 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
       }
     },
     {
@@ -1183,67 +1440,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "heparin",
-            "confidence": 0.77,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "metoprolol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.72,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "carvedilol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 3,
-            "drug_name": "aspirin",
-            "confidence": 0.67,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "lisinopril",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           },
           {
             "rank": 4,
-            "drug_name": "lisinopril",
-            "confidence": 0.62,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "losartan",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
           },
           {
             "rank": 5,
-            "drug_name": "hydralazine",
-            "confidence": 0.57,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "amlodipine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "docusate sodium",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "potassium chloride",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.92,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Congenital insufficiency of aortic valve, Essential (primary) hypertension, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Angiodysplasia of colon with hemorrhage, Congenital insufficiency of aortic valve, Essential (primary) hypertension 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
       }
     },
     {
@@ -1254,10 +1523,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone",
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1273,11 +1542,11 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1294,10 +1563,10 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "methylprednisolone sodium succ",
-          "ciprofloxacin hcl"
+          "famotidine",
+          "lactulose",
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1313,11 +1582,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "heparin",
-          "metoprolol tartrate",
-          "aspirin",
+          "metoprolol",
+          "carvedilol",
           "lisinopril",
-          "hydralazine"
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1343,33 +1612,44 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine",
+                "methimazole"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate",
-                "gabapentin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1383,33 +1663,44 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine",
+                "methimazole"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate",
-                "gabapentin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1423,29 +1714,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "metformin",
+              "glipizide",
+              "levothyroxine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"
@@ -1465,33 +1768,44 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "insulin",
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone",
-            "sodium bicarbonate",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "levothyroxine",
+            "methimazole",
+            "donepezil"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "levothyroxine",
+              "methimazole"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "ondansetron",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
               "lorazepam",
-              "acetaminophen iv",
-              "hydromorphone (dilaudid)",
-              "oxycodone (immediate release)"
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "sodium bicarbonate",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "donepezil",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1506,33 +1820,44 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine",
+                "methimazole"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate",
-                "gabapentin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1554,17 +1879,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
                   "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1580,33 +1897,44 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone",
-              "sodium bicarbonate",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine",
+                "methimazole"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate",
-                "gabapentin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1628,17 +1956,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
                   "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1654,29 +1974,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
+              "metformin",
+              "glipizide",
+              "levothyroxine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
+                "levothyroxine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
-                "acetaminophen iv",
-                "hydromorphone (dilaudid)",
-                "oxycodone (immediate release)"
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
-              "requires_review": []
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
             },
             "supporting_specialties": [
               "内分泌/代谢"
@@ -1696,17 +2028,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
                   "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"

@@ -171,177 +171,266 @@
           "rank": 1,
           "drug_name": "insulin",
           "confidence": 0.95,
-          "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
-          "confidence": 0.93,
-          "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+          "drug_name": "metformin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.93,
-          "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+          "drug_name": "glipizide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "toujeo solostar u-300 insulin",
-          "confidence": 0.78,
-          "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+          "drug_name": "insulin glargine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
         },
         {
           "rank": 5,
-          "drug_name": "stoujeo solostar u-300 insulin",
-          "confidence": 0.57,
-          "reason": "与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+          "drug_name": "insulin lispro",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "glucose_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "endocrinology_glucose_risk",
-          "message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
-          "action_taken": "调整降糖相关方案优先级，并提示复核血糖监测频率。"
+          "triggered_rule_id": "endocrinology_glucose_treatment_risk",
+          "message": "血糖显著偏离目标范围时提示低血糖酮症酸中毒或感染相关代谢失衡风险",
+          "action_taken": "调整降糖相关方案优先级并提示复核血糖监测频率"
         }
       ],
       "avoid_or_low_priority_drugs": [
         {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
           "drug_name": "acetaminophen",
-          "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "glucagon",
-          "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "glucose gel",
-          "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "dextrose 50%",
-          "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "vancomycin",
-          "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "hydromorphone (dilaudid)",
-          "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "heparin",
-          "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Essential (primary) hypertension, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     },
     {
       "specialty_name": "神经",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "gabapentin",
+          "drug_name": "donepezil",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
+          "drug_name": "alteplase",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
+          "drug_name": "memantine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "gabapentin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；binds alpha 2 delta calcium channel subunit to reduce neuropathic signaling"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "pregabalin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；binds alpha 2 delta calcium channel subunit to reduce neuropathic signaling"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
-      "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "risk_alerts": [
+        {
+          "lab_name": "bun_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "neurology_sedation_respiratory_risk",
+          "message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+          "action_taken": "对镇静抗痉挛或神经病理痛药物提示剂量复核"
+        },
+        {
+          "lab_name": "glucose_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "neurology_glucose_mimic_stroke_risk",
+          "message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+          "action_taken": "提示先复核血糖并调整相关治疗排序"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 Acidosis, Gangrene, not elsewhere classified, Long term (current) use of oral hypoglycemic drugs 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Acidosis, Gangrene, not elsewhere classified 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "metoprolol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
+          "drug_name": "carvedilol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
+          "drug_name": "lisinopril",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
+          "drug_name": "losartan",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
+          "drug_name": "amlodipine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
-      "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
+      "risk_alerts": [
+        {
+          "lab_name": "glucose_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+          "message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+          "action_taken": "提示复核降糖和可能掩盖低血糖症状的药物"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Enterocolitis due to Clostridium difficile, not specified as recurrent, Hyperlipidemia, unspecified, NIHSS score 4 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Enterocolitis due to Clostridium difficile, not specified as recurrent, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
     }
   ],
   "mdt_discussion": {
@@ -350,10 +439,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -364,39 +453,38 @@
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
+          "donepezil",
+          "alteplase",
+          "memantine",
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "pregabalin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
-        "cautioned_drugs": [
-          "heparin"
-        ],
+        "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     ],
     "consensus_notes": [
       "本次MDT协商共纳入 3 个专科：内分泌/代谢, 神经, 心血管。",
       "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-      "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
       "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
     ],
     "candidate_plans": [
@@ -405,33 +493,45 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "donepezil"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin",
-            "stoujeo solostar u-300 insulin"
+            "insulin glargine",
+            "insulin lispro"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -445,33 +545,45 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "donepezil"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin",
-            "stoujeo solostar u-300 insulin"
+            "insulin glargine",
+            "insulin lispro"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -485,29 +597,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin"
+          "metformin",
+          "glipizide",
+          "insulin glargine"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin"
+            "insulin glargine"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -523,33 +647,45 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "toujeo solostar u-300 insulin",
-        "stoujeo solostar u-300 insulin",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "donepezil"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin"
+          "insulin glargine",
+          "insulin lispro"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "hydromorphone (dilaudid)"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "dextrose 50%"
+        "nursing_support_medication": [
+          "chlorhexidine"
         ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -563,33 +699,45 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "toujeo solostar u-300 insulin",
-        "stoujeo solostar u-300 insulin",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "donepezil"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin"
+          "insulin glargine",
+          "insulin lispro"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "hydromorphone (dilaudid)"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "dextrose 50%"
+        "nursing_support_medication": [
+          "chlorhexidine"
         ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -603,29 +751,41 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "toujeo solostar u-300 insulin"
+        "metformin",
+        "glipizide",
+        "insulin glargine"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "toujeo solostar u-300 insulin"
+          "insulin glargine"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "hydromorphone (dilaudid)"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "dextrose 50%"
+        "nursing_support_medication": [
+          "chlorhexidine"
         ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "heparin"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -640,33 +800,45 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "calcium carbonate",
-        "toujeo solostar u-300 insulin",
-        "stoujeo solostar u-300 insulin",
-        "gabapentin"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "donepezil"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin"
+          "insulin glargine",
+          "insulin lispro"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "hydromorphone (dilaudid)"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "dextrose 50%"
+        "nursing_support_medication": [
+          "chlorhexidine"
         ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "donepezil",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -681,33 +853,45 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "donepezil"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin",
-            "stoujeo solostar u-300 insulin"
+            "insulin glargine",
+            "insulin lispro"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -733,23 +917,7 @@
             "suggested_action": "保留但需加强血糖监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
-            "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "toujeo solostar u-300 insulin",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
               "影响血糖控制，需结合血糖趋势调整"
             ],
@@ -757,7 +925,7 @@
             "suggested_action": "保留但需加强血糖监测"
           },
           {
-            "drug_name": "stoujeo solostar u-300 insulin",
+            "drug_name": "insulin lispro",
             "potential_impacts": [
               "影响血糖控制，需结合血糖趋势调整"
             ],
@@ -766,7 +934,8 @@
           }
         ],
         "plan_adaptation_notes": [
-          "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin, stoujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，insulin, insulin glargine, insulin lispro 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -777,33 +946,45 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin",
-          "gabapentin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "donepezil"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin",
-            "stoujeo solostar u-300 insulin"
+            "insulin glargine",
+            "insulin lispro"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "donepezil",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -829,23 +1010,7 @@
             "suggested_action": "保留但需加强血糖监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
-            "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "toujeo solostar u-300 insulin",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
               "影响血糖控制，需结合血糖趋势调整"
             ],
@@ -853,7 +1018,7 @@
             "suggested_action": "保留但需加强血糖监测"
           },
           {
-            "drug_name": "stoujeo solostar u-300 insulin",
+            "drug_name": "insulin lispro",
             "potential_impacts": [
               "影响血糖控制，需结合血糖趋势调整"
             ],
@@ -862,7 +1027,8 @@
           }
         ],
         "plan_adaptation_notes": [
-          "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin, stoujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，insulin, insulin glargine, insulin lispro 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -873,29 +1039,41 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin"
+          "metformin",
+          "glipizide",
+          "insulin glargine"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "toujeo solostar u-300 insulin"
+            "insulin glargine"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "hydromorphone (dilaudid)"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "dextrose 50%"
+          "nursing_support_medication": [
+            "chlorhexidine"
           ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -920,23 +1098,7 @@
             "suggested_action": "保留但需加强血糖监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
-            "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "toujeo solostar u-300 insulin",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
               "影响血糖控制，需结合血糖趋势调整"
             ],
@@ -945,7 +1107,8 @@
           }
         ],
         "plan_adaptation_notes": [
-          "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，insulin, insulin glargine 相关方案需结合血糖监测调整。",
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
@@ -955,14 +1118,70 @@
     "triggered_risks": [
       {
         "specialty_name": "内分泌/代谢",
-        "rule_id": "endocrinology_glucose_risk",
+        "rule_id": "endocrinology_glucose_treatment_risk",
         "lab_name": "glucose_24h",
         "lab_value": 182.0,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "glycemic instability risk",
+        "related_treatments": "insulin|sulfonylureas|systemic corticosteroids|dextrose fluids",
+        "risk_message": "血糖显著偏离目标范围时提示低血糖酮症酸中毒或感染相关代谢失衡风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "强化降糖或激素治疗前需评估低血糖和高血糖风险",
+        "monitoring_advice": "监测床旁血糖酮体和进食状态",
+        "reference_source": "ADA Standards of Care; DailyMed insulin labels",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "神经",
+        "rule_id": "neurology_sedation_respiratory_risk",
+        "lab_name": "bun_24h",
+        "lab_value": 34.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "sedation and encephalopathy risk",
+        "related_treatments": "opioids|benzodiazepines|gabapentin|baclofen",
+        "risk_message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免多种镇静药叠加并复核肾功能剂量",
+        "monitoring_advice": "监测意识呼吸频率BUN肌酐和跌倒风险",
+        "reference_source": "DailyMed CNS depressant labels; Merck Manual uremia references",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "神经",
+        "rule_id": "neurology_glucose_mimic_stroke_risk",
+        "lab_name": "glucose_24h",
+        "lab_value": 182.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "stroke mimic and seizure metabolic risk",
+        "related_treatments": "insulin|dextrose fluids|systemic corticosteroids",
+        "risk_message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免未评估血糖时解释神经症状或强化降糖治疗",
+        "monitoring_advice": "监测床旁血糖神经体征和酮体",
+        "reference_source": "ADA Standards of Care; AHA ASA stroke guidance",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "心血管",
+        "rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+        "lab_name": "glucose_24h",
+        "lab_value": 182.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "glycemic cardiovascular context",
+        "related_treatments": "beta blockers|systemic corticosteroids|dextrose fluids",
+        "risk_message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "β受体阻滞剂可能掩盖低血糖症状且激素可升高血糖",
+        "monitoring_advice": "监测床旁血糖进食状态和低血糖症状",
+        "reference_source": "ADA Standards of Care; DailyMed beta blocker labels",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
@@ -1023,85 +1242,85 @@
             "rank": 1,
             "drug_name": "insulin",
             "confidence": 0.95,
-            "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
-            "confidence": 0.93,
-            "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+            "drug_name": "metformin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.93,
-            "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+            "drug_name": "glipizide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "toujeo solostar u-300 insulin",
-            "confidence": 0.78,
-            "reason": "与诊断 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 在知识库中存在映射；与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+            "drug_name": "insulin glargine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
           },
           {
             "rank": 5,
-            "drug_name": "stoujeo solostar u-300 insulin",
-            "confidence": 0.57,
-            "reason": "与诊断 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 在知识库中存在映射"
+            "drug_name": "insulin lispro",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "glucose_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "endocrinology_glucose_risk",
-            "message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
-            "action_taken": "调整降糖相关方案优先级，并提示复核血糖监测频率。"
+            "triggered_rule_id": "endocrinology_glucose_treatment_risk",
+            "message": "血糖显著偏离目标范围时提示低血糖酮症酸中毒或感染相关代谢失衡风险",
+            "action_taken": "调整降糖相关方案优先级并提示复核血糖监测频率"
           }
         ],
         "avoid_or_low_priority_drugs": [
           {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
             "drug_name": "acetaminophen",
-            "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "glucagon",
-            "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "glucose gel",
-            "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "dextrose 50%",
-            "reason": "在 Type 2 diabetes mellitus with diabetic neuropathy, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "vancomycin",
-            "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "hydromorphone (dilaudid)",
-            "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "heparin",
-            "reason": "在 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene 的映射中被列为低优先级或辅助药"
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Essential (primary) hypertension, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, calcium carbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -1113,46 +1332,94 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "gabapentin",
+            "drug_name": "donepezil",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
+            "drug_name": "alteplase",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
+            "drug_name": "memantine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "gabapentin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；binds alpha 2 delta calcium channel subunit to reduce neuropathic signaling"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "pregabalin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；binds alpha 2 delta calcium channel subunit to reduce neuropathic signaling"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
-        "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "risk_alerts": [
+          {
+            "lab_name": "bun_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "neurology_sedation_respiratory_risk",
+            "message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+            "action_taken": "对镇静抗痉挛或神经病理痛药物提示剂量复核"
+          },
+          {
+            "lab_name": "glucose_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "neurology_glucose_mimic_stroke_risk",
+            "message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+            "action_taken": "提示先复核血糖并调整相关治疗排序"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 Acidosis, Gangrene, not elsewhere classified, Long term (current) use of oral hypoglycemic drugs 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Acidosis, Gangrene, not elsewhere classified 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
       }
     },
     {
@@ -1164,46 +1431,87 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "metoprolol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
+            "drug_name": "carvedilol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
+            "drug_name": "lisinopril",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
+            "drug_name": "losartan",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
+            "drug_name": "amlodipine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
-        "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
+        "risk_alerts": [
+          {
+            "lab_name": "glucose_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+            "message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+            "action_taken": "提示复核降糖和可能掩盖低血糖症状的药物"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Enterocolitis due to Clostridium difficile, not specified as recurrent, Hyperlipidemia, unspecified, NIHSS score 4 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene, Enterocolitis due to Clostridium difficile, not specified as recurrent, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
       }
     },
     {
@@ -1214,10 +1522,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "toujeo solostar u-300 insulin",
-          "stoujeo solostar u-300 insulin"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1233,15 +1541,15 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
+          "donepezil",
+          "alteplase",
+          "memantine",
           "gabapentin",
-          "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "pregabalin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 7 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -1253,18 +1561,17 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
-        "cautioned_drugs": [
-          "heparin"
-        ],
+        "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管建议中的 heparin 被其他专科标记为低优先级，需在共识阶段降权。"
+          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 4 个无明显冲突候选药物。"
+        "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
     },
     {
@@ -1275,7 +1582,7 @@
         "consensus_notes": [
           "本次MDT协商共纳入 3 个专科：内分泌/代谢, 神经, 心血管。",
           "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
-          "交叉审阅阶段共标记 1 个需降权或复核的候选药物。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
           "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
         ],
         "plans": [
@@ -1284,33 +1591,45 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin",
-              "stoujeo solostar u-300 insulin",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "donepezil"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin",
-                "stoujeo solostar u-300 insulin"
+                "insulin glargine",
+                "insulin lispro"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1324,33 +1643,45 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin",
-              "stoujeo solostar u-300 insulin",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "donepezil"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin",
-                "stoujeo solostar u-300 insulin"
+                "insulin glargine",
+                "insulin lispro"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1364,29 +1695,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin"
+              "metformin",
+              "glipizide",
+              "insulin glargine"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin"
+                "insulin glargine"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1407,33 +1750,45 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "insulin",
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "toujeo solostar u-300 insulin",
-            "stoujeo solostar u-300 insulin",
-            "gabapentin"
+            "metformin",
+            "glipizide",
+            "insulin glargine",
+            "insulin lispro",
+            "donepezil"
           ],
           "medication_layers": {
-            "disease_directed_therapy": [
-              "levothyroxine sodium",
-              "calcium carbonate"
-            ],
+            "disease_directed_therapy": [],
             "risk_modifying_therapy": [
               "insulin",
-              "toujeo solostar u-300 insulin",
-              "stoujeo solostar u-300 insulin"
+              "insulin glargine",
+              "insulin lispro"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "oxycodone (immediate release)",
-              "hydromorphone (dilaudid)"
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [
-              "dextrose 50%"
+            "nursing_support_medication": [
+              "chlorhexidine"
             ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "gabapentin",
-              "heparin"
+              "metformin",
+              "glipizide",
+              "donepezil",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1448,33 +1803,45 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin",
-              "stoujeo solostar u-300 insulin",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "donepezil"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin",
-                "stoujeo solostar u-300 insulin"
+                "insulin glargine",
+                "insulin lispro"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1500,23 +1867,7 @@
                 "suggested_action": "保留但需加强血糖监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
-                "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "toujeo solostar u-300 insulin",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
                   "影响血糖控制，需结合血糖趋势调整"
                 ],
@@ -1524,7 +1875,7 @@
                 "suggested_action": "保留但需加强血糖监测"
               },
               {
-                "drug_name": "stoujeo solostar u-300 insulin",
+                "drug_name": "insulin lispro",
                 "potential_impacts": [
                   "影响血糖控制，需结合血糖趋势调整"
                 ],
@@ -1533,7 +1884,8 @@
               }
             ],
             "plan_adaptation_notes": [
-              "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin, stoujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，insulin, insulin glargine, insulin lispro 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -1544,33 +1896,45 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin",
-              "stoujeo solostar u-300 insulin",
-              "gabapentin"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "donepezil"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin",
-                "stoujeo solostar u-300 insulin"
+                "insulin glargine",
+                "insulin lispro"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "donepezil",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1596,23 +1960,7 @@
                 "suggested_action": "保留但需加强血糖监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
-                "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "toujeo solostar u-300 insulin",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
                   "影响血糖控制，需结合血糖趋势调整"
                 ],
@@ -1620,7 +1968,7 @@
                 "suggested_action": "保留但需加强血糖监测"
               },
               {
-                "drug_name": "stoujeo solostar u-300 insulin",
+                "drug_name": "insulin lispro",
                 "potential_impacts": [
                   "影响血糖控制，需结合血糖趋势调整"
                 ],
@@ -1629,7 +1977,8 @@
               }
             ],
             "plan_adaptation_notes": [
-              "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin, stoujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，insulin, insulin glargine, insulin lispro 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -1640,29 +1989,41 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "toujeo solostar u-300 insulin"
+              "metformin",
+              "glipizide",
+              "insulin glargine"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "toujeo solostar u-300 insulin"
+                "insulin glargine"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "hydromorphone (dilaudid)"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "dextrose 50%"
+              "nursing_support_medication": [
+                "chlorhexidine"
               ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1687,23 +2048,7 @@
                 "suggested_action": "保留但需加强血糖监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
-                "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "toujeo solostar u-300 insulin",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
                   "影响血糖控制，需结合血糖趋势调整"
                 ],
@@ -1712,7 +2057,8 @@
               }
             ],
             "plan_adaptation_notes": [
-              "患者入院早期血糖异常，insulin, toujeo solostar u-300 insulin 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，insulin, insulin glargine 相关方案需结合血糖监测调整。",
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
@@ -1722,14 +2068,70 @@
         "triggered_risks": [
           {
             "specialty_name": "内分泌/代谢",
-            "rule_id": "endocrinology_glucose_risk",
+            "rule_id": "endocrinology_glucose_treatment_risk",
             "lab_name": "glucose_24h",
             "lab_value": 182.0,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "glycemic instability risk",
+            "related_treatments": "insulin|sulfonylureas|systemic corticosteroids|dextrose fluids",
+            "risk_message": "血糖显著偏离目标范围时提示低血糖酮症酸中毒或感染相关代谢失衡风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "强化降糖或激素治疗前需评估低血糖和高血糖风险",
+            "monitoring_advice": "监测床旁血糖酮体和进食状态",
+            "reference_source": "ADA Standards of Care; DailyMed insulin labels",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "神经",
+            "rule_id": "neurology_sedation_respiratory_risk",
+            "lab_name": "bun_24h",
+            "lab_value": 34.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "sedation and encephalopathy risk",
+            "related_treatments": "opioids|benzodiazepines|gabapentin|baclofen",
+            "risk_message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免多种镇静药叠加并复核肾功能剂量",
+            "monitoring_advice": "监测意识呼吸频率BUN肌酐和跌倒风险",
+            "reference_source": "DailyMed CNS depressant labels; Merck Manual uremia references",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "神经",
+            "rule_id": "neurology_glucose_mimic_stroke_risk",
+            "lab_name": "glucose_24h",
+            "lab_value": 182.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "stroke mimic and seizure metabolic risk",
+            "related_treatments": "insulin|dextrose fluids|systemic corticosteroids",
+            "risk_message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免未评估血糖时解释神经症状或强化降糖治疗",
+            "monitoring_advice": "监测床旁血糖神经体征和酮体",
+            "reference_source": "ADA Standards of Care; AHA ASA stroke guidance",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "心血管",
+            "rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+            "lab_name": "glucose_24h",
+            "lab_value": 182.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "glycemic cardiovascular context",
+            "related_treatments": "beta blockers|systemic corticosteroids|dextrose fluids",
+            "risk_message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "β受体阻滞剂可能掩盖低血糖症状且激素可升高血糖",
+            "monitoring_advice": "监测床旁血糖进食状态和低血糖症状",
+            "reference_source": "ADA Standards of Care; DailyMed beta blocker labels",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],

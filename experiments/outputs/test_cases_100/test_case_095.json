@@ -163,197 +163,275 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "prednisone",
-          "confidence": 0.77,
-          "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+          "drug_name": "albuterol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
         },
         {
           "rank": 2,
-          "drug_name": "albuterol 0.083% neb soln",
-          "confidence": 0.72,
-          "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+          "drug_name": "ipratropium",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.67,
-          "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+          "drug_name": "budesonide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
         },
         {
           "rank": 4,
-          "drug_name": "methylprednisolone na suc",
-          "confidence": 0.62,
-          "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+          "drug_name": "fluticasone",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+        },
+        {
+          "rank": 5,
+          "drug_name": "salmeterol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "potassium_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "respiratory_potassium_risk",
-          "message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
-          "action_taken": "增加监测提示，并降低可能加重电解质紊乱方案的优先级。"
+          "triggered_rule_id": "respiratory_beta_agonist_potassium_risk",
+          "message": "钾异常可能影响呼吸肌收缩心肺稳定性和β受体激动剂安全性",
+          "action_taken": "降低可能加重钾异常治疗的优先级并提示复核"
         },
         {
           "lab_name": "glucose_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "respiratory_glucose_risk",
-          "message": "血糖过高或过低均会增加呼吸系统感染控制和全身代谢稳定风险，尤其在激素治疗场景下更明显。",
-          "action_taken": "对增加糖代谢负担的方案降权，并提示复核血糖管理。"
+          "triggered_rule_id": "respiratory_steroid_glucose_risk",
+          "message": "血糖过高或过低均会增加感染控制和全身代谢稳定风险",
+          "action_taken": "对增加糖代谢负担的方案降权并提示复核血糖管理"
         }
       ],
       "avoid_or_low_priority_drugs": [
         {
-          "drug_name": "potassium chloride",
-          "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "potassium chloride replacement (critical care and oncology)",
-          "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "calcium gluconate",
-          "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "magnesium sulfate",
-          "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
           "drug_name": "lorazepam",
-          "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.9,
-      "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Contact with and (suspected) exposure to COVID-19, Gastrostomy status 生成候选药物，当前首选药物包括 prednisone, albuterol 0.083% neb soln, ceftriaxone。"
+      "overall_confidence": 0.95,
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Contact with and (suspected) exposure to COVID-19 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
     },
     {
       "specialty_name": "神经",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "levetiracetam",
-          "confidence": 0.77,
-          "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+          "drug_name": "donepezil",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
         },
         {
           "rank": 2,
-          "drug_name": "clobazam",
-          "confidence": 0.72,
-          "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+          "drug_name": "alteplase",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
         },
         {
           "rank": 3,
-          "drug_name": "lacosamide",
-          "confidence": 0.67,
-          "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+          "drug_name": "memantine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
         },
         {
           "rank": 4,
-          "drug_name": "lamotrigine",
-          "confidence": 0.62,
-          "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
         },
         {
           "rank": 5,
-          "drug_name": "diazepam",
-          "confidence": 0.57,
-          "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+          "drug_name": "phenytoin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
-      "risk_alerts": [],
+      "risk_alerts": [
+        {
+          "lab_name": "glucose_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "neurology_glucose_mimic_stroke_risk",
+          "message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+          "action_taken": "提示先复核血糖并调整相关治疗排序"
+        }
+      ],
       "avoid_or_low_priority_drugs": [
         {
-          "drug_name": "valproic acid",
-          "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
           "drug_name": "lorazepam",
-          "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "phenobarbital",
-          "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "potassium chloride",
-          "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-        },
-        {
-          "drug_name": "sw",
-          "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute tonsillitis, unspecified, Dislocation of tooth, initial encounter, Hypotension, unspecified 生成候选药物，当前首选药物包括 levetiracetam, clobazam, lacosamide。"
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Acute tonsillitis, unspecified, Dislocation of tooth, initial encounter 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "norepinephrine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；alpha and beta adrenergic agonist raises vascular tone and blood pressure"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "aspirin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "clopidogrel",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "ticagrelor",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reversibly inhibits platelet P2Y12 receptor"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "nitroglycerin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "potassium_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "cardiology_potassium_risk",
-          "message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
-          "action_taken": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。"
+          "triggered_rule_id": "cardiology_potassium_arrhythmia_risk",
+          "message": "血钾异常会增加心律失常传导异常和相关药物不稳定风险",
+          "action_taken": "对影响血钾或心律的候选治疗降权并提示复核"
+        },
+        {
+          "lab_name": "glucose_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+          "message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+          "action_taken": "提示复核降糖和可能掩盖低血糖症状的药物"
         }
       ],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Bradycardia, unspecified, Disorientation, unspecified, Nosocomial condition 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Bradycardia, unspecified, Disorientation, unspecified 生成候选药物，当前首选药物包括 norepinephrine, aspirin, clopidogrel。"
     }
   ],
   "mdt_discussion": {
@@ -361,44 +439,45 @@
       {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 4 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "clobazam",
-          "lacosamide",
-          "lamotrigine",
-          "diazepam"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       },
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
+          "norepinephrine",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "ticagrelor",
+          "nitroglycerin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
+          "心血管触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -414,28 +493,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc",
-            "levetiracetam",
-            "clobazam"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -448,28 +547,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc",
-            "levetiracetam",
-            "clobazam"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -482,24 +601,44 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc"
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -514,28 +653,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "prednisone",
-        "albuterol 0.083% neb soln",
-        "ceftriaxone",
-        "methylprednisolone na suc",
-        "levetiracetam",
-        "clobazam"
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "lorazepam"
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -548,28 +707,48 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "prednisone",
-        "albuterol 0.083% neb soln",
-        "ceftriaxone",
-        "methylprednisolone na suc",
-        "levetiracetam",
-        "clobazam"
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "lorazepam"
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -582,24 +761,44 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "prednisone",
-        "albuterol 0.083% neb soln",
-        "ceftriaxone",
-        "methylprednisolone na suc"
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "lorazepam"
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "methylprednisolone na suc"
+          "budesonide",
+          "fluticasone",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -613,28 +812,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "prednisone",
-        "albuterol 0.083% neb soln",
-        "ceftriaxone",
-        "methylprednisolone na suc",
-        "levetiracetam",
-        "clobazam"
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "donepezil"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone"
+          "albuterol",
+          "ipratropium"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "lorazepam"
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -648,28 +867,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc",
-            "levetiracetam",
-            "clobazam"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -687,7 +926,7 @@
         "medication_impact_review": [],
         "plan_adaptation_notes": [
           "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-          "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -697,28 +936,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc",
-          "levetiracetam",
-          "clobazam"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "donepezil"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc",
-            "levetiracetam",
-            "clobazam"
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "donepezil",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -736,7 +995,7 @@
         "medication_impact_review": [],
         "plan_adaptation_notes": [
           "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-          "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -746,24 +1005,44 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone"
+            "albuterol",
+            "ipratropium"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "lorazepam"
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "methylprednisolone na suc"
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -780,7 +1059,7 @@
         "medication_impact_review": [],
         "plan_adaptation_notes": [
           "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-          "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+          "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
@@ -790,38 +1069,87 @@
     "triggered_risks": [
       {
         "specialty_name": "呼吸",
-        "rule_id": "respiratory_potassium_risk",
+        "rule_id": "respiratory_beta_agonist_potassium_risk",
         "lab_name": "potassium_24h",
         "lab_value": 5.1,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "bronchodilator electrolyte risk",
+        "related_treatments": "beta agonists|diuretics|electrolyte replacement",
+        "risk_message": "钾异常可能影响呼吸肌收缩心肺稳定性和β受体激动剂安全性",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "使用大剂量β受体激动剂或利尿剂时需复核血钾",
+        "monitoring_advice": "监测血钾心率心电图和呼吸状态",
+        "reference_source": "KDIGO potassium management; DailyMed beta agonist labels",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "呼吸",
-        "rule_id": "respiratory_glucose_risk",
+        "rule_id": "respiratory_steroid_glucose_risk",
         "lab_name": "glucose_24h",
         "lab_value": 185.0,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "血糖过高或过低均会增加呼吸系统感染控制和全身代谢稳定风险，尤其在激素治疗场景下更明显。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "steroid metabolic risk",
+        "related_treatments": "systemic corticosteroids|infection treatment|dextrose fluids",
+        "risk_message": "血糖过高或过低均会增加感染控制和全身代谢稳定风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "系统激素或含糖补液治疗前需评估血糖风险",
+        "monitoring_advice": "监测床旁血糖感染指标和低血糖症状",
+        "reference_source": "ADA Standards of Care; DailyMed corticosteroid labels",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "神经",
+        "rule_id": "neurology_glucose_mimic_stroke_risk",
+        "lab_name": "glucose_24h",
+        "lab_value": 185.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "stroke mimic and seizure metabolic risk",
+        "related_treatments": "insulin|dextrose fluids|systemic corticosteroids",
+        "risk_message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免未评估血糖时解释神经症状或强化降糖治疗",
+        "monitoring_advice": "监测床旁血糖神经体征和酮体",
+        "reference_source": "ADA Standards of Care; AHA ASA stroke guidance",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "心血管",
-        "rule_id": "cardiology_potassium_risk",
+        "rule_id": "cardiology_potassium_arrhythmia_risk",
         "lab_name": "potassium_24h",
         "lab_value": 5.1,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "electrolyte related arrhythmia",
+        "related_treatments": "diuretics|ACE inhibitors|ARB|spironolactone|antiarrhythmics",
+        "risk_message": "血钾异常会增加心律失常传导异常和相关药物不稳定风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "慎用升钾或降钾治疗并复核肾功能和心电图",
+        "monitoring_advice": "复查血钾心电图肌酐和用药清单",
+        "reference_source": "KDIGO potassium management; DailyMed labels",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "心血管",
+        "rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+        "lab_name": "glucose_24h",
+        "lab_value": 185.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "glycemic cardiovascular context",
+        "related_treatments": "beta blockers|systemic corticosteroids|dextrose fluids",
+        "risk_message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "β受体阻滞剂可能掩盖低血糖症状且激素可升高血糖",
+        "monitoring_advice": "监测床旁血糖进食状态和低血糖症状",
+        "reference_source": "ADA Standards of Care; DailyMed beta blocker labels",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
@@ -878,76 +1206,94 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "prednisone",
-            "confidence": 0.77,
-            "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+            "drug_name": "albuterol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
           },
           {
             "rank": 2,
-            "drug_name": "albuterol 0.083% neb soln",
-            "confidence": 0.72,
-            "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+            "drug_name": "ipratropium",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.67,
-            "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+            "drug_name": "budesonide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
           },
           {
             "rank": 4,
-            "drug_name": "methylprednisolone na suc",
-            "confidence": 0.62,
-            "reason": "与诊断 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 在知识库中存在映射"
+            "drug_name": "fluticasone",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+          },
+          {
+            "rank": 5,
+            "drug_name": "salmeterol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "potassium_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "respiratory_potassium_risk",
-            "message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
-            "action_taken": "增加监测提示，并降低可能加重电解质紊乱方案的优先级。"
+            "triggered_rule_id": "respiratory_beta_agonist_potassium_risk",
+            "message": "钾异常可能影响呼吸肌收缩心肺稳定性和β受体激动剂安全性",
+            "action_taken": "降低可能加重钾异常治疗的优先级并提示复核"
           },
           {
             "lab_name": "glucose_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "respiratory_glucose_risk",
-            "message": "血糖过高或过低均会增加呼吸系统感染控制和全身代谢稳定风险，尤其在激素治疗场景下更明显。",
-            "action_taken": "对增加糖代谢负担的方案降权，并提示复核血糖管理。"
+            "triggered_rule_id": "respiratory_steroid_glucose_risk",
+            "message": "血糖过高或过低均会增加感染控制和全身代谢稳定风险",
+            "action_taken": "对增加糖代谢负担的方案降权并提示复核血糖管理"
           }
         ],
         "avoid_or_low_priority_drugs": [
           {
-            "drug_name": "potassium chloride",
-            "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "potassium chloride replacement (critical care and oncology)",
-            "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "calcium gluconate",
-            "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "magnesium sulfate",
-            "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
             "drug_name": "lorazepam",
-            "reason": "在 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.9,
-        "summary_reason": "呼吸智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Contact with and (suspected) exposure to COVID-19, Gastrostomy status 生成候选药物，当前首选药物包括 prednisone, albuterol 0.083% neb soln, ceftriaxone。"
+        "overall_confidence": 0.95,
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Contact with and (suspected) exposure to COVID-19 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
       }
     },
     {
@@ -959,67 +1305,87 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "levetiracetam",
-            "confidence": 0.77,
-            "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+            "drug_name": "donepezil",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
           },
           {
             "rank": 2,
-            "drug_name": "clobazam",
-            "confidence": 0.72,
-            "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+            "drug_name": "alteplase",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
           },
           {
             "rank": 3,
-            "drug_name": "lacosamide",
-            "confidence": 0.67,
-            "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+            "drug_name": "memantine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
           },
           {
             "rank": 4,
-            "drug_name": "lamotrigine",
-            "confidence": 0.62,
-            "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
           },
           {
             "rank": 5,
-            "drug_name": "diazepam",
-            "confidence": 0.57,
-            "reason": "与诊断 Spastic quadriplegic cerebral palsy 在知识库中存在映射"
+            "drug_name": "phenytoin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
-        "risk_alerts": [],
+        "risk_alerts": [
+          {
+            "lab_name": "glucose_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "neurology_glucose_mimic_stroke_risk",
+            "message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+            "action_taken": "提示先复核血糖并调整相关治疗排序"
+          }
+        ],
         "avoid_or_low_priority_drugs": [
           {
-            "drug_name": "valproic acid",
-            "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
             "drug_name": "lorazepam",
-            "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "phenobarbital",
-            "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "potassium chloride",
-            "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
-          },
-          {
-            "drug_name": "sw",
-            "reason": "在 Spastic quadriplegic cerebral palsy 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute tonsillitis, unspecified, Dislocation of tooth, initial encounter, Hypotension, unspecified 生成候选药物，当前首选药物包括 levetiracetam, clobazam, lacosamide。"
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Acute tonsillitis, unspecified, Dislocation of tooth, initial encounter 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
       }
     },
     {
@@ -1031,54 +1397,94 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "norepinephrine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；alpha and beta adrenergic agonist raises vascular tone and blood pressure"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "aspirin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "clopidogrel",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "ticagrelor",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reversibly inhibits platelet P2Y12 receptor"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "nitroglycerin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "potassium_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "cardiology_potassium_risk",
-            "message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
-            "action_taken": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。"
+            "triggered_rule_id": "cardiology_potassium_arrhythmia_risk",
+            "message": "血钾异常会增加心律失常传导异常和相关药物不稳定风险",
+            "action_taken": "对影响血钾或心律的候选治疗降权并提示复核"
+          },
+          {
+            "lab_name": "glucose_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+            "message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+            "action_taken": "提示复核降糖和可能掩盖低血糖症状的药物"
           }
         ],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Bradycardia, unspecified, Disorientation, unspecified, Nosocomial condition 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute respiratory failure, unspecified whether with hypoxia or hypercapnia, Bradycardia, unspecified, Disorientation, unspecified 生成候选药物，当前首选药物包括 norepinephrine, aspirin, clopidogrel。"
       }
     },
     {
@@ -1088,16 +1494,17 @@
       "content": {
         "reviewer_specialty": "呼吸",
         "accepted_drugs": [
-          "prednisone",
-          "albuterol 0.083% neb soln",
-          "ceftriaxone",
-          "methylprednisolone na suc"
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
           "呼吸触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
-        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 4 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+        "priority_comment": "呼吸与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
     },
     {
@@ -1107,15 +1514,15 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "clobazam",
-          "lacosamide",
-          "lamotrigine",
-          "diazepam"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -1127,15 +1534,15 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
+          "norepinephrine",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "ticagrelor",
+          "nitroglycerin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "心血管触发 1 条风险提醒，建议安全审核阶段重点复核。"
+          "心血管触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "心血管与当前病例 6 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -1156,28 +1563,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc",
-              "levetiracetam",
-              "clobazam"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc",
-                "levetiracetam",
-                "clobazam"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1190,28 +1617,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc",
-              "levetiracetam",
-              "clobazam"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc",
-                "levetiracetam",
-                "clobazam"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1224,24 +1671,44 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc"
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1261,28 +1728,48 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "prednisone",
-            "albuterol 0.083% neb soln",
-            "ceftriaxone",
-            "methylprednisolone na suc",
-            "levetiracetam",
-            "clobazam"
+            "albuterol",
+            "ipratropium",
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "donepezil"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone"
+              "albuterol",
+              "ipratropium"
             ],
             "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [
-              "lorazepam"
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "methylprednisolone na suc",
-              "levetiracetam",
-              "clobazam"
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "donepezil",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1296,28 +1783,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc",
-              "levetiracetam",
-              "clobazam"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc",
-                "levetiracetam",
-                "clobazam"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1335,7 +1842,7 @@
             "medication_impact_review": [],
             "plan_adaptation_notes": [
               "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-              "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -1345,28 +1852,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc",
-              "levetiracetam",
-              "clobazam"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "donepezil"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc",
-                "levetiracetam",
-                "clobazam"
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "donepezil",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1384,7 +1911,7 @@
             "medication_impact_review": [],
             "plan_adaptation_notes": [
               "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-              "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -1394,24 +1921,44 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "prednisone",
-              "albuterol 0.083% neb soln",
-              "ceftriaxone",
-              "methylprednisolone na suc"
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "prednisone",
-                "albuterol 0.083% neb soln",
-                "ceftriaxone"
+                "albuterol",
+                "ipratropium"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "lorazepam"
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "methylprednisolone na suc"
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1428,7 +1975,7 @@
             "medication_impact_review": [],
             "plan_adaptation_notes": [
               "患者入院早期 potassium_24h 触发 moderate 风险，建议结合临床背景复核方案。",
-              "患者入院早期血糖异常，prednisone, methylprednisolone na suc 相关方案需结合血糖监测调整。"
+              "患者入院早期血糖异常，建议结合血糖趋势复核方案。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
@@ -1438,38 +1985,87 @@
         "triggered_risks": [
           {
             "specialty_name": "呼吸",
-            "rule_id": "respiratory_potassium_risk",
+            "rule_id": "respiratory_beta_agonist_potassium_risk",
             "lab_name": "potassium_24h",
             "lab_value": 5.1,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "bronchodilator electrolyte risk",
+            "related_treatments": "beta agonists|diuretics|electrolyte replacement",
+            "risk_message": "钾异常可能影响呼吸肌收缩心肺稳定性和β受体激动剂安全性",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "使用大剂量β受体激动剂或利尿剂时需复核血钾",
+            "monitoring_advice": "监测血钾心率心电图和呼吸状态",
+            "reference_source": "KDIGO potassium management; DailyMed beta agonist labels",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "呼吸",
-            "rule_id": "respiratory_glucose_risk",
+            "rule_id": "respiratory_steroid_glucose_risk",
             "lab_name": "glucose_24h",
             "lab_value": 185.0,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "血糖过高或过低均会增加呼吸系统感染控制和全身代谢稳定风险，尤其在激素治疗场景下更明显。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "steroid metabolic risk",
+            "related_treatments": "systemic corticosteroids|infection treatment|dextrose fluids",
+            "risk_message": "血糖过高或过低均会增加感染控制和全身代谢稳定风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "系统激素或含糖补液治疗前需评估血糖风险",
+            "monitoring_advice": "监测床旁血糖感染指标和低血糖症状",
+            "reference_source": "ADA Standards of Care; DailyMed corticosteroid labels",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "神经",
+            "rule_id": "neurology_glucose_mimic_stroke_risk",
+            "lab_name": "glucose_24h",
+            "lab_value": 185.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "stroke mimic and seizure metabolic risk",
+            "related_treatments": "insulin|dextrose fluids|systemic corticosteroids",
+            "risk_message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免未评估血糖时解释神经症状或强化降糖治疗",
+            "monitoring_advice": "监测床旁血糖神经体征和酮体",
+            "reference_source": "ADA Standards of Care; AHA ASA stroke guidance",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "心血管",
-            "rule_id": "cardiology_potassium_risk",
+            "rule_id": "cardiology_potassium_arrhythmia_risk",
             "lab_name": "potassium_24h",
             "lab_value": 5.1,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "electrolyte related arrhythmia",
+            "related_treatments": "diuretics|ACE inhibitors|ARB|spironolactone|antiarrhythmics",
+            "risk_message": "血钾异常会增加心律失常传导异常和相关药物不稳定风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "慎用升钾或降钾治疗并复核肾功能和心电图",
+            "monitoring_advice": "复查血钾心电图肌酐和用药清单",
+            "reference_source": "KDIGO potassium management; DailyMed labels",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "心血管",
+            "rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+            "lab_name": "glucose_24h",
+            "lab_value": 185.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "glycemic cardiovascular context",
+            "related_treatments": "beta blockers|systemic corticosteroids|dextrose fluids",
+            "risk_message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "β受体阻滞剂可能掩盖低血糖症状且激素可升高血糖",
+            "monitoring_advice": "监测床旁血糖进食状态和低血糖症状",
+            "reference_source": "ADA Standards of Care; DailyMed beta blocker labels",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],

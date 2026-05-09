@@ -139,46 +139,87 @@
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "gabapentin",
+          "drug_name": "donepezil",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
         },
         {
           "rank": 2,
-          "drug_name": "levetiracetam",
+          "drug_name": "alteplase",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
         },
         {
           "rank": 3,
-          "drug_name": "midazolam",
+          "drug_name": "memantine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
         },
         {
           "rank": 4,
-          "drug_name": "diazepam",
-          "confidence": 0.81,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
         },
         {
           "rank": 5,
-          "drug_name": "baclofen",
-          "confidence": 0.73,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "phenytoin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
-      "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.92,
-      "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "神经智能体认为当前病例应优先围绕 Unspecified acute appendicitis, History of falling, Personal history of malignant neoplasm of prostate 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+      "risk_alerts": [
+        {
+          "lab_name": "bun_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "neurology_sedation_respiratory_risk",
+          "message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+          "action_taken": "对镇静抗痉挛或神经病理痛药物提示剂量复核"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Unspecified acute appendicitis, History of falling 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
     },
     {
       "specialty_name": "消化",
@@ -186,112 +227,157 @@
         {
           "rank": 1,
           "drug_name": "pantoprazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 2,
-          "drug_name": "metronidazole",
-          "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "omeprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 3,
-          "drug_name": "omeprazole",
-          "confidence": 0.89,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "drug_name": "famotidine",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
         },
         {
           "rank": 4,
-          "drug_name": "ciprofloxacin iv",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "lactulose",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
         },
         {
           "rank": 5,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.8,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "drug_name": "rifaximin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.89,
-      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 Asymptomatic human immunodeficiency virus [HIV] infection status, Long term (current) use of antithrombotics/antiplatelets, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Asymptomatic human immunodeficiency virus [HIV] infection status, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "heparin",
-          "confidence": 0.77,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "warfarin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits vitamin K dependent clotting factor synthesis"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
-          "confidence": 0.72,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "apixaban",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；directly inhibits factor Xa to reduce thrombin generation"
         },
         {
           "rank": 3,
-          "drug_name": "aspirin",
-          "confidence": 0.67,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "metoprolol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 4,
-          "drug_name": "lisinopril",
-          "confidence": 0.62,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "carvedilol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 5,
-          "drug_name": "hydralazine",
-          "confidence": 0.57,
-          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          "drug_name": "lisinopril",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "docusate sodium",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "potassium chloride",
-          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.89,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Essential (primary) hypertension, Obstructive sleep apnea (adult) (pediatric), Presence of artificial hip joint, bilateral 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Essential (primary) hypertension, Obstructive sleep apnea (adult) (pediatric) 生成候选药物，当前首选药物包括 warfarin, apixaban, metoprolol。"
     }
   ],
   "mdt_discussion": {
@@ -299,15 +385,15 @@
       {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       },
@@ -315,10 +401,10 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "famotidine",
+          "lactulose",
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -329,11 +415,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "heparin",
-          "metoprolol tartrate",
-          "aspirin",
-          "lisinopril",
-          "hydralazine"
+          "warfarin",
+          "apixaban",
+          "metoprolol",
+          "carvedilol",
+          "lisinopril"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -353,31 +439,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen",
+          "phenytoin",
           "pantoprazole"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
             "pantoprazole"
           ],
-          "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
           ],
-          "general_inpatient_medication": [],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam",
-            "baclofen"
+            "phenytoin",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -390,31 +493,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen",
+          "phenytoin",
           "pantoprazole"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
             "pantoprazole"
           ],
-          "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
           ],
-          "general_inpatient_medication": [],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam",
-            "baclofen"
+            "phenytoin",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -427,26 +547,43 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "gabapentin",
-          "levetiracetam",
-          "midazolam",
-          "diazepam"
+          "donepezil",
+          "alteplase",
+          "memantine",
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -461,31 +598,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "gabapentin",
+        "donepezil",
+        "alteplase",
+        "memantine",
         "levetiracetam",
-        "midazolam",
-        "diazepam",
-        "baclofen",
+        "phenytoin",
         "pantoprazole"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
           "pantoprazole"
         ],
-        "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium"
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
         ],
-        "general_inpatient_medication": [],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -498,31 +652,48 @@
       "plan_id": "lead_specialty_adjusted",
       "plan_name": "主专科优先修订方案",
       "drugs": [
-        "gabapentin",
+        "donepezil",
+        "alteplase",
+        "memantine",
         "levetiracetam",
-        "midazolam",
-        "diazepam",
-        "baclofen",
+        "phenytoin",
         "pantoprazole"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
           "pantoprazole"
         ],
-        "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium"
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
         ],
-        "general_inpatient_medication": [],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -535,26 +706,43 @@
       "plan_id": "conservative_consensus",
       "plan_name": "保守低冲突方案",
       "drugs": [
-        "gabapentin",
-        "levetiracetam",
-        "midazolam",
-        "diazepam"
+        "donepezil",
+        "alteplase",
+        "memantine",
+        "levetiracetam"
       ],
       "medication_layers": {
         "disease_directed_therapy": [],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam"
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -568,31 +756,48 @@
       "plan_id": "mdt_consensus",
       "plan_name": "MDT多专科共识方案",
       "drugs": [
-        "gabapentin",
+        "donepezil",
+        "alteplase",
+        "memantine",
         "levetiracetam",
-        "midazolam",
-        "diazepam",
-        "baclofen",
+        "phenytoin",
         "pantoprazole"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
           "pantoprazole"
         ],
-        "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
-          "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium"
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
         ],
-        "general_inpatient_medication": [],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -606,31 +811,48 @@
         "plan_id": "mdt_consensus",
         "plan_name": "MDT多专科共识方案",
         "drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen",
+          "phenytoin",
           "pantoprazole"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
             "pantoprazole"
           ],
-          "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
           ],
-          "general_inpatient_medication": [],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam",
-            "baclofen"
+            "phenytoin",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -638,7 +860,7 @@
           "神经"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
@@ -652,7 +874,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
         "priority_order": 1
@@ -661,31 +885,48 @@
         "plan_id": "lead_specialty_adjusted",
         "plan_name": "主专科优先修订方案",
         "drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen",
+          "phenytoin",
           "pantoprazole"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
             "pantoprazole"
           ],
-          "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
-            "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
           ],
-          "general_inpatient_medication": [],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam",
-            "baclofen"
+            "phenytoin",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -693,7 +934,7 @@
           "神经"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
@@ -707,7 +948,9 @@
             "suggested_action": "保留，常规监测"
           }
         ],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
         "priority_order": 2
@@ -716,44 +959,81 @@
         "plan_id": "conservative_consensus",
         "plan_name": "保守低冲突方案",
         "drugs": [
-          "gabapentin",
-          "levetiracetam",
-          "midazolam",
-          "diazepam"
+          "donepezil",
+          "alteplase",
+          "memantine",
+          "levetiracetam"
         ],
         "medication_layers": {
           "disease_directed_therapy": [],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
           "神经"
         ],
         "review_flags": [
-          "未发现明确安全冲突"
+          "存在中度基线风险"
         ],
         "safety_decision": "可作为候选",
         "patient_context_flags": [],
         "medication_impact_review": [],
-        "plan_adaptation_notes": [],
+        "plan_adaptation_notes": [
+          "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+        ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
         "priority_order": 3
       }
     ],
-    "triggered_risks": [],
+    "triggered_risks": [
+      {
+        "specialty_name": "神经",
+        "rule_id": "neurology_sedation_respiratory_risk",
+        "lab_name": "bun_24h",
+        "lab_value": 27.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "sedation and encephalopathy risk",
+        "related_treatments": "opioids|benzodiazepines|gabapentin|baclofen",
+        "risk_message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免多种镇静药叠加并复核肾功能剂量",
+        "monitoring_advice": "监测意识呼吸频率BUN肌酐和跌倒风险",
+        "reference_source": "DailyMed CNS depressant labels; Merck Manual uremia references",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
     "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
     "llm_safety_review": {}
   },
@@ -799,46 +1079,87 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "gabapentin",
+            "drug_name": "donepezil",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits acetylcholinesterase to improve cholinergic signaling"
           },
           {
             "rank": 2,
-            "drug_name": "levetiracetam",
+            "drug_name": "alteplase",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；converts plasminogen to plasmin and dissolves fibrin clot"
           },
           {
             "rank": 3,
-            "drug_name": "midazolam",
+            "drug_name": "memantine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；modulates glutamatergic NMDA receptor activity"
           },
           {
             "rank": 4,
-            "drug_name": "diazepam",
-            "confidence": 0.81,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
           },
           {
             "rank": 5,
-            "drug_name": "baclofen",
-            "confidence": 0.73,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "phenytoin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
-        "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.92,
-        "summary_reason": "神经智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "神经智能体认为当前病例应优先围绕 Unspecified acute appendicitis, History of falling, Personal history of malignant neoplasm of prostate 生成候选药物，当前首选药物包括 gabapentin, levetiracetam, midazolam。"
+        "risk_alerts": [
+          {
+            "lab_name": "bun_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "neurology_sedation_respiratory_risk",
+            "message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+            "action_taken": "对镇静抗痉挛或神经病理痛药物提示剂量复核"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Unspecified acute appendicitis, History of falling 生成候选药物，当前首选药物包括 donepezil, alteplase, memantine。"
       }
     },
     {
@@ -851,45 +1172,78 @@
           {
             "rank": 1,
             "drug_name": "pantoprazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 2,
-            "drug_name": "metronidazole",
-            "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "omeprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 3,
-            "drug_name": "omeprazole",
-            "confidence": 0.89,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "drug_name": "famotidine",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
           },
           {
             "rank": 4,
-            "drug_name": "ciprofloxacin iv",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "lactulose",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
           },
           {
             "rank": 5,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.8,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "drug_name": "rifaximin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.89,
-        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 Asymptomatic human immunodeficiency virus [HIV] infection status, Long term (current) use of antithrombotics/antiplatelets, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 pantoprazole, metronidazole, omeprazole。"
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Asymptomatic human immunodeficiency virus [HIV] infection status, Long term (current) use of antithrombotics/antiplatelets 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
       }
     },
     {
@@ -901,67 +1255,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "heparin",
-            "confidence": 0.77,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "warfarin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits vitamin K dependent clotting factor synthesis"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
-            "confidence": 0.72,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "apixaban",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；directly inhibits factor Xa to reduce thrombin generation"
           },
           {
             "rank": 3,
-            "drug_name": "aspirin",
-            "confidence": 0.67,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "metoprolol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 4,
-            "drug_name": "lisinopril",
-            "confidence": 0.62,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "carvedilol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 5,
-            "drug_name": "hydralazine",
-            "confidence": 0.57,
-            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+            "drug_name": "lisinopril",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "docusate sodium",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "potassium chloride",
-            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.89,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Essential (primary) hypertension, Obstructive sleep apnea (adult) (pediatric), Presence of artificial hip joint, bilateral 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Unspecified acute appendicitis, Essential (primary) hypertension, Obstructive sleep apnea (adult) (pediatric) 生成候选药物，当前首选药物包括 warfarin, apixaban, metoprolol。"
       }
     },
     {
@@ -971,15 +1337,15 @@
       "content": {
         "reviewer_specialty": "神经",
         "accepted_drugs": [
-          "gabapentin",
+          "donepezil",
+          "alteplase",
+          "memantine",
           "levetiracetam",
-          "midazolam",
-          "diazepam",
-          "baclofen"
+          "phenytoin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "神经建议未发现明显跨专科冲突。"
+          "神经触发 1 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "神经与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
       }
@@ -992,10 +1358,10 @@
         "reviewer_specialty": "消化",
         "accepted_drugs": [
           "pantoprazole",
-          "metronidazole",
           "omeprazole",
-          "ciprofloxacin iv",
-          "ciprofloxacin hcl"
+          "famotidine",
+          "lactulose",
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1011,11 +1377,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "heparin",
-          "metoprolol tartrate",
-          "aspirin",
-          "lisinopril",
-          "hydralazine"
+          "warfarin",
+          "apixaban",
+          "metoprolol",
+          "carvedilol",
+          "lisinopril"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1040,31 +1406,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "gabapentin",
+              "donepezil",
+              "alteplase",
+              "memantine",
               "levetiracetam",
-              "midazolam",
-              "diazepam",
-              "baclofen",
+              "phenytoin",
               "pantoprazole"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
                 "pantoprazole"
               ],
-              "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
               ],
-              "general_inpatient_medication": [],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam",
-                "baclofen"
+                "phenytoin",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1077,31 +1460,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "gabapentin",
+              "donepezil",
+              "alteplase",
+              "memantine",
               "levetiracetam",
-              "midazolam",
-              "diazepam",
-              "baclofen",
+              "phenytoin",
               "pantoprazole"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
                 "pantoprazole"
               ],
-              "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
               ],
-              "general_inpatient_medication": [],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam",
-                "baclofen"
+                "phenytoin",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1114,26 +1514,43 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "gabapentin",
-              "levetiracetam",
-              "midazolam",
-              "diazepam"
+              "donepezil",
+              "alteplase",
+              "memantine",
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1153,31 +1570,48 @@
           "plan_id": "mdt_consensus",
           "plan_name": "MDT多专科共识方案",
           "drugs": [
-            "gabapentin",
+            "donepezil",
+            "alteplase",
+            "memantine",
             "levetiracetam",
-            "midazolam",
-            "diazepam",
-            "baclofen",
+            "phenytoin",
             "pantoprazole"
           ],
           "medication_layers": {
-            "disease_directed_therapy": [
+            "disease_directed_therapy": [],
+            "risk_modifying_therapy": [],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [
               "pantoprazole"
             ],
-            "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [
-              "acetaminophen",
-              "oxycodone (immediate release)",
-              "senna",
-              "docusate sodium"
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
             ],
-            "general_inpatient_medication": [],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "gabapentin",
+              "donepezil",
+              "alteplase",
+              "memantine",
               "levetiracetam",
-              "midazolam",
-              "diazepam",
-              "baclofen"
+              "phenytoin",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1191,31 +1625,48 @@
             "plan_id": "mdt_consensus",
             "plan_name": "MDT多专科共识方案",
             "drugs": [
-              "gabapentin",
+              "donepezil",
+              "alteplase",
+              "memantine",
               "levetiracetam",
-              "midazolam",
-              "diazepam",
-              "baclofen",
+              "phenytoin",
               "pantoprazole"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
                 "pantoprazole"
               ],
-              "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
               ],
-              "general_inpatient_medication": [],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam",
-                "baclofen"
+                "phenytoin",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1223,7 +1674,7 @@
               "神经"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
@@ -1237,7 +1688,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
             "priority_order": 1
@@ -1246,31 +1699,48 @@
             "plan_id": "lead_specialty_adjusted",
             "plan_name": "主专科优先修订方案",
             "drugs": [
-              "gabapentin",
+              "donepezil",
+              "alteplase",
+              "memantine",
               "levetiracetam",
-              "midazolam",
-              "diazepam",
-              "baclofen",
+              "phenytoin",
               "pantoprazole"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
                 "pantoprazole"
               ],
-              "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
-                "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
               ],
-              "general_inpatient_medication": [],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam",
-                "baclofen"
+                "phenytoin",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1278,7 +1748,7 @@
               "神经"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
@@ -1292,7 +1762,9 @@
                 "suggested_action": "保留，常规监测"
               }
             ],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
             "priority_order": 2
@@ -1301,44 +1773,81 @@
             "plan_id": "conservative_consensus",
             "plan_name": "保守低冲突方案",
             "drugs": [
-              "gabapentin",
-              "levetiracetam",
-              "midazolam",
-              "diazepam"
+              "donepezil",
+              "alteplase",
+              "memantine",
+              "levetiracetam"
             ],
             "medication_layers": {
               "disease_directed_therapy": [],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "gabapentin",
+                "donepezil",
+                "alteplase",
+                "memantine",
                 "levetiracetam",
-                "midazolam",
-                "diazepam"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
               "神经"
             ],
             "review_flags": [
-              "未发现明确安全冲突"
+              "存在中度基线风险"
             ],
             "safety_decision": "可作为候选",
             "patient_context_flags": [],
             "medication_impact_review": [],
-            "plan_adaptation_notes": [],
+            "plan_adaptation_notes": [
+              "患者入院早期存在肾功能相关风险背景，需复核候选药物的肾排泄和肾毒性。"
+            ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
             "priority_order": 3
           }
         ],
-        "triggered_risks": [],
+        "triggered_risks": [
+          {
+            "specialty_name": "神经",
+            "rule_id": "neurology_sedation_respiratory_risk",
+            "lab_name": "bun_24h",
+            "lab_value": 27.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "sedation and encephalopathy risk",
+            "related_treatments": "opioids|benzodiazepines|gabapentin|baclofen",
+            "risk_message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免多种镇静药叠加并复核肾功能剂量",
+            "monitoring_advice": "监测意识呼吸频率BUN肌酐和跌倒风险",
+            "reference_source": "DailyMed CNS depressant labels; Merck Manual uremia references",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
         "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
         "llm_safety_review": {}
       }

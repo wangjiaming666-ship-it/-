@@ -143,120 +143,165 @@
         {
           "rank": 1,
           "drug_name": "insulin",
-          "confidence": 0.77,
-          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "levothyroxine sodium",
-          "confidence": 0.72,
-          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          "drug_name": "metformin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "sodium bicarbonate",
-          "confidence": 0.67,
-          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          "drug_name": "glipizide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.62,
-          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          "drug_name": "insulin glargine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
         },
         {
           "rank": 5,
-          "drug_name": "prednisone",
-          "confidence": 0.57,
-          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          "drug_name": "insulin lispro",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
           "drug_name": "acetaminophen",
-          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "docusate sodium",
-          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Essential (primary) hypertension, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, sodium bicarbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Atherosclerotic heart disease of native coronary artery without angina pectoris, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "aspirin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
+          "drug_name": "clopidogrel",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
+          "drug_name": "nitroglycerin",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
+          "drug_name": "isorbide mononitrate",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；venous and coronary vasodilation through nitric oxide pathway"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
+          "drug_name": "metoprolol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "inr_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "cardiology_inr_risk",
-          "message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
-          "action_taken": "对抗凝和联用抗血小板方案降权，并提示人工复核。"
+          "triggered_rule_id": "cardiology_antithrombotic_bleeding_risk",
+          "message": "INR 升高提示凝血功能异常且强化抗栓治疗出血风险增加",
+          "action_taken": "对抗凝抗血小板或溶栓相关方案降权并提示人工复核"
         }
       ],
-      "avoid_or_low_priority_drugs": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
       "overall_confidence": 0.95,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for examination for normal comparison and control in clinical research program, Family history of ischemic heart disease and other diseases of the circulatory system, Long term (current) use of aspirin 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Encounter for examination for normal comparison and control in clinical research program, Family history of ischemic heart disease and other diseases of the circulatory system 生成候选药物，当前首选药物包括 aspirin, clopidogrel, nitroglycerin。"
     }
   ],
   "mdt_discussion": {
@@ -265,10 +310,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -279,11 +324,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "nitroglycerin",
+          "isorbide mononitrate",
+          "metoprolol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -304,32 +349,46 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone",
-          "furosemide"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "furosemide"
+            "insulin glargine",
+            "insulin lispro",
+            "aspirin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -343,32 +402,46 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone",
-          "furosemide"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "furosemide"
+            "insulin glargine",
+            "insulin lispro",
+            "aspirin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -382,28 +455,42 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate"
+          "metformin",
+          "glipizide",
+          "insulin glargine"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin glargine"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -419,32 +506,46 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "sodium bicarbonate",
-        "calcium carbonate",
-        "prednisone",
-        "furosemide"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "aspirin"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "furosemide"
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -458,32 +559,46 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "sodium bicarbonate",
-        "calcium carbonate",
-        "prednisone",
-        "furosemide"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "aspirin"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "furosemide"
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -497,28 +612,42 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "sodium bicarbonate",
-        "calcium carbonate"
+        "metformin",
+        "glipizide",
+        "insulin glargine"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
-          "insulin"
+          "insulin",
+          "insulin glargine"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -533,32 +662,46 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "levothyroxine sodium",
-        "sodium bicarbonate",
-        "calcium carbonate",
-        "prednisone",
-        "furosemide"
+        "metformin",
+        "glipizide",
+        "insulin glargine",
+        "insulin lispro",
+        "aspirin"
       ],
       "medication_layers": {
-        "disease_directed_therapy": [
-          "levothyroxine sodium",
-          "calcium carbonate",
-          "prednisone"
-        ],
+        "disease_directed_therapy": [],
         "risk_modifying_therapy": [
           "insulin",
-          "furosemide"
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "oxycodone (immediate release)",
-          "senna",
-          "docusate sodium",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "sodium bicarbonate"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -573,32 +716,46 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone",
-          "furosemide"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "furosemide"
+            "insulin glargine",
+            "insulin lispro",
+            "aspirin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -606,9 +763,10 @@
           "心血管"
         ],
         "review_flags": [
-          "存在中度基线风险"
+          "存在中度基线风险",
+          "候选药物与患者风险背景存在适配性问题"
         ],
-        "safety_decision": "可作为候选",
+        "safety_decision": "需人工复核",
         "patient_context_flags": [
           "入院早期 INR 升高: 1.6"
         ],
@@ -622,32 +780,32 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "insulin lispro",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "furosemide",
+            "drug_name": "aspirin",
             "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
+              "涉及抗凝或抗血小板相关出血风险"
             ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
+            "severity": "high",
+            "suggested_action": "显著降权或人工复核出血风险后再使用"
           }
         ],
         "plan_adaptation_notes": [
-          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+          "患者入院早期凝血风险升高，aspirin 相关抗凝/抗血小板方案需谨慎复核。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -658,32 +816,46 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone",
-          "furosemide"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro",
+          "aspirin"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate",
-            "prednisone"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
             "insulin",
-            "furosemide"
+            "insulin glargine",
+            "insulin lispro",
+            "aspirin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -691,9 +863,10 @@
           "心血管"
         ],
         "review_flags": [
-          "存在中度基线风险"
+          "存在中度基线风险",
+          "候选药物与患者风险背景存在适配性问题"
         ],
-        "safety_decision": "可作为候选",
+        "safety_decision": "需人工复核",
         "patient_context_flags": [
           "入院早期 INR 升高: 1.6"
         ],
@@ -707,32 +880,32 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "insulin lispro",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "furosemide",
+            "drug_name": "aspirin",
             "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
+              "涉及抗凝或抗血小板相关出血风险"
             ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
+            "severity": "high",
+            "suggested_action": "显著降权或人工复核出血风险后再使用"
           }
         ],
         "plan_adaptation_notes": [
-          "患者入院早期凝血风险升高，建议人工复核出血风险。"
+          "患者入院早期凝血风险升高，aspirin 相关抗凝/抗血小板方案需谨慎复核。"
         ],
         "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
         "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -743,28 +916,42 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate"
+          "metformin",
+          "glipizide",
+          "insulin glargine"
         ],
         "medication_layers": {
-          "disease_directed_therapy": [
-            "levothyroxine sodium",
-            "calcium carbonate"
-          ],
+          "disease_directed_therapy": [],
           "risk_modifying_therapy": [
-            "insulin"
+            "insulin",
+            "insulin glargine"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "oxycodone (immediate release)",
-            "senna",
-            "docusate sodium",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "sodium bicarbonate"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -787,17 +974,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "levothyroxine sodium",
+            "drug_name": "insulin glargine",
             "potential_impacts": [
-              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "calcium carbonate",
-            "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "影响血糖控制，需结合血糖趋势调整"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -814,14 +993,19 @@
     "triggered_risks": [
       {
         "specialty_name": "心血管",
-        "rule_id": "cardiology_inr_risk",
+        "rule_id": "cardiology_antithrombotic_bleeding_risk",
         "lab_name": "inr_24h",
         "lab_value": 1.6,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "bleeding risk",
+        "related_treatments": "anticoagulants|antiplatelets|thrombolytics",
+        "risk_message": "INR 升高提示凝血功能异常且强化抗栓治疗出血风险增加",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免未复核情况下联合强化抗凝抗血小板或溶栓",
+        "monitoring_advice": "复查 INR 血红蛋白血小板和出血体征",
+        "reference_source": "DailyMed anticoagulant labels; AHA ACC antithrombotic references",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
@@ -871,66 +1055,78 @@
           {
             "rank": 1,
             "drug_name": "insulin",
-            "confidence": 0.77,
-            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "levothyroxine sodium",
-            "confidence": 0.72,
-            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+            "drug_name": "metformin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "sodium bicarbonate",
-            "confidence": 0.67,
-            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+            "drug_name": "glipizide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.62,
-            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+            "drug_name": "insulin glargine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
           },
           {
             "rank": 5,
-            "drug_name": "prednisone",
-            "confidence": 0.57,
-            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+            "drug_name": "insulin lispro",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
             "drug_name": "acetaminophen",
-            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "docusate sodium",
-            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Essential (primary) hypertension, Hyperlipidemia, unspecified 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, sodium bicarbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Atherosclerotic heart disease of native coronary artery without angina pectoris, Essential (primary) hypertension 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -942,54 +1138,87 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "aspirin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；irreversibly inhibits platelet COX and thromboxane mediated aggregation"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
+            "drug_name": "clopidogrel",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits ADP mediated platelet activation and aggregation"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
+            "drug_name": "nitroglycerin",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；donates nitric oxide to dilate veins and coronary arteries"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
+            "drug_name": "isorbide mononitrate",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；venous and coronary vasodilation through nitric oxide pathway"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
+            "drug_name": "metoprolol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "inr_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "cardiology_inr_risk",
-            "message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
-            "action_taken": "对抗凝和联用抗血小板方案降权，并提示人工复核。"
+            "triggered_rule_id": "cardiology_antithrombotic_bleeding_risk",
+            "message": "INR 升高提示凝血功能异常且强化抗栓治疗出血风险增加",
+            "action_taken": "对抗凝抗血小板或溶栓相关方案降权并提示人工复核"
           }
         ],
-        "avoid_or_low_priority_drugs": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
         "overall_confidence": 0.95,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Encounter for examination for normal comparison and control in clinical research program, Family history of ischemic heart disease and other diseases of the circulatory system, Long term (current) use of aspirin 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Atherosclerotic heart disease of native coronary artery without angina pectoris, Encounter for examination for normal comparison and control in clinical research program, Family history of ischemic heart disease and other diseases of the circulatory system 生成候选药物，当前首选药物包括 aspirin, clopidogrel, nitroglycerin。"
       }
     },
     {
@@ -1000,10 +1229,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "levothyroxine sodium",
-          "sodium bicarbonate",
-          "calcium carbonate",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1019,11 +1248,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
           "aspirin",
-          "warfarin"
+          "clopidogrel",
+          "nitroglycerin",
+          "isorbide mononitrate",
+          "metoprolol"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1049,32 +1278,46 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate",
-              "prednisone",
-              "furosemide"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "aspirin"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "furosemide"
+                "insulin glargine",
+                "insulin lispro",
+                "aspirin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1088,32 +1331,46 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate",
-              "prednisone",
-              "furosemide"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "aspirin"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "furosemide"
+                "insulin glargine",
+                "insulin lispro",
+                "aspirin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1127,28 +1384,42 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate"
+              "metformin",
+              "glipizide",
+              "insulin glargine"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin glargine"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1169,32 +1440,46 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "insulin",
-            "levothyroxine sodium",
-            "sodium bicarbonate",
-            "calcium carbonate",
-            "prednisone",
-            "furosemide"
+            "metformin",
+            "glipizide",
+            "insulin glargine",
+            "insulin lispro",
+            "aspirin"
           ],
           "medication_layers": {
-            "disease_directed_therapy": [
-              "levothyroxine sodium",
-              "calcium carbonate",
-              "prednisone"
-            ],
+            "disease_directed_therapy": [],
             "risk_modifying_therapy": [
               "insulin",
-              "furosemide"
+              "insulin glargine",
+              "insulin lispro",
+              "aspirin"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "oxycodone (immediate release)",
-              "senna",
-              "docusate sodium",
-              "ondansetron"
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "sodium bicarbonate"
+              "metformin",
+              "glipizide",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1209,32 +1494,46 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate",
-              "prednisone",
-              "furosemide"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "aspirin"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "furosemide"
+                "insulin glargine",
+                "insulin lispro",
+                "aspirin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1242,9 +1541,10 @@
               "心血管"
             ],
             "review_flags": [
-              "存在中度基线风险"
+              "存在中度基线风险",
+              "候选药物与患者风险背景存在适配性问题"
             ],
-            "safety_decision": "可作为候选",
+            "safety_decision": "需人工复核",
             "patient_context_flags": [
               "入院早期 INR 升高: 1.6"
             ],
@@ -1258,32 +1558,32 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "insulin lispro",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "furosemide",
+                "drug_name": "aspirin",
                 "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
+                  "涉及抗凝或抗血小板相关出血风险"
                 ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
+                "severity": "high",
+                "suggested_action": "显著降权或人工复核出血风险后再使用"
               }
             ],
             "plan_adaptation_notes": [
-              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+              "患者入院早期凝血风险升高，aspirin 相关抗凝/抗血小板方案需谨慎复核。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
@@ -1294,32 +1594,46 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate",
-              "prednisone",
-              "furosemide"
+              "metformin",
+              "glipizide",
+              "insulin glargine",
+              "insulin lispro",
+              "aspirin"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate",
-                "prednisone"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
                 "insulin",
-                "furosemide"
+                "insulin glargine",
+                "insulin lispro",
+                "aspirin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1327,9 +1641,10 @@
               "心血管"
             ],
             "review_flags": [
-              "存在中度基线风险"
+              "存在中度基线风险",
+              "候选药物与患者风险背景存在适配性问题"
             ],
-            "safety_decision": "可作为候选",
+            "safety_decision": "需人工复核",
             "patient_context_flags": [
               "入院早期 INR 升高: 1.6"
             ],
@@ -1343,32 +1658,32 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "insulin lispro",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "furosemide",
+                "drug_name": "aspirin",
                 "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
+                  "涉及抗凝或抗血小板相关出血风险"
                 ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
+                "severity": "high",
+                "suggested_action": "显著降权或人工复核出血风险后再使用"
               }
             ],
             "plan_adaptation_notes": [
-              "患者入院早期凝血风险升高，建议人工复核出血风险。"
+              "患者入院早期凝血风险升高，aspirin 相关抗凝/抗血小板方案需谨慎复核。"
             ],
             "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
             "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
@@ -1379,28 +1694,42 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "levothyroxine sodium",
-              "sodium bicarbonate",
-              "calcium carbonate"
+              "metformin",
+              "glipizide",
+              "insulin glargine"
             ],
             "medication_layers": {
-              "disease_directed_therapy": [
-                "levothyroxine sodium",
-                "calcium carbonate"
-              ],
+              "disease_directed_therapy": [],
               "risk_modifying_therapy": [
-                "insulin"
+                "insulin",
+                "insulin glargine"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "oxycodone (immediate release)",
-                "senna",
-                "docusate sodium",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "sodium bicarbonate"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1423,17 +1752,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "levothyroxine sodium",
+                "drug_name": "insulin glargine",
                 "potential_impacts": [
-                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "calcium carbonate",
-                "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "影响血糖控制，需结合血糖趋势调整"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1450,14 +1771,19 @@
         "triggered_risks": [
           {
             "specialty_name": "心血管",
-            "rule_id": "cardiology_inr_risk",
+            "rule_id": "cardiology_antithrombotic_bleeding_risk",
             "lab_name": "inr_24h",
             "lab_value": 1.6,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "bleeding risk",
+            "related_treatments": "anticoagulants|antiplatelets|thrombolytics",
+            "risk_message": "INR 升高提示凝血功能异常且强化抗栓治疗出血风险增加",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免未复核情况下联合强化抗凝抗血小板或溶栓",
+            "monitoring_advice": "复查 INR 血红蛋白血小板和出血体征",
+            "reference_source": "DailyMed anticoagulant labels; AHA ACC antithrombotic references",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],

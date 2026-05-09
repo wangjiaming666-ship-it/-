@@ -132,148 +132,179 @@
           "rank": 1,
           "drug_name": "insulin",
           "confidence": 0.77,
-          "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
         },
         {
           "rank": 2,
-          "drug_name": "cholestyramine",
-          "confidence": 0.72,
-          "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
         },
         {
           "rank": 3,
-          "drug_name": "calcium carbonate",
-          "confidence": 0.67,
-          "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
         },
         {
           "rank": 4,
-          "drug_name": "cyanocobalamin",
-          "confidence": 0.62,
-          "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
         },
         {
           "rank": 5,
-          "drug_name": "prednisone",
-          "confidence": 0.57,
-          "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+          "drug_name": "methimazole",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "sodium_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "endocrinology_sodium_risk",
-          "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
-          "action_taken": "对强化补液和快速纠正方案降权，提示人工复核。"
+          "triggered_rule_id": "endocrinology_sodium_endocrine_risk",
+          "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+          "action_taken": "对强化补液和快速纠正方案降权并提示人工复核"
         }
       ],
       "avoid_or_low_priority_drugs": [
         {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
           "drug_name": "acetaminophen",
-          "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "lorazepam",
-          "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "oxycodone (immediate release)",
-          "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
       "overall_confidence": 0.95,
-      "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Candidal stomatitis, Gastritis, unspecified, without bleeding 生成候选药物，当前首选药物包括 insulin, cholestyramine, calcium carbonate。"
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Idiopathic acute pancreatitis without necrosis or infection, Candidal stomatitis 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
     },
     {
       "specialty_name": "消化",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "metronidazole",
-          "confidence": 0.77,
-          "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+          "drug_name": "mesalamine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；topical anti inflammatory effect in intestinal mucosa"
         },
         {
           "rank": 2,
-          "drug_name": "ciprofloxacin hcl",
-          "confidence": 0.72,
-          "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+          "drug_name": "vancomycin oral",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；local gut antibiotic effect against C difficile"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.67,
-          "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+          "drug_name": "fidaxomicin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits sigma dependent transcription in C difficile"
         },
         {
           "rank": 4,
-          "drug_name": "ciprofloxacin iv",
-          "confidence": 0.62,
-          "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+          "drug_name": "budesonide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；locally acting glucocorticoid reduces intestinal inflammation"
         },
         {
           "rank": 5,
-          "drug_name": "omeprazole",
-          "confidence": 0.57,
-          "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+          "drug_name": "metronidazole",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；causes DNA strand breakage in anaerobic organisms"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [
         {
           "lab_name": "inr_24h",
           "risk_level": "moderate",
-          "triggered_rule_id": "gastroenterology_inr_risk",
-          "message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
-          "action_taken": "对抗凝、侵袭性操作相关或易致出血方案降权。"
+          "triggered_rule_id": "gastroenterology_coagulation_bleeding_risk",
+          "message": "INR 升高可能提示肝合成功能下降或凝血异常且消化道出血风险增加",
+          "action_taken": "对抗凝侵袭性操作或易致出血方案降权"
+        },
+        {
+          "lab_name": "sodium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+          "message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+          "action_taken": "对可能加重水钠紊乱方案降权并提示人工复核"
         }
       ],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "heparin",
-          "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "potassium chloride",
-          "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "senna",
-          "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.92,
-      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 Body mass index [BMI] 45.0-49.9, adult, Disturbances of salivary secretion, Long term (current) use of anticoagulants 生成候选药物，当前首选药物包括 metronidazole, ciprofloxacin hcl, ceftriaxone。"
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Body mass index [BMI] 45.0-49.9, adult, Disturbances of salivary secretion 生成候选药物，当前首选药物包括 mesalamine, vancomycin oral, fidaxomicin。"
     }
   ],
   "mdt_discussion": {
@@ -282,10 +313,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -296,15 +327,15 @@
       {
         "reviewer_specialty": "消化",
         "accepted_drugs": [
-          "metronidazole",
-          "ciprofloxacin hcl",
-          "ceftriaxone",
-          "ciprofloxacin iv",
-          "omeprazole"
+          "mesalamine",
+          "vancomycin oral",
+          "fidaxomicin",
+          "budesonide",
+          "metronidazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
+          "消化触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -321,33 +352,50 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone",
-          "metronidazole"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
-            "prednisone",
-            "metronidazole"
+            "levothyroxine",
+            "methimazole",
+            "mesalamine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -361,33 +409,50 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone",
-          "metronidazole"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
-            "prednisone",
-            "metronidazole"
+            "levothyroxine",
+            "methimazole",
+            "mesalamine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -401,29 +466,46 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin"
+          "metformin",
+          "glipizide",
+          "levothyroxine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate"
+            "levothyroxine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -439,33 +521,50 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "cholestyramine",
-        "calcium carbonate",
-        "cyanocobalamin",
-        "prednisone",
-        "metronidazole"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "mesalamine"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
-          "prednisone",
-          "metronidazole"
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
           "ondansetron",
-          "senna",
-          "oxycodone (immediate release)"
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
+        ],
         "requires_review": [
-          "cholestyramine",
-          "cyanocobalamin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -479,33 +578,50 @@
       "plan_name": "主专科优先修订方案",
       "drugs": [
         "insulin",
-        "cholestyramine",
-        "calcium carbonate",
-        "cyanocobalamin",
-        "prednisone",
-        "metronidazole"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "mesalamine"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
-          "prednisone",
-          "metronidazole"
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
           "ondansetron",
-          "senna",
-          "oxycodone (immediate release)"
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
+        ],
         "requires_review": [
-          "cholestyramine",
-          "cyanocobalamin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -519,29 +635,46 @@
       "plan_name": "保守低冲突方案",
       "drugs": [
         "insulin",
-        "cholestyramine",
-        "calcium carbonate",
-        "cyanocobalamin"
+        "metformin",
+        "glipizide",
+        "levothyroxine"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate"
+          "levothyroxine"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
           "ondansetron",
-          "senna",
-          "oxycodone (immediate release)"
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
+        ],
         "requires_review": [
-          "cholestyramine",
-          "cyanocobalamin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -556,33 +689,50 @@
       "plan_name": "MDT多专科共识方案",
       "drugs": [
         "insulin",
-        "cholestyramine",
-        "calcium carbonate",
-        "cyanocobalamin",
-        "prednisone",
-        "metronidazole"
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "mesalamine"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "calcium carbonate",
-          "prednisone",
-          "metronidazole"
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "risk_modifying_therapy": [
           "insulin"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
           "lorazepam",
           "ondansetron",
-          "senna",
-          "oxycodone (immediate release)"
+          "senna"
         ],
-        "general_inpatient_medication": [],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush",
+          "lactated ringer"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "multivitamin",
+          "thiamine"
+        ],
         "requires_review": [
-          "cholestyramine",
-          "cyanocobalamin",
-          "heparin"
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -597,33 +747,50 @@
         "plan_name": "MDT多专科共识方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone",
-          "metronidazole"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
-            "prednisone",
-            "metronidazole"
+            "levothyroxine",
+            "methimazole",
+            "mesalamine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -648,9 +815,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -669,33 +836,50 @@
         "plan_name": "主专科优先修订方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone",
-          "metronidazole"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "mesalamine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate",
-            "prednisone",
-            "metronidazole"
+            "levothyroxine",
+            "methimazole",
+            "mesalamine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -720,9 +904,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -741,29 +925,46 @@
         "plan_name": "保守低冲突方案",
         "drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin"
+          "metformin",
+          "glipizide",
+          "levothyroxine"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "calcium carbonate"
+            "levothyroxine"
           ],
           "risk_modifying_therapy": [
             "insulin"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
             "lorazepam",
             "ondansetron",
-            "senna",
-            "oxycodone (immediate release)"
+            "senna"
           ],
-          "general_inpatient_medication": [],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush",
+            "lactated ringer"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "multivitamin",
+            "thiamine"
+          ],
           "requires_review": [
-            "cholestyramine",
-            "cyanocobalamin",
-            "heparin"
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -787,9 +988,9 @@
             "suggested_action": "保留，常规监测"
           },
           {
-            "drug_name": "calcium carbonate",
+            "drug_name": "levothyroxine",
             "potential_impacts": [
-              "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -807,26 +1008,53 @@
     "triggered_risks": [
       {
         "specialty_name": "内分泌/代谢",
-        "rule_id": "endocrinology_sodium_risk",
+        "rule_id": "endocrinology_sodium_endocrine_risk",
         "lab_name": "sodium_24h",
         "lab_value": 132.0,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "endocrine water and electrolyte risk",
+        "related_treatments": "fluid therapy|diuretics|desmopressin|adrenal replacement",
+        "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免过快纠正血钠并复核内分泌病因",
+        "monitoring_advice": "监测血钠纠正速度尿量和神经状态",
+        "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       },
       {
         "specialty_name": "消化",
-        "rule_id": "gastroenterology_inr_risk",
+        "rule_id": "gastroenterology_coagulation_bleeding_risk",
         "lab_name": "inr_24h",
         "lab_value": 1.7,
         "risk_level": "moderate",
         "risk_source": "baseline_first24h_lab",
-        "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
-        "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+        "risk_target": "GI bleeding and hepatic synthetic risk",
+        "related_treatments": "anticoagulants|antiplatelets|invasive procedures|NSAIDs",
+        "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常且消化道出血风险增加",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "活动性出血或肝功能异常未复核前慎用抗凝抗血小板和 NSAIDs",
+        "monitoring_advice": "监测 INR 血红蛋白便血和生命体征",
+        "reference_source": "DailyMed anticoagulant labels; liver disease coagulation references",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "消化",
+        "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+        "lab_name": "sodium_24h",
+        "lab_value": 132.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "cirrhosis sodium and encephalopathy risk",
+        "related_treatments": "diuretics|lactulose|desmopressin|hypotonic fluids",
+        "risk_message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免过快纠正血钠并谨慎使用利尿或导致腹泻治疗",
+        "monitoring_advice": "监测血钠意识尿量体重和腹泻情况",
+        "reference_source": "AASLD cirrhosis guidance; MedlinePlus sodium test",
         "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
       }
     ],
@@ -873,73 +1101,85 @@
             "rank": 1,
             "drug_name": "insulin",
             "confidence": 0.77,
-            "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
           },
           {
             "rank": 2,
-            "drug_name": "cholestyramine",
-            "confidence": 0.72,
-            "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
           },
           {
             "rank": 3,
-            "drug_name": "calcium carbonate",
-            "confidence": 0.67,
-            "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
           },
           {
             "rank": 4,
-            "drug_name": "cyanocobalamin",
-            "confidence": 0.62,
-            "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
           },
           {
             "rank": 5,
-            "drug_name": "prednisone",
-            "confidence": 0.57,
-            "reason": "与诊断 Moderate protein-calorie malnutrition 在知识库中存在映射"
+            "drug_name": "methimazole",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "sodium_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "endocrinology_sodium_risk",
-            "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
-            "action_taken": "对强化补液和快速纠正方案降权，提示人工复核。"
+            "triggered_rule_id": "endocrinology_sodium_endocrine_risk",
+            "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+            "action_taken": "对强化补液和快速纠正方案降权并提示人工复核"
           }
         ],
         "avoid_or_low_priority_drugs": [
           {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
             "drug_name": "acetaminophen",
-            "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "lorazepam",
-            "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "oxycodone (immediate release)",
-            "reason": "在 Moderate protein-calorie malnutrition 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
         "overall_confidence": 0.95,
-        "summary_reason": "内分泌/代谢智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Candidal stomatitis, Gastritis, unspecified, without bleeding 生成候选药物，当前首选药物包括 insulin, cholestyramine, calcium carbonate。"
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Idiopathic acute pancreatitis without necrosis or infection, Candidal stomatitis 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
       }
     },
     {
@@ -951,75 +1191,94 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "metronidazole",
-            "confidence": 0.77,
-            "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+            "drug_name": "mesalamine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；topical anti inflammatory effect in intestinal mucosa"
           },
           {
             "rank": 2,
-            "drug_name": "ciprofloxacin hcl",
-            "confidence": 0.72,
-            "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+            "drug_name": "vancomycin oral",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；local gut antibiotic effect against C difficile"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.67,
-            "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+            "drug_name": "fidaxomicin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits sigma dependent transcription in C difficile"
           },
           {
             "rank": 4,
-            "drug_name": "ciprofloxacin iv",
-            "confidence": 0.62,
-            "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+            "drug_name": "budesonide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；locally acting glucocorticoid reduces intestinal inflammation"
           },
           {
             "rank": 5,
-            "drug_name": "omeprazole",
-            "confidence": 0.57,
-            "reason": "与诊断 Noninfective gastroenteritis and colitis, unspecified 在知识库中存在映射"
+            "drug_name": "metronidazole",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；causes DNA strand breakage in anaerobic organisms"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [
           {
             "lab_name": "inr_24h",
             "risk_level": "moderate",
-            "triggered_rule_id": "gastroenterology_inr_risk",
-            "message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
-            "action_taken": "对抗凝、侵袭性操作相关或易致出血方案降权。"
+            "triggered_rule_id": "gastroenterology_coagulation_bleeding_risk",
+            "message": "INR 升高可能提示肝合成功能下降或凝血异常且消化道出血风险增加",
+            "action_taken": "对抗凝侵袭性操作或易致出血方案降权"
+          },
+          {
+            "lab_name": "sodium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+            "message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+            "action_taken": "对可能加重水钠紊乱方案降权并提示人工复核"
           }
         ],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "heparin",
-            "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "potassium chloride",
-            "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "senna",
-            "reason": "在 Noninfective gastroenteritis and colitis, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.92,
-        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 Body mass index [BMI] 45.0-49.9, adult, Disturbances of salivary secretion, Long term (current) use of anticoagulants 生成候选药物，当前首选药物包括 metronidazole, ciprofloxacin hcl, ceftriaxone。"
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Idiopathic acute pancreatitis without necrosis or infection, Body mass index [BMI] 45.0-49.9, adult, Disturbances of salivary secretion 生成候选药物，当前首选药物包括 mesalamine, vancomycin oral, fidaxomicin。"
       }
     },
     {
@@ -1030,10 +1289,10 @@
         "reviewer_specialty": "内分泌/代谢",
         "accepted_drugs": [
           "insulin",
-          "cholestyramine",
-          "calcium carbonate",
-          "cyanocobalamin",
-          "prednisone"
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -1049,15 +1308,15 @@
       "content": {
         "reviewer_specialty": "消化",
         "accepted_drugs": [
-          "metronidazole",
-          "ciprofloxacin hcl",
-          "ceftriaxone",
-          "ciprofloxacin iv",
-          "omeprazole"
+          "mesalamine",
+          "vancomycin oral",
+          "fidaxomicin",
+          "budesonide",
+          "metronidazole"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
-          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
+          "消化触发 2 条风险提醒，建议安全审核阶段重点复核。"
         ],
         "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
       }
@@ -1079,33 +1338,50 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin",
-              "prednisone",
-              "metronidazole"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "mesalamine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
-                "prednisone",
-                "metronidazole"
+                "levothyroxine",
+                "methimazole",
+                "mesalamine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1119,33 +1395,50 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin",
-              "prednisone",
-              "metronidazole"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "mesalamine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
-                "prednisone",
-                "metronidazole"
+                "levothyroxine",
+                "methimazole",
+                "mesalamine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1159,29 +1452,46 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin"
+              "metformin",
+              "glipizide",
+              "levothyroxine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate"
+                "levothyroxine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1202,33 +1512,50 @@
           "plan_name": "MDT多专科共识方案",
           "drugs": [
             "insulin",
-            "cholestyramine",
-            "calcium carbonate",
-            "cyanocobalamin",
-            "prednisone",
-            "metronidazole"
+            "metformin",
+            "glipizide",
+            "levothyroxine",
+            "methimazole",
+            "mesalamine"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "calcium carbonate",
-              "prednisone",
-              "metronidazole"
+              "levothyroxine",
+              "methimazole",
+              "mesalamine"
             ],
             "risk_modifying_therapy": [
               "insulin"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
               "lorazepam",
               "ondansetron",
-              "senna",
-              "oxycodone (immediate release)"
+              "senna"
             ],
-            "general_inpatient_medication": [],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush",
+              "lactated ringer"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [
+              "multivitamin",
+              "thiamine"
+            ],
             "requires_review": [
-              "cholestyramine",
-              "cyanocobalamin",
-              "heparin"
+              "metformin",
+              "glipizide",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1243,33 +1570,50 @@
             "plan_name": "MDT多专科共识方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin",
-              "prednisone",
-              "metronidazole"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "mesalamine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
-                "prednisone",
-                "metronidazole"
+                "levothyroxine",
+                "methimazole",
+                "mesalamine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1294,9 +1638,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1315,33 +1659,50 @@
             "plan_name": "主专科优先修订方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin",
-              "prednisone",
-              "metronidazole"
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "mesalamine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate",
-                "prednisone",
-                "metronidazole"
+                "levothyroxine",
+                "methimazole",
+                "mesalamine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1366,9 +1727,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1387,29 +1748,46 @@
             "plan_name": "保守低冲突方案",
             "drugs": [
               "insulin",
-              "cholestyramine",
-              "calcium carbonate",
-              "cyanocobalamin"
+              "metformin",
+              "glipizide",
+              "levothyroxine"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "calcium carbonate"
+                "levothyroxine"
               ],
               "risk_modifying_therapy": [
                 "insulin"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
                 "lorazepam",
                 "ondansetron",
-                "senna",
-                "oxycodone (immediate release)"
+                "senna"
               ],
-              "general_inpatient_medication": [],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush",
+                "lactated ringer"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "multivitamin",
+                "thiamine"
+              ],
               "requires_review": [
-                "cholestyramine",
-                "cyanocobalamin",
-                "heparin"
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1433,9 +1811,9 @@
                 "suggested_action": "保留，常规监测"
               },
               {
-                "drug_name": "calcium carbonate",
+                "drug_name": "levothyroxine",
                 "potential_impacts": [
-                  "钙剂相关治疗，需结合钙磷代谢和肾功能背景"
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1453,26 +1831,53 @@
         "triggered_risks": [
           {
             "specialty_name": "内分泌/代谢",
-            "rule_id": "endocrinology_sodium_risk",
+            "rule_id": "endocrinology_sodium_endocrine_risk",
             "lab_name": "sodium_24h",
             "lab_value": 132.0,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "endocrine water and electrolyte risk",
+            "related_treatments": "fluid therapy|diuretics|desmopressin|adrenal replacement",
+            "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免过快纠正血钠并复核内分泌病因",
+            "monitoring_advice": "监测血钠纠正速度尿量和神经状态",
+            "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           },
           {
             "specialty_name": "消化",
-            "rule_id": "gastroenterology_inr_risk",
+            "rule_id": "gastroenterology_coagulation_bleeding_risk",
             "lab_name": "inr_24h",
             "lab_value": 1.7,
             "risk_level": "moderate",
             "risk_source": "baseline_first24h_lab",
-            "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
-            "baseline_interpretation": "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。",
+            "risk_target": "GI bleeding and hepatic synthetic risk",
+            "related_treatments": "anticoagulants|antiplatelets|invasive procedures|NSAIDs",
+            "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常且消化道出血风险增加",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
             "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "活动性出血或肝功能异常未复核前慎用抗凝抗血小板和 NSAIDs",
+            "monitoring_advice": "监测 INR 血红蛋白便血和生命体征",
+            "reference_source": "DailyMed anticoagulant labels; liver disease coagulation references",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "消化",
+            "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+            "lab_name": "sodium_24h",
+            "lab_value": 132.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "cirrhosis sodium and encephalopathy risk",
+            "related_treatments": "diuretics|lactulose|desmopressin|hypotonic fluids",
+            "risk_message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免过快纠正血钠并谨慎使用利尿或导致腹泻治疗",
+            "monitoring_advice": "监测血钠意识尿量体重和腹泻情况",
+            "reference_source": "AASLD cirrhosis guidance; MedlinePlus sodium test",
             "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
           }
         ],

@@ -120,111 +120,156 @@
           "rank": 1,
           "drug_name": "pantoprazole",
           "confidence": 0.77,
-          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 2,
           "drug_name": "omeprazole",
-          "confidence": 0.72,
-          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
         },
         {
           "rank": 3,
-          "drug_name": "ceftriaxone",
-          "confidence": 0.67,
-          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+          "drug_name": "famotidine",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
         },
         {
           "rank": 4,
           "drug_name": "lactulose",
-          "confidence": 0.62,
-          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
         },
         {
           "rank": 5,
-          "drug_name": "methylprednisolone sodium succ",
-          "confidence": 0.57,
-          "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+          "drug_name": "rifaximin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
       "avoid_or_low_priority_drugs": [
         {
           "drug_name": "acetaminophen",
-          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "potassium chloride",
-          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "magnesium sulfate",
-          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "influenza vaccine quadrivalent",
-          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         },
         {
-          "drug_name": "ondansetron",
-          "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
         }
       ],
-      "overall_confidence": 0.89,
-      "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension, Polyp of colon 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, ceftriaxone。"
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
     },
     {
       "specialty_name": "心血管",
       "recommended_drugs_topk": [
         {
           "rank": 1,
-          "drug_name": "furosemide",
+          "drug_name": "metoprolol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
         },
         {
           "rank": 2,
-          "drug_name": "metoprolol tartrate",
+          "drug_name": "carvedilol",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
         },
         {
           "rank": 3,
-          "drug_name": "heparin",
+          "drug_name": "lisinopril",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
         },
         {
           "rank": 4,
-          "drug_name": "aspirin",
+          "drug_name": "losartan",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
         },
         {
           "rank": 5,
-          "drug_name": "warfarin",
+          "drug_name": "amlodipine",
           "confidence": 0.95,
-          "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
         }
       ],
       "recommendation_reasons": {
         "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-        "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-        "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-        "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
       },
       "risk_alerts": [],
-      "avoid_or_low_priority_drugs": [],
-      "overall_confidence": 0.86,
-      "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-      "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
     }
   ],
   "mdt_discussion": {
@@ -234,9 +279,9 @@
         "accepted_drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ"
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -247,11 +292,11 @@
       {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -273,30 +318,43 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ",
-          "furosemide"
+          "rifaximin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose",
+            "rifaximin"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose",
-            "methylprednisolone sodium succ"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -311,30 +369,43 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ",
-          "furosemide"
+          "rifaximin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose",
+            "rifaximin"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose",
-            "methylprednisolone sodium succ"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -349,25 +420,38 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -384,30 +468,43 @@
       "drugs": [
         "pantoprazole",
         "omeprazole",
-        "ceftriaxone",
+        "famotidine",
         "lactulose",
-        "methylprednisolone sodium succ",
-        "furosemide"
+        "rifaximin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "pantoprazole",
-          "omeprazole",
-          "ceftriaxone"
+          "lactulose",
+          "rifaximin"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine"
         ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "lactulose",
-          "methylprednisolone sodium succ"
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -422,30 +519,43 @@
       "drugs": [
         "pantoprazole",
         "omeprazole",
-        "ceftriaxone",
+        "famotidine",
         "lactulose",
-        "methylprednisolone sodium succ",
-        "furosemide"
+        "rifaximin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "pantoprazole",
-          "omeprazole",
-          "ceftriaxone"
+          "lactulose",
+          "rifaximin"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine"
         ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "lactulose",
-          "methylprednisolone sodium succ"
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -460,25 +570,38 @@
       "drugs": [
         "pantoprazole",
         "omeprazole",
-        "ceftriaxone",
+        "famotidine",
         "lactulose"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "pantoprazole",
-          "omeprazole",
-          "ceftriaxone"
+          "lactulose"
         ],
         "risk_modifying_therapy": [],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine"
         ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "lactulose"
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -494,30 +617,43 @@
       "drugs": [
         "pantoprazole",
         "omeprazole",
-        "ceftriaxone",
+        "famotidine",
         "lactulose",
-        "methylprednisolone sodium succ",
-        "furosemide"
+        "rifaximin",
+        "metoprolol"
       ],
       "medication_layers": {
         "disease_directed_therapy": [
-          "pantoprazole",
-          "omeprazole",
-          "ceftriaxone"
+          "lactulose",
+          "rifaximin"
         ],
         "risk_modifying_therapy": [
-          "furosemide"
+          "metoprolol"
         ],
-        "supportive_or_symptomatic_therapy": [
+        "symptom_supportive_medication": [
           "acetaminophen",
-          "ondansetron"
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
         ],
-        "general_inpatient_medication": [
-          "influenza vaccine quadrivalent"
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine"
         ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
         "requires_review": [
-          "lactulose",
-          "methylprednisolone sodium succ"
+          "ibuprofen",
+          "ketorolac"
         ]
       },
       "supporting_specialties": [
@@ -533,30 +669,43 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ",
-          "furosemide"
+          "rifaximin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose",
+            "rifaximin"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose",
-            "methylprednisolone sodium succ"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -581,14 +730,6 @@
             "drug_name": "omeprazole",
             "potential_impacts": [
               "胃酸抑制相关支持/治疗药物，通常安全性较高"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
@@ -605,30 +746,43 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ",
-          "furosemide"
+          "rifaximin",
+          "metoprolol"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose",
+            "rifaximin"
           ],
           "risk_modifying_therapy": [
-            "furosemide"
+            "metoprolol"
           ],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose",
-            "methylprednisolone sodium succ"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -656,14 +810,6 @@
             ],
             "severity": "low",
             "suggested_action": "保留，常规监测"
-          },
-          {
-            "drug_name": "furosemide",
-            "potential_impacts": [
-              "可能影响容量状态和水电解质平衡"
-            ],
-            "severity": "low",
-            "suggested_action": "保留，常规监测"
           }
         ],
         "plan_adaptation_notes": [],
@@ -677,25 +823,38 @@
         "drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose"
         ],
         "medication_layers": {
           "disease_directed_therapy": [
-            "pantoprazole",
-            "omeprazole",
-            "ceftriaxone"
+            "lactulose"
           ],
           "risk_modifying_therapy": [],
-          "supportive_or_symptomatic_therapy": [
+          "symptom_supportive_medication": [
             "acetaminophen",
-            "ondansetron"
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
           ],
-          "general_inpatient_medication": [
-            "influenza vaccine quadrivalent"
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole",
+            "omeprazole",
+            "famotidine"
           ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
           "requires_review": [
-            "lactulose"
+            "ibuprofen",
+            "ketorolac"
           ]
         },
         "supporting_specialties": [
@@ -770,65 +929,77 @@
             "rank": 1,
             "drug_name": "pantoprazole",
             "confidence": 0.77,
-            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 2,
             "drug_name": "omeprazole",
-            "confidence": 0.72,
-            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
           },
           {
             "rank": 3,
-            "drug_name": "ceftriaxone",
-            "confidence": 0.67,
-            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+            "drug_name": "famotidine",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
           },
           {
             "rank": 4,
             "drug_name": "lactulose",
-            "confidence": 0.62,
-            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
           },
           {
             "rank": 5,
-            "drug_name": "methylprednisolone sodium succ",
-            "confidence": 0.57,
-            "reason": "与诊断 Gastrointestinal hemorrhage, unspecified 在知识库中存在映射"
+            "drug_name": "rifaximin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
         "avoid_or_low_priority_drugs": [
           {
             "drug_name": "acetaminophen",
-            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "potassium chloride",
-            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "magnesium sulfate",
-            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "influenza vaccine quadrivalent",
-            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           },
           {
-            "drug_name": "ondansetron",
-            "reason": "在 Gastrointestinal hemorrhage, unspecified 的映射中被列为低优先级或辅助药"
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
           }
         ],
-        "overall_confidence": 0.89,
-        "summary_reason": "消化智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension, Polyp of colon 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, ceftriaxone。"
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Gastrointestinal hemorrhage, unspecified, Essential (primary) hypertension 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
       }
     },
     {
@@ -840,46 +1011,79 @@
         "recommended_drugs_topk": [
           {
             "rank": 1,
-            "drug_name": "furosemide",
+            "drug_name": "metoprolol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
           },
           {
             "rank": 2,
-            "drug_name": "metoprolol tartrate",
+            "drug_name": "carvedilol",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
           },
           {
             "rank": 3,
-            "drug_name": "heparin",
+            "drug_name": "lisinopril",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
           },
           {
             "rank": 4,
-            "drug_name": "aspirin",
+            "drug_name": "losartan",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 疾病直接治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
           },
           {
             "rank": 5,
-            "drug_name": "warfarin",
+            "drug_name": "amlodipine",
             "confidence": 0.95,
-            "reason": "来自本专科药物治疗知识库，角色为 风险控制治疗"
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
           }
         ],
         "recommendation_reasons": {
           "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-          "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-          "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-          "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。"
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
         },
         "risk_alerts": [],
-        "avoid_or_low_priority_drugs": [],
-        "overall_confidence": 0.86,
-        "summary_reason": "心血管智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
-        "conversation_text": "心血管智能体认为当前病例应优先围绕 Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 furosemide, metoprolol tartrate, heparin。"
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Gastrointestinal hemorrhage, unspecified, Acute posthemorrhagic anemia, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
       }
     },
     {
@@ -891,9 +1095,9 @@
         "accepted_drugs": [
           "pantoprazole",
           "omeprazole",
-          "ceftriaxone",
+          "famotidine",
           "lactulose",
-          "methylprednisolone sodium succ"
+          "rifaximin"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -909,11 +1113,11 @@
       "content": {
         "reviewer_specialty": "心血管",
         "accepted_drugs": [
-          "furosemide",
-          "metoprolol tartrate",
-          "heparin",
-          "aspirin",
-          "warfarin"
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
         ],
         "cautioned_drugs": [],
         "conflict_notes": [
@@ -940,30 +1144,43 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose",
-              "methylprednisolone sodium succ",
-              "furosemide"
+              "rifaximin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose",
+                "rifaximin"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose",
-                "methylprednisolone sodium succ"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -978,30 +1195,43 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose",
-              "methylprednisolone sodium succ",
-              "furosemide"
+              "rifaximin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose",
+                "rifaximin"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose",
-                "methylprednisolone sodium succ"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1016,25 +1246,38 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1056,30 +1299,43 @@
           "drugs": [
             "pantoprazole",
             "omeprazole",
-            "ceftriaxone",
+            "famotidine",
             "lactulose",
-            "methylprednisolone sodium succ",
-            "furosemide"
+            "rifaximin",
+            "metoprolol"
           ],
           "medication_layers": {
             "disease_directed_therapy": [
-              "pantoprazole",
-              "omeprazole",
-              "ceftriaxone"
+              "lactulose",
+              "rifaximin"
             ],
             "risk_modifying_therapy": [
-              "furosemide"
+              "metoprolol"
             ],
-            "supportive_or_symptomatic_therapy": [
+            "symptom_supportive_medication": [
               "acetaminophen",
-              "ondansetron"
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
             ],
-            "general_inpatient_medication": [
-              "influenza vaccine quadrivalent"
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [
+              "pantoprazole",
+              "omeprazole",
+              "famotidine"
             ],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
             "requires_review": [
-              "lactulose",
-              "methylprednisolone sodium succ"
+              "ibuprofen",
+              "ketorolac"
             ]
           },
           "supporting_specialties": [
@@ -1095,30 +1351,43 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose",
-              "methylprednisolone sodium succ",
-              "furosemide"
+              "rifaximin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose",
+                "rifaximin"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose",
-                "methylprednisolone sodium succ"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1143,14 +1412,6 @@
                 "drug_name": "omeprazole",
                 "potential_impacts": [
                   "胃酸抑制相关支持/治疗药物，通常安全性较高"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
@@ -1167,30 +1428,43 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose",
-              "methylprednisolone sodium succ",
-              "furosemide"
+              "rifaximin",
+              "metoprolol"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose",
+                "rifaximin"
               ],
               "risk_modifying_therapy": [
-                "furosemide"
+                "metoprolol"
               ],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose",
-                "methylprednisolone sodium succ"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
@@ -1218,14 +1492,6 @@
                 ],
                 "severity": "low",
                 "suggested_action": "保留，常规监测"
-              },
-              {
-                "drug_name": "furosemide",
-                "potential_impacts": [
-                  "可能影响容量状态和水电解质平衡"
-                ],
-                "severity": "low",
-                "suggested_action": "保留，常规监测"
               }
             ],
             "plan_adaptation_notes": [],
@@ -1239,25 +1505,38 @@
             "drugs": [
               "pantoprazole",
               "omeprazole",
-              "ceftriaxone",
+              "famotidine",
               "lactulose"
             ],
             "medication_layers": {
               "disease_directed_therapy": [
-                "pantoprazole",
-                "omeprazole",
-                "ceftriaxone"
+                "lactulose"
               ],
               "risk_modifying_therapy": [],
-              "supportive_or_symptomatic_therapy": [
+              "symptom_supportive_medication": [
                 "acetaminophen",
-                "ondansetron"
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
               ],
-              "general_inpatient_medication": [
-                "influenza vaccine quadrivalent"
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole",
+                "omeprazole",
+                "famotidine"
               ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
               "requires_review": [
-                "lactulose"
+                "ibuprofen",
+                "ketorolac"
               ]
             },
             "supporting_specialties": [
