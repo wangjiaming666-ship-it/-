@@ -1,0 +1,1870 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "13886265",
+      "hadm_id": "24319938",
+      "gender": "M",
+      "age": 64.0
+    },
+    "primary_diagnosis": "Syncope and collapse",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Syncope and collapse",
+        "Contusion of other part of head, initial encounter",
+        "Hyperlipidemia, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Abrasion of other part of head, initial encounter",
+        "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+        "Other fall on same level, initial encounter"
+      ],
+      "心血管": [
+        "Acute respiratory failure with hypoxia",
+        "Essential (primary) hypertension",
+        "Parking lot as the place of occurrence of the external cause"
+      ]
+    },
+    "comorbidity_list": [
+      "Abrasion of other part of head, initial encounter",
+      "Acute respiratory failure with hypoxia",
+      "Contusion of other part of head, initial encounter",
+      "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Other fall on same level, initial encounter",
+      "Parking lot as the place of occurrence of the external cause"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 43,
+      "subject_id": "13886265",
+      "hadm_id": "24319938",
+      "specialty_cnt": 3,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 心血管",
+      "gender": "M",
+      "anchor_age": 64,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "6/5/2196 18:13:00",
+      "dischtime": "9/5/2196 19:00:00",
+      "admission_type": "EU OBSERVATION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Syncope and collapse",
+      "comorbidity_list": "Abrasion of other part of head, initial encounter | Acute respiratory failure with hypoxia | Contusion of other part of head, initial encounter | Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture | Essential (primary) hypertension | Hyperlipidemia, unspecified | Other fall on same level, initial encounter | Parking lot as the place of occurrence of the external cause",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 心血管",
+      "drug_list": "heparin | hydrochlorothiazide | influenza vaccine quadrivalent | pravastatin | sodium chloride 0.9%  flush | verapamil sr",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Syncope and collapse",
+        "Contusion of other part of head, initial encounter",
+        "Hyperlipidemia, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Abrasion of other part of head, initial encounter",
+        "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+        "Other fall on same level, initial encounter"
+      ],
+      "心血管": [
+        "Acute respiratory failure with hypoxia",
+        "Essential (primary) hypertension",
+        "Parking lot as the place of occurrence of the external cause"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "albuterol",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
+        },
+        {
+          "rank": 2,
+          "drug_name": "ipratropium",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
+        },
+        {
+          "rank": 3,
+          "drug_name": "tiotropium",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；long acting muscarinic blockade for maintenance bronchodilation"
+        },
+        {
+          "rank": 4,
+          "drug_name": "budesonide",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
+        },
+        {
+          "rank": 5,
+          "drug_name": "fluticasone",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Syncope and collapse, Syncope and collapse, Contusion of other part of head, initial encounter 生成候选药物，当前首选药物包括 albuterol, ipratropium, tiotropium。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+        },
+        {
+          "rank": 3,
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+        },
+        {
+          "rank": 4,
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+        },
+        {
+          "rank": 5,
+          "drug_name": "methimazole",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Syncope and collapse, Abrasion of other part of head, initial encounter, Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "metoprolol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
+        },
+        {
+          "rank": 2,
+          "drug_name": "carvedilol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
+        },
+        {
+          "rank": 3,
+          "drug_name": "lisinopril",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
+        },
+        {
+          "rank": 4,
+          "drug_name": "losartan",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
+        },
+        {
+          "rank": 5,
+          "drug_name": "amlodipine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Syncope and collapse, Acute respiratory failure with hypoxia, Essential (primary) hypertension 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 3 个专科：呼吸, 内分泌/代谢, 心血管。",
+      "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "tiotropium",
+        "budesonide",
+        "fluticasone",
+        "insulin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "tiotropium",
+        "budesonide",
+        "fluticasone",
+        "insulin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "tiotropium",
+        "budesonide"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "tiotropium",
+          "budesonide",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "tiotropium",
+        "budesonide"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "tiotropium",
+          "budesonide",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "tiotropium",
+            "budesonide",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {
+      "status": "可作为候选但需监测",
+      "preferred_plan_id": "conservative_consensus",
+      "baseline_risk_assessment": {
+        "overall_risk_level": "中度",
+        "risk_factors": [
+          "64岁男性，入院诊断为晕厥和跌倒相关损伤，存在再次跌倒、意识状态变化或低血压/心律问题需排查的基线风险",
+          "合并急性低氧性呼吸衰竭，提示呼吸储备不足，候选呼吸系统用药需结合氧合和呼吸状态适配",
+          "合并头部擦伤/挫伤和右中指远节指骨骨折，镇静、低血糖或血流动力学波动可能增加跌倒和损伤风险",
+          "合并高血压和高脂血症，需关注心血管基础风险"
+        ],
+        "data_limitations": [
+          "首24小时肌酐、BUN、电解质、血糖、INR、胆红素均缺失，不能据此判断肾功能、电解质、凝血、肝功能或血糖基线状态",
+          "首24小时生命体征缺失，不能量化低氧、心率、血压或发热风险"
+        ],
+        "causality_note": "上述为入院早期基线风险识别，不表示候选药物导致检验异常；本病例首24小时关键检验多数缺失，不能建立候选药物与检验异常的因果关系。"
+      },
+      "medication_fit_review": [
+        {
+          "plan_id": "mdt_consensus",
+          "fit": "部分适配但需降权考虑",
+          "review": "呼吸用药与急性低氧性呼吸衰竭背景有一定适配性，但同时包含insulin，在病例未提供糖尿病、高血糖或血糖值的情况下，胰岛素与当前基线资料适配性不足；低血糖可能加重晕厥/跌倒风险，建议不作为首选。"
+        },
+        {
+          "plan_id": "lead_specialty_adjusted",
+          "fit": "部分适配但需降权考虑",
+          "review": "与mdt_consensus药物组成相同，安全关注点相同；在缺乏血糖和生命体征数据时，不宜优先选择包含insulin的方案。"
+        },
+        {
+          "plan_id": "conservative_consensus",
+          "fit": "相对更适配",
+          "review": "剔除了insulin和fluticasone，减少了在无血糖依据和重复吸入激素背景下的潜在不确定性；保留albuterol、ipratropium、tiotropium、budesonide，需结合实际呼吸体征、氧合和是否存在支气管痉挛人工确认。"
+        }
+      ],
+      "monitoring_recommendations": [
+        "补充或复核首24小时及当前血糖，若使用insulin必须基于明确高血糖或既往糖尿病治疗背景，并进行床旁血糖监测",
+        "监测SpO2、呼吸频率、氧疗需求和支气管痉挛表现，确认支气管扩张剂和吸入激素的适应性",
+        "使用albuterol时关注心率、心悸、震颤和低钾风险；因本病例钾值缺失，建议补查电解质",
+        "使用ipratropium或tiotropium时关注抗胆碱不良反应，如尿潴留、口干、青光眼相关症状；病例未提供相关既往史，需临床询问",
+        "如使用budesonide等吸入激素，关注口腔念珠菌、感染风险和必要性，避免无明确呼吸适应证时长期化",
+        "因存在晕厥、跌倒和头部损伤背景，避免不必要镇静药、阿片类或可能造成低血压/低血糖的药物叠加"
+      ],
+      "human_review_required": true,
+      "safety_explanation": "优先选择conservative_consensus，因为当前病例存在晕厥跌倒、头部损伤、急性低氧性呼吸衰竭和心血管基础风险，但首24小时实验室和生命体征数据缺失，安全审核重点应放在方案与基线风险是否适配，而不是推断药物导致早期检验异常。含insulin方案在无血糖数据和无明确糖尿病信息时适配性较弱，可能增加低血糖相关晕厥/跌倒风险，建议降权并由人工复核。王老师，回答结束",
+      "enabled": true,
+      "provider": "cursor_cloud_agent"
+    }
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "lead_specialty": "呼吸",
+        "specialty_related_diagnoses": {
+          "呼吸": [
+            "Syncope and collapse",
+            "Contusion of other part of head, initial encounter",
+            "Hyperlipidemia, unspecified"
+          ],
+          "内分泌/代谢": [
+            "Abrasion of other part of head, initial encounter",
+            "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+            "Other fall on same level, initial encounter"
+          ],
+          "心血管": [
+            "Acute respiratory failure with hypoxia",
+            "Essential (primary) hypertension",
+            "Parking lot as the place of occurrence of the external cause"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "呼吸_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "呼吸",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "albuterol",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
+          },
+          {
+            "rank": 2,
+            "drug_name": "ipratropium",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
+          },
+          {
+            "rank": 3,
+            "drug_name": "tiotropium",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；long acting muscarinic blockade for maintenance bronchodilation"
+          },
+          {
+            "rank": 4,
+            "drug_name": "budesonide",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
+          },
+          {
+            "rank": 5,
+            "drug_name": "fluticasone",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Syncope and collapse, Syncope and collapse, Contusion of other part of head, initial encounter 生成候选药物，当前首选药物包括 albuterol, ipratropium, tiotropium。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+          },
+          {
+            "rank": 3,
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+          },
+          {
+            "rank": 4,
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+          },
+          {
+            "rank": 5,
+            "drug_name": "methimazole",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Syncope and collapse, Abrasion of other part of head, initial encounter, Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "metoprolol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
+          },
+          {
+            "rank": 2,
+            "drug_name": "carvedilol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
+          },
+          {
+            "rank": 3,
+            "drug_name": "lisinopril",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
+          },
+          {
+            "rank": 4,
+            "drug_name": "losartan",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；blocks angiotensin II receptor signaling"
+          },
+          {
+            "rank": 5,
+            "drug_name": "amlodipine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；dihydropyridine calcium channel blockade reduces vascular tone"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Syncope and collapse, Acute respiratory failure with hypoxia, Essential (primary) hypertension 生成候选药物，当前首选药物包括 metoprolol, carvedilol, lisinopril。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "呼吸_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "albuterol",
+          "ipratropium",
+          "tiotropium",
+          "budesonide",
+          "fluticasone"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "呼吸与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "心血管_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "metoprolol",
+          "carvedilol",
+          "lisinopril",
+          "losartan",
+          "amlodipine"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 3 个专科：呼吸, 内分泌/代谢, 心血管。",
+          "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide",
+              "fluticasone",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide",
+              "fluticasone",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "conservative_consensus",
+          "plan_name": "保守低冲突方案",
+          "drugs": [
+            "albuterol",
+            "ipratropium",
+            "tiotropium",
+            "budesonide"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "albuterol",
+              "ipratropium"
+            ],
+            "risk_modifying_therapy": [],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
+            "requires_review": [
+              "tiotropium",
+              "budesonide",
+              "ibuprofen",
+              "ketorolac",
+              "vitamin d"
+            ]
+          },
+          "supporting_specialties": [
+            "呼吸"
+          ],
+          "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide",
+              "fluticasone",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide",
+              "fluticasone",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "tiotropium",
+              "budesonide"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "tiotropium",
+                "budesonide",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {
+          "status": "可作为候选但需监测",
+          "preferred_plan_id": "conservative_consensus",
+          "baseline_risk_assessment": {
+            "overall_risk_level": "中度",
+            "risk_factors": [
+              "64岁男性，入院诊断为晕厥和跌倒相关损伤，存在再次跌倒、意识状态变化或低血压/心律问题需排查的基线风险",
+              "合并急性低氧性呼吸衰竭，提示呼吸储备不足，候选呼吸系统用药需结合氧合和呼吸状态适配",
+              "合并头部擦伤/挫伤和右中指远节指骨骨折，镇静、低血糖或血流动力学波动可能增加跌倒和损伤风险",
+              "合并高血压和高脂血症，需关注心血管基础风险"
+            ],
+            "data_limitations": [
+              "首24小时肌酐、BUN、电解质、血糖、INR、胆红素均缺失，不能据此判断肾功能、电解质、凝血、肝功能或血糖基线状态",
+              "首24小时生命体征缺失，不能量化低氧、心率、血压或发热风险"
+            ],
+            "causality_note": "上述为入院早期基线风险识别，不表示候选药物导致检验异常；本病例首24小时关键检验多数缺失，不能建立候选药物与检验异常的因果关系。"
+          },
+          "medication_fit_review": [
+            {
+              "plan_id": "mdt_consensus",
+              "fit": "部分适配但需降权考虑",
+              "review": "呼吸用药与急性低氧性呼吸衰竭背景有一定适配性，但同时包含insulin，在病例未提供糖尿病、高血糖或血糖值的情况下，胰岛素与当前基线资料适配性不足；低血糖可能加重晕厥/跌倒风险，建议不作为首选。"
+            },
+            {
+              "plan_id": "lead_specialty_adjusted",
+              "fit": "部分适配但需降权考虑",
+              "review": "与mdt_consensus药物组成相同，安全关注点相同；在缺乏血糖和生命体征数据时，不宜优先选择包含insulin的方案。"
+            },
+            {
+              "plan_id": "conservative_consensus",
+              "fit": "相对更适配",
+              "review": "剔除了insulin和fluticasone，减少了在无血糖依据和重复吸入激素背景下的潜在不确定性；保留albuterol、ipratropium、tiotropium、budesonide，需结合实际呼吸体征、氧合和是否存在支气管痉挛人工确认。"
+            }
+          ],
+          "monitoring_recommendations": [
+            "补充或复核首24小时及当前血糖，若使用insulin必须基于明确高血糖或既往糖尿病治疗背景，并进行床旁血糖监测",
+            "监测SpO2、呼吸频率、氧疗需求和支气管痉挛表现，确认支气管扩张剂和吸入激素的适应性",
+            "使用albuterol时关注心率、心悸、震颤和低钾风险；因本病例钾值缺失，建议补查电解质",
+            "使用ipratropium或tiotropium时关注抗胆碱不良反应，如尿潴留、口干、青光眼相关症状；病例未提供相关既往史，需临床询问",
+            "如使用budesonide等吸入激素，关注口腔念珠菌、感染风险和必要性，避免无明确呼吸适应证时长期化",
+            "因存在晕厥、跌倒和头部损伤背景，避免不必要镇静药、阿片类或可能造成低血压/低血糖的药物叠加"
+          ],
+          "human_review_required": true,
+          "safety_explanation": "优先选择conservative_consensus，因为当前病例存在晕厥跌倒、头部损伤、急性低氧性呼吸衰竭和心血管基础风险，但首24小时实验室和生命体征数据缺失，安全审核重点应放在方案与基线风险是否适配，而不是推断药物导致早期检验异常。含insulin方案在无血糖数据和无明确糖尿病信息时适配性较弱，可能增加低血糖相关晕厥/跌倒风险，建议降权并由人工复核。王老师，回答结束",
+          "enabled": true,
+          "provider": "cursor_cloud_agent"
+        }
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": true
+}

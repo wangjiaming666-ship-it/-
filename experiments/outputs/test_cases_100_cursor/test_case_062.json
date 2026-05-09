@@ -1,0 +1,1965 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "14170994",
+      "hadm_id": "24241088",
+      "gender": "F",
+      "age": 61.0
+    },
+    "primary_diagnosis": "Other spondylosis, lumbar region",
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Other spondylosis, lumbar region",
+        "Major depressive disorder, single episode, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "神经": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other acute postprocedural pain",
+        "Spinal stenosis, lumbosacral region"
+      ],
+      "消化": [
+        "Hyperlipidemia, unspecified",
+        "Other intervertebral disc degeneration, lumbar region",
+        "Spondylolisthesis, lumbar region"
+      ]
+    },
+    "comorbidity_list": [
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Major depressive disorder, single episode, unspecified",
+      "Other acute postprocedural pain",
+      "Other intervertebral disc degeneration, lumbar region",
+      "Personal history of nicotine dependence",
+      "Spinal stenosis, lumbosacral region",
+      "Spondylolisthesis, lumbar region"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 62,
+      "subject_id": "14170994",
+      "hadm_id": "24241088",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 神经 | 消化",
+      "gender": "F",
+      "anchor_age": 61,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "11/8/2153 00:00:00",
+      "dischtime": "17/8/2153 17:42:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Other spondylosis, lumbar region",
+      "comorbidity_list": "Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Major depressive disorder, single episode, unspecified | Other acute postprocedural pain | Other intervertebral disc degeneration, lumbar region | Personal history of nicotine dependence | Spinal stenosis, lumbosacral region | Spondylolisthesis, lumbar region",
+      "specialty_agents": "精神 | 内分泌/代谢 | 神经 | 消化",
+      "drug_list": "0.9% sodium chl (yellow cadd) | 0.9% sodium chloride | acetaminophen | atorvastatin | bag | bupivacaine 0.1% | cefazolin | citalopram | docusate sodium | gabapentin | hydromorphone | hydromorphone (dilaudid) | iso-osmotic dextrose | lactated ringers | magnesium sulfate | methylnaltrexone | morphine sulfate | omeprazole | oxycodone (immediate release) | potassium chl 20 meq / 1000 ml ns | potassium chloride | senna | sodium chloride 0.9% | sodium chloride 0.9%  flush | tramadol",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "消化"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Other spondylosis, lumbar region",
+        "Major depressive disorder, single episode, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "神经": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other acute postprocedural pain",
+        "Spinal stenosis, lumbosacral region"
+      ],
+      "消化": [
+        "Hyperlipidemia, unspecified",
+        "Other intervertebral disc degeneration, lumbar region",
+        "Spondylolisthesis, lumbar region"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+        },
+        {
+          "rank": 3,
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+        },
+        {
+          "rank": 4,
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+        },
+        {
+          "rank": 5,
+          "drug_name": "methimazole",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Other spondylosis, lumbar region, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+    },
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levetiracetam",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
+        },
+        {
+          "rank": 2,
+          "drug_name": "phenytoin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
+        },
+        {
+          "rank": 3,
+          "drug_name": "lacosamide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；enhances slow inactivation of voltage gated sodium channels"
+        },
+        {
+          "rank": 4,
+          "drug_name": "lamotrigine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits sodium channels and reduces glutamate release"
+        },
+        {
+          "rank": 5,
+          "drug_name": "topiramate",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates sodium channels GABA and glutamate activity"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "神经智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Gastro-esophageal reflux disease without esophagitis, Other acute postprocedural pain 生成候选药物，当前首选药物包括 levetiracetam, phenytoin, lacosamide。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+        },
+        {
+          "rank": 2,
+          "drug_name": "omeprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+        },
+        {
+          "rank": 3,
+          "drug_name": "famotidine",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
+        },
+        {
+          "rank": 4,
+          "drug_name": "lactulose",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
+        },
+        {
+          "rank": 5,
+          "drug_name": "rifaximin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Hyperlipidemia, unspecified, Other intervertebral disc degeneration, lumbar region 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "levetiracetam",
+          "phenytoin",
+          "lacosamide",
+          "lamotrigine",
+          "topiramate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "神经建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine",
+          "lactulose",
+          "rifaximin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 3 个专科：内分泌/代谢, 神经, 消化。",
+      "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "levetiracetam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "methimazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "levetiracetam",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "神经"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "levetiracetam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "methimazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "levetiracetam",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "神经"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "levetiracetam"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "methimazole"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "metformin",
+          "glipizide",
+          "levetiracetam",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "神经"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "methimazole",
+        "levetiracetam"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "methimazole"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "metformin",
+          "glipizide",
+          "levetiracetam",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "神经"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine patch",
+          "lidocaine"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "levetiracetam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "methimazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "levetiracetam",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "神经"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole",
+          "levetiracetam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "methimazole"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "levetiracetam",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "神经"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine patch",
+            "lidocaine"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {
+      "status": "caution",
+      "preferred_plan_id": "conservative_consensus",
+      "baseline_risk_assessment": {
+        "overall_level": "moderate_due_to_missing_baseline_data",
+        "key_points": [
+          "首24小时肌酐、BUN、电解质、血糖、INR、总胆红素均缺失，生命体征也缺失，因此不能确认肾功能、肝胆功能、凝血、电解质或血糖基线是否安全。",
+          "现有诊断提示腰椎相关疾病、术后急性疼痛、GERD、高脂血症、抑郁障碍和既往尼古丁依赖；未提供糖尿病、甲状腺疾病或癫痫诊断。",
+          "基线风险判断仅用于评估候选方案适配性，不应解释为候选药物导致入院早期异常。"
+        ]
+      },
+      "medication_fit_review": [
+        {
+          "plan_id": "mdt_consensus",
+          "fit": "较弱",
+          "review": "包含胰岛素、二甲双胍、格列吡嗪、左甲状腺素、甲巯咪唑、左乙拉西坦；在缺乏血糖、肾功能、甲状腺功能、癫痫相关诊断和首24小时实验室数据时，整体适配性不足。二甲双胍需确认肾功能，格列吡嗪和胰岛素需确认血糖与低血糖风险，甲状腺药物和抗癫痫药需人工核对适应证。"
+        },
+        {
+          "plan_id": "lead_specialty_adjusted",
+          "fit": "较弱",
+          "review": "药物构成与MDT共识方案相同，安全适配问题相同；不建议因无明确安全冲突而直接保留全部药物，应先补充适应证和基线数据。"
+        },
+        {
+          "plan_id": "conservative_consensus",
+          "fit": "相对较优但仍需复核",
+          "review": "药物数量较少，未纳入甲巯咪唑和左乙拉西坦，降低了无明确适应证药物负担；但胰岛素、二甲双胍、格列吡嗪、左甲状腺素仍需基于血糖、肾功能和甲状腺功能确认适配性。"
+        }
+      ],
+      "monitoring_recommendations": [
+        "补齐或复核首24小时肌酐、BUN、电解质、血糖、INR、总胆红素及基础生命体征。",
+        "若保留胰岛素或格列吡嗪，需进行床旁血糖监测并评估低血糖风险。",
+        "若考虑二甲双胍，需先确认肾功能和围手术期临床稳定性。",
+        "若考虑左甲状腺素或甲巯咪唑，需确认甲状腺疾病诊断及甲状腺功能结果。",
+        "若考虑左乙拉西坦，需确认癫痫或明确神经系统适应证。",
+        "术后疼痛背景下若使用阿片类或曲马多等支持用药，应监测镇静、呼吸抑制、便秘和跌倒风险。"
+      ],
+      "human_review_required": true,
+      "safety_explanation": "首24小时检验和生命体征数据缺失使基线安全风险无法充分量化，因此本审核重点是方案与不完整基线背景的适配性，而不是判断药物造成入院早期异常。三项候选方案中，conservative_consensus药物负担较低，较适合作为优先方案，但仍需人工复核适应证和关键基线指标后执行。",
+      "enabled": true,
+      "provider": "cursor_cloud_agent"
+    }
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "神经",
+          "消化"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Other spondylosis, lumbar region",
+            "Major depressive disorder, single episode, unspecified",
+            "Personal history of nicotine dependence"
+          ],
+          "神经": [
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Other acute postprocedural pain",
+            "Spinal stenosis, lumbosacral region"
+          ],
+          "消化": [
+            "Hyperlipidemia, unspecified",
+            "Other intervertebral disc degeneration, lumbar region",
+            "Spondylolisthesis, lumbar region"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+          },
+          {
+            "rank": 3,
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+          },
+          {
+            "rank": 4,
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+          },
+          {
+            "rank": 5,
+            "drug_name": "methimazole",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits thyroid hormone synthesis through thyroid peroxidase blockade"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Other spondylosis, lumbar region, Major depressive disorder, single episode, unspecified 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "神经_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "神经",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "levetiracetam",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates synaptic vesicle protein SV2A to reduce seizure activity"
+          },
+          {
+            "rank": 2,
+            "drug_name": "phenytoin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks voltage gated sodium channels to stabilize neuronal membranes"
+          },
+          {
+            "rank": 3,
+            "drug_name": "lacosamide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；enhances slow inactivation of voltage gated sodium channels"
+          },
+          {
+            "rank": 4,
+            "drug_name": "lamotrigine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits sodium channels and reduces glutamate release"
+          },
+          {
+            "rank": 5,
+            "drug_name": "topiramate",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；modulates sodium channels GABA and glutamate activity"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "神经智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "神经智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Gastro-esophageal reflux disease without esophagitis, Other acute postprocedural pain 生成候选药物，当前首选药物包括 levetiracetam, phenytoin, lacosamide。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "消化_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "消化",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "pantoprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+          },
+          {
+            "rank": 2,
+            "drug_name": "omeprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+          },
+          {
+            "rank": 3,
+            "drug_name": "famotidine",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
+          },
+          {
+            "rank": 4,
+            "drug_name": "lactulose",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
+          },
+          {
+            "rank": 5,
+            "drug_name": "rifaximin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 Other spondylosis, lumbar region, Hyperlipidemia, unspecified, Other intervertebral disc degeneration, lumbar region 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "methimazole"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "神经_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "levetiracetam",
+          "phenytoin",
+          "lacosamide",
+          "lamotrigine",
+          "topiramate"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "神经建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "神经与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "消化_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine",
+          "lactulose",
+          "rifaximin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "消化与当前病例 3 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 3 个专科：内分泌/代谢, 神经, 消化。",
+          "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "levetiracetam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine",
+                "methimazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "levetiracetam",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "神经"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "levetiracetam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine",
+                "methimazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "levetiracetam",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "神经"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "conservative_consensus",
+          "plan_name": "保守低冲突方案",
+          "drugs": [
+            "insulin",
+            "metformin",
+            "glipizide",
+            "levothyroxine"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "levothyroxine"
+            ],
+            "risk_modifying_therapy": [
+              "insulin"
+            ],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [
+              "pantoprazole"
+            ],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [
+              "lidocaine patch",
+              "lidocaine"
+            ],
+            "nutrition_electrolyte_medication": [],
+            "requires_review": [
+              "metformin",
+              "glipizide",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
+            ]
+          },
+          "supporting_specialties": [
+            "内分泌/代谢"
+          ],
+          "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "levetiracetam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine",
+                "methimazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "levetiracetam",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "神经"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "methimazole",
+              "levetiracetam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine",
+                "methimazole"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "levetiracetam",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "神经"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [
+                "lidocaine patch",
+                "lidocaine"
+              ],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {
+          "status": "caution",
+          "preferred_plan_id": "conservative_consensus",
+          "baseline_risk_assessment": {
+            "overall_level": "moderate_due_to_missing_baseline_data",
+            "key_points": [
+              "首24小时肌酐、BUN、电解质、血糖、INR、总胆红素均缺失，生命体征也缺失，因此不能确认肾功能、肝胆功能、凝血、电解质或血糖基线是否安全。",
+              "现有诊断提示腰椎相关疾病、术后急性疼痛、GERD、高脂血症、抑郁障碍和既往尼古丁依赖；未提供糖尿病、甲状腺疾病或癫痫诊断。",
+              "基线风险判断仅用于评估候选方案适配性，不应解释为候选药物导致入院早期异常。"
+            ]
+          },
+          "medication_fit_review": [
+            {
+              "plan_id": "mdt_consensus",
+              "fit": "较弱",
+              "review": "包含胰岛素、二甲双胍、格列吡嗪、左甲状腺素、甲巯咪唑、左乙拉西坦；在缺乏血糖、肾功能、甲状腺功能、癫痫相关诊断和首24小时实验室数据时，整体适配性不足。二甲双胍需确认肾功能，格列吡嗪和胰岛素需确认血糖与低血糖风险，甲状腺药物和抗癫痫药需人工核对适应证。"
+            },
+            {
+              "plan_id": "lead_specialty_adjusted",
+              "fit": "较弱",
+              "review": "药物构成与MDT共识方案相同，安全适配问题相同；不建议因无明确安全冲突而直接保留全部药物，应先补充适应证和基线数据。"
+            },
+            {
+              "plan_id": "conservative_consensus",
+              "fit": "相对较优但仍需复核",
+              "review": "药物数量较少，未纳入甲巯咪唑和左乙拉西坦，降低了无明确适应证药物负担；但胰岛素、二甲双胍、格列吡嗪、左甲状腺素仍需基于血糖、肾功能和甲状腺功能确认适配性。"
+            }
+          ],
+          "monitoring_recommendations": [
+            "补齐或复核首24小时肌酐、BUN、电解质、血糖、INR、总胆红素及基础生命体征。",
+            "若保留胰岛素或格列吡嗪，需进行床旁血糖监测并评估低血糖风险。",
+            "若考虑二甲双胍，需先确认肾功能和围手术期临床稳定性。",
+            "若考虑左甲状腺素或甲巯咪唑，需确认甲状腺疾病诊断及甲状腺功能结果。",
+            "若考虑左乙拉西坦，需确认癫痫或明确神经系统适应证。",
+            "术后疼痛背景下若使用阿片类或曲马多等支持用药，应监测镇静、呼吸抑制、便秘和跌倒风险。"
+          ],
+          "human_review_required": true,
+          "safety_explanation": "首24小时检验和生命体征数据缺失使基线安全风险无法充分量化，因此本审核重点是方案与不完整基线背景的适配性，而不是判断药物造成入院早期异常。三项候选方案中，conservative_consensus药物负担较低，较适合作为优先方案，但仍需人工复核适应证和关键基线指标后执行。",
+          "enabled": true,
+          "provider": "cursor_cloud_agent"
+        }
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": true
+}
