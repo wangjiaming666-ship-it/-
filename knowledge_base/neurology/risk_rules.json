@@ -1,8 +1,10 @@
 [
   {
-    "rule_id": "neurology_inr_risk",
+    "rule_id": "neurology_intracranial_bleeding_risk",
+    "risk_target": "intracranial bleeding risk",
+    "related_treatments": "anticoagulants|antiplatelets|thrombolytics",
     "lab_name": "inr_24h",
-    "lab_purpose": "评估颅内出血及神经系统出血扩展风险",
+    "lab_purpose": "评估颅内出血扩展和神经介入相关出血风险",
     "threshold_type": "upper_bound",
     "moderate_risk_threshold": {
       "unit": "",
@@ -14,18 +16,23 @@
       "value": 2.0,
       "operator": ">"
     },
-    "risk_message": "INR 升高时，颅内出血扩展或侵袭性神经操作相关出血风险增加。",
+    "risk_message": "INR 升高时颅内出血扩展或侵袭性神经操作相关出血风险增加",
     "action": {
-      "moderate_risk": "对抗凝、抗血小板及侵袭性治疗相关方案降权。",
-      "high_risk": "将病例标记为高出血风险，暂停优先推荐相关高风险方案。"
+      "moderate_risk": "对抗凝抗血小板和侵袭性治疗方案降权",
+      "high_risk": "标记为高出血风险并暂停优先推荐相关方案"
     },
-    "reference_source": "DailyMed anticoagulant labels; stroke and bleeding risk clinical references",
-    "threshold_basis": "参考抗凝药物说明书和神经系统出血风险控制经验阈值。"
+    "contraindication_or_caution": "神经系统出血风险未排除前慎用强化抗栓治疗",
+    "monitoring_advice": "复查 INR 头颅影像和神经功能变化",
+    "reference_source": "DailyMed anticoagulant labels; AHA ASA stroke references",
+    "reference_url": "https://www.stroke.org",
+    "threshold_basis": "参考抗凝药物说明书和神经系统出血风险控制阈值"
   },
   {
-    "rule_id": "neurology_sodium_risk",
+    "rule_id": "neurology_sodium_seizure_cerebral_edema_risk",
+    "risk_target": "neurologic electrolyte risk",
+    "related_treatments": "diuretics|hypotonic fluids|antiepileptics|desmopressin",
     "lab_name": "sodium_24h",
-    "lab_purpose": "评估意识状态、癫痫阈值及脑水肿相关风险",
+    "lab_purpose": "评估意识状态癫痫阈值和脑水肿相关风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
       "unit": "mmol/L",
@@ -39,12 +46,73 @@
       "high": 150.0,
       "outside_range_is_high_risk": true
     },
-    "risk_message": "钠离子异常可能诱发意识障碍、癫痫发作阈值改变或脑水肿风险上升。",
+    "risk_message": "钠异常可能诱发意识障碍癫痫阈值改变或脑水肿风险上升",
     "action": {
-      "moderate_risk": "增加风险提示，降低可能加重电解质紊乱方案的优先级。",
-      "high_risk": "将病例标记为高风险，建议先纠正钠异常后再进行方案排序。"
+      "moderate_risk": "降低可能加重水钠紊乱治疗的优先级",
+      "high_risk": "标记为高神经电解质风险并建议先纠正钠异常"
     },
-    "reference_source": "MedlinePlus sodium blood test; Merck Manual electrolyte disorders",
-    "threshold_basis": "参考公开临床知识源中的血钠参考范围和神经系统水电解质风险解释。"
+    "contraindication_or_caution": "避免过快纠正血钠并慎用影响水钠平衡的药物",
+    "monitoring_advice": "监测血钠纠正速度尿量和神经症状",
+    "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
+    "reference_url": "https://medlineplus.gov/lab-tests/sodium-blood-test",
+    "threshold_basis": "参考公开血钠参考范围和神经系统风险解释"
+  },
+  {
+    "rule_id": "neurology_sedation_respiratory_risk",
+    "risk_target": "sedation and encephalopathy risk",
+    "related_treatments": "opioids|benzodiazepines|gabapentin|baclofen",
+    "lab_name": "bun_24h",
+    "lab_purpose": "评估尿毒症或代谢负荷背景下镇静药物风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 25.0,
+      "operator": ">="
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 40.0,
+      "operator": ">="
+    },
+    "risk_message": "BUN 升高可能提示代谢负荷或肾功能问题并增加镇静药物蓄积和意识改变风险",
+    "action": {
+      "moderate_risk": "对镇静抗痉挛或神经病理痛药物提示剂量复核",
+      "high_risk": "标记为高代谢性脑病风险并建议保守使用镇静药物"
+    },
+    "contraindication_or_caution": "避免多种镇静药叠加并复核肾功能剂量",
+    "monitoring_advice": "监测意识呼吸频率BUN肌酐和跌倒风险",
+    "reference_source": "DailyMed CNS depressant labels; Merck Manual uremia references",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考中枢抑制药说明书和尿毒症风险解释"
+  },
+  {
+    "rule_id": "neurology_glucose_mimic_stroke_risk",
+    "risk_target": "stroke mimic and seizure metabolic risk",
+    "related_treatments": "insulin|dextrose fluids|systemic corticosteroids",
+    "lab_name": "glucose_24h",
+    "lab_purpose": "评估血糖异常对卒中样症状癫痫和意识状态的影响",
+    "threshold_type": "bidirectional",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "low": 70.0,
+      "high": 180.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "low": 54.0,
+      "high": 250.0,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "低血糖或严重高血糖可造成神经症状并影响卒中或癫痫判断",
+    "action": {
+      "moderate_risk": "提示先复核血糖并调整相关治疗排序",
+      "high_risk": "标记为高代谢风险并建议先纠正血糖异常"
+    },
+    "contraindication_or_caution": "避免未评估血糖时解释神经症状或强化降糖治疗",
+    "monitoring_advice": "监测床旁血糖神经体征和酮体",
+    "reference_source": "ADA Standards of Care; AHA ASA stroke guidance",
+    "reference_url": "https://diabetesjournals.org/care",
+    "threshold_basis": "参考 ADA 血糖目标和卒中鉴别诊断要求"
   }
 ]

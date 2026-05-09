@@ -32,11 +32,7 @@ class KnowledgeBaseEntry:
     folder_name: str
     disease_catalog: Path
     drug_catalog: Path
-    lab_profile: Path
-    lab_profile_all: Path | None
     risk_rules: Path
-    disease_drug_map: Path
-    example_cases: Path
 
 
 class KnowledgeBaseIndex:
@@ -55,15 +51,7 @@ class KnowledgeBaseIndex:
             folder_name=folder_name,
             disease_catalog=self._resolve_index_path(item["disease_catalog"], folder_name),
             drug_catalog=self._resolve_index_path(item["drug_catalog"], folder_name),
-            lab_profile=self._resolve_index_path(item["lab_profile"], folder_name),
-            lab_profile_all=(
-                self._resolve_index_path(item["lab_profile_all"], folder_name)
-                if "lab_profile_all" in item and pd.notna(item["lab_profile_all"])
-                else None
-            ),
             risk_rules=self._resolve_index_path(item["risk_rules"], folder_name),
-            disease_drug_map=self._resolve_index_path(item["disease_drug_map"], folder_name),
-            example_cases=self._resolve_index_path(item["example_cases"], folder_name),
         )
 
     def _resolve_index_path(self, raw_path: str, folder_name: str) -> Path:
@@ -88,87 +76,65 @@ class SpecialtyKnowledgeLoader:
         entry = self.kb_index.get_entry(specialty_name)
         disease_catalog = read_csv_flexible(entry.disease_catalog)
         drug_catalog = read_csv_flexible(entry.drug_catalog)
-        disease_drug_map = read_csv_flexible(entry.disease_drug_map)
-        lab_profile = read_csv_flexible(entry.lab_profile)
-        lab_profile_all = (
-            read_csv_flexible(entry.lab_profile_all)
-            if entry.lab_profile_all is not None and entry.lab_profile_all.exists()
-            else pd.DataFrame()
-        )
         risk_rules = read_json_file(entry.risk_rules)
-        example_cases = read_json_file(entry.example_cases)
 
         return {
             "entry": entry,
             "disease_catalog": disease_catalog,
             "drug_catalog": drug_catalog,
-            "disease_drug_map": disease_drug_map,
-            "lab_profile": lab_profile,
-            "lab_profile_all": lab_profile_all,
             "risk_rules": risk_rules,
-            "example_cases": example_cases,
         }
 
     def build_prompt_payload(self, specialty_name: str) -> dict[str, Any]:
         kb = self.load(specialty_name)
         disease_catalog = kb["disease_catalog"]
         drug_catalog = kb["drug_catalog"]
-        disease_drug_map = kb["disease_drug_map"]
 
-        if "diagnosis_relevance" in disease_catalog.columns:
-            primary_diseases = disease_catalog[
-                disease_catalog["diagnosis_relevance"] == "primary_specialty_disease"
-            ].head(20)
-            related_conditions = disease_catalog[
-                disease_catalog["diagnosis_relevance"].isin(["specialty_related_condition", "cross_specialty_comorbidity"])
-            ].head(20)
-        else:
-            primary_diseases = disease_catalog[disease_catalog["disease_role"] == "核心病种"].head(20)
-            related_conditions = disease_catalog[disease_catalog["disease_role"] == "背景共病"].head(20)
-
-        if "treatment_role" in drug_catalog.columns:
-            disease_directed_drugs = drug_catalog[
-                drug_catalog["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
-            ].head(20)
-            supportive_drugs = drug_catalog[
-                drug_catalog["treatment_role"].isin(["supportive_or_symptomatic_therapy", "general_inpatient_medication"])
-            ].head(20)
-        else:
-            disease_directed_drugs = drug_catalog[drug_catalog["drug_role"] == "核心治疗药"].head(20)
-            supportive_drugs = drug_catalog[drug_catalog["drug_role"] != "核心治疗药"].head(20)
-
-        if "mapping_quality" in disease_drug_map.columns:
-            usable_map = disease_drug_map[
-                disease_drug_map["mapping_quality"].isin(["可直接使用", "候选证据充分"])
-            ].head(30)
-        else:
-            usable_map = disease_drug_map.head(30)
-
-        lab_profile_all = kb["lab_profile_all"]
-        top_labs = (
-            lab_profile_all.sort_values(["coverage_pct", "case_count"], ascending=[False, False]).head(30)
-            if not lab_profile_all.empty and {"coverage_pct", "case_count"}.issubset(lab_profile_all.columns)
-            else pd.DataFrame()
-        )
+        disease_columns = [
+            "disease_name",
+            "aliases",
+            "diagnostic_basis",
+            "key_symptoms",
+            "key_labs_or_tests",
+            "differential_diagnosis",
+            "reference_source",
+            "reference_url",
+            "agent_use",
+        ]
+        drug_columns = [
+            "standard_drug_name",
+            "aliases",
+            "drug_class",
+            "disease_context",
+            "treatment_role",
+            "order_category",
+            "mechanism_or_function",
+            "major_cautions",
+            "reference_source",
+            "reference_url",
+            "agent_use",
+        ]
+        disease_payload = disease_catalog[
+            [column for column in disease_columns if column in disease_catalog.columns]
+        ].head(30)
+        disease_directed_drugs = drug_catalog[
+            drug_catalog["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
+        ][[column for column in drug_columns if column in drug_catalog.columns]].head(30)
+        supportive_drugs = drug_catalog[
+            drug_catalog["treatment_role"].isin(
+                ["supportive_or_symptomatic_therapy", "general_inpatient_medication"]
+            )
+        ][[column for column in drug_columns if column in drug_catalog.columns]].head(20)
 
         return {
             "specialty_name": specialty_name,
             "knowledge_base_dir": str(kb["entry"].disease_catalog.parent),
-            "diagnostic_knowledge": {
-                "primary_specialty_diseases": primary_diseases.fillna("").to_dict(orient="records"),
-                "related_conditions": related_conditions.fillna("").to_dict(orient="records"),
-            },
-            "treatment_knowledge": {
-                "disease_directed_or_risk_modifying": disease_directed_drugs.fillna("").to_dict(orient="records"),
+            "diagnostic_knowledge": disease_payload.fillna("").to_dict(orient="records"),
+            "drug_function_knowledge": {
+                "disease_directed_or_risk_modifying": disease_directed_drugs.fillna("").to_dict(
+                    orient="records"
+                ),
                 "supportive_or_general": supportive_drugs.fillna("").to_dict(orient="records"),
             },
-            "core_diseases": primary_diseases.fillna("").to_dict(orient="records"),
-            "core_drugs": disease_directed_drugs.fillna("").to_dict(orient="records"),
-            "lab_knowledge": {
-                "key_risk_labs": kb["lab_profile"].fillna("").to_dict(orient="records"),
-                "top_covered_labs": top_labs.fillna("").to_dict(orient="records"),
-            },
-            "disease_drug_map": usable_map.fillna("").to_dict(orient="records"),
             "risk_rules": kb["risk_rules"],
-            "example_cases": kb["example_cases"],
         }

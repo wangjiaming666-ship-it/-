@@ -61,9 +61,36 @@ def load_drug_roles(kb_dir: Path) -> dict[str, set[str]]:
             drug = normalize_drug(row.get("drug_name"))
             if not drug:
                 continue
-            role = str(row.get("treatment_role") or row.get("drug_role") or "unknown")
+            role = normalize_order_role(row.get("order_category"), row.get("treatment_role") or row.get("drug_role"))
             roles.setdefault(drug, set()).add(role)
     return roles
+
+
+def normalize_order_role(order_category: Any, treatment_role: Any = None) -> str:
+    category = str(order_category or "").strip()
+    category_map = {
+        "disease_directed": "disease_directed_therapy",
+        "risk_modifying": "risk_modifying_therapy",
+        "symptom_support": "symptom_supportive_medication",
+        "fluid_diluent_flush": "fluid_diluent_flush_medication",
+        "procedure_or_nursing": "nursing_support_medication",
+        "prophylaxis_prevention": "prophylaxis_prevention_medication",
+        "nutrition_support": "nutrition_electrolyte_medication",
+        "nutrition_electrolyte_metabolic": "nutrition_electrolyte_medication",
+        "emergency_rescue": "procedure_related_medication",
+        "general_inpatient_service": "nursing_support_medication",
+    }
+    if category in category_map:
+        return category_map[category]
+
+    role = str(treatment_role or "").strip()
+    role_map = {
+        "disease_directed_therapy": "disease_directed_therapy",
+        "risk_modifying_therapy": "risk_modifying_therapy",
+        "supportive_or_symptomatic_therapy": "symptom_supportive_medication",
+        "general_inpatient_medication": "fluid_diluent_flush_medication",
+    }
+    return role_map.get(role, "requires_review")
 
 
 def load_real_prescriptions(prescription_path: Path, hadm_ids: set[str]) -> dict[str, set[str]]:
@@ -96,6 +123,13 @@ def extract_layered_drugs(data: dict[str, Any], include_review: bool = True) -> 
     layer_names = [
         "disease_directed_therapy",
         "risk_modifying_therapy",
+        "symptom_supportive_medication",
+        "nursing_support_medication",
+        "prophylaxis_prevention_medication",
+        "fluid_diluent_flush_medication",
+        "procedure_related_medication",
+        "nutrition_electrolyte_medication",
+        # Backward compatibility for older outputs.
         "supportive_or_symptomatic_therapy",
         "general_inpatient_medication",
     ]
@@ -152,9 +186,17 @@ def drug_roles(drugs: set[str], role_map: dict[str, set[str]]) -> set[str]:
 def infer_treatment_role(drug: str) -> str:
     normalized = normalize_drug(drug)
     if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "influenza vaccine", "vaccine", "d5w"]):
-        return "general_inpatient_medication"
-    if any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam", "fentanyl", "ramelteon", "artificial tears"]):
-        return "supportive_or_symptomatic_therapy"
+        return "fluid_diluent_flush_medication"
+    if any(keyword in normalized for keyword in ["chlorhexidine", "povidone", "betadine", "heparin flush", "artificial tears"]):
+        return "nursing_support_medication"
+    if any(keyword in normalized for keyword in ["vaccine", "famotidine", "stress ulcer"]):
+        return "prophylaxis_prevention_medication"
+    if any(keyword in normalized for keyword in ["lidocaine", "contrast", "cosyntropin"]):
+        return "procedure_related_medication"
+    if any(keyword in normalized for keyword in ["potassium", "magnesium", "calcium", "phosphate", "multivitamin", "thiamine", "folic", "ferrous", "zinc", "ascorbic", "nutrition", "albumin", "glucagon"]):
+        return "nutrition_electrolyte_medication"
+    if any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam", "fentanyl", "ramelteon", "melatonin", "loperamide", "guaifenesin", "benzonatate"]):
+        return "symptom_supportive_medication"
     if any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "insulin", "furosemide", "torsemide", "metoprolol", "labetalol", "nifedipine", "atorvastatin", "diltiazem", "hydrochlorothiazide", "amlodipine"]):
         return "risk_modifying_therapy"
     if any(keyword in normalized for keyword in ["pantoprazole", "omeprazole", "levothyroxine", "calcium carbonate", "ceftriaxone", "metronidazole", "ciprofloxacin", "albuterol", "ipratropium", "prednisone", "methylprednisolone", "tamsulosin", "cefazolin", "cefepime", "vancomycin", "azithromycin"]):
@@ -170,7 +212,11 @@ def roles_from_medication_layers(data: dict[str, Any]) -> set[str]:
         if not values:
             continue
         if layer_name == "requires_review":
-            roles.add("low_priority_or_uncertain")
+            roles.add("requires_review")
+        elif layer_name == "supportive_or_symptomatic_therapy":
+            roles.add("symptom_supportive_medication")
+        elif layer_name == "general_inpatient_medication":
+            roles.add("fluid_diluent_flush_medication")
         else:
             roles.add(layer_name)
     return roles
@@ -251,8 +297,8 @@ def plot_metric_summary(summary: pd.DataFrame, figure_dir: Path) -> Path:
         ("药名Recall", summary.loc["mean", "drug_recall"]),
         ("药名F1", summary.loc["mean", "drug_f1"]),
         ("Jaccard", summary.loc["mean", "drug_jaccard"]),
-        ("治疗角色Precision", summary.loc["mean", "role_precision"]),
-        ("治疗角色覆盖", summary.loc["mean", "role_coverage"]),
+        ("医嘱类别Precision", summary.loc["mean", "role_precision"]),
+        ("医嘱类别覆盖", summary.loc["mean", "role_coverage"]),
     ]
     labels = [item[0] for item in metrics]
     values = [item[1] for item in metrics]
@@ -263,7 +309,7 @@ def plot_metric_summary(summary: pd.DataFrame, figure_dir: Path) -> Path:
         ax.text(value + 0.015, label, f"{value:.2f}", va="center", fontsize=10)
     ax.set_xlim(0, 1.05)
     ax.set_xlabel("均值")
-    ax.set_title("推荐药物与真实处方的一致性及治疗角色覆盖", fontsize=15, fontweight="bold")
+    ax.set_title("推荐药物与真实处方的一致性及医嘱类别覆盖", fontsize=15, fontweight="bold")
     ax.grid(axis="x", linestyle="--", alpha=0.35)
     output_path = figure_dir / "01_alignment_metrics.png"
     fig.savefig(output_path, dpi=300, bbox_inches="tight")
@@ -277,7 +323,7 @@ def plot_alignment_comparison(case_df: pd.DataFrame, figure_dir: Path) -> Path:
     fig, ax = plt.subplots(figsize=(8, 5.5))
     ax.boxplot(
         [plot_df["药名F1"], plot_df["治疗角色覆盖"]],
-        labels=["药名一致性(F1)", "治疗角色覆盖率"],
+        labels=["药名一致性(F1)", "医嘱类别覆盖率"],
         patch_artist=True,
         boxprops={"facecolor": "#DBEAFE", "color": "#2563EB"},
         medianprops={"color": "#DC2626", "linewidth": 2},

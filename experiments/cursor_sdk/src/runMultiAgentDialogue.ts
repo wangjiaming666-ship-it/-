@@ -3,7 +3,7 @@ import path from "node:path";
 import { ACTIVE_SPECIALTIES, OUTPUTS_DIR } from "./config.js";
 import { exportCaseBundle } from "./caseBridge.js";
 import { buildJsonPrompt, runCursorAgent } from "./cursorAgentRunner.js";
-import { extractAvoidDrugs, loadSpecialtyKnowledge } from "./knowledgeBase.js";
+import { loadSpecialtyKnowledge } from "./knowledgeBase.js";
 import type {
   CandidatePlan,
   CaseRecord,
@@ -208,10 +208,14 @@ function runSafetyFallback(
       triggeredRisks.push({
         specialty_name: specialty,
         rule_id: rule.rule_id,
+        risk_target: rule.risk_target,
+        related_treatments: rule.related_treatments,
         lab_name: labName,
         lab_value: caseRecord.key_labs[labName] ?? null,
         risk_level: level,
         risk_message: rule.risk_message,
+        contraindication_or_caution: rule.contraindication_or_caution,
+        monitoring_advice: rule.monitoring_advice,
       });
     }
   }

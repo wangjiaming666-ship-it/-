@@ -43,7 +43,7 @@ class MDTDiscussionAgent:
         specialty_results: list[SpecialtyAgentResult],
     ) -> MDTDiscussionResult:
         review_round = self._cross_review(case_record, routing, specialty_results)
-        candidate_plans = self._build_consensus_plans(routing, specialty_results, review_round)
+        candidate_plans = self._build_consensus_plans(case_record, routing, specialty_results, review_round)
         consensus_notes = self._build_consensus_notes(routing, specialty_results, review_round, candidate_plans)
         return MDTDiscussionResult(
             review_round=review_round,
@@ -125,6 +125,7 @@ class MDTDiscussionAgent:
 
     def _build_consensus_plans(
         self,
+        case_record: CaseRecord,
         routing: DiagnosisRouting,
         specialty_results: list[SpecialtyAgentResult],
         review_round: list[SpecialtyReview],
@@ -167,7 +168,7 @@ class MDTDiscussionAgent:
         conservative_drugs = self._dedupe(
             [drug for drug in sorted_drugs if drug.lower() not in cautioned_drugs]
         )[:4]
-        contextual_layers = self._collect_contextual_layer_candidates(specialty_results)
+        contextual_layers = self._collect_contextual_layer_candidates(case_record, specialty_results)
         consensus_layers = self._merge_medication_layers(
             self._build_medication_layers(consensus_drugs, cautioned_drugs),
             contextual_layers,
@@ -213,26 +214,57 @@ class MDTDiscussionAgent:
 
     def _collect_contextual_layer_candidates(
         self,
+        case_record: CaseRecord,
         specialty_results: list[SpecialtyAgentResult],
     ) -> dict[str, list[str]]:
-        layers = {
-            "disease_directed_therapy": [],
-            "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
-            "requires_review": [],
-        }
+        layers = self._empty_medication_layers()
         for result in specialty_results:
             for item in result.avoid_or_low_priority_drugs:
                 drug = item.drug_name
-                normalized = drug.lower()
-                if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "vaccine"]):
-                    layers["general_inpatient_medication"].append(drug)
-                elif any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam"]):
-                    layers["supportive_or_symptomatic_therapy"].append(drug)
-                elif any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "furosemide", "metoprolol"]):
+                layer_name = self._classify_order_layer(drug)
+                if layer_name in {"disease_directed_therapy", "risk_modifying_therapy"}:
                     layers["requires_review"].append(drug)
-        return {key: self._dedupe(values)[:6] for key, values in layers.items()}
+                else:
+                    layers[layer_name].append(drug)
+        for drug in self._infer_inpatient_supportive_drugs(case_record):
+            layers[self._classify_order_layer(drug)].append(drug)
+        return {key: self._dedupe(values)[:8] for key, values in layers.items()}
+
+    def _infer_inpatient_supportive_drugs(self, case_record: CaseRecord) -> list[str]:
+        text = " | ".join(
+            [
+                case_record.primary_diagnosis,
+                *case_record.comorbidity_list,
+                str(case_record.raw_case_summary.get("admission_type", "")),
+            ]
+        ).lower()
+        drugs: list[str] = []
+
+        # Common inpatient service medications. They approximate real hospital
+        # orders without reading the true physician prescription list.
+        drugs.extend([
+            "sodium chloride 0.9% flush",
+            "acetaminophen",
+            "ondansetron",
+            "senna",
+            "docusate sodium",
+        ])
+
+        if any(keyword in text for keyword in ["fracture", "pain", "fall", "postprocedural", "procedure"]):
+            drugs.extend(["lidocaine patch", "polyethylene glycol", "lidocaine"])
+        if any(keyword in text for keyword in ["opioid", "morphine", "oxycodone", "hydromorphone", "constipation"]):
+            drugs.extend(["senna", "docusate sodium", "polyethylene glycol"])
+        if any(keyword in text for keyword in ["nausea", "vomit", "postoperative", "observation"]):
+            drugs.append("ondansetron")
+        if any(keyword in text for keyword in ["gerd", "gastro-esophageal reflux", "dysphagia", "hernia"]):
+            drugs.extend(["pantoprazole", "ondansetron"])
+        if any(keyword in text for keyword in ["infection", "sepsis", "pneumonia", "urinary tract infection", "catheter", "line"]):
+            drugs.extend(["chlorhexidine", "sodium chloride 0.9% flush"])
+        if any(keyword in text for keyword in ["malnutrition", "hypovolemia", "dehydration", "poor intake"]):
+            drugs.extend(["multivitamin", "thiamine", "lactated ringer"])
+        if any(keyword in text for keyword in ["hyperkalemia", "hypokalemia", "hyponatremia", "hypomagnesemia"]):
+            drugs.extend(["potassium chloride", "magnesium sulfate"])
+        return self._dedupe(drugs)
 
     def _merge_medication_layers(
         self,
@@ -250,29 +282,49 @@ class MDTDiscussionAgent:
         drugs: list[str],
         cautioned_drugs: set[str],
     ) -> dict[str, list[str]]:
-        layers = {
-            "disease_directed_therapy": [],
-            "risk_modifying_therapy": [],
-            "supportive_or_symptomatic_therapy": [],
-            "general_inpatient_medication": [],
-            "requires_review": [],
-        }
+        layers = self._empty_medication_layers()
         for drug in drugs:
             normalized = drug.lower()
             if normalized in cautioned_drugs:
                 layers["requires_review"].append(drug)
                 continue
-            if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "sterile water", "vaccine"]):
-                layers["general_inpatient_medication"].append(drug)
-            elif any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "insulin", "furosemide", "torsemide", "metoprolol", "labetalol", "nifedipine", "atorvastatin"]):
-                layers["risk_modifying_therapy"].append(drug)
-            elif any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam"]):
-                layers["supportive_or_symptomatic_therapy"].append(drug)
-            elif any(keyword in normalized for keyword in ["pantoprazole", "omeprazole", "levothyroxine", "calcium carbonate", "ceftriaxone", "metronidazole", "ciprofloxacin", "albuterol", "ipratropium", "prednisone", "tamsulosin"]):
-                layers["disease_directed_therapy"].append(drug)
-            else:
-                layers["requires_review"].append(drug)
+            layers[self._classify_order_layer(drug)].append(drug)
         return layers
+
+    @staticmethod
+    def _empty_medication_layers() -> dict[str, list[str]]:
+        return {
+            "disease_directed_therapy": [],
+            "risk_modifying_therapy": [],
+            "symptom_supportive_medication": [],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
+            "requires_review": [],
+        }
+
+    @staticmethod
+    def _classify_order_layer(drug: str) -> str:
+        normalized = drug.lower()
+        if any(keyword in normalized for keyword in ["sodium chloride", "dextrose", "flush", "lactated ringer", "ringer", "sterile water", "d5", "d10", "normal saline"]):
+            return "fluid_diluent_flush_medication"
+        if any(keyword in normalized for keyword in ["chlorhexidine", "povidone", "betadine", "heparin flush", "line care", "skin"]):
+            return "nursing_support_medication"
+        if any(keyword in normalized for keyword in ["influenza vaccine", "vaccine", "stress ulcer", "famotidine", "omeprazole", "pantoprazole"]):
+            return "prophylaxis_prevention_medication"
+        if any(keyword in normalized for keyword in ["lidocaine", "contrast", "cosyntropin", "procedure"]):
+            return "procedure_related_medication"
+        if any(keyword in normalized for keyword in ["potassium", "magnesium", "calcium", "phosphate", "multivitamin", "thiamine", "folic", "ferrous", "zinc", "ascorbic", "nutrition", "albumin", "glucagon"]):
+            return "nutrition_electrolyte_medication"
+        if any(keyword in normalized for keyword in ["acetaminophen", "ondansetron", "polyethylene glycol", "senna", "docusate", "bisacodyl", "morphine", "oxycodone", "hydromorphone", "lorazepam", "tramadol", "melatonin", "diphenhydramine", "guaifenesin", "benzonatate", "loperamide", "simethicone", "metoclopramide", "prochlorperazine"]):
+            return "symptom_supportive_medication"
+        if any(keyword in normalized for keyword in ["heparin", "warfarin", "enoxaparin", "apixaban", "aspirin", "insulin", "furosemide", "torsemide", "metoprolol", "labetalol", "nifedipine", "atorvastatin", "amlodipine", "spironolactone", "lisinopril", "losartan", "diltiazem"]):
+            return "risk_modifying_therapy"
+        if any(keyword in normalized for keyword in ["levothyroxine", "ceftriaxone", "metronidazole", "ciprofloxacin", "albuterol", "ipratropium", "prednisone", "methylprednisolone", "tamsulosin", "cefazolin", "cefepime", "vancomycin", "azithromycin", "rifaximin", "lactulose", "mesalamine", "methimazole"]):
+            return "disease_directed_therapy"
+        return "requires_review"
 
     def _build_consensus_notes(
         self,

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 from typing import Any
 
@@ -116,6 +117,35 @@ def rename_first_available_column(
                 return df.rename(columns={candidate: target})
             return df
     raise KeyError(f"缺少列 {target}，候选列包括: {candidates}")
+
+
+def normalize_for_match(value: Any) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(value).lower()).strip()
+
+
+def split_pipe_values(value: Any) -> list[str]:
+    if value is None or value != value:
+        return []
+    return [item.strip() for item in str(value).split("|") if item.strip()]
+
+
+def build_disease_terms(disease_catalog: pd.DataFrame) -> set[str]:
+    terms: set[str] = set()
+    for _, row in disease_catalog.fillna("").iterrows():
+        for column in ["disease_name", "diagnosis_name", "aliases"]:
+            if column not in disease_catalog.columns:
+                continue
+            values = split_pipe_values(row.get(column)) or [row.get(column)]
+            for value in values:
+                normalized = normalize_for_match(value)
+                if normalized:
+                    terms.add(normalized)
+    return terms
+
+
+def matches_any_term(value: Any, terms: set[str]) -> bool:
+    normalized = normalize_for_match(value)
+    return any(term in normalized or normalized in term for term in terms if term and normalized)
 
 
 def normalize_diagnosis_df(df: pd.DataFrame) -> pd.DataFrame:
@@ -246,17 +276,12 @@ def summarize_comparison(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
             continue
         entry = matched.iloc[0]
         disease_catalog = read_csv_flexible(Path(entry["disease_catalog"]))
-        disease_drug_map = read_csv_flexible(Path(entry["disease_drug_map"]))
-        core_diagnosis_names = set(
-            disease_catalog.loc[
-                disease_catalog["disease_role"] == "核心病种",
-                "diagnosis_name",
-            ].dropna().astype(str)
-        )
+        drug_catalog = read_csv_flexible(Path(entry["drug_catalog"]))
+        disease_terms = build_disease_terms(disease_catalog)
         core_coverage_records = int(
             raw_diagnoses[
                 (raw_diagnoses["specialty_group"] == specialty)
-                & (raw_diagnoses["diagnosis_name"].astype(str).isin(core_diagnosis_names))
+                & (raw_diagnoses["diagnosis_name"].apply(lambda value: matches_any_term(value, disease_terms)))
             ].shape[0]
         )
 
@@ -268,8 +293,8 @@ def summarize_comparison(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
                 "raw_prescription_records": int(raw_prescription_record_stats.get(specialty, 0)),
                 "cleaned_prescription_records": int(cleaned_prescription_record_stats.get(specialty, 0)),
                 "raw_disease_drug_pairs": int(raw_pair_stats.get(specialty, 0)),
-                "structured_map_entries": int(len(disease_drug_map.index)),
-                "usable_map_entries": int((disease_drug_map["mapping_quality"] == "可直接使用").sum()),
+                "diagnosis_knowledge_entries": int(len(disease_catalog.index)),
+                "public_drug_function_entries": int(len(drug_catalog.index)),
             }
         )
 
@@ -496,12 +521,16 @@ def main() -> None:
     saved_files.append(
         plot_grouped_comparison(
             summary_df,
-            columns=["raw_disease_drug_pairs", "structured_map_entries", "usable_map_entries"],
-            labels=["清洗后病药共现对数", "结构化映射条目数", "可直接使用映射数"],
+            columns=[
+                "raw_disease_drug_pairs",
+                "diagnosis_knowledge_entries",
+                "public_drug_function_entries",
+            ],
+            labels=["清洗后病药共现对数", "疾病诊断知识条目数", "公开药物功能条目数"],
             colors=["#94A3B8", "#8B5CF6", "#14B8A6"],
-            title="各专科病药关系：清洗后共现 vs 结构化映射",
-            ylabel="关系条目数",
-            output_path=output_dir / "04_mapping_before_after.png",
+            title="各专科知识规模：真实数据关系 vs 三类核心知识",
+            ylabel="条目数",
+            output_path=output_dir / "04_core_knowledge_scale.png",
         )
     )
 

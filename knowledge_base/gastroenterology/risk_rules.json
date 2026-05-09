@@ -1,6 +1,8 @@
 [
   {
-    "rule_id": "gastroenterology_bilirubin_risk",
+    "rule_id": "gastroenterology_bilirubin_hepatotoxic_risk",
+    "risk_target": "hepatic metabolism and cholestasis risk",
+    "related_treatments": "hepatically metabolized drugs|hepatotoxic drugs|sedatives",
     "lab_name": "bilirubin_total_24h",
     "lab_purpose": "评估肝胆代谢受损与胆汁淤积风险",
     "threshold_type": "upper_bound",
@@ -14,16 +16,21 @@
       "value": 3.0,
       "operator": ">"
     },
-    "risk_message": "总胆红素升高提示肝胆代谢负荷增加，可能影响肝代谢药物的安全性和耐受性。",
+    "risk_message": "总胆红素升高提示肝胆代谢负荷增加并可能影响肝代谢药物耐受性",
     "action": {
-      "moderate_risk": "降低肝代谢负担较重药物的优先级，并提示复核肝胆状态。",
-      "high_risk": "将病例标记为高肝胆风险，优先避免高肝毒性和高肝代谢负担组合。"
+      "moderate_risk": "降低肝代谢负担较重药物优先级并提示复核肝胆状态",
+      "high_risk": "标记为高肝胆风险并优先避免高肝毒性和高肝代谢负担组合"
     },
-    "reference_source": "DailyMed hepatotoxicity warnings; common liver laboratory interpretation",
-    "threshold_basis": "参考药品说明书中的肝毒性风险提示和临床常用胆红素风险解释，并结合本队列分布设置。"
+    "contraindication_or_caution": "慎用肝毒性药物和镇静药物并考虑剂量调整",
+    "monitoring_advice": "监测胆红素转氨酶 INR 和意识状态",
+    "reference_source": "DailyMed hepatotoxicity warnings; AASLD liver disease references",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考药品说明书肝毒性提示和临床常用胆红素风险解释"
   },
   {
-    "rule_id": "gastroenterology_inr_risk",
+    "rule_id": "gastroenterology_coagulation_bleeding_risk",
+    "risk_target": "GI bleeding and hepatic synthetic risk",
+    "related_treatments": "anticoagulants|antiplatelets|invasive procedures|NSAIDs",
     "lab_name": "inr_24h",
     "lab_purpose": "评估肝合成功能受损及消化道出血风险",
     "threshold_type": "upper_bound",
@@ -37,12 +44,73 @@
       "value": 2.0,
       "operator": ">"
     },
-    "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常，消化道出血相关风险增加。",
+    "risk_message": "INR 升高可能提示肝合成功能下降或凝血异常且消化道出血风险增加",
     "action": {
-      "moderate_risk": "对抗凝、侵袭性操作相关或易致出血方案降权。",
-      "high_risk": "将病例标记为高出血风险，暂停优先推荐相关高风险方案。"
+      "moderate_risk": "对抗凝侵袭性操作或易致出血方案降权",
+      "high_risk": "标记为高出血风险并暂停优先推荐相关高风险方案"
     },
-    "reference_source": "DailyMed anticoagulant labels; liver disease coagulation risk references",
-    "threshold_basis": "参考抗凝药物说明书、肝病凝血风险公开临床知识和本队列 INR 分布设置。"
+    "contraindication_or_caution": "活动性出血或肝功能异常未复核前慎用抗凝抗血小板和 NSAIDs",
+    "monitoring_advice": "监测 INR 血红蛋白便血和生命体征",
+    "reference_source": "DailyMed anticoagulant labels; liver disease coagulation references",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考抗凝说明书和肝病凝血风险公开知识"
+  },
+  {
+    "rule_id": "gastroenterology_renal_lactulose_diuretic_risk",
+    "risk_target": "renal and volume risk in GI therapy",
+    "related_treatments": "diuretics|lactulose|antibiotics|contrast imaging",
+    "lab_name": "creatinine_24h",
+    "lab_purpose": "评估消化系统治疗中的肾功能和容量风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 1.5,
+      "operator": ">="
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 2.5,
+      "operator": ">="
+    },
+    "risk_message": "肌酐升高时腹水利尿腹泻治疗抗感染和造影检查需复核肾风险",
+    "action": {
+      "moderate_risk": "降低肾功能敏感治疗优先级并提示容量复核",
+      "high_risk": "标记为高肾功能风险并建议避免加重肾损伤的组合"
+    },
+    "contraindication_or_caution": "慎用过度利尿腹泻诱导和肾毒性抗感染药",
+    "monitoring_advice": "监测肌酐尿量体重电解质和腹泻次数",
+    "reference_source": "KDIGO CKD guideline; AASLD cirrhosis guidance",
+    "reference_url": "https://kdigo.org",
+    "threshold_basis": "参考肾功能管理和肝硬化腹水治疗风险"
+  },
+  {
+    "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+    "risk_target": "cirrhosis sodium and encephalopathy risk",
+    "related_treatments": "diuretics|lactulose|desmopressin|hypotonic fluids",
+    "lab_name": "sodium_24h",
+    "lab_purpose": "评估肝硬化腹水和肝性脑病中的水钠风险",
+    "threshold_type": "range",
+    "moderate_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+    "action": {
+      "moderate_risk": "对可能加重水钠紊乱方案降权并提示人工复核",
+      "high_risk": "标记为高水钠和脑病风险并建议优先稳定电解质"
+    },
+    "contraindication_or_caution": "避免过快纠正血钠并谨慎使用利尿或导致腹泻治疗",
+    "monitoring_advice": "监测血钠意识尿量体重和腹泻情况",
+    "reference_source": "AASLD cirrhosis guidance; MedlinePlus sodium test",
+    "reference_url": "https://medlineplus.gov/lab-tests/sodium-blood-test",
+    "threshold_basis": "参考肝硬化水钠管理和公开血钠范围"
   }
 ]

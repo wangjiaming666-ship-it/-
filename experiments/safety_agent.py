@@ -57,11 +57,16 @@ def build_baseline_risk_record(
         "lab_value": lab_value,
         "risk_level": risk_level,
         "risk_source": "baseline_first24h_lab",
+        "risk_target": rule.get("risk_target"),
+        "related_treatments": rule.get("related_treatments"),
         "risk_message": rule.get("risk_message"),
         "baseline_interpretation": (
-            "该风险由入院后首 24 小时检验识别，表示患者入院早期已经存在的基线风险背景。"
+            "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。"
         ),
         "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": rule.get("contraindication_or_caution"),
+        "monitoring_advice": rule.get("monitoring_advice"),
+        "reference_source": rule.get("reference_source"),
         "plan_adaptation": (
             "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
         ),

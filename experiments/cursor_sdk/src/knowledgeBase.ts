@@ -11,10 +11,7 @@ export interface KnowledgeBaseEntry {
   folder_name: string;
   disease_catalog: string;
   drug_catalog: string;
-  lab_profile: string;
   risk_rules: string;
-  disease_drug_map: string;
-  example_cases: string;
 }
 
 const SPECIALTY_ALIASES: Record<string, string> = {
@@ -62,41 +59,6 @@ function normalizeSpecialtyName(value: string): string {
   return SPECIALTY_ALIASES[compact] ?? normalized;
 }
 
-function summarizeCaseExamples(exampleCases: Record<string, unknown>) {
-  const singleExamples = Array.isArray(exampleCases.single_specialty_examples)
-    ? exampleCases.single_specialty_examples
-    : [];
-  const multiExamples = Array.isArray(exampleCases.multi_specialty_examples)
-    ? exampleCases.multi_specialty_examples
-    : [];
-
-  const pickSummary = (item: any) => {
-    const caseSummary = item?.case_summary ?? {};
-    return {
-      hadm_id: item?.hadm_id ?? caseSummary?.hadm_id ?? "",
-      primary_diagnosis: caseSummary?.primary_diagnosis ?? "",
-      comorbidity_list: parsePipeList(caseSummary?.comorbidity_list).slice(0, 5),
-      drug_list: parsePipeList(caseSummary?.drug_list).slice(0, 8),
-      key_labs: {
-        creatinine_24h: caseSummary?.creatinine_24h ?? null,
-        bun_24h: caseSummary?.bun_24h ?? null,
-        potassium_24h: caseSummary?.potassium_24h ?? null,
-        sodium_24h: caseSummary?.sodium_24h ?? null,
-        glucose_24h: caseSummary?.glucose_24h ?? null,
-        inr_24h: caseSummary?.inr_24h ?? null,
-        bilirubin_total_24h: caseSummary?.bilirubin_total_24h ?? null,
-      },
-    };
-  };
-
-  return {
-    single_specialty_count: singleExamples.length,
-    multi_specialty_count: multiExamples.length,
-    single_specialty_examples: singleExamples.slice(0, 2).map(pickSummary),
-    multi_specialty_examples: multiExamples.slice(0, 2).map(pickSummary),
-  };
-}
-
 export class KnowledgeBaseIndex {
   private readonly rows: KnowledgeBaseEntry[];
 
@@ -106,10 +68,7 @@ export class KnowledgeBaseIndex {
       folder_name: row.folder_name,
       disease_catalog: resolveKnowledgePath(row.disease_catalog, row.folder_name),
       drug_catalog: resolveKnowledgePath(row.drug_catalog, row.folder_name),
-      lab_profile: resolveKnowledgePath(row.lab_profile, row.folder_name),
       risk_rules: resolveKnowledgePath(row.risk_rules, row.folder_name),
-      disease_drug_map: resolveKnowledgePath(row.disease_drug_map, row.folder_name),
-      example_cases: resolveKnowledgePath(row.example_cases, row.folder_name),
     }));
   }
 
@@ -128,66 +87,90 @@ export function loadSpecialtyKnowledge(specialtyName: string) {
   const entry = kbIndex.getEntry(specialtyName);
   const diseaseCatalog = readCsv(entry.disease_catalog);
   const drugCatalog = readCsv(entry.drug_catalog);
-  const diseaseDrugMap = readCsv(entry.disease_drug_map);
   const riskRules = readJsonFile<Array<Record<string, unknown>>>(entry.risk_rules);
-  const exampleCases = readJsonFile<Record<string, unknown>>(entry.example_cases);
 
-  const coreDiseases = diseaseCatalog
-    .filter((row) => row.disease_role === "核心病种")
-    .slice(0, 10)
+  const diagnosticKnowledge = diseaseCatalog.slice(0, 30).map((row) => ({
+    disease_name: row.disease_name,
+    aliases: parsePipeList(row.aliases),
+    diagnostic_basis: row.diagnostic_basis,
+    key_symptoms: parsePipeList(row.key_symptoms),
+    key_labs_or_tests: parsePipeList(row.key_labs_or_tests),
+    differential_diagnosis: parsePipeList(row.differential_diagnosis),
+    reference_source: row.reference_source,
+    reference_url: row.reference_url,
+    agent_use: row.agent_use,
+  }));
+  const diseaseDirectedDrugs = drugCatalog
+    .filter((row) => ["disease_directed_therapy", "risk_modifying_therapy"].includes(row.treatment_role))
+    .slice(0, 30)
     .map((row) => ({
-      diagnosis_name: row.diagnosis_name,
-      frequency: row.frequency,
-      notes: row.notes,
+      standard_drug_name: row.standard_drug_name,
+      aliases: parsePipeList(row.aliases),
+      drug_class: row.drug_class,
+      disease_context: parsePipeList(row.disease_context),
+      treatment_role: row.treatment_role,
+      order_category: row.order_category,
+      mechanism_or_function: row.mechanism_or_function,
+      major_cautions: row.major_cautions,
+      reference_source: row.reference_source,
+      reference_url: row.reference_url,
     }));
-  const coreDrugs = drugCatalog
-    .filter((row) => row.drug_role === "核心治疗药")
-    .slice(0, 10)
+  const supportiveDrugs = drugCatalog
+    .filter((row) =>
+      ["supportive_or_symptomatic_therapy", "general_inpatient_medication"].includes(row.treatment_role),
+    )
+    .slice(0, 20)
     .map((row) => ({
-      drug_name: row.drug_name,
-      frequency: row.frequency,
-      notes: row.notes,
-    }));
-  const usableMap = diseaseDrugMap
-    .filter((row) => row.mapping_quality === "可直接使用")
-    .slice(0, 12)
-    .map((row) => ({
-      diagnosis_name: row.diagnosis_name,
-      recommended_drugs: parsePipeList(row.recommended_drugs).slice(0, 6),
-      avoid_or_low_priority_drugs: parsePipeList(row.avoid_or_low_priority_drugs).slice(0, 6),
-      evidence_source: row.evidence_source,
+      standard_drug_name: row.standard_drug_name,
+      aliases: parsePipeList(row.aliases),
+      drug_class: row.drug_class,
+      treatment_role: row.treatment_role,
+      order_category: row.order_category,
+      mechanism_or_function: row.mechanism_or_function,
+      major_cautions: row.major_cautions,
+      reference_source: row.reference_source,
+      reference_url: row.reference_url,
     }));
   const summarizedRiskRules = riskRules.slice(0, 8).map((rule) => ({
     rule_id: rule.rule_id,
+    risk_target: rule.risk_target,
+    related_treatments: rule.related_treatments,
     lab_name: rule.lab_name,
     threshold_type: rule.threshold_type,
     moderate_risk_threshold: rule.moderate_risk_threshold,
     high_risk_threshold: rule.high_risk_threshold,
     risk_message: rule.risk_message,
     action: rule.action,
+    contraindication_or_caution: rule.contraindication_or_caution,
+    monitoring_advice: rule.monitoring_advice,
+    reference_source: rule.reference_source,
+    reference_url: rule.reference_url,
   }));
-  const summarizedExamples = summarizeCaseExamples(exampleCases);
 
   return {
     entry,
     diseaseCatalog,
     drugCatalog,
-    diseaseDrugMap,
     riskRules,
-    exampleCases,
     promptPayload: {
       specialty_name: specialtyName,
       knowledge_base_dir: entry.folder_name,
-      core_diseases: coreDiseases,
-      core_drugs: coreDrugs,
-      disease_drug_map: usableMap,
+      diagnostic_knowledge: diagnosticKnowledge,
+      drug_function_knowledge: {
+        disease_directed_or_risk_modifying: diseaseDirectedDrugs,
+        supportive_or_general: supportiveDrugs,
+      },
       risk_rules: summarizedRiskRules,
-      example_cases: summarizedExamples,
     },
   };
 }
 
 export function extractAvoidDrugs(rows: Array<Record<string, string>>): string[] {
-  const values = rows.flatMap((row) => parsePipeList(row.avoid_or_low_priority_drugs));
+  const values = rows
+    .filter((row) =>
+      ["supportive_or_symptomatic_therapy", "general_inpatient_medication"].includes(row.treatment_role),
+    )
+    .flatMap((row) => [row.standard_drug_name, ...parsePipeList(row.aliases)])
+    .filter(Boolean);
   return Array.from(new Set(values));
 }

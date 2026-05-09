@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,30 @@ def split_pipe_values(value: str | None) -> list[str]:
     if not value or value != value:
         return []
     return [item.strip() for item in str(value).split("|") if item.strip()]
+
+
+def normalize_for_match(value: Any) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(value).lower()).strip()
+
+
+def row_terms(row: Any, columns: list[str]) -> list[str]:
+    terms: list[str] = []
+    for column in columns:
+        if column not in row:
+            continue
+        values = split_pipe_values(row.get(column))
+        if not values and row.get(column) == row.get(column):
+            values = [str(row.get(column))]
+        terms.extend(normalize_for_match(value) for value in values if normalize_for_match(value))
+    return terms
+
+
+def has_text_overlap(left_terms: list[str], right_terms: list[str]) -> bool:
+    for left in left_terms:
+        for right in right_terms:
+            if left and right and (left in right or right in left):
+                return True
+    return False
 
 
 class SpecialtyAgent:
@@ -97,38 +122,60 @@ class SpecialtyAgent:
         routing: DiagnosisRouting,
         kb: dict[str, Any],
     ) -> SpecialtyAgentResult:
-        disease_drug_map = kb["disease_drug_map"]
-        diagnoses = routing.specialty_related_diagnoses.get(specialty_name, [])
-        matched = disease_drug_map[
-            disease_drug_map["diagnosis_name"].isin(diagnoses)
-        ].copy()
+        disease_catalog = kb["disease_catalog"].fillna("")
+        drug_catalog = kb["drug_catalog"].fillna("")
+        diagnoses = [
+            case_record.primary_diagnosis,
+            *routing.specialty_related_diagnoses.get(specialty_name, []),
+            *case_record.comorbidity_list,
+        ]
+        diagnosis_terms = [normalize_for_match(item) for item in diagnoses if normalize_for_match(item)]
+        matched_diseases = []
+        for _, row in disease_catalog.iterrows():
+            terms = row_terms(row, ["disease_name", "diagnosis_name", "aliases"])
+            if has_text_overlap(terms, diagnosis_terms):
+                matched_diseases.append(row)
 
         drug_scores: dict[str, float] = {}
         drug_reasons: dict[str, list[str]] = {}
-        avoid_map: dict[str, str] = {}
 
-        for _, row in matched.iterrows():
-            for rank, drug in enumerate(split_pipe_values(row.get("recommended_drugs")), start=1):
-                drug_scores[drug] = drug_scores.get(drug, 0.0) + max(0.1, 1.1 - rank * 0.15)
-                drug_reasons.setdefault(drug, []).append(
-                    f"与诊断 {row.get('diagnosis_name')} 在知识库中存在映射"
-                )
-            for drug in split_pipe_values(row.get("avoid_or_low_priority_drugs")):
-                avoid_map[drug] = f"在 {row.get('diagnosis_name')} 的映射中被列为低优先级或辅助药"
+        matched_terms: list[str] = []
+        for row in matched_diseases:
+            matched_terms.extend(row_terms(row, ["disease_name", "diagnosis_name", "aliases"]))
+        if not matched_terms:
+            matched_terms = diagnosis_terms
+
+        role_weights = {
+            "disease_directed_therapy": 1.0,
+            "risk_modifying_therapy": 0.85,
+        }
+        for order, (_, row) in enumerate(drug_catalog.iterrows()):
+            role = str(row.get("treatment_role", ""))
+            if role not in role_weights:
+                continue
+            drug = str(row.get("drug_name") or row.get("standard_drug_name"))
+            if not drug:
+                continue
+            context_terms = row_terms(row, ["disease_context"])
+            score = role_weights[role] + max(0.0, 0.2 - order * 0.002)
+            if matched_terms and context_terms and has_text_overlap(context_terms, matched_terms):
+                score += 0.6
+                reason = "药物功能知识中的适用疾病背景与当前诊断相匹配"
+            else:
+                score -= 0.25
+                reason = "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选"
+            drug_scores[drug] = max(drug_scores.get(drug, 0.0), score)
+            label = row.get("treatment_role_label", role)
+            function = row.get("mechanism_or_function", "")
+            drug_reasons.setdefault(drug, []).append(f"{reason}；治疗角色为 {label}；{function}")
 
         if not drug_scores:
-            core_drugs = kb["drug_catalog"]
-            if "treatment_role" in core_drugs.columns:
-                core_drugs = core_drugs[
-                    core_drugs["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
-                ].head(5)
-            else:
-                core_drugs = core_drugs[core_drugs["drug_role"] == "核心治疗药"].head(5)
-            for _, row in core_drugs.iterrows():
-                drug = str(row["drug_name"])
-                drug_scores[drug] = float(row.get("frequency", 1)) / 1000.0
-                role = row.get("treatment_role_label", row.get("drug_role", "专科治疗角色"))
-                drug_reasons.setdefault(drug, []).append(f"来自本专科药物治疗知识库，角色为 {role}")
+            for _, row in drug_catalog.head(5).iterrows():
+                drug = str(row.get("drug_name") or row.get("standard_drug_name"))
+                if not drug:
+                    continue
+                drug_scores[drug] = 0.4
+                drug_reasons.setdefault(drug, []).append("来自本专科公开药物功能知识表")
 
         sorted_drugs = sorted(drug_scores.items(), key=lambda item: item[1], reverse=True)[:5]
         recommendations = [
@@ -143,7 +190,15 @@ class SpecialtyAgent:
 
         risk_alerts = self._build_risk_alerts(kb["risk_rules"], case_record.key_labs)
         avoid_or_low_priority = [
-            AvoidDrug(drug_name=drug, reason=reason) for drug, reason in list(avoid_map.items())[:8]
+            AvoidDrug(
+                drug_name=str(row.get("drug_name") or row.get("standard_drug_name")),
+                reason="该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选",
+            )
+            for _, row in drug_catalog[
+                drug_catalog["treatment_role"].isin(
+                    ["supportive_or_symptomatic_therapy", "general_inpatient_medication"]
+                )
+            ].head(8).iterrows()
         ]
         overall_confidence = round(
             min(0.95, 0.4 + len(recommendations) * 0.08 + len(diagnoses) * 0.03),
@@ -159,14 +214,14 @@ class SpecialtyAgent:
             recommended_drugs_topk=recommendations,
             recommendation_reasons={
                 "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
-                "diagnosis_alignment": "候选建议参考当前专科相关诊断与 disease_drug_map 的真实世界共现证据。",
-                "knowledge_support": "候选药物来自本专科药物治疗知识中疾病直接治疗或风险控制角色的条目。",
-                "comorbidity_constraint": "已结合共病、既往史和风险规则，对潜在冲突药物做低优先级标记。",
+                "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+                "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+                "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。",
             },
             risk_alerts=risk_alerts,
             avoid_or_low_priority_drugs=avoid_or_low_priority,
             overall_confidence=overall_confidence,
-            summary_reason=f"{specialty_name}智能体已基于专科诊断知识、治疗角色分层、病药共现候选证据和风险规则生成建议。",
+            summary_reason=f"{specialty_name}智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
             conversation_text=conversation_text,
         )
 
