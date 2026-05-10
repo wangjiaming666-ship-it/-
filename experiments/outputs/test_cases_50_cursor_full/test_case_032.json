@@ -1,0 +1,777 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "18817606",
+      "hadm_id": "21617693",
+      "gender": "F",
+      "age": 34.0
+    },
+    "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+        "Personal history of COVID-19",
+        "Single live birth",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      "内分泌/代谢": [
+        "38 weeks gestation of pregnancy",
+        "Diseases of the respiratory system complicating childbirth",
+        "Second degree perineal laceration during delivery",
+        "Streptococcus B carrier state complicating childbirth",
+        "Unspecified asthma, uncomplicated"
+      ]
+    },
+    "comorbidity_list": [
+      "38 weeks gestation of pregnancy",
+      "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+      "Diseases of the respiratory system complicating childbirth",
+      "Personal history of COVID-19",
+      "Second degree perineal laceration during delivery",
+      "Single live birth",
+      "Streptococcus B carrier state complicating childbirth",
+      "Type 2 diabetes mellitus without complications",
+      "Unspecified asthma, uncomplicated"
+    ],
+    "key_labs": {
+      "creatinine_24h": 0.6,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 32,
+      "subject_id": "18817606",
+      "hadm_id": "21617693",
+      "specialty_cnt": 2,
+      "specialty_list": "呼吸 | 内分泌/代谢",
+      "gender": "F",
+      "anchor_age": 34,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "14/9/2180 09:21:00",
+      "dischtime": "17/9/2180 13:02:00",
+      "admission_type": "URGENT",
+      "race": "OTHER",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
+      "comorbidity_list": "38 weeks gestation of pregnancy | Abnormality in fetal heart rate and rhythm complicating labor and delivery | Diseases of the respiratory system complicating childbirth | Personal history of COVID-19 | Second degree perineal laceration during delivery | Single live birth | Streptococcus B carrier state complicating childbirth | Type 2 diabetes mellitus without complications | Unspecified asthma, uncomplicated",
+      "specialty_agents": "呼吸 | 内分泌/代谢",
+      "drug_list": "acetaminophen | albuterol inhaler | calcium carbonate | dermoplast spray | docusate sodium | enoxaparin sodium | fluticasone-salmeterol diskus (250/50) | fluticasone propionate 110mcg | ibuprofen | lactated ringers | ondansetron | simethicone | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.6,
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "呼吸"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Type 2 diabetes mellitus without complications",
+        "38 weeks gestation of pregnancy"
+      ],
+      "呼吸": [
+        "Unspecified asthma, uncomplicated",
+        "Diseases of the respiratory system complicating childbirth",
+        "Personal history of COVID-19"
+      ]
+    },
+    "rationale": "主诊断为分娩期既往2型糖尿病，需以内分泌/代谢管理血糖为主线；合并哮喘、呼吸系统疾病并发分娩和COVID-19既往史，需呼吸专科评估支气管扩张剂、激素和镇静止痛相关呼吸风险。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "confidence": 0.78,
+          "reason": "分娩及产后住院期糖尿病管理首选可快速调整的胰岛素方案；当前缺少血糖值，需以床旁血糖触发剂量。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+          "confidence": 0.62,
+          "reason": "若持续空腹或餐前高血糖，可用于基础血糖控制；产后胰岛素需求可能下降，需保守起始并严密监测。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "二甲双胍需复核eGFR、进食状态和哺乳计划后恢复或启动",
+          "confidence": 0.48,
+          "reason": "肌酐0.6 mg/dL未提示肾功能禁忌，但围产期、进食状态和乳酸风险需人工复核。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "confidence": 0.7,
+          "reason": "任何胰岛素方案均需配套低血糖救治医嘱，尤其产后进食和胰岛素需求变化时。"
+        }
+      ],
+      "recommendation_reasons": {
+        "diabetes_context": "主诊断和共病均提示2型糖尿病；缺少24小时血糖，推荐以监测驱动的胰岛素校正方案而非固定强化方案。",
+        "renal_context": "肌酐0.6 mg/dL，未触发肾功能高风险规则，但仍需eGFR用于二甲双胍复核。",
+        "postpartum_context": "38周分娩后胰岛素需求可能迅速下降，需避免低血糖。"
+      },
+      "risk_alerts": [
+        "glucose_24h缺失，无法判定高血糖或低血糖风险等级，所有降糖药需配合床旁血糖监测。",
+        "potassium_24h缺失，强化胰岛素治疗前需复核血钾。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "磺脲类药物",
+          "reason": "住院围产期低血糖风险较高，且剂量不易快速调整。"
+        },
+        {
+          "drug_name": "固定大剂量基础-餐时胰岛素",
+          "reason": "当前血糖和进食状态缺失，产后胰岛素需求下降，需避免过度降糖。"
+        }
+      ],
+      "overall_confidence": 0.66,
+      "summary_reason": "以内分泌/代谢为主导，建议以床旁血糖监测、校正胰岛素和低血糖救治预案为核心，二甲双胍和基础胰岛素列为需复核药物。",
+      "conversation_text": "内分泌/代谢意见：病例为34岁女性分娩期既往2型糖尿病，肌酐正常但血糖、电解质缺失。优先使用可按床旁血糖动态调整的胰岛素校正方案，并准备低血糖处理；二甲双胍和基础胰岛素需要结合eGFR、进食、哺乳及产后血糖趋势复核。"
+    },
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "沙丁胺醇吸入剂按需",
+          "confidence": 0.72,
+          "reason": "合并未特指哮喘且无急性缺氧数据，短效β2受体激动剂适合作为喘息或支气管痉挛按需缓解药。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "布地奈德吸入剂需复核后用于持续性哮喘控制",
+          "confidence": 0.56,
+          "reason": "吸入糖皮质激素可用于哮喘控制，系统代谢影响小于全身激素；需根据症状频率和既往控制水平决定。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "氧气按目标SpO2给氧需生命体征触发",
+          "confidence": 0.5,
+          "reason": "当前SpO2缺失，不能常规给氧；若低氧或呼吸困难出现，应作为支持治疗。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "避免常规全身糖皮质激素，除非哮喘急性加重",
+          "confidence": 0.6,
+          "reason": "全身激素可加重血糖波动，需在明确喘息急性加重时使用并强化血糖监测。"
+        }
+      ],
+      "recommendation_reasons": {
+        "asthma_context": "诊断包含未特指哮喘且无急性呼吸衰竭证据，推荐按需支气管扩张剂和必要时吸入控制治疗。",
+        "covid_history_context": "仅为COVID-19个人史，不能据此推荐抗病毒或抗菌治疗。",
+        "metabolic_overlap": "β2激动剂和系统激素均可能影响血钾或血糖，因钾和血糖缺失需提示复核。"
+      },
+      "risk_alerts": [
+        "potassium_24h缺失，沙丁胺醇频繁使用前需复核血钾和心率。",
+        "glucose_24h缺失，全身糖皮质激素会增加血糖风险，应降优先级。",
+        "生命体征和SpO2缺失，氧疗、镇静镇痛和呼吸支持需基于实时评估。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "常规全身糖皮质激素",
+          "reason": "无哮喘急性加重证据，且糖尿病背景下会增加高血糖风险。"
+        },
+        {
+          "drug_name": "苯二氮卓类镇静药",
+          "reason": "可增加呼吸抑制风险，围产期和哮喘背景下不宜常规使用。"
+        },
+        {
+          "drug_name": "阿片类镇痛药常规使用",
+          "reason": "第二度会阴裂伤通常可优先非阿片镇痛，阿片可能增加镇静和呼吸抑制。"
+        }
+      ],
+      "overall_confidence": 0.6,
+      "summary_reason": "呼吸方案以按需沙丁胺醇和必要时吸入布地奈德为主，避免无指征全身激素和中枢抑制药。",
+      "conversation_text": "呼吸意见：当前无SpO2、呼吸频率或喘息严重程度数据，不能推定急性哮喘加重。建议保留沙丁胺醇按需，若症状持续可复核吸入布地奈德；系统激素、镇静药和阿片需要因血糖和呼吸抑制风险降权。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "沙丁胺醇吸入剂按需"
+        ],
+        "cautioned_drugs": [
+          "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+          "二甲双胍需复核eGFR、进食状态和哺乳计划后恢复或启动",
+          "布地奈德吸入剂需复核后用于持续性哮喘控制",
+          "全身糖皮质激素"
+        ],
+        "conflict_notes": [
+          "系统糖皮质激素可能改善哮喘急性加重但会升高血糖；当前无急性加重证据，暂不列入常规最终方案。",
+          "沙丁胺醇频繁使用可能影响血钾，因血钾缺失需限定为按需并复核电解质。"
+        ],
+        "priority_comment": "优先建立血糖监测和校正胰岛素框架，避免固定强化降糖造成产后低血糖。"
+      },
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "沙丁胺醇吸入剂按需",
+          "布地奈德吸入剂需复核后用于持续性哮喘控制",
+          "对乙酰氨基酚",
+          "布洛芬需产后出血和肾功能复核后使用"
+        ],
+        "cautioned_drugs": [
+          "阿片类镇痛药",
+          "苯二氮卓类镇静药",
+          "全身糖皮质激素"
+        ],
+        "conflict_notes": [
+          "会阴裂伤疼痛可先用非阿片镇痛，避免呼吸抑制。",
+          "二甲双胍不解决急性住院血糖波动，且需确认进食和肾功能估算。"
+        ],
+        "priority_comment": "哮喘目前以轻症或未分级处理，按需吸入支气管扩张剂优先，避免不必要镇静。"
+      }
+    ],
+    "consensus_notes": [
+      "未提供当前真实处方，所有推荐均来自诊断、共病、肌酐和专科风险规则。",
+      "缺少血糖、血钾、血钠、生命体征和SpO2是主要不确定性，最终医嘱需由床旁数据触发和人工复核。",
+      "候选方案应覆盖糖尿病、哮喘、产后会阴裂伤、GBS围产期风险、低血糖救治、补液冲管和预防层级。",
+      "GBS携带状态若仍在产程或分娩前，应考虑青霉素G或氨苄西林围产期预防；若已产后且无感染证据，则不常规继续抗菌药。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "监测驱动的产后糖尿病与哮喘保守综合方案",
+        "drugs": [
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "沙丁胺醇吸入剂按需",
+          "对乙酰氨基酚",
+          "布洛芬需产后出血和肾功能复核后使用",
+          "多库酯钠或聚乙二醇",
+          "产后复合维生素或产前维生素继续",
+          "生理盐水静脉冲管",
+          "氧气按目标SpO2给氧需生命体征触发"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+            "沙丁胺醇吸入剂按需"
+          ],
+          "risk_modifying_therapy": [
+            "床旁血糖监测配套低血糖救治预案",
+            "复核血钾后允许频繁β2激动剂使用"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚",
+            "布洛芬需产后出血和肾功能复核后使用",
+            "多库酯钠或聚乙二醇"
+          ],
+          "nursing_support_medication": [
+            "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+            "生理盐水静脉冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "产后复合维生素或产前维生素继续"
+          ],
+          "fluid_diluent_flush_medication": [
+            "生理盐水静脉冲管",
+            "必要时等渗晶体液维持静脉通路，避免无指征含糖液"
+          ],
+          "procedure_related_medication": [
+            "局部会阴护理用药需按产科评估选择"
+          ],
+          "nutrition_electrolyte_medication": [
+            "复核血钾、血钠后补充电解质",
+            "产后复合维生素或产前维生素继续"
+          ],
+          "requires_review": [
+            "基础胰岛素是否需要",
+            "二甲双胍是否恢复",
+            "布地奈德是否作为控制药",
+            "Rh免疫球蛋白是否因Rh阴性需要",
+            "Tdap或流感疫苗状态"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "在血糖、电解质和生命体征缺失时采用最安全的监测驱动方案：校正胰岛素处理糖尿病，沙丁胺醇按需处理哮喘，非阿片镇痛和肠道支持处理会阴裂伤相关症状，同时设置复核项。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "血糖持续升高时的强化但需复核方案",
+        "drugs": [
+          "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "沙丁胺醇吸入剂按需",
+          "布地奈德吸入剂需复核后用于持续性哮喘控制",
+          "对乙酰氨基酚",
+          "多库酯钠或聚乙二醇",
+          "生理盐水静脉冲管"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+            "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+            "沙丁胺醇吸入剂按需",
+            "布地奈德吸入剂需复核后用于持续性哮喘控制"
+          ],
+          "risk_modifying_therapy": [
+            "低血糖救治备用",
+            "复核血钾和血糖后调整胰岛素与β2激动剂频率"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚",
+            "多库酯钠或聚乙二醇"
+          ],
+          "nursing_support_medication": [
+            "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用"
+          ],
+          "prophylaxis_prevention_medication": [
+            "产后复合维生素或产前维生素继续"
+          ],
+          "fluid_diluent_flush_medication": [
+            "生理盐水静脉冲管"
+          ],
+          "procedure_related_medication": [
+            "会阴裂伤相关局部药物需产科复核"
+          ],
+          "nutrition_electrolyte_medication": [
+            "血钾、血钠缺失时不得经验性大剂量补钾或纠钠"
+          ],
+          "requires_review": [
+            "确认持续高血糖后再启用基础胰岛素",
+            "确认持续性哮喘控制不佳后再启用布地奈德",
+            "确认哺乳和进食状态"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "适用于床旁血糖显示持续升高且哮喘症状持续的情况；相较A方案更积极，但因产后低血糖和缺失血钾风险，需更多复核。",
+        "aggregate_score": 0.68
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "GBS围产期预防和产程场景补充方案",
+        "drugs": [
+          "青霉素G围产期预防需确认仍在产程或分娩前使用",
+          "氨苄西林作为青霉素G替代需复核过敏史",
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "沙丁胺醇吸入剂按需",
+          "对乙酰氨基酚",
+          "生理盐水静脉冲管"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+            "沙丁胺醇吸入剂按需"
+          ],
+          "risk_modifying_therapy": [
+            "青霉素G围产期预防需确认仍在产程或分娩前使用",
+            "氨苄西林作为青霉素G替代需复核过敏史"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "低血糖救治备用",
+            "生理盐水静脉冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "GBS围产期抗菌预防仅限适应证存在时"
+          ],
+          "fluid_diluent_flush_medication": [
+            "生理盐水静脉冲管"
+          ],
+          "procedure_related_medication": [
+            "产程或分娩相关抗菌预防需结合分娩时间点"
+          ],
+          "nutrition_electrolyte_medication": [
+            "复核血糖、血钾、血钠"
+          ],
+          "requires_review": [
+            "是否已分娩完成",
+            "青霉素过敏史",
+            "是否存在发热、绒毛膜羊膜炎或新生儿感染风险",
+            "抗菌药是否仍有适应证"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "GBS携带状态 complicating childbirth 是重要围产期风险，但若病例已产后且无感染证据则不应继续抗菌药；该方案仅作为时间点未明确时的候选。",
+        "aggregate_score": 0.55
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "监测驱动的产后糖尿病与哮喘保守综合方案",
+      "drugs": [
+        "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+        "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+        "沙丁胺醇吸入剂按需",
+        "对乙酰氨基酚",
+        "布洛芬需产后出血和肾功能复核后使用",
+        "多库酯钠或聚乙二醇",
+        "产后复合维生素或产前维生素继续",
+        "生理盐水静脉冲管",
+        "氧气按目标SpO2给氧需生命体征触发"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "沙丁胺醇吸入剂按需"
+        ],
+        "risk_modifying_therapy": [
+          "床旁血糖监测配套低血糖救治预案",
+          "复核血钾后允许频繁β2激动剂使用"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "布洛芬需产后出血和肾功能复核后使用",
+          "多库酯钠或聚乙二醇"
+        ],
+        "nursing_support_medication": [
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "生理盐水静脉冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "产后复合维生素或产前维生素继续"
+        ],
+        "fluid_diluent_flush_medication": [
+          "生理盐水静脉冲管",
+          "必要时等渗晶体液维持静脉通路，避免无指征含糖液"
+        ],
+        "procedure_related_medication": [
+          "局部会阴护理用药需按产科评估选择"
+        ],
+        "nutrition_electrolyte_medication": [
+          "复核血钾、血钠后补充电解质",
+          "产后复合维生素或产前维生素继续"
+        ],
+        "requires_review": [
+          "基础胰岛素是否需要",
+          "二甲双胍是否恢复",
+          "布地奈德是否作为控制药",
+          "Rh免疫球蛋白是否因Rh阴性需要",
+          "Tdap或流感疫苗状态"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "在血糖、电解质和生命体征缺失时采用监测驱动方案，兼顾糖尿病、哮喘、产后疼痛、便秘预防、冲管和营养支持。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "血糖持续升高时的强化但需复核方案",
+      "drugs": [
+        "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+        "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+        "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+        "沙丁胺醇吸入剂按需",
+        "布地奈德吸入剂需复核后用于持续性哮喘控制",
+        "对乙酰氨基酚",
+        "多库酯钠或聚乙二醇",
+        "生理盐水静脉冲管"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "基础胰岛素如NPH或甘精胰岛素低剂量方案需复核后使用",
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "沙丁胺醇吸入剂按需",
+          "布地奈德吸入剂需复核后用于持续性哮喘控制"
+        ],
+        "risk_modifying_therapy": [
+          "低血糖救治备用",
+          "复核血钾和血糖后调整胰岛素与β2激动剂频率"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "多库酯钠或聚乙二醇"
+        ],
+        "nursing_support_medication": [
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用"
+        ],
+        "prophylaxis_prevention_medication": [
+          "产后复合维生素或产前维生素继续"
+        ],
+        "fluid_diluent_flush_medication": [
+          "生理盐水静脉冲管"
+        ],
+        "procedure_related_medication": [
+          "会阴裂伤相关局部药物需产科复核"
+        ],
+        "nutrition_electrolyte_medication": [
+          "血钾、血钠缺失时不得经验性大剂量补钾或纠钠"
+        ],
+        "requires_review": [
+          "确认持续高血糖后再启用基础胰岛素",
+          "确认持续性哮喘控制不佳后再启用布地奈德",
+          "确认哺乳和进食状态"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "适合持续高血糖或哮喘控制不佳场景，但当前输入缺少触发证据，因此排序低于A。",
+      "aggregate_score": 0.68
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "GBS围产期预防和产程场景补充方案",
+      "drugs": [
+        "青霉素G围产期预防需确认仍在产程或分娩前使用",
+        "氨苄西林作为青霉素G替代需复核过敏史",
+        "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+        "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+        "沙丁胺醇吸入剂按需",
+        "对乙酰氨基酚",
+        "生理盐水静脉冲管"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "沙丁胺醇吸入剂按需"
+        ],
+        "risk_modifying_therapy": [
+          "青霉素G围产期预防需确认仍在产程或分娩前使用",
+          "氨苄西林作为青霉素G替代需复核过敏史"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "低血糖救治备用",
+          "生理盐水静脉冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "GBS围产期抗菌预防仅限适应证存在时"
+        ],
+        "fluid_diluent_flush_medication": [
+          "生理盐水静脉冲管"
+        ],
+        "procedure_related_medication": [
+          "产程或分娩相关抗菌预防需结合分娩时间点"
+        ],
+        "nutrition_electrolyte_medication": [
+          "复核血糖、血钾、血钠"
+        ],
+        "requires_review": [
+          "是否已分娩完成",
+          "青霉素过敏史",
+          "是否存在发热、绒毛膜羊膜炎或新生儿感染风险",
+          "抗菌药是否仍有适应证"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "GBS携带状态提示围产期抗菌预防可能相关，但病例已有single live birth，若已产后且无感染证据不推荐继续抗菌药。",
+      "aggregate_score": 0.55
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "监测驱动的产后糖尿病与哮喘保守综合方案",
+      "drugs": [
+        "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+        "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+        "沙丁胺醇吸入剂按需",
+        "对乙酰氨基酚",
+        "布洛芬需产后出血和肾功能复核后使用",
+        "多库酯钠或聚乙二醇",
+        "产后复合维生素或产前维生素继续",
+        "生理盐水静脉冲管",
+        "氧气按目标SpO2给氧需生命体征触发"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "胰岛素赖脯或常规胰岛素按床旁血糖校正给药",
+          "沙丁胺醇吸入剂按需"
+        ],
+        "risk_modifying_therapy": [
+          "床旁血糖监测配套低血糖救治预案",
+          "复核血钾后允许频繁β2激动剂使用"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "布洛芬需产后出血和肾功能复核后使用",
+          "多库酯钠或聚乙二醇"
+        ],
+        "nursing_support_medication": [
+          "葡萄糖口服凝胶或50%葡萄糖注射液低血糖救治备用",
+          "生理盐水静脉冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "产后复合维生素或产前维生素继续"
+        ],
+        "fluid_diluent_flush_medication": [
+          "生理盐水静脉冲管",
+          "必要时等渗晶体液维持静脉通路，避免无指征含糖液"
+        ],
+        "procedure_related_medication": [
+          "局部会阴护理用药需按产科评估选择"
+        ],
+        "nutrition_electrolyte_medication": [
+          "复核血钾、血钠后补充电解质",
+          "产后复合维生素或产前维生素继续"
+        ],
+        "requires_review": [
+          "基础胰岛素是否需要",
+          "二甲双胍是否恢复",
+          "布地奈德是否作为控制药",
+          "Rh免疫球蛋白是否因Rh阴性需要",
+          "Tdap或流感疫苗状态"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "该方案对缺失数据最稳健，避免经验性全身激素、固定大剂量胰岛素、无指征抗菌药和常规阿片镇痛。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "A",
+        "rank": 1,
+        "aggregate_score": 0.82,
+        "safety_comment": "首选；监测驱动，低血糖和呼吸抑制风险相对可控。"
+      },
+      {
+        "plan_id": "B",
+        "rank": 2,
+        "aggregate_score": 0.68,
+        "safety_comment": "需床旁血糖和哮喘控制证据支持；否则有过度治疗风险。"
+      },
+      {
+        "plan_id": "C",
+        "rank": 3,
+        "aggregate_score": 0.55,
+        "safety_comment": "仅适用于仍在产程或分娩前GBS预防场景；产后无感染证据时不应常规继续抗菌药。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "rule_id": "endocrinology_glucose_treatment_risk",
+        "status": "indeterminate_due_to_missing_lab",
+        "risk_message": "glucose_24h缺失，无法判定胰岛素、激素或含糖补液风险等级。",
+        "action": "要求床旁血糖监测后给药，并配置低血糖救治。"
+      },
+      {
+        "rule_id": "endocrinology_potassium_dka_adrenal_risk",
+        "status": "indeterminate_due_to_missing_lab",
+        "risk_message": "potassium_24h缺失，胰岛素和β2激动剂均可能影响血钾。",
+        "action": "复核血钾，避免在低钾未纠正时强化胰岛素或频繁沙丁胺醇。"
+      },
+      {
+        "rule_id": "respiratory_steroid_glucose_risk",
+        "status": "indeterminate_due_to_missing_lab",
+        "risk_message": "血糖缺失且糖尿病存在，系统激素可能增加代谢风险。",
+        "action": "无哮喘急性加重证据时不推荐常规全身激素。"
+      },
+      {
+        "rule_id": "respiratory_sedation_hypercapnia_risk",
+        "status": "indeterminate_due_to_missing_lab_and_vitals",
+        "risk_message": "钠、呼吸频率、SpO2缺失，镇静药和阿片可能增加呼吸抑制风险。",
+        "action": "避免苯二氮卓和常规阿片，优先非阿片镇痛。"
+      },
+      {
+        "rule_id": "endocrinology_renal_metformin_bisphosphonate_risk",
+        "status": "not_triggered_by_available_creatinine",
+        "risk_message": "肌酐0.6 mg/dL未达中高风险阈值。",
+        "action": "二甲双胍仍需eGFR、进食、哺乳和急性病情复核。"
+      }
+    ],
+    "safety_summary": "最终推荐A方案。主要安全约束为：不得声称已有真实处方；血糖、血钾、血钠和生命体征缺失导致胰岛素、β2激动剂、系统激素、镇静镇痛和补液均需监测触发；避免无指征抗菌药、全身糖皮质激素、苯二氮卓和常规阿片。王老师，回答结束",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "role": "diagnostic_router",
+      "text": "识别主线为分娩期2型糖尿病，呼吸并发问题为哮喘和呼吸系统疾病并发分娩；内分泌/代谢为牵头专科。"
+    },
+    {
+      "role": "endocrinology_agent",
+      "text": "建议以床旁血糖监测和校正胰岛素为核心，低血糖救治备用；基础胰岛素和二甲双胍列为需复核。"
+    },
+    {
+      "role": "respiratory_agent",
+      "text": "建议沙丁胺醇按需，必要时复核布地奈德；避免无指征全身激素和中枢抑制药。"
+    },
+    {
+      "role": "mdt_panel",
+      "text": "形成A、B、C三个候选方案，A在缺失关键化验和生命体征时风险最低。"
+    },
+    {
+      "role": "safety_auditor",
+      "text": "审核发现多项风险因数据缺失而不可判定，最终选择监测驱动的保守综合方案。"
+    },
+    {
+      "role": "final_note",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

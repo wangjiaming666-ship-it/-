@@ -1,0 +1,862 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "15395961",
+      "hadm_id": "27897838",
+      "gender": "M",
+      "age": 60.0
+    },
+    "primary_diagnosis": "Atypical atrial flutter",
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Atypical atrial flutter",
+        "Hyperlipidemia, unspecified",
+        "Other persistent atrial fibrillation",
+        "Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits",
+        "Supraventricular tachycardia"
+      ],
+      "消化": [
+        "Essential (primary) hypertension",
+        "Long term (current) use of anticoagulants",
+        "Personal history of malignant neoplasm of larynx",
+        "Presence of unspecified artificial knee joint"
+      ],
+      "心血管": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other chest pain",
+        "Personal history of malignant neoplasm of other organs and systems",
+        "Rheumatic disorders of both mitral and tricuspid valves"
+      ]
+    },
+    "comorbidity_list": [
+      "Essential (primary) hypertension",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Long term (current) use of anticoagulants",
+      "Other chest pain",
+      "Other persistent atrial fibrillation",
+      "Personal history of malignant neoplasm of larynx",
+      "Personal history of malignant neoplasm of other organs and systems",
+      "Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits",
+      "Presence of unspecified artificial knee joint",
+      "Rheumatic disorders of both mitral and tricuspid valves",
+      "Supraventricular tachycardia"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.1,
+      "bun_24h": 18.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 135.0,
+      "glucose_24h": 85.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.5
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 21,
+      "subject_id": "15395961",
+      "hadm_id": "27897838",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 60,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "21/10/2174 17:20:00",
+      "dischtime": "23/10/2174 11:14:00",
+      "admission_type": "DIRECT OBSERVATION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Atypical atrial flutter",
+      "comorbidity_list": "Essential (primary) hypertension | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Long term (current) use of anticoagulants | Other chest pain | Other persistent atrial fibrillation | Personal history of malignant neoplasm of larynx | Personal history of malignant neoplasm of other organs and systems | Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits | Presence of unspecified artificial knee joint | Rheumatic disorders of both mitral and tricuspid valves | Supraventricular tachycardia",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管",
+      "drug_list": "acetaminophen | amiodarone | apixaban | captopril | lactated ringers | lorazepam | metoprolol succinate xl | metoprolol tartrate | pantoprazole | potassium chloride | pregabalin | ramelteon | simvastatin | sodium chloride 0.9% | sodium chloride 0.9%  flush | sucralfate",
+      "creatinine_24h": 1.1,
+      "bun_24h": 18.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 135.0,
+      "glucose_24h": 85.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.5
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "心血管",
+      "消化",
+      "内分泌/代谢"
+    ],
+    "lead_specialty": "心血管",
+    "specialty_related_diagnoses": {
+      "心血管": [
+        "Atypical atrial flutter",
+        "Other persistent atrial fibrillation",
+        "Supraventricular tachycardia",
+        "Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits",
+        "Rheumatic disorders of both mitral and tricuspid valves",
+        "Essential (primary) hypertension",
+        "Other chest pain"
+      ],
+      "消化": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Long term (current) use of anticoagulants"
+      ],
+      "内分泌/代谢": [
+        "Hyperlipidemia, unspecified",
+        "glucose_24h正常",
+        "sodium_24h低正常",
+        "potassium_24h高正常"
+      ]
+    },
+    "rationale": "主要问题为非典型心房扑动合并持续性房颤、室上速、既往TIA/脑梗病史和风湿性二尖瓣及三尖瓣疾病，卒中与心律失常风险高，心血管专科应主导；消化专科关注GERD及抗凝相关消化道出血风险；内分泌/代谢专科关注高脂血症及电解质、血糖安全边界。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "Warfarin",
+          "confidence": 0.82,
+          "reason": "房扑/房颤合并既往TIA提示血栓栓塞风险高；存在风湿性二尖瓣病变时，若为中重度二尖瓣狭窄或瓣膜性房颤场景，华法林通常优先于DOAC。当前INR缺失，需先基线复核并严密监测。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "Metoprolol tartrate",
+          "confidence": 0.76,
+          "reason": "适用于房扑、房颤或室上速的心室率控制，也可兼顾高血压和胸痛背景；但当前心率、血压缺失，需小剂量起始并监测低血压、心动过缓。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "Atorvastatin",
+          "confidence": 0.74,
+          "reason": "高脂血症合并既往TIA/脑梗病史，需二级预防和动脉粥样硬化风险控制；胆红素正常，暂无明显肝胆代谢高风险信号。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "Amlodipine",
+          "confidence": 0.56,
+          "reason": "可作为高血压控制备选，对肾功能和电解质影响较小；但缺少当前血压，需根据实际血压决定是否启用。"
+        }
+      ],
+      "recommendation_reasons": {
+        "stroke_prevention": "房扑/房颤合并既往TIA属于高卒中风险，应优先考虑治疗性抗凝。",
+        "rate_control": "心律失常诊断包括非典型房扑、持续性房颤和室上速，需心室率控制策略。",
+        "secondary_prevention": "高脂血症和既往脑血管事件支持使用他汀进行风险修饰。"
+      },
+      "risk_alerts": [
+        "INR缺失，抗凝启动或续用前必须复核INR、血红蛋白、血小板和出血体征。",
+        "风湿性瓣膜病严重程度未知，需超声心动图确认是否存在中重度二尖瓣狭窄，以决定华法林与DOAC的适配性。",
+        "血压和心率缺失，β受体阻滞剂或钙通道阻滞剂需监测低血压、心动过缓和传导阻滞。",
+        "钾4.8 mmol/L处于高正常范围，避免不必要补钾及谨慎叠加升钾药物。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "Empiric dual antiplatelet therapy",
+          "reason": "未见急性冠脉综合征或支架信息，且抗凝需求明确，经验性联合抗血小板会增加出血风险。"
+        },
+        {
+          "drug_name": "Amiodarone as routine first-line therapy",
+          "reason": "可用于特定节律控制场景，但在缺少心率、QT、甲状腺、肺部和肝功能完整评估时不宜作为常规首选。"
+        },
+        {
+          "drug_name": "Potassium chloride supplementation",
+          "reason": "血钾4.8 mmol/L，无低钾证据，补钾可能增加心律失常风险。"
+        },
+        {
+          "drug_name": "NSAIDs",
+          "reason": "抗凝背景下增加胃肠道出血风险，且有GERD病史。"
+        }
+      ],
+      "overall_confidence": 0.78,
+      "summary_reason": "心血管问题为本病例处方核心，优先级依次为抗凝防卒中、心室率控制、血管风险修饰和血压管理；多个关键生命体征与INR缺失降低了给出固定剂量方案的确定性。",
+      "conversation_text": "心血管智能体认为，房扑/房颤合并既往TIA使抗凝成为核心治疗。由于存在风湿性瓣膜病，应优先复核瓣膜病类型和严重程度；在未排除瓣膜性房颤前，华法林方案更稳妥。心室率控制可考虑美托洛尔，但必须依据实际心率和血压调整。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "Pantoprazole",
+          "confidence": 0.72,
+          "reason": "有GERD病史且需要抗凝治疗，PPI可用于反流症状控制，并可降低上消化道出血相关风险背景下的胃黏膜风险。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "Acetaminophen",
+          "confidence": 0.5,
+          "reason": "如有胸痛或非心源性疼痛，可作为较NSAIDs更安全的止痛选择；胆红素正常，但仍需限制总日剂量并评估肝病史。"
+        }
+      ],
+      "recommendation_reasons": {
+        "gerd_control": "GERD无食管炎诊断支持PPI或H2受体拮抗剂作为症状控制。",
+        "bleeding_risk_reduction": "长期抗凝背景下应避免NSAIDs，并关注消化道出血预警。",
+        "hepatic_status": "总胆红素0.5 mg/dL未提示胆汁淤积或显著肝胆代谢风险。"
+      },
+      "risk_alerts": [
+        "INR为NaN/缺失，无法量化当前抗凝强度和消化道出血风险。",
+        "抗凝期间需监测黑便、呕血、血红蛋白下降和腹痛。",
+        "避免NSAIDs及不必要抗血小板联合。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "Ibuprofen",
+          "reason": "抗凝背景和GERD病史下增加胃肠道出血及黏膜损伤风险。"
+        },
+        {
+          "drug_name": "Naproxen",
+          "reason": "与抗凝联用出血风险增加，不宜常规推荐。"
+        },
+        {
+          "drug_name": "High-dose systemic corticosteroids",
+          "reason": "无明确适应证且可能增加胃肠道不良反应和代谢波动。"
+        }
+      ],
+      "overall_confidence": 0.65,
+      "summary_reason": "消化专科主要支持GERD控制和抗凝相关胃肠道安全管理；胆红素正常，但INR缺失限制出血风险分层。",
+      "conversation_text": "消化智能体建议在抗凝需求明确的情况下同时管理GERD和胃肠道出血风险。PPI优先级较高，NSAIDs应避免。INR、血红蛋白和便血监测是安全审核重点。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "Atorvastatin",
+          "confidence": 0.76,
+          "reason": "高脂血症合并既往TIA/脑梗病史，支持中高强度他汀进行二级预防；当前胆红素正常，肌酐正常。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "No routine glucose-lowering medication",
+          "confidence": 0.84,
+          "reason": "glucose_24h为85 mg/dL，无高血糖或糖尿病诊断证据，不推荐经验性降糖治疗。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "No potassium supplementation",
+          "confidence": 0.8,
+          "reason": "potassium_24h为4.8 mmol/L，处于正常偏高范围，不支持补钾。"
+        }
+      ],
+      "recommendation_reasons": {
+        "lipid_management": "高脂血症及既往TIA支持他汀类风险修饰。",
+        "glucose_status": "血糖85 mg/dL处于安全范围，不触发低血糖或高血糖风险规则。",
+        "electrolyte_status": "钠135 mmol/L为低正常边界，钾4.8 mmol/L为高正常边界，用药需避免诱发水钠或血钾异常。"
+      },
+      "risk_alerts": [
+        "钠135 mmol/L位于正常下限，使用利尿剂、低渗液或快速补液策略时需复核。",
+        "钾4.8 mmol/L接近高值，ACEI/ARB、螺内酯或补钾需谨慎。",
+        "血糖正常，不应加入胰岛素、磺脲类或含糖补液作为常规治疗。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "Insulin",
+          "reason": "无高血糖证据，使用可能导致低血糖。"
+        },
+        {
+          "drug_name": "Sulfonylureas",
+          "reason": "无糖尿病或高血糖证据，低血糖风险不合理。"
+        },
+        {
+          "drug_name": "Spironolactone",
+          "reason": "无心衰或腹水证据，且血钾高正常，可能增加高钾风险。"
+        }
+      ],
+      "overall_confidence": 0.7,
+      "summary_reason": "代谢专科重点为高脂血症二级预防和避免不必要的降糖、补钾或诱发电解质异常的治疗。",
+      "conversation_text": "内分泌/代谢智能体认为，本病例没有降糖药适应证，血糖稳定。高脂血症结合既往TIA使他汀具有较高优先级。电解质处于边界正常范围，处方中应避免不必要补钾和低渗液。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "Warfarin",
+          "Metoprolol tartrate",
+          "Atorvastatin",
+          "Pantoprazole",
+          "0.9% sodium chloride flush"
+        ],
+        "cautioned_drugs": [
+          "Amlodipine",
+          "Acetaminophen",
+          "Apixaban",
+          "Diltiazem"
+        ],
+        "conflict_notes": [
+          "若风湿性二尖瓣病变达到中重度二尖瓣狭窄，应避免将DOAC作为首选抗凝。",
+          "β受体阻滞剂和非二氢吡啶钙通道阻滞剂不宜在缺少心率、血压、EF和传导状态时叠加。",
+          "抗凝与抗血小板联用缺少明确指征时不应常规加入。"
+        ],
+        "priority_comment": "优先确定抗凝策略和心室率控制；根据INR、超声心动图、心率血压再细化剂量。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "Pantoprazole",
+          "Warfarin with INR monitoring",
+          "Acetaminophen if pain requires medication"
+        ],
+        "cautioned_drugs": [
+          "NSAIDs",
+          "Dual antiplatelet therapy",
+          "High-dose acetaminophen"
+        ],
+        "conflict_notes": [
+          "抗凝治疗必要性高，但INR缺失使出血风险无法完全评估。",
+          "GERD病史支持胃酸抑制治疗，同时应监测黑便、呕血和血红蛋白。"
+        ],
+        "priority_comment": "支持心血管抗凝方案，但要求同步设置消化道出血监测和PPI保护。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "Atorvastatin",
+          "No routine insulin",
+          "No potassium supplementation"
+        ],
+        "cautioned_drugs": [
+          "Spironolactone",
+          "ACE inhibitors or ARB without potassium follow-up",
+          "Dextrose-containing maintenance fluids"
+        ],
+        "conflict_notes": [
+          "钾4.8 mmol/L不支持补钾，升钾药物需复查钾和肌酐。",
+          "钠135 mmol/L处于低正常边界，避免不必要低渗液。",
+          "血糖85 mg/dL不支持经验性降糖。"
+        ],
+        "priority_comment": "代谢层面支持他汀和电解质监测，不建议加入无适应证的降糖或补钾药。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案应以心血管为主导，核心目标为房扑/房颤相关卒中预防、心室率控制和脑血管二级预防。",
+      "因既往TIA和房扑/房颤，抗凝具有高优先级；因风湿性瓣膜病，需优先确认是否为瓣膜性房颤，未明确前华法林候选优先级高于DOAC。",
+      "INR缺失是主要安全不确定性，抗凝方案必须包含基线INR、目标INR、血红蛋白、血小板和出血监测。",
+      "GERD和抗凝背景支持PPI；避免NSAIDs及无明确指征的抗血小板联合。",
+      "当前肌酐、BUN、胆红素、血糖总体可接受；钠135和钾4.8提示补液、电解质和升钾药应谨慎。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "CP1",
+        "plan_name": "瓣膜病待确认下的华法林优先综合方案",
+        "drugs": [
+          "Warfarin",
+          "Metoprolol tartrate",
+          "Atorvastatin",
+          "Pantoprazole",
+          "Acetaminophen as needed",
+          "0.9% sodium chloride flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Warfarin：用于房扑/房颤相关卒中预防，需依据INR调整；若确认瓣膜性房颤或中重度风湿性二尖瓣狭窄则优先保留。",
+            "Metoprolol tartrate：用于心室率控制，依据心率、血压和传导状态小剂量起始。"
+          ],
+          "risk_modifying_therapy": [
+            "Atorvastatin：用于高脂血症和既往TIA/脑梗二级预防。",
+            "Amlodipine may be added after blood pressure review：若血压仍高且无低血压，可用于高血压控制。"
+          ],
+          "symptom_supportive_medication": [
+            "Pantoprazole：用于GERD症状控制及抗凝背景下胃黏膜风险管理。",
+            "Acetaminophen as needed：如有疼痛且排除急性冠脉事件，可短期使用，避免超剂量。"
+          ],
+          "nursing_support_medication": [
+            "0.9% sodium chloride flush：用于静脉通路维护。"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Therapeutic anticoagulation with Warfarin：治疗性抗凝已覆盖血栓预防需求，不额外叠加药物性VTE预防。",
+            "Pantoprazole：胃肠道风险预防性支持。"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flush：避免常规低渗液和含糖维持液，除非有明确补液适应证。"
+          ],
+          "procedure_related_medication": [
+            "No routine procedure-related medication：当前无操作信息，不推荐经验性围操作用药。"
+          ],
+          "nutrition_electrolyte_medication": [
+            "No potassium supplementation：钾4.8 mmol/L，不补钾。",
+            "No routine dextrose fluids：血糖85 mg/dL，无低血糖证据。"
+          ],
+          "requires_review": [
+            "Baseline INR and target INR before and during Warfarin therapy",
+            "CBC including hemoglobin and platelet count",
+            "Echocardiography for rheumatic mitral/tricuspid valve severity",
+            "Heart rate and blood pressure before rate-control dosing",
+            "Renal function and electrolytes after cardiovascular medication changes",
+            "Bleeding symptoms including melena, hematemesis and hematuria"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "消化",
+          "内分泌/代谢"
+        ],
+        "rationale": "兼顾房扑/房颤卒中预防、风湿性瓣膜病不确定性、GERD和抗凝出血风险，以及高脂血症二级预防。由于INR缺失和生命体征缺失，方案强调复核与监测。",
+        "aggregate_score": 0.83
+      },
+      {
+        "plan_id": "CP2",
+        "plan_name": "非瓣膜性房颤确认后的DOAC替代方案",
+        "drugs": [
+          "Apixaban",
+          "Metoprolol tartrate",
+          "Atorvastatin",
+          "Pantoprazole",
+          "Acetaminophen as needed",
+          "0.9% sodium chloride flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Apixaban：仅在确认非瓣膜性房颤且无中重度风湿性二尖瓣狭窄时作为抗凝替代选择。",
+            "Metoprolol tartrate：用于心室率控制，需生命体征支持。"
+          ],
+          "risk_modifying_therapy": [
+            "Atorvastatin：用于高脂血症和TIA二级预防。"
+          ],
+          "symptom_supportive_medication": [
+            "Pantoprazole：GERD和胃肠道风险支持。",
+            "Acetaminophen as needed：避免NSAIDs。"
+          ],
+          "nursing_support_medication": [
+            "0.9% sodium chloride flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Therapeutic anticoagulation with Apixaban：如适用，不叠加常规肝素预防。"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flush"
+          ],
+          "procedure_related_medication": [
+            "No routine procedure-related medication"
+          ],
+          "nutrition_electrolyte_medication": [
+            "No potassium supplementation",
+            "No routine insulin or sulfonylurea"
+          ],
+          "requires_review": [
+            "Echocardiography to exclude moderate-to-severe rheumatic mitral stenosis",
+            "Renal function for DOAC dosing",
+            "Bleeding risk assessment",
+            "Medication reconciliation for interacting drugs"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "消化",
+          "内分泌/代谢"
+        ],
+        "rationale": "若确认非瓣膜性房颤，DOAC可减少INR管理负担；但本病例存在风湿性瓣膜病诊断，必须先确认适应性。",
+        "aggregate_score": 0.68
+      },
+      {
+        "plan_id": "CP3",
+        "plan_name": "生命体征不明时的低强度观察与复核方案",
+        "drugs": [
+          "Warfarin after INR review",
+          "Atorvastatin",
+          "Pantoprazole",
+          "0.9% sodium chloride flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Warfarin after INR review：待INR和出血风险复核后启动或续用。",
+            "Rate-control medication deferred until heart rate and blood pressure available：暂不经验性给予美托洛尔或地尔硫卓。"
+          ],
+          "risk_modifying_therapy": [
+            "Atorvastatin：继续风险修饰。"
+          ],
+          "symptom_supportive_medication": [
+            "Pantoprazole：GERD支持。"
+          ],
+          "nursing_support_medication": [
+            "0.9% sodium chloride flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Anticoagulation plan pending INR review：若暂缓抗凝，需机械性VTE预防由护理医嘱评估。"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flush only"
+          ],
+          "procedure_related_medication": [
+            "No routine procedure-related medication"
+          ],
+          "nutrition_electrolyte_medication": [
+            "No potassium supplementation",
+            "No routine dextrose fluids"
+          ],
+          "requires_review": [
+            "Immediate vital signs",
+            "Telemetry or ECG",
+            "INR, CBC and renal function",
+            "Echocardiography",
+            "Chest pain evaluation if active symptoms persist"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "消化",
+          "内分泌/代谢"
+        ],
+        "rationale": "适用于生命体征和INR无法立即获得时的过渡方案，可降低心动过缓、低血压和出血不确定性，但对心律失常直接控制不足。",
+        "aggregate_score": 0.61
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "CP1",
+      "plan_name": "瓣膜病待确认下的华法林优先综合方案",
+      "drugs": [
+        "Warfarin",
+        "Metoprolol tartrate",
+        "Atorvastatin",
+        "Pantoprazole",
+        "Acetaminophen as needed",
+        "0.9% sodium chloride flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Warfarin",
+          "Metoprolol tartrate"
+        ],
+        "risk_modifying_therapy": [
+          "Atorvastatin",
+          "Amlodipine only if hypertension confirmed by current blood pressure"
+        ],
+        "symptom_supportive_medication": [
+          "Pantoprazole",
+          "Acetaminophen as needed"
+        ],
+        "nursing_support_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Therapeutic anticoagulation with Warfarin",
+          "No additional pharmacologic VTE prophylaxis while therapeutically anticoagulated"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "procedure_related_medication": [
+          "None without procedure indication"
+        ],
+        "nutrition_electrolyte_medication": [
+          "No potassium supplementation",
+          "No routine dextrose-containing maintenance fluid"
+        ],
+        "requires_review": [
+          "INR",
+          "CBC",
+          "ECG or telemetry",
+          "heart rate and blood pressure",
+          "echocardiography",
+          "renal function and electrolytes"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "消化",
+        "内分泌/代谢"
+      ],
+      "rationale": "作为首选候选方案，最符合房扑/房颤合并既往TIA及风湿性瓣膜病不确定性的风险结构，并覆盖GERD、高脂血症、通路维护和电解质安全。",
+      "aggregate_score": 0.83
+    },
+    {
+      "plan_id": "CP2",
+      "plan_name": "非瓣膜性房颤确认后的DOAC替代方案",
+      "drugs": [
+        "Apixaban",
+        "Metoprolol tartrate",
+        "Atorvastatin",
+        "Pantoprazole",
+        "Acetaminophen as needed",
+        "0.9% sodium chloride flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Apixaban only if non-valvular atrial fibrillation/flutter confirmed",
+          "Metoprolol tartrate"
+        ],
+        "risk_modifying_therapy": [
+          "Atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "Pantoprazole",
+          "Acetaminophen as needed"
+        ],
+        "nursing_support_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Therapeutic anticoagulation with Apixaban"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "procedure_related_medication": [
+          "None without procedure indication"
+        ],
+        "nutrition_electrolyte_medication": [
+          "No potassium supplementation",
+          "No routine insulin"
+        ],
+        "requires_review": [
+          "exclude moderate-to-severe rheumatic mitral stenosis",
+          "renal dosing",
+          "bleeding risk",
+          "drug interactions"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "消化",
+        "内分泌/代谢"
+      ],
+      "rationale": "仅在瓣膜性房颤风险被排除后适用，便利性较高但当前病例条件尚不足。",
+      "aggregate_score": 0.68
+    },
+    {
+      "plan_id": "CP3",
+      "plan_name": "生命体征不明时的低强度观察与复核方案",
+      "drugs": [
+        "Warfarin after INR review",
+        "Atorvastatin",
+        "Pantoprazole",
+        "0.9% sodium chloride flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Warfarin after INR review",
+          "Rate-control drug deferred pending vitals"
+        ],
+        "risk_modifying_therapy": [
+          "Atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "Pantoprazole"
+        ],
+        "nursing_support_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Anticoagulation pending INR review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flush"
+        ],
+        "procedure_related_medication": [
+          "None"
+        ],
+        "nutrition_electrolyte_medication": [
+          "No potassium supplementation",
+          "No glucose-lowering medication"
+        ],
+        "requires_review": [
+          "vital signs",
+          "ECG",
+          "INR",
+          "CBC",
+          "echocardiography"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "消化",
+        "内分泌/代谢"
+      ],
+      "rationale": "安全保守但治疗充分性较弱，适用于关键监测数据暂缺时的桥接。",
+      "aggregate_score": 0.61
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "CP1",
+      "plan_name": "瓣膜病待确认下的华法林优先综合方案",
+      "drugs": [
+        "Warfarin",
+        "Metoprolol tartrate",
+        "Atorvastatin",
+        "Pantoprazole",
+        "Acetaminophen as needed",
+        "0.9% sodium chloride flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Warfarin：抗凝防卒中；需基线INR后启动或调整，目标范围由临床团队根据适应证确定。",
+          "Metoprolol tartrate：心室率控制；仅在心率、血压允许且无明显传导阻滞时使用。"
+        ],
+        "risk_modifying_therapy": [
+          "Atorvastatin：高脂血症和既往TIA/脑梗二级预防。",
+          "Antihypertensive therapy review：高血压诊断存在，但当前血压缺失，需复核后决定是否加入氨氯地平或其他降压药。"
+        ],
+        "symptom_supportive_medication": [
+          "Pantoprazole：GERD和胃肠道风险支持。",
+          "Acetaminophen as needed：疼痛支持，避免NSAIDs，注意总日剂量和肝功能。"
+        ],
+        "nursing_support_medication": [
+          "0.9% sodium chloride flush：静脉通路维护。"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Therapeutic anticoagulation with Warfarin：不与常规肝素预防重复。",
+          "PPI gastroprotection with Pantoprazole：抗凝和GERD背景下的胃肠道支持。"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flush：避免无适应证低渗液、含糖维持液或补钾液。"
+        ],
+        "procedure_related_medication": [
+          "No empiric procedure-related medication：无操作信息不加入围操作抗菌药、镇静药或造影相关药。"
+        ],
+        "nutrition_electrolyte_medication": [
+          "No potassium supplementation：血钾4.8 mmol/L。",
+          "No routine insulin or sulfonylurea：血糖85 mg/dL。",
+          "Monitor sodium：钠135 mmol/L，避免快速纠正或诱发低钠。"
+        ],
+        "requires_review": [
+          "INR缺失：抗凝前后必须复核，并监测血红蛋白、血小板和出血体征。",
+          "超声心动图：确认风湿性二尖瓣和三尖瓣病变程度，决定华法林与DOAC适配性。",
+          "心率和血压缺失：美托洛尔给药前必须获取并持续监测。",
+          "ECG或遥测：评估房扑/房颤、室上速、传导阻滞和QT风险。",
+          "肌酐、电解质复查：尤其血钾和血钠。",
+          "胸痛若仍存在：需排除急性冠脉综合征后再将止痛作为单纯支持治疗。"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "消化",
+        "内分泌/代谢"
+      ],
+      "rationale": "CP1在卒中预防、心律控制、GERD保护、二级预防和电解质安全之间平衡最佳；关键风险点通过INR、生命体征、超声心动图和出血监测进行约束。",
+      "aggregate_score": 0.83
+    },
+    "ranked_plans": [
+      {
+        "rank": 1,
+        "plan_id": "CP1",
+        "score": 0.83,
+        "reason": "最符合风湿性瓣膜病不确定性和房扑/房颤合并TIA的高卒中风险，同时包含胃肠保护和代谢安全约束。"
+      },
+      {
+        "rank": 2,
+        "plan_id": "CP2",
+        "score": 0.68,
+        "reason": "若确认非瓣膜性房颤可考虑，但当前风湿性瓣膜病信息不足，DOAC不宜优先。"
+      },
+      {
+        "rank": 3,
+        "plan_id": "CP3",
+        "score": 0.61,
+        "reason": "安全保守但可能延迟心律失常治疗，仅适合作为数据缺失时的临时桥接。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_inr_anticoagulation_risk",
+        "severity": "high",
+        "description": "INR缺失且存在长期抗凝相关诊断，抗凝强度和出血风险无法直接判断。",
+        "action": "复核INR、CBC、血小板、肝功能和出血体征后再调整抗凝。"
+      },
+      {
+        "risk_id": "rheumatic_valve_anticoagulant_selection_risk",
+        "severity": "high",
+        "description": "风湿性二尖瓣/三尖瓣疾病可能影响抗凝药选择。",
+        "action": "超声心动图确认瓣膜病严重程度；未排除中重度风湿性二尖瓣狭窄前优先华法林而非DOAC。"
+      },
+      {
+        "risk_id": "missing_vitals_rate_control_risk",
+        "severity": "moderate",
+        "description": "心率和血压缺失，无法评估美托洛尔或其他控率药导致低血压、心动过缓风险。",
+        "action": "给药前获取生命体征、ECG或遥测，低剂量起始并监测。"
+      },
+      {
+        "risk_id": "potassium_high_normal_arrhythmia_context",
+        "severity": "moderate",
+        "description": "血钾4.8 mmol/L为高正常，心律失常背景下应避免补钾和不必要升钾药。",
+        "action": "避免补钾，复查电解质和肾功能。"
+      },
+      {
+        "risk_id": "sodium_low_normal_fluid_context",
+        "severity": "low",
+        "description": "血钠135 mmol/L处于低正常边界。",
+        "action": "避免无适应证低渗液，监测血钠变化。"
+      },
+      {
+        "risk_id": "gi_bleeding_context",
+        "severity": "moderate",
+        "description": "GERD和抗凝背景增加胃肠道安全关注。",
+        "action": "使用PPI支持，避免NSAIDs，监测黑便、呕血和血红蛋白。"
+      }
+    ],
+    "safety_summary": "最终推荐CP1。该方案不声称存在当前真实处方，而是基于诊断、共病和检验信息生成。安全审核认为抗凝是核心但INR缺失和风湿性瓣膜病严重程度未知是最高优先级复核项；控率治疗需生命体征支持；避免NSAIDs、补钾、经验性降糖、无指征双抗和无指征低渗或含糖补液。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由",
+      "message": "识别主诊断为非典型心房扑动，并结合持续性房颤、室上速、既往TIA、风湿性瓣膜病和高血压，将心血管设为主导专科。"
+    },
+    {
+      "step": 2,
+      "agent": "心血管专科",
+      "message": "提出抗凝防卒中、心室率控制和他汀二级预防为核心；因风湿性瓣膜病和INR缺失，倾向华法林优先并要求复核。"
+    },
+    {
+      "step": 3,
+      "agent": "消化专科",
+      "message": "提出GERD和抗凝相关胃肠道出血风险管理，支持PPI，反对NSAIDs和无指征抗血小板叠加。"
+    },
+    {
+      "step": 4,
+      "agent": "内分泌/代谢专科",
+      "message": "确认血糖正常不推荐降糖药，钾高正常不推荐补钾，支持他汀用于高脂血症和脑血管二级预防。"
+    },
+    {
+      "step": 5,
+      "agent": "MDT协商",
+      "message": "形成三个候选方案：华法林优先综合方案、非瓣膜性房颤确认后的DOAC方案、以及数据缺失时的低强度复核方案。"
+    },
+    {
+      "step": 6,
+      "agent": "安全审核",
+      "message": "将CP1列为最终方案，同时触发INR缺失、瓣膜病抗凝选择、生命体征缺失、钾高正常和消化道出血风险提示。"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

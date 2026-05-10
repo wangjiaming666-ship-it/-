@@ -1,0 +1,831 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "12120702",
+      "hadm_id": "29010738",
+      "gender": "M",
+      "age": 64.0
+    },
+    "primary_diagnosis": "Other specified complication of other internal prosthetic devices, implants and grafts, initial encounter",
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Other specified complication of other internal prosthetic devices, implants and grafts, initial encounter",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+        "Presence of right artificial knee joint"
+      ],
+      "神经": [
+        "Essential (primary) hypertension",
+        "Personal history of malignant neoplasm of other urinary tract organ",
+        "Unspecified place or not applicable"
+      ],
+      "消化": [
+        "Gastrojejunal ulcer, unspecified as acute or chronic, without hemorrhage or perforation",
+        "Polyneuropathy, unspecified"
+      ],
+      "心血管": [
+        "Hyperlipidemia, unspecified",
+        "Postprocedural hypothyroidism"
+      ]
+    },
+    "comorbidity_list": [
+      "Essential (primary) hypertension",
+      "Gastrojejunal ulcer, unspecified as acute or chronic, without hemorrhage or perforation",
+      "Hyperlipidemia, unspecified",
+      "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "Personal history of malignant neoplasm of other urinary tract organ",
+      "Polyneuropathy, unspecified",
+      "Postprocedural hypothyroidism",
+      "Presence of right artificial knee joint",
+      "Unspecified place or not applicable"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.1,
+      "bun_24h": 16.0,
+      "potassium_24h": 3.7,
+      "sodium_24h": 145.0,
+      "glucose_24h": 84.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 9,
+      "subject_id": "12120702",
+      "hadm_id": "29010738",
+      "specialty_cnt": 4,
+      "specialty_list": "内分泌/代谢 | 神经 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 64,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "17/6/2129 20:50:00",
+      "dischtime": "19/6/2129 18:37:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Other specified complication of other internal prosthetic devices, implants and grafts, initial encounter",
+      "comorbidity_list": "Essential (primary) hypertension | Gastrojejunal ulcer, unspecified as acute or chronic, without hemorrhage or perforation | Hyperlipidemia, unspecified | Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure | Personal history of malignant neoplasm of other urinary tract organ | Polyneuropathy, unspecified | Postprocedural hypothyroidism | Presence of right artificial knee joint | Unspecified place or not applicable",
+      "specialty_agents": "内分泌/代谢 | 神经 | 消化 | 心血管",
+      "drug_list": "acetaminophen iv | esomeprazole sodium | gastroview (diatrizoate meglumine & sodium) | heparin | hydralazine | hydromorphone (dilaudid) | lactated ringers | levothyroxine sodium | ondansetron | prochlorperazine | sodium chloride 0.9%  flush | sucralfate",
+      "creatinine_24h": 1.1,
+      "bun_24h": 16.0,
+      "potassium_24h": 3.7,
+      "sodium_24h": 145.0,
+      "glucose_24h": 84.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "消化",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Other specified complication of other internal prosthetic devices, implants and grafts, initial encounter",
+        "Presence of right artificial knee joint",
+        "Postprocedural hypothyroidism"
+      ],
+      "神经": [
+        "Polyneuropathy, unspecified"
+      ],
+      "消化": [
+        "Gastrojejunal ulcer, unspecified as acute or chronic, without hemorrhage or perforation"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified"
+      ]
+    },
+    "rationale": "病例核心为人工膝关节或其他内置假体相关并发症，同时存在甲状腺术后甲减、周围神经病变、胃空肠溃疡、高血压和高脂血症。缺少生命体征、感染指标、影像、手术计划和微生物资料，因此以并发症支持治疗、慢病延续治疗、胃肠保护和围操作风险控制为主。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levothyroxine",
+          "confidence": 0.78,
+          "reason": "存在术后甲状腺功能减退，若既往正在使用或TSH/FT4支持，应延续或调整甲状腺素替代治疗。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "acetaminophen",
+          "confidence": 0.7,
+          "reason": "假体相关并发症可能伴疼痛，且胃空肠溃疡背景下较NSAIDs更适合作为基础镇痛。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "normal saline flush",
+          "confidence": 0.62,
+          "reason": "住院观察及可能围操作评估期间需要静脉通路维护，当前钠145 mmol/L为高正常，应避免不必要大量含钠补液。"
+        }
+      ],
+      "recommendation_reasons": {
+        "thyroid": "术后甲减属于明确慢病用药适应证，但需复核TSH、FT4和既往剂量。",
+        "metabolic_safety": "血糖84 mg/dL、钾3.7 mmol/L、肌酐1.1 mg/dL未触发高代谢或肾功能禁忌。",
+        "fluid": "血钠145 mmol/L接近上限，应避免经验性大量补液。"
+      },
+      "risk_alerts": [
+        "缺少TSH/FT4，levothyroxine剂量需要人工复核。",
+        "血钠145 mmol/L处于参考上限，避免快速或过量含钠液体。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "systemic corticosteroids",
+          "reason": "无明确适应证，可能增加感染、血糖波动和溃疡风险。"
+        },
+        {
+          "drug_name": "metformin",
+          "reason": "无糖尿病诊断且血糖正常，不应经验性使用。"
+        }
+      ],
+      "overall_confidence": 0.68,
+      "summary_reason": "内分泌重点是术后甲减替代治疗复核和基础代谢安全监测，当前检验未提示需强化降糖、补钾或肾功能限制。",
+      "conversation_text": "内分泌/代谢智能体认为可将levothyroxine列入需复核后延续的疾病直接治疗，同时支持基础镇痛和谨慎补液。"
+    },
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "gabapentin",
+          "confidence": 0.58,
+          "reason": "存在周围神经病变，可用于神经病理性疼痛；肌酐1.1、BUN16未提示明显蓄积风险，但仍需根据症状和肾功能调整。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "acetaminophen",
+          "confidence": 0.64,
+          "reason": "可作为非镇静基础镇痛，避免加重意识和呼吸抑制风险。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "lidocaine topical patch",
+          "confidence": 0.45,
+          "reason": "若疼痛局限且皮肤完整，可减少全身镇静药负担。"
+        }
+      ],
+      "recommendation_reasons": {
+        "neuropathy": "周围神经病变支持神经病理性疼痛评估后使用gabapentin或局部镇痛。",
+        "sedation": "BUN正常，但老年住院患者仍需避免阿片和苯二氮卓叠加。",
+        "bleeding": "INR1.0未提示神经系统出血高风险。"
+      },
+      "risk_alerts": [
+        "缺少意识状态、疼痛评分和呼吸频率，镇静类药物需低剂量起始并监测。",
+        "gabapentin可能导致嗜睡、头晕和跌倒风险。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "无明确适应证，增加谵妄、跌倒和呼吸抑制风险。"
+        },
+        {
+          "drug_name": "high-dose opioids",
+          "reason": "缺少疼痛评分和呼吸监测资料，不宜优先推荐。"
+        }
+      ],
+      "overall_confidence": 0.56,
+      "summary_reason": "神经专科支持以非镇静镇痛为主，神经病理痛药物仅在症状明确时低剂量使用。",
+      "conversation_text": "神经智能体建议将gabapentin放入需复核或症状支持层，避免镇静药叠加。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.82,
+          "reason": "存在胃空肠溃疡，且可能需要镇痛、抗栓预防或围操作治疗，PPI可降低上消化道风险。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "acetaminophen",
+          "confidence": 0.72,
+          "reason": "胃空肠溃疡背景下优先于NSAIDs用于疼痛控制。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.4,
+          "reason": "若活动减少或需镇痛药，可作为便秘预防或治疗；无便秘资料时为低优先级。"
+        }
+      ],
+      "recommendation_reasons": {
+        "ulcer": "胃空肠溃疡是明确胃肠保护适应证。",
+        "bleeding": "INR1.0未提示凝血异常，但溃疡史使NSAIDs和强化抗栓需谨慎。",
+        "hepatic": "总胆红素缺失，肝胆代谢风险无法完整评估。"
+      },
+      "risk_alerts": [
+        "总胆红素缺失，需补充肝功能后再使用高肝毒性药物。",
+        "避免NSAIDs，尤其在溃疡未评估活动性出血时。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "ibuprofen",
+          "reason": "胃空肠溃疡背景下增加消化道出血和溃疡加重风险。"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "强NSAID镇痛药，消化道出血风险较高。"
+        }
+      ],
+      "overall_confidence": 0.75,
+      "summary_reason": "消化专科明确支持PPI胃保护，并要求镇痛和抗栓策略避开高胃肠出血风险药物。",
+      "conversation_text": "消化智能体建议pantoprazole作为核心支持药物，并将NSAIDs列为避免。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "amlodipine",
+          "confidence": 0.58,
+          "reason": "有原发性高血压，缺少当前血压；若入院血压升高或既往使用，可作为相对肾功能友好的降压选择。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "atorvastatin",
+          "confidence": 0.72,
+          "reason": "存在高脂血症，适合延续或启动中等强度他汀，需复核肝功能和既往耐受性。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "enoxaparin",
+          "confidence": 0.5,
+          "reason": "人工膝关节相关住院观察若活动受限或围操作后可考虑VTE预防；INR1.0和肌酐1.1支持常规风险下可用，但溃疡史需审核出血风险。"
+        }
+      ],
+      "recommendation_reasons": {
+        "hypertension": "高血压诊断明确，但生命体征缺失，降压药需以实际血压和既往方案为准。",
+        "lipid": "高脂血症支持他汀治疗。",
+        "vte": "人工关节相关住院和可能活动受限提示VTE预防需求，但需结合手术计划和出血风险。"
+      },
+      "risk_alerts": [
+        "缺少血压、心率，不能盲目强化降压。",
+        "胃空肠溃疡使抗凝预防需确认无活动性出血。",
+        "钾3.7 mmol/L正常，使用影响钾的药物仍需复查电解质。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "dual antiplatelet therapy",
+          "reason": "无急性冠脉综合征、支架或卒中适应证，且溃疡史增加出血风险。"
+        },
+        {
+          "drug_name": "spironolactone",
+          "reason": "无心衰或醛固酮相关适应证，且需监测血钾。"
+        }
+      ],
+      "overall_confidence": 0.61,
+      "summary_reason": "心血管重点为高血压、高脂血症延续管理和有条件的VTE预防，因生命体征缺失需保守排序。",
+      "conversation_text": "心血管智能体支持atorvastatin和复核后降压治疗，对enoxaparin提出出血风险前置审核。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "levothyroxine",
+          "acetaminophen",
+          "pantoprazole",
+          "atorvastatin"
+        ],
+        "cautioned_drugs": [
+          "normal saline",
+          "systemic corticosteroids",
+          "enoxaparin"
+        ],
+        "conflict_notes": [
+          "血钠145 mmol/L使大量含钠补液不宜作为默认方案。",
+          "levothyroxine需要TSH/FT4或既往剂量确认。"
+        ],
+        "priority_comment": "优先延续明确慢病治疗和安全镇痛，避免无适应证代谢干预。"
+      },
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "acetaminophen",
+          "gabapentin",
+          "lidocaine topical patch"
+        ],
+        "cautioned_drugs": [
+          "opioids",
+          "benzodiazepines"
+        ],
+        "conflict_notes": [
+          "gabapentin可用于神经病理痛，但缺少症状评分，建议置于症状触发层。",
+          "镇静药与年龄和跌倒风险冲突。"
+        ],
+        "priority_comment": "疼痛管理以非镇静和局部治疗优先。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "acetaminophen"
+        ],
+        "cautioned_drugs": [
+          "enoxaparin",
+          "aspirin",
+          "NSAIDs"
+        ],
+        "conflict_notes": [
+          "溃疡病史使NSAIDs应避免。",
+          "若需药物性VTE预防，应确认无黑便、呕血、血红蛋白下降或活动性溃疡出血。"
+        ],
+        "priority_comment": "PPI胃保护应纳入基础方案。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "atorvastatin",
+          "amlodipine",
+          "enoxaparin"
+        ],
+        "cautioned_drugs": [
+          "dual antiplatelet therapy",
+          "ACE inhibitor",
+          "ARB",
+          "diuretics"
+        ],
+        "conflict_notes": [
+          "缺少血压和容量状态，降压药应按实测生命体征调整。",
+          "enoxaparin仅在活动受限或围手术VTE风险高且无出血风险时使用。"
+        ],
+        "priority_comment": "慢病心血管药物可延续，抗栓预防需风险分层。"
+      }
+    ],
+    "consensus_notes": [
+      "未提供当前真实处方，所有推荐仅基于诊断、共病、检验和专科规则生成。",
+      "核心共识为pantoprazole胃保护、acetaminophen基础镇痛、atorvastatin高脂血症管理、levothyroxine甲减复核后延续。",
+      "人工膝关节或假体并发症需要补充感染评估、影像、伤口情况、手术计划和微生物培养；经验性抗菌药不作为无条件最终用药。",
+      "enoxaparin可作为活动受限或围操作VTE预防候选，但胃空肠溃疡要求先排除活动性出血。",
+      "避免NSAIDs、无适应证激素、强化抗栓和多重镇静药。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "保守观察与慢病延续优先方案",
+        "drugs": [
+          "pantoprazole",
+          "acetaminophen",
+          "atorvastatin",
+          "levothyroxine",
+          "amlodipine",
+          "gabapentin",
+          "normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "atorvastatin",
+            "amlodipine"
+          ],
+          "risk_modifying_therapy": [
+            "pantoprazole"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "gabapentin"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "levothyroxine dose after TSH/FT4 review",
+            "amlodipine only if blood pressure supports treatment",
+            "gabapentin only if neuropathic pain symptoms are present"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "神经",
+          "消化",
+          "心血管"
+        ],
+        "rationale": "适用于无明确感染、无手术当日计划、无活动性出血资料时的住院观察基础方案，覆盖溃疡保护、疼痛控制、甲减、高脂血症和高血压复核管理。",
+        "aggregate_score": 0.78
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "活动受限或围操作VTE预防增强方案",
+        "drugs": [
+          "pantoprazole",
+          "acetaminophen",
+          "atorvastatin",
+          "levothyroxine",
+          "amlodipine",
+          "enoxaparin",
+          "normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "atorvastatin",
+            "amlodipine"
+          ],
+          "risk_modifying_therapy": [
+            "pantoprazole"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "enoxaparin"
+          ],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "enoxaparin after bleeding risk and mobility assessment",
+            "amlodipine after blood pressure review",
+            "levothyroxine dose after thyroid function review"
+          ]
+        },
+        "supporting_specialties": [
+          "消化",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "适用于人工关节相关住院、活动受限或围操作后VTE风险较高且无活动性胃肠出血时；PPI用于降低胃肠风险。",
+        "aggregate_score": 0.69
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "疑似假体感染待培养评估方案",
+        "drugs": [
+          "pantoprazole",
+          "acetaminophen",
+          "atorvastatin",
+          "levothyroxine",
+          "vancomycin",
+          "cefazolin",
+          "normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "atorvastatin"
+          ],
+          "risk_modifying_therapy": [
+            "pantoprazole"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "vancomycin",
+            "cefazolin"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "vancomycin only after infection suspicion, cultures, renal dosing and antimicrobial stewardship review",
+            "cefazolin only for perioperative prophylaxis or culture-directed susceptible organisms",
+            "levothyroxine dose after thyroid function review"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化",
+          "心血管"
+        ],
+        "rationale": "仅适用于存在发热、伤口感染、关节液异常、影像或手术证据支持假体感染时；当前输入缺少感染证据，因此抗菌药不能作为默认最终处方。",
+        "aggregate_score": 0.46
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "保守观察与慢病延续优先方案",
+      "drugs": [
+        "pantoprazole",
+        "acetaminophen",
+        "atorvastatin",
+        "levothyroxine",
+        "amlodipine",
+        "gabapentin",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "risk_modifying_therapy": [
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "gabapentin"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "levothyroxine dose after TSH/FT4 review",
+          "amlodipine only if blood pressure supports treatment",
+          "gabapentin only if neuropathic pain symptoms are present"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "神经",
+        "消化",
+        "心血管"
+      ],
+      "rationale": "在感染和手术证据不足的情况下，优先选择胃保护、基础镇痛、慢病延续和用药风险最低的组合。",
+      "aggregate_score": 0.78
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "活动受限或围操作VTE预防增强方案",
+      "drugs": [
+        "pantoprazole",
+        "acetaminophen",
+        "atorvastatin",
+        "levothyroxine",
+        "amlodipine",
+        "enoxaparin",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "risk_modifying_therapy": [
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "enoxaparin"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "enoxaparin after bleeding risk and mobility assessment",
+          "amlodipine after blood pressure review",
+          "levothyroxine dose after thyroid function review"
+        ]
+      },
+      "supporting_specialties": [
+        "消化",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "若活动受限或围操作后VTE风险增加，可加入药物预防，但必须先审核溃疡出血风险。",
+      "aggregate_score": 0.69
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "疑似假体感染待培养评估方案",
+      "drugs": [
+        "pantoprazole",
+        "acetaminophen",
+        "atorvastatin",
+        "levothyroxine",
+        "vancomycin",
+        "cefazolin",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "atorvastatin"
+        ],
+        "risk_modifying_therapy": [
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "vancomycin",
+          "cefazolin"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "vancomycin only after infection evidence, cultures and renal dosing review",
+          "cefazolin only for perioperative prophylaxis or culture-directed therapy",
+          "levothyroxine dose after thyroid function review"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化",
+        "心血管"
+      ],
+      "rationale": "假体感染证据不足，抗菌药只能作为条件性候选，不进入默认最终方案。",
+      "aggregate_score": 0.46
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "保守观察与慢病延续优先方案",
+      "drugs": [
+        "pantoprazole",
+        "acetaminophen",
+        "atorvastatin",
+        "levothyroxine",
+        "amlodipine",
+        "gabapentin",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "risk_modifying_therapy": [
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "gabapentin"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "levothyroxine dose after TSH/FT4 review",
+          "amlodipine only if blood pressure supports treatment",
+          "gabapentin only if neuropathic pain symptoms are present",
+          "confirm no active GI bleeding before any anticoagulant or NSAID exposure",
+          "evaluate prosthetic joint complication with exam, imaging, inflammatory markers and cultures if infection suspected"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "神经",
+        "消化",
+        "心血管"
+      ],
+      "rationale": "该方案在缺少生命体征、感染证据和手术计划时安全边际最高，覆盖明确共病与常见住院支持需求，同时将高不确定性药物放入复核层。",
+      "aggregate_score": 0.78
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "score": 0.78,
+        "safety_comment": "最佳默认方案；避免NSAIDs、经验性抗菌药和无条件抗凝。"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "score": 0.69,
+        "safety_comment": "仅在VTE风险明确且无活动性消化道出血时升级。"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "score": 0.46,
+        "safety_comment": "抗菌药证据不足，需感染证据、培养和药学审核后使用。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "endocrinology_sodium_endocrine_risk",
+        "severity": "borderline_moderate",
+        "evidence": "sodium_24h=145.0 mmol/L",
+        "action": "避免不必要大量含钠补液，复查血钠和容量状态。"
+      },
+      {
+        "risk_id": "gastroenterology_ulcer_medication_risk",
+        "severity": "moderate",
+        "evidence": "Gastrojejunal ulcer diagnosis",
+        "action": "推荐PPI，避免NSAIDs，抗凝前确认无活动性出血。"
+      },
+      {
+        "risk_id": "missing_vital_signs_and_procedure_context",
+        "severity": "moderate",
+        "evidence": "缺少血压、心率、体温、疼痛评分、手术计划和感染资料",
+        "action": "降压、抗菌、抗凝和镇静药均需临床复核后执行。"
+      }
+    ],
+    "safety_summary": "最终选择plan_A。当前肌酐1.1、BUN16、钾3.7、血糖84、INR1.0未触发高肾功能、高钾、低血糖或凝血高风险；主要安全限制来自胃空肠溃疡、血钠高正常以及生命体征和感染资料缺失。最终处方不声称使用或参考当前真实处方，且所有条件性药物均标记为需复核。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由智能体",
+      "text": "识别人工膝关节或内置假体并发症为住院主问题，同时纳入甲减、周围神经病变、胃空肠溃疡、高血压和高脂血症。"
+    },
+    {
+      "step": 2,
+      "agent": "内分泌/代谢智能体",
+      "text": "建议复核后延续levothyroxine，当前血糖、钾、肌酐未触发强化代谢干预。"
+    },
+    {
+      "step": 3,
+      "agent": "神经智能体",
+      "text": "建议基础镇痛优先，gabapentin仅在神经病理痛明确时低剂量使用。"
+    },
+    {
+      "step": 4,
+      "agent": "消化智能体",
+      "text": "因胃空肠溃疡推荐pantoprazole，避免NSAIDs并谨慎抗凝。"
+    },
+    {
+      "step": 5,
+      "agent": "心血管智能体",
+      "text": "支持atorvastatin和血压复核后的amlodipine；enoxaparin仅在VTE风险明确且无出血时使用。"
+    },
+    {
+      "step": 6,
+      "agent": "MDT协商智能体",
+      "text": "形成三个候选方案，默认选择保守观察与慢病延续优先方案。"
+    },
+    {
+      "step": 7,
+      "agent": "安全审核智能体",
+      "text": "审核后确认plan_A安全边际最高，抗菌药、抗凝和降压强化均需额外临床资料支持。"
+    },
+    {
+      "step": 8,
+      "agent": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

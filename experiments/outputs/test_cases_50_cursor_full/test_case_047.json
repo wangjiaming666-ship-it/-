@@ -1,0 +1,806 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "17858629",
+      "hadm_id": "25140250",
+      "gender": "M",
+      "age": 65.0
+    },
+    "primary_diagnosis": "Aneurysm of artery of lower extremity",
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Aneurysm of artery of lower extremity",
+        "Embolism and thrombosis of arteries of the lower extremities",
+        "Obesity, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Body mass index [BMI] 25.0-25.9, adult",
+        "Essential (primary) hypertension",
+        "Paroxysmal atrial fibrillation",
+        "Pure hypercholesterolemia, unspecified"
+      ]
+    },
+    "comorbidity_list": [
+      "Body mass index [BMI] 25.0-25.9, adult",
+      "Embolism and thrombosis of arteries of the lower extremities",
+      "Essential (primary) hypertension",
+      "Obesity, unspecified",
+      "Paroxysmal atrial fibrillation",
+      "Personal history of nicotine dependence",
+      "Pure hypercholesterolemia, unspecified"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 47,
+      "subject_id": "17858629",
+      "hadm_id": "25140250",
+      "specialty_cnt": 2,
+      "specialty_list": "内分泌/代谢 | 心血管",
+      "gender": "M",
+      "anchor_age": 65,
+      "anchor_year_group": "2011 - 2013",
+      "admittime": "11/9/2120 03:47:00",
+      "dischtime": "13/9/2120 11:00:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Aneurysm of artery of lower extremity",
+      "comorbidity_list": "Body mass index [BMI] 25.0-25.9, adult | Embolism and thrombosis of arteries of the lower extremities | Essential (primary) hypertension | Obesity, unspecified | Paroxysmal atrial fibrillation | Personal history of nicotine dependence | Pure hypercholesterolemia, unspecified",
+      "specialty_agents": "内分泌/代谢 | 心血管",
+      "drug_list": "acetaminophen | aspirin | atorvastatin | diltiazem extended-release | heparin | hydralazine | hydromorphone (dilaudid) | lactated ringers | magnesium oxide | omeprazole | oxycodone (immediate release) | potassium chloride | potassium chloride (powder) | sodium chloride 0.9%  flush | valsartan",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "心血管",
+      "内分泌/代谢"
+    ],
+    "lead_specialty": "心血管",
+    "specialty_related_diagnoses": {
+      "心血管": [
+        "Aneurysm of artery of lower extremity",
+        "Embolism and thrombosis of arteries of the lower extremities",
+        "Essential (primary) hypertension",
+        "Paroxysmal atrial fibrillation",
+        "Pure hypercholesterolemia, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Obesity, unspecified",
+        "Body mass index [BMI] 25.0-25.9, adult",
+        "Personal history of nicotine dependence"
+      ]
+    },
+    "rationale": "核心问题为下肢动脉瘤合并下肢动脉栓塞/血栓、阵发性房颤、高血压和高胆固醇血症，抗栓、降压、调脂和围手术期心血管风险管理优先；内分泌/代谢专科负责肥胖、血糖和电解质代谢风险复核。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "普通肝素",
+          "confidence": 0.72,
+          "reason": "存在下肢动脉栓塞/血栓和阵发性房颤，住院围手术期可考虑可逆、可监测的抗凝策略；但需先复核出血风险、INR、血小板、血红蛋白和手术计划。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "阿司匹林",
+          "confidence": 0.66,
+          "reason": "下肢动脉粥样硬化性血管事件风险和动脉瘤相关血栓风险背景下可作为抗血小板风险控制药物；若需全量抗凝或近期手术，应由MDT复核联合用药出血风险。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.82,
+          "reason": "高胆固醇血症、外周动脉疾病风险和血管事件风险均支持使用中高强度他汀进行二级预防和斑块稳定。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "美托洛尔",
+          "confidence": 0.58,
+          "reason": "阵发性房颤和高血压可从心率/血压控制获益；但当前心率、血压缺失，需根据生命体征决定是否启用或调整。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "氨氯地平",
+          "confidence": 0.55,
+          "reason": "适用于原发性高血压的基础控制，肾功能不明时相对便于使用；仍需结合围手术期血压、容量状态和既往用药。"
+        }
+      ],
+      "recommendation_reasons": {
+        "thrombosis_and_af": "下肢动脉栓塞/血栓合并阵发性房颤提示血栓栓塞风险，需要抗凝策略评估。",
+        "vascular_secondary_prevention": "高胆固醇血症和外周动脉血管病变背景支持他汀及必要抗血小板治疗。",
+        "hypertension_control": "原发性高血压需要围手术期安全降压，避免低灌注和血压过高导致血管事件风险。"
+      },
+      "risk_alerts": [
+        "INR缺失，抗凝或抗血小板强化前需评估凝血功能。",
+        "肌酐缺失，DOAC、ACEI/ARB、利尿剂和造影相关方案需复核肾功能。",
+        "血钾缺失，影响抗心律失常、ACEI/ARB、利尿剂和补钾策略。",
+        "生命体征缺失，β受体阻滞剂和降压药需根据心率、血压启动。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "华法林",
+          "reason": "INR基线缺失且围手术期管理复杂，非首选即时启动方案；如长期抗凝需要，可在稳定后专门评估。"
+        },
+        {
+          "drug_name": "阿替普酶",
+          "reason": "未提供急性肢体缺血分级、影像、症状时间窗和凝血资料，不能优先推荐溶栓。"
+        },
+        {
+          "drug_name": "螺内酯",
+          "reason": "无心衰诊断且血钾、肌酐缺失，升钾和肾功能风险不明。"
+        }
+      ],
+      "overall_confidence": 0.69,
+      "summary_reason": "心血管专科认为抗栓和血管二级预防是核心，但因凝血、肾功能、电解质和生命体征均缺失，抗凝强度与联合抗血小板需要人工复核。",
+      "conversation_text": "心血管意见：以普通肝素可监测抗凝、阿托伐他汀二级预防、谨慎抗血小板和按生命体征控制血压/心率为主。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.76,
+          "reason": "高胆固醇血症、肥胖和血管病变背景下，他汀兼具代谢风险和心血管风险控制价值。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "尼古丁替代制剂",
+          "confidence": 0.42,
+          "reason": "有尼古丁依赖个人史，若仍有戒断症状或近期吸烟，可用于住院戒烟支持；需确认当前吸烟状态。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "普通胰岛素校正方案",
+          "confidence": 0.28,
+          "reason": "当前无糖尿病诊断且血糖缺失，不建议常规治疗性使用；仅在床旁血糖异常时作为需复核药物。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "电解质补充制剂",
+          "confidence": 0.31,
+          "reason": "钠、钾缺失，不能经验性补充；若复查异常，可按缺乏类型补钾、补镁或纠正钠紊乱。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "等渗晶体液",
+          "confidence": 0.45,
+          "reason": "围手术期可作为基础补液/溶媒，但需根据容量状态、钠、肾功能和心血管风险调整。"
+        }
+      ],
+      "recommendation_reasons": {
+        "metabolic_risk": "肥胖和BMI超重提示长期代谢风险，需要生活方式和心血管风险药物协同管理。",
+        "glucose_uncertainty": "血糖缺失，不能主动推荐降糖药或含糖液体，需先监测床旁血糖。",
+        "electrolyte_uncertainty": "钠钾缺失，补液、电解质补充和影响钾的心血管药物均需复核。"
+      },
+      "risk_alerts": [
+        "glucose_24h缺失，胰岛素、葡萄糖液和激素相关治疗需谨慎。",
+        "sodium_24h缺失，补液方案需避免快速纠正潜在钠紊乱。",
+        "potassium_24h缺失，不能经验性补钾或使用显著影响钾的药物。",
+        "creatinine_24h缺失，二甲双胍等肾功能敏感药物不应经验性启动。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "二甲双胍",
+          "reason": "无糖尿病诊断且肌酐/eGFR缺失，围手术期和造影可能增加乳酸酸中毒风险。"
+        },
+        {
+          "drug_name": "磺脲类降糖药",
+          "reason": "无明确高血糖诊断且住院进食状态不明，低血糖风险不适合经验性使用。"
+        },
+        {
+          "drug_name": "系统性糖皮质激素",
+          "reason": "无明确适应证，可能加重血糖波动和感染/伤口风险。"
+        }
+      ],
+      "overall_confidence": 0.54,
+      "summary_reason": "内分泌/代谢专科支持调脂、戒烟和监测导向的血糖电解质管理，不支持在检验缺失时经验性降糖或补电解质。",
+      "conversation_text": "内分泌/代谢意见：当前代谢治疗以风险控制和监测为主，避免在血糖、钠钾、肾功能未知时启动高风险代谢药物。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "普通肝素",
+          "阿托伐他汀",
+          "阿司匹林",
+          "美托洛尔",
+          "氨氯地平",
+          "等渗晶体液"
+        ],
+        "cautioned_drugs": [
+          "阿哌沙班",
+          "华法林",
+          "阿替普酶",
+          "螺内酯"
+        ],
+        "conflict_notes": [
+          "抗凝与抗血小板联合可增加出血风险，INR和围手术期止血状态缺失时不应无条件合用。",
+          "DOAC需要肾功能和手术时机信息支持，当前更适合作为出院或术后稳定期转换候选。"
+        ],
+        "priority_comment": "优先选择可监测、可暂停的抗凝方案，并以他汀作为明确二级预防药物。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "阿托伐他汀",
+          "等渗晶体液",
+          "尼古丁替代制剂"
+        ],
+        "cautioned_drugs": [
+          "普通胰岛素校正方案",
+          "电解质补充制剂",
+          "二甲双胍",
+          "葡萄糖注射液"
+        ],
+        "conflict_notes": [
+          "血糖缺失时不应常规使用胰岛素或含糖补液。",
+          "钠钾缺失时补液和电解质补充应以复查结果为依据。"
+        ],
+        "priority_comment": "代谢专科同意心血管主导处方，但要求补齐肌酐、钾、钠、血糖后再确定肾功能敏感药和补液细节。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案不引用任何当前真实住院处方，仅根据诊断、共病、检验缺失状态和知识库风险规则生成。",
+      "下肢动脉瘤合并动脉栓塞/血栓及阵发性房颤使抗栓策略成为核心，但凝血、肾功能和手术计划缺失使强化抗栓必须标记为需复核。",
+      "阿托伐他汀作为血管风险控制和高胆固醇血症治疗共识较强。",
+      "降压和心率控制需结合实时血压、心率，当前不能给出无条件启动判断。",
+      "补液、冲管、营养电解质和血糖处理均应以复查实验室和容量状态为前提。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "围手术期可监测抗凝与血管二级预防方案",
+        "drugs": [
+          "普通肝素",
+          "阿托伐他汀",
+          "阿司匹林",
+          "美托洛尔",
+          "氨氯地平",
+          "等渗晶体液",
+          "0.9%氯化钠冲管液",
+          "对乙酰氨基酚",
+          "质子泵抑制剂",
+          "尼古丁替代制剂",
+          "普通胰岛素校正方案",
+          "电解质补充制剂"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "普通肝素",
+            "阿司匹林"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "美托洛尔",
+            "氨氯地平",
+            "尼古丁替代制剂"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "prophylaxis_prevention_medication": [
+            "质子泵抑制剂"
+          ],
+          "fluid_diluent_flush_medication": [
+            "等渗晶体液",
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [
+            "普通肝素"
+          ],
+          "nutrition_electrolyte_medication": [
+            "电解质补充制剂"
+          ],
+          "requires_review": [
+            "普通肝素",
+            "阿司匹林",
+            "美托洛尔",
+            "氨氯地平",
+            "普通胰岛素校正方案",
+            "电解质补充制剂",
+            "质子泵抑制剂"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "适合住院围手术期且血栓风险较高的场景，普通肝素便于监测和暂停；他汀用于血管二级预防，阿司匹林需根据出血风险和是否全量抗凝复核。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "术后稳定期口服抗凝转换与长期风险控制方案",
+        "drugs": [
+          "阿哌沙班",
+          "阿托伐他汀",
+          "美托洛尔",
+          "氨氯地平",
+          "对乙酰氨基酚",
+          "0.9%氯化钠冲管液",
+          "等渗晶体液",
+          "尼古丁替代制剂",
+          "电解质补充制剂"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "阿哌沙班"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "美托洛尔",
+            "氨氯地平",
+            "尼古丁替代制剂"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "等渗晶体液",
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "电解质补充制剂"
+          ],
+          "requires_review": [
+            "阿哌沙班",
+            "美托洛尔",
+            "氨氯地平",
+            "电解质补充制剂"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "适用于手术止血稳定、肾功能可接受且无需近期再操作时的长期房颤抗凝和血管风险控制；当前因肌酐和凝血资料缺失，暂列候选而非首选。",
+        "aggregate_score": 0.62
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "高出血风险下的保守血管风险控制与监测方案",
+        "drugs": [
+          "阿托伐他汀",
+          "氨氯地平",
+          "对乙酰氨基酚",
+          "等渗晶体液",
+          "0.9%氯化钠冲管液",
+          "尼古丁替代制剂",
+          "质子泵抑制剂",
+          "电解质补充制剂"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "氨氯地平",
+            "尼古丁替代制剂"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "prophylaxis_prevention_medication": [
+            "质子泵抑制剂"
+          ],
+          "fluid_diluent_flush_medication": [
+            "等渗晶体液",
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "电解质补充制剂"
+          ],
+          "requires_review": [
+            "抗凝药物暂缓",
+            "抗血小板药物暂缓",
+            "电解质补充制剂",
+            "质子泵抑制剂"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "若INR升高、活动性出血、术后止血未稳定或需紧急操作，可暂缓强化抗栓，仅保留调脂、血压管理、症状支持和基础护理，并尽快复核抗栓窗口。",
+        "aggregate_score": 0.51
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "围手术期可监测抗凝与血管二级预防方案",
+      "drugs": [
+        "普通肝素",
+        "阿托伐他汀",
+        "阿司匹林",
+        "美托洛尔",
+        "氨氯地平",
+        "等渗晶体液",
+        "0.9%氯化钠冲管液",
+        "对乙酰氨基酚",
+        "质子泵抑制剂",
+        "尼古丁替代制剂",
+        "普通胰岛素校正方案",
+        "电解质补充制剂"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "普通肝素",
+          "阿司匹林"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "美托洛尔",
+          "氨氯地平",
+          "尼古丁替代制剂"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "prophylaxis_prevention_medication": [
+          "质子泵抑制剂"
+        ],
+        "fluid_diluent_flush_medication": [
+          "等渗晶体液",
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [
+          "普通肝素"
+        ],
+        "nutrition_electrolyte_medication": [
+          "电解质补充制剂"
+        ],
+        "requires_review": [
+          "普通肝素",
+          "阿司匹林",
+          "美托洛尔",
+          "氨氯地平",
+          "普通胰岛素校正方案",
+          "电解质补充制剂",
+          "质子泵抑制剂"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "该方案覆盖血栓/栓塞直接治疗、血管二级预防、降压/控率、疼痛支持、护理冲管、基础补液、代谢复核和戒烟支持；因实验室和生命体征缺失，多数药物需医师复核后执行。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "术后稳定期口服抗凝转换与长期风险控制方案",
+      "drugs": [
+        "阿哌沙班",
+        "阿托伐他汀",
+        "美托洛尔",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "0.9%氯化钠冲管液",
+        "等渗晶体液",
+        "尼古丁替代制剂",
+        "电解质补充制剂"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "阿哌沙班"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "美托洛尔",
+          "氨氯地平",
+          "尼古丁替代制剂"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "等渗晶体液",
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "电解质补充制剂"
+        ],
+        "requires_review": [
+          "阿哌沙班",
+          "美托洛尔",
+          "氨氯地平",
+          "电解质补充制剂"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "作为术后稳定或出院前转换候选，强调长期房颤抗凝和动脉血管风险控制；当前不作为最终首选，因为肾功能和手术止血状态未知。",
+      "aggregate_score": 0.62
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "高出血风险下的保守血管风险控制与监测方案",
+      "drugs": [
+        "阿托伐他汀",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "等渗晶体液",
+        "0.9%氯化钠冲管液",
+        "尼古丁替代制剂",
+        "质子泵抑制剂",
+        "电解质补充制剂"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平",
+          "尼古丁替代制剂"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "prophylaxis_prevention_medication": [
+          "质子泵抑制剂"
+        ],
+        "fluid_diluent_flush_medication": [
+          "等渗晶体液",
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "电解质补充制剂"
+        ],
+        "requires_review": [
+          "抗凝药物暂缓",
+          "抗血小板药物暂缓",
+          "电解质补充制剂",
+          "质子泵抑制剂"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "若安全审核发现出血或操作风险过高，则优先采用保守风险控制和监测，待凝血、血红蛋白、血小板和手术状态明确后再升级抗栓。",
+      "aggregate_score": 0.51
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "围手术期可监测抗凝与血管二级预防方案",
+      "drugs": [
+        "普通肝素",
+        "阿托伐他汀",
+        "阿司匹林",
+        "美托洛尔",
+        "氨氯地平",
+        "等渗晶体液",
+        "0.9%氯化钠冲管液",
+        "对乙酰氨基酚",
+        "质子泵抑制剂",
+        "尼古丁替代制剂",
+        "普通胰岛素校正方案",
+        "电解质补充制剂"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "普通肝素",
+          "阿司匹林"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "美托洛尔",
+          "氨氯地平",
+          "尼古丁替代制剂"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "prophylaxis_prevention_medication": [
+          "质子泵抑制剂"
+        ],
+        "fluid_diluent_flush_medication": [
+          "等渗晶体液",
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [
+          "普通肝素"
+        ],
+        "nutrition_electrolyte_medication": [
+          "电解质补充制剂"
+        ],
+        "requires_review": [
+          "普通肝素需复核INR、aPTT/抗Xa、血小板、血红蛋白、出血体征和手术时间窗",
+          "阿司匹林需复核是否与全量抗凝联合以及术后止血状态",
+          "美托洛尔需复核心率、血压、传导阻滞和支气管痉挛风险",
+          "氨氯地平需复核当前血压和外周灌注",
+          "普通胰岛素校正方案仅在血糖异常时使用",
+          "电解质补充制剂仅在钾、钠、镁等复查异常时使用",
+          "质子泵抑制剂需复核胃肠道出血风险或应激性溃疡预防适应证"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "在血栓风险突出的住院围手术期病例中，选择可监测可暂停的抗凝方案更安全；同时覆盖他汀、必要抗血小板、血压/心率控制、疼痛、护理冲管、补液和代谢复核。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "score": 0.74,
+        "safety_position": "有条件推荐，需补齐凝血、肾功能、电解质、血糖和生命体征后执行。"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "score": 0.62,
+        "safety_position": "适合作为术后稳定期转换方案，当前因肾功能和手术止血状态未知暂不优先。"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "score": 0.51,
+        "safety_position": "若存在高出血风险或手术禁忌抗栓时启用。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_inr_antithrombotic_bleeding_risk",
+        "source_rule": "cardiology_antithrombotic_bleeding_risk",
+        "severity": "review_required",
+        "message": "INR缺失，抗凝、抗血小板或溶栓相关出血风险无法量化。"
+      },
+      {
+        "risk_id": "missing_creatinine_renal_hemodynamic_risk",
+        "source_rule": "cardiology_renal_hemodynamic_risk",
+        "severity": "review_required",
+        "message": "肌酐缺失，DOAC、ACEI/ARB、利尿剂、造影相关治疗和肾排泄药物需复核。"
+      },
+      {
+        "risk_id": "missing_potassium_arrhythmia_risk",
+        "source_rule": "cardiology_potassium_arrhythmia_risk",
+        "severity": "review_required",
+        "message": "血钾缺失，心律失常和影响钾的药物风险无法判断。"
+      },
+      {
+        "risk_id": "missing_glucose_metabolic_risk",
+        "source_rule": "endocrinology_glucose_treatment_risk",
+        "severity": "review_required",
+        "message": "血糖缺失，不应经验性启动降糖药或含糖液体。"
+      },
+      {
+        "risk_id": "missing_sodium_fluid_risk",
+        "source_rule": "endocrinology_sodium_endocrine_risk",
+        "severity": "review_required",
+        "message": "血钠缺失，补液和电解质纠正方案需谨慎。"
+      },
+      {
+        "risk_id": "missing_vitals_beta_blocker_antihypertensive_risk",
+        "source_rule": "clinical_context",
+        "severity": "review_required",
+        "message": "心率和血压缺失，β受体阻滞剂、钙通道阻滞剂和其他降压药需根据实时生命体征决定。"
+      }
+    ],
+    "safety_summary": "最终选择plan_A作为有条件最终处方框架，但不是可直接无复核执行的医嘱。必须先补查INR/aPTT或抗Xa、血小板、血红蛋白、肌酐/eGFR、钾、钠、血糖和实时生命体征，并确认手术计划、止血状态和活动性出血风险。若凝血异常或术后止血不稳定，应切换至plan_C；若术后稳定且肾功能合适，可从普通肝素转换至plan_B的口服抗凝策略。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由智能体",
+      "text": "识别主诊断为下肢动脉瘤，合并下肢动脉栓塞/血栓、阵发性房颤、高血压和高胆固醇血症，路由心血管为主导，内分泌/代谢参与代谢和电解质安全复核。"
+    },
+    {
+      "step": 2,
+      "agent": "心血管专科智能体",
+      "text": "建议围绕抗栓、他汀二级预防、血压/心率控制和围手术期风险管理构建方案；由于INR、肾功能和生命体征缺失，抗凝强度与联合抗血小板需要复核。"
+    },
+    {
+      "step": 3,
+      "agent": "内分泌/代谢专科智能体",
+      "text": "支持他汀和戒烟支持，要求补查血糖、钠、钾和肌酐；不支持经验性使用二甲双胍、磺脲类、胰岛素或电解质补充。"
+    },
+    {
+      "step": 4,
+      "agent": "MDT协商智能体",
+      "text": "形成三个候选方案：围手术期可监测抗凝方案、术后稳定期口服抗凝转换方案和高出血风险保守方案。"
+    },
+    {
+      "step": 5,
+      "agent": "安全审核智能体",
+      "text": "触发多项资料缺失型风险，最终将plan_A列为有条件首选，并要求所有抗凝、抗血小板、降压、控率、补液、降糖和电解质药物执行前复核。"
+    },
+    {
+      "step": 6,
+      "agent": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

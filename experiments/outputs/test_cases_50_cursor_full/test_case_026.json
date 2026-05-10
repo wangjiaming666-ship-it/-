@@ -1,0 +1,839 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10582182",
+      "hadm_id": "26879918",
+      "gender": "M",
+      "age": 50.0
+    },
+    "primary_diagnosis": "COVID-19",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "COVID-19",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Lymphocytopenia",
+        "Other viral pneumonia"
+      ],
+      "内分泌/代谢": [
+        "Acute respiratory failure with hypoxia",
+        "Headache",
+        "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Fatty (change of) liver, not elsewhere classified",
+        "Hypo-osmolality and hyponatremia",
+        "Other disorders of phosphorus metabolism",
+        "Subclinical iodine-deficiency hypothyroidism"
+      ]
+    },
+    "comorbidity_list": [
+      "Acute respiratory failure with hypoxia",
+      "Fatty (change of) liver, not elsewhere classified",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Headache",
+      "Hypo-osmolality and hyponatremia",
+      "Lymphocytopenia",
+      "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+      "Other disorders of phosphorus metabolism",
+      "Other viral pneumonia",
+      "Personal history of nicotine dependence",
+      "Subclinical iodine-deficiency hypothyroidism"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.0,
+      "bun_24h": 12.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 108.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.6
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 26,
+      "subject_id": "10582182",
+      "hadm_id": "26879918",
+      "specialty_cnt": 3,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 消化",
+      "gender": "M",
+      "anchor_age": 50,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "30/1/2125 17:42:00",
+      "dischtime": "5/2/2125 18:31:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "HISPANIC/LATINO - SALVADORAN",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "COVID-19",
+      "comorbidity_list": "Acute respiratory failure with hypoxia | Fatty (change of) liver, not elsewhere classified | Gastro-esophageal reflux disease without esophagitis | Headache | Hypo-osmolality and hyponatremia | Lymphocytopenia | Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH] | Other disorders of phosphorus metabolism | Other viral pneumonia | Personal history of nicotine dependence | Subclinical iodine-deficiency hypothyroidism",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 消化",
+      "drug_list": "acetaminophen | acetaminophen iv | albuterol inhaler | azithromycin | ceftriaxone | enoxaparin (prophylaxis) | famotidine | guaifenesin | ipratropium-albuterol neb | lorazepam | morphine sulfate | neutra-phos | polyethylene glycol | senna | sodium chloride 0.9%  flush | soln | tiotropium bromide | vial",
+      "creatinine_24h": 1.0,
+      "bun_24h": 12.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 108.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.6
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "消化"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "COVID-19",
+        "Other viral pneumonia",
+        "Acute respiratory failure with hypoxia",
+        "Lymphocytopenia"
+      ],
+      "内分泌/代谢": [
+        "Hypo-osmolality and hyponatremia",
+        "Other disorders of phosphorus metabolism",
+        "Subclinical iodine-deficiency hypothyroidism",
+        "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]"
+      ],
+      "消化": [
+        "Fatty liver",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Nonspecific elevation of transaminase and LDH",
+        "Hypo-osmolality and hyponatremia"
+      ]
+    },
+    "rationale": "主诊断为COVID-19并合并病毒性肺炎和低氧性急性呼吸衰竭，呼吸专科为主导；同时存在轻度低钠、磷代谢异常、亚临床甲状腺功能异常和脂肪肝/转氨酶升高，需要内分泌代谢和消化专科共同复核用药风险。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "dexamethasone",
+          "confidence": 0.86,
+          "reason": "COVID-19合并低氧性急性呼吸衰竭时，系统糖皮质激素可作为疾病直接治疗；当前血糖108 mg/dL未触发高血糖风险。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "remdesivir",
+          "confidence": 0.72,
+          "reason": "COVID-19住院伴肺炎和低氧可考虑抗病毒治疗；但存在转氨酶/LDH升高诊断，需复核ALT/AST后决定。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "enoxaparin prophylaxis or unfractionated heparin prophylaxis",
+          "confidence": 0.68,
+          "reason": "COVID-19住院患者有血栓风险，若无活动性出血、血小板严重降低或凝血异常，可考虑药物性VTE预防；INR缺失需复核。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "acetaminophen",
+          "confidence": 0.58,
+          "reason": "可用于发热或头痛支持治疗，但因脂肪肝和转氨酶升高，应限制剂量并监测肝功能。"
+        }
+      ],
+      "recommendation_reasons": {
+        "disease_directed": "COVID-19伴低氧性呼吸衰竭优先考虑地塞米松；如肝酶允许并处于获益窗口，可考虑瑞德西韦。",
+        "risk_control": "住院COVID-19需评估静脉血栓预防；当前肌酐1.0支持常规肾功能剂量评估，但INR缺失。",
+        "supportive": "头痛或发热可用对乙酰氨基酚，避免镇静药叠加导致呼吸抑制。"
+      },
+      "risk_alerts": [
+        "钠133 mmol/L为轻度低钠，镇静药和低渗补液需降权并复核意识/血气。",
+        "钾4.8 mmol/L在参考范围内但接近高正常，若使用β受体激动剂、利尿剂或电解质补充需监测。",
+        "存在转氨酶/LDH升高诊断，瑞德西韦和对乙酰氨基酚需肝功能复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "benzodiazepines or opioids without clear indication",
+          "reason": "低氧性呼吸衰竭和轻度低钠背景下可能增加呼吸抑制或意识改变风险。"
+        },
+        {
+          "drug_name": "routine broad-spectrum antibiotics",
+          "reason": "输入未提供细菌感染证据或培养结果，不应仅因病毒性肺炎常规推荐。"
+        },
+        {
+          "drug_name": "high-dose beta agonists",
+          "reason": "无支气管痉挛信息，且需关注钾和心肺稳定性。"
+        }
+      ],
+      "overall_confidence": 0.76,
+      "summary_reason": "呼吸治疗以COVID-19低氧性肺炎为核心，推荐地塞米松为主，瑞德西韦和抗凝预防需结合肝功能、凝血和出血风险复核。",
+      "conversation_text": "呼吸专科认为该病例主轴是COVID-19病毒性肺炎合并低氧性急性呼吸衰竭。若患者确需氧疗，地塞米松优先级最高；瑞德西韦可作为抗病毒候选，但必须先确认转氨酶水平未达到禁用或暂停标准。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "isotonic saline only if hypovolemia is confirmed",
+          "confidence": 0.6,
+          "reason": "钠133 mmol/L为轻度低钠，补液策略需先判断容量状态，避免低渗液或快速纠正。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "phosphate replacement only if serum phosphate is low",
+          "confidence": 0.54,
+          "reason": "存在磷代谢异常诊断，但未提供磷数值；低磷时可补磷，正常或高磷时不应经验性补充。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "insulin correction scale only if steroid-related hyperglycemia occurs",
+          "confidence": 0.46,
+          "reason": "当前血糖108 mg/dL无需降糖药，但地塞米松治疗后应监测并按需纠正高血糖。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "levothyroxine only after thyroid function confirmation",
+          "confidence": 0.35,
+          "reason": "亚临床碘缺乏性甲状腺功能减退通常不急于住院经验性启动甲状腺素，需TSH、FT4和症状复核。"
+        }
+      ],
+      "recommendation_reasons": {
+        "sodium": "轻度低钠本身不支持快速纠正；若低容量，可用等渗盐水；若SIADH或等容量低钠，应限制自由水并查病因。",
+        "glucose": "血糖目前稳定，但糖皮质激素可能诱发高血糖，应安排床旁血糖监测。",
+        "phosphate": "仅凭诊断无法判断补磷方向，应复核血磷、肾功能和心电风险。"
+      },
+      "risk_alerts": [
+        "低钠133 mmol/L触发中度水钠风险，避免低渗液和过快纠正。",
+        "血糖108 mg/dL未触发风险，但地塞米松后需监测。",
+        "肌酐1.0 mg/dL未触发肾功能用药风险。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "hypotonic intravenous fluids",
+          "reason": "可能加重低钠。"
+        },
+        {
+          "drug_name": "empiric phosphate replacement without serum phosphate value",
+          "reason": "磷代谢异常方向不明，可能导致高磷或钙磷异常。"
+        },
+        {
+          "drug_name": "routine levothyroxine initiation",
+          "reason": "亚临床甲减缺少TSH/FT4和症状严重度，不宜作为急性COVID处方核心。"
+        }
+      ],
+      "overall_confidence": 0.62,
+      "summary_reason": "代谢重点是轻度低钠、磷异常待明确以及激素相关血糖监测，不建议无化验支持的经验性强纠正。",
+      "conversation_text": "内分泌/代谢专科同意呼吸专科可用地塞米松，但要求配套血糖和钠监测。低钠为轻度，处方中应避免低渗液，补钠和补磷均需以复查结果和容量状态为依据。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.78,
+          "reason": "既往/合并GERD，且若使用系统激素或抗凝预防，质子泵抑制剂可作为胃食管反流和胃黏膜保护支持。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "acetaminophen low-dose as needed",
+          "confidence": 0.52,
+          "reason": "可用于头痛或发热，但存在脂肪肝和转氨酶升高，应低剂量、短程、监测肝酶。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "remdesivir with hepatic monitoring",
+          "confidence": 0.48,
+          "reason": "可有COVID获益，但肝酶异常背景下需复核ALT/AST，若显著升高则暂缓。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "bowel regimen if clinically indicated",
+          "confidence": 0.34,
+          "reason": "输入未提示便秘或阿片使用，仅作为住院支持备选，不作为核心推荐。"
+        }
+      ],
+      "recommendation_reasons": {
+        "gerd": "GERD明确存在，PPI适合作为症状和胃黏膜保护层。",
+        "hepatic": "脂肪肝、转氨酶/LDH升高要求避免不必要肝毒性药物并复核肝酶。",
+        "bleeding": "INR缺失，若抗凝预防需先复核凝血、血小板和出血史。"
+      },
+      "risk_alerts": [
+        "总胆红素0.6 mg/dL未提示胆汁淤积高风险。",
+        "INR缺失，抗凝、NSAIDs和侵袭操作相关用药需复核。",
+        "脂肪肝和转氨酶升高使瑞德西韦、对乙酰氨基酚等需肝功能监测。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "GERD、肝功能异常和凝血信息缺失背景下增加胃肠道出血和肾/肝风险。"
+        },
+        {
+          "drug_name": "high-dose acetaminophen",
+          "reason": "转氨酶升高和脂肪肝背景下肝毒性风险增加。"
+        },
+        {
+          "drug_name": "hepatotoxic nonessential medications",
+          "reason": "缺少明确适应证时应避免增加肝代谢负担。"
+        }
+      ],
+      "overall_confidence": 0.66,
+      "summary_reason": "消化专科支持PPI，强调肝功能和凝血复核后再决定瑞德西韦、抗凝和解热镇痛药强度。",
+      "conversation_text": "消化专科认为GERD和脂肪肝是处方安全的关键修饰因素。PPI可纳入基础支持；NSAIDs应低优先级；所有潜在肝毒性药物需结合ALT/AST趋势。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "dexamethasone",
+          "remdesivir if hepatic criteria allow",
+          "pharmacologic VTE prophylaxis if bleeding risk acceptable",
+          "pantoprazole"
+        ],
+        "cautioned_drugs": [
+          "benzodiazepines",
+          "opioids",
+          "routine antibiotics",
+          "high-dose beta agonists"
+        ],
+        "conflict_notes": [
+          "瑞德西韦有COVID获益，但与转氨酶升高存在安全张力。",
+          "抗凝预防符合住院COVID风险控制，但INR缺失需补充凝血评估。"
+        ],
+        "priority_comment": "以低氧COVID肺炎治疗为主，地塞米松优先；抗病毒和抗凝作为复核后加入。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "dexamethasone with glucose monitoring",
+          "isotonic saline only when hypovolemia confirmed",
+          "phosphate replacement only when low phosphate confirmed"
+        ],
+        "cautioned_drugs": [
+          "hypotonic fluids",
+          "empiric phosphate replacement",
+          "routine insulin without hyperglycemia"
+        ],
+        "conflict_notes": [
+          "地塞米松可能升高血糖，但当前血糖正常，监测可管理。",
+          "低钠不支持快速纠正或固定补钠处方。"
+        ],
+        "priority_comment": "代谢层面同意呼吸主方案，但要求钠、血糖、磷复查作为执行条件。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "dexamethasone with GI protection",
+          "low-dose acetaminophen as needed"
+        ],
+        "cautioned_drugs": [
+          "remdesivir until ALT/AST reviewed",
+          "NSAIDs",
+          "therapeutic-dose anticoagulation without indication"
+        ],
+        "conflict_notes": [
+          "GERD支持PPI；脂肪肝和转氨酶升高要求限制肝毒性药。",
+          "INR缺失使抗凝安全性不完整，但可在复核后选择预防剂量。"
+        ],
+        "priority_comment": "以保护胃肠道和降低肝毒性为主要审阅意见。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案不能声称基于当前真实住院处方，因为输入未提供drug_list。",
+      "首选方案为低氧COVID肺炎疾病治疗加VTE预防评估、GERD保护、症状支持和电解质/血糖监测。",
+      "钠133 mmol/L触发轻度低钠风险：避免低渗液、避免快速纠正、复查钠和容量状态。",
+      "转氨酶升高诊断使瑞德西韦和对乙酰氨基酚需谨慎；若ALT/AST显著升高，应暂缓或替代。",
+      "INR缺失是抗凝安全审核主要信息缺口，需补查INR、血小板、出血史。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "CP-A",
+        "plan_name": "低氧COVID标准治疗加审慎风险控制方案",
+        "drugs": [
+          "dexamethasone",
+          "remdesivir after ALT/AST review",
+          "enoxaparin prophylaxis or unfractionated heparin prophylaxis after bleeding-risk review",
+          "pantoprazole",
+          "acetaminophen low-dose as needed",
+          "0.9% sodium chloride flushes",
+          "isotonic crystalloid only if hypovolemia confirmed",
+          "phosphate replacement only if serum phosphate is low",
+          "insulin correction scale only if steroid-induced hyperglycemia occurs"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "dexamethasone",
+            "remdesivir after ALT/AST review"
+          ],
+          "risk_modifying_therapy": [
+            "enoxaparin prophylaxis or unfractionated heparin prophylaxis after INR/platelet/bleeding review"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen low-dose as needed for fever or headache"
+          ],
+          "nursing_support_medication": [
+            "pantoprazole for GERD and gastric protection"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pharmacologic VTE prophylaxis if no contraindication"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flushes",
+            "avoid hypotonic fluids",
+            "isotonic crystalloid only if hypovolemia confirmed"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "phosphate replacement only if serum phosphate is low",
+            "avoid rapid sodium correction"
+          ],
+          "requires_review": [
+            "ALT/AST before remdesivir and acetaminophen intensity",
+            "INR and platelet count before anticoagulation",
+            "oxygen requirement confirmation before dexamethasone",
+            "serum phosphate level",
+            "serial sodium and glucose monitoring"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "覆盖COVID低氧肺炎核心治疗、血栓预防、GERD保护、低钠/磷代谢异常和激素血糖风险；多个药物以复核条件限制，适合信息不完整但需完整住院处方框架的场景。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "CP-B",
+        "plan_name": "肝功能保守型COVID支持方案",
+        "drugs": [
+          "dexamethasone",
+          "enoxaparin prophylaxis or unfractionated heparin prophylaxis after bleeding-risk review",
+          "pantoprazole",
+          "acetaminophen very limited dose as needed",
+          "0.9% sodium chloride flushes",
+          "isotonic crystalloid only if hypovolemia confirmed",
+          "phosphate replacement only if serum phosphate is low"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "dexamethasone"
+          ],
+          "risk_modifying_therapy": [
+            "pharmacologic VTE prophylaxis if no contraindication"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen very limited dose as needed"
+          ],
+          "nursing_support_medication": [
+            "pantoprazole"
+          ],
+          "prophylaxis_prevention_medication": [
+            "VTE prophylaxis after coagulation review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flushes",
+            "avoid hypotonic fluids"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "phosphate replacement only if confirmed low",
+            "sodium monitoring without rapid correction"
+          ],
+          "requires_review": [
+            "withhold remdesivir until liver enzymes available",
+            "INR and platelet count",
+            "oxygen requirement",
+            "phosphate value"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "在转氨酶升高程度未知时暂不纳入瑞德西韦，降低肝毒性不确定性，同时保留地塞米松和支持治疗。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "CP-C",
+        "plan_name": "轻症或氧疗不明确的监测支持方案",
+        "drugs": [
+          "pantoprazole",
+          "acetaminophen low-dose as needed",
+          "0.9% sodium chloride flushes",
+          "isotonic crystalloid only if hypovolemia confirmed",
+          "phosphate replacement only if serum phosphate is low"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen low-dose as needed"
+          ],
+          "nursing_support_medication": [
+            "pantoprazole"
+          ],
+          "prophylaxis_prevention_medication": [
+            "mechanical or pharmacologic VTE prevention to be selected after mobility and bleeding review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride flushes",
+            "avoid hypotonic fluids"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "phosphate replacement only if low",
+            "dietary/electrolyte review for mild hyponatremia"
+          ],
+          "requires_review": [
+            "confirm current oxygen requirement before dexamethasone",
+            "confirm COVID severity and symptom onset before antiviral",
+            "INR/platelets before pharmacologic VTE prophylaxis"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "若实际并无持续氧疗需求或COVID病情较轻，则避免过度使用系统激素和抗病毒药，以监测和支持为主。",
+        "aggregate_score": 0.58
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "CP-A",
+      "plan_name": "低氧COVID标准治疗加审慎风险控制方案",
+      "drugs": [
+        "dexamethasone",
+        "remdesivir after ALT/AST review",
+        "enoxaparin prophylaxis or unfractionated heparin prophylaxis after bleeding-risk review",
+        "pantoprazole",
+        "acetaminophen low-dose as needed",
+        "0.9% sodium chloride flushes",
+        "isotonic crystalloid only if hypovolemia confirmed",
+        "phosphate replacement only if serum phosphate is low",
+        "insulin correction scale only if steroid-induced hyperglycemia occurs"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "dexamethasone",
+          "remdesivir after ALT/AST review"
+        ],
+        "risk_modifying_therapy": [
+          "enoxaparin prophylaxis or unfractionated heparin prophylaxis after INR/platelet/bleeding review"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen low-dose as needed for fever or headache"
+        ],
+        "nursing_support_medication": [
+          "pantoprazole for GERD and gastric protection"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pharmacologic VTE prophylaxis if no contraindication"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flushes",
+          "avoid hypotonic fluids",
+          "isotonic crystalloid only if hypovolemia confirmed"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "phosphate replacement only if serum phosphate is low",
+          "avoid rapid sodium correction"
+        ],
+        "requires_review": [
+          "ALT/AST before remdesivir and acetaminophen intensity",
+          "INR and platelet count before anticoagulation",
+          "oxygen requirement confirmation before dexamethasone",
+          "serum phosphate level",
+          "serial sodium and glucose monitoring"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "覆盖COVID低氧肺炎核心治疗、血栓预防、GERD保护、低钠/磷代谢异常和激素血糖风险；多个药物以复核条件限制，适合信息不完整但需完整住院处方框架的场景。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "CP-B",
+      "plan_name": "肝功能保守型COVID支持方案",
+      "drugs": [
+        "dexamethasone",
+        "enoxaparin prophylaxis or unfractionated heparin prophylaxis after bleeding-risk review",
+        "pantoprazole",
+        "acetaminophen very limited dose as needed",
+        "0.9% sodium chloride flushes",
+        "isotonic crystalloid only if hypovolemia confirmed",
+        "phosphate replacement only if serum phosphate is low"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "dexamethasone"
+        ],
+        "risk_modifying_therapy": [
+          "pharmacologic VTE prophylaxis if no contraindication"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen very limited dose as needed"
+        ],
+        "nursing_support_medication": [
+          "pantoprazole"
+        ],
+        "prophylaxis_prevention_medication": [
+          "VTE prophylaxis after coagulation review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flushes",
+          "avoid hypotonic fluids"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "phosphate replacement only if confirmed low",
+          "sodium monitoring without rapid correction"
+        ],
+        "requires_review": [
+          "withhold remdesivir until liver enzymes available",
+          "INR and platelet count",
+          "oxygen requirement",
+          "phosphate value"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "在转氨酶升高程度未知时暂不纳入瑞德西韦，降低肝毒性不确定性，同时保留地塞米松和支持治疗。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "CP-C",
+      "plan_name": "轻症或氧疗不明确的监测支持方案",
+      "drugs": [
+        "pantoprazole",
+        "acetaminophen low-dose as needed",
+        "0.9% sodium chloride flushes",
+        "isotonic crystalloid only if hypovolemia confirmed",
+        "phosphate replacement only if serum phosphate is low"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen low-dose as needed"
+        ],
+        "nursing_support_medication": [
+          "pantoprazole"
+        ],
+        "prophylaxis_prevention_medication": [
+          "mechanical or pharmacologic VTE prevention to be selected after mobility and bleeding review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flushes",
+          "avoid hypotonic fluids"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "phosphate replacement only if low",
+          "dietary/electrolyte review for mild hyponatremia"
+        ],
+        "requires_review": [
+          "confirm current oxygen requirement before dexamethasone",
+          "confirm COVID severity and symptom onset before antiviral",
+          "INR/platelets before pharmacologic VTE prophylaxis"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "若实际并无持续氧疗需求或COVID病情较轻，则避免过度使用系统激素和抗病毒药，以监测和支持为主。",
+      "aggregate_score": 0.58
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "CP-A",
+      "plan_name": "低氧COVID标准治疗加审慎风险控制方案",
+      "drugs": [
+        "dexamethasone",
+        "remdesivir after ALT/AST review",
+        "enoxaparin prophylaxis or unfractionated heparin prophylaxis after bleeding-risk review",
+        "pantoprazole",
+        "acetaminophen low-dose as needed",
+        "0.9% sodium chloride flushes",
+        "isotonic crystalloid only if hypovolemia confirmed",
+        "phosphate replacement only if serum phosphate is low",
+        "insulin correction scale only if steroid-induced hyperglycemia occurs"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "dexamethasone",
+          "remdesivir after ALT/AST review"
+        ],
+        "risk_modifying_therapy": [
+          "enoxaparin prophylaxis or unfractionated heparin prophylaxis after INR/platelet/bleeding review"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen low-dose as needed for fever or headache"
+        ],
+        "nursing_support_medication": [
+          "pantoprazole for GERD and gastric protection"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pharmacologic VTE prophylaxis if no contraindication"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride flushes",
+          "avoid hypotonic fluids",
+          "isotonic crystalloid only if hypovolemia confirmed"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "phosphate replacement only if serum phosphate is low",
+          "avoid rapid sodium correction"
+        ],
+        "requires_review": [
+          "ALT/AST before remdesivir and acetaminophen intensity",
+          "INR and platelet count before anticoagulation",
+          "oxygen requirement confirmation before dexamethasone",
+          "serum phosphate level",
+          "serial sodium and glucose monitoring"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "该方案最完整覆盖低氧COVID肺炎、血栓风险、GERD、轻度低钠、磷代谢异常和激素相关血糖风险；同时将瑞德西韦、抗凝、补磷和补液设置为条件性执行，降低信息缺失导致的安全风险。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "CP-A",
+        "rank": 1,
+        "score": 0.82,
+        "reason": "疾病覆盖最完整，关键风险均设有复核条件。"
+      },
+      {
+        "plan_id": "CP-B",
+        "rank": 2,
+        "score": 0.74,
+        "reason": "肝安全更保守，但可能减少COVID抗病毒获益。"
+      },
+      {
+        "plan_id": "CP-C",
+        "rank": 3,
+        "score": 0.58,
+        "reason": "适合氧疗需求不明确或较轻情境，但与已记录低氧性呼吸衰竭不完全匹配。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "rule_id": "respiratory_sedation_hypercapnia_risk",
+        "severity": "moderate",
+        "basis": "sodium_24h 133 mmol/L低于135，且存在低氧性呼吸衰竭；镇静药、阿片和苯二氮卓需避免或严格复核。",
+        "action": "不纳入常规镇静止痛药；若必须使用需监测意识、呼吸频率、SpO2和血气。"
+      },
+      {
+        "rule_id": "endocrinology_sodium_endocrine_risk",
+        "severity": "moderate",
+        "basis": "sodium_24h 133 mmol/L低于135。",
+        "action": "避免低渗液和快速纠正；复查血钠、尿渗透压、尿钠和容量状态。"
+      },
+      {
+        "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+        "severity": "moderate",
+        "basis": "sodium_24h 133 mmol/L低于135，消化专科规则提示水钠和意识状态风险。",
+        "action": "利尿、乳果糖、低渗液等可能改变水钠的治疗需降权或复核。"
+      },
+      {
+        "rule_id": "gastroenterology_coagulation_bleeding_risk",
+        "severity": "unknown_due_to_missing_data",
+        "basis": "INR缺失，抗凝和NSAIDs风险无法完整评估。",
+        "action": "抗凝预防前补查INR、血小板、血红蛋白和出血史；避免NSAIDs。"
+      },
+      {
+        "rule_id": "hepatic_medication_caution",
+        "severity": "caution",
+        "basis": "存在脂肪肝和转氨酶/LDH升高诊断，胆红素0.6 mg/dL未升高。",
+        "action": "瑞德西韦和对乙酰氨基酚需结合ALT/AST数值及趋势；避免非必要肝毒性药物。"
+      }
+    ],
+    "safety_summary": "安全审核选择CP-A作为最终候选完整处方，但其并非自动执行医嘱：地塞米松需确认当前确有氧疗或低氧指征；瑞德西韦需先复核ALT/AST；抗凝预防需补齐INR、血小板和出血风险；低钠要求避免低渗液和快速纠正；磷补充仅在低磷被证实时使用。未使用或声称使用当前病例真实处方。王老师，回答结束",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": "diagnostic_routing",
+      "speaker": "routing_agent",
+      "text": "识别主诊断COVID-19合并低氧性急性呼吸衰竭，呼吸为主导专科；低钠、磷代谢异常、亚临床甲减和肝胃问题触发内分泌/代谢及消化协作。"
+    },
+    {
+      "step": "specialty_assessment",
+      "speaker": "respiratory_agent",
+      "text": "推荐以地塞米松为核心，瑞德西韦和VTE预防作为条件性候选；避免无证据抗菌药和呼吸抑制药。"
+    },
+    {
+      "step": "specialty_assessment",
+      "speaker": "endocrinology_metabolism_agent",
+      "text": "当前血糖和肾功能可接受，但钠133触发轻度低钠风险；补液、补磷和胰岛素均应按复查结果执行。"
+    },
+    {
+      "step": "specialty_assessment",
+      "speaker": "gastroenterology_agent",
+      "text": "GERD支持PPI；脂肪肝和转氨酶升高要求限制肝毒性药，INR缺失要求抗凝前复核。"
+    },
+    {
+      "step": "mdt_cross_review",
+      "speaker": "mdt_moderator",
+      "text": "MDT形成三套候选方案，CP-A覆盖最完整但设置多项复核条件，CP-B偏肝安全保守，CP-C适合氧疗需求不明确情境。"
+    },
+    {
+      "step": "safety_review",
+      "speaker": "safety_agent",
+      "text": "触发轻度低钠、肝功能谨慎、凝血信息缺失等安全点；最终选择CP-A，但将瑞德西韦、抗凝、补磷、补液列为条件性执行。"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

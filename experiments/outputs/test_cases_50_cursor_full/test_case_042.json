@@ -1,0 +1,943 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "19633534",
+      "hadm_id": "23358258",
+      "gender": "M",
+      "age": 79.0
+    },
+    "primary_diagnosis": "Atrioventricular block, complete",
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Atrioventricular block, complete",
+        "Obstructive sleep apnea (adult) (pediatric)"
+      ],
+      "神经": [
+        "Essential (primary) hypertension",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Presence of artificial hip joint, bilateral"
+      ],
+      "心血管": [
+        "Hyperlipidemia, unspecified",
+        "Presence of right artificial shoulder joint"
+      ]
+    },
+    "comorbidity_list": [
+      "Essential (primary) hypertension",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Personal history of nicotine dependence",
+      "Presence of artificial hip joint, bilateral",
+      "Presence of right artificial shoulder joint"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.2,
+      "bun_24h": 23.0,
+      "potassium_24h": 4.1,
+      "sodium_24h": 140.0,
+      "glucose_24h": 95.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 42,
+      "subject_id": "19633534",
+      "hadm_id": "23358258",
+      "specialty_cnt": 4,
+      "specialty_list": "内分泌/代谢 | 神经 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 79,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "22/8/2111 19:00:00",
+      "dischtime": "24/8/2111 15:02:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Atrioventricular block, complete",
+      "comorbidity_list": "Essential (primary) hypertension | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Obstructive sleep apnea (adult) (pediatric) | Personal history of nicotine dependence | Presence of artificial hip joint, bilateral | Presence of right artificial shoulder joint",
+      "specialty_agents": "内分泌/代谢 | 神经 | 消化 | 心血管",
+      "drug_list": "acetaminophen | atorvastatin | ibuprofen | influenza vaccine high-dose quadrivalent | lisinopril | multivitamins | polyethylene glycol | ramelteon | senna | sodium chloride 0.9%  flush",
+      "creatinine_24h": 1.2,
+      "bun_24h": 23.0,
+      "potassium_24h": 4.1,
+      "sodium_24h": 140.0,
+      "glucose_24h": 95.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "心血管",
+      "内分泌/代谢",
+      "神经",
+      "消化"
+    ],
+    "lead_specialty": "心血管",
+    "specialty_related_diagnoses": {
+      "心血管": [
+        "Atrioventricular block, complete",
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "电解质与血糖风险评估"
+      ],
+      "神经": [
+        "Personal history of nicotine dependence",
+        "老年患者镇静与意识状态风险"
+      ],
+      "消化": [
+        "Gastro-esophageal reflux disease without esophagitis"
+      ]
+    },
+    "rationale": "主要诊断为完全性房室传导阻滞，应由心血管专科牵头，重点评估心动过缓桥接药物、起搏相关用药及避免加重传导阻滞药物；同时结合高血压、高脂血症、GERD、OSA及老年共病进行MDT用药分层。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "阿托品",
+          "confidence": 0.72,
+          "reason": "可作为症状性心动过缓或不稳定传导阻滞的临时处理，但完全性房室传导阻滞疗效有限，需同时准备起搏。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "多巴胺",
+          "confidence": 0.68,
+          "reason": "若低灌注或等待临时/永久起搏，可小剂量至中剂量静脉泵入作为桥接升心率和升压方案。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "肾上腺素",
+          "confidence": 0.62,
+          "reason": "在症状性严重心动过缓、低血压或阿托品无效时可作为起搏前桥接用药，需严密心电和血压监测。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.78,
+          "reason": "患者合并高脂血症，肝胆指标缺失但INR正常，可作为风险修饰治疗，需复核肝功能。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "氨氯地平",
+          "confidence": 0.57,
+          "reason": "若血压升高需要控制，可选择不抑制房室传导的二氢吡啶类降压药；因当前血压缺失，需按实测血压启动。"
+        }
+      ],
+      "recommendation_reasons": {
+        "complete_av_block": "完全性房室传导阻滞的核心处理是起搏治疗，药物仅作为不稳定或等待起搏时的桥接。",
+        "electrolytes": "钾4.1 mmol/L、钠140 mmol/L未触发心律失常相关电解质高风险。",
+        "renal": "肌酐1.2 mg/dL未触发心血管肾功能风险阈值，可常规剂量但需老年患者复核。",
+        "bleeding": "INR 1.1未提示抗栓相关出血高风险，但起搏器操作围术期仍需谨慎抗凝。"
+      },
+      "risk_alerts": [
+        "避免β受体阻滞剂、维拉帕米、地尔硫卓、地高辛、胺碘酮等可能加重房室传导阻滞的药物。",
+        "生命体征缺失，任何升压或正性 chronotropic 药物均需床旁心电、血压和灌注状态指导。",
+        "若需永久起搏器植入，围术期抗凝和抗血小板药物需单独复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "美托洛尔",
+          "reason": "可进一步抑制房室结传导，完全性房室传导阻滞下应避免，除非起搏保护且有强适应证。"
+        },
+        {
+          "drug_name": "地尔硫卓",
+          "reason": "非二氢吡啶类钙通道阻滞剂可加重传导阻滞。"
+        },
+        {
+          "drug_name": "地高辛",
+          "reason": "可增加房室传导阻滞风险，当前无明确适应证。"
+        },
+        {
+          "drug_name": "胺碘酮",
+          "reason": "可导致或加重缓慢性心律失常，当前无快速性心律失常证据。"
+        }
+      ],
+      "overall_confidence": 0.74,
+      "summary_reason": "心血管问题决定处方优先级：起搏为核心，药物以桥接、风险修饰和避免加重传导阻滞为主。",
+      "conversation_text": "心血管专科认为本例以完全性房室传导阻滞为核心，推荐准备阿托品、多巴胺或肾上腺素作为不稳定时桥接，并优先推进起搏评估；高脂血症可用他汀，降压避免房室结抑制药。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "0.9%氯化钠注射液",
+          "confidence": 0.56,
+          "reason": "钠140 mmol/L正常，可作为静脉通路维持、溶媒或冲管基础液体；是否补液取决于容量状态。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "氯化钾",
+          "confidence": 0.46,
+          "reason": "当前钾4.1 mmol/L无需常规补钾，但心律失常背景下可作为按需补充药物，目标维持正常偏高安全范围。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "硫酸镁",
+          "confidence": 0.42,
+          "reason": "未提供镁值，不建议经验性常规使用；若低镁或室性心律失常风险存在，可按需补充。"
+        }
+      ],
+      "recommendation_reasons": {
+        "glucose": "血糖95 mg/dL未触发低血糖或高血糖风险，不支持常规胰岛素或葡萄糖治疗。",
+        "sodium": "钠140 mmol/L正常，不提示水钠紊乱。",
+        "potassium": "钾4.1 mmol/L正常，适合心血管治疗前继续监测。",
+        "renal": "肌酐1.2 mg/dL未达内分泌肾功能风险阈值。"
+      },
+      "risk_alerts": [
+        "无糖尿病或高血糖证据，不应经验性使用胰岛素。",
+        "OSA患者应避免不必要镇静药，以免加重低通气。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "胰岛素",
+          "reason": "当前血糖正常且无糖尿病诊断或高血糖证据。"
+        },
+        {
+          "drug_name": "含糖维持液",
+          "reason": "无低血糖或禁食相关补糖证据，常规使用优先级低。"
+        }
+      ],
+      "overall_confidence": 0.61,
+      "summary_reason": "代谢指标总体平稳，主要职责是避免不必要降糖、维持电解质安全并支持心律管理。",
+      "conversation_text": "内分泌/代谢专科认为血糖、钠、钾和肌酐未触发主要风险阈值，建议保守维持液体和电解质监测，不推荐经验性胰岛素或快速纠正电解质。"
+    },
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "尼古丁替代治疗",
+          "confidence": 0.45,
+          "reason": "有尼古丁依赖史，如住院期间出现戒断、烦躁或强烈吸烟渴求，可考虑贴片或口含制剂；需结合心律和血压状态。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "对乙酰氨基酚",
+          "confidence": 0.5,
+          "reason": "若存在术前术后轻中度疼痛，可优先选择非镇静、非NSAID镇痛方案，减少OSA和老年谵妄风险。"
+        }
+      ],
+      "recommendation_reasons": {
+        "sedation": "BUN 23 mg/dL低于神经镇静风险阈值，但患者79岁且有OSA，应避免苯二氮卓类和阿片类叠加。",
+        "coagulation": "INR 1.1不提示神经系统出血高风险。",
+        "glucose": "血糖正常，低血糖或严重高血糖导致神经症状风险低。",
+        "sodium": "钠正常，电解质诱发意识障碍风险低。"
+      },
+      "risk_alerts": [
+        "老年合并OSA，苯二氮卓类、强阿片和加巴喷丁类应慎用。",
+        "若使用升压或正性心率药物，需监测焦虑、震颤、谵妄和睡眠障碍。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "劳拉西泮",
+          "reason": "OSA和老年患者使用苯二氮卓类可增加呼吸抑制、跌倒和谵妄风险。"
+        },
+        {
+          "drug_name": "吗啡",
+          "reason": "无明确重度疼痛证据，阿片类可能加重OSA相关低通气。"
+        }
+      ],
+      "overall_confidence": 0.53,
+      "summary_reason": "神经专科主要关注镇静、谵妄、戒烟和OSA背景下的安全用药。",
+      "conversation_text": "神经专科建议避免镇静负担，必要时使用对乙酰氨基酚控制轻中度疼痛；尼古丁替代治疗仅在戒断明显时使用，并需心血管复核。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "泮托拉唑",
+          "confidence": 0.79,
+          "reason": "患者有GERD诊断，PPI可作为症状控制和围住院胃酸相关症状管理。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "对乙酰氨基酚",
+          "confidence": 0.48,
+          "reason": "如需镇痛，较NSAID更适合降低消化道出血和肾功能风险，但需复核肝功能。"
+        }
+      ],
+      "recommendation_reasons": {
+        "gerd": "GERD为明确共病，PPI具有直接适应证。",
+        "bilirubin": "总胆红素缺失，无法排除肝胆代谢风险，应复核肝功能后长期用药。",
+        "inr": "INR 1.1未提示凝血异常。",
+        "renal": "肌酐1.2 mg/dL未达消化治疗肾风险阈值。"
+      },
+      "risk_alerts": [
+        "胆红素缺失，启动他汀或较高剂量对乙酰氨基酚前应复核AST、ALT和胆红素。",
+        "避免NSAID作为常规镇痛，以减少GERD症状加重、消化道出血和肾风险。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "布洛芬",
+          "reason": "GERD和老年患者中可增加胃肠道刺激、出血和肾功能风险。"
+        },
+        {
+          "drug_name": "萘普生",
+          "reason": "无明确炎症性疼痛适应证，且胃肠道风险较高。"
+        }
+      ],
+      "overall_confidence": 0.67,
+      "summary_reason": "消化专科支持PPI治疗GERD，并建议避免NSAID和复核肝胆指标。",
+      "conversation_text": "消化专科建议泮托拉唑作为GERD基础治疗，同时提醒胆红素缺失会影响他汀和镇痛药长期安全评估。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "阿托品",
+          "多巴胺",
+          "肾上腺素",
+          "阿托伐他汀",
+          "氨氯地平",
+          "泮托拉唑"
+        ],
+        "cautioned_drugs": [
+          "尼古丁替代治疗",
+          "肝素",
+          "氯化钾",
+          "硫酸镁"
+        ],
+        "conflict_notes": [
+          "完全性房室传导阻滞中药物不能替代起搏治疗。",
+          "尼古丁替代治疗可能影响心率和血压，应仅在戒断明显时使用。",
+          "围起搏器操作期药物性VTE预防需结合出血和操作时间。"
+        ],
+        "priority_comment": "优先级为起搏评估和不稳定时桥接，其次处理高脂血症、GERD和血压。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "0.9%氯化钠注射液",
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "cautioned_drugs": [
+          "胰岛素",
+          "葡萄糖注射液",
+          "利尿剂"
+        ],
+        "conflict_notes": [
+          "当前血糖、钠、钾均正常，不支持经验性代谢纠正治疗。",
+          "补钾补镁应以复查结果和心电风险为依据。"
+        ],
+        "priority_comment": "代谢治疗以监测和按需纠正为主，不应扩大处方。"
+      },
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "对乙酰氨基酚"
+        ],
+        "cautioned_drugs": [
+          "劳拉西泮",
+          "吗啡",
+          "加巴喷丁",
+          "尼古丁替代治疗"
+        ],
+        "conflict_notes": [
+          "OSA和高龄使镇静药、阿片类和多药镇静组合风险升高。",
+          "尼古丁替代治疗需避免引起心血管不稳定。"
+        ],
+        "priority_comment": "优先选择非镇静支持治疗，必要用药应低剂量、短疗程。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "泮托拉唑",
+          "对乙酰氨基酚"
+        ],
+        "cautioned_drugs": [
+          "阿托伐他汀",
+          "NSAIDs",
+          "抗凝药"
+        ],
+        "conflict_notes": [
+          "胆红素缺失，应补充肝功能后确认他汀和镇痛药长期安全性。",
+          "GERD背景下不宜常规使用NSAID。"
+        ],
+        "priority_comment": "PPI可纳入基础方案，肝胆数据缺失药物列入复核层。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案不声称使用或参考当前真实住院处方，因为输入未提供drug_list。",
+      "完全性房室传导阻滞的关键干预是起搏治疗；药物处方应包含不稳定时桥接药物和避免加重传导阻滞药物清单。",
+      "当前肌酐1.2、钾4.1、钠140、血糖95、INR1.1总体未触发高危阈值；总胆红素缺失需复核。",
+      "因生命体征缺失，降压、升压、补液和心率支持药物均应根据床旁状态启动。",
+      "OSA和高龄要求减少镇静药、阿片类和苯二氮卓类使用。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "CP-1",
+        "plan_name": "起搏优先的完全性房室传导阻滞综合方案",
+        "drugs": [
+          "阿托品",
+          "多巴胺",
+          "肾上腺素",
+          "阿托伐他汀",
+          "泮托拉唑",
+          "氨氯地平",
+          "对乙酰氨基酚",
+          "0.9%氯化钠注射液",
+          "氯化钾按需",
+          "硫酸镁按需",
+          "利多卡因局部麻醉",
+          "头孢唑啉围术期预防按需",
+          "普通肝素VTE预防待复核"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "阿托品：症状性心动过缓临时用药，若无效立即升级起搏和儿茶酚胺桥接",
+            "多巴胺：低灌注或等待起搏时静脉泵入桥接",
+            "肾上腺素：阿托品无效或血流动力学不稳定时桥接"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀：用于高脂血症和心血管风险控制，复核肝功能",
+            "氨氯地平：仅在实测血压升高时用于高血压控制，避免房室结抑制药"
+          ],
+          "symptom_supportive_medication": [
+            "泮托拉唑：GERD症状控制",
+            "对乙酰氨基酚：轻中度疼痛或术后疼痛，避免NSAID"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液：静脉通路维持、冲管和溶媒",
+            "局部皮肤消毒相关制剂按院内流程"
+          ],
+          "prophylaxis_prevention_medication": [
+            "头孢唑啉围术期预防按需：若行起搏器植入且无过敏史",
+            "普通肝素VTE预防待复核：根据活动能力、操作时间和出血风险决定"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液：作为多巴胺、肾上腺素等静脉药物常用稀释和冲管液"
+          ],
+          "procedure_related_medication": [
+            "利多卡因局部麻醉：起搏器相关操作局部麻醉",
+            "头孢唑啉围术期预防按需"
+          ],
+          "nutrition_electrolyte_medication": [
+            "氯化钾按需：复查低钾或目标维持心律安全范围时使用",
+            "硫酸镁按需：低镁或室性心律失常风险时使用"
+          ],
+          "requires_review": [
+            "普通肝素VTE预防待复核",
+            "氨氯地平需根据血压启动",
+            "阿托伐他汀需复核AST、ALT、胆红素",
+            "尼古丁替代治疗仅在戒断明显且心血管稳定时考虑"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "内分泌/代谢",
+          "神经",
+          "消化"
+        ],
+        "rationale": "覆盖完全性房室传导阻滞急性桥接、起搏围术期、GERD、高脂血症、高血压、电解质和OSA镇静风险，且避免房室结抑制药。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "CP-2",
+        "plan_name": "保守监测与稳定共病方案",
+        "drugs": [
+          "阿托伐他汀",
+          "泮托拉唑",
+          "氨氯地平",
+          "对乙酰氨基酚",
+          "0.9%氯化钠注射液",
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "无常规房室传导阻滞口服治疗药物；以连续心电监测和起搏评估为主"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "氨氯地平按血压复核后使用"
+          ],
+          "symptom_supportive_medication": [
+            "泮托拉唑",
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "药物性VTE预防暂缓，优先机械预防并复核活动能力"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液"
+          ],
+          "procedure_related_medication": [
+            "若后续起搏器操作，再追加局麻和围术期抗菌药"
+          ],
+          "nutrition_electrolyte_medication": [
+            "氯化钾按需",
+            "硫酸镁按需"
+          ],
+          "requires_review": [
+            "是否存在症状性心动过缓或低灌注",
+            "是否需要临时或永久起搏",
+            "血压、心率和肝功能"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "消化",
+          "内分泌/代谢"
+        ],
+        "rationale": "适用于当前血流动力学稳定且等待进一步起搏评估的患者，药物负担较低，但对完全性房室传导阻滞急性风险覆盖不足。",
+        "aggregate_score": 0.66
+      },
+      {
+        "plan_id": "CP-3",
+        "plan_name": "不稳定心动过缓强化桥接方案",
+        "drugs": [
+          "阿托品",
+          "肾上腺素",
+          "多巴胺",
+          "0.9%氯化钠注射液",
+          "利多卡因局部麻醉",
+          "头孢唑啉围术期预防按需",
+          "泮托拉唑"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "阿托品",
+            "肾上腺素静脉泵入",
+            "多巴胺静脉泵入"
+          ],
+          "risk_modifying_therapy": [
+            "暂缓非急需降压和调脂药，待血流动力学稳定后恢复"
+          ],
+          "symptom_supportive_medication": [
+            "泮托拉唑"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液用于静脉通路和冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "头孢唑啉围术期预防按需"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液"
+          ],
+          "procedure_related_medication": [
+            "利多卡因局部麻醉",
+            "头孢唑啉围术期预防按需"
+          ],
+          "nutrition_electrolyte_medication": [
+            "氯化钾按需",
+            "硫酸镁按需"
+          ],
+          "requires_review": [
+            "需实时血压、心率、灌注、心电图",
+            "儿茶酚胺导致心肌缺血、心律失常或高血压风险",
+            "尽快转入临时或永久起搏路径"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "内分泌/代谢",
+          "神经"
+        ],
+        "rationale": "适用于低血压、晕厥、休克或严重症状性心动过缓场景；对急性风险覆盖强，但因生命体征缺失不能作为默认方案。",
+        "aggregate_score": 0.71
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "CP-1",
+      "plan_name": "起搏优先的完全性房室传导阻滞综合方案",
+      "drugs": [
+        "阿托品",
+        "多巴胺",
+        "肾上腺素",
+        "阿托伐他汀",
+        "泮托拉唑",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "0.9%氯化钠注射液",
+        "氯化钾按需",
+        "硫酸镁按需",
+        "利多卡因局部麻醉",
+        "头孢唑啉围术期预防按需",
+        "普通肝素VTE预防待复核"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "阿托品",
+          "多巴胺",
+          "肾上腺素"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平按血压使用"
+        ],
+        "symptom_supportive_medication": [
+          "泮托拉唑",
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "头孢唑啉围术期预防按需",
+          "普通肝素VTE预防待复核"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "利多卡因局部麻醉",
+          "头孢唑啉围术期预防按需"
+        ],
+        "nutrition_electrolyte_medication": [
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "requires_review": [
+          "生命体征",
+          "起搏器操作计划",
+          "肝功能",
+          "药物性VTE预防时机"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "默认推荐方案，兼顾完全性房室传导阻滞桥接、围术期、共病和安全风险。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "CP-2",
+      "plan_name": "保守监测与稳定共病方案",
+      "drugs": [
+        "阿托伐他汀",
+        "泮托拉唑",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "0.9%氯化钠注射液",
+        "氯化钾按需",
+        "硫酸镁按需"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "起搏评估为主，暂无常规口服抗传导阻滞药物"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平按血压使用"
+        ],
+        "symptom_supportive_medication": [
+          "泮托拉唑",
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "机械预防优先，药物性VTE预防复核"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "后续按起搏器操作计划追加"
+        ],
+        "nutrition_electrolyte_medication": [
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "requires_review": [
+          "是否存在症状性心动过缓",
+          "血压",
+          "肝功能"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "消化",
+        "内分泌/代谢"
+      ],
+      "rationale": "药物负担低，适合稳定观察，但急性心动过缓桥接准备不足。",
+      "aggregate_score": 0.66
+    },
+    {
+      "plan_id": "CP-3",
+      "plan_name": "不稳定心动过缓强化桥接方案",
+      "drugs": [
+        "阿托品",
+        "肾上腺素",
+        "多巴胺",
+        "0.9%氯化钠注射液",
+        "利多卡因局部麻醉",
+        "头孢唑啉围术期预防按需",
+        "泮托拉唑"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "阿托品",
+          "肾上腺素",
+          "多巴胺"
+        ],
+        "risk_modifying_therapy": [
+          "稳定前暂缓非急需调脂和降压药"
+        ],
+        "symptom_supportive_medication": [
+          "泮托拉唑"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "头孢唑啉围术期预防按需"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "利多卡因局部麻醉"
+        ],
+        "nutrition_electrolyte_medication": [
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "requires_review": [
+          "实时血流动力学",
+          "心电图",
+          "起搏路径",
+          "儿茶酚胺不良反应"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢",
+        "神经"
+      ],
+      "rationale": "急性不稳定时适用，但因当前生命体征缺失，不作为常规最终默认方案。",
+      "aggregate_score": 0.71
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "CP-1",
+      "plan_name": "起搏优先的完全性房室传导阻滞综合方案",
+      "drugs": [
+        "阿托品",
+        "多巴胺",
+        "肾上腺素",
+        "阿托伐他汀",
+        "泮托拉唑",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "0.9%氯化钠注射液",
+        "氯化钾按需",
+        "硫酸镁按需",
+        "利多卡因局部麻醉",
+        "头孢唑啉围术期预防按需",
+        "普通肝素VTE预防待复核"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "阿托品：仅用于症状性心动过缓临时处理，完全性房室传导阻滞中不应延误起搏",
+          "多巴胺：低灌注或等待起搏时桥接",
+          "肾上腺素：阿托品无效或血流动力学不稳定时桥接"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀：高脂血症，复核肝功能后使用",
+          "氨氯地平：高血压且实测血压需要时使用，避免房室结抑制药"
+        ],
+        "symptom_supportive_medication": [
+          "泮托拉唑：GERD",
+          "对乙酰氨基酚：轻中度疼痛或术后疼痛，控制总剂量并复核肝功能"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液：静脉通路、溶媒、冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "头孢唑啉围术期预防按需：起搏器植入相关预防，需确认过敏史",
+          "普通肝素VTE预防待复核：根据活动能力、操作时间、出血风险决定"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "利多卡因局部麻醉",
+          "头孢唑啉围术期预防按需"
+        ],
+        "nutrition_electrolyte_medication": [
+          "氯化钾按需",
+          "硫酸镁按需"
+        ],
+        "requires_review": [
+          "实时心率、血压、灌注和连续心电监测",
+          "永久或临时起搏适应证与操作时间",
+          "AST、ALT、总胆红素",
+          "药物过敏史",
+          "VTE风险、出血风险和活动能力",
+          "OSA下避免镇静药和阿片类"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "在不引用真实当前处方的前提下，最完整覆盖主要诊断、共病、围术期和安全监测；将不确定项目列入复核而非直接强制执行。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "CP-1",
+        "rank": 1,
+        "aggregate_score": 0.82,
+        "safety_position": "推荐作为默认MDT完整处方框架，具体启用取决于生命体征和起搏计划。"
+      },
+      {
+        "plan_id": "CP-3",
+        "rank": 2,
+        "aggregate_score": 0.71,
+        "safety_position": "仅适合血流动力学不稳定或严重症状性心动过缓。"
+      },
+      {
+        "plan_id": "CP-2",
+        "rank": 3,
+        "aggregate_score": 0.66,
+        "safety_position": "适合稳定观察，但对完全性房室传导阻滞急性桥接覆盖不足。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_vitals_for_bradycardia_plan",
+        "severity": "high_contextual",
+        "message": "心率、血压、氧饱和度等生命体征缺失，无法判断是否需要立即启用阿托品、多巴胺或肾上腺素。",
+        "action": "所有心率和血压相关药物必须以床旁监测和医师复核为前提。"
+      },
+      {
+        "risk_id": "complete_av_block_av_nodal_blocker_avoidance",
+        "severity": "high",
+        "message": "完全性房室传导阻滞患者应避免可能加重传导阻滞的药物。",
+        "action": "避免β受体阻滞剂、非二氢吡啶类钙通道阻滞剂、地高辛和不必要抗心律失常药。"
+      },
+      {
+        "risk_id": "osa_sedation_risk",
+        "severity": "moderate",
+        "message": "OSA和高龄增加镇静、阿片、苯二氮卓类相关呼吸抑制和谵妄风险。",
+        "action": "优先非镇静镇痛，避免多镇静药叠加。"
+      },
+      {
+        "risk_id": "bilirubin_missing_hepatic_review",
+        "severity": "moderate",
+        "message": "总胆红素缺失，影响他汀和对乙酰氨基酚等肝代谢药物安全评估。",
+        "action": "复核AST、ALT、总胆红素后确认长期用药。"
+      },
+      {
+        "risk_id": "peri_procedural_anticoagulation_review",
+        "severity": "moderate",
+        "message": "若计划起搏器植入，药物性VTE预防或抗凝需结合操作时机和出血风险。",
+        "action": "肝素列为待复核，不直接无条件执行。"
+      }
+    ],
+    "safety_summary": "最终推荐CP-1作为处方框架：核心是完全性房室传导阻滞起搏优先和不稳定时桥接，配合高脂血症、GERD、血压、电解质和围术期支持。当前实验室未触发高钾、低钠、高INR、高血糖或明显肾功能风险；最大不确定性来自生命体征缺失和胆红素缺失。必须避免房室结抑制药、减少镇静药，并将肝素、降压药、补钾补镁和儿茶酚胺启用置于复核条件下。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": "诊断路由",
+      "speaker": "routing_agent",
+      "text": "识别主要诊断为完全性房室传导阻滞，心血管为牵头专科；内分泌/代谢、神经和消化参与电解质、镇静、OSA和GERD风险评估。"
+    },
+    {
+      "step": "心血管专科评估",
+      "speaker": "cardiology_agent",
+      "text": "建议起搏路径优先，阿托品、多巴胺、肾上腺素作为不稳定或等待起搏时桥接；避免房室结抑制药。"
+    },
+    {
+      "step": "内分泌/代谢专科评估",
+      "speaker": "endocrinology_agent",
+      "text": "血糖95、钠140、钾4.1、肌酐1.2未触发高危阈值，不推荐经验性胰岛素或主动纠正电解质，仅保留按需补钾补镁。"
+    },
+    {
+      "step": "神经专科评估",
+      "speaker": "neurology_agent",
+      "text": "OSA和79岁高龄提示镇静和呼吸抑制风险，建议避免苯二氮卓类、强阿片和多镇静药叠加。"
+    },
+    {
+      "step": "消化专科评估",
+      "speaker": "gastroenterology_agent",
+      "text": "GERD支持使用泮托拉唑；胆红素缺失，建议复核肝功能后确认他汀和对乙酰氨基酚长期安全性。"
+    },
+    {
+      "step": "MDT交叉审阅",
+      "speaker": "mdt_coordinator",
+      "text": "各专科一致认为CP-1覆盖最完整，但阿托品、儿茶酚胺、肝素、氨氯地平和电解质补充均需按实时状态复核。"
+    },
+    {
+      "step": "候选方案生成",
+      "speaker": "plan_generator",
+      "text": "生成CP-1综合方案、CP-2稳定观察方案、CP-3不稳定强化桥接方案。"
+    },
+    {
+      "step": "安全审核",
+      "speaker": "safety_agent",
+      "text": "选择CP-1为最终方案框架，触发主要警示为生命体征缺失、完全性房室传导阻滞禁用房室结抑制药、OSA镇静风险、胆红素缺失和围术期抗凝复核。"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}
