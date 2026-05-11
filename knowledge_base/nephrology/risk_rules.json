@@ -1,70 +1,118 @@
 [
   {
-    "rule_id": "nephrology_creatinine_risk",
+    "rule_id": "nephrology_creatinine_drug_accumulation_risk",
+    "risk_target": "renal accumulation and nephrotoxicity risk",
+    "related_treatments": "renally cleared drugs|NSAIDs|contrast exposure|aminoglycosides",
     "lab_name": "creatinine_24h",
     "lab_purpose": "评估肾功能受损及药物蓄积风险",
     "threshold_type": "upper_bound",
     "moderate_risk_threshold": {
+      "unit": "mg/dL",
       "value": 1.5,
-      "operator": ">=",
-      "unit": "mg/dL"
+      "operator": ">="
     },
     "high_risk_threshold": {
+      "unit": "mg/dL",
       "value": 2.5,
-      "operator": ">=",
-      "unit": "mg/dL"
+      "operator": ">="
     },
-    "risk_message": "肌酐升高提示肾小球滤过下降，肾毒性药物和需肾排泄药物的不良反应风险增加。",
+    "risk_message": "肌酐升高提示肾小球滤过下降且肾毒性药物和需肾排泄药物风险增加",
     "action": {
-      "moderate_risk": "降低潜在肾毒性药物优先级，并提示考虑剂量调整。",
-      "high_risk": "将相关方案标记为高风险，优先避免肾毒性或需大量肾排泄的药物组合。"
+      "moderate_risk": "降低潜在肾毒性药物优先级并提示剂量调整",
+      "high_risk": "标记为高肾功能风险并优先避免肾毒性或大量肾排泄药物组合"
     },
-    "threshold_basis": "结合肾内专科肌酐分布（P75 约 1.8）和临床常用肾功能风险分层阈值。"
+    "contraindication_or_caution": "避免未调整剂量使用肾排泄药物并慎用 NSAIDs",
+    "monitoring_advice": "监测肌酐尿量和药物剂量",
+    "reference_source": "KDIGO CKD guideline; DailyMed renal dosing warnings",
+    "reference_url": "https://kdigo.org",
+    "threshold_basis": "参考 KDIGO 肾功能异常管理和药品说明书肾功能警示"
   },
   {
-    "rule_id": "nephrology_bun_risk",
+    "rule_id": "nephrology_bun_uremia_sedation_risk",
+    "risk_target": "uremic and metabolic load risk",
+    "related_treatments": "sedatives|opioids|gabapentin|baclofen",
     "lab_name": "bun_24h",
-    "lab_purpose": "评估肾前性或肾性损伤及代谢负荷风险",
+    "lab_purpose": "评估尿毒症和代谢负荷对中枢抑制药物的影响",
     "threshold_type": "upper_bound",
     "moderate_risk_threshold": {
-      "value": 25,
-      "operator": ">=",
-      "unit": "mg/dL"
+      "unit": "mg/dL",
+      "value": 25.0,
+      "operator": ">="
     },
     "high_risk_threshold": {
-      "value": 40,
-      "operator": ">=",
-      "unit": "mg/dL"
+      "unit": "mg/dL",
+      "value": 40.0,
+      "operator": ">="
     },
-    "risk_message": "尿素氮升高提示肾功能或分解代谢负荷升高，联合高肌酐时需提高用药谨慎度。",
+    "risk_message": "BUN 升高提示肾功能或分解代谢负荷升高且镇静药物风险增加",
     "action": {
-      "moderate_risk": "增加风险提示，降低高代谢负担方案优先级。",
-      "high_risk": "标记为高风险病例，建议优先保留更保守、更易监测的治疗方案。"
+      "moderate_risk": "增加风险提示并降低高镇静负担方案优先级",
+      "high_risk": "标记为高风险并建议优先保留更保守更易监测方案"
     },
-    "threshold_basis": "参考肾内样本中位数与上四分位数，并结合临床常用 BUN 风险分层。"
+    "contraindication_or_caution": "避免镇静药多药叠加并复核肾功能剂量",
+    "monitoring_advice": "监测意识呼吸BUN肌酐和跌倒风险",
+    "reference_source": "KDIGO CKD guideline; DailyMed CNS depressant labels",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考肾病管理原则和中枢抑制药说明书"
   },
   {
-    "rule_id": "nephrology_potassium_risk",
+    "rule_id": "nephrology_potassium_drug_risk",
+    "risk_target": "renal electrolyte risk",
+    "related_treatments": "ACE inhibitors|ARB|potassium supplements|potassium sparing diuretics|TMP SMX",
     "lab_name": "potassium_24h",
-    "lab_purpose": "评估肾功能受损背景下的高钾或低钾并发症风险",
+    "lab_purpose": "评估肾功能受损背景下高钾或低钾并发症风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.5,
       "high": 5.0,
-      "unit": "mmol/L",
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.0,
       "high": 5.5,
-      "unit": "mmol/L",
       "outside_range_is_high_risk": true
     },
-    "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险。",
+    "risk_message": "肾内病例中的钾异常更容易提示致命性心律失常和电解质管理失败风险",
     "action": {
-      "moderate_risk": "对影响电解质平衡方案做额外审查，降低其排序分数。",
-      "high_risk": "将病例标记为高风险，优先建议先纠正钾异常后再进行方案推荐。"
+      "moderate_risk": "对影响电解质平衡方案做额外审查并降低排序",
+      "high_risk": "标记为高风险并优先建议纠正钾异常后再推荐方案"
     },
-    "threshold_basis": "参考肾内专科样本分布和临床电解质风险控制经验。"
+    "contraindication_or_caution": "高钾时慎用保钾升钾药物低钾时复核补钾速度",
+    "monitoring_advice": "复查血钾心电图和肾功能",
+    "reference_source": "KDIGO potassium management; KDIGO CKD guideline",
+    "reference_url": "https://kdigo.org",
+    "threshold_basis": "参考 KDIGO 钾紊乱管理和 CKD 药物安全原则"
+  },
+  {
+    "rule_id": "nephrology_sodium_volume_risk",
+    "risk_target": "fluid and sodium load risk",
+    "related_treatments": "normal saline|sodium bicarbonate|diuretics|desmopressin",
+    "lab_name": "sodium_24h",
+    "lab_purpose": "评估补液碱化利尿和水钠治疗风险",
+    "threshold_type": "range",
+    "moderate_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "钠异常提示水钠平衡问题并影响补液利尿或去氨加压素方案安全性",
+    "action": {
+      "moderate_risk": "降低可能快速改变血钠的治疗优先级并提示复核",
+      "high_risk": "标记为高水钠风险并建议先明确容量状态和病因"
+    },
+    "contraindication_or_caution": "避免过快纠正血钠并注意钠负荷和容量超负荷",
+    "monitoring_advice": "监测血钠尿量体重血压和容量状态",
+    "reference_source": "MedlinePlus sodium test; KDIGO CKD guideline",
+    "reference_url": "https://medlineplus.gov/lab-tests/sodium-blood-test",
+    "threshold_basis": "参考血钠公开范围和 CKD 水钠管理原则"
   }
 ]

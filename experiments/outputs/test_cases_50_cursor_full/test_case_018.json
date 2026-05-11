@@ -1,0 +1,825 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "14377532",
+      "hadm_id": "23731985",
+      "gender": "F",
+      "age": 56.0
+    },
+    "primary_diagnosis": "Other pneumonia, unspecified organism",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Other pneumonia, unspecified organism",
+        "Adverse effect of cephalosporins and other beta-lactam antibiotics, initial encounter",
+        "Contact with and (suspected) exposure to COVID-19",
+        "Hyperlipidemia, unspecified",
+        "Long term (current) use of antithrombotics/antiplatelets",
+        "Unspecified place in hospital as the place of occurrence of the external cause"
+      ],
+      "内分泌/代谢": [
+        "Acquired absence of other specified parts of digestive tract",
+        "Adverse effect of other systemic antibiotics, initial encounter",
+        "Generalized skin eruption due to drugs and medicaments taken internally",
+        "Intrahepatic bile duct carcinoma",
+        "Personal history of urinary (tract) infections"
+      ]
+    },
+    "comorbidity_list": [
+      "Acquired absence of other specified parts of digestive tract",
+      "Adverse effect of cephalosporins and other beta-lactam antibiotics, initial encounter",
+      "Adverse effect of other systemic antibiotics, initial encounter",
+      "Contact with and (suspected) exposure to COVID-19",
+      "Generalized skin eruption due to drugs and medicaments taken internally",
+      "Hyperlipidemia, unspecified",
+      "Intrahepatic bile duct carcinoma",
+      "Long term (current) use of antithrombotics/antiplatelets",
+      "Personal history of urinary (tract) infections",
+      "Unspecified place in hospital as the place of occurrence of the external cause"
+    ],
+    "key_labs": {
+      "creatinine_24h": 0.7,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 160.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 18,
+      "subject_id": "14377532",
+      "hadm_id": "23731985",
+      "specialty_cnt": 2,
+      "specialty_list": "呼吸 | 内分泌/代谢",
+      "gender": "F",
+      "anchor_age": 56,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "23/9/2164 15:12:00",
+      "dischtime": "26/9/2164 10:35:00",
+      "admission_type": "EU OBSERVATION",
+      "race": "WHITE - OTHER EUROPEAN",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Other pneumonia, unspecified organism",
+      "comorbidity_list": "Acquired absence of other specified parts of digestive tract | Adverse effect of cephalosporins and other beta-lactam antibiotics, initial encounter | Adverse effect of other systemic antibiotics, initial encounter | Contact with and (suspected) exposure to COVID-19 | Generalized skin eruption due to drugs and medicaments taken internally | Hyperlipidemia, unspecified | Intrahepatic bile duct carcinoma | Long term (current) use of antithrombotics/antiplatelets | Personal history of urinary (tract) infections | Unspecified place in hospital as the place of occurrence of the external cause",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 肿瘤/血液",
+      "drug_list": "0.9% sodium chloride | acetaminophen | amoxicillin-clavulanic acid | bag | cefepime | ceftazidime | dextrose 5% | enoxaparin (prophylaxis) | influenza vaccine quadrivalent | iso-osmotic dextrose | levofloxacin | magnesium sulfate | neutra-phos | oxycodone (immediate release) | piperacillin-tazobactam | potassium chloride | sodium chloride 0.9%  flush | vancomycin | vial",
+      "creatinine_24h": 0.7,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 160.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "肿瘤/血液"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Other pneumonia, unspecified organism",
+        "Adverse effect of cephalosporins and other beta-lactam antibiotics, initial encounter",
+        "Contact with and (suspected) exposure to COVID-19"
+      ],
+      "内分泌/代谢": [
+        "Generalized skin eruption due to drugs and medicaments taken internally",
+        "Hyperlipidemia, unspecified",
+        "Personal history of urinary (tract) infections"
+      ],
+      "肿瘤/血液": [
+        "Intrahepatic bile duct carcinoma",
+        "Long term (current) use of antithrombotics/antiplatelets"
+      ]
+    },
+    "rationale": "以未明病原体肺炎为主要问题，由呼吸专科牵头；存在头孢及其他β内酰胺类抗生素不良反应和药疹，应避免或降低相关抗菌药优先级；合并轻度低钠、血糖160mg/dL、肝胆恶性肿瘤和长期抗血小板/抗栓用药背景，需要内分泌代谢及肿瘤血液共同审阅用药安全。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levofloxacin",
+          "confidence": 0.76,
+          "reason": "可作为β内酰胺类不良反应背景下未明病原体肺炎的候选覆盖方案；当前肌酐0.7mg/dL不提示肾功能剂量高风险，但需监测QT间期、血糖波动和肌腱不良反应。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "azithromycin",
+          "confidence": 0.66,
+          "reason": "可覆盖非典型病原体并用于肺炎经验治疗组合；需注意QT延长风险和肝胆疾病背景下肝功能监测。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "doxycycline",
+          "confidence": 0.64,
+          "reason": "可作为β内酰胺类不适用时的替代或联合覆盖药物，对肾功能依赖较小；需注意胃肠道反应和食管刺激。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "acetaminophen",
+          "confidence": 0.55,
+          "reason": "可用于发热或疼痛支持治疗；因合并肝内胆管癌且胆红素缺失，应限制剂量并复核肝功能。"
+        }
+      ],
+      "recommendation_reasons": {
+        "infection_target": "主要治疗目标为未明病原体肺炎，需经验性覆盖常见社区或院内观察场景相关病原体，并根据培养、影像和临床严重度调整。",
+        "allergy_constraint": "病例明确有头孢菌素及其他β内酰胺类抗生素不良反应和全身药疹，经验治疗需优先选择非β内酰胺路径或在人工评估后再考虑。",
+        "renal_status": "肌酐0.7mg/dL、BUN12mg/dL，未触发呼吸抗菌药肾功能高风险规则。",
+        "electrolyte_status": "钾3.8mmol/L正常；钠133mmol/L为轻度低钠，镇静药和快速补液纠正需谨慎。"
+      },
+      "risk_alerts": [
+        "钠133mmol/L触发呼吸镇静相关中度风险，避免不必要阿片类、苯二氮卓类和多重镇静叠加。",
+        "葡萄糖160mg/dL未超过180mg/dL阈值，但感染和可能使用激素时应监测床旁血糖。",
+        "胆红素缺失且存在肝内胆管癌，使用大环内酯、对乙酰氨基酚等需复核肝功能。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "ceftriaxone",
+          "reason": "存在头孢菌素不良反应和药疹记录，除非过敏史经人工复核确认可用，否则应避免。"
+        },
+        {
+          "drug_name": "piperacillin-tazobactam",
+          "reason": "属于β内酰胺类，病例提示其他β内酰胺类抗生素不良反应，需低优先级并人工复核。"
+        },
+        {
+          "drug_name": "systemic corticosteroids",
+          "reason": "当前未提供COPD或重症炎症指征，且感染及血糖160mg/dL背景下会增加代谢负担。"
+        },
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "轻度低钠可能伴随意识风险，镇静药可增加呼吸抑制风险。"
+        }
+      ],
+      "overall_confidence": 0.7,
+      "summary_reason": "呼吸专科倾向非β内酰胺经验抗感染方案，优先考虑左氧氟沙星单药或阿奇霉素联合多西环素，同时避免头孢和β内酰胺类并监测电解质、血糖、QT和肝功能。",
+      "conversation_text": "呼吸专科认为肺炎是主导诊断，但抗菌药选择受头孢及β内酰胺不良反应限制；当前肾功能和血钾支持使用需肾功能监测的非β内酰胺方案，轻度低钠要求避免镇静药叠加。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin lispro correction scale",
+          "confidence": 0.58,
+          "reason": "葡萄糖160mg/dL未达到高风险阈值，但感染住院期间可采用低强度校正胰岛素按床旁血糖决定是否给药，避免固定强化降糖。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "0.9% sodium chloride",
+          "confidence": 0.52,
+          "reason": "钠133mmol/L提示轻度低钠；若临床容量不足或需抗菌药溶媒，可使用等渗盐水并监测血钠纠正速度。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "potassium chloride",
+          "confidence": 0.32,
+          "reason": "当前钾3.8mmol/L正常，不需常规补钾；仅在复查低钾或使用胰岛素、β受体激动剂后下降时作为需复核药物。"
+        }
+      ],
+      "recommendation_reasons": {
+        "glucose": "葡萄糖160mg/dL处于住院感染背景下可接受但需监测范围，暂不支持强化降糖。",
+        "sodium": "钠133mmol/L低于135mmol/L，触发中度水钠风险，避免快速纠正和低渗液体。",
+        "potassium": "钾3.8mmol/L正常，胰岛素或β受体激动剂治疗时仍需复查。",
+        "renal": "肌酐0.7mg/dL未触发二甲双胍或肾排泄药物风险规则，但当前无明确糖尿病长期治疗适应证。"
+      },
+      "risk_alerts": [
+        "轻度低钠：避免低渗液和快速纠钠，建议复查血钠、尿量和神经状态。",
+        "感染可导致应激性高血糖，若使用喹诺酮或激素需增加血糖监测频率。",
+        "当前无明确糖尿病诊断，不建议启动长期口服降糖药。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "metformin",
+          "reason": "当前仅有血糖160mg/dL且无明确糖尿病长期治疗信息；合并肝胆恶性肿瘤和住院感染时不宜经验性启动。"
+        },
+        {
+          "drug_name": "sulfonylureas",
+          "reason": "住院进食状态未知，低血糖风险较高，不适合作为经验性推荐。"
+        },
+        {
+          "drug_name": "hypotonic fluids",
+          "reason": "钠133mmol/L已偏低，低渗液可能加重低钠。"
+        }
+      ],
+      "overall_confidence": 0.57,
+      "summary_reason": "内分泌代谢专科建议以监测和低强度校正为主，避免强化降糖和低渗补液；轻度低钠是主要代谢安全问题。",
+      "conversation_text": "内分泌/代谢专科认为血糖暂未触发高风险，但肺炎感染、喹诺酮和潜在激素用药会影响血糖；钠133mmol/L需要控制补液类型和纠正速度。"
+    },
+    {
+      "specialty_name": "肿瘤/血液",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.46,
+          "reason": "长期抗血小板/抗栓用药背景下，若存在胃肠道出血风险、应激风险或需联合影响胃黏膜药物，可考虑胃黏膜保护；需确认适应证。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "heparin flush",
+          "confidence": 0.42,
+          "reason": "若存在中心静脉通路或置管维护需求，可用于管路维护；当前未提供管路信息，应列入需复核层。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "atorvastatin",
+          "confidence": 0.38,
+          "reason": "合并高脂血症可作为慢病风险控制药物；肝内胆管癌和胆红素缺失背景下需复核肝功能后决定是否继续或启动。"
+        }
+      ],
+      "recommendation_reasons": {
+        "malignancy": "肝内胆管癌提示需关注肝功能、胆汁淤积、感染风险和药物肝毒性。",
+        "antithrombotic": "长期抗血小板/抗栓用药背景提示出血和血栓风险均需平衡，当前未提供具体药物和INR。",
+        "missing_labs": "INR和总胆红素缺失，限制了抗凝、肝毒性药物和对乙酰氨基酚安全排序。",
+        "infection_context": "恶性肿瘤背景可能增加感染复杂性，应根据中性粒细胞、影像和培养结果调整抗感染强度。"
+      },
+      "risk_alerts": [
+        "INR缺失且有长期抗栓/抗血小板用药史，新增NSAIDs或抗凝药需人工复核。",
+        "总胆红素缺失且有肝内胆管癌，肝代谢药物和潜在肝毒性药物需复核。",
+        "未提供血小板和中性粒细胞，无法评估出血风险和免疫抑制程度。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "ibuprofen",
+          "reason": "长期抗血小板/抗栓背景下可能增加胃肠道出血和肾风险，不宜作为首选退热止痛。"
+        },
+        {
+          "drug_name": "warfarin initiation",
+          "reason": "仅有长期抗栓用药背景但缺少具体适应证和INR，不应经验性新启用。"
+        },
+        {
+          "drug_name": "high-dose acetaminophen",
+          "reason": "肝内胆管癌且胆红素缺失，需限制剂量并复核肝功能。"
+        }
+      ],
+      "overall_confidence": 0.45,
+      "summary_reason": "肿瘤/血液专科不主张经验性新增抗凝或高肝毒性药物，建议将肝功能、凝血和血细胞计数作为最终处方复核前提。",
+      "conversation_text": "肿瘤/血液专科关注肝胆肿瘤和长期抗栓背景对抗感染、退热止痛、胃保护和管路维护药物的影响；缺失INR、胆红素和血细胞计数使多项药物只能列为需复核。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "levofloxacin",
+          "azithromycin",
+          "doxycycline",
+          "acetaminophen",
+          "0.9% sodium chloride"
+        ],
+        "cautioned_drugs": [
+          "ceftriaxone",
+          "piperacillin-tazobactam",
+          "systemic corticosteroids",
+          "benzodiazepines"
+        ],
+        "conflict_notes": [
+          "β内酰胺类抗菌药通常可用于肺炎，但本病例存在头孢及其他β内酰胺不良反应和药疹，需排除在首选方案外。",
+          "左氧氟沙星可简化为单药方案，但需接受血糖、QT和肌腱风险监测。"
+        ],
+        "priority_comment": "优先选择非β内酰胺经验性肺炎治疗，并在培养、影像、氧合和临床严重度明确后降阶梯。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin lispro correction scale",
+          "0.9% sodium chloride"
+        ],
+        "cautioned_drugs": [
+          "systemic corticosteroids",
+          "dextrose fluids",
+          "hypotonic fluids",
+          "sulfonylureas",
+          "metformin"
+        ],
+        "conflict_notes": [
+          "葡萄糖160mg/dL不支持经验性强化降糖，但感染和喹诺酮可能导致血糖波动。",
+          "钠133mmol/L要求避免低渗液和快速纠正。"
+        ],
+        "priority_comment": "代谢管理以监测、按需校正和避免加重低钠为主。"
+      },
+      {
+        "reviewer_specialty": "肿瘤/血液",
+        "accepted_drugs": [
+          "pantoprazole",
+          "heparin flush",
+          "atorvastatin"
+        ],
+        "cautioned_drugs": [
+          "ibuprofen",
+          "warfarin initiation",
+          "high-dose acetaminophen",
+          "hepatotoxic antibiotics"
+        ],
+        "conflict_notes": [
+          "肝内胆管癌和胆红素缺失使部分肝代谢药物需复核。",
+          "长期抗血小板/抗栓用药背景下应避免经验性新增出血风险药物。"
+        ],
+        "priority_comment": "最终方案需补充肝功能、凝血和血细胞计数后确认安全边界。"
+      }
+    ],
+    "consensus_notes": [
+      "不能声称或使用当前住院真实处方，因为输入未提供drug_list。",
+      "核心处方应围绕肺炎经验性抗感染，同时避开头孢和其他β内酰胺类高风险药物。",
+      "轻度低钠是已触发的主要安全信号，应避免低渗液、快速纠钠和不必要镇静。",
+      "血糖160mg/dL不构成高风险，但感染、喹诺酮和激素均要求床旁血糖监测。",
+      "肝内胆管癌、胆红素缺失、INR缺失和长期抗栓背景使肝毒性、出血风险和抗凝相关药物必须人工复核。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "非β内酰胺肺炎单药优先方案",
+        "drugs": [
+          "levofloxacin",
+          "acetaminophen",
+          "0.9% sodium chloride",
+          "insulin lispro correction scale",
+          "pantoprazole",
+          "atorvastatin",
+          "heparin flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levofloxacin"
+          ],
+          "risk_modifying_therapy": [
+            "insulin lispro correction scale",
+            "pantoprazole",
+            "atorvastatin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "heparin flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride",
+            "heparin flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "atorvastatin",
+            "pantoprazole",
+            "heparin flush",
+            "acetaminophen"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "肿瘤/血液"
+        ],
+        "rationale": "以左氧氟沙星覆盖未明病原体肺炎，避开头孢和β内酰胺类；配合退热、等渗补液或溶媒、按需血糖校正、胃保护和慢病风险控制。适合β内酰胺不良反应背景，但需监测QT、血糖、肝功能和凝血。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "非β内酰胺双药覆盖方案",
+        "drugs": [
+          "azithromycin",
+          "doxycycline",
+          "acetaminophen",
+          "0.9% sodium chloride",
+          "insulin lispro correction scale",
+          "pantoprazole",
+          "heparin flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "doxycycline"
+          ],
+          "risk_modifying_therapy": [
+            "insulin lispro correction scale",
+            "pantoprazole"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "heparin flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride",
+            "heparin flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "azithromycin",
+            "acetaminophen",
+            "pantoprazole",
+            "heparin flush"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "肿瘤/血液"
+        ],
+        "rationale": "以阿奇霉素联合多西环素作为非β内酰胺替代覆盖，减少喹诺酮相关血糖和肌腱风险，但肺炎覆盖强度和当地耐药情况需复核；肝胆疾病背景下阿奇霉素需监测肝功能和QT。",
+        "aggregate_score": 0.68
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "复核后广谱升级保留方案",
+        "drugs": [
+          "vancomycin",
+          "aztreonam",
+          "doxycycline",
+          "acetaminophen",
+          "0.9% sodium chloride",
+          "insulin lispro correction scale",
+          "pantoprazole"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "vancomycin",
+            "aztreonam",
+            "doxycycline"
+          ],
+          "risk_modifying_therapy": [
+            "insulin lispro correction scale",
+            "pantoprazole"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "vancomycin",
+            "aztreonam",
+            "doxycycline",
+            "acetaminophen"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "肿瘤/血液",
+          "内分泌/代谢"
+        ],
+        "rationale": "若存在重症肺炎、免疫抑制、中性粒细胞减少、MRSA或耐药革兰阴性菌风险，可在人工复核后升级为万古霉素加氨曲南并联合多西环素；当前输入缺少生命体征、影像、培养和血细胞计数，因此仅作为保留方案。",
+        "aggregate_score": 0.51
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "非β内酰胺肺炎单药优先方案",
+      "drugs": [
+        "levofloxacin",
+        "acetaminophen",
+        "0.9% sodium chloride",
+        "insulin lispro correction scale",
+        "pantoprazole",
+        "atorvastatin",
+        "heparin flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levofloxacin"
+        ],
+        "risk_modifying_therapy": [
+          "insulin lispro correction scale",
+          "pantoprazole",
+          "atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "heparin flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride",
+          "heparin flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "atorvastatin",
+          "pantoprazole",
+          "heparin flush",
+          "acetaminophen"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "肿瘤/血液"
+      ],
+      "rationale": "首选非β内酰胺抗感染方案，兼顾肾功能正常、头孢/β内酰胺不良反应、轻度低钠和应激性血糖风险。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "非β内酰胺双药覆盖方案",
+      "drugs": [
+        "azithromycin",
+        "doxycycline",
+        "acetaminophen",
+        "0.9% sodium chloride",
+        "insulin lispro correction scale",
+        "pantoprazole",
+        "heparin flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "azithromycin",
+          "doxycycline"
+        ],
+        "risk_modifying_therapy": [
+          "insulin lispro correction scale",
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "heparin flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride",
+          "heparin flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "azithromycin",
+          "acetaminophen",
+          "pantoprazole",
+          "heparin flush"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "肿瘤/血液"
+      ],
+      "rationale": "作为不宜使用喹诺酮时的替代方案，但需确认肺炎严重度、当地耐药情况、QT和肝功能。",
+      "aggregate_score": 0.68
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "复核后广谱升级保留方案",
+      "drugs": [
+        "vancomycin",
+        "aztreonam",
+        "doxycycline",
+        "acetaminophen",
+        "0.9% sodium chloride",
+        "insulin lispro correction scale",
+        "pantoprazole"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "vancomycin",
+          "aztreonam",
+          "doxycycline"
+        ],
+        "risk_modifying_therapy": [
+          "insulin lispro correction scale",
+          "pantoprazole"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "vancomycin",
+          "aztreonam",
+          "doxycycline",
+          "acetaminophen"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "肿瘤/血液",
+        "内分泌/代谢"
+      ],
+      "rationale": "仅在重症、免疫抑制、耐药菌或MRSA风险证据出现时考虑；当前资料不足，不作为默认最终方案。",
+      "aggregate_score": 0.51
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "非β内酰胺肺炎单药优先方案",
+      "drugs": [
+        "levofloxacin",
+        "acetaminophen",
+        "0.9% sodium chloride",
+        "insulin lispro correction scale",
+        "pantoprazole",
+        "atorvastatin",
+        "heparin flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levofloxacin"
+        ],
+        "risk_modifying_therapy": [
+          "insulin lispro correction scale",
+          "pantoprazole",
+          "atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "heparin flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride",
+          "heparin flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "levofloxacin: 复核QT间期、肌腱病史、癫痫风险、当地耐药和培养结果",
+          "acetaminophen: 复核肝功能和总胆红素，避免高剂量",
+          "pantoprazole: 复核是否存在胃肠道出血或应激性溃疡风险",
+          "atorvastatin: 复核肝功能后决定继续或启动",
+          "heparin flush: 仅在存在相应管路维护需求时使用",
+          "insulin lispro correction scale: 仅按床旁血糖和进食状态校正使用"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "肿瘤/血液"
+      ],
+      "rationale": "在未提供真实当前处方、病原学和生命体征的情况下，该方案最符合肺炎治疗需求和β内酰胺不良反应约束；同时覆盖症状支持、代谢监测、低钠补液安全、胃肠道风险和管路维护复核。",
+      "aggregate_score": 0.74
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "A",
+        "rank": 1,
+        "score": 0.74,
+        "safety_comment": "总体最平衡；主要风险为喹诺酮相关QT、血糖波动、肌腱和肝胆背景下药物安全，需要监测。"
+      },
+      {
+        "plan_id": "B",
+        "rank": 2,
+        "score": 0.68,
+        "safety_comment": "避免喹诺酮部分风险，但阿奇霉素仍有QT和肝功能顾虑，肺炎覆盖强度需结合严重度复核。"
+      },
+      {
+        "plan_id": "C",
+        "rank": 3,
+        "score": 0.51,
+        "safety_comment": "广谱程度较高且需要药物浓度、肾功能和耐药风险证据支持；当前资料不足，仅保留。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "rule_id": "respiratory_sedation_hypercapnia_risk",
+        "severity": "moderate",
+        "evidence": "sodium_24h为133mmol/L，低于135mmol/L且高于高风险阈值130mmol/L。",
+        "action": "避免不必要镇静药，监测意识、呼吸频率、氧饱和和必要时血气。"
+      },
+      {
+        "rule_id": "endocrinology_sodium_endocrine_risk",
+        "severity": "moderate",
+        "evidence": "sodium_24h为133mmol/L，提示轻度低钠。",
+        "action": "避免低渗液和快速纠钠，复查血钠、尿量和神经状态。"
+      },
+      {
+        "rule_id": "respiratory_renal_antibiotic_risk",
+        "severity": "none",
+        "evidence": "creatinine_24h为0.7mg/dL，未达到1.5mg/dL中度风险阈值。",
+        "action": "仍需按肾功能动态变化调整抗感染药物。"
+      },
+      {
+        "rule_id": "endocrinology_glucose_treatment_risk",
+        "severity": "none",
+        "evidence": "glucose_24h为160mg/dL，处于70至180mg/dL范围内。",
+        "action": "感染期监测床旁血糖，避免无指征强化降糖。"
+      },
+      {
+        "rule_id": "respiratory_beta_agonist_potassium_risk",
+        "severity": "none",
+        "evidence": "potassium_24h为3.8mmol/L，处于3.5至5.0mmol/L范围内。",
+        "action": "如后续使用β受体激动剂、胰岛素或利尿剂，复查血钾。"
+      }
+    ],
+    "safety_summary": "最终推荐候选方案A。该方案不依赖当前住院真实处方，基于肺炎主诊断、β内酰胺及头孢不良反应、正常肾功能、轻度低钠、血糖160mg/dL、肝内胆管癌和长期抗栓背景生成。需在执行前人工复核过敏/不良反应详情、肺炎严重度、氧合、影像、培养、心电图QT间期、肝功能、胆红素、INR、血小板、中性粒细胞和实际管路需求。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由",
+      "text": "识别主导问题为未明病原体肺炎，呼吸为牵头专科；内分泌/代谢处理低钠和血糖风险；肿瘤/血液处理肝内胆管癌、长期抗栓和缺失凝血肝功能信息。"
+    },
+    {
+      "step": 2,
+      "agent": "呼吸专科",
+      "text": "建议避开头孢和其他β内酰胺类，优先考虑左氧氟沙星，或阿奇霉素联合多西环素作为替代；不建议无明确指征使用系统激素和镇静药。"
+    },
+    {
+      "step": 3,
+      "agent": "内分泌/代谢专科",
+      "text": "钠133mmol/L触发中度低钠风险，建议等渗液、避免低渗液和快速纠钠；血糖160mg/dL以监测和按需校正胰岛素为主。"
+    },
+    {
+      "step": 4,
+      "agent": "肿瘤/血液专科",
+      "text": "肝内胆管癌、INR缺失和长期抗栓背景要求复核肝功能、凝血和血细胞计数；避免NSAIDs、高剂量对乙酰氨基酚和经验性新增抗凝。"
+    },
+    {
+      "step": 5,
+      "agent": "MDT协商",
+      "text": "形成A、B、C三个候选方案，A为非β内酰胺单药优先方案，B为非β内酰胺双药方案，C为重症或耐药风险证据充分时的升级保留方案。"
+    },
+    {
+      "step": 6,
+      "agent": "安全审核",
+      "text": "确认主要触发风险为轻度低钠相关的镇静和补液风险；最终选择方案A，并将肝功能、凝血、QT、培养、血糖和管路需求列为执行前复核项。"
+    },
+    {
+      "step": 7,
+      "agent": "结束语",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

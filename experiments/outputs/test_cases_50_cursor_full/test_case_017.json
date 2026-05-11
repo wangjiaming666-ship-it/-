@@ -1,0 +1,888 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10071847",
+      "hadm_id": "22771062",
+      "gender": "F",
+      "age": 89.0
+    },
+    "primary_diagnosis": "Atrioventricular block, complete",
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Atrioventricular block, complete",
+        "Essential (primary) hypertension",
+        "Other fall on same level, initial encounter",
+        "Syncope and collapse"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+        "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+      ],
+      "心血管": [
+        "Cardiac arrest due to underlying cardiac condition",
+        "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+        "Sidewalk as the place of occurrence of the external cause",
+        "Vitamin D deficiency, unspecified"
+      ]
+    },
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Cardiac arrest due to underlying cardiac condition",
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Multiple fractures of ribs, right side, initial encounter for closed fracture",
+      "Other fall on same level, initial encounter",
+      "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+      "Sidewalk as the place of occurrence of the external cause",
+      "Syncope and collapse",
+      "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture",
+      "Vitamin D deficiency, unspecified"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 17,
+      "subject_id": "10071847",
+      "hadm_id": "22771062",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "gender": "F",
+      "anchor_age": 89,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "2/4/2131 22:42:00",
+      "dischtime": "5/4/2131 17:35:00",
+      "admission_type": "URGENT",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Atrioventricular block, complete",
+      "comorbidity_list": "Acute kidney failure, unspecified | Cardiac arrest due to underlying cardiac condition | Essential (primary) hypertension | Hyperlipidemia, unspecified | Multiple fractures of ribs, right side, initial encounter for closed fracture | Other fall on same level, initial encounter | Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture | Sidewalk as the place of occurrence of the external cause | Syncope and collapse | Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture | Vitamin D deficiency, unspecified",
+      "specialty_agents": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "drug_list": "acetaminophen | bisacodyl | brimonidine | carvedilol | docusate sodium | heparin | hydralazine | iso-osmotic dextrose | lidocaine 5% patch | lisinopril | metoprolol tartrate | ondansetron | oxycodone (immediate release) | pneumococcal 23-valent polysaccharide vaccine | senna | simvastatin | sodium chloride 0.9%  flush | vancomycin",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "心血管",
+      "肾内/泌尿",
+      "内分泌/代谢"
+    ],
+    "lead_specialty": "心血管",
+    "specialty_related_diagnoses": {
+      "心血管": [
+        "Atrioventricular block, complete",
+        "Cardiac arrest due to underlying cardiac condition",
+        "Syncope and collapse",
+        "Essential (primary) hypertension"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Other osteoporosis with current pathological fracture, vertebra(e), initial encounter for fracture",
+        "Vitamin D deficiency, unspecified",
+        "Hyperlipidemia, unspecified"
+      ]
+    },
+    "rationale": "主诊断为完全性房室传导阻滞并合并心源性心脏骤停和晕厥，需由心血管牵头；急性肾损伤影响药物剂量、补液和肾毒性风险；骨质疏松病理性椎体骨折和维生素D缺乏需内分泌/代谢参与长期骨健康与电解质营养支持。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "atropine",
+          "confidence": 0.72,
+          "reason": "完全性房室传导阻滞伴晕厥/心脏骤停病史时，如存在症状性缓慢心律，可作为临时桥接治疗，但高度房室传导阻滞反应可能有限，不能替代起搏。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "epinephrine infusion",
+          "confidence": 0.68,
+          "reason": "若出现心脏骤停复苏后或严重症状性缓慢心律伴低灌注，可作为升压和正性变时桥接至临时/永久起搏。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "dopamine infusion",
+          "confidence": 0.62,
+          "reason": "可用于症状性缓慢心律低血压的短期血流动力学支持，需严密监测心律失常和血压。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "aspirin",
+          "confidence": 0.38,
+          "reason": "仅在确认存在急性冠脉综合征或明确动脉粥样硬化适应证时考虑；当前病例未提供ACS证据，因此列为需复核而非默认给药。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "pravastatin",
+          "confidence": 0.55,
+          "reason": "合并高脂血症且高龄心血管风险高，可作为风险修饰治疗；需结合肝功能、肌病风险和吞咽/营养状态。"
+        }
+      ],
+      "recommendation_reasons": {
+        "primary_issue": "完全性房室传导阻滞的根本处理是起搏评估，药物仅为不稳定期间桥接。",
+        "hemodynamics": "缺少24小时心率、血压、电解质和肌酐数据，所有变时/升压药均需床旁监测后使用。",
+        "secondary_prevention": "高脂血症可考虑中等强度、相对肾安全的他汀，但急性期优先级低于传导阻滞处理。"
+      },
+      "risk_alerts": [
+        "缺少钾、肌酐、血压、心率数据，使用影响心律或血流动力学药物前需复核。",
+        "高龄、跌倒和颈椎/肋骨骨折增加抗栓和镇静药风险。",
+        "完全性房室传导阻滞患者应避免降低房室传导的药物。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "beta blockers",
+          "reason": "可能加重房室传导阻滞并掩盖低血糖症状。"
+        },
+        {
+          "drug_name": "non-dihydropyridine calcium channel blockers",
+          "reason": "维拉帕米/地尔硫卓可加重房室传导阻滞。"
+        },
+        {
+          "drug_name": "digoxin",
+          "reason": "可加重传导阻滞，肾损伤时蓄积风险增加。"
+        },
+        {
+          "drug_name": "amiodarone",
+          "reason": "无明确快速心律失常适应证时可能加重缓慢心律/传导异常。"
+        }
+      ],
+      "overall_confidence": 0.64,
+      "summary_reason": "心血管专科建议以起搏评估和临时血流动力学桥接为核心，药物选择需避免进一步抑制房室传导。",
+      "conversation_text": "心血管意见：主问题是完全性房室传导阻滞导致晕厥和心源性骤停风险，药物不能替代临时或永久起搏；若不稳定，可用阿托品、肾上腺素或多巴胺短期桥接，同时避免β阻滞剂、地尔硫卓、维拉帕米、地高辛等。"
+    },
+    {
+      "specialty_name": "肾内/泌尿",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "acetaminophen",
+          "confidence": 0.7,
+          "reason": "骨折疼痛背景下较NSAIDs更适合急性肾损伤患者，但需限制总日剂量并复核肝功能。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "balanced crystalloid solution",
+          "confidence": 0.48,
+          "reason": "若存在低容量或肾前性AKI证据，可谨慎补液；当前无容量状态和肌酐数据，因此需复核后使用。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "heparin flush or saline flush",
+          "confidence": 0.58,
+          "reason": "用于静脉通路维护时可作为护理/管路支持，肾功能影响较小；若出血风险高则优先生理盐水冲管。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "unfractionated heparin prophylaxis",
+          "confidence": 0.42,
+          "reason": "高龄骨折住院患者VTE风险高，普通肝素较低分子肝素更易在肾功能不明时调整；但颈椎/肋骨骨折和跌倒后出血风险需先评估。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "senna",
+          "confidence": 0.62,
+          "reason": "若使用镇痛药或活动受限，可预防便秘；肾功能影响相对小。"
+        }
+      ],
+      "recommendation_reasons": {
+        "aki": "急性肾损伤诊断存在但缺少肌酐、BUN、尿量，所有肾排泄药物和补液需先确认肾功能和容量状态。",
+        "analgesia": "骨折疼痛需要治疗，但NSAIDs会增加肾损伤和出血风险，应低优先级。",
+        "vte": "骨折和卧床增加血栓风险，但跌倒/骨折出血风险也高，药物性预防需个体化。"
+      },
+      "risk_alerts": [
+        "肌酐、BUN、钾、钠均缺失，无法完成肾功能剂量分层。",
+        "避免NSAIDs、未调整剂量的低分子肝素、加巴喷丁和巴氯芬等肾排泄/中枢抑制药。",
+        "补液前需确认容量状态，防止容量超负荷或低灌注未纠正。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "急性肾损伤、骨折高龄患者中增加肾灌注下降、出血和血压风险。"
+        },
+        {
+          "drug_name": "enoxaparin full dose",
+          "reason": "肾功能不明时蓄积和出血风险增加。"
+        },
+        {
+          "drug_name": "gabapentin",
+          "reason": "肾功能不明且高龄跌倒风险高，易镇静、谵妄和蓄积。"
+        },
+        {
+          "drug_name": "baclofen",
+          "reason": "肾损伤时神经毒性和镇静风险较高。"
+        }
+      ],
+      "overall_confidence": 0.56,
+      "summary_reason": "肾内重点是避免肾毒性、按肾功能调整剂量、谨慎补液和降低镇静负担。",
+      "conversation_text": "肾内意见：AKI信息不足，推荐以肾安全镇痛、复核容量状态、避免NSAIDs和肾排泄镇静药为主；抗凝预防若需要，优先考虑可监测和可逆性较好的普通肝素方案。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "cholecalciferol",
+          "confidence": 0.7,
+          "reason": "合并维生素D缺乏和骨质疏松病理性骨折，需补充维生素D，但应复核钙、磷和肾功能。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "calcium carbonate or calcium citrate",
+          "confidence": 0.58,
+          "reason": "骨质疏松和骨折后可考虑钙补充；AKI背景下需避免高钙血症并复核血钙。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "calcitonin",
+          "confidence": 0.46,
+          "reason": "急性椎体压缩/病理性骨折疼痛时可短期辅助镇痛，适合避免NSAIDs时考虑，但疗程应短。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "pravastatin",
+          "confidence": 0.52,
+          "reason": "高脂血症可用中等强度他汀进行长期风险控制；急性期需评估肌病、肝功能和药物相互作用。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "insulin correction scale",
+          "confidence": 0.22,
+          "reason": "仅在床旁血糖异常时使用；当前葡萄糖缺失，不能默认降糖治疗。"
+        }
+      ],
+      "recommendation_reasons": {
+        "bone_health": "维生素D缺乏、骨质疏松和病理性椎体骨折支持维生素D/钙补充及后续抗骨质疏松评估。",
+        "renal_limitations": "双膦酸盐和部分骨代谢药物需依赖肾功能评估，AKI时不宜默认启动。",
+        "glucose": "无糖尿病诊断且血糖缺失，不应主动推荐胰岛素或含糖液体，除非监测提示异常。"
+      },
+      "risk_alerts": [
+        "补钙和维生素D前需复核钙、磷、镁、25-OH维生素D和肾功能。",
+        "AKI时双膦酸盐低优先级，需等待肾功能稳定。",
+        "高龄骨折患者需防跌倒、谵妄和过度镇静。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "bisphosphonates during active AKI",
+          "reason": "肾功能不明/急性肾损伤时需暂缓，待eGFR明确后再决定。"
+        },
+        {
+          "drug_name": "systemic corticosteroids",
+          "reason": "无明确适应证，可能加重骨质疏松、感染和血糖波动。"
+        },
+        {
+          "drug_name": "sulfonylureas",
+          "reason": "无糖尿病适应证且高龄低血糖风险高。"
+        }
+      ],
+      "overall_confidence": 0.57,
+      "summary_reason": "内分泌/代谢建议补充维生素D和谨慎补钙，暂缓肾功能敏感的抗骨质疏松药。",
+      "conversation_text": "内分泌意见：骨折和维生素D缺乏支持维生素D、钙和短期骨折疼痛辅助治疗；但AKI使双膦酸盐等药物必须延后复核。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "atropine",
+          "epinephrine infusion",
+          "dopamine infusion",
+          "pravastatin"
+        ],
+        "cautioned_drugs": [
+          "unfractionated heparin prophylaxis",
+          "calcium supplementation",
+          "balanced crystalloid solution"
+        ],
+        "conflict_notes": [
+          "抗凝预防需要结合创伤/骨折出血风险和INR。",
+          "补液可能影响心血管容量负荷，需血压、尿量和肺部体征。"
+        ],
+        "priority_comment": "先处理完全性房室传导阻滞的不稳定风险，临时药物桥接同时安排起搏评估。"
+      },
+      {
+        "reviewer_specialty": "肾内/泌尿",
+        "accepted_drugs": [
+          "acetaminophen",
+          "saline flush",
+          "senna",
+          "cholecalciferol"
+        ],
+        "cautioned_drugs": [
+          "dopamine infusion",
+          "epinephrine infusion",
+          "calcium carbonate or calcium citrate",
+          "unfractionated heparin prophylaxis"
+        ],
+        "conflict_notes": [
+          "升压/变时药需监测肾灌注和心律。",
+          "补钙、抗凝和补液均需等待肾功能、电解质与出血风险数据。"
+        ],
+        "priority_comment": "在AKI数据缺失时，所有肾排泄、肾毒性和电解质影响药物均应降权或列入复核。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "cholecalciferol",
+          "acetaminophen",
+          "calcitonin",
+          "pravastatin"
+        ],
+        "cautioned_drugs": [
+          "calcium carbonate or calcium citrate",
+          "insulin correction scale",
+          "balanced crystalloid solution"
+        ],
+        "conflict_notes": [
+          "钙剂需先确认血钙和肾功能。",
+          "血糖缺失时不能默认使用胰岛素或含糖补液。"
+        ],
+        "priority_comment": "骨健康用药应覆盖维生素D缺乏和骨折疼痛，但抗骨质疏松长期药物需肾功能复核后启动。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案应以心血管不稳定桥接、起搏评估、肾安全镇痛、骨健康基础补充和护理预防为主。",
+      "由于关键生命体征和实验室数据均缺失，多个药物只能作为条件性医嘱或需复核药物。",
+      "避免加重房室传导阻滞、肾损伤、出血、谵妄和跌倒的药物组合。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_a",
+        "plan_name": "心血管优先的保守桥接完整方案",
+        "drugs": [
+          "atropine",
+          "epinephrine infusion",
+          "acetaminophen",
+          "cholecalciferol",
+          "calcium carbonate or calcium citrate",
+          "pravastatin",
+          "senna",
+          "saline flush",
+          "unfractionated heparin prophylaxis"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "atropine PRN for symptomatic bradycardia while awaiting pacing",
+            "epinephrine infusion if unstable bradycardia or post-arrest low perfusion"
+          ],
+          "risk_modifying_therapy": [
+            "pravastatin for hyperlipidemia if liver function and myopathy risk acceptable"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen for fracture pain",
+            "senna for constipation prevention if reduced mobility or opioid exposure"
+          ],
+          "nursing_support_medication": [
+            "saline flush for IV line maintenance"
+          ],
+          "prophylaxis_prevention_medication": [
+            "unfractionated heparin prophylaxis only after bleeding risk, platelet count and INR review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush",
+            "balanced crystalloid solution only if hypovolemia or renal hypoperfusion confirmed"
+          ],
+          "procedure_related_medication": [
+            "local anesthetic for pacing procedure if performed",
+            "minimal-dose short acting analgesia/sedation only with airway and hemodynamic monitoring"
+          ],
+          "nutrition_electrolyte_medication": [
+            "cholecalciferol",
+            "calcium carbonate or calcium citrate after calcium/phosphate/renal review"
+          ],
+          "requires_review": [
+            "potassium level before arrhythmia-active therapy",
+            "creatinine/eGFR before renal dosing",
+            "INR/platelets/hemoglobin before anticoagulant prophylaxis",
+            "heart rate and blood pressure before atropine or vasopressor infusion"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "肾内/泌尿",
+          "内分泌/代谢"
+        ],
+        "rationale": "以完全性房室传导阻滞和心脏骤停风险为核心，使用临时变时/升压药桥接起搏评估，同时覆盖AKI背景下的肾安全镇痛、骨健康、血脂风险和住院护理预防。",
+        "aggregate_score": 0.76
+      },
+      {
+        "plan_id": "plan_b",
+        "plan_name": "肾功能不明时的最低药物负担方案",
+        "drugs": [
+          "acetaminophen",
+          "cholecalciferol",
+          "senna",
+          "saline flush",
+          "atropine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "atropine PRN only if symptomatic bradycardia and monitored setting"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "saline flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "mechanical VTE prophylaxis preferred; pharmacologic prophylaxis pending bleeding and renal review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "saline flush only; therapeutic fluids pending volume assessment"
+          ],
+          "procedure_related_medication": [
+            "pacing procedure medication to be decided by cardiology/anesthesia"
+          ],
+          "nutrition_electrolyte_medication": [
+            "cholecalciferol"
+          ],
+          "requires_review": [
+            "creatinine",
+            "BUN",
+            "potassium",
+            "sodium",
+            "glucose",
+            "INR",
+            "vital signs",
+            "pain severity"
+          ]
+        },
+        "supporting_specialties": [
+          "肾内/泌尿",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "在关键化验和生命体征缺失时优先减少可避免药害，保留必要的症状支持和紧急心血管桥接。",
+        "aggregate_score": 0.69
+      },
+      {
+        "plan_id": "plan_c",
+        "plan_name": "骨折疼痛与骨健康强化但需复核方案",
+        "drugs": [
+          "acetaminophen",
+          "calcitonin",
+          "cholecalciferol",
+          "calcium carbonate or calcium citrate",
+          "pravastatin",
+          "senna",
+          "saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "calcitonin short course for vertebral fracture pain if appropriate"
+          ],
+          "risk_modifying_therapy": [
+            "pravastatin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "calcitonin",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "saline flush"
+          ],
+          "prophylaxis_prevention_medication": [
+            "VTE pharmacologic prophylaxis deferred until bleeding risk review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "cholecalciferol",
+            "calcium carbonate or calcium citrate"
+          ],
+          "requires_review": [
+            "renal function before calcium strategy and osteoporosis drugs",
+            "serum calcium/phosphate/magnesium",
+            "cardiology stability before de-emphasizing bradycardia bridge therapy"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "肾内/泌尿"
+        ],
+        "rationale": "更强调骨折疼痛、维生素D缺乏和骨健康，但对完全性房室传导阻滞急性风险覆盖不足，因此不作为首选。",
+        "aggregate_score": 0.58
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_a",
+      "plan_name": "心血管优先的保守桥接完整方案",
+      "drugs": [
+        "atropine",
+        "epinephrine infusion",
+        "acetaminophen",
+        "cholecalciferol",
+        "calcium carbonate or calcium citrate",
+        "pravastatin",
+        "senna",
+        "saline flush",
+        "unfractionated heparin prophylaxis"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "atropine PRN for symptomatic bradycardia while awaiting pacing",
+          "epinephrine infusion if unstable bradycardia or post-arrest low perfusion"
+        ],
+        "risk_modifying_therapy": [
+          "pravastatin for hyperlipidemia if liver function and myopathy risk acceptable"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen for fracture pain",
+          "senna for constipation prevention if reduced mobility or opioid exposure"
+        ],
+        "nursing_support_medication": [
+          "saline flush for IV line maintenance"
+        ],
+        "prophylaxis_prevention_medication": [
+          "unfractionated heparin prophylaxis only after bleeding risk, platelet count and INR review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush",
+          "balanced crystalloid solution only if hypovolemia or renal hypoperfusion confirmed"
+        ],
+        "procedure_related_medication": [
+          "local anesthetic for pacing procedure if performed",
+          "minimal-dose short acting analgesia/sedation only with airway and hemodynamic monitoring"
+        ],
+        "nutrition_electrolyte_medication": [
+          "cholecalciferol",
+          "calcium carbonate or calcium citrate after calcium/phosphate/renal review"
+        ],
+        "requires_review": [
+          "potassium level before arrhythmia-active therapy",
+          "creatinine/eGFR before renal dosing",
+          "INR/platelets/hemoglobin before anticoagulant prophylaxis",
+          "heart rate and blood pressure before atropine or vasopressor infusion"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "肾内/泌尿",
+        "内分泌/代谢"
+      ],
+      "rationale": "首选方案，覆盖传导阻滞急性风险、AKI药物安全、骨折疼痛、骨健康、血脂风险和住院护理预防；多个药物设置为条件性使用以适应数据缺失。",
+      "aggregate_score": 0.76
+    },
+    {
+      "plan_id": "plan_b",
+      "plan_name": "肾功能不明时的最低药物负担方案",
+      "drugs": [
+        "acetaminophen",
+        "cholecalciferol",
+        "senna",
+        "saline flush",
+        "atropine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "atropine PRN only if symptomatic bradycardia and monitored setting"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "saline flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "mechanical VTE prophylaxis preferred; pharmacologic prophylaxis pending bleeding and renal review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "saline flush only; therapeutic fluids pending volume assessment"
+        ],
+        "procedure_related_medication": [
+          "pacing procedure medication to be decided by cardiology/anesthesia"
+        ],
+        "nutrition_electrolyte_medication": [
+          "cholecalciferol"
+        ],
+        "requires_review": [
+          "creatinine",
+          "BUN",
+          "potassium",
+          "sodium",
+          "glucose",
+          "INR",
+          "vital signs",
+          "pain severity"
+        ]
+      },
+      "supporting_specialties": [
+        "肾内/泌尿",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "适用于缺少关键检查且患者当前稳定时，尽量降低肾毒性、出血和谵妄风险。",
+      "aggregate_score": 0.69
+    },
+    {
+      "plan_id": "plan_c",
+      "plan_name": "骨折疼痛与骨健康强化但需复核方案",
+      "drugs": [
+        "acetaminophen",
+        "calcitonin",
+        "cholecalciferol",
+        "calcium carbonate or calcium citrate",
+        "pravastatin",
+        "senna",
+        "saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "calcitonin short course for vertebral fracture pain if appropriate"
+        ],
+        "risk_modifying_therapy": [
+          "pravastatin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "calcitonin",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "saline flush"
+        ],
+        "prophylaxis_prevention_medication": [
+          "VTE pharmacologic prophylaxis deferred until bleeding risk review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "cholecalciferol",
+          "calcium carbonate or calcium citrate"
+        ],
+        "requires_review": [
+          "renal function before calcium strategy and osteoporosis drugs",
+          "serum calcium/phosphate/magnesium",
+          "cardiology stability before de-emphasizing bradycardia bridge therapy"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "肾内/泌尿"
+      ],
+      "rationale": "适合骨痛突出且心血管状态已稳定后的补充方案，但不充分覆盖完全性房室传导阻滞急性风险。",
+      "aggregate_score": 0.58
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_a",
+      "plan_name": "心血管优先的保守桥接完整方案",
+      "drugs": [
+        "atropine",
+        "epinephrine infusion",
+        "acetaminophen",
+        "cholecalciferol",
+        "calcium carbonate or calcium citrate",
+        "pravastatin",
+        "senna",
+        "saline flush",
+        "unfractionated heparin prophylaxis"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "atropine PRN for symptomatic bradycardia while awaiting pacing",
+          "epinephrine infusion if unstable bradycardia or post-arrest low perfusion"
+        ],
+        "risk_modifying_therapy": [
+          "pravastatin for hyperlipidemia if liver function and myopathy risk acceptable"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen for fracture pain",
+          "senna for constipation prevention if reduced mobility or opioid exposure"
+        ],
+        "nursing_support_medication": [
+          "saline flush for IV line maintenance"
+        ],
+        "prophylaxis_prevention_medication": [
+          "unfractionated heparin prophylaxis only after bleeding risk, platelet count and INR review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush",
+          "balanced crystalloid solution only if hypovolemia or renal hypoperfusion confirmed"
+        ],
+        "procedure_related_medication": [
+          "local anesthetic for pacing procedure if performed",
+          "minimal-dose short acting analgesia/sedation only with airway and hemodynamic monitoring"
+        ],
+        "nutrition_electrolyte_medication": [
+          "cholecalciferol",
+          "calcium carbonate or calcium citrate after calcium/phosphate/renal review"
+        ],
+        "requires_review": [
+          "potassium level before arrhythmia-active therapy",
+          "creatinine/eGFR before renal dosing",
+          "INR/platelets/hemoglobin before anticoagulant prophylaxis",
+          "heart rate and blood pressure before atropine or vasopressor infusion"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "肾内/泌尿",
+        "内分泌/代谢"
+      ],
+      "rationale": "在不声称存在真实住院处方的前提下，基于诊断和风险规则选择覆盖最完整且可通过条件性复核降低风险的方案。",
+      "aggregate_score": 0.76
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_a",
+        "rank": 1,
+        "aggregate_score": 0.76,
+        "safety_position": "preferred_with_mandatory_monitoring"
+      },
+      {
+        "plan_id": "plan_b",
+        "rank": 2,
+        "aggregate_score": 0.69,
+        "safety_position": "safer_if_currently_stable_but_less_complete"
+      },
+      {
+        "plan_id": "plan_c",
+        "rank": 3,
+        "aggregate_score": 0.58,
+        "safety_position": "adjunctive_after_cardiac_stabilization"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_vitals_critical",
+        "severity": "high",
+        "description": "心率、血压、氧饱和度等生命体征缺失，无法确认是否需立即使用变时/升压药。",
+        "mitigation": "所有阿托品、肾上腺素、多巴胺类治疗必须在监护条件下按实时生命体征决定。"
+      },
+      {
+        "risk_id": "renal_function_unknown_with_aki",
+        "severity": "high",
+        "description": "存在急性肾损伤诊断但肌酐、BUN、尿量缺失，肾毒性和肾排泄药物风险无法量化。",
+        "mitigation": "避免NSAIDs、肾排泄镇静药和未调整剂量抗凝；复核eGFR后调整。"
+      },
+      {
+        "risk_id": "electrolyte_arrhythmia_unknown",
+        "severity": "high",
+        "description": "钾、钠缺失，完全性房室传导阻滞和心脏骤停背景下电解质异常可能显著改变风险。",
+        "mitigation": "复查钾、镁、钠、钙并持续心电监测。"
+      },
+      {
+        "risk_id": "bleeding_trauma_anticoagulation",
+        "severity": "moderate",
+        "description": "多发骨折、跌倒、颈椎骨折背景下药物性VTE预防需平衡出血风险，INR也缺失。",
+        "mitigation": "抗凝前复查INR、血红蛋白、血小板并确认无活动性出血。"
+      },
+      {
+        "risk_id": "conduction_worsening_drugs",
+        "severity": "high",
+        "description": "完全性房室传导阻滞患者使用β阻滞剂、非二氢吡啶钙通道阻滞剂、地高辛等可能加重阻滞。",
+        "mitigation": "将此类药物列入避免或低优先级，除非专科明确适应证并严密监测。"
+      }
+    ],
+    "safety_summary": "最终推荐plan_a，但其核心心血管药物为监护下条件性桥接而非固定常规处方；必须先补齐生命体征、心电、电解质、肾功能、凝血和出血风险评估。避免声称依据当前真实处方，因为输入未提供drug_list。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": "diagnostic_routing",
+      "speaker": "诊断路由智能体",
+      "text": "识别完全性房室传导阻滞、心源性心脏骤停和晕厥为主导问题，路由至心血管牵头，同时因AKI和骨质疏松/维生素D缺乏纳入肾内与内分泌。"
+    },
+    {
+      "step": "cardiology_assessment",
+      "speaker": "心血管智能体",
+      "text": "建议起搏评估为核心，阿托品、肾上腺素或多巴胺仅用于不稳定时桥接；避免加重房室传导阻滞药物。"
+    },
+    {
+      "step": "nephrology_assessment",
+      "speaker": "肾内/泌尿智能体",
+      "text": "AKI诊断存在但实验室缺失，需避免NSAIDs和肾排泄镇静药，补液、抗凝、剂量调整均需复核肾功能和容量状态。"
+    },
+    {
+      "step": "endocrine_assessment",
+      "speaker": "内分泌/代谢智能体",
+      "text": "维生素D缺乏和骨质疏松病理性骨折支持维生素D、谨慎补钙和短期骨痛辅助治疗，双膦酸盐需待肾功能明确。"
+    },
+    {
+      "step": "mdt_review",
+      "speaker": "MDT协商智能体",
+      "text": "形成三个候选方案：心血管优先完整方案、最低药物负担方案、骨健康强化方案；一致认为plan_a覆盖最完整但需强制监测。"
+    },
+    {
+      "step": "safety_review",
+      "speaker": "安全审核智能体",
+      "text": "由于生命体征、肌酐、BUN、钾、钠、血糖、INR均缺失，最终处方需以条件性医嘱和复核项表达，首选plan_a并明确禁忌/低优先级药物。"
+    },
+    {
+      "step": "completion",
+      "speaker": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

@@ -1,0 +1,753 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "13886265",
+      "hadm_id": "24319938",
+      "gender": "M",
+      "age": 64.0
+    },
+    "primary_diagnosis": "Syncope and collapse",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Syncope and collapse",
+        "Contusion of other part of head, initial encounter",
+        "Hyperlipidemia, unspecified"
+      ],
+      "内分泌/代谢": [
+        "Abrasion of other part of head, initial encounter",
+        "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+        "Other fall on same level, initial encounter"
+      ],
+      "心血管": [
+        "Acute respiratory failure with hypoxia",
+        "Essential (primary) hypertension",
+        "Parking lot as the place of occurrence of the external cause"
+      ]
+    },
+    "comorbidity_list": [
+      "Abrasion of other part of head, initial encounter",
+      "Acute respiratory failure with hypoxia",
+      "Contusion of other part of head, initial encounter",
+      "Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture",
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Other fall on same level, initial encounter",
+      "Parking lot as the place of occurrence of the external cause"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 43,
+      "subject_id": "13886265",
+      "hadm_id": "24319938",
+      "specialty_cnt": 3,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 心血管",
+      "gender": "M",
+      "anchor_age": 64,
+      "anchor_year_group": "2008 - 2010",
+      "admittime": "6/5/2196 18:13:00",
+      "dischtime": "9/5/2196 19:00:00",
+      "admission_type": "EU OBSERVATION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Syncope and collapse",
+      "comorbidity_list": "Abrasion of other part of head, initial encounter | Acute respiratory failure with hypoxia | Contusion of other part of head, initial encounter | Displaced fracture of distal phalanx of right middle finger, initial encounter for closed fracture | Essential (primary) hypertension | Hyperlipidemia, unspecified | Other fall on same level, initial encounter | Parking lot as the place of occurrence of the external cause",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 心血管",
+      "drug_list": "heparin | hydrochlorothiazide | influenza vaccine quadrivalent | pravastatin | sodium chloride 0.9%  flush | verapamil sr",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "lead_specialty": "心血管",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Acute respiratory failure with hypoxia"
+      ],
+      "内分泌/代谢": [
+        "Hyperlipidemia, unspecified",
+        "需复核血糖、电解质、肾功能"
+      ],
+      "心血管": [
+        "Syncope and collapse",
+        "Essential (primary) hypertension"
+      ]
+    },
+    "rationale": "以晕厥和跌倒为主诉，需优先排查心律失常、血压异常、体位性低血压和心脑血管风险；同时存在急性低氧性呼吸衰竭，需要呼吸专科参与；关键实验室缺失，内分泌/代谢专科负责血糖、电解质、肾功能及降脂策略复核。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "氨氯地平",
+          "confidence": 0.62,
+          "reason": "患者有原发性高血压，但当前血压数据缺失，若复测持续升高且无低血压或体位性低血压证据，可作为相对平稳的降压选择。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.66,
+          "reason": "合并高脂血症，适合作为长期动脉粥样硬化风险控制用药，但需结合肝功能和既往用药复核。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "0.9%氯化钠注射液",
+          "confidence": 0.48,
+          "reason": "晕厥伴跌倒可能与容量不足或体位性因素相关，但缺乏血压、钠、肾功能数据，仅适合作为低容量证据存在时的谨慎补液选择。"
+        }
+      ],
+      "recommendation_reasons": {
+        "syncope": "晕厥患者需优先排查心律失常、低血压、缺氧、代谢异常和药物相关因素，药物治疗应避免掩盖病因。",
+        "hypertension": "高血压诊断支持慢病风险控制，但急性晕厥场景下不宜在未复核血压趋势时强化降压。",
+        "hyperlipidemia": "高脂血症支持启动或延续中等强度他汀治疗。"
+      },
+      "risk_alerts": [
+        "缺失心率、血压、血钾、肌酐和INR，影响降压、补液、抗栓和电解质相关用药安全排序。",
+        "头部挫伤和擦伤背景下，药物性抗凝或抗血小板预防需先排除颅内出血和活动性出血。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "经验性抗凝治疗",
+          "reason": "仅有晕厥和跌倒资料，无血栓诊断，且头部外伤和INR缺失使出血风险不可评估。"
+        },
+        {
+          "drug_name": "强效利尿剂",
+          "reason": "无容量超负荷证据，可能加重体位性低血压、电解质异常和晕厥风险。"
+        },
+        {
+          "drug_name": "短效强降压药",
+          "reason": "急性晕厥背景下可能诱发低血压或再次跌倒。"
+        }
+      ],
+      "overall_confidence": 0.61,
+      "summary_reason": "心血管专科支持以监测和风险控制为主，降压和补液均需依赖复测生命体征及实验室结果。",
+      "conversation_text": "心血管智能体认为本例的主轴是晕厥合并跌倒及既往高血压、高脂血症。当前缺乏生命体征和关键实验室数据，因此不建议激进抗栓、利尿或快速降压。可考虑在复核血压后使用氨氯地平，在复核肝肾功能后使用阿托伐他汀，并在低容量证据明确时谨慎补液。"
+    },
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "氧气",
+          "confidence": 0.78,
+          "reason": "诊断包含急性低氧性呼吸衰竭，氧疗是最直接的支持治疗，目标是纠正低氧并维持合适氧饱和度。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "异丙托溴铵雾化吸入",
+          "confidence": 0.36,
+          "reason": "若存在喘鸣、支气管痉挛或慢阻肺样表现，可作为支气管舒张支持；当前无明确气道痉挛资料，故置信度较低。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "沙丁胺醇雾化吸入",
+          "confidence": 0.32,
+          "reason": "仅在支气管痉挛证据存在时考虑；因血钾缺失且β受体激动剂可影响钾和心率，需低优先级并复核。"
+        }
+      ],
+      "recommendation_reasons": {
+        "acute_hypoxic_respiratory_failure": "低氧性呼吸衰竭优先纠正氧合并寻找病因，药物治疗需依据感染、支气管痉挛、心衰或误吸证据决定。",
+        "missing_spo2": "缺失氧饱和度和呼吸频率，不能判断氧疗强度及是否需要升级通气支持。"
+      },
+      "risk_alerts": [
+        "血钾缺失时，沙丁胺醇等β受体激动剂可能增加心律和电解质风险。",
+        "血糖缺失时，不宜经验性推荐系统糖皮质激素。",
+        "钠值缺失且存在晕厥/跌倒，镇静药和阿片类药物需谨慎，以免加重意识和呼吸抑制。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "系统性糖皮质激素",
+          "reason": "无哮喘、慢阻肺急性加重或炎症性气道疾病证据，且血糖缺失。"
+        },
+        {
+          "drug_name": "经验性广谱抗生素",
+          "reason": "无发热、白细胞、影像学或微生物证据支持感染。"
+        },
+        {
+          "drug_name": "苯二氮卓类镇静药",
+          "reason": "低氧性呼吸衰竭和晕厥背景下可能增加呼吸抑制和跌倒风险。"
+        }
+      ],
+      "overall_confidence": 0.58,
+      "summary_reason": "呼吸专科明确支持氧疗，但不支持在缺乏病因证据时经验性叠加抗生素、激素或镇静药。",
+      "conversation_text": "呼吸智能体认为急性低氧性呼吸衰竭需要优先氧疗和连续氧饱和度监测。支气管扩张剂只在存在喘鸣或气道阻塞证据时使用。由于血钾、血糖和钠均缺失，β受体激动剂、激素和镇静药均需降权。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.64,
+          "reason": "高脂血症为明确共病，若无严重肝损伤或既往不耐受，可用于长期代谢和心血管风险控制。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "葡萄糖注射液",
+          "confidence": 0.24,
+          "reason": "仅在低血糖被证实或患者不能进食且存在低血糖风险时使用；当前血糖缺失，不应常规给药。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "氯化钾",
+          "confidence": 0.18,
+          "reason": "仅在低钾被证实且肾功能允许时补充；当前血钾和肌酐缺失，需列入复核而非直接推荐。"
+        }
+      ],
+      "recommendation_reasons": {
+        "metabolic_monitoring": "血糖、钠、钾、肌酐均缺失，处方前需补齐基础代谢安全数据。",
+        "lipid_control": "高脂血症支持他汀类风险控制。",
+        "electrolyte_support": "晕厥和低氧场景下电解质异常可能诱发心律失常或意识改变，但不能在无实验室数据时盲目纠正。"
+      },
+      "risk_alerts": [
+        "血糖缺失，不应经验性使用胰岛素、磺脲类或含糖补液。",
+        "血钠缺失，补液速度和液体类型需谨慎。",
+        "肌酐缺失，二甲双胍、肾排泄药物和补钾均需复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "胰岛素",
+          "reason": "无糖尿病或高血糖资料，血糖缺失时使用可导致低血糖。"
+        },
+        {
+          "drug_name": "二甲双胍",
+          "reason": "无糖尿病适应证且肌酐/eGFR缺失，急性低氧状态下需谨慎。"
+        },
+        {
+          "drug_name": "经验性补钾",
+          "reason": "血钾和肾功能未知，可能导致高钾或心律风险。"
+        }
+      ],
+      "overall_confidence": 0.55,
+      "summary_reason": "内分泌/代谢专科支持他汀风险控制和实验室复核，不支持盲目降糖、补钾或含糖补液。",
+      "conversation_text": "内分泌/代谢智能体强调当前最大限制是代谢数据缺失。高脂血症可以支持他汀类药物，但血糖、钠、钾、肌酐未返回前，不应经验性使用胰岛素、二甲双胍、补钾或含糖液体。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "氧气",
+          "阿托伐他汀",
+          "对乙酰氨基酚",
+          "0.9%氯化钠冲管液"
+        ],
+        "cautioned_drugs": [
+          "氨氯地平",
+          "0.9%氯化钠注射液",
+          "依诺肝素"
+        ],
+        "conflict_notes": [
+          "降压药需避免加重晕厥或体位性低血压。",
+          "药物性血栓预防需考虑头部外伤和INR缺失。"
+        ],
+        "priority_comment": "优先心电监测、复核血压趋势、排除出血和明确晕厥病因后再强化药物治疗。"
+      },
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "氧气",
+          "0.9%氯化钠冲管液"
+        ],
+        "cautioned_drugs": [
+          "沙丁胺醇",
+          "异丙托溴铵",
+          "阿片类镇痛药"
+        ],
+        "conflict_notes": [
+          "β受体激动剂可能影响血钾和心率，需有支气管痉挛证据。",
+          "镇静止痛药可能加重低氧和呼吸抑制。"
+        ],
+        "priority_comment": "低氧性呼吸衰竭先给予氧疗和监测，病因未明前不常规使用抗生素或激素。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "阿托伐他汀",
+          "对乙酰氨基酚"
+        ],
+        "cautioned_drugs": [
+          "葡萄糖注射液",
+          "氯化钾",
+          "胰岛素",
+          "二甲双胍"
+        ],
+        "conflict_notes": [
+          "血糖、钠、钾、肌酐缺失时不宜盲目纠正代谢异常。",
+          "急性低氧状态下二甲双胍缺乏适应证且存在乳酸酸中毒顾虑。"
+        ],
+        "priority_comment": "先补齐基础实验室，药物处方以低代谢风险和可监测药物为主。"
+      }
+    ],
+    "consensus_notes": [
+      "最终处方不得基于当前住院真实处方，因为输入未提供drug_list。",
+      "首选方案应覆盖低氧支持、疼痛/创面支持、高脂血症风险控制、管路冲管和待复核项目。",
+      "因头部外伤、晕厥和关键实验室缺失，抗凝、强化降压、强利尿、系统激素、经验性抗生素和镇静药均不作为首选。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "保守安全优先综合方案",
+        "drugs": [
+          "氧气",
+          "阿托伐他汀",
+          "对乙酰氨基酚",
+          "外用莫匹罗星或杆菌肽软膏",
+          "破伤风类毒素疫苗",
+          "0.9%氯化钠冲管液"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "氧气"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [
+            "外用莫匹罗星或杆菌肽软膏"
+          ],
+          "prophylaxis_prevention_medication": [
+            "破伤风类毒素疫苗"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "氨氯地平",
+            "依诺肝素",
+            "0.9%氯化钠注射液",
+            "氯化钾",
+            "葡萄糖注射液"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "在低氧性呼吸衰竭、晕厥跌倒、头部外伤和关键实验室缺失背景下，优先选择低风险支持和慢病风险控制药物，同时把可能受生命体征、影像和实验室影响的药物列为复核。",
+        "aggregate_score": 0.78
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "血压持续升高时的心血管强化方案",
+        "drugs": [
+          "氧气",
+          "阿托伐他汀",
+          "氨氯地平",
+          "对乙酰氨基酚",
+          "0.9%氯化钠冲管液"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "氧气"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "氨氯地平"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "依诺肝素",
+            "氯化钾",
+            "葡萄糖注射液"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "呼吸"
+        ],
+        "rationale": "若复测显示持续高血压且无低血压、体位性低血压或急性脑出血证据，可加入氨氯地平；但当前生命体征缺失，因此安全排序低于方案A。",
+        "aggregate_score": 0.66
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "存在支气管痉挛证据时的呼吸强化方案",
+        "drugs": [
+          "氧气",
+          "异丙托溴铵雾化吸入",
+          "沙丁胺醇雾化吸入",
+          "阿托伐他汀",
+          "对乙酰氨基酚",
+          "0.9%氯化钠冲管液"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "氧气",
+            "异丙托溴铵雾化吸入",
+            "沙丁胺醇雾化吸入"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠冲管液"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "血钾复核后再使用沙丁胺醇",
+            "血糖复核后再考虑系统激素",
+            "感染证据复核后再考虑抗菌药"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "仅当查体或肺功能/病史提示喘鸣、支气管痉挛或阻塞性气道疾病时成立；因血钾和心率数据缺失，β受体激动剂需要复核。",
+        "aggregate_score": 0.52
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "保守安全优先综合方案",
+      "drugs": [
+        "氧气",
+        "阿托伐他汀",
+        "对乙酰氨基酚",
+        "外用莫匹罗星或杆菌肽软膏",
+        "破伤风类毒素疫苗",
+        "0.9%氯化钠冲管液"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "氧气"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "外用莫匹罗星或杆菌肽软膏"
+        ],
+        "prophylaxis_prevention_medication": [
+          "破伤风类毒素疫苗"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "氨氯地平",
+          "依诺肝素",
+          "0.9%氯化钠注射液",
+          "氯化钾",
+          "葡萄糖注射液"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "首选低风险支持性处方，覆盖低氧、疼痛、创面、破伤风预防、高脂血症风险控制和管路冲管，同时避免在缺失生命体征和实验室时启动高风险药物。",
+      "aggregate_score": 0.78
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "血压持续升高时的心血管强化方案",
+      "drugs": [
+        "氧气",
+        "阿托伐他汀",
+        "氨氯地平",
+        "对乙酰氨基酚",
+        "0.9%氯化钠冲管液"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "氧气"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "依诺肝素",
+          "氯化钾",
+          "葡萄糖注射液"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "呼吸"
+      ],
+      "rationale": "适用于复测血压持续升高且无体位性低血压、休克或颅内出血证据的情况。",
+      "aggregate_score": 0.66
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "存在支气管痉挛证据时的呼吸强化方案",
+      "drugs": [
+        "氧气",
+        "异丙托溴铵雾化吸入",
+        "沙丁胺醇雾化吸入",
+        "阿托伐他汀",
+        "对乙酰氨基酚",
+        "0.9%氯化钠冲管液"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "氧气",
+          "异丙托溴铵雾化吸入",
+          "沙丁胺醇雾化吸入"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "血钾复核后再使用沙丁胺醇",
+          "血糖复核后再考虑系统激素",
+          "感染证据复核后再考虑抗菌药"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "适用于存在喘鸣或阻塞性气道表现的亚型；目前缺乏相应证据，因此不作为最终首选。",
+      "aggregate_score": 0.52
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "保守安全优先综合方案",
+      "drugs": [
+        "氧气",
+        "阿托伐他汀",
+        "对乙酰氨基酚",
+        "外用莫匹罗星或杆菌肽软膏",
+        "破伤风类毒素疫苗",
+        "0.9%氯化钠冲管液"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "氧气"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚"
+        ],
+        "nursing_support_medication": [
+          "外用莫匹罗星或杆菌肽软膏"
+        ],
+        "prophylaxis_prevention_medication": [
+          "破伤风类毒素疫苗"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠冲管液"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "氨氯地平：需复核连续血压、体位性血压和晕厥病因",
+          "依诺肝素：需排除颅内出血或活动性出血并复核INR/血小板",
+          "0.9%氯化钠注射液：需复核容量状态、钠和肾功能",
+          "氯化钾：仅在低钾且肾功能允许时使用",
+          "葡萄糖注射液：仅在低血糖或明确营养/补液适应证时使用"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "最终选择方案A，因为其在资料缺失、跌倒外伤和低氧背景下安全边际最高，且能覆盖核心诊断和常见住院支持层级。",
+      "aggregate_score": 0.78
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "A",
+        "rank": 1,
+        "aggregate_score": 0.78,
+        "safety_comment": "低风险支持为主，适合当前信息不足场景。"
+      },
+      {
+        "plan_id": "B",
+        "rank": 2,
+        "aggregate_score": 0.66,
+        "safety_comment": "需确认持续高血压且排除体位性低血压后使用。"
+      },
+      {
+        "plan_id": "C",
+        "rank": 3,
+        "aggregate_score": 0.52,
+        "safety_comment": "需有支气管痉挛证据和血钾复核。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_creatinine_24h",
+        "severity": "moderate",
+        "message": "肌酐缺失，影响肾排泄药物、补钾、抗凝和补液安全性。"
+      },
+      {
+        "risk_id": "missing_potassium_24h",
+        "severity": "moderate",
+        "message": "血钾缺失，影响β受体激动剂、利尿剂、ACEI/ARB、补钾和心律风险判断。"
+      },
+      {
+        "risk_id": "missing_glucose_24h",
+        "severity": "moderate",
+        "message": "血糖缺失，影响胰岛素、含糖补液和系统激素安全性。"
+      },
+      {
+        "risk_id": "missing_inr_24h",
+        "severity": "moderate",
+        "message": "INR缺失且存在头部外伤，抗凝和抗血小板强化治疗需谨慎。"
+      },
+      {
+        "risk_id": "head_trauma_fall_context",
+        "severity": "high",
+        "message": "头部挫伤/擦伤伴跌倒，需排除颅内出血后再考虑药物性血栓预防或抗栓治疗。"
+      },
+      {
+        "risk_id": "acute_hypoxic_respiratory_failure",
+        "severity": "high",
+        "message": "急性低氧性呼吸衰竭提示需优先氧疗和呼吸监测，避免镇静和阿片类药物叠加。"
+      }
+    ],
+    "safety_summary": "安全审核通过方案A作为最终推荐。该方案不声称参考真实住院处方，主要基于诊断、共病和输入知识库规则。由于生命体征和关键实验室缺失，所有降压强化、抗凝、补液、补钾、降糖、激素、抗生素和支气管扩张药均需在获得相应证据后再启用。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由智能体",
+      "content": "识别主要问题为晕厥跌倒、急性低氧性呼吸衰竭、高血压和高脂血症；路由至心血管、呼吸、内分泌/代谢，心血管为牵头专科。"
+    },
+    {
+      "step": 2,
+      "agent": "心血管专科智能体",
+      "content": "建议以心电和血压复核为基础，支持阿托伐他汀；氨氯地平需在持续高血压且无体位性低血压时使用；避免经验性抗凝和强利尿。"
+    },
+    {
+      "step": 3,
+      "agent": "呼吸专科智能体",
+      "content": "急性低氧性呼吸衰竭支持氧疗；无感染、喘鸣或慢阻肺证据时不常规使用抗生素、激素或支气管扩张剂。"
+    },
+    {
+      "step": 4,
+      "agent": "内分泌/代谢专科智能体",
+      "content": "高脂血症支持他汀；因血糖、钠、钾、肌酐缺失，不建议盲目使用胰岛素、二甲双胍、补钾或含糖补液。"
+    },
+    {
+      "step": 5,
+      "agent": "MDT协商智能体",
+      "content": "形成A、B、C三个候选方案；A为保守安全优先方案，B为血压持续升高时的强化方案，C为存在支气管痉挛证据时的呼吸强化方案。"
+    },
+    {
+      "step": 6,
+      "agent": "安全审核智能体",
+      "content": "综合头部外伤、低氧性呼吸衰竭和实验室缺失风险，选择方案A作为最终处方推荐，并将高风险药物列入需复核清单。"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

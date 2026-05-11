@@ -1,0 +1,1654 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "18817606",
+      "hadm_id": "21617693",
+      "gender": "F",
+      "age": 34.0
+    },
+    "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+        "Personal history of COVID-19",
+        "Single live birth",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      "内分泌/代谢": [
+        "38 weeks gestation of pregnancy",
+        "Diseases of the respiratory system complicating childbirth",
+        "Second degree perineal laceration during delivery",
+        "Streptococcus B carrier state complicating childbirth",
+        "Unspecified asthma, uncomplicated"
+      ]
+    },
+    "comorbidity_list": [
+      "38 weeks gestation of pregnancy",
+      "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+      "Diseases of the respiratory system complicating childbirth",
+      "Personal history of COVID-19",
+      "Second degree perineal laceration during delivery",
+      "Single live birth",
+      "Streptococcus B carrier state complicating childbirth",
+      "Type 2 diabetes mellitus without complications",
+      "Unspecified asthma, uncomplicated"
+    ],
+    "key_labs": {
+      "creatinine_24h": 0.6,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 32,
+      "subject_id": "18817606",
+      "hadm_id": "21617693",
+      "specialty_cnt": 2,
+      "specialty_list": "呼吸 | 内分泌/代谢",
+      "gender": "F",
+      "anchor_age": 34,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "14/9/2180 09:21:00",
+      "dischtime": "17/9/2180 13:02:00",
+      "admission_type": "URGENT",
+      "race": "OTHER",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Pre-existing type 2 diabetes mellitus, in childbirth",
+      "comorbidity_list": "38 weeks gestation of pregnancy | Abnormality in fetal heart rate and rhythm complicating labor and delivery | Diseases of the respiratory system complicating childbirth | Personal history of COVID-19 | Second degree perineal laceration during delivery | Single live birth | Streptococcus B carrier state complicating childbirth | Type 2 diabetes mellitus without complications | Unspecified asthma, uncomplicated",
+      "specialty_agents": "呼吸 | 内分泌/代谢",
+      "drug_list": "acetaminophen | albuterol inhaler | calcium carbonate | dermoplast spray | docusate sodium | enoxaparin sodium | fluticasone-salmeterol diskus (250/50) | fluticasone propionate 110mcg | ibuprofen | lactated ringers | ondansetron | simethicone | sodium chloride 0.9%  flush",
+      "creatinine_24h": 0.6,
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Pre-existing type 2 diabetes mellitus, in childbirth",
+        "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+        "Personal history of COVID-19",
+        "Single live birth",
+        "Type 2 diabetes mellitus without complications"
+      ],
+      "内分泌/代谢": [
+        "38 weeks gestation of pregnancy",
+        "Diseases of the respiratory system complicating childbirth",
+        "Second degree perineal laceration during delivery",
+        "Streptococcus B carrier state complicating childbirth",
+        "Unspecified asthma, uncomplicated"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "albuterol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
+        },
+        {
+          "rank": 2,
+          "drug_name": "ipratropium",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
+        },
+        {
+          "rank": 3,
+          "drug_name": "budesonide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
+        },
+        {
+          "rank": 4,
+          "drug_name": "fluticasone",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+        },
+        {
+          "rank": 5,
+          "drug_name": "salmeterol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metformin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+        },
+        {
+          "rank": 3,
+          "drug_name": "glipizide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+        },
+        {
+          "rank": 4,
+          "drug_name": "insulin glargine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
+        },
+        {
+          "rank": 5,
+          "drug_name": "insulin lispro",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "呼吸与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 2 个专科：呼吸, 内分泌/代谢。",
+      "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "insulin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "insulin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "budesonide",
+          "fluticasone",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "albuterol",
+        "ipratropium",
+        "budesonide",
+        "fluticasone",
+        "salmeterol",
+        "insulin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "albuterol",
+          "ipratropium"
+        ],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol",
+          "insulin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "albuterol",
+            "ipratropium"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "budesonide",
+            "fluticasone",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {
+      "status": "可作为候选，需监测",
+      "preferred_plan_id": "mdt_consensus",
+      "baseline_risk_assessment": {
+        "overall_risk_level": "中度",
+        "risks": [
+          {
+            "risk_domain": "血糖波动风险",
+            "basis": "病例存在妊娠/分娩相关的既存2型糖尿病，但首24小时未提供血糖值。",
+            "causal_note": "该风险为入院早期基线风险，不应归因于候选药物。"
+          },
+          {
+            "risk_domain": "呼吸道反应性风险",
+            "basis": "病例存在未特指哮喘及分娩相关呼吸系统疾病背景，但首24小时缺少SpO2、呼吸频率和体温等生命体征。",
+            "causal_note": "该风险为既有诊断背景，不代表候选支气管扩张剂或吸入激素已导致异常。"
+          },
+          {
+            "risk_domain": "产后感染/创面相关风险",
+            "basis": "病例有B族链球菌携带状态及二度会阴裂伤，但未提供微生物阳性结果、发热或白细胞等证据。",
+            "causal_note": "仅作为方案适配时的背景风险提示。"
+          },
+          {
+            "risk_domain": "肾功能相关风险",
+            "basis": "首24小时肌酐0.6，未提示肾功能受损；BUN、电解质缺失。",
+            "causal_note": "当前无证据支持肾功能高风险。"
+          }
+        ]
+      },
+      "medication_fit_review": [
+        {
+          "plan_id": "mdt_consensus",
+          "fit": "总体适配",
+          "review": "albuterol、ipratropium、吸入性糖皮质激素和salmeterol与哮喘/呼吸系统疾病背景基本适配；insulin与2型糖尿病分娩背景适配。需注意血糖数据缺失，胰岛素应依实际血糖趋势调整；salmeterol应避免脱离吸入激素单独使用；budesonide与fluticasone同属吸入激素，需人工确认是否重复治疗。",
+          "risk_action": "保留，提示监测"
+        },
+        {
+          "plan_id": "lead_specialty_adjusted",
+          "fit": "总体适配",
+          "review": "药物组成与mdt_consensus相同，安全适配性相近；同样需要关注胰岛素给药依据、LABA联合ICS使用以及吸入激素重复问题。",
+          "risk_action": "可作为备选，提示监测"
+        },
+        {
+          "plan_id": "conservative_consensus",
+          "fit": "部分适配",
+          "review": "呼吸治疗较保守，减少salmeterol和insulin相关监测负担，但未覆盖2型糖尿病分娩背景下的血糖控制需求；在缺少血糖数据时更保守，但对主要内分泌风险适配不足。",
+          "risk_action": "可作为低冲突备选，但不优先"
+        }
+      ],
+      "monitoring_recommendations": [
+        "监测床旁或实验室血糖，根据血糖趋势决定胰岛素剂量，避免低血糖。",
+        "监测呼吸症状、呼吸频率、SpO2及支气管扩张剂使用反应。",
+        "使用albuterol或salmeterol时关注心悸、心率变化；若补充获得钾值，应关注低钾风险。",
+        "核对budesonide与fluticasone是否为重复吸入激素方案，必要时保留一种明确方案。",
+        "关注产后会阴裂伤局部感染迹象和体温变化；当前资料不足以提示已存在感染。"
+      ],
+      "human_review_required": true,
+      "safety_explanation": "首24小时可用检验仅显示肌酐0.6，未见明确肾功能高风险；血糖、电解质、凝血、肝胆指标和生命体征缺失，因此安全审核应将糖尿病分娩、哮喘/呼吸系统疾病、B族链球菌携带和会阴裂伤视为基线风险背景，而不是候选药物导致的异常。mdt_consensus覆盖呼吸和内分泌两类主要风险，整体更适配，但因血糖数据缺失、吸入激素可能重复以及salmeterol需与吸入激素配合使用，建议保留方案并进行监测和人工复核。王老师，回答结束",
+      "enabled": true,
+      "provider": "cursor_cloud_agent"
+    }
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "呼吸",
+          "内分泌/代谢"
+        ],
+        "lead_specialty": "呼吸",
+        "specialty_related_diagnoses": {
+          "呼吸": [
+            "Pre-existing type 2 diabetes mellitus, in childbirth",
+            "Abnormality in fetal heart rate and rhythm complicating labor and delivery",
+            "Personal history of COVID-19",
+            "Single live birth",
+            "Type 2 diabetes mellitus without complications"
+          ],
+          "内分泌/代谢": [
+            "38 weeks gestation of pregnancy",
+            "Diseases of the respiratory system complicating childbirth",
+            "Second degree perineal laceration during delivery",
+            "Streptococcus B carrier state complicating childbirth",
+            "Unspecified asthma, uncomplicated"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "呼吸_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "呼吸",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "albuterol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates beta 2 receptors to relax bronchial smooth muscle"
+          },
+          {
+            "rank": 2,
+            "drug_name": "ipratropium",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；blocks muscarinic receptors to reduce bronchoconstriction"
+          },
+          {
+            "rank": 3,
+            "drug_name": "budesonide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation through glucocorticoid receptor effect"
+          },
+          {
+            "rank": 4,
+            "drug_name": "fluticasone",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces airway inflammation and exacerbation risk"
+          },
+          {
+            "rank": 5,
+            "drug_name": "salmeterol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；long acting beta 2 agonist promotes bronchodilation"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, Pre-existing type 2 diabetes mellitus, in childbirth, Abnormality in fetal heart rate and rhythm complicating labor and delivery 生成候选药物，当前首选药物包括 albuterol, ipratropium, budesonide。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metformin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+          },
+          {
+            "rank": 3,
+            "drug_name": "glipizide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+          },
+          {
+            "rank": 4,
+            "drug_name": "insulin glargine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；provides basal insulin replacement over prolonged duration"
+          },
+          {
+            "rank": 5,
+            "drug_name": "insulin lispro",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；rapid insulin analog covers meals and correction dosing"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Pre-existing type 2 diabetes mellitus, in childbirth, 38 weeks gestation of pregnancy, Diseases of the respiratory system complicating childbirth 生成候选药物，当前首选药物包括 insulin, metformin, glipizide。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "呼吸_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "albuterol",
+          "ipratropium",
+          "budesonide",
+          "fluticasone",
+          "salmeterol"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "呼吸与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "insulin",
+          "metformin",
+          "glipizide",
+          "insulin glargine",
+          "insulin lispro"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 5 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 2 个专科：呼吸, 内分泌/代谢。",
+          "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "albuterol",
+            "ipratropium",
+            "budesonide",
+            "fluticasone",
+            "salmeterol",
+            "insulin"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "albuterol",
+              "ipratropium"
+            ],
+            "risk_modifying_therapy": [
+              "insulin"
+            ],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
+            "requires_review": [
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "ibuprofen",
+              "ketorolac",
+              "vitamin d"
+            ]
+          },
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "呼吸"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone",
+              "salmeterol",
+              "insulin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "salmeterol",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "albuterol",
+              "ipratropium",
+              "budesonide",
+              "fluticasone"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "albuterol",
+                "ipratropium"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "budesonide",
+                "fluticasone",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {
+          "status": "可作为候选，需监测",
+          "preferred_plan_id": "mdt_consensus",
+          "baseline_risk_assessment": {
+            "overall_risk_level": "中度",
+            "risks": [
+              {
+                "risk_domain": "血糖波动风险",
+                "basis": "病例存在妊娠/分娩相关的既存2型糖尿病，但首24小时未提供血糖值。",
+                "causal_note": "该风险为入院早期基线风险，不应归因于候选药物。"
+              },
+              {
+                "risk_domain": "呼吸道反应性风险",
+                "basis": "病例存在未特指哮喘及分娩相关呼吸系统疾病背景，但首24小时缺少SpO2、呼吸频率和体温等生命体征。",
+                "causal_note": "该风险为既有诊断背景，不代表候选支气管扩张剂或吸入激素已导致异常。"
+              },
+              {
+                "risk_domain": "产后感染/创面相关风险",
+                "basis": "病例有B族链球菌携带状态及二度会阴裂伤，但未提供微生物阳性结果、发热或白细胞等证据。",
+                "causal_note": "仅作为方案适配时的背景风险提示。"
+              },
+              {
+                "risk_domain": "肾功能相关风险",
+                "basis": "首24小时肌酐0.6，未提示肾功能受损；BUN、电解质缺失。",
+                "causal_note": "当前无证据支持肾功能高风险。"
+              }
+            ]
+          },
+          "medication_fit_review": [
+            {
+              "plan_id": "mdt_consensus",
+              "fit": "总体适配",
+              "review": "albuterol、ipratropium、吸入性糖皮质激素和salmeterol与哮喘/呼吸系统疾病背景基本适配；insulin与2型糖尿病分娩背景适配。需注意血糖数据缺失，胰岛素应依实际血糖趋势调整；salmeterol应避免脱离吸入激素单独使用；budesonide与fluticasone同属吸入激素，需人工确认是否重复治疗。",
+              "risk_action": "保留，提示监测"
+            },
+            {
+              "plan_id": "lead_specialty_adjusted",
+              "fit": "总体适配",
+              "review": "药物组成与mdt_consensus相同，安全适配性相近；同样需要关注胰岛素给药依据、LABA联合ICS使用以及吸入激素重复问题。",
+              "risk_action": "可作为备选，提示监测"
+            },
+            {
+              "plan_id": "conservative_consensus",
+              "fit": "部分适配",
+              "review": "呼吸治疗较保守，减少salmeterol和insulin相关监测负担，但未覆盖2型糖尿病分娩背景下的血糖控制需求；在缺少血糖数据时更保守，但对主要内分泌风险适配不足。",
+              "risk_action": "可作为低冲突备选，但不优先"
+            }
+          ],
+          "monitoring_recommendations": [
+            "监测床旁或实验室血糖，根据血糖趋势决定胰岛素剂量，避免低血糖。",
+            "监测呼吸症状、呼吸频率、SpO2及支气管扩张剂使用反应。",
+            "使用albuterol或salmeterol时关注心悸、心率变化；若补充获得钾值，应关注低钾风险。",
+            "核对budesonide与fluticasone是否为重复吸入激素方案，必要时保留一种明确方案。",
+            "关注产后会阴裂伤局部感染迹象和体温变化；当前资料不足以提示已存在感染。"
+          ],
+          "human_review_required": true,
+          "safety_explanation": "首24小时可用检验仅显示肌酐0.6，未见明确肾功能高风险；血糖、电解质、凝血、肝胆指标和生命体征缺失，因此安全审核应将糖尿病分娩、哮喘/呼吸系统疾病、B族链球菌携带和会阴裂伤视为基线风险背景，而不是候选药物导致的异常。mdt_consensus覆盖呼吸和内分泌两类主要风险，整体更适配，但因血糖数据缺失、吸入激素可能重复以及salmeterol需与吸入激素配合使用，建议保留方案并进行监测和人工复核。王老师，回答结束",
+          "enabled": true,
+          "provider": "cursor_cloud_agent"
+        }
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": true
+}

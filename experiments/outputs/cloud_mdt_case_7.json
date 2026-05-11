@@ -1,0 +1,647 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10001401",
+      "hadm_id": "21544441",
+      "gender": "F",
+      "age": 89.0
+    },
+    "primary_diagnosis": "Malignant neoplasm of bladder neck",
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Malignant neoplasm of bladder neck",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Leiomyoma of uterus, unspecified",
+        "Postprocedural hypothyroidism"
+      ]
+    },
+    "comorbidity_list": [
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Leiomyoma of uterus, unspecified",
+      "Personal history of nicotine dependence",
+      "Postprocedural hypothyroidism"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "raw_case_summary": {
+      "subject_id": "10001401",
+      "hadm_id": "21544441",
+      "gender": "F",
+      "anchor_age": 89,
+      "anchor_year_group": "2014 - 2016",
+      "admittime": "4/6/2131 00:00:00",
+      "dischtime": "15/6/2131 16:10:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Malignant neoplasm of bladder neck",
+      "comorbidity_list": "Essential (primary) hypertension | Hyperlipidemia, unspecified | Leiomyoma of uterus, unspecified | Personal history of nicotine dependence | Postprocedural hypothyroidism",
+      "specialty_agents": "内分泌/代谢 | 心血管 | 肿瘤/血液",
+      "drug_list": "acetaminophen | acetaminophen iv | aluminum-magnesium hydrox.-simethicone | atorvastatin | bisacodyl | cefazolin | cepacol (sore throat lozenge) | chloraseptic throat spray | d5 1/2ns | docusate sodium | enoxaparin sodium | heparin | hydromorphone (dilaudid) | ibuprofen | iso-osmotic dextrose | ketorolac | lactated ringers | levothyroxine sodium | metronidazole | morphine sulfate | nitrofurantoin monohyd (macrobid) | ns | ondansetron | oxycodone (immediate release) | pantoprazole | pneumococcal 23-valent polysaccharide vaccine | potassium chl 20 meq / 1000 ml d5 1/2 ns | promethazine | sodium chloride 0.9% | sodium chloride 0.9%  flush | soln | vial",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Malignant neoplasm of bladder neck",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Leiomyoma of uterus, unspecified",
+        "Postprocedural hypothyroidism"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "levothyroxine sodium",
+          "confidence": 0.72,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "vitamin d",
+          "confidence": 0.67,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.62,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "calcium carbonate",
+          "confidence": 0.57,
+          "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "ondansetron",
+          "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
+      "summary_reason": "内分泌/代谢智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant neoplasm of bladder neck, Hyperlipidemia, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "heparin",
+          "confidence": 0.77,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+        },
+        {
+          "rank": 2,
+          "drug_name": "metoprolol tartrate",
+          "confidence": 0.72,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+        },
+        {
+          "rank": 3,
+          "drug_name": "aspirin",
+          "confidence": 0.67,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+        },
+        {
+          "rank": 4,
+          "drug_name": "lisinopril",
+          "confidence": 0.62,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+        },
+        {
+          "rank": 5,
+          "drug_name": "hydralazine",
+          "confidence": 0.57,
+          "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+        "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+        "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "oxycodone (immediate release)",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "senna",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "docusate sodium",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        },
+        {
+          "drug_name": "potassium chloride",
+          "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+        }
+      ],
+      "overall_confidence": 0.89,
+      "summary_reason": "心血管智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Essential (primary) hypertension, Leiomyoma of uterus, unspecified, Postprocedural hypothyroidism 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+    }
+  ],
+  "candidate_plans": [
+    {
+      "plan_id": "plan_a",
+      "plan_name": "主专科优先方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+      "aggregate_score": 10.35
+    },
+    {
+      "plan_id": "plan_b",
+      "plan_name": "多专科平衡方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "优先保留被多个专科共同推荐的候选药物。",
+      "aggregate_score": 10.35
+    },
+    {
+      "plan_id": "plan_c",
+      "plan_name": "保守低负荷方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "减少药物数量，保留共识度较高的少量核心药物。",
+      "aggregate_score": 6.359999999999999
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_a",
+      "plan_name": "主专科优先方案",
+      "drugs": [
+        "insulin",
+        "levothyroxine sodium",
+        "vitamin d",
+        "sodium bicarbonate",
+        "calcium carbonate"
+      ],
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+      "aggregate_score": 10.35
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_a",
+        "plan_name": "主专科优先方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "aggregate_score": 10.35,
+        "risk_penalty": 0,
+        "final_score": 10.35,
+        "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。"
+      },
+      {
+        "plan_id": "plan_b",
+        "plan_name": "多专科平衡方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d",
+          "sodium bicarbonate",
+          "calcium carbonate"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "aggregate_score": 10.35,
+        "risk_penalty": 0,
+        "final_score": 10.35,
+        "rationale": "优先保留被多个专科共同推荐的候选药物。"
+      },
+      {
+        "plan_id": "plan_c",
+        "plan_name": "保守低负荷方案",
+        "drugs": [
+          "insulin",
+          "levothyroxine sodium",
+          "vitamin d"
+        ],
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "aggregate_score": 6.359999999999999,
+        "risk_penalty": 0,
+        "final_score": 6.359999999999999,
+        "rationale": "减少药物数量，保留共识度较高的少量核心药物。"
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Malignant neoplasm of bladder neck",
+            "Hyperlipidemia, unspecified",
+            "Personal history of nicotine dependence"
+          ],
+          "心血管": [
+            "Essential (primary) hypertension",
+            "Leiomyoma of uterus, unspecified",
+            "Postprocedural hypothyroidism"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "levothyroxine sodium",
+            "confidence": 0.72,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "vitamin d",
+            "confidence": 0.67,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "sodium bicarbonate",
+            "confidence": 0.62,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "calcium carbonate",
+            "confidence": 0.57,
+            "reason": "与诊断 Hyperlipidemia, unspecified 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "ondansetron",
+            "reason": "在 Hyperlipidemia, unspecified 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
+        "summary_reason": "内分泌/代谢智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Malignant neoplasm of bladder neck, Hyperlipidemia, unspecified, Personal history of nicotine dependence 生成候选药物，当前首选药物包括 insulin, levothyroxine sodium, vitamin d。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "heparin",
+            "confidence": 0.77,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          },
+          {
+            "rank": 2,
+            "drug_name": "metoprolol tartrate",
+            "confidence": 0.72,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          },
+          {
+            "rank": 3,
+            "drug_name": "aspirin",
+            "confidence": 0.67,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          },
+          {
+            "rank": 4,
+            "drug_name": "lisinopril",
+            "confidence": 0.62,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          },
+          {
+            "rank": 5,
+            "drug_name": "hydralazine",
+            "confidence": 0.57,
+            "reason": "与诊断 Essential (primary) hypertension 在知识库中存在映射"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_alignment": "推荐药物优先依据当前专科相关诊断与 disease_drug_map 的对应关系生成。",
+          "knowledge_support": "候选药物来自本专科知识库中标注为核心治疗药的条目。",
+          "comorbidity_constraint": "已结合共病信息，对潜在冲突药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "oxycodone (immediate release)",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "senna",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "docusate sodium",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          },
+          {
+            "drug_name": "potassium chloride",
+            "reason": "在 Essential (primary) hypertension 的映射中被列为低优先级或辅助药"
+          }
+        ],
+        "overall_confidence": 0.89,
+        "summary_reason": "心血管智能体已基于核心病种、病药映射和风险规则生成候选药物。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Essential (primary) hypertension, Leiomyoma of uterus, unspecified, Postprocedural hypothyroidism 生成候选药物，当前首选药物包括 heparin, metoprolol tartrate, aspirin。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "coordination_agent",
+      "message_type": "candidate_plans",
+      "content": {
+        "plans": [
+          {
+            "plan_id": "plan_a",
+            "plan_name": "主专科优先方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+            "aggregate_score": 10.35
+          },
+          {
+            "plan_id": "plan_b",
+            "plan_name": "多专科平衡方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "优先保留被多个专科共同推荐的候选药物。",
+            "aggregate_score": 10.35
+          },
+          {
+            "plan_id": "plan_c",
+            "plan_name": "保守低负荷方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "减少药物数量，保留共识度较高的少量核心药物。",
+            "aggregate_score": 6.359999999999999
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "plan_a",
+          "plan_name": "主专科优先方案",
+          "drugs": [
+            "insulin",
+            "levothyroxine sodium",
+            "vitamin d",
+            "sodium bicarbonate",
+            "calcium carbonate"
+          ],
+          "supporting_specialties": [
+            "内分泌/代谢"
+          ],
+          "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。",
+          "aggregate_score": 10.35
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "plan_a",
+            "plan_name": "主专科优先方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "aggregate_score": 10.35,
+            "risk_penalty": 0,
+            "final_score": 10.35,
+            "rationale": "以主专科推荐为核心，同时吸收其他专科共同支持的药物。"
+          },
+          {
+            "plan_id": "plan_b",
+            "plan_name": "多专科平衡方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d",
+              "sodium bicarbonate",
+              "calcium carbonate"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "aggregate_score": 10.35,
+            "risk_penalty": 0,
+            "final_score": 10.35,
+            "rationale": "优先保留被多个专科共同推荐的候选药物。"
+          },
+          {
+            "plan_id": "plan_c",
+            "plan_name": "保守低负荷方案",
+            "drugs": [
+              "insulin",
+              "levothyroxine sodium",
+              "vitamin d"
+            ],
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "aggregate_score": 6.359999999999999,
+            "risk_penalty": 0,
+            "final_score": 6.359999999999999,
+            "rationale": "减少药物数量，保留共识度较高的少量核心药物。"
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已基于各专科风险规则和关键检验值对候选方案做二次筛查，并选择风险惩罚后得分最高的方案。"
+      }
+    }
+  ],
+  "llm_enabled": false
+}

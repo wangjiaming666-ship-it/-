@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any
 
 import pandas as pd
@@ -32,10 +32,7 @@ class KnowledgeBaseEntry:
     folder_name: str
     disease_catalog: Path
     drug_catalog: Path
-    lab_profile: Path
     risk_rules: Path
-    disease_drug_map: Path
-    example_cases: Path
 
 
 class KnowledgeBaseIndex:
@@ -48,16 +45,27 @@ class KnowledgeBaseIndex:
         if row.empty:
             raise KeyError(f"未找到专科知识库索引: {specialty_name}")
         item = row.iloc[0]
+        folder_name = str(item["folder_name"])
         return KnowledgeBaseEntry(
             specialty_name=specialty_name,
-            folder_name=str(item["folder_name"]),
-            disease_catalog=Path(item["disease_catalog"]),
-            drug_catalog=Path(item["drug_catalog"]),
-            lab_profile=Path(item["lab_profile"]),
-            risk_rules=Path(item["risk_rules"]),
-            disease_drug_map=Path(item["disease_drug_map"]),
-            example_cases=Path(item["example_cases"]),
+            folder_name=folder_name,
+            disease_catalog=self._resolve_index_path(item["disease_catalog"], folder_name),
+            drug_catalog=self._resolve_index_path(item["drug_catalog"], folder_name),
+            risk_rules=self._resolve_index_path(item["risk_rules"], folder_name),
         )
+
+    def _resolve_index_path(self, raw_path: str, folder_name: str) -> Path:
+        candidate = Path(str(raw_path))
+        if candidate.exists():
+            return candidate
+
+        if not candidate.is_absolute():
+            repo_candidate = self.paths.root_dir / candidate
+            if repo_candidate.exists():
+                return repo_candidate
+
+        filename = PureWindowsPath(str(raw_path)).name
+        return self.paths.knowledge_base_dir / folder_name / filename
 
 
 class SpecialtyKnowledgeLoader:
@@ -68,37 +76,65 @@ class SpecialtyKnowledgeLoader:
         entry = self.kb_index.get_entry(specialty_name)
         disease_catalog = read_csv_flexible(entry.disease_catalog)
         drug_catalog = read_csv_flexible(entry.drug_catalog)
-        disease_drug_map = read_csv_flexible(entry.disease_drug_map)
-        lab_profile = read_csv_flexible(entry.lab_profile)
         risk_rules = read_json_file(entry.risk_rules)
-        example_cases = read_json_file(entry.example_cases)
 
         return {
             "entry": entry,
             "disease_catalog": disease_catalog,
             "drug_catalog": drug_catalog,
-            "disease_drug_map": disease_drug_map,
-            "lab_profile": lab_profile,
             "risk_rules": risk_rules,
-            "example_cases": example_cases,
         }
 
     def build_prompt_payload(self, specialty_name: str) -> dict[str, Any]:
         kb = self.load(specialty_name)
         disease_catalog = kb["disease_catalog"]
         drug_catalog = kb["drug_catalog"]
-        disease_drug_map = kb["disease_drug_map"]
 
-        core_diseases = disease_catalog[disease_catalog["disease_role"] == "核心病种"].head(20)
-        core_drugs = drug_catalog[drug_catalog["drug_role"] == "核心治疗药"].head(20)
-        usable_map = disease_drug_map[disease_drug_map["mapping_quality"] == "可直接使用"].head(30)
+        disease_columns = [
+            "disease_name",
+            "aliases",
+            "diagnostic_basis",
+            "key_symptoms",
+            "key_labs_or_tests",
+            "differential_diagnosis",
+            "reference_source",
+            "reference_url",
+            "agent_use",
+        ]
+        drug_columns = [
+            "standard_drug_name",
+            "aliases",
+            "drug_class",
+            "disease_context",
+            "treatment_role",
+            "order_category",
+            "mechanism_or_function",
+            "major_cautions",
+            "reference_source",
+            "reference_url",
+            "agent_use",
+        ]
+        disease_payload = disease_catalog[
+            [column for column in disease_columns if column in disease_catalog.columns]
+        ].head(30)
+        disease_directed_drugs = drug_catalog[
+            drug_catalog["treatment_role"].isin(["disease_directed_therapy", "risk_modifying_therapy"])
+        ][[column for column in drug_columns if column in drug_catalog.columns]].head(30)
+        supportive_drugs = drug_catalog[
+            drug_catalog["treatment_role"].isin(
+                ["supportive_or_symptomatic_therapy", "general_inpatient_medication"]
+            )
+        ][[column for column in drug_columns if column in drug_catalog.columns]].head(20)
 
         return {
             "specialty_name": specialty_name,
             "knowledge_base_dir": str(kb["entry"].disease_catalog.parent),
-            "core_diseases": core_diseases.fillna("").to_dict(orient="records"),
-            "core_drugs": core_drugs.fillna("").to_dict(orient="records"),
-            "disease_drug_map": usable_map.fillna("").to_dict(orient="records"),
+            "diagnostic_knowledge": disease_payload.fillna("").to_dict(orient="records"),
+            "drug_function_knowledge": {
+                "disease_directed_or_risk_modifying": disease_directed_drugs.fillna("").to_dict(
+                    orient="records"
+                ),
+                "supportive_or_general": supportive_drugs.fillna("").to_dict(orient="records"),
+            },
             "risk_rules": kb["risk_rules"],
-            "example_cases": kb["example_cases"],
         }

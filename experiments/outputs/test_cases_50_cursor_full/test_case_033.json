@@ -1,0 +1,825 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "16732524",
+      "hadm_id": "20443056",
+      "gender": "F",
+      "age": 56.0
+    },
+    "primary_diagnosis": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+    "active_specialties": [
+      "内分泌/代谢",
+      "肾内/泌尿",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+        "Disorder of mineral metabolism, unspecified",
+        "Lymphocytopenia"
+      ],
+      "肾内/泌尿": [
+        "Acidosis",
+        "End stage renal disease",
+        "Obstructive and reflux uropathy, unspecified"
+      ],
+      "心血管": [
+        "Anemia in chronic kidney disease",
+        "Hyperkalemia",
+        "Personal history of other infectious and parasitic diseases"
+      ]
+    },
+    "comorbidity_list": [
+      "Acidosis",
+      "Anemia in chronic kidney disease",
+      "Disorder of mineral metabolism, unspecified",
+      "End stage renal disease",
+      "Hyperkalemia",
+      "Lymphocytopenia",
+      "Obstructive and reflux uropathy, unspecified",
+      "Personal history of other infectious and parasitic diseases"
+    ],
+    "key_labs": {
+      "creatinine_24h": 8.3,
+      "bun_24h": 93.0,
+      "potassium_24h": 5.3,
+      "sodium_24h": 145.0,
+      "glucose_24h": 86.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": 0.4
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 33,
+      "subject_id": "16732524",
+      "hadm_id": "20443056",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "gender": "F",
+      "anchor_age": 56,
+      "anchor_year_group": "2011 - 2013",
+      "admittime": "24/7/2122 22:46:00",
+      "dischtime": "27/7/2122 19:45:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "ASIAN - CHINESE",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+      "comorbidity_list": "Acidosis | Anemia in chronic kidney disease | Disorder of mineral metabolism, unspecified | End stage renal disease | Hyperkalemia | Lymphocytopenia | Obstructive and reflux uropathy, unspecified | Personal history of other infectious and parasitic diseases",
+      "specialty_agents": "内分泌/代谢 | 肾内/泌尿 | 心血管",
+      "drug_list": "acetaminophen | amlodipine | calcitriol | heparin | heparin dwell (1000 units/ml) | influenza vaccine quadrivalent | labetalol | neomycin-polymyxin-bacitracin | ondansetron | sevelamer carbonate | sodium bicarbonate | sodium chloride 0.9% | sodium chloride 0.9%  flush | tuberculin protein",
+      "creatinine_24h": 8.3,
+      "bun_24h": 93.0,
+      "potassium_24h": 5.3,
+      "sodium_24h": 145.0,
+      "glucose_24h": 86.0,
+      "inr_24h": 1.0,
+      "bilirubin_total_24h": 0.4
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "肾内/泌尿",
+      "心血管",
+      "内分泌/代谢"
+    ],
+    "lead_specialty": "肾内/泌尿",
+    "specialty_related_diagnoses": {
+      "肾内/泌尿": [
+        "End stage renal disease",
+        "Acidosis",
+        "Obstructive and reflux uropathy, unspecified",
+        "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
+      ],
+      "心血管": [
+        "Hyperkalemia",
+        "Anemia in chronic kidney disease",
+        "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
+      ],
+      "内分泌/代谢": [
+        "Disorder of mineral metabolism, unspecified",
+        "Lymphocytopenia"
+      ]
+    },
+    "rationale": "病例核心为CKD5/ESRD，肌酐8.3 mg/dL、BUN 93 mg/dL并合并酸中毒和轻中度高钾，首先由肾内/泌尿统筹电解质、酸碱、肾衰替代治疗评估及肾功能剂量安全；心血管侧重点为高钾心律失常风险和高血压肾病用药取舍；内分泌/代谢侧重点为矿物质代谢紊乱、水钠和血糖风险。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "肾内/泌尿",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "sodium bicarbonate",
+          "confidence": 0.78,
+          "reason": "存在酸中毒诊断且ESRD背景下需纠正代谢性酸中毒，但钠145 mmol/L接近上限，需监测钠负荷和容量状态。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "sodium zirconium cyclosilicate",
+          "confidence": 0.74,
+          "reason": "血钾5.3 mmol/L在CKD5/ESRD中提示肾性高钾风险，可作为非紧急降钾方案；需监测钾、钠负荷和水肿。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "sevelamer carbonate",
+          "confidence": 0.68,
+          "reason": "存在矿物质代谢紊乱且ESRD常见高磷风险，因未提供钙磷PTH，优先考虑非钙磷结合剂并需化验确认。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "renal multivitamin",
+          "confidence": 0.55,
+          "reason": "ESRD患者营养支持可考虑水溶性维生素补充，需结合饮食和透析状态。"
+        }
+      ],
+      "recommendation_reasons": {
+        "renal_failure": "肌酐8.3、BUN 93支持严重肾功能衰竭，所有肾排泄或肾毒性药物需剂量复核。",
+        "hyperkalemia": "血钾5.3超过5.0，触发肾内高钾中等风险，需避免升钾药并复查心电图。",
+        "acidosis": "酸中毒诊断支持碱化治疗或透析适应证评估。",
+        "mineral_metabolism": "矿物质代谢紊乱提示需评估磷、钙、PTH后选择磷结合剂和维生素D类似物。"
+      },
+      "risk_alerts": [
+        "高肾功能风险：creatinine_24h 8.3 mg/dL超过高风险阈值2.5。",
+        "高尿毒症/代谢负荷风险：BUN 93 mg/dL超过高风险阈值40。",
+        "中等高钾风险：potassium_24h 5.3 mmol/L超过5.0但未超过5.5。",
+        "钠145 mmol/L处于正常上限，含钠药物和补液需限制。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "ESRD/CKD5且肌酐显著升高，增加肾毒性和容量/血压风险。"
+        },
+        {
+          "drug_name": "potassium supplements",
+          "reason": "现有高钾5.3 mmol/L，补钾可能加重心律失常风险。"
+        },
+        {
+          "drug_name": "spironolactone",
+          "reason": "保钾利尿剂在ESRD合并高钾时风险高。"
+        },
+        {
+          "drug_name": "metformin",
+          "reason": "肌酐显著升高，乳酸酸中毒风险，不适合作为代谢用药。"
+        },
+        {
+          "drug_name": "magnesium-containing laxatives or antacids",
+          "reason": "ESRD中镁蓄积风险增加。"
+        }
+      ],
+      "overall_confidence": 0.76,
+      "summary_reason": "肾内治疗优先级最高：控制高钾、酸中毒、矿物质代谢紊乱，并评估透析适应证和所有药物肾功能剂量。",
+      "conversation_text": "肾内/泌尿意见：该患者为CKD5/ESRD，BUN和肌酐显著升高，轻中度高钾和酸中毒需要主动处理。推荐以低钾饮食、降钾树脂或新型钾结合剂、碳酸氢钠及矿物质代谢评估为核心，同时避免NSAIDs、补钾和保钾药。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "amlodipine",
+          "confidence": 0.62,
+          "reason": "高血压性CKD/ESRD背景下，如血压升高且无禁忌，钙通道阻滞剂对肾功能和血钾影响较小。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "unfractionated heparin prophylaxis",
+          "confidence": 0.48,
+          "reason": "若住院活动受限且无出血风险，可考虑VTE预防；INR 1.0未提示凝血异常，但需血小板和出血风险复核。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "calcium gluconate",
+          "confidence": 0.32,
+          "reason": "仅在高钾伴心电图改变或血钾快速升高时作为心肌膜稳定药；当前K 5.3未达到自动紧急用药条件。"
+        }
+      ],
+      "recommendation_reasons": {
+        "arrhythmia_risk": "血钾5.3触发心血管电解质性心律失常中等风险，需心电图与复查钾。",
+        "hypertension_context": "原发诊断为高血压性CKD5/ESRD，降压方案应避免加重高钾或肾灌注不稳。",
+        "bleeding_context": "INR 1.0未触发抗凝高出血风险，但贫血和ESRD仍需复核血红蛋白、血小板。"
+      },
+      "risk_alerts": [
+        "高钾相关心律失常中等风险，需要心电图和血钾复查。",
+        "ACEI/ARB在蛋白尿和高血压肾病中可能有长期价值，但当前ESRD合并高钾，需降级为复核后使用。",
+        "抗凝预防需结合血小板、活动能力、出血史和透析通路情况。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "ACE inhibitors",
+          "reason": "当前高钾和严重肾衰背景下需慎用，除非明确收益且严密监测。"
+        },
+        {
+          "drug_name": "ARB",
+          "reason": "可升高血钾并影响肾血流动力学，当前应低优先级。"
+        },
+        {
+          "drug_name": "spironolactone/eplerenone",
+          "reason": "保钾作用可加重高钾。"
+        },
+        {
+          "drug_name": "thrombolytics",
+          "reason": "无急性血栓/ACS证据，不应推荐。"
+        }
+      ],
+      "overall_confidence": 0.57,
+      "summary_reason": "心血管重点不是强化抗栓，而是避免高钾相关心律失常和选择不升钾的降压药。",
+      "conversation_text": "心血管意见：建议先获得血压和心电图。若需要降压，氨氯地平相对安全；ACEI/ARB/MRA因高钾和ESRD暂不作为优先药。抗凝预防仅在活动受限且出血风险允许时考虑。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "sevelamer carbonate",
+          "confidence": 0.64,
+          "reason": "矿物质代谢紊乱在ESRD中常与高磷相关，非钙磷结合剂可减少钙负荷，但必须以磷钙PTH结果确认。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "calcitriol",
+          "confidence": 0.36,
+          "reason": "若PTH升高且钙磷允许，可用于CKD-MBD；当前缺少PTH、钙、磷，列为需复核药物。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "renal multivitamin",
+          "confidence": 0.5,
+          "reason": "ESRD营养支持可补充水溶性维生素，需避免含钾、镁、磷过高制剂。"
+        }
+      ],
+      "recommendation_reasons": {
+        "glucose": "glucose_24h 86 mg/dL在住院目标范围内，无强化降糖适应证。",
+        "sodium": "sodium_24h 145 mmol/L位于上限，含钠药物需监测。",
+        "renal_endocrine_risk": "creatinine_24h 8.3触发内分泌肾功能禁忌风险，避免二甲双胍、双膦酸盐和不必要肾排泄药物。",
+        "ckd_mbd": "矿物质代谢紊乱诊断支持钙磷PTH评估和CKD-MBD治疗分层。"
+      },
+      "risk_alerts": [
+        "血糖86 mg/dL，无低血糖或高血糖风险触发，不建议经验性胰岛素或降糖药。",
+        "肌酐8.3 mg/dL提示二甲双胍和肾排泄内分泌药物高风险。",
+        "钠145 mmol/L提示碳酸氢钠、钠型降钾剂和生理盐水需监测容量和血钠。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "insulin scheduled therapy",
+          "reason": "无糖尿病或高血糖证据，且血糖86 mg/dL，常规胰岛素可能导致低血糖；仅在紧急降钾方案中短期使用并配合葡萄糖和严密监测。"
+        },
+        {
+          "drug_name": "metformin",
+          "reason": "ESRD/肌酐显著升高，乳酸酸中毒风险。"
+        },
+        {
+          "drug_name": "bisphosphonates",
+          "reason": "严重肾功能受损时需避免或严格专科复核。"
+        },
+        {
+          "drug_name": "potassium-containing supplements",
+          "reason": "高钾背景下禁忌或低优先级。"
+        }
+      ],
+      "overall_confidence": 0.55,
+      "summary_reason": "内分泌/代谢治疗以CKD-MBD和营养支持为主，避免不必要降糖治疗和肾功能禁忌药。",
+      "conversation_text": "内分泌/代谢意见：目前血糖正常，不建议降糖药。矿物质代谢紊乱需要补充钙、磷、PTH、维生素D资料后决定磷结合剂和活性维生素D。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "肾内/泌尿",
+        "accepted_drugs": [
+          "sodium bicarbonate",
+          "sodium zirconium cyclosilicate",
+          "sevelamer carbonate",
+          "renal multivitamin",
+          "amlodipine"
+        ],
+        "cautioned_drugs": [
+          "calcitriol",
+          "unfractionated heparin prophylaxis",
+          "calcium gluconate"
+        ],
+        "conflict_notes": [
+          "碳酸氢钠和钠锆环硅酸盐均可能增加钠负荷，钠145 mmol/L时需监测容量。",
+          "钙剂或钙化三醇需先确认钙磷PTH，避免高钙血症或钙磷乘积升高。"
+        ],
+        "priority_comment": "优先处理高钾、酸中毒、尿毒症负荷和透析适应证评估。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "amlodipine",
+          "sodium zirconium cyclosilicate"
+        ],
+        "cautioned_drugs": [
+          "ACE inhibitors",
+          "ARB",
+          "spironolactone",
+          "calcium gluconate",
+          "unfractionated heparin prophylaxis"
+        ],
+        "conflict_notes": [
+          "ACEI/ARB虽可用于部分高血压肾病场景，但当前高钾和ESRD使其不宜优先。",
+          "钙葡萄糖酸钙属于高钾心电图改变时的急救用药，不适合作为常规方案。"
+        ],
+        "priority_comment": "先做心电图和复查钾，降压优先选不升钾药物。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "sevelamer carbonate",
+          "renal multivitamin"
+        ],
+        "cautioned_drugs": [
+          "calcitriol",
+          "sodium bicarbonate",
+          "sodium zirconium cyclosilicate",
+          "insulin"
+        ],
+        "conflict_notes": [
+          "未见高血糖，不应常规推荐胰岛素；若用于紧急降钾，需要葡萄糖和床旁血糖监测。",
+          "CKD-MBD药物需依赖磷、钙、PTH分层，不能直接强化。"
+        ],
+        "priority_comment": "代谢侧重点是避免肾功能禁忌药和过快改变水钠、电解质。"
+      }
+    ],
+    "consensus_notes": [
+      "以肾内/泌尿为主导，当前最需要覆盖ESRD、酸中毒、高钾、矿物质代谢紊乱和贫血评估。",
+      "最终方案不声称使用或参考当前真实住院处方。",
+      "K 5.3 mmol/L属于需处理和监测的高钾，但未达到必须自动启用钙剂、胰岛素葡萄糖、雾化β激动剂的紧急程度；这些应列为条件性救援药物。",
+      "所有候选处方均需肾功能剂量调整，避免NSAIDs、补钾、保钾利尿剂、二甲双胍和不必要肾毒性药物。",
+      "因生命体征、血压、尿量、钙磷PTH、血红蛋白、铁代谢和心电图缺失，部分药物必须标记为需复核。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "ESRD合并轻中度高钾与酸中毒的保守稳定方案",
+        "drugs": [
+          "sodium bicarbonate",
+          "sodium zirconium cyclosilicate",
+          "sevelamer carbonate",
+          "amlodipine",
+          "renal multivitamin",
+          "0.9% sodium chloride flush",
+          "unfractionated heparin prophylaxis if immobile and bleeding risk acceptable"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "sodium bicarbonate",
+            "sodium zirconium cyclosilicate",
+            "sevelamer carbonate"
+          ],
+          "risk_modifying_therapy": [
+            "amlodipine if hypertension confirmed",
+            "unfractionated heparin prophylaxis if immobile and no bleeding risk"
+          ],
+          "symptom_supportive_medication": [],
+          "nursing_support_medication": [
+            "0.9% sodium chloride flush for IV line maintenance if peripheral access present"
+          ],
+          "prophylaxis_prevention_medication": [
+            "unfractionated heparin prophylaxis if VTE risk present and platelet count/bleeding risk acceptable"
+          ],
+          "fluid_diluent_flush_medication": [
+            "minimal-volume 0.9% sodium chloride flush only as needed; avoid maintenance saline unless volume depleted"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "renal multivitamin",
+            "renal low-potassium/low-phosphate nutrition support"
+          ],
+          "requires_review": [
+            "dialysis initiation or urgent nephrology review for ESRD with BUN 93, acidosis and hyperkalemia",
+            "calcium/phosphate/PTH before calcitriol or calcium-based binder",
+            "hemoglobin/ferritin/TSAT before ESA or iron",
+            "ECG and repeat potassium",
+            "blood pressure and volume status before antihypertensive or diuretic adjustment"
+          ]
+        },
+        "supporting_specialties": [
+          "肾内/泌尿",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "该方案覆盖当前证据最明确的酸中毒、高钾、矿物质代谢紊乱和住院基础支持，同时将缺少关键化验或体征的药物列为复核项，安全性较高。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "CKD-MBD和贫血强化评估后分层方案",
+        "drugs": [
+          "sevelamer carbonate",
+          "calcitriol if PTH elevated and calcium/phosphate acceptable",
+          "epoetin alfa if hemoglobin low with CKD anemia criteria met",
+          "iron sucrose if iron deficiency confirmed",
+          "sodium bicarbonate",
+          "renal multivitamin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "sevelamer carbonate",
+            "calcitriol if indicated",
+            "epoetin alfa if indicated",
+            "iron sucrose if iron deficiency confirmed"
+          ],
+          "risk_modifying_therapy": [
+            "avoid transfusion unless symptomatic severe anemia or urgent need",
+            "avoid calcium load until calcium/phosphate known"
+          ],
+          "symptom_supportive_medication": [],
+          "nursing_support_medication": [
+            "0.9% sodium chloride flush for IV access if needed"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "small-volume compatible diluent/flush only when administering IV iron; avoid unnecessary fluid load"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "renal multivitamin",
+            "low-phosphate renal diet support"
+          ],
+          "requires_review": [
+            "hemoglobin, ferritin, transferrin saturation, platelet count",
+            "calcium, phosphate, intact PTH, vitamin D",
+            "blood pressure before ESA",
+            "infection status before IV iron"
+          ]
+        },
+        "supporting_specialties": [
+          "肾内/泌尿",
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "rationale": "该方案更积极覆盖贫血和矿物质代谢，但输入缺少Hb、铁代谢、钙磷PTH，因此多项药物只能条件性推荐。",
+        "aggregate_score": 0.69
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "高钾恶化或心电图异常时的条件性救援方案",
+        "drugs": [
+          "calcium gluconate if ECG changes",
+          "regular insulin with dextrose if urgent intracellular potassium shift needed",
+          "sodium zirconium cyclosilicate",
+          "sodium bicarbonate if metabolic acidosis contributes",
+          "albuterol nebulization if appropriate",
+          "dialysis-related anticoagulation per protocol if dialysis initiated"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "sodium zirconium cyclosilicate",
+            "sodium bicarbonate"
+          ],
+          "risk_modifying_therapy": [
+            "calcium gluconate only for ECG changes or severe hyperkalemia",
+            "regular insulin with dextrose only with glucose monitoring",
+            "albuterol nebulization as adjunct if tachyarrhythmia risk acceptable"
+          ],
+          "symptom_supportive_medication": [],
+          "nursing_support_medication": [
+            "continuous ECG monitoring during urgent hyperkalemia treatment",
+            "bedside glucose monitoring when insulin/dextrose used"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "dextrose-containing fluid only as part of insulin-mediated potassium shift protocol"
+          ],
+          "procedure_related_medication": [
+            "dialysis anticoagulation or catheter lock only if dialysis access/procedure is initiated"
+          ],
+          "nutrition_electrolyte_medication": [
+            "strict low-potassium diet"
+          ],
+          "requires_review": [
+            "repeat potassium level",
+            "ECG findings",
+            "serum bicarbonate/anion gap",
+            "glucose monitoring capacity",
+            "dialysis access and nephrology decision"
+          ]
+        },
+        "supporting_specialties": [
+          "肾内/泌尿",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "该方案适用于血钾继续升高、出现心电图改变或症状性高钾时；当前K 5.3且无心电图资料，不作为首选常规处方。",
+        "aggregate_score": 0.58
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "ESRD合并轻中度高钾与酸中毒的保守稳定方案",
+      "drugs": [
+        "sodium bicarbonate",
+        "sodium zirconium cyclosilicate",
+        "sevelamer carbonate",
+        "amlodipine",
+        "renal multivitamin",
+        "0.9% sodium chloride flush",
+        "unfractionated heparin prophylaxis if immobile and bleeding risk acceptable"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "sodium bicarbonate for metabolic acidosis if bicarbonate low and volume status permits",
+          "sodium zirconium cyclosilicate for non-emergent hyperkalemia control",
+          "sevelamer carbonate for suspected CKD-MBD hyperphosphatemia after phosphate confirmation"
+        ],
+        "risk_modifying_therapy": [
+          "amlodipine if hypertension confirmed",
+          "unfractionated heparin prophylaxis if immobile and bleeding risk acceptable"
+        ],
+        "symptom_supportive_medication": [],
+        "nursing_support_medication": [
+          "0.9% sodium chloride flush for IV line maintenance if needed"
+        ],
+        "prophylaxis_prevention_medication": [
+          "unfractionated heparin prophylaxis if VTE risk outweighs bleeding risk"
+        ],
+        "fluid_diluent_flush_medication": [
+          "avoid routine maintenance isotonic saline; use minimal flush/diluent volume"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "renal multivitamin",
+          "low-potassium low-phosphate renal diet support"
+        ],
+        "requires_review": [
+          "urgent dialysis candidacy review",
+          "ECG and repeat potassium",
+          "serum bicarbonate or blood gas",
+          "blood pressure and volume status",
+          "calcium/phosphate/PTH",
+          "hemoglobin, ferritin, TSAT"
+        ]
+      },
+      "supporting_specialties": [
+        "肾内/泌尿",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "最符合现有资料和安全约束，避免升钾和肾毒性药物，覆盖酸中毒、高钾、CKD-MBD、降压和住院预防。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "矿物质代谢和CKD贫血复核后强化方案",
+      "drugs": [
+        "sevelamer carbonate",
+        "calcitriol if indicated",
+        "epoetin alfa if indicated",
+        "iron sucrose if iron deficiency confirmed",
+        "sodium bicarbonate",
+        "renal multivitamin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "sevelamer carbonate",
+          "calcitriol if calcium/phosphate/PTH profile supports",
+          "epoetin alfa if CKD anemia criteria met",
+          "iron sucrose if iron deficiency confirmed"
+        ],
+        "risk_modifying_therapy": [
+          "avoid calcium-based binder until calcium/phosphate known",
+          "blood pressure control before ESA"
+        ],
+        "symptom_supportive_medication": [],
+        "nursing_support_medication": [
+          "IV access flush only if needed"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "small-volume diluent for IV iron if administered"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "renal multivitamin",
+          "renal diet support"
+        ],
+        "requires_review": [
+          "Hb level",
+          "ferritin and TSAT",
+          "calcium/phosphate/PTH",
+          "active infection assessment",
+          "BP before ESA"
+        ]
+      },
+      "supporting_specialties": [
+        "肾内/泌尿",
+        "内分泌/代谢"
+      ],
+      "rationale": "适合在补齐贫血和CKD-MBD指标后执行，但当前资料不足，安全排序低于plan_A。",
+      "aggregate_score": 0.69
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "高钾进展时救援方案",
+      "drugs": [
+        "calcium gluconate if ECG changes",
+        "regular insulin with dextrose if urgent potassium shift needed",
+        "sodium zirconium cyclosilicate",
+        "sodium bicarbonate",
+        "albuterol nebulization if appropriate"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "sodium zirconium cyclosilicate",
+          "sodium bicarbonate"
+        ],
+        "risk_modifying_therapy": [
+          "calcium gluconate for membrane stabilization only if ECG changes/severe hyperkalemia",
+          "regular insulin with dextrose for urgent potassium shift only with glucose monitoring"
+        ],
+        "symptom_supportive_medication": [],
+        "nursing_support_medication": [
+          "continuous ECG monitoring",
+          "bedside glucose checks"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "dextrose as required with insulin protocol"
+        ],
+        "procedure_related_medication": [
+          "dialysis-related anticoagulation/lock only if dialysis procedure initiated"
+        ],
+        "nutrition_electrolyte_medication": [
+          "strict potassium restriction"
+        ],
+        "requires_review": [
+          "repeat potassium",
+          "ECG",
+          "glucose monitoring",
+          "dialysis access and urgent nephrology decision"
+        ]
+      },
+      "supporting_specialties": [
+        "肾内/泌尿",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "作为条件性应急路径保留；当前K 5.3且无ECG异常资料，不能列为首选完整处方。",
+      "aggregate_score": 0.58
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "ESRD合并轻中度高钾与酸中毒的保守稳定方案",
+      "drugs": [
+        "sodium bicarbonate",
+        "sodium zirconium cyclosilicate",
+        "sevelamer carbonate",
+        "amlodipine if hypertension confirmed",
+        "renal multivitamin",
+        "0.9% sodium chloride flush if IV access present",
+        "unfractionated heparin prophylaxis if immobile and bleeding risk acceptable"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "sodium bicarbonate for acidosis with sodium/volume monitoring",
+          "sodium zirconium cyclosilicate for non-emergent hyperkalemia",
+          "sevelamer carbonate after phosphate confirmation for CKD-MBD"
+        ],
+        "risk_modifying_therapy": [
+          "amlodipine if blood pressure elevated",
+          "avoid ACEI/ARB/MRA until potassium controlled and nephrology approves",
+          "unfractionated heparin prophylaxis only if VTE risk present and bleeding risk acceptable"
+        ],
+        "symptom_supportive_medication": [],
+        "nursing_support_medication": [
+          "ECG monitoring or at least ECG screening due to hyperkalemia",
+          "0.9% sodium chloride flush only for line maintenance"
+        ],
+        "prophylaxis_prevention_medication": [
+          "VTE prophylaxis with unfractionated heparin if indicated"
+        ],
+        "fluid_diluent_flush_medication": [
+          "minimal-volume saline flush; avoid unnecessary maintenance fluids because ESRD and sodium 145"
+        ],
+        "procedure_related_medication": [
+          "dialysis-related medications only after dialysis decision/access plan"
+        ],
+        "nutrition_electrolyte_medication": [
+          "renal multivitamin",
+          "low-potassium low-phosphate renal diet support"
+        ],
+        "requires_review": [
+          "dialysis indication review for ESRD with BUN 93, acidosis and hyperkalemia",
+          "repeat potassium and ECG",
+          "serum bicarbonate or ABG/VBG",
+          "blood pressure, volume status and urine output",
+          "calcium, phosphate, PTH and vitamin D",
+          "hemoglobin, platelet count, ferritin and TSAT",
+          "medication renal-dose adjustment review"
+        ]
+      },
+      "supporting_specialties": [
+        "肾内/泌尿",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "综合疗效和安全性最高，优先处理ESRD相关酸中毒、高钾和CKD-MBD风险，同时避免因资料缺失而过度使用急救降钾、ESA、铁剂或活性维生素D。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "aggregate_score": 0.82,
+        "safety_comment": "推荐作为最终方案；条件性药物均已标注复核条件。"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "aggregate_score": 0.69,
+        "safety_comment": "可作为补齐贫血和CKD-MBD指标后的扩展方案。"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "aggregate_score": 0.58,
+        "safety_comment": "仅在高钾恶化、ECG异常或症状出现时启用。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "nephrology_creatinine_drug_accumulation_risk",
+        "severity": "high",
+        "evidence": "creatinine_24h 8.3 mg/dL >= 2.5 mg/dL",
+        "action": "所有肾排泄药物剂量复核，避免NSAIDs、二甲双胍、氨基糖苷类和不必要造影。"
+      },
+      {
+        "risk_id": "nephrology_bun_uremia_sedation_risk",
+        "severity": "high",
+        "evidence": "bun_24h 93 mg/dL >= 40 mg/dL",
+        "action": "避免镇静药、阿片、加巴喷丁、巴氯芬等蓄积或中枢抑制多药叠加，并评估透析。"
+      },
+      {
+        "risk_id": "nephrology_potassium_drug_risk",
+        "severity": "moderate",
+        "evidence": "potassium_24h 5.3 mmol/L > 5.0 mmol/L and <= 5.5 mmol/L",
+        "action": "避免补钾、保钾利尿剂、ACEI/ARB优先使用；复查血钾和心电图。"
+      },
+      {
+        "risk_id": "cardiology_potassium_arrhythmia_risk",
+        "severity": "moderate",
+        "evidence": "potassium_24h 5.3 mmol/L > 5.0 mmol/L",
+        "action": "评估心律失常风险，若ECG异常升级为紧急高钾处理。"
+      },
+      {
+        "risk_id": "endocrinology_renal_metformin_bisphosphonate_risk",
+        "severity": "high",
+        "evidence": "creatinine_24h 8.3 mg/dL >= 2.5 mg/dL",
+        "action": "避免二甲双胍、双膦酸盐及未调整剂量的肾排泄内分泌药物。"
+      },
+      {
+        "risk_id": "nephrology_sodium_volume_risk",
+        "severity": "watch",
+        "evidence": "sodium_24h 145 mmol/L at upper boundary",
+        "action": "含钠药物和补液需监测容量、血压、尿量和血钠。"
+      }
+    ],
+    "safety_summary": "最终选择plan_A。该患者存在严重肾功能衰竭、尿毒症负荷、酸中毒和轻中度高钾；推荐以肾内管理为核心，使用非紧急降钾、酸中毒纠正、CKD-MBD初步处理和安全降压/预防策略。避免NSAIDs、补钾、保钾利尿剂、二甲双胍和未复核的ACEI/ARB。急救高钾药物、ESA、铁剂、钙化三醇和透析相关药物均需基于心电图、复查电解质、血红蛋白/铁代谢、钙磷PTH和透析决策后执行。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    "诊断路由：识别核心问题为高血压性CKD5/ESRD，合并酸中毒、高钾、CKD贫血和矿物质代谢紊乱，肾内/泌尿为主导专科。",
+    "肾内/泌尿智能体：建议优先处理酸中毒、高钾和尿毒症负荷，推荐sodium bicarbonate、sodium zirconium cyclosilicate、sevelamer carbonate，并要求透析适应证评估。",
+    "心血管智能体：指出血钾5.3带来心律失常风险，建议ECG复核；降压若需要优先考虑amlodipine，ACEI/ARB/MRA因高钾暂低优先级。",
+    "内分泌/代谢智能体：血糖86无需降糖治疗；矿物质代谢紊乱需钙磷PTH后决定sevelamer、calcitriol等；避免metformin和双膦酸盐。",
+    "MDT协商：形成三个候选方案，plan_A为稳态保守完整方案，plan_B为贫血和CKD-MBD指标完善后的强化方案，plan_C为高钾恶化时救援方案。",
+    "安全审核：触发高肾功能风险、高BUN风险和中等高钾风险，最终选择plan_A，并将缺少证据的药物放入requires_review。",
+    "王老师，回答结束"
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

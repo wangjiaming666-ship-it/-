@@ -1,50 +1,120 @@
 [
   {
-    "rule_id": "endocrinology_glucose_risk",
+    "rule_id": "endocrinology_glucose_treatment_risk",
+    "risk_target": "glycemic instability risk",
+    "related_treatments": "insulin|sulfonylureas|systemic corticosteroids|dextrose fluids",
     "lab_name": "glucose_24h",
-    "lab_purpose": "评估高血糖、低血糖及代谢失衡风险",
+    "lab_purpose": "评估高血糖低血糖及代谢失衡风险",
     "threshold_type": "bidirectional",
     "moderate_risk_threshold": {
-      "low": 70,
-      "high": 180,
       "unit": "mg/dL",
+      "low": 70.0,
+      "high": 180.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 54,
-      "high": 250,
       "unit": "mg/dL",
+      "low": 54.0,
+      "high": 250.0,
       "outside_range_is_high_risk": true
     },
-    "risk_message": "血糖显著偏离目标范围时，提示低血糖事件、酮症酸中毒或感染相关代谢失衡风险增加。",
+    "risk_message": "血糖显著偏离目标范围时提示低血糖酮症酸中毒或感染相关代谢失衡风险",
     "action": {
-      "moderate_risk": "调整降糖相关方案优先级，并提示复核血糖监测频率。",
-      "high_risk": "将病例标记为高代谢风险，暂停优先推荐可能进一步加重波动的方案。"
+      "moderate_risk": "调整降糖相关方案优先级并提示复核血糖监测频率",
+      "high_risk": "标记为高代谢风险并暂停优先推荐可能进一步加重波动的方案"
     },
-    "threshold_basis": "参考内分泌专科样本中位数与住院血糖管理常用阈值。"
+    "contraindication_or_caution": "强化降糖或激素治疗前需评估低血糖和高血糖风险",
+    "monitoring_advice": "监测床旁血糖酮体和进食状态",
+    "reference_source": "ADA Standards of Care; DailyMed insulin labels",
+    "reference_url": "https://diabetesjournals.org/care",
+    "threshold_basis": "参考 ADA 低血糖分级和住院血糖管理目标"
   },
   {
-    "rule_id": "endocrinology_sodium_risk",
+    "rule_id": "endocrinology_sodium_endocrine_risk",
+    "risk_target": "endocrine water and electrolyte risk",
+    "related_treatments": "fluid therapy|diuretics|desmopressin|adrenal replacement",
     "lab_name": "sodium_24h",
-    "lab_purpose": "评估代谢紊乱相关水电解质失衡风险",
+    "lab_purpose": "评估内分泌代谢相关水电解质失衡风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
-      "low": 135,
-      "high": 145,
       "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 130,
-      "high": 150,
       "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
       "outside_range_is_high_risk": true
     },
-    "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡，可能影响降糖与补液策略安全性。",
+    "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
     "action": {
-      "moderate_risk": "对强化补液和快速纠正方案降权，提示人工复核。",
-      "high_risk": "标记为高风险病例，建议先处理水钠紊乱后再排序推荐方案。"
+      "moderate_risk": "对强化补液和快速纠正方案降权并提示人工复核",
+      "high_risk": "标记为高风险并建议先处理水钠紊乱后再排序方案"
     },
-    "threshold_basis": "参考内分泌代谢患者常用电解质管理阈值。"
+    "contraindication_or_caution": "避免过快纠正血钠并复核内分泌病因",
+    "monitoring_advice": "监测血钠纠正速度尿量和神经状态",
+    "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
+    "reference_url": "https://medlineplus.gov/lab-tests/sodium-blood-test",
+    "threshold_basis": "参考公开血钠范围和水电解质风险解释"
+  },
+  {
+    "rule_id": "endocrinology_potassium_dka_adrenal_risk",
+    "risk_target": "potassium shift risk",
+    "related_treatments": "insulin|potassium replacement|adrenal crisis treatment",
+    "lab_name": "potassium_24h",
+    "lab_purpose": "评估 DKA 胰岛素治疗和肾上腺危象中的血钾风险",
+    "threshold_type": "range",
+    "moderate_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 3.5,
+      "high": 5.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 3.0,
+      "high": 5.5,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "胰岛素和酸碱纠正会推动钾向细胞内转移并可能诱发危险低钾",
+    "action": {
+      "moderate_risk": "提示胰岛素和补钾方案必须结合血钾复核",
+      "high_risk": "标记为高钾转移风险并建议先处理钾异常"
+    },
+    "contraindication_or_caution": "低钾未纠正前慎用强化胰岛素治疗",
+    "monitoring_advice": "监测血钾心电图阴离子间隙和尿量",
+    "reference_source": "ADA Standards of Care; DailyMed insulin labels",
+    "reference_url": "https://diabetesjournals.org/care",
+    "threshold_basis": "参考 ADA DKA 治疗原则和胰岛素说明书风险"
+  },
+  {
+    "rule_id": "endocrinology_renal_metformin_bisphosphonate_risk",
+    "risk_target": "renal contraindication risk",
+    "related_treatments": "metformin|bisphosphonates|renally cleared endocrine drugs",
+    "lab_name": "creatinine_24h",
+    "lab_purpose": "评估内分泌药物在肾功能受损时的禁忌或剂量风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 1.5,
+      "operator": ">="
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 2.5,
+      "operator": ">="
+    },
+    "risk_message": "肌酐升高时二甲双胍双膦酸盐和部分药物需禁忌或剂量复核",
+    "action": {
+      "moderate_risk": "降低肾功能敏感药物优先级并提示人工复核",
+      "high_risk": "标记为高肾功能风险并避免不必要肾风险药物"
+    },
+    "contraindication_or_caution": "慎用二甲双胍和肾排泄药物并复核 eGFR",
+    "monitoring_advice": "监测肌酐eGFR乳酸风险和药物剂量",
+    "reference_source": "DailyMed metformin labels; ADA Standards of Care",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考二甲双胍说明书和 ADA 肾功能用药原则"
   }
 ]

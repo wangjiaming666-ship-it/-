@@ -1,0 +1,875 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "13821972",
+      "hadm_id": "24253451",
+      "gender": "M",
+      "age": 60.0
+    },
+    "primary_diagnosis": "Spinal stenosis, lumbar region with neurogenic claudication",
+    "active_specialties": [
+      "神经",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "神经": [
+        "Spinal stenosis, lumbar region with neurogenic claudication",
+        "Benign neoplasm of pituitary gland",
+        "Essential (primary) hypertension",
+        "Other acute postprocedural pain",
+        "Spinal instabilities, lumbar region"
+      ],
+      "心血管": [
+        "Acquired absence of right thumb",
+        "Encounter for immunization",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Other chronic pain",
+        "Spondylolisthesis, lumbar region"
+      ]
+    },
+    "comorbidity_list": [
+      "Acquired absence of right thumb",
+      "Benign neoplasm of pituitary gland",
+      "Encounter for immunization",
+      "Essential (primary) hypertension",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Other acute postprocedural pain",
+      "Other chronic pain",
+      "Spinal instabilities, lumbar region",
+      "Spondylolisthesis, lumbar region"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 29,
+      "subject_id": "13821972",
+      "hadm_id": "24253451",
+      "specialty_cnt": 2,
+      "specialty_list": "神经 | 心血管",
+      "gender": "M",
+      "anchor_age": 60,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "30/3/2138 06:30:00",
+      "dischtime": "4/4/2138 17:00:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Spinal stenosis, lumbar region with neurogenic claudication",
+      "comorbidity_list": "Acquired absence of right thumb | Benign neoplasm of pituitary gland | Encounter for immunization | Essential (primary) hypertension | Obstructive sleep apnea (adult) (pediatric) | Other acute postprocedural pain | Other chronic pain | Spinal instabilities, lumbar region | Spondylolisthesis, lumbar region",
+      "specialty_agents": "神经 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.9% sodium chloride | acetaminophen | acetaminophen iv | bisacodyl | calcium carbonate | cefazolin | clomiphene citrate | dantrolene | diazepam | docusate sodium | famotidine | gabapentin | heparin | hydromorphone (dilaudid) | influenza vaccine quadrivalent | iso-osmotic dextrose | ketamine | ketorolac | magnesium oxide | methadone | methylnaltrexone | oxycodone (immediate release) | polyethylene glycol | propranolol la | senna | sodium chloride 0.9% | sodium chloride 0.9%  flush | tamsulosin | tramadol | trazodone",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "神经",
+      "心血管"
+    ],
+    "lead_specialty": "神经",
+    "specialty_related_diagnoses": {
+      "神经": [
+        "Spinal stenosis, lumbar region with neurogenic claudication",
+        "Spinal instabilities, lumbar region",
+        "Spondylolisthesis, lumbar region",
+        "Other acute postprocedural pain",
+        "Other chronic pain",
+        "Benign neoplasm of pituitary gland"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Obstructive sleep apnea (adult) (pediatric)"
+      ]
+    },
+    "rationale": "主诊断为腰椎管狭窄伴神经源性跛行，并合并腰椎不稳、腰椎滑脱及术后急性疼痛，神经/脊柱相关问题为处方决策主轴；同时存在原发性高血压和阻塞性睡眠呼吸暂停，需心血管专科参与评估降压、抗栓、容量、电解质及镇静呼吸风险。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "Acetaminophen",
+          "confidence": 0.82,
+          "reason": "适合作为腰椎术后或慢性疼痛的基础非阿片镇痛，镇静和呼吸抑制风险低，适合合并阻塞性睡眠呼吸暂停患者的阿片节约策略。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "Gabapentin",
+          "confidence": 0.56,
+          "reason": "可用于神经病理性疼痛或神经源性跛行相关疼痛，但合并阻塞性睡眠呼吸暂停且BUN/肌酐缺失，需低剂量、夜间镇静和肾功能复核。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "Oxycodone",
+          "confidence": 0.48,
+          "reason": "可作为术后中重度突破痛短期救援用药，但因阻塞性睡眠呼吸暂停和镇静呼吸抑制风险，应限量、低剂量、避免与其他镇静药叠加并加强监测。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "Methocarbamol",
+          "confidence": 0.43,
+          "reason": "可用于肌痉挛相关疼痛，但存在中枢抑制、跌倒和呼吸风险，尤其在OSA和其他镇痛药并用时需谨慎。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "Ondansetron",
+          "confidence": 0.52,
+          "reason": "可作为术后恶心呕吐支持治疗，便于维持口服镇痛和营养摄入，但需结合QT风险和电解质情况复核。"
+        }
+      ],
+      "recommendation_reasons": {
+        "主病种": "腰椎管狭窄、腰椎滑脱/不稳和术后疼痛提示应采用多模式、阿片节约镇痛。",
+        "OSA影响": "阻塞性睡眠呼吸暂停增加阿片、加巴喷丁、肌松药和苯二氮卓类相关呼吸抑制风险。",
+        "实验室缺失": "BUN、肌酐、钠、血糖、INR均缺失，影响镇静药蓄积、电解质性神经风险和抗栓安全评估。"
+      },
+      "risk_alerts": [
+        "缺少BUN和肌酐，使用gabapentin、阿片类或肌松药前需复核肾功能和镇静风险。",
+        "缺少钠值，若存在低钠或高钠，可能影响意识、癫痫阈值和神经症状解释。",
+        "阻塞性睡眠呼吸暂停患者应避免多种中枢抑制药叠加。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "Benzodiazepines",
+          "reason": "无明确适应证且会增加OSA患者呼吸抑制、谵妄和跌倒风险。"
+        },
+        {
+          "drug_name": "High-dose opioids",
+          "reason": "术后疼痛可救援使用，但不宜作为首选或高剂量持续方案，需阿片节约。"
+        },
+        {
+          "drug_name": "Baclofen",
+          "reason": "可导致镇静和肌无力，肾功能缺失时蓄积风险不明。"
+        },
+        {
+          "drug_name": "Ketorolac",
+          "reason": "可能影响肾功能、出血风险和部分脊柱融合/骨愈合场景，需外科确认后再考虑。"
+        }
+      ],
+      "overall_confidence": 0.64,
+      "summary_reason": "神经专科倾向基础非阿片镇痛加谨慎的神经病理痛药物，保留短期阿片救援，但因OSA及实验室缺失需降低镇静药物优先级。",
+      "conversation_text": "神经智能体认为主线是腰椎退变性疾病及术后疼痛管理。建议以acetaminophen为基础，必要时加入低剂量gabapentin或短期低剂量opioid救援，但必须因OSA和肾功能缺失进行安全降权。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "Amlodipine",
+          "confidence": 0.66,
+          "reason": "适用于原发性高血压背景下的血压控制，较少受肌酐和血钾缺失影响，适合作为未明确肾功能和血钾时的较稳妥降压选择。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "Unfractionated heparin",
+          "confidence": 0.54,
+          "reason": "住院脊柱术后活动受限存在静脉血栓预防需求，但INR、出血情况和手术止血状态缺失，需外科确认后使用。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "Enoxaparin",
+          "confidence": 0.46,
+          "reason": "可用于VTE预防，但需肌酐评估和术后出血/硬膜外血肿风险评估，当前肾功能缺失使其优先级低于可调整的普通肝素。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "Hydralazine",
+          "confidence": 0.42,
+          "reason": "可作为住院期间明显血压升高时的短期PRN选择，但缺少当前血压数据，不能常规推荐固定使用。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "Potassium chloride",
+          "confidence": 0.28,
+          "reason": "仅在低钾证实后补充；当前钾值缺失，列为需复核电解质支持而非立即使用。"
+        }
+      ],
+      "recommendation_reasons": {
+        "高血压": "存在原发性高血压，但24小时血压数据缺失，应优先选择对肾功能和血钾依赖较低的降压药，并按实际血压调整。",
+        "VTE风险": "脊柱相关住院/术后活动受限提示需考虑VTE预防，但抗凝前必须确认INR、出血风险、手术时机和神经轴相关风险。",
+        "电解质风险": "钾、肌酐、血糖均缺失，影响ACEI/ARB、利尿剂、低分子肝素和补钾策略。"
+      },
+      "risk_alerts": [
+        "INR缺失，抗凝或抗血小板强化方案需先复核凝血功能和术后出血风险。",
+        "肌酐缺失，ACEI、ARB、利尿剂、enoxaparin及NSAID相关肾功能风险无法分层。",
+        "钾值缺失，暂不宜经验性补钾或使用明显影响血钾的方案。",
+        "无血压趋势，降压治疗需基于实际SBP/DBP和围术期血流动力学。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "ACE inhibitors",
+          "reason": "可用于高血压长期管理，但肌酐和血钾缺失、围术期容量状态不明，当前优先级低。"
+        },
+        {
+          "drug_name": "ARB",
+          "reason": "与ACEI类似，需先复核肾功能、钾值和围术期血流动力学。"
+        },
+        {
+          "drug_name": "Spironolactone",
+          "reason": "无明确心衰或醛固酮适应证，且钾和肌酐缺失，升钾风险不可评估。"
+        },
+        {
+          "drug_name": "Therapeutic anticoagulation",
+          "reason": "病例未提供房颤、VTE或ACS等治疗剂量抗凝适应证，且脊柱术后出血/硬膜外血肿风险需优先排除。"
+        }
+      ],
+      "overall_confidence": 0.58,
+      "summary_reason": "心血管专科支持稳妥降压、VTE预防评估和电解质/肾功能复核，反对在缺少凝血、肾功能、钾和血压趋势时强化抗栓或肾功能敏感用药。",
+      "conversation_text": "心血管智能体认为高血压和OSA使围术期安全监测重要。可考虑amlodipine进行基础降压；VTE预防需要结合外科止血和INR/肌酐后选择普通肝素或低分子肝素。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "Acetaminophen",
+          "Ondansetron",
+          "Naloxone",
+          "Senna",
+          "Polyethylene glycol",
+          "Normal saline flush"
+        ],
+        "cautioned_drugs": [
+          "Gabapentin",
+          "Oxycodone",
+          "Methocarbamol",
+          "Unfractionated heparin",
+          "Enoxaparin",
+          "Ketorolac"
+        ],
+        "conflict_notes": [
+          "阿片类、gabapentin和肌松药在OSA患者中存在叠加镇静和呼吸抑制风险。",
+          "抗凝预防在脊柱术后需注意硬膜外血肿和神经功能恶化风险，必须经手术团队确认时机。"
+        ],
+        "priority_comment": "优先采用阿片节约、多模式镇痛和严密神经/呼吸监测。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "Amlodipine",
+          "Acetaminophen",
+          "Unfractionated heparin after surgical clearance",
+          "Normal saline flush"
+        ],
+        "cautioned_drugs": [
+          "Enoxaparin",
+          "ACE inhibitors",
+          "ARB",
+          "Potassium chloride",
+          "Hydralazine",
+          "NSAIDs"
+        ],
+        "conflict_notes": [
+          "缺少肌酐和钾值，不宜优先使用ACEI/ARB、保钾利尿剂或经验性补钾。",
+          "缺少INR和术后止血信息，药物性VTE预防需先复核出血风险。"
+        ],
+        "priority_comment": "降压和VTE预防应基于实际血压、肾功能、电解质、凝血和术后出血风险。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案不能声称来自真实住院处方，因为输入未提供当前处方。",
+      "首选计划应覆盖腰椎疾病相关疼痛、OSA安全、血压管理、VTE预防评估、肠道护理、恶心控制、冲管和需复核项目。",
+      "在实验室数据缺失情况下，肾功能敏感、凝血敏感、电解质敏感和中枢抑制药物应列入需复核或低优先级。",
+      "若疼痛控制不足，可短期使用低剂量短效阿片救援，并同步配备呼吸监测和naloxone救援。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "阿片节约型脊柱术后综合支持方案",
+        "drugs": [
+          "Acetaminophen",
+          "Gabapentin",
+          "Oxycodone PRN",
+          "Naloxone PRN",
+          "Ondansetron PRN",
+          "Senna",
+          "Polyethylene glycol",
+          "Amlodipine",
+          "Unfractionated heparin after surgical clearance",
+          "Normal saline flush",
+          "Cefazolin perioperative only if operative prophylaxis indicated",
+          "Potassium chloride only if hypokalemia confirmed",
+          "Magnesium sulfate only if hypomagnesemia confirmed"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Acetaminophen",
+            "Gabapentin"
+          ],
+          "risk_modifying_therapy": [
+            "Amlodipine",
+            "Unfractionated heparin after surgical clearance"
+          ],
+          "symptom_supportive_medication": [
+            "Oxycodone PRN",
+            "Ondansetron PRN",
+            "Naloxone PRN"
+          ],
+          "nursing_support_medication": [
+            "Senna",
+            "Polyethylene glycol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Unfractionated heparin after surgical clearance",
+            "Cefazolin perioperative only if operative prophylaxis indicated"
+          ],
+          "fluid_diluent_flush_medication": [
+            "Normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "Cefazolin perioperative only if operative prophylaxis indicated"
+          ],
+          "nutrition_electrolyte_medication": [
+            "Potassium chloride only if hypokalemia confirmed",
+            "Magnesium sulfate only if hypomagnesemia confirmed"
+          ],
+          "requires_review": [
+            "Gabapentin dose after renal function",
+            "Oxycodone need and respiratory monitoring due to OSA",
+            "Unfractionated heparin timing after spine surgery",
+            "INR before anticoagulation",
+            "Creatinine and potassium before electrolyte or renal-sensitive drugs",
+            "Actual blood pressure before antihypertensive adjustment"
+          ]
+        },
+        "supporting_specialties": [
+          "神经",
+          "心血管"
+        ],
+        "rationale": "以acetaminophen为基础镇痛，谨慎加入gabapentin和短效阿片PRN，兼顾OSA呼吸风险；使用amlodipine作为较少依赖肾功能/钾值的降压选择；VTE预防采用需外科确认后的普通肝素策略；同时覆盖便秘、恶心、冲管、围术期抗菌预防和电解质复核。",
+        "aggregate_score": 0.78
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "疼痛强化但严密监测方案",
+        "drugs": [
+          "Acetaminophen",
+          "Oxycodone PRN",
+          "Hydromorphone PRN severe breakthrough pain",
+          "Naloxone PRN",
+          "Ondansetron PRN",
+          "Senna",
+          "Polyethylene glycol",
+          "Amlodipine",
+          "Unfractionated heparin after surgical clearance",
+          "Normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Acetaminophen"
+          ],
+          "risk_modifying_therapy": [
+            "Amlodipine",
+            "Unfractionated heparin after surgical clearance"
+          ],
+          "symptom_supportive_medication": [
+            "Oxycodone PRN",
+            "Hydromorphone PRN severe breakthrough pain",
+            "Ondansetron PRN",
+            "Naloxone PRN"
+          ],
+          "nursing_support_medication": [
+            "Senna",
+            "Polyethylene glycol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Unfractionated heparin after surgical clearance"
+          ],
+          "fluid_diluent_flush_medication": [
+            "Normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "Continuous pulse oximetry or enhanced monitoring due to OSA",
+            "Avoid concurrent benzodiazepines or excessive sedatives",
+            "Renal function before hydromorphone accumulation assessment",
+            "INR and wound hemostasis before heparin"
+          ]
+        },
+        "supporting_specialties": [
+          "神经"
+        ],
+        "rationale": "适用于疼痛较重且基础镇痛不足的情形，但因OSA和实验室缺失，阿片负荷更高，需更强呼吸监测和明确停用条件。",
+        "aggregate_score": 0.61
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "心血管和肾功能保守优先方案",
+        "drugs": [
+          "Acetaminophen",
+          "Amlodipine",
+          "Hydralazine PRN for severe inpatient hypertension after BP confirmation",
+          "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance",
+          "Ondansetron PRN",
+          "Senna",
+          "Polyethylene glycol",
+          "Normal saline flush",
+          "Electrolyte replacement only after labs"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "Acetaminophen"
+          ],
+          "risk_modifying_therapy": [
+            "Amlodipine",
+            "Hydralazine PRN for severe inpatient hypertension after BP confirmation",
+            "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance"
+          ],
+          "symptom_supportive_medication": [
+            "Ondansetron PRN"
+          ],
+          "nursing_support_medication": [
+            "Senna",
+            "Polyethylene glycol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance"
+          ],
+          "fluid_diluent_flush_medication": [
+            "Normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "Electrolyte replacement only after labs"
+          ],
+          "requires_review": [
+            "Actual BP trend",
+            "Creatinine",
+            "Potassium",
+            "INR",
+            "Postoperative bleeding risk",
+            "Pain severity because plan may under-treat severe pain"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "神经"
+        ],
+        "rationale": "在生命体征和实验室均缺失时最保守，降低抗凝、镇静和肾功能敏感药物风险，但可能对神经病理痛和重度术后疼痛覆盖不足。",
+        "aggregate_score": 0.69
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "阿片节约型脊柱术后综合支持方案",
+      "drugs": [
+        "Acetaminophen",
+        "Gabapentin",
+        "Oxycodone PRN",
+        "Naloxone PRN",
+        "Ondansetron PRN",
+        "Senna",
+        "Polyethylene glycol",
+        "Amlodipine",
+        "Unfractionated heparin after surgical clearance",
+        "Normal saline flush",
+        "Cefazolin perioperative only if operative prophylaxis indicated",
+        "Potassium chloride only if hypokalemia confirmed",
+        "Magnesium sulfate only if hypomagnesemia confirmed"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Acetaminophen",
+          "Gabapentin"
+        ],
+        "risk_modifying_therapy": [
+          "Amlodipine",
+          "Unfractionated heparin after surgical clearance"
+        ],
+        "symptom_supportive_medication": [
+          "Oxycodone PRN",
+          "Ondansetron PRN",
+          "Naloxone PRN"
+        ],
+        "nursing_support_medication": [
+          "Senna",
+          "Polyethylene glycol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Unfractionated heparin after surgical clearance",
+          "Cefazolin perioperative only if operative prophylaxis indicated"
+        ],
+        "fluid_diluent_flush_medication": [
+          "Normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "Cefazolin perioperative only if operative prophylaxis indicated"
+        ],
+        "nutrition_electrolyte_medication": [
+          "Potassium chloride only if hypokalemia confirmed",
+          "Magnesium sulfate only if hypomagnesemia confirmed"
+        ],
+        "requires_review": [
+          "Gabapentin dose after renal function",
+          "Oxycodone need and respiratory monitoring due to OSA",
+          "Unfractionated heparin timing after spine surgery",
+          "INR before anticoagulation",
+          "Creatinine and potassium before electrolyte or renal-sensitive drugs",
+          "Actual blood pressure before antihypertensive adjustment"
+        ]
+      },
+      "supporting_specialties": [
+        "神经",
+        "心血管"
+      ],
+      "rationale": "兼顾神经疼痛、术后支持、高血压和VTE预防需求，同时将高风险项目设置为需复核。",
+      "aggregate_score": 0.78
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "疼痛强化但严密监测方案",
+      "drugs": [
+        "Acetaminophen",
+        "Oxycodone PRN",
+        "Hydromorphone PRN severe breakthrough pain",
+        "Naloxone PRN",
+        "Ondansetron PRN",
+        "Senna",
+        "Polyethylene glycol",
+        "Amlodipine",
+        "Unfractionated heparin after surgical clearance",
+        "Normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Acetaminophen"
+        ],
+        "risk_modifying_therapy": [
+          "Amlodipine",
+          "Unfractionated heparin after surgical clearance"
+        ],
+        "symptom_supportive_medication": [
+          "Oxycodone PRN",
+          "Hydromorphone PRN severe breakthrough pain",
+          "Ondansetron PRN",
+          "Naloxone PRN"
+        ],
+        "nursing_support_medication": [
+          "Senna",
+          "Polyethylene glycol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Unfractionated heparin after surgical clearance"
+        ],
+        "fluid_diluent_flush_medication": [
+          "Normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "OSA呼吸监测",
+          "阿片总量",
+          "肾功能",
+          "INR",
+          "术后出血风险"
+        ]
+      },
+      "supporting_specialties": [
+        "神经"
+      ],
+      "rationale": "疼痛控制更强，但OSA和镇静风险更高，因此排序低于计划A。",
+      "aggregate_score": 0.61
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "心血管和肾功能保守优先方案",
+      "drugs": [
+        "Acetaminophen",
+        "Amlodipine",
+        "Hydralazine PRN for severe inpatient hypertension after BP confirmation",
+        "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance",
+        "Ondansetron PRN",
+        "Senna",
+        "Polyethylene glycol",
+        "Normal saline flush",
+        "Electrolyte replacement only after labs"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Acetaminophen"
+        ],
+        "risk_modifying_therapy": [
+          "Amlodipine",
+          "Hydralazine PRN for severe inpatient hypertension after BP confirmation",
+          "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance"
+        ],
+        "symptom_supportive_medication": [
+          "Ondansetron PRN"
+        ],
+        "nursing_support_medication": [
+          "Senna",
+          "Polyethylene glycol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Mechanical VTE prophylaxis plus delayed Unfractionated heparin after clearance"
+        ],
+        "fluid_diluent_flush_medication": [
+          "Normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "Electrolyte replacement only after labs"
+        ],
+        "requires_review": [
+          "血压趋势",
+          "肌酐",
+          "血钾",
+          "INR",
+          "疼痛评分"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "神经"
+      ],
+      "rationale": "安全边界较保守，适合数据严重缺失或出血/呼吸风险担忧较高时，但镇痛覆盖有限。",
+      "aggregate_score": 0.69
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "阿片节约型脊柱术后综合支持方案",
+      "drugs": [
+        "Acetaminophen",
+        "Gabapentin after renal function review",
+        "Oxycodone PRN with OSA monitoring",
+        "Naloxone PRN",
+        "Ondansetron PRN",
+        "Senna",
+        "Polyethylene glycol",
+        "Amlodipine if blood pressure confirms need",
+        "Unfractionated heparin only after surgical clearance and INR review",
+        "Normal saline flush",
+        "Cefazolin perioperative only if operative prophylaxis indicated",
+        "Potassium chloride only if hypokalemia confirmed",
+        "Magnesium sulfate only if hypomagnesemia confirmed"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "Acetaminophen",
+          "Gabapentin after renal function review"
+        ],
+        "risk_modifying_therapy": [
+          "Amlodipine if blood pressure confirms need",
+          "Unfractionated heparin only after surgical clearance and INR review"
+        ],
+        "symptom_supportive_medication": [
+          "Oxycodone PRN with OSA monitoring",
+          "Ondansetron PRN",
+          "Naloxone PRN"
+        ],
+        "nursing_support_medication": [
+          "Senna",
+          "Polyethylene glycol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "Unfractionated heparin only after surgical clearance and INR review",
+          "Cefazolin perioperative only if operative prophylaxis indicated"
+        ],
+        "fluid_diluent_flush_medication": [
+          "Normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "Cefazolin perioperative only if operative prophylaxis indicated"
+        ],
+        "nutrition_electrolyte_medication": [
+          "Potassium chloride only if hypokalemia confirmed",
+          "Magnesium sulfate only if hypomagnesemia confirmed"
+        ],
+        "requires_review": [
+          "获取肌酐、BUN、钾、钠、血糖、INR",
+          "获取血压和氧饱和度趋势",
+          "确认脊柱术后止血状态及抗凝开始时间",
+          "评估OSA夜间呼吸监测需求",
+          "复核疼痛评分、镇静评分和肠道功能"
+        ]
+      },
+      "supporting_specialties": [
+        "神经",
+        "心血管"
+      ],
+      "rationale": "该计划在疼痛控制、OSA安全、血压管理、VTE预防和护理支持之间平衡最佳，并将所有受缺失实验室或围术期信息影响的药物设置为条件性使用。",
+      "aggregate_score": 0.78
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "A",
+        "rank": 1,
+        "aggregate_score": 0.78,
+        "safety_adjusted_score": 0.74,
+        "reason": "覆盖最完整，阿片节约，且对抗凝、gabapentin、电解质和降压均设置复核条件。"
+      },
+      {
+        "plan_id": "C",
+        "rank": 2,
+        "aggregate_score": 0.69,
+        "safety_adjusted_score": 0.71,
+        "reason": "最保守，适合风险不明时过渡，但对神经病理痛和重度术后痛覆盖不足。"
+      },
+      {
+        "plan_id": "B",
+        "rank": 3,
+        "aggregate_score": 0.61,
+        "safety_adjusted_score": 0.52,
+        "reason": "疼痛控制强，但阿片负荷更高，OSA相关呼吸抑制风险较大。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "neurology_sedation_respiratory_risk",
+        "severity": "moderate_unknown_due_to_missing_labs_and_OSA",
+        "message": "BUN缺失且存在OSA，阿片、gabapentin和肌松药需谨慎，避免多镇静药叠加。",
+        "affected_drugs": [
+          "Oxycodone",
+          "Gabapentin",
+          "Methocarbamol",
+          "Hydromorphone"
+        ]
+      },
+      {
+        "risk_id": "cardiology_antithrombotic_bleeding_risk",
+        "severity": "unknown_requires_review",
+        "message": "INR缺失且脊柱术后背景下抗凝需确认出血风险和外科时机。",
+        "affected_drugs": [
+          "Unfractionated heparin",
+          "Enoxaparin"
+        ]
+      },
+      {
+        "risk_id": "cardiology_renal_hemodynamic_risk",
+        "severity": "unknown_requires_review",
+        "message": "肌酐缺失，肾功能敏感药物和低分子肝素需复核。",
+        "affected_drugs": [
+          "Gabapentin",
+          "Enoxaparin",
+          "NSAIDs",
+          "ACE inhibitors",
+          "ARB"
+        ]
+      },
+      {
+        "risk_id": "cardiology_potassium_arrhythmia_risk",
+        "severity": "unknown_requires_review",
+        "message": "钾值缺失，补钾、ACEI/ARB、螺内酯和利尿剂不应经验性使用。",
+        "affected_drugs": [
+          "Potassium chloride",
+          "ACE inhibitors",
+          "ARB",
+          "Spironolactone",
+          "Diuretics"
+        ]
+      },
+      {
+        "risk_id": "neurology_sodium_seizure_cerebral_edema_risk",
+        "severity": "unknown_requires_review",
+        "message": "钠值缺失，需复核以排除影响意识、癫痫阈值和神经症状解释的电解质异常。",
+        "affected_drugs": [
+          "Hypotonic fluids",
+          "Diuretics",
+          "Desmopressin"
+        ]
+      },
+      {
+        "risk_id": "neurology_glucose_mimic_stroke_risk",
+        "severity": "unknown_requires_review",
+        "message": "血糖缺失，需复核以避免代谢异常影响神经症状和围术期安全。",
+        "affected_drugs": [
+          "Insulin",
+          "Dextrose fluids",
+          "Systemic corticosteroids"
+        ]
+      }
+    ],
+    "safety_summary": "安全审核选择计划A，但将gabapentin、oxycodone、肝素、降压药和电解质补充均改为条件性使用。主要限制因素为OSA、脊柱术后出血风险、凝血/肾功能/电解质/血糖/生命体征缺失。不得加入苯二氮卓类、高剂量阿片、经验性补钾、治疗剂量抗凝或未复核肾功能的NSAID/ACEI/ARB。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": "1_诊断路由",
+      "speaker": "routing_agent",
+      "text": "识别主诊断为腰椎管狭窄伴神经源性跛行，合并腰椎不稳、滑脱、术后急性疼痛和慢性疼痛，路由至神经为主导专科；高血压和OSA触发心血管协作。"
+    },
+    {
+      "step": "2_神经专科独立评估",
+      "speaker": "neurology_agent",
+      "text": "建议阿片节约多模式镇痛，优先acetaminophen，谨慎使用gabapentin和短效阿片PRN，避免苯二氮卓和高镇静负荷。"
+    },
+    {
+      "step": "2_心血管专科独立评估",
+      "speaker": "cardiology_agent",
+      "text": "建议基于血压趋势使用相对稳妥的amlodipine，VTE药物预防需确认INR、肾功能和脊柱术后止血状态。"
+    },
+    {
+      "step": "3_MDT交叉审阅",
+      "speaker": "mdt_coordinator",
+      "text": "双方同意计划需覆盖疼痛、降压、VTE预防、便秘、恶心、冲管、围术期预防和电解质复核；所有受缺失数据影响的药物均设置条件性使用。"
+    },
+    {
+      "step": "4_候选处方生成",
+      "speaker": "plan_generator",
+      "text": "生成A阿片节约综合方案、B疼痛强化监测方案、C心血管肾功能保守方案。"
+    },
+    {
+      "step": "5_安全审核",
+      "speaker": "safety_agent",
+      "text": "依据OSA、INR缺失、肌酐缺失、钾钠血糖缺失和脊柱术后风险，对镇静药、抗凝、肾功能敏感药和电解质补充进行降权或条件化。"
+    },
+    {
+      "step": "6_最终结论",
+      "speaker": "system",
+      "text": "最终选择计划A作为安全调整后的完整候选处方。王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

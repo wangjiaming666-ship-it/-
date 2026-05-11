@@ -1,48 +1,118 @@
 [
   {
-    "rule_id": "cardiology_potassium_risk",
+    "rule_id": "cardiology_potassium_arrhythmia_risk",
+    "risk_target": "electrolyte related arrhythmia",
+    "related_treatments": "diuretics|ACE inhibitors|ARB|spironolactone|antiarrhythmics",
     "lab_name": "potassium_24h",
-    "lab_purpose": "评估电解质紊乱导致的心律失常风险",
+    "lab_purpose": "评估影响心律和容量治疗的血钾风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.5,
       "high": 5.0,
-      "unit": "mmol/L",
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.0,
       "high": 5.5,
-      "unit": "mmol/L",
       "outside_range_is_high_risk": true
     },
-    "risk_message": "钾离子明显异常时，心律失常、传导阻滞和药物诱发心电不稳定风险上升。",
+    "risk_message": "血钾异常会增加心律失常传导异常和相关药物不稳定风险",
     "action": {
-      "moderate_risk": "对影响电解质或心律的候选药物降权，并提示复核补钾或降钾需要。",
-      "high_risk": "将相关方案标记为高风险，不作为优先推荐，建议先纠正电解质后再决策。"
+      "moderate_risk": "对影响血钾或心律的候选治疗降权并提示复核",
+      "high_risk": "标记为高电解质风险并建议先纠正血钾后再强化方案"
     },
-    "threshold_basis": "结合心血管专科样本分布与临床常用参考范围设定。"
+    "contraindication_or_caution": "慎用升钾或降钾治疗并复核肾功能和心电图",
+    "monitoring_advice": "复查血钾心电图肌酐和用药清单",
+    "reference_source": "KDIGO potassium management; DailyMed labels",
+    "reference_url": "https://kdigo.org",
+    "threshold_basis": "参考 KDIGO 钾紊乱管理和常用血钾安全范围"
   },
   {
-    "rule_id": "cardiology_inr_risk",
+    "rule_id": "cardiology_antithrombotic_bleeding_risk",
+    "risk_target": "bleeding risk",
+    "related_treatments": "anticoagulants|antiplatelets|thrombolytics",
     "lab_name": "inr_24h",
-    "lab_purpose": "评估抗凝相关出血风险",
+    "lab_purpose": "评估抗凝抗血小板或溶栓治疗相关出血风险",
     "threshold_type": "upper_bound",
     "moderate_risk_threshold": {
+      "unit": "",
       "value": 1.5,
-      "operator": ">",
-      "unit": ""
+      "operator": ">"
     },
     "high_risk_threshold": {
+      "unit": "",
       "value": 2.0,
-      "operator": ">",
-      "unit": ""
+      "operator": ">"
     },
-    "risk_message": "INR 升高提示凝血功能异常，抗凝、抗血小板或侵袭性操作相关方案的出血风险增加。",
+    "risk_message": "INR 升高提示凝血功能异常且强化抗栓治疗出血风险增加",
     "action": {
-      "moderate_risk": "对抗凝和联用抗血小板方案降权，并提示人工复核。",
-      "high_risk": "暂停优先推荐强化抗凝方案，标记为高出血风险病例。"
+      "moderate_risk": "对抗凝抗血小板或溶栓相关方案降权并提示人工复核",
+      "high_risk": "暂停优先推荐强化抗栓方案并标记为高出血风险"
     },
-    "threshold_basis": "参考心血管病例 INR 分布和临床凝血风险经验阈值。"
+    "contraindication_or_caution": "避免未复核情况下联合强化抗凝抗血小板或溶栓",
+    "monitoring_advice": "复查 INR 血红蛋白血小板和出血体征",
+    "reference_source": "DailyMed anticoagulant labels; AHA ACC antithrombotic references",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考抗凝药品说明书和临床常用凝血风险阈值"
+  },
+  {
+    "rule_id": "cardiology_renal_hemodynamic_risk",
+    "risk_target": "renal hemodynamic risk",
+    "related_treatments": "ACE inhibitors|ARB|diuretics|contrast exposure",
+    "lab_name": "creatinine_24h",
+    "lab_purpose": "评估心血管治疗中的肾功能和血流动力学风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 1.5,
+      "operator": ">="
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 2.5,
+      "operator": ">="
+    },
+    "risk_message": "肌酐升高时 ACEI ARB 利尿剂或造影相关治疗需注意肾灌注和药物蓄积",
+    "action": {
+      "moderate_risk": "降低肾功能敏感治疗优先级并提示剂量和容量复核",
+      "high_risk": "标记为高肾功能风险并建议避免不必要肾毒性或造影暴露"
+    },
+    "contraindication_or_caution": "慎用肾功能依赖药物并结合容量状态调整",
+    "monitoring_advice": "监测肌酐尿量血压和电解质",
+    "reference_source": "KDIGO CKD guideline; DailyMed renal warnings",
+    "reference_url": "https://kdigo.org",
+    "threshold_basis": "参考 KDIGO 肾功能管理和药品说明书肾功能警示"
+  },
+  {
+    "rule_id": "cardiology_metabolic_steroid_or_beta_blocker_risk",
+    "risk_target": "glycemic cardiovascular context",
+    "related_treatments": "beta blockers|systemic corticosteroids|dextrose fluids",
+    "lab_name": "glucose_24h",
+    "lab_purpose": "评估心血管治疗中血糖异常对方案适配性的影响",
+    "threshold_type": "bidirectional",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "low": 70.0,
+      "high": 180.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "low": 54.0,
+      "high": 250.0,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "血糖显著异常会影响感染应激和心血管药物安全解释",
+    "action": {
+      "moderate_risk": "提示复核降糖和可能掩盖低血糖症状的药物",
+      "high_risk": "标记为高代谢风险并优先修正血糖后再排序方案"
+    },
+    "contraindication_or_caution": "β受体阻滞剂可能掩盖低血糖症状且激素可升高血糖",
+    "monitoring_advice": "监测床旁血糖进食状态和低血糖症状",
+    "reference_source": "ADA Standards of Care; DailyMed beta blocker labels",
+    "reference_url": "https://diabetesjournals.org/care",
+    "threshold_basis": "参考 ADA 住院血糖目标和药品说明书风险"
   }
 ]

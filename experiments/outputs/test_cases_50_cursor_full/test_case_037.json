@@ -1,0 +1,973 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "19840300",
+      "hadm_id": "27892544",
+      "gender": "M",
+      "age": 75.0
+    },
+    "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
+    "active_specialties": [
+      "内分泌/代谢",
+      "消化",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Encounter for antineoplastic chemotherapy",
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified",
+        "Mantle cell lymphoma, lymph nodes of multiple sites"
+      ],
+      "消化": [
+        "Acidosis",
+        "Fluid overload, unspecified",
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Myelophthisis"
+      ],
+      "心血管": [
+        "Dysuria",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Mantle cell lymphoma, extranodal and solid organ sites",
+        "Nausea"
+      ]
+    },
+    "comorbidity_list": [
+      "Acidosis",
+      "Dysuria",
+      "Essential (primary) hypertension",
+      "Fluid overload, unspecified",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hyperlipidemia, unspecified",
+      "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+      "Mantle cell lymphoma, extranodal and solid organ sites",
+      "Mantle cell lymphoma, lymph nodes of multiple sites",
+      "Myelophthisis",
+      "Nausea"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.1,
+      "bun_24h": 17.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 137.0,
+      "glucose_24h": 88.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.4
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 37,
+      "subject_id": "19840300",
+      "hadm_id": "27892544",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 消化 | 心血管",
+      "gender": "M",
+      "anchor_age": 75,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "8/5/2180 14:56:00",
+      "dischtime": "11/5/2180 16:05:00",
+      "admission_type": "ELECTIVE",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Encounter for antineoplastic chemotherapy",
+      "comorbidity_list": "Acidosis | Dysuria | Essential (primary) hypertension | Fluid overload, unspecified | Gastro-esophageal reflux disease without esophagitis | Hyperlipidemia, unspecified | Hyperuricemia without signs of inflammatory arthritis and tophaceous disease | Mantle cell lymphoma, extranodal and solid organ sites | Mantle cell lymphoma, lymph nodes of multiple sites | Myelophthisis | Nausea",
+      "specialty_agents": "内分泌/代谢 | 消化 | 心血管 | 肿瘤/血液",
+      "drug_list": "0.45% sodium chloride | 0.9% sodium chloride | 5% dextrose | acyclovir | allopurinol | cepacol (sore throat lozenge) | cyclophosphamide | dexamethasone sod phosphate | diltiazem extended-release | doxorubicin | durezol | heparin flush (10 units/ml) | heparin flush (100 units/ml) | hydrochlorothiazide | ibrutinib | losartan potassium | omeprazole | ondansetron | potassium chloride | prednisone | prolensa | sodium chloride 0.9% | sodium chloride 0.9%  flush | syringe (chemo) | vincristine (oncovin)",
+      "creatinine_24h": 1.1,
+      "bun_24h": 17.0,
+      "potassium_24h": 3.6,
+      "sodium_24h": 137.0,
+      "glucose_24h": 88.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.4
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "肿瘤/血液",
+      "内分泌/代谢",
+      "消化",
+      "心血管"
+    ],
+    "lead_specialty": "肿瘤/血液",
+    "specialty_related_diagnoses": {
+      "肿瘤/血液": [
+        "Encounter for antineoplastic chemotherapy",
+        "Mantle cell lymphoma, lymph nodes of multiple sites",
+        "Mantle cell lymphoma, extranodal and solid organ sites",
+        "Myelophthisis"
+      ],
+      "内分泌/代谢": [
+        "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+        "Acidosis",
+        "Hyperlipidemia, unspecified"
+      ],
+      "消化": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Nausea"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Fluid overload, unspecified"
+      ]
+    },
+    "rationale": "本次入院核心场景为套细胞淋巴瘤抗肿瘤化疗，合并高尿酸、酸中毒、容量负荷、胃食管反流、恶心、高血压和高脂血症；肾功能、钠、钾、血糖和胆红素当前未触发高风险阈值，但 INR 缺失，抗凝、NSAIDs 和侵袭操作相关用药需复核。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "肿瘤/血液",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "rituximab",
+          "confidence": 0.82,
+          "reason": "套细胞淋巴瘤常用抗 CD20 靶向治疗成分，适合作为疾病直接治疗核心药物之一。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "bendamustine",
+          "confidence": 0.74,
+          "reason": "老年套细胞淋巴瘤常见联合方案成分，可与 rituximab 构成疾病导向化疗方案，但需结合骨髓抑制风险复核。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "allopurinol",
+          "confidence": 0.78,
+          "reason": "存在高尿酸及淋巴瘤化疗场景，需进行肿瘤溶解综合征风险控制。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "acyclovir",
+          "confidence": 0.68,
+          "reason": "抗 CD20/化疗相关免疫抑制背景下可考虑病毒预防，需结合机构规范。"
+        },
+        {
+          "rank": 5,
+          "drug_name": "ondansetron",
+          "confidence": 0.72,
+          "reason": "病例存在恶心且化疗相关恶心呕吐风险高。"
+        }
+      ],
+      "recommendation_reasons": {
+        "disease_directed": "以套细胞淋巴瘤化疗为主轴，优先考虑 rituximab 联合 bendamustine 的较常用老年患者方案。",
+        "tls_prevention": "高尿酸和淋巴瘤化疗提示肿瘤溶解综合征风险，需尿酸控制、补液策略和电解质监测。",
+        "marrow_risk": "Myelophthisis 提示骨髓受累或造血受抑风险，化疗、抗感染预防和生长因子需审慎排序。"
+      },
+      "risk_alerts": [
+        "骨髓抑制、感染、输注反应、肿瘤溶解综合征需监测。",
+        "缺少 CBC、ANC、血小板、LDH、磷、钙、尿酸动态值，最终化疗强度需人工复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "high-dose cytarabine",
+          "reason": "75 岁患者且存在骨髓受累风险，强化方案毒性较高，除非肿瘤专科明确适应证。"
+        },
+        {
+          "drug_name": "NSAIDs",
+          "reason": "化疗期间潜在血小板减少、肾风险和消化道风险，不宜作为优先止痛/退热方案。"
+        }
+      ],
+      "overall_confidence": 0.76,
+      "summary_reason": "肿瘤治疗为主线，兼顾肿瘤溶解、感染、恶心和骨髓抑制风险。",
+      "conversation_text": "肿瘤/血液意见：本例为套细胞淋巴瘤化疗入院，应优先建立抗肿瘤治疗方案，并同步安排 TLS 预防、抗吐、感染预防和骨髓抑制监测。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "allopurinol",
+          "confidence": 0.8,
+          "reason": "高尿酸合并化疗场景，适合用于尿酸生成抑制和 TLS 风险控制。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "0.9% sodium chloride",
+          "confidence": 0.63,
+          "reason": "可作为 TLS 预防和化疗溶媒/补液基础，但因存在 fluid overload 需限制速率并严密出入量。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "potassium chloride",
+          "confidence": 0.48,
+          "reason": "钾 3.6 mmol/L 接近低正常，若补液、利尿或化疗后下降，可小剂量补充并复查。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "atorvastatin",
+          "confidence": 0.58,
+          "reason": "既往高脂血症可延续风险控制，但急性化疗期需评估肝酶和相互作用。"
+        }
+      ],
+      "recommendation_reasons": {
+        "glucose": "血糖 88 mg/dL，未触发低血糖或高血糖风险，不建议经验性降糖药。",
+        "sodium": "钠 137 mmol/L，未触发水钠风险阈值。",
+        "potassium": "钾 3.6 mmol/L，未触发高风险，但在利尿、补液或化疗后需复查。",
+        "renal": "肌酐 1.1 mg/dL，未触发知识库肾功能阈值，但仍需按 eGFR 调整肾排泄药。"
+      },
+      "risk_alerts": [
+        "补液用于 TLS 预防时与 fluid overload 存在冲突，需每日体重、尿量和电解质复核。",
+        "不建议在血糖正常且无糖尿病诊断时启动胰岛素或口服降糖药。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "metformin",
+          "reason": "无糖尿病或高血糖依据，且化疗/酸中毒背景下不应经验性使用。"
+        },
+        {
+          "drug_name": "dextrose-containing maintenance fluids",
+          "reason": "血糖正常且存在容量管理问题，非必要不优先。"
+        }
+      ],
+      "overall_confidence": 0.7,
+      "summary_reason": "代谢重点是高尿酸/TLS 预防、钾钠监测和避免不必要降糖。",
+      "conversation_text": "内分泌/代谢意见：当前血糖、钠、肌酐安全，钾低正常；治疗应聚焦高尿酸与化疗相关代谢波动，补液需与容量负荷协同。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.76,
+          "reason": "病例有 GERD，且化疗、激素或应激状态下可用于胃酸相关症状及胃黏膜保护。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "ondansetron",
+          "confidence": 0.8,
+          "reason": "病例有恶心且化疗相关恶心呕吐风险高。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "prochlorperazine",
+          "confidence": 0.5,
+          "reason": "可作为 ondansetron 控制不足时的二线止吐药，但老年患者需注意镇静和锥体外系反应。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.45,
+          "reason": "若止吐药、活动减少或化疗后便秘，可作为支持用药；无便秘信息时列为按需。"
+        }
+      ],
+      "recommendation_reasons": {
+        "bilirubin": "总胆红素 0.4 mg/dL，未触发肝胆代谢风险。",
+        "inr": "INR 缺失，无法排除凝血异常，抗凝、NSAIDs 和侵袭操作相关药物需复核。",
+        "gerd_nausea": "GERD 与恶心均在诊断中，支持 PPI 与止吐药纳入方案。"
+      },
+      "risk_alerts": [
+        "INR 缺失，若需抗凝、侵袭操作或 NSAIDs，应先复查凝血。",
+        "老年患者使用多巴胺拮抗止吐药需警惕镇静、谵妄和锥体外系反应。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "GERD、化疗潜在血小板减少及 INR 缺失背景下消化道出血风险不明确。"
+        },
+        {
+          "drug_name": "metoclopramide scheduled high dose",
+          "reason": "老年患者神经系统不良反应风险较高，除非明确胃排空问题。"
+        }
+      ],
+      "overall_confidence": 0.72,
+      "summary_reason": "消化支持以 PPI 和止吐为主，避免出血和镇静风险。",
+      "conversation_text": "消化意见：GERD 与恶心需要主动处理；肝胆指标当前可接受，但 INR 缺失限制抗凝和高出血风险药物选择。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "amlodipine",
+          "confidence": 0.58,
+          "reason": "有原发性高血压，缺少当前血压；若入院血压持续升高，可作为相对平稳的降压选择。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "furosemide",
+          "confidence": 0.52,
+          "reason": "存在 fluid overload，可在容量超负荷证据明确时短期使用，但钾 3.6 需监测低钾。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "atorvastatin",
+          "confidence": 0.55,
+          "reason": "高脂血症风险控制药物，可在肝功能允许且无相互作用时延续。"
+        },
+        {
+          "rank": 4,
+          "drug_name": "0.9% sodium chloride restricted-rate hydration",
+          "confidence": 0.5,
+          "reason": "化疗/TLS 需要补液时，心血管角度建议限制速率并动态评估容量。"
+        }
+      ],
+      "recommendation_reasons": {
+        "potassium": "钾 3.6 mmol/L，心律风险未达阈值，但利尿剂可进一步降低血钾。",
+        "renal": "肌酐 1.1 mg/dL，未触发肾血流动力学风险阈值。",
+        "fluid_overload": "存在容量负荷诊断，所有补液和利尿都需以生命体征、尿量、体重和肺部体征为依据。"
+      },
+      "risk_alerts": [
+        "缺少 24 小时血压、心率、氧饱和度，降压和利尿强度需床旁复核。",
+        "TLS 补液与 fluid overload 冲突，需要心肿瘤协同设定目标尿量和补液速率。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "spironolactone",
+          "reason": "无明确心衰/腹水适应证，且会影响钾平衡。"
+        },
+        {
+          "drug_name": "ACE inhibitor initiation",
+          "reason": "当前缺少血压和容量状态，化疗期若补液/利尿波动，初始使用需谨慎。"
+        }
+      ],
+      "overall_confidence": 0.61,
+      "summary_reason": "心血管重点是容量平衡、高血压延续治疗和避免电解质诱发心律风险。",
+      "conversation_text": "心血管意见：可保留高血压和高脂血症慢病管理，但不能忽视 TLS 补液与容量负荷之间的治疗冲突。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "肿瘤/血液",
+        "accepted_drugs": [
+          "rituximab",
+          "bendamustine",
+          "allopurinol",
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "cautioned_drugs": [
+          "furosemide",
+          "acyclovir",
+          "atorvastatin"
+        ],
+        "conflict_notes": [
+          "化疗需要补液和 TLS 预防，但病例存在 fluid overload。",
+          "Myelophthisis 提示骨髓风险，bendamustine 强度和感染预防需复核 CBC/ANC/血小板。"
+        ],
+        "priority_comment": "优先完成抗肿瘤治疗与 TLS 预防框架，支持药物围绕化疗安全展开。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "allopurinol",
+          "0.9% sodium chloride",
+          "potassium chloride"
+        ],
+        "cautioned_drugs": [
+          "furosemide",
+          "dextrose-containing fluids",
+          "systemic corticosteroids"
+        ],
+        "conflict_notes": [
+          "钾 3.6 mmol/L，利尿或胰岛素/糖液策略均可能影响血钾。",
+          "血糖正常，不支持常规降糖治疗。"
+        ],
+        "priority_comment": "代谢优先级为尿酸、钾、钠、肌酐和血糖动态监测。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "ondansetron",
+          "polyethylene glycol"
+        ],
+        "cautioned_drugs": [
+          "NSAIDs",
+          "prochlorperazine",
+          "anticoagulants"
+        ],
+        "conflict_notes": [
+          "INR 缺失导致出血风险评估不完整。",
+          "老年患者镇静类或多巴胺拮抗止吐药应按需低剂量。"
+        ],
+        "priority_comment": "GERD 和恶心应处理，但避免高出血和高镇静负担。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "amlodipine",
+          "atorvastatin"
+        ],
+        "cautioned_drugs": [
+          "furosemide",
+          "0.9% sodium chloride",
+          "potassium chloride"
+        ],
+        "conflict_notes": [
+          "补液和利尿需同一容量目标，不能并行无监测使用。",
+          "缺少血压和心率数据，降压药需确认当前血流动力学稳定。"
+        ],
+        "priority_comment": "容量平衡是心血管审核重点，需每日体重、出入量和电解质。"
+      }
+    ],
+    "consensus_notes": [
+      "最终方案以套细胞淋巴瘤化疗为主，rituximab+bendamustine 可作为候选核心，但必须由肿瘤/血液专科按体表面积、CBC、感染状态和方案周期确认。",
+      "高尿酸和化疗场景支持 allopurinol 及受控补液；因存在 fluid overload，补液需限制速率并设置停用/调整条件。",
+      "GERD 和恶心支持 pantoprazole 与 ondansetron。",
+      "高血压、高脂血症药物可在生命体征和肝功能允许时延续或启动，避免在资料不足时强化降压。",
+      "INR 缺失、CBC 缺失、血小板缺失是安全审核的主要不确定性。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "老年套细胞淋巴瘤化疗支持完整方案",
+        "drugs": [
+          "rituximab",
+          "bendamustine",
+          "allopurinol",
+          "0.9% sodium chloride",
+          "ondansetron",
+          "pantoprazole",
+          "acyclovir",
+          "amlodipine",
+          "atorvastatin",
+          "potassium chloride"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "rituximab",
+            "bendamustine"
+          ],
+          "risk_modifying_therapy": [
+            "allopurinol",
+            "acyclovir",
+            "atorvastatin",
+            "amlodipine"
+          ],
+          "symptom_supportive_medication": [
+            "ondansetron",
+            "pantoprazole"
+          ],
+          "nursing_support_medication": [
+            "acetaminophen premedication if rituximab infusion reaction prophylaxis needed",
+            "diphenhydramine premedication if rituximab infusion reaction prophylaxis needed"
+          ],
+          "prophylaxis_prevention_medication": [
+            "acyclovir",
+            "allopurinol"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride restricted-rate hydration",
+            "0.9% sodium chloride line flush"
+          ],
+          "procedure_related_medication": [
+            "rituximab infusion premedication requires review"
+          ],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride if repeat potassium remains low-normal or decreases"
+          ],
+          "requires_review": [
+            "bendamustine dose and cycle",
+            "rituximab infusion protocol",
+            "CBC with differential",
+            "platelet count",
+            "uric acid phosphorus calcium LDH",
+            "INR",
+            "current blood pressure and volume status"
+          ]
+        },
+        "supporting_specialties": [
+          "肿瘤/血液",
+          "内分泌/代谢",
+          "消化",
+          "心血管"
+        ],
+        "rationale": "覆盖抗肿瘤治疗、TLS 预防、止吐、GERD、慢病风险控制和容量/电解质管理；适合在复核骨髓和容量风险后执行。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "容量负荷优先的保守化疗支持方案",
+        "drugs": [
+          "rituximab",
+          "bendamustine",
+          "allopurinol",
+          "ondansetron",
+          "pantoprazole",
+          "amlodipine",
+          "atorvastatin",
+          "furosemide"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "rituximab",
+            "bendamustine"
+          ],
+          "risk_modifying_therapy": [
+            "allopurinol",
+            "amlodipine",
+            "atorvastatin"
+          ],
+          "symptom_supportive_medication": [
+            "ondansetron",
+            "pantoprazole"
+          ],
+          "nursing_support_medication": [
+            "rituximab infusion monitoring medications as protocol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "allopurinol"
+          ],
+          "fluid_diluent_flush_medication": [
+            "minimal 0.9% sodium chloride flush only unless TLS risk mandates hydration"
+          ],
+          "procedure_related_medication": [
+            "infusion reaction prophylaxis requires review"
+          ],
+          "nutrition_electrolyte_medication": [
+            "potassium replacement only if repeat potassium below target"
+          ],
+          "requires_review": [
+            "objective fluid overload evidence",
+            "need for furosemide",
+            "uric acid trend",
+            "CBC and platelet count",
+            "renal function after diuresis"
+          ]
+        },
+        "supporting_specialties": [
+          "肿瘤/血液",
+          "心血管",
+          "消化"
+        ],
+        "rationale": "当容量负荷证据突出时，减少常规补液，必要时利尿；但可能削弱 TLS 预防强度，因此需更密集实验室监测。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "骨髓抑制风险延迟强化方案",
+        "drugs": [
+          "rituximab",
+          "allopurinol",
+          "ondansetron",
+          "pantoprazole",
+          "acyclovir",
+          "0.9% sodium chloride",
+          "amlodipine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "rituximab monotherapy bridge while cytotoxic chemotherapy requires review"
+          ],
+          "risk_modifying_therapy": [
+            "allopurinol",
+            "acyclovir",
+            "amlodipine"
+          ],
+          "symptom_supportive_medication": [
+            "ondansetron",
+            "pantoprazole"
+          ],
+          "nursing_support_medication": [
+            "infusion monitoring and hypersensitivity rescue medications per protocol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "acyclovir",
+            "allopurinol"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9% sodium chloride restricted-rate hydration and flush"
+          ],
+          "procedure_related_medication": [
+            "rituximab infusion premedication requires review"
+          ],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride only if repeat potassium decreases"
+          ],
+          "requires_review": [
+            "severity of myelophthisis",
+            "ANC",
+            "platelet count",
+            "infection evaluation",
+            "whether bendamustine should be deferred"
+          ]
+        },
+        "supporting_specialties": [
+          "肿瘤/血液",
+          "内分泌/代谢",
+          "消化"
+        ],
+        "rationale": "若 CBC 显示显著骨髓抑制或感染风险高，可先采用较保守桥接和支持策略，待安全指标明确后再加入细胞毒化疗。",
+        "aggregate_score": 0.68
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "老年套细胞淋巴瘤化疗支持完整方案",
+      "drugs": [
+        "rituximab",
+        "bendamustine",
+        "allopurinol",
+        "0.9% sodium chloride",
+        "ondansetron",
+        "pantoprazole",
+        "acyclovir",
+        "amlodipine",
+        "atorvastatin",
+        "potassium chloride"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "rituximab",
+          "bendamustine"
+        ],
+        "risk_modifying_therapy": [
+          "allopurinol",
+          "acyclovir",
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "symptom_supportive_medication": [
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "nursing_support_medication": [
+          "acetaminophen premedication if rituximab infusion reaction prophylaxis needed",
+          "diphenhydramine premedication if rituximab infusion reaction prophylaxis needed"
+        ],
+        "prophylaxis_prevention_medication": [
+          "acyclovir",
+          "allopurinol"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride restricted-rate hydration",
+          "0.9% sodium chloride line flush"
+        ],
+        "procedure_related_medication": [
+          "rituximab infusion premedication requires review"
+        ],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride if repeat potassium remains low-normal or decreases"
+        ],
+        "requires_review": [
+          "bendamustine dose and cycle",
+          "rituximab infusion protocol",
+          "CBC with differential",
+          "platelet count",
+          "uric acid phosphorus calcium LDH",
+          "INR",
+          "current blood pressure and volume status"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "内分泌/代谢",
+        "消化",
+        "心血管"
+      ],
+      "rationale": "综合得分最高，治疗主病同时覆盖 TLS、恶心、GERD、慢病和电解质支持；执行前需复核骨髓、凝血和容量状态。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "容量负荷优先的保守化疗支持方案",
+      "drugs": [
+        "rituximab",
+        "bendamustine",
+        "allopurinol",
+        "ondansetron",
+        "pantoprazole",
+        "amlodipine",
+        "atorvastatin",
+        "furosemide"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "rituximab",
+          "bendamustine"
+        ],
+        "risk_modifying_therapy": [
+          "allopurinol",
+          "amlodipine",
+          "atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "nursing_support_medication": [
+          "rituximab infusion monitoring medications as protocol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "allopurinol"
+        ],
+        "fluid_diluent_flush_medication": [
+          "minimal 0.9% sodium chloride flush only unless TLS risk mandates hydration"
+        ],
+        "procedure_related_medication": [
+          "infusion reaction prophylaxis requires review"
+        ],
+        "nutrition_electrolyte_medication": [
+          "potassium replacement only if repeat potassium below target"
+        ],
+        "requires_review": [
+          "objective fluid overload evidence",
+          "need for furosemide",
+          "uric acid trend",
+          "CBC and platelet count",
+          "renal function after diuresis"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "心血管",
+        "消化"
+      ],
+      "rationale": "更强调容量负荷管理，适合有明确肺水肿、外周水肿或尿量不足时，但 TLS 预防强度较低。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "骨髓抑制风险延迟强化方案",
+      "drugs": [
+        "rituximab",
+        "allopurinol",
+        "ondansetron",
+        "pantoprazole",
+        "acyclovir",
+        "0.9% sodium chloride",
+        "amlodipine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "rituximab monotherapy bridge while cytotoxic chemotherapy requires review"
+        ],
+        "risk_modifying_therapy": [
+          "allopurinol",
+          "acyclovir",
+          "amlodipine"
+        ],
+        "symptom_supportive_medication": [
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "nursing_support_medication": [
+          "infusion monitoring and hypersensitivity rescue medications per protocol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "acyclovir",
+          "allopurinol"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride restricted-rate hydration and flush"
+        ],
+        "procedure_related_medication": [
+          "rituximab infusion premedication requires review"
+        ],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride only if repeat potassium decreases"
+        ],
+        "requires_review": [
+          "severity of myelophthisis",
+          "ANC",
+          "platelet count",
+          "infection evaluation",
+          "whether bendamustine should be deferred"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "内分泌/代谢",
+        "消化"
+      ],
+      "rationale": "适合骨髓抑制或感染风险复核前的低强度桥接，但疾病控制力度较弱。",
+      "aggregate_score": 0.68
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "老年套细胞淋巴瘤化疗支持完整方案",
+      "drugs": [
+        "rituximab",
+        "bendamustine",
+        "allopurinol",
+        "0.9% sodium chloride restricted-rate hydration",
+        "ondansetron",
+        "pantoprazole",
+        "acyclovir",
+        "amlodipine",
+        "atorvastatin",
+        "potassium chloride if indicated"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "rituximab",
+          "bendamustine"
+        ],
+        "risk_modifying_therapy": [
+          "allopurinol",
+          "acyclovir",
+          "amlodipine",
+          "atorvastatin"
+        ],
+        "symptom_supportive_medication": [
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "nursing_support_medication": [
+          "acetaminophen premedication if required by rituximab protocol",
+          "diphenhydramine premedication if required by rituximab protocol",
+          "hypersensitivity rescue medications per institutional infusion protocol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "allopurinol for tumor lysis risk",
+          "acyclovir antiviral prophylaxis if immunosuppression protocol supports"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9% sodium chloride restricted-rate hydration",
+          "0.9% sodium chloride line flush"
+        ],
+        "procedure_related_medication": [
+          "rituximab infusion premedication requires oncology protocol review"
+        ],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride only after repeat potassium and renal function confirmation"
+        ],
+        "requires_review": [
+          "not a substitute for clinician order entry",
+          "CBC with differential and platelet count before cytotoxic chemotherapy",
+          "current weight and body surface area for dosing",
+          "uric acid phosphorus calcium LDH and repeat creatinine for TLS risk",
+          "INR because baseline value is missing",
+          "current blood pressure heart rate oxygen saturation and fluid balance",
+          "HBV screening before rituximab",
+          "infection screening and vaccination/prophylaxis policy"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "内分泌/代谢",
+        "消化",
+        "心血管"
+      ],
+      "rationale": "在现有资料下，该方案最完整地覆盖主病治疗与共病支持；主要安全限制是化疗剂量、骨髓抑制、TLS、容量负荷和 INR 缺失，需要临床复核后下达。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "aggregate_score": 0.82,
+        "safety_position": "preferred_with_required_review"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "aggregate_score": 0.74,
+        "safety_position": "alternative_if_fluid_overload_dominant"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "aggregate_score": 0.68,
+        "safety_position": "alternative_if_marrow_or_infection_risk_high"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_inr_bleeding_uncertainty",
+        "severity": "moderate",
+        "reason": "INR 输入缺失，抗凝、NSAIDs、侵袭操作和出血风险无法完整评估。",
+        "action": "复查 INR、血小板和出血体征；避免经验性 NSAIDs 或强化抗栓。"
+      },
+      {
+        "risk_id": "fluid_overload_vs_tls_hydration",
+        "severity": "moderate",
+        "reason": "化疗和高尿酸支持 TLS 补液，但诊断中存在 fluid overload。",
+        "action": "使用限制速率补液、严格出入量、每日体重、尿量、电解质和氧合监测。"
+      },
+      {
+        "risk_id": "myelophthisis_marrow_suppression",
+        "severity": "moderate",
+        "reason": "Myelophthisis 与细胞毒化疗叠加可增加贫血、中性粒细胞减少和血小板减少风险。",
+        "action": "化疗前复核 CBC、ANC、血小板；按机构标准考虑生长因子或抗感染预防。"
+      },
+      {
+        "risk_id": "low_normal_potassium",
+        "severity": "low",
+        "reason": "钾 3.6 mmol/L 低正常，利尿、补液和化疗后可能下降。",
+        "action": "复查钾镁，必要时小剂量补钾，避免无监测利尿。"
+      },
+      {
+        "risk_id": "rituximab_infusion_and_hbv",
+        "severity": "moderate",
+        "reason": "Rituximab 有输注反应和乙肝再激活风险。",
+        "action": "按输注流程预处理，筛查 HBsAg、anti-HBc、anti-HBs，并准备反应处理药物。"
+      }
+    ],
+    "safety_summary": "未发现由已给实验室值直接触发的高危肾功能、血糖、钠、钾或胆红素禁忌；主要限制来自 INR、CBC、血小板、尿酸/磷/钙/LDH、生命体征和容量状态缺失。最终推荐 plan_A 作为需临床复核的候选完整处方，不应视为已下达医嘱。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "诊断路由智能体",
+      "text": "识别主病为套细胞淋巴瘤化疗入院，补充肿瘤/血液为主导专科，并保留内分泌/代谢、消化、心血管共同参与。"
+    },
+    {
+      "speaker": "肿瘤/血液智能体",
+      "text": "建议以 rituximab+bendamustine 为候选疾病直接治疗，同时纳入 allopurinol、止吐、抗病毒预防和输注反应预案。"
+    },
+    {
+      "speaker": "内分泌/代谢智能体",
+      "text": "血糖 88、钠 137、肌酐 1.1 未触发高风险；钾 3.6 需监测；高尿酸和化疗场景支持 TLS 预防。"
+    },
+    {
+      "speaker": "消化智能体",
+      "text": "GERD 和恶心支持 pantoprazole 与 ondansetron；INR 缺失，避免优先使用 NSAIDs 或未复核抗凝。"
+    },
+    {
+      "speaker": "心血管智能体",
+      "text": "高血压和高脂血症可在生命体征允许时管理；fluid overload 与 TLS 补液冲突，需要限制速率和严密监测。"
+    },
+    {
+      "speaker": "MDT 协商",
+      "text": "形成三个候选方案，plan_A 最完整，plan_B 偏容量保守，plan_C 偏骨髓风险保守。"
+    },
+    {
+      "speaker": "安全审核智能体",
+      "text": "选择 plan_A 为最终候选方案，但标记 CBC、INR、TLS 指标、HBV 筛查、生命体征和容量状态为必须复核项。"
+    },
+    {
+      "speaker": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

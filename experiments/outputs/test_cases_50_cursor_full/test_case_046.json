@@ -1,0 +1,919 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "12421432",
+      "hadm_id": "27940294",
+      "gender": "F",
+      "age": 40.0
+    },
+    "primary_diagnosis": "Leiomyoma of uterus, unspecified",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "神经",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Leiomyoma of uterus, unspecified",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "内分泌/代谢": [
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Other reaction to spinal and lumbar puncture"
+      ],
+      "神经": [
+        "Hypothyroidism, unspecified",
+        "Unspecified asthma, uncomplicated"
+      ],
+      "消化": [
+        "Obstructive sleep apnea (adult) (pediatric)"
+      ]
+    },
+    "comorbidity_list": [
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Hypothyroidism, unspecified",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "Other reaction to spinal and lumbar puncture",
+      "Unspecified asthma, uncomplicated"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 46,
+      "subject_id": "12421432",
+      "hadm_id": "27940294",
+      "specialty_cnt": 4,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 神经 | 消化",
+      "gender": "F",
+      "anchor_age": 40,
+      "anchor_year_group": "2011 - 2013",
+      "admittime": "30/5/2186 00:00:00",
+      "dischtime": "2/6/2186 18:17:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "BLACK/CAPE VERDEAN",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Leiomyoma of uterus, unspecified",
+      "comorbidity_list": "Gastro-esophageal reflux disease without esophagitis | Hypothyroidism, unspecified | Obstructive sleep apnea (adult) (pediatric) | Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure | Other reaction to spinal and lumbar puncture | Unspecified asthma, uncomplicated",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 神经 | 消化 | 肿瘤/血液",
+      "drug_list": "5% dextrose | acetaminophen | acetaminophen-caff-butalbital | acetaminophen iv | albuterol inhaler | bupivacaine 0.1% | diphenhydramine | heparin | hydromorphone | ketorolac | lactated ringers | levothyroxine sodium | lidocaine 5% patch | montelukast | naloxone | ondansetron | oxycodone (immediate release) | pregabalin | ranitidine | sodium chloride 0.9%  flush | yellow cadd cassette",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "神经",
+      "消化"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Unspecified asthma, uncomplicated",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+      ],
+      "内分泌/代谢": [
+        "Hypothyroidism, unspecified"
+      ],
+      "神经": [
+        "Other reaction to spinal and lumbar puncture"
+      ],
+      "消化": [
+        "Gastro-esophageal reflux disease without esophagitis"
+      ]
+    },
+    "rationale": "病例为40岁女性，主诊断为子宫平滑肌瘤，入院类型提示围手术期背景；合并哮喘和阻塞性睡眠呼吸暂停，对镇静、阿片和围手术期呼吸抑制风险影响最大，因此以呼吸专科作为安全主导，同时纳入甲状腺功能减退、GERD、神经轴相关不良反应及围手术期胃肠保护。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "albuterol inhalation",
+          "confidence": 0.78,
+          "reason": "既往未提供急性喘息证据，但有未特指哮喘，围手术期可作为支气管痉挛或喘息的按需用药。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "budesonide inhalation",
+          "confidence": 0.46,
+          "reason": "若存在持续性哮喘控制不佳或术后气道炎症，可考虑吸入糖皮质激素；因缺少症状和峰流速资料，优先级低于按需支气管扩张剂。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "acetaminophen",
+          "confidence": 0.7,
+          "reason": "在OSA背景下优先采用非阿片镇痛以减少呼吸抑制风险。"
+        }
+      ],
+      "recommendation_reasons": {
+        "asthma": "保留短效β2受体激动剂按需治疗支气管痉挛，避免无指征系统激素。",
+        "osa": "阻塞性睡眠呼吸暂停使阿片、苯二氮卓和多镇静药叠加风险升高，镇痛应以非阿片为基础。",
+        "monitoring": "缺少SpO2、呼吸频率、钾和血糖数据，任何支气管扩张剂或镇静止痛方案都需床旁监测。"
+      },
+      "risk_alerts": [
+        "缺少24小时血钾，使用β受体激动剂前后需复核低钾风险。",
+        "缺少血糖，若考虑系统激素需先评估代谢风险。",
+        "OSA患者应避免常规苯二氮卓和过量阿片。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "OSA背景下增加通气不足和呼吸抑制风险。"
+        },
+        {
+          "drug_name": "systemic corticosteroids",
+          "reason": "无急性哮喘加重证据，且缺少血糖资料。"
+        },
+        {
+          "drug_name": "high-dose opioids",
+          "reason": "OSA和围手术期背景下呼吸抑制风险较高。"
+        }
+      ],
+      "overall_confidence": 0.66,
+      "summary_reason": "呼吸专科建议以OSA安全和哮喘备用处理为核心，优先非阿片镇痛、按需支气管扩张、严密氧合监测。",
+      "conversation_text": "呼吸智能体：该病例合并哮喘和OSA，但未给出急性呼吸窘迫、SpO2或肺部感染证据；推荐albuterol按需，避免常规系统激素和苯二氮卓，镇痛以acetaminophen为基础。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levothyroxine",
+          "confidence": 0.82,
+          "reason": "合并甲状腺功能减退，若为既往长期治疗应延续基础替代治疗；需核对既往剂量和TSH/FT4。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "regular insulin correction scale",
+          "confidence": 0.34,
+          "reason": "缺少血糖且无糖尿病诊断，不应常规启动；仅在床旁血糖升高时作为复核后备选。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "potassium chloride",
+          "confidence": 0.22,
+          "reason": "缺少血钾，不应经验性补钾；仅在实验室证实低钾时使用。"
+        }
+      ],
+      "recommendation_reasons": {
+        "hypothyroidism": "甲状腺功能减退的核心药物是levothyroxine，但病例未提供既往剂量，必须核对用药史。",
+        "glucose": "无血糖资料，避免经验性胰岛素或含糖补液。",
+        "electrolytes": "缺少钠、钾、肌酐，补液和电解质用药应置于需复核层级。"
+      },
+      "risk_alerts": [
+        "levothyroxine需核对长期处方和甲状腺功能，避免重复或过量。",
+        "无血糖数据时不建议经验性降糖或系统激素。",
+        "无肾功能和电解质数据时不建议经验性补钾。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "empiric insulin",
+          "reason": "无糖尿病诊断和血糖数据，低血糖风险不可评估。"
+        },
+        {
+          "drug_name": "empiric potassium chloride",
+          "reason": "血钾未知，补钾可能导致高钾风险。"
+        },
+        {
+          "drug_name": "dextrose-containing maintenance fluids",
+          "reason": "血糖未知且无低血糖证据。"
+        }
+      ],
+      "overall_confidence": 0.58,
+      "summary_reason": "内分泌重点为延续甲状腺替代治疗并补齐血糖、电解质和肾功能检查，代谢干预需根据结果触发。",
+      "conversation_text": "内分泌/代谢智能体：确认甲减诊断后可延续levothyroxine，但必须核对既往剂量；当前缺少血糖、钠钾和肌酐，不支持经验性胰岛素、补钾或含糖补液。"
+    },
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "acetaminophen",
+          "confidence": 0.72,
+          "reason": "有腰穿/脊麻相关反应记录，围手术期疼痛可先采用非阿片镇痛，减少意识和呼吸抑制。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "ondansetron",
+          "confidence": 0.57,
+          "reason": "围手术期恶心呕吐可按需处理，较少造成中枢抑制。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "low-dose opioid rescue only",
+          "confidence": 0.28,
+          "reason": "若疼痛控制不足可小剂量短期救援，但OSA和神经状态未知，需严密监测。"
+        }
+      ],
+      "recommendation_reasons": {
+        "post_puncture_reaction": "存在脊柱/腰穿相关反应，应避免不必要神经轴再次刺激，药物上减少镇静叠加。",
+        "sedation": "缺少BUN、钠和生命体征，无法充分评估意识改变与药物蓄积风险。",
+        "analgesia": "非阿片镇痛优先，阿片仅作为救援并需监测呼吸和意识。"
+      },
+      "risk_alerts": [
+        "缺少钠，无法排除水钠异常导致意识或癫痫阈值风险。",
+        "缺少BUN/肌酐，无法评估中枢抑制药蓄积风险。",
+        "避免苯二氮卓、gabapentin或baclofen常规叠加。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "增加意识改变、跌倒和呼吸抑制风险。"
+        },
+        {
+          "drug_name": "gabapentin",
+          "reason": "无神经病理痛证据，OSA和肾功能未知时镇静风险较高。"
+        },
+        {
+          "drug_name": "baclofen",
+          "reason": "无痉挛证据，肾功能未知时蓄积和镇静风险较高。"
+        }
+      ],
+      "overall_confidence": 0.55,
+      "summary_reason": "神经专科支持低镇静负荷策略，保留按需止吐和非阿片镇痛，所有中枢抑制药均降权。",
+      "conversation_text": "神经智能体：围手术期可使用acetaminophen和ondansetron等低中枢抑制药；因OSA、钠/BUN未知及既往神经轴反应，避免常规镇静药和神经病理痛药。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.76,
+          "reason": "合并GERD，围手术期应激、禁食和镇痛药使用可加重反流，PPI可作为胃酸抑制治疗。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "ondansetron",
+          "confidence": 0.62,
+          "reason": "围手术期恶心呕吐和GERD相关反流风险可按需止吐。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.44,
+          "reason": "若术后便秘或阿片救援使用，可考虑温和通便；无便秘证据时为低优先级。"
+        }
+      ],
+      "recommendation_reasons": {
+        "gerd": "GERD直接支持PPI或H2受体阻滞剂，优先pantoprazole。",
+        "antiemesis": "按需止吐可减少呕吐、误吸和反流加重。",
+        "bowel_regimen": "若使用阿片或术后活动减少，可预防便秘，但需根据排便情况决定。"
+      },
+      "risk_alerts": [
+        "缺少胆红素、INR和肌酐，NSAIDs和抗凝相关胃肠出血风险不可完全评估。",
+        "GERD和OSA共同增加围麻醉反流误吸风险，应避免过度镇静。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "缺少肌酐、INR和出血风险资料，围手术期应谨慎。"
+        },
+        {
+          "drug_name": "metoclopramide scheduled use",
+          "reason": "无胃轻瘫证据，且可能产生锥体外系不良反应。"
+        },
+        {
+          "drug_name": "routine anticoagulant without risk assessment",
+          "reason": "需先结合手术方式、出血风险、INR和VTE风险评估。"
+        }
+      ],
+      "overall_confidence": 0.63,
+      "summary_reason": "消化专科建议GERD治疗以PPI为主，止吐按需，NSAIDs和抗凝需在实验室及手术风险明确后使用。",
+      "conversation_text": "消化智能体：GERD支持pantoprazole，围手术期恶心可用ondansetron；因肾功能、INR和肝胆指标缺失，NSAIDs和抗凝需谨慎复核。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "albuterol inhalation",
+          "acetaminophen",
+          "pantoprazole",
+          "ondansetron",
+          "levothyroxine"
+        ],
+        "cautioned_drugs": [
+          "opioids",
+          "benzodiazepines",
+          "systemic corticosteroids"
+        ],
+        "conflict_notes": [
+          "OSA使阿片和镇静药优先级下降。",
+          "哮喘支持albuterol按需，但血钾未知需监测。"
+        ],
+        "priority_comment": "首选低呼吸抑制负荷方案，术后监测SpO2和呼吸频率。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "levothyroxine",
+          "pantoprazole",
+          "acetaminophen"
+        ],
+        "cautioned_drugs": [
+          "insulin",
+          "potassium chloride",
+          "dextrose fluids",
+          "systemic corticosteroids"
+        ],
+        "conflict_notes": [
+          "甲减药物应延续但剂量必须核对。",
+          "缺少血糖和电解质时不应经验性代谢干预。"
+        ],
+        "priority_comment": "补齐TSH/FT4、血糖、钠钾和肌酐后再调整代谢层。"
+      },
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "acetaminophen",
+          "ondansetron",
+          "pantoprazole"
+        ],
+        "cautioned_drugs": [
+          "opioids",
+          "gabapentin",
+          "baclofen",
+          "benzodiazepines"
+        ],
+        "conflict_notes": [
+          "脊柱/腰穿反应史使中枢抑制和神经轴相关方案需审慎。",
+          "OSA与镇静药风险叠加。"
+        ],
+        "priority_comment": "保留小剂量阿片救援而非计划性给药。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "ondansetron",
+          "acetaminophen",
+          "polyethylene glycol"
+        ],
+        "cautioned_drugs": [
+          "NSAIDs",
+          "anticoagulants",
+          "metoclopramide"
+        ],
+        "conflict_notes": [
+          "GERD支持抑酸和按需止吐。",
+          "缺少INR、胆红素和肌酐时NSAIDs、抗凝和肝代谢负担药需复核。"
+        ],
+        "priority_comment": "消化道保护可纳入基础方案，出血和肾功能资料完善后再决定NSAIDs或抗凝。"
+      }
+    ],
+    "consensus_notes": [
+      "不得声称已见到当前住院真实处方；本推荐仅基于诊断、共病、缺失检验和专科规则。",
+      "优先方案应覆盖GERD、甲减延续、哮喘按需、OSA呼吸安全、非阿片镇痛和围手术期止吐。",
+      "所有肾功能、电解质、凝血、肝胆和血糖相关药物需置于复核层级，缺失数据本身构成安全不确定性。",
+      "最终推荐为候选处方框架，需要临床医师结合手术方式、既往药物剂量、过敏史和实时生命体征确认。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "低呼吸抑制围手术期基础方案",
+        "drugs": [
+          "acetaminophen",
+          "pantoprazole",
+          "levothyroxine",
+          "albuterol inhalation",
+          "ondansetron",
+          "normal saline flush",
+          "polyethylene glycol PRN"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "pantoprazole",
+            "albuterol inhalation PRN"
+          ],
+          "risk_modifying_therapy": [
+            "acetaminophen opioid-sparing analgesia",
+            "ondansetron PRN to reduce vomiting and aspiration risk"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "ondansetron",
+            "polyethylene glycol PRN"
+          ],
+          "nursing_support_medication": [
+            "oxygen PRN per saturation protocol",
+            "continuous pulse oximetry order for OSA risk"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole for GERD-related acid suppression"
+          ],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "acetaminophen perioperative analgesic base"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "levothyroxine dose requires medication history or TSH/FT4 review",
+            "BMP including sodium potassium creatinine",
+            "glucose",
+            "INR",
+            "bilirubin_total",
+            "opioid rescue only if pain uncontrolled and respiratory monitoring available"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "神经",
+          "消化"
+        ],
+        "rationale": "在OSA、哮喘、GERD和甲减背景下，选择非阿片镇痛、抑酸、甲状腺替代延续、按需支气管扩张和按需止吐，避免在缺少实验室数据时引入高风险代谢或出血相关药物。",
+        "aggregate_score": 0.78
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "疼痛加强但需呼吸监测方案",
+        "drugs": [
+          "acetaminophen",
+          "low-dose opioid rescue only",
+          "pantoprazole",
+          "levothyroxine",
+          "albuterol inhalation",
+          "ondansetron",
+          "normal saline flush",
+          "senna or polyethylene glycol PRN"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "pantoprazole",
+            "albuterol inhalation PRN"
+          ],
+          "risk_modifying_therapy": [
+            "acetaminophen as opioid-sparing base",
+            "continuous pulse oximetry if opioid is used"
+          ],
+          "symptom_supportive_medication": [
+            "low-dose opioid rescue only",
+            "ondansetron",
+            "senna or polyethylene glycol PRN"
+          ],
+          "nursing_support_medication": [
+            "respiratory rate and sedation score monitoring",
+            "oxygen PRN per protocol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "bowel regimen if opioid used"
+          ],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "opioid rescue only after clinician reassessment"
+          ],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "OSA severity and CPAP use",
+            "pain score and surgical procedure",
+            "renal function before repeated opioid dosing",
+            "avoid benzodiazepine coadministration"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "神经",
+          "消化"
+        ],
+        "rationale": "若术后疼痛不能由acetaminophen控制，可设置低剂量短期阿片救援，但因OSA和缺失生命体征，应显著加强呼吸、镇静和便秘监测。",
+        "aggregate_score": 0.56
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "检验复核后扩展方案",
+        "drugs": [
+          "acetaminophen",
+          "pantoprazole",
+          "levothyroxine",
+          "albuterol inhalation",
+          "ondansetron",
+          "normal saline flush",
+          "potassium chloride only if hypokalemia confirmed",
+          "insulin correction only if hyperglycemia confirmed",
+          "pharmacologic VTE prophylaxis only after surgical bleeding risk and INR review"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine",
+            "pantoprazole",
+            "albuterol inhalation PRN"
+          ],
+          "risk_modifying_therapy": [
+            "pharmacologic VTE prophylaxis only after review",
+            "insulin correction only if indicated by glucose"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "ondansetron"
+          ],
+          "nursing_support_medication": [
+            "pulse oximetry",
+            "respiratory monitoring",
+            "medication reconciliation"
+          ],
+          "prophylaxis_prevention_medication": [
+            "VTE prophylaxis requires bleeding-risk review"
+          ],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "perioperative analgesia and antiemesis"
+          ],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride only if potassium below target",
+            "dextrose only if hypoglycemia or nutrition indication"
+          ],
+          "requires_review": [
+            "BMP",
+            "glucose",
+            "INR",
+            "bilirubin_total",
+            "CBC and bleeding risk",
+            "surgical procedure and mobility status"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "神经",
+          "消化"
+        ],
+        "rationale": "该方案强调在实验室结果返回后再补充电解质、降糖或VTE预防药物，适合当前数据缺失较多的状态。",
+        "aggregate_score": 0.64
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "低呼吸抑制围手术期基础方案",
+      "drugs": [
+        "acetaminophen",
+        "pantoprazole",
+        "levothyroxine",
+        "albuterol inhalation",
+        "ondansetron",
+        "normal saline flush",
+        "polyethylene glycol PRN"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "pantoprazole",
+          "albuterol inhalation PRN"
+        ],
+        "risk_modifying_therapy": [
+          "acetaminophen opioid-sparing analgesia",
+          "ondansetron PRN to reduce vomiting and aspiration risk"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "ondansetron",
+          "polyethylene glycol PRN"
+        ],
+        "nursing_support_medication": [
+          "oxygen PRN per saturation protocol",
+          "continuous pulse oximetry order for OSA risk"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole for GERD-related acid suppression"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "acetaminophen perioperative analgesic base"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "levothyroxine dose requires medication history or TSH/FT4 review",
+          "BMP including sodium potassium creatinine",
+          "glucose",
+          "INR",
+          "bilirubin_total",
+          "opioid rescue only if pain uncontrolled and respiratory monitoring available"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "在OSA、哮喘、GERD和甲减背景下，选择非阿片镇痛、抑酸、甲状腺替代延续、按需支气管扩张和按需止吐，避免在缺少实验室数据时引入高风险代谢或出血相关药物。",
+      "aggregate_score": 0.78
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "疼痛加强但需呼吸监测方案",
+      "drugs": [
+        "acetaminophen",
+        "low-dose opioid rescue only",
+        "pantoprazole",
+        "levothyroxine",
+        "albuterol inhalation",
+        "ondansetron",
+        "normal saline flush",
+        "senna or polyethylene glycol PRN"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "pantoprazole",
+          "albuterol inhalation PRN"
+        ],
+        "risk_modifying_therapy": [
+          "acetaminophen as opioid-sparing base",
+          "continuous pulse oximetry if opioid is used"
+        ],
+        "symptom_supportive_medication": [
+          "low-dose opioid rescue only",
+          "ondansetron",
+          "senna or polyethylene glycol PRN"
+        ],
+        "nursing_support_medication": [
+          "respiratory rate and sedation score monitoring",
+          "oxygen PRN per protocol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "bowel regimen if opioid used"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "opioid rescue only after clinician reassessment"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "OSA severity and CPAP use",
+          "pain score and surgical procedure",
+          "renal function before repeated opioid dosing",
+          "avoid benzodiazepine coadministration"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "神经",
+        "消化"
+      ],
+      "rationale": "若术后疼痛不能由acetaminophen控制，可设置低剂量短期阿片救援，但因OSA和缺失生命体征，应显著加强呼吸、镇静和便秘监测。",
+      "aggregate_score": 0.56
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "检验复核后扩展方案",
+      "drugs": [
+        "acetaminophen",
+        "pantoprazole",
+        "levothyroxine",
+        "albuterol inhalation",
+        "ondansetron",
+        "normal saline flush",
+        "potassium chloride only if hypokalemia confirmed",
+        "insulin correction only if hyperglycemia confirmed",
+        "pharmacologic VTE prophylaxis only after surgical bleeding risk and INR review"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine",
+          "pantoprazole",
+          "albuterol inhalation PRN"
+        ],
+        "risk_modifying_therapy": [
+          "pharmacologic VTE prophylaxis only after review",
+          "insulin correction only if indicated by glucose"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "ondansetron"
+        ],
+        "nursing_support_medication": [
+          "pulse oximetry",
+          "respiratory monitoring",
+          "medication reconciliation"
+        ],
+        "prophylaxis_prevention_medication": [
+          "VTE prophylaxis requires bleeding-risk review"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "perioperative analgesia and antiemesis"
+        ],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride only if potassium below target",
+          "dextrose only if hypoglycemia or nutrition indication"
+        ],
+        "requires_review": [
+          "BMP",
+          "glucose",
+          "INR",
+          "bilirubin_total",
+          "CBC and bleeding risk",
+          "surgical procedure and mobility status"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "该方案强调在实验室结果返回后再补充电解质、降糖或VTE预防药物，适合当前数据缺失较多的状态。",
+      "aggregate_score": 0.64
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "低呼吸抑制围手术期基础方案",
+      "drugs": [
+        "acetaminophen",
+        "pantoprazole",
+        "levothyroxine",
+        "albuterol inhalation PRN",
+        "ondansetron PRN",
+        "normal saline flush",
+        "polyethylene glycol PRN"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine: 仅在核对既往长期用药剂量后延续",
+          "pantoprazole: GERD抑酸治疗",
+          "albuterol inhalation PRN: 哮喘或支气管痉挛备用"
+        ],
+        "risk_modifying_therapy": [
+          "acetaminophen优先以减少阿片暴露",
+          "避免苯二氮卓和常规高剂量阿片",
+          "ondansetron PRN降低呕吐和反流误吸风险"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen用于疼痛或发热",
+          "ondansetron PRN用于恶心呕吐",
+          "polyethylene glycol PRN用于便秘"
+        ],
+        "nursing_support_medication": [
+          "OSA风险下连续或加强脉搏氧饱和监测",
+          "氧疗按机构低氧流程执行，不作为固定药物处方"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole用于GERD相关反流和胃酸控制"
+        ],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush用于静脉通路维护"
+        ],
+        "procedure_related_medication": [
+          "acetaminophen作为围手术期基础镇痛"
+        ],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "药物过敏史",
+          "真实既往levothyroxine剂量",
+          "TSH/FT4",
+          "BMP: sodium potassium creatinine BUN",
+          "glucose",
+          "INR",
+          "bilirubin_total",
+          "CBC",
+          "实时生命体征和SpO2",
+          "具体手术方式、出血风险和VTE风险"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "安全审核选择A方案，因为其治疗覆盖GERD、甲减、哮喘备用处理和围手术期镇痛止吐，同时在OSA与大量关键实验室缺失的条件下避免高镇静、高出血、高肾毒性和强代谢干预。",
+      "aggregate_score": 0.78
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "A",
+        "rank": 1,
+        "score": 0.78,
+        "reason": "覆盖主要共病且呼吸抑制和实验室依赖风险最低。"
+      },
+      {
+        "plan_id": "C",
+        "rank": 2,
+        "score": 0.64,
+        "reason": "适合实验室回报后扩展，但当前不能直接执行补钾、胰岛素或药物性VTE预防。"
+      },
+      {
+        "plan_id": "B",
+        "rank": 3,
+        "score": 0.56,
+        "reason": "可处理更强疼痛，但阿片救援在OSA患者中增加安全负担。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_labs_global",
+        "severity": "moderate",
+        "description": "creatinine、BUN、potassium、sodium、glucose、INR、bilirubin_total均缺失，导致肾功能、电解质、凝血、肝胆和代谢风险无法量化。",
+        "action": "最终医嘱执行前必须补齐或人工确认近期结果。"
+      },
+      {
+        "risk_id": "osa_sedation_risk",
+        "severity": "high",
+        "description": "阻塞性睡眠呼吸暂停使阿片、苯二氮卓、gabapentin、baclofen等中枢抑制药风险升高。",
+        "action": "避免苯二氮卓和常规高剂量阿片；如必须用阿片，仅救援使用并监测呼吸频率、镇静评分和SpO2。"
+      },
+      {
+        "risk_id": "asthma_beta_agonist_potassium_unknown",
+        "severity": "moderate",
+        "description": "哮喘支持albuterol按需，但血钾缺失，无法评估β受体激动剂相关低钾风险。",
+        "action": "使用频繁时复核血钾和心率。"
+      },
+      {
+        "risk_id": "gerd_aspiration_risk",
+        "severity": "moderate",
+        "description": "GERD合并OSA和围手术期背景增加反流误吸风险。",
+        "action": "抑酸治疗、按需止吐，避免过度镇静。"
+      },
+      {
+        "risk_id": "hypothyroidism_med_reconciliation",
+        "severity": "moderate",
+        "description": "甲减诊断支持levothyroxine，但剂量未提供。",
+        "action": "需通过用药史或既往处方核对后延续，不建议经验性设定剂量。"
+      }
+    ],
+    "safety_summary": "最终推荐A方案作为候选完整处方框架：acetaminophen、pantoprazole、核对剂量后的levothyroxine、albuterol PRN、ondansetron PRN、normal saline flush和polyethylene glycol PRN。暂不推荐经验性胰岛素、补钾、系统激素、NSAIDs、苯二氮卓、常规阿片或未评估的药物性抗凝/VTE预防。由于关键实验室、生命体征、手术方式和既往剂量缺失，处方需临床医师复核后执行。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    "诊断路由：识别子宫平滑肌瘤围手术期背景，合并哮喘、OSA、GERD、甲减和神经轴相关反应，纳入呼吸、内分泌/代谢、神经、消化四个专科。",
+    "呼吸专科：推荐低呼吸抑制策略，albuterol按需，acetaminophen优先，避免苯二氮卓和常规高剂量阿片。",
+    "内分泌/代谢专科：甲减支持levothyroxine延续，但必须核对剂量；缺少血糖和电解质，不支持经验性胰岛素或补钾。",
+    "神经专科：因神经轴相关反应和OSA，建议低镇静负荷，阿片仅救援。",
+    "消化专科：GERD支持pantoprazole，恶心呕吐按需ondansetron；NSAIDs和抗凝需等待肾功能、INR和出血风险评估。",
+    "MDT共识：A方案安全性最佳，C方案作为检验回报后的扩展框架，B方案仅在疼痛无法控制时考虑。",
+    "安全审核：关键实验室和生命体征缺失构成中等以上不确定性；最终处方需人工复核。",
+    "王老师，回答结束"
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

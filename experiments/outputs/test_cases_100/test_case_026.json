@@ -1,0 +1,2066 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10582182",
+      "hadm_id": "26879918",
+      "gender": "M",
+      "age": 50.0
+    },
+    "primary_diagnosis": "COVID-19",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "COVID-19",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Lymphocytopenia",
+        "Other viral pneumonia"
+      ],
+      "内分泌/代谢": [
+        "Acute respiratory failure with hypoxia",
+        "Headache",
+        "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Fatty (change of) liver, not elsewhere classified",
+        "Hypo-osmolality and hyponatremia",
+        "Other disorders of phosphorus metabolism",
+        "Subclinical iodine-deficiency hypothyroidism"
+      ]
+    },
+    "comorbidity_list": [
+      "Acute respiratory failure with hypoxia",
+      "Fatty (change of) liver, not elsewhere classified",
+      "Gastro-esophageal reflux disease without esophagitis",
+      "Headache",
+      "Hypo-osmolality and hyponatremia",
+      "Lymphocytopenia",
+      "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+      "Other disorders of phosphorus metabolism",
+      "Other viral pneumonia",
+      "Personal history of nicotine dependence",
+      "Subclinical iodine-deficiency hypothyroidism"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.0,
+      "bun_24h": 12.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 108.0,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": 0.6
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 26,
+      "subject_id": "10582182",
+      "hadm_id": "26879918",
+      "specialty_cnt": 3,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 消化",
+      "gender": "M",
+      "anchor_age": 50,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "30/1/2125 17:42:00",
+      "dischtime": "5/2/2125 18:31:00",
+      "admission_type": "OBSERVATION ADMIT",
+      "race": "HISPANIC/LATINO - SALVADORAN",
+      "insurance": "Medicaid",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "COVID-19",
+      "comorbidity_list": "Acute respiratory failure with hypoxia | Fatty (change of) liver, not elsewhere classified | Gastro-esophageal reflux disease without esophagitis | Headache | Hypo-osmolality and hyponatremia | Lymphocytopenia | Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH] | Other disorders of phosphorus metabolism | Other viral pneumonia | Personal history of nicotine dependence | Subclinical iodine-deficiency hypothyroidism",
+      "specialty_agents": "呼吸 | 内分泌/代谢 | 消化",
+      "drug_list": "acetaminophen | acetaminophen iv | albuterol inhaler | azithromycin | ceftriaxone | enoxaparin (prophylaxis) | famotidine | guaifenesin | ipratropium-albuterol neb | lorazepam | morphine sulfate | neutra-phos | polyethylene glycol | senna | sodium chloride 0.9%  flush | soln | tiotropium bromide | vial",
+      "creatinine_24h": 1.0,
+      "bun_24h": 12.0,
+      "potassium_24h": 4.8,
+      "sodium_24h": 133.0,
+      "glucose_24h": 108.0,
+      "inr_24h": "",
+      "bilirubin_total_24h": 0.6
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "消化"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "COVID-19",
+        "Gastro-esophageal reflux disease without esophagitis",
+        "Lymphocytopenia",
+        "Other viral pneumonia"
+      ],
+      "内分泌/代谢": [
+        "Acute respiratory failure with hypoxia",
+        "Headache",
+        "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+        "Personal history of nicotine dependence"
+      ],
+      "消化": [
+        "Fatty (change of) liver, not elsewhere classified",
+        "Hypo-osmolality and hyponatremia",
+        "Other disorders of phosphorus metabolism",
+        "Subclinical iodine-deficiency hypothyroidism"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "oseltamivir",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
+        },
+        {
+          "rank": 2,
+          "drug_name": "azithromycin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
+        },
+        {
+          "rank": 3,
+          "drug_name": "ceftriaxone",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
+        },
+        {
+          "rank": 4,
+          "drug_name": "piperacillin tazobactam",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
+        },
+        {
+          "rank": 5,
+          "drug_name": "vancomycin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits gram positive bacterial cell wall synthesis"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "sodium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "respiratory_sedation_hypercapnia_risk",
+          "message": "严重钠异常可伴随意识改变并放大镇静药导致的通气不足风险",
+          "action_taken": "对镇静止痛药物提示降权和人工复核"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "呼吸智能体认为当前病例应优先围绕 COVID-19, COVID-19, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 oseltamivir, azithromycin, ceftriaxone。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levothyroxine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+        },
+        {
+          "rank": 2,
+          "drug_name": "liothyronine",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces triiodothyronine hormone"
+        },
+        {
+          "rank": 3,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+        },
+        {
+          "rank": 4,
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+        },
+        {
+          "rank": 5,
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "sodium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "endocrinology_sodium_endocrine_risk",
+          "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+          "action_taken": "对强化补液和快速纠正方案降权并提示人工复核"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 COVID-19, Acute respiratory failure with hypoxia, Headache 生成候选药物，当前首选药物包括 levothyroxine, liothyronine, insulin。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pantoprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+        },
+        {
+          "rank": 2,
+          "drug_name": "omeprazole",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+        },
+        {
+          "rank": 3,
+          "drug_name": "famotidine",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
+        },
+        {
+          "rank": 4,
+          "drug_name": "lactulose",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
+        },
+        {
+          "rank": 5,
+          "drug_name": "rifaximin",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [
+        {
+          "lab_name": "sodium_24h",
+          "risk_level": "moderate",
+          "triggered_rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+          "message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+          "action_taken": "对可能加重水钠紊乱方案降权并提示人工复核"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "消化智能体认为当前病例应优先围绕 COVID-19, Fatty (change of) liver, not elsewhere classified, Hypo-osmolality and hyponatremia 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "呼吸与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "levothyroxine",
+          "liothyronine",
+          "insulin",
+          "metformin",
+          "glipizide"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine",
+          "lactulose",
+          "rifaximin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 3 个专科：呼吸, 内分泌/代谢, 消化。",
+      "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin",
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin",
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "oseltamivir",
+        "azithromycin",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
+        "levothyroxine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride",
+          "magnesium sulfate"
+        ],
+        "requires_review": [
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "oseltamivir",
+        "azithromycin",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
+        "levothyroxine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride",
+          "magnesium sulfate"
+        ],
+        "requires_review": [
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "oseltamivir",
+        "azithromycin",
+        "ceftriaxone",
+        "piperacillin tazobactam"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "azithromycin",
+          "ceftriaxone"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride",
+          "magnesium sulfate"
+        ],
+        "requires_review": [
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "oseltamivir",
+        "azithromycin",
+        "ceftriaxone",
+        "piperacillin tazobactam",
+        "vancomycin",
+        "levothyroxine"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "azithromycin",
+          "ceftriaxone",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [
+          "chlorhexidine"
+        ],
+        "prophylaxis_prevention_medication": [
+          "pantoprazole"
+        ],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride",
+          "magnesium sulfate"
+        ],
+        "requires_review": [
+          "oseltamivir",
+          "piperacillin tazobactam",
+          "ibuprofen",
+          "ketorolac",
+          "vitamin d"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "呼吸"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin",
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "存在中度基线风险"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [
+          "入院早期钠异常: 133.0"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "vancomycin",
+            "potential_impacts": [
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+        ],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin",
+          "levothyroxine"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone",
+            "vancomycin",
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "呼吸"
+        ],
+        "review_flags": [
+          "存在中度基线风险"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [
+          "入院早期钠异常: 133.0"
+        ],
+        "medication_impact_review": [
+          {
+            "drug_name": "vancomycin",
+            "potential_impacts": [
+              "抗感染药物需结合肾功能、培养和耐药结果复核"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+        ],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "azithromycin",
+            "ceftriaxone"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [
+            "chlorhexidine"
+          ],
+          "prophylaxis_prevention_medication": [
+            "pantoprazole"
+          ],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride",
+            "magnesium sulfate"
+          ],
+          "requires_review": [
+            "oseltamivir",
+            "piperacillin tazobactam",
+            "ibuprofen",
+            "ketorolac",
+            "vitamin d"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸"
+        ],
+        "review_flags": [
+          "存在中度基线风险"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [
+          "入院早期钠异常: 133.0"
+        ],
+        "medication_impact_review": [],
+        "plan_adaptation_notes": [
+          "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+        ],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [
+      {
+        "specialty_name": "呼吸",
+        "rule_id": "respiratory_sedation_hypercapnia_risk",
+        "lab_name": "sodium_24h",
+        "lab_value": 133.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "respiratory depression risk",
+        "related_treatments": "opioids|benzodiazepines|sedatives",
+        "risk_message": "严重钠异常可伴随意识改变并放大镇静药导致的通气不足风险",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免多种中枢抑制药叠加并评估二氧化碳潴留",
+        "monitoring_advice": "监测意识呼吸频率氧饱和和血气",
+        "reference_source": "DailyMed opioid benzodiazepine labels; Merck Manual respiratory failure",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "内分泌/代谢",
+        "rule_id": "endocrinology_sodium_endocrine_risk",
+        "lab_name": "sodium_24h",
+        "lab_value": 133.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "endocrine water and electrolyte risk",
+        "related_treatments": "fluid therapy|diuretics|desmopressin|adrenal replacement",
+        "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免过快纠正血钠并复核内分泌病因",
+        "monitoring_advice": "监测血钠纠正速度尿量和神经状态",
+        "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      },
+      {
+        "specialty_name": "消化",
+        "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+        "lab_name": "sodium_24h",
+        "lab_value": 133.0,
+        "risk_level": "moderate",
+        "risk_source": "baseline_first24h_lab",
+        "risk_target": "cirrhosis sodium and encephalopathy risk",
+        "related_treatments": "diuretics|lactulose|desmopressin|hypotonic fluids",
+        "risk_message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+        "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+        "causality_statement": "该风险不表示候选药物导致检验异常。",
+        "contraindication_or_caution": "避免过快纠正血钠并谨慎使用利尿或导致腹泻治疗",
+        "monitoring_advice": "监测血钠意识尿量体重和腹泻情况",
+        "reference_source": "AASLD cirrhosis guidance; MedlinePlus sodium test",
+        "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+      }
+    ],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {}
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "呼吸",
+          "内分泌/代谢",
+          "消化"
+        ],
+        "lead_specialty": "呼吸",
+        "specialty_related_diagnoses": {
+          "呼吸": [
+            "COVID-19",
+            "Gastro-esophageal reflux disease without esophagitis",
+            "Lymphocytopenia",
+            "Other viral pneumonia"
+          ],
+          "内分泌/代谢": [
+            "Acute respiratory failure with hypoxia",
+            "Headache",
+            "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+            "Personal history of nicotine dependence"
+          ],
+          "消化": [
+            "Fatty (change of) liver, not elsewhere classified",
+            "Hypo-osmolality and hyponatremia",
+            "Other disorders of phosphorus metabolism",
+            "Subclinical iodine-deficiency hypothyroidism"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 呼吸。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "呼吸_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "呼吸",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "oseltamivir",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；inhibits influenza neuraminidase and viral release"
+          },
+          {
+            "rank": 2,
+            "drug_name": "azithromycin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits bacterial protein synthesis through 50S ribosomal binding"
+          },
+          {
+            "rank": 3,
+            "drug_name": "ceftriaxone",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta lactam antibiotic inhibits bacterial cell wall synthesis"
+          },
+          {
+            "rank": 4,
+            "drug_name": "piperacillin tazobactam",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；antipseudomonal penicillin plus beta lactamase inhibitor"
+          },
+          {
+            "rank": 5,
+            "drug_name": "vancomycin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits gram positive bacterial cell wall synthesis"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "sodium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "respiratory_sedation_hypercapnia_risk",
+            "message": "严重钠异常可伴随意识改变并放大镇静药导致的通气不足风险",
+            "action_taken": "对镇静止痛药物提示降权和人工复核"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "呼吸智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "呼吸智能体认为当前病例应优先围绕 COVID-19, COVID-19, Gastro-esophageal reflux disease without esophagitis 生成候选药物，当前首选药物包括 oseltamivir, azithromycin, ceftriaxone。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "levothyroxine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+          },
+          {
+            "rank": 2,
+            "drug_name": "liothyronine",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；replaces triiodothyronine hormone"
+          },
+          {
+            "rank": 3,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+          },
+          {
+            "rank": 4,
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+          },
+          {
+            "rank": 5,
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "sodium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "endocrinology_sodium_endocrine_risk",
+            "message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+            "action_taken": "对强化补液和快速纠正方案降权并提示人工复核"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 COVID-19, Acute respiratory failure with hypoxia, Headache 生成候选药物，当前首选药物包括 levothyroxine, liothyronine, insulin。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "消化_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "消化",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "pantoprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+          },
+          {
+            "rank": 2,
+            "drug_name": "omeprazole",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；inhibits gastric H K ATPase and suppresses acid secretion"
+          },
+          {
+            "rank": 3,
+            "drug_name": "famotidine",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；blocks histamine H2 receptor to reduce gastric acid secretion"
+          },
+          {
+            "rank": 4,
+            "drug_name": "lactulose",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；acidifies colon and reduces ammonia absorption while promoting catharsis"
+          },
+          {
+            "rank": 5,
+            "drug_name": "rifaximin",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces intestinal ammonia producing bacteria"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [
+          {
+            "lab_name": "sodium_24h",
+            "risk_level": "moderate",
+            "triggered_rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+            "message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+            "action_taken": "对可能加重水钠紊乱方案降权并提示人工复核"
+          }
+        ],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "消化智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "消化智能体认为当前病例应优先围绕 COVID-19, Fatty (change of) liver, not elsewhere classified, Hypo-osmolality and hyponatremia 生成候选药物，当前首选药物包括 pantoprazole, omeprazole, famotidine。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "呼吸_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "oseltamivir",
+          "azithromycin",
+          "ceftriaxone",
+          "piperacillin tazobactam",
+          "vancomycin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "呼吸触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "呼吸与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "levothyroxine",
+          "liothyronine",
+          "insulin",
+          "metformin",
+          "glipizide"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "消化_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "pantoprazole",
+          "omeprazole",
+          "famotidine",
+          "lactulose",
+          "rifaximin"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "消化触发 1 条风险提醒，建议安全审核阶段重点复核。"
+        ],
+        "priority_comment": "消化与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 3 个专科：呼吸, 内分泌/代谢, 消化。",
+          "初始主导专科为 呼吸，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin",
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin",
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "oseltamivir",
+            "azithromycin",
+            "ceftriaxone",
+            "piperacillin tazobactam",
+            "vancomycin",
+            "levothyroxine"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "azithromycin",
+              "ceftriaxone",
+              "vancomycin",
+              "levothyroxine"
+            ],
+            "risk_modifying_therapy": [],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [
+              "chlorhexidine"
+            ],
+            "prophylaxis_prevention_medication": [
+              "pantoprazole"
+            ],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [
+              "potassium chloride",
+              "magnesium sulfate"
+            ],
+            "requires_review": [
+              "oseltamivir",
+              "piperacillin tazobactam",
+              "ibuprofen",
+              "ketorolac",
+              "vitamin d"
+            ]
+          },
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "呼吸"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin",
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "存在中度基线风险"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [
+              "入院早期钠异常: 133.0"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "vancomycin",
+                "potential_impacts": [
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+            ],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam",
+              "vancomycin",
+              "levothyroxine"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone",
+                "vancomycin",
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "呼吸"
+            ],
+            "review_flags": [
+              "存在中度基线风险"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [
+              "入院早期钠异常: 133.0"
+            ],
+            "medication_impact_review": [
+              {
+                "drug_name": "vancomycin",
+                "potential_impacts": [
+                  "抗感染药物需结合肾功能、培养和耐药结果复核"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+            ],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "oseltamivir",
+              "azithromycin",
+              "ceftriaxone",
+              "piperacillin tazobactam"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "azithromycin",
+                "ceftriaxone"
+              ],
+              "risk_modifying_therapy": [],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [
+                "chlorhexidine"
+              ],
+              "prophylaxis_prevention_medication": [
+                "pantoprazole"
+              ],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [
+                "potassium chloride",
+                "magnesium sulfate"
+              ],
+              "requires_review": [
+                "oseltamivir",
+                "piperacillin tazobactam",
+                "ibuprofen",
+                "ketorolac",
+                "vitamin d"
+              ]
+            },
+            "supporting_specialties": [
+              "呼吸"
+            ],
+            "review_flags": [
+              "存在中度基线风险"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [
+              "入院早期钠异常: 133.0"
+            ],
+            "medication_impact_review": [],
+            "plan_adaptation_notes": [
+              "患者入院早期钠离子异常，当前方案未识别到明确水钠相关药物，但仍建议复查电解质。"
+            ],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [
+          {
+            "specialty_name": "呼吸",
+            "rule_id": "respiratory_sedation_hypercapnia_risk",
+            "lab_name": "sodium_24h",
+            "lab_value": 133.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "respiratory depression risk",
+            "related_treatments": "opioids|benzodiazepines|sedatives",
+            "risk_message": "严重钠异常可伴随意识改变并放大镇静药导致的通气不足风险",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免多种中枢抑制药叠加并评估二氧化碳潴留",
+            "monitoring_advice": "监测意识呼吸频率氧饱和和血气",
+            "reference_source": "DailyMed opioid benzodiazepine labels; Merck Manual respiratory failure",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "内分泌/代谢",
+            "rule_id": "endocrinology_sodium_endocrine_risk",
+            "lab_name": "sodium_24h",
+            "lab_value": 133.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "endocrine water and electrolyte risk",
+            "related_treatments": "fluid therapy|diuretics|desmopressin|adrenal replacement",
+            "risk_message": "明显低钠或高钠提示内分泌代谢性水电解质失衡并影响补液或激素策略",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免过快纠正血钠并复核内分泌病因",
+            "monitoring_advice": "监测血钠纠正速度尿量和神经状态",
+            "reference_source": "MedlinePlus sodium test; Merck Manual electrolyte disorders",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          },
+          {
+            "specialty_name": "消化",
+            "rule_id": "gastroenterology_sodium_cirrhosis_encephalopathy_risk",
+            "lab_name": "sodium_24h",
+            "lab_value": 133.0,
+            "risk_level": "moderate",
+            "risk_source": "baseline_first24h_lab",
+            "risk_target": "cirrhosis sodium and encephalopathy risk",
+            "related_treatments": "diuretics|lactulose|desmopressin|hypotonic fluids",
+            "risk_message": "钠异常会影响腹水利尿乳果糖治疗和意识状态解释",
+            "baseline_interpretation": "该风险由外部治疗风险知识和入院后首 24 小时检验共同识别，表示患者入院早期已经存在的基线风险背景。",
+            "causality_statement": "该风险不表示候选药物导致检验异常。",
+            "contraindication_or_caution": "避免过快纠正血钠并谨慎使用利尿或导致腹泻治疗",
+            "monitoring_advice": "监测血钠意识尿量体重和腹泻情况",
+            "reference_source": "AASLD cirrhosis guidance; MedlinePlus sodium test",
+            "plan_adaptation": "用于评估候选方案是否适合当前基线风险背景；中度风险以提示和监测为主，高风险才考虑显著降权或排除。"
+          }
+        ],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {}
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": false
+}

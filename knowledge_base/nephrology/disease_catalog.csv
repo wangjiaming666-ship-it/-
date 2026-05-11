@@ -1,21 +1,9 @@
-﻿specialty_name,diagnosis_name,frequency,is_core_disease,disease_role,review_status,notes
-肾内/泌尿,Hydronephrosis,1677,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Other specified noninflammatory disorders of uterus,508,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,"Urinary tract infection, site not specified",205,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Acute kidney failure, unspecified",198,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Renal sclerosis, unspecified",103,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Female pelvic peritoneal adhesions (postinfective),99,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,Hydronephrosis with renal and ureteral calculous obstruction,75,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Calculus of kidney,68,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Benign prostatic hyperplasia with lower urinary tract symptoms,66,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Excessive and frequent menstruation with regular cycle,65,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,Redundant prepuce and phimosis,57,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Abnormal uterine and vaginal bleeding, unspecified",48,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,Endometriosis of uterus,48,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,"Renal failure, unspecified",48,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Other noninflammatory disorders of ovary, fallopian tube and broad ligament",47,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
-肾内/泌尿,Benign prostatic hyperplasia without lower urinary tract symptoms,45,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Pyonephrosis,39,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Tubulo-interstitial nephritis, not specified as acute or chronic",37,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,Unspecified hydronephrosis,37,1,核心病种,保留,命中专科核心病种关键词
-肾内/泌尿,"Unspecified ovarian cyst, right side",37,0,应剔除项,已剔除,明显跨专科或无助于专科知识库，已自动剔除
+﻿specialty_name,disease_name,diagnosis_name,aliases,diagnostic_basis,key_symptoms,key_labs_or_tests,differential_diagnosis,diagnosis_relevance,diagnosis_relevance_label,reference_source,reference_url,agent_use
+肾内/泌尿,acute kidney injury,acute kidney injury,acute renal failure|acute kidney failure,acute rise in creatinine or reduced urine output,oliguria|edema|fatigue|nausea,creatinine|BUN|urine output|urinalysis,chronic kidney disease|dehydration|obstruction,primary_specialty_disease,专科疾病诊断知识,KDIGO AKI guideline; MedlinePlus,https://kdigo.org/guidelines/acute-kidney-injury,用于识别肾功能受损和需肾调整药物风险
+肾内/泌尿,chronic kidney disease,chronic kidney disease,CKD|chronic renal failure,persistent reduction in kidney function or kidney damage markers,fatigue|edema|often asymptomatic,creatinine|eGFR|urinalysis|potassium,acute kidney injury|cardiorenal syndrome,primary_specialty_disease,专科疾病诊断知识,KDIGO CKD guideline; Merck Manual,https://kdigo.org/guidelines/ckd-evaluation-and-management,用于识别慢性肾病背景和肾排泄药物复核
+肾内/泌尿,urinary tract infection,urinary tract infection,UTI|pyelonephritis|cystitis,urinary symptoms plus urinalysis or culture evidence,dysuria|frequency|flank pain|fever,urinalysis|urine culture|WBC,asymptomatic bacteriuria|nephrolithiasis|prostatitis,primary_specialty_disease,专科疾病诊断知识,IDSA urinary tract infection guidance; MedlinePlus,https://medlineplus.gov/urinarytractinfections.html,用于识别泌尿感染诊断依据和抗感染治疗背景
+肾内/泌尿,electrolyte disorder,electrolyte disorder,hyperkalemia|hypokalemia|hyponatremia|hypernatremia,serum electrolyte values outside clinically safe range,weakness|arrhythmia|confusion|seizure,potassium|sodium|creatinine|ECG,laboratory artifact|endocrine disorder|renal failure,primary_specialty_disease,专科疾病诊断知识,KDIGO potassium management; Merck Manual,https://www.merckmanuals.com/professional/endocrine-and-metabolic-disorders/electrolyte-disorders,用于识别电解质风险和用药安全复核
+肾内/泌尿,nephrolithiasis,nephrolithiasis,kidney stone|ureteral stone|renal colic,flank pain or hematuria with stone evidence on imaging,colicky flank pain|hematuria|nausea|dysuria,urinalysis|noncontrast CT|ultrasound|creatinine,pyelonephritis|appendicitis|abdominal aortic aneurysm,primary_specialty_disease,专科疾病诊断知识,AUA kidney stone guidance; Merck Manual,https://www.merckmanuals.com/professional/genitourinary-disorders/urinary-calculi/urinary-calculi,用于识别结石疼痛感染和肾功能风险
+肾内/泌尿,glomerulonephritis,glomerulonephritis,nephritic syndrome|proteinuric kidney disease,hematuria proteinuria or reduced kidney function with glomerular pattern,edema|hypertension|foamy urine|hematuria,urinalysis|proteinuria|creatinine|complement|serology,UTI|stone disease|acute tubular injury,primary_specialty_disease,专科疾病诊断知识,KDIGO glomerular diseases guideline; Merck Manual,https://kdigo.org/guidelines/gd,用于识别免疫相关肾病和肾毒性治疗复核
+肾内/泌尿,urinary retention,urinary retention,benign prostatic hyperplasia|BPH|obstructive uropathy,inability to void or high post void residual with lower urinary tract symptoms,suprapubic pain|weak stream|frequency|nocturia,bladder scan|post void residual|creatinine|urinalysis,UTI|neurogenic bladder|medication adverse effect,primary_specialty_disease,专科疾病诊断知识,AUA BPH guideline; Merck Manual,https://www.merckmanuals.com/professional/genitourinary-disorders/voiding-disorders/urinary-retention,用于识别尿潴留和抗胆碱镇静药物风险
+肾内/泌尿,renal replacement indication,renal replacement indication,dialysis indication|uremia|severe renal failure,severe renal dysfunction with refractory electrolyte acid base volume or uremic complications,uremic symptoms|dyspnea|edema|confusion,creatinine|BUN|potassium|bicarbonate|volume status,AKI without urgent indication|heart failure|sepsis,primary_specialty_disease,专科疾病诊断知识,KDIGO AKI guideline; Merck Manual,https://www.merckmanuals.com/professional/genitourinary-disorders/renal-replacement-therapy/hemodialysis,用于识别透析相关风险和药物剂量复核

@@ -1,0 +1,1006 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10265021",
+      "hadm_id": "20035624",
+      "gender": "M",
+      "age": 57.0
+    },
+    "primary_diagnosis": "Sepsis, unspecified organism",
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "神经",
+      "肾内/泌尿",
+      "消化"
+    ],
+    "specialty_diagnosis_map": {
+      "呼吸": [
+        "Sepsis, unspecified organism",
+        "Hypothyroidism, unspecified",
+        "Pneumonitis due to inhalation of food and vomit"
+      ],
+      "内分泌/代谢": [
+        "Acute kidney failure, unspecified",
+        "Major depressive disorder, single episode, unspecified",
+        "Thrombocytopenia, unspecified"
+      ],
+      "神经": [
+        "Chronic hepatitis, unspecified",
+        "Obstructive sleep apnea (adult) (pediatric)",
+        "Unspecified bacterial pneumonia"
+      ],
+      "肾内/泌尿": [
+        "Down syndrome, unspecified",
+        "Other constipation",
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+      ],
+      "消化": [
+        "Dysphagia, oropharyngeal phase",
+        "Pain in leg, unspecified"
+      ]
+    },
+    "comorbidity_list": [
+      "Acute kidney failure, unspecified",
+      "Chronic hepatitis, unspecified",
+      "Down syndrome, unspecified",
+      "Dysphagia, oropharyngeal phase",
+      "Hypothyroidism, unspecified",
+      "Major depressive disorder, single episode, unspecified",
+      "Obstructive sleep apnea (adult) (pediatric)",
+      "Other constipation",
+      "Pain in leg, unspecified",
+      "Pneumonitis due to inhalation of food and vomit",
+      "Thrombocytopenia, unspecified",
+      "Unspecified bacterial pneumonia",
+      "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.4,
+      "bun_24h": 17.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 145.0,
+      "glucose_24h": 89.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.5
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 8,
+      "subject_id": "10265021",
+      "hadm_id": "20035624",
+      "specialty_cnt": 5,
+      "specialty_list": "呼吸 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 消化",
+      "gender": "M",
+      "anchor_age": 57,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "14/1/2112 00:08:00",
+      "dischtime": "16/1/2112 14:50:00",
+      "admission_type": "DIRECT EMER.",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Sepsis, unspecified organism",
+      "comorbidity_list": "Acute kidney failure, unspecified | Chronic hepatitis, unspecified | Down syndrome, unspecified | Dysphagia, oropharyngeal phase | Hypothyroidism, unspecified | Major depressive disorder, single episode, unspecified | Obstructive sleep apnea (adult) (pediatric) | Other constipation | Pain in leg, unspecified | Pneumonitis due to inhalation of food and vomit | Thrombocytopenia, unspecified | Unspecified bacterial pneumonia | Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+      "specialty_agents": "呼吸 | 精神 | 内分泌/代谢 | 神经 | 肾内/泌尿 | 消化",
+      "drug_list": "0.45% sodium chloride | acetaminophen | azithromycin | ceftriaxone | docusate sodium | heparin | influenza vaccine quadrivalent | lactated ringers | levofloxacin | levothyroxine sodium | mirtazapine | olanzapine | ondansetron | senna | sodium chloride 0.9%  flush | tamsulosin | vial",
+      "creatinine_24h": 1.4,
+      "bun_24h": 17.0,
+      "potassium_24h": 4.2,
+      "sodium_24h": 145.0,
+      "glucose_24h": 89.0,
+      "inr_24h": 1.2,
+      "bilirubin_total_24h": 0.5
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "呼吸",
+      "内分泌/代谢",
+      "神经",
+      "肾内/泌尿",
+      "消化"
+    ],
+    "lead_specialty": "呼吸",
+    "specialty_related_diagnoses": {
+      "呼吸": [
+        "Sepsis, unspecified organism",
+        "Pneumonitis due to inhalation of food and vomit",
+        "Unspecified bacterial pneumonia",
+        "Obstructive sleep apnea (adult) (pediatric)"
+      ],
+      "内分泌/代谢": [
+        "Hypothyroidism, unspecified",
+        "Acute kidney failure, unspecified"
+      ],
+      "神经": [
+        "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",
+        "Down syndrome, unspecified",
+        "Major depressive disorder, single episode, unspecified"
+      ],
+      "肾内/泌尿": [
+        "Acute kidney failure, unspecified"
+      ],
+      "消化": [
+        "Dysphagia, oropharyngeal phase",
+        "Chronic hepatitis, unspecified",
+        "Other constipation"
+      ]
+    },
+    "rationale": "主诊断为脓毒症，合并吸入性肺炎/细菌性肺炎和吞咽困难，感染灶最可能来自呼吸道，故呼吸专科牵头；同时存在急性肾功能不全、甲状腺功能减退、慢性肝病、认知障碍、OSA和血小板减少，需要内分泌/代谢、肾内、神经和消化共同审阅用药安全。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "呼吸",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "piperacillin-tazobactam",
+          "confidence": 0.86,
+          "reason": "覆盖重症社区/院内肺炎及吸入相关革兰阴性菌和厌氧菌，适合脓毒症伴吸入性肺炎场景，但需按肾功能调整。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "vancomycin",
+          "confidence": 0.58,
+          "reason": "在MRSA风险、重症肺炎或培养提示革兰阳性耐药菌时作为经验性补充，当前缺少微生物证据，需复核适应证和药物浓度。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "ipratropium-albuterol nebulization",
+          "confidence": 0.42,
+          "reason": "如存在喘鸣、支气管痉挛或气道反应性增加可短期使用；当前血钾4.2 mmol/L未触发β受体激动剂钾风险。"
+        }
+      ],
+      "recommendation_reasons": {
+        "infection_focus": "脓毒症合并吸入性肺炎和未特指细菌性肺炎，需优先经验性抗感染并根据培养去阶梯。",
+        "airway_support": "吞咽困难和吸入性肺炎提示误吸风险，应配合气道护理、吸痰、雾化和吞咽评估。",
+        "monitoring": "需监测氧合、呼吸频率、痰培养、血培养、炎症指标和抗菌疗效。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "aminoglycosides",
+          "reason": "存在急性肾功能不全诊断，虽肌酐1.4 mg/dL未达知识库中度阈值，但肾毒性风险较高，应避免作为常规经验首选。"
+        },
+        {
+          "drug_name": "routine systemic corticosteroids",
+          "reason": "无明确COPD急性加重、难治性休克或哮喘证据，系统激素可能增加感染和代谢负担。"
+        }
+      ],
+      "overall_confidence": 0.82,
+      "summary_reason": "呼吸感染最能解释脓毒症来源，首选覆盖吸入性肺炎的经验抗菌方案，并保留MRSA覆盖为需复核药物。",
+      "conversation_text": "呼吸专科认为治疗核心是控制肺部感染和误吸风险，优先推荐哌拉西林-他唑巴坦，万古霉素仅在MRSA风险或培养证据支持时加入。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "levothyroxine",
+          "confidence": 0.66,
+          "reason": "病例列有甲状腺功能减退，若既往长期用药或TSH/FT4支持，应继续或恢复替代治疗。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "regular insulin correction scale",
+          "confidence": 0.28,
+          "reason": "当前葡萄糖89 mg/dL正常，不建议主动降糖；仅作为住院应激高血糖时备用复核方案。"
+        }
+      ],
+      "recommendation_reasons": {
+        "thyroid": "甲状腺功能减退需要评估既往剂量、TSH/FT4和给药途径，吞咽困难时需考虑管饲相容性。",
+        "glucose": "血糖89 mg/dL未触发低血糖或高血糖风险，避免不必要胰岛素。",
+        "electrolytes": "钠145 mmol/L和钾4.2 mmol/L处于知识库参考范围边界内，补液和电解质治疗应动态复查。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "metformin",
+          "reason": "无糖尿病诊断且存在急性肾功能不全，乳酸酸中毒和肾功能相关风险不支持使用。"
+        },
+        {
+          "drug_name": "empiric high-dose insulin",
+          "reason": "当前血糖正常，强化降糖可导致低血糖和神经症状混淆。"
+        }
+      ],
+      "overall_confidence": 0.61,
+      "summary_reason": "内分泌重点是继续必要甲状腺替代并避免无指征降糖或肾功能敏感代谢药物。",
+      "conversation_text": "内分泌/代谢专科支持将左甲状腺素列为需复核后继续药物，不建议因当前血糖正常而主动使用胰岛素。"
+    },
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "acetaminophen",
+          "confidence": 0.54,
+          "reason": "可用于发热或轻中度疼痛，较NSAIDs对肾功能和出血风险更友好；慢性肝病背景下需限制总量并监测肝功能。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "melatonin",
+          "confidence": 0.3,
+          "reason": "如住院睡眠-觉醒节律紊乱，可优先于苯二氮卓类用于睡眠支持，减少OSA和认知障碍下呼吸抑制风险。"
+        }
+      ],
+      "recommendation_reasons": {
+        "cognition": "Down综合征、痴呆和抑郁提示谵妄风险，应优先非药物干预并避免多重镇静。",
+        "respiratory_depression": "OSA和吸入性肺炎背景下，中枢抑制药可增加低通气和误吸风险。",
+        "bleeding": "INR 1.2未触发知识库出血阈值，但血小板减少诊断提示抗凝抗血小板需额外复核。"
+      },
+      "risk_alerts": [
+        {
+          "risk": "sedation_respiratory_overlap",
+          "severity": "caution",
+          "reason": "OSA、肺炎、痴呆和吞咽困难叠加，镇静药可能增加呼吸抑制、谵妄和误吸。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "可加重OSA相关低通气、谵妄和跌倒风险。"
+        },
+        {
+          "drug_name": "opioids",
+          "reason": "除非有明确中重度疼痛，否则不宜常规使用；可能抑制呼吸并加重便秘。"
+        }
+      ],
+      "overall_confidence": 0.57,
+      "summary_reason": "神经专科建议以避免谵妄和呼吸抑制为主，疼痛/发热优先选择低镇静负担药物。",
+      "conversation_text": "神经专科强调不要因住院躁动或睡眠问题过早使用苯二氮卓类或阿片类，若需止痛退热可小剂量对乙酰氨基酚并监测肝功能。"
+    },
+    {
+      "specialty_name": "肾内/泌尿",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "balanced crystalloid solution",
+          "confidence": 0.73,
+          "reason": "脓毒症伴急性肾功能不全时可用于容量复苏或维持补液，需结合血压、尿量和容量状态。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "renal-dose adjusted piperacillin-tazobactam",
+          "confidence": 0.7,
+          "reason": "抗感染必要性高，但急性肾功能不全诊断要求按eGFR/肌酐趋势调整剂量。"
+        }
+      ],
+      "recommendation_reasons": {
+        "renal_status": "肌酐1.4 mg/dL未达到知识库中度风险阈值1.5 mg/dL，但诊断包含急性肾功能衰竭，应按动态肾功能审慎用药。",
+        "nephrotoxicity": "需避免NSAIDs、氨基糖苷类和不必要的肾毒性联用。",
+        "monitoring": "建议监测肌酐、尿量、钠钾、药物浓度和容量状态。"
+      },
+      "risk_alerts": [
+        {
+          "risk": "acute_kidney_failure_context",
+          "severity": "caution",
+          "reason": "诊断提示AKI，虽关键实验室未触发高危阈值，仍需肾剂量调整。"
+        }
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "NSAIDs",
+          "reason": "可能加重急性肾损伤并增加消化道出血风险。"
+        },
+        {
+          "drug_name": "aminoglycosides",
+          "reason": "肾毒性较强，除非培养和药敏强烈支持且可严密监测。"
+        }
+      ],
+      "overall_confidence": 0.68,
+      "summary_reason": "肾内重点是保留必要抗感染，同时用肾剂量、容量评估和肾毒性规避降低AKI进展风险。",
+      "conversation_text": "肾内/泌尿专科同意抗感染优先，但要求所有肾排泄药物按eGFR复核，并避免NSAIDs及氨基糖苷类。"
+    },
+    {
+      "specialty_name": "消化",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "polyethylene glycol",
+          "confidence": 0.62,
+          "reason": "存在便秘，较乳果糖更少造成电解质快速波动，可作为肠道管理基础药物。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "senna",
+          "confidence": 0.5,
+          "reason": "可在便秘持续时短期辅助，需避免腹泻导致容量不足。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "pantoprazole",
+          "confidence": 0.36,
+          "reason": "仅在应激性溃疡高风险、既往消化道出血或需要抗凝/重症支持时考虑；当前不应常规过度使用。"
+        }
+      ],
+      "recommendation_reasons": {
+        "dysphagia": "吞咽困难是误吸核心风险，应进行吞咽评估、给药剂型审查和必要时管饲给药。",
+        "liver": "总胆红素0.5 mg/dL、INR1.2未提示明显肝胆合成或胆汁淤积风险，但慢性肝炎要求避免高肝毒性药物。",
+        "bowel": "便秘会增加不适、谵妄和阿片相关并发症，应主动预防。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "high-dose acetaminophen",
+          "reason": "慢性肝炎背景下需限制总日剂量并复查肝酶。"
+        },
+        {
+          "drug_name": "routine NSAIDs",
+          "reason": "肾功能不全、血小板减少和消化道风险背景下不适合作为常规止痛药。"
+        }
+      ],
+      "overall_confidence": 0.6,
+      "summary_reason": "消化专科建议强化吞咽和肠道管理，避免肝毒性、肾毒性和出血风险药物叠加。",
+      "conversation_text": "消化专科认为便秘和吞咽困难需要进入完整处方层级，同时慢性肝炎使对乙酰氨基酚可用但必须限量。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "呼吸",
+        "accepted_drugs": [
+          "piperacillin-tazobactam",
+          "balanced crystalloid solution",
+          "ipratropium-albuterol nebulization"
+        ],
+        "cautioned_drugs": [
+          "vancomycin",
+          "benzodiazepines",
+          "opioids"
+        ],
+        "conflict_notes": [
+          "万古霉素可增强重症肺炎覆盖，但缺少MRSA证据且需肾功能和浓度监测。",
+          "OSA和肺炎背景下镇静药会削弱通气和咳嗽反射。"
+        ],
+        "priority_comment": "首要目标为控制肺部感染、支持氧合并降低误吸复发。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "levothyroxine",
+          "balanced crystalloid solution"
+        ],
+        "cautioned_drugs": [
+          "regular insulin correction scale",
+          "systemic corticosteroids",
+          "dextrose fluids"
+        ],
+        "conflict_notes": [
+          "血糖正常，不应主动强化降糖。",
+          "若需含糖液或激素，需床旁血糖监测。"
+        ],
+        "priority_comment": "甲状腺替代需复核既往剂量和甲功，代谢药物以避免过度治疗为原则。"
+      },
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "acetaminophen",
+          "melatonin"
+        ],
+        "cautioned_drugs": [
+          "benzodiazepines",
+          "opioids",
+          "gabapentin"
+        ],
+        "conflict_notes": [
+          "痴呆、Down综合征、OSA和肺炎叠加，任何镇静药均需低剂量短疗程并有明确指征。",
+          "抗凝或抗血小板需因血小板减少诊断而复核。"
+        ],
+        "priority_comment": "优先减少谵妄、跌倒、误吸和呼吸抑制。"
+      },
+      {
+        "reviewer_specialty": "肾内/泌尿",
+        "accepted_drugs": [
+          "renal-dose adjusted piperacillin-tazobactam",
+          "balanced crystalloid solution"
+        ],
+        "cautioned_drugs": [
+          "vancomycin",
+          "aminoglycosides",
+          "NSAIDs"
+        ],
+        "conflict_notes": [
+          "AKI诊断要求所有肾排泄药物按eGFR调整。",
+          "若使用万古霉素，应设定谷浓度或AUC监测和停药复评点。"
+        ],
+        "priority_comment": "必要抗感染可用，但需避免肾毒性叠加和容量过负荷。"
+      },
+      {
+        "reviewer_specialty": "消化",
+        "accepted_drugs": [
+          "polyethylene glycol",
+          "senna",
+          "acetaminophen"
+        ],
+        "cautioned_drugs": [
+          "pantoprazole",
+          "high-dose acetaminophen",
+          "NSAIDs"
+        ],
+        "conflict_notes": [
+          "慢性肝炎下对乙酰氨基酚不禁用，但需限量和监测。",
+          "PPI仅在应激性溃疡或胃肠出血风险明确时使用。"
+        ],
+        "priority_comment": "吞咽安全、便秘处理和肝毒性规避应纳入最终计划。"
+      }
+    ],
+    "consensus_notes": [
+      "最可能主线为脓毒症合并吸入性肺炎/细菌性肺炎，经验性抗感染为处方核心。",
+      "AKI诊断虽未被肌酐阈值强烈触发，但要求抗菌药、镇静药和支持药物进行肾功能复核。",
+      "OSA、痴呆、Down综合征、吞咽困难和肺炎共同支持避免苯二氮卓类、阿片类和其他高镇静负担药物。",
+      "血糖、钾、胆红素和INR当前未触发高风险阈值，但血小板减少和慢性肝炎要求避免NSAIDs和不必要抗栓。",
+      "最终计划应包含抗感染、补液/管路、误吸预防、甲状腺替代复核、肠道管理、DVT/应激溃疡预防复核和监测项目。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "A",
+        "plan_name": "肾功能复核下的吸入性肺炎脓毒症完整经验治疗方案",
+        "drugs": [
+          "piperacillin-tazobactam",
+          "vancomycin if MRSA risk or culture indication",
+          "balanced crystalloid solution",
+          "normal saline flush",
+          "acetaminophen",
+          "ipratropium-albuterol nebulization if bronchospasm",
+          "levothyroxine after thyroid history review",
+          "polyethylene glycol",
+          "senna as needed",
+          "heparin prophylaxis only if platelet count adequate",
+          "pantoprazole only if stress-ulcer risk present"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "piperacillin-tazobactam",
+            "vancomycin if MRSA risk or culture indication"
+          ],
+          "risk_modifying_therapy": [
+            "heparin prophylaxis only if platelet count adequate",
+            "renal-dose adjustment for antibiotics",
+            "culture-guided antibiotic de-escalation"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "ipratropium-albuterol nebulization if bronchospasm"
+          ],
+          "nursing_support_medication": [
+            "polyethylene glycol",
+            "senna as needed"
+          ],
+          "prophylaxis_prevention_medication": [
+            "heparin prophylaxis only if platelet count adequate",
+            "pantoprazole only if stress-ulcer risk present"
+          ],
+          "fluid_diluent_flush_medication": [
+            "balanced crystalloid solution",
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "lidocaine local anesthetic if line placement required"
+          ],
+          "nutrition_electrolyte_medication": [
+            "levothyroxine after thyroid history review",
+            "potassium or magnesium replacement only if repeat labs indicate deficiency"
+          ],
+          "requires_review": [
+            "vancomycin indication and drug level monitoring",
+            "heparin prophylaxis with platelet count",
+            "levothyroxine dose and route",
+            "pantoprazole indication",
+            "renal dosing by eGFR"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "肾内/泌尿",
+          "内分泌/代谢",
+          "神经",
+          "消化"
+        ],
+        "rationale": "覆盖脓毒症和吸入性肺炎，同时将AKI、OSA、吞咽困难、慢性肝炎和血小板减少纳入安全约束；万古霉素、抗凝和PPI均设为条件性复核药物。",
+        "aggregate_score": 0.86
+      },
+      {
+        "plan_id": "B",
+        "plan_name": "较窄谱肺炎治疗与厌氧覆盖方案",
+        "drugs": [
+          "ceftriaxone",
+          "metronidazole",
+          "azithromycin if atypical pneumonia concern",
+          "balanced crystalloid solution",
+          "normal saline flush",
+          "acetaminophen",
+          "levothyroxine after thyroid history review",
+          "polyethylene glycol",
+          "senna as needed",
+          "heparin prophylaxis only if platelet count adequate"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "ceftriaxone",
+            "metronidazole",
+            "azithromycin if atypical pneumonia concern"
+          ],
+          "risk_modifying_therapy": [
+            "avoid nephrotoxic antibiotics",
+            "culture-guided antibiotic escalation or de-escalation"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "polyethylene glycol",
+            "senna as needed"
+          ],
+          "prophylaxis_prevention_medication": [
+            "heparin prophylaxis only if platelet count adequate"
+          ],
+          "fluid_diluent_flush_medication": [
+            "balanced crystalloid solution",
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "none routinely required"
+          ],
+          "nutrition_electrolyte_medication": [
+            "levothyroxine after thyroid history review",
+            "electrolyte replacement only by repeat labs"
+          ],
+          "requires_review": [
+            "whether infection severity permits ceftriaxone plus metronidazole instead of broader therapy",
+            "platelet count before heparin",
+            "QT risk if azithromycin is used"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "肾内/泌尿",
+          "消化"
+        ],
+        "rationale": "适用于病情较稳定、无耐药菌或院内感染高风险证据时，降低肾毒性和广谱抗菌压力；但对重症脓毒症覆盖可能不足。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "C",
+        "plan_name": "青霉素过敏或肾毒性担忧下的替代抗感染方案",
+        "drugs": [
+          "cefepime if beta-lactam acceptable",
+          "metronidazole",
+          "linezolid if MRSA coverage needed and platelet count acceptable",
+          "balanced crystalloid solution",
+          "normal saline flush",
+          "acetaminophen",
+          "polyethylene glycol",
+          "levothyroxine after thyroid history review",
+          "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "cefepime if beta-lactam acceptable",
+            "metronidazole",
+            "linezolid if MRSA coverage needed and platelet count acceptable"
+          ],
+          "risk_modifying_therapy": [
+            "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe",
+            "renal-dose adjustment for cefepime"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "polyethylene glycol"
+          ],
+          "prophylaxis_prevention_medication": [
+            "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe"
+          ],
+          "fluid_diluent_flush_medication": [
+            "balanced crystalloid solution",
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [
+            "none routinely required"
+          ],
+          "nutrition_electrolyte_medication": [
+            "levothyroxine after thyroid history review"
+          ],
+          "requires_review": [
+            "beta-lactam allergy history",
+            "linezolid thrombocytopenia risk",
+            "cefepime neurotoxicity risk in renal impairment",
+            "MRSA indication"
+          ]
+        },
+        "supporting_specialties": [
+          "呼吸",
+          "肾内/泌尿",
+          "神经"
+        ],
+        "rationale": "作为过敏或万古霉素肾毒性担忧时的替代框架，但血小板减少使linezolid需谨慎，肾功能不全使cefepime神经毒性需监测。",
+        "aggregate_score": 0.62
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "A",
+      "plan_name": "肾功能复核下的吸入性肺炎脓毒症完整经验治疗方案",
+      "drugs": [
+        "piperacillin-tazobactam",
+        "vancomycin if MRSA risk or culture indication",
+        "balanced crystalloid solution",
+        "normal saline flush",
+        "acetaminophen",
+        "ipratropium-albuterol nebulization if bronchospasm",
+        "levothyroxine after thyroid history review",
+        "polyethylene glycol",
+        "senna as needed",
+        "heparin prophylaxis only if platelet count adequate",
+        "pantoprazole only if stress-ulcer risk present"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "piperacillin-tazobactam",
+          "vancomycin if MRSA risk or culture indication"
+        ],
+        "risk_modifying_therapy": [
+          "heparin prophylaxis only if platelet count adequate",
+          "renal-dose adjustment for antibiotics",
+          "culture-guided antibiotic de-escalation"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "ipratropium-albuterol nebulization if bronchospasm"
+        ],
+        "nursing_support_medication": [
+          "polyethylene glycol",
+          "senna as needed"
+        ],
+        "prophylaxis_prevention_medication": [
+          "heparin prophylaxis only if platelet count adequate",
+          "pantoprazole only if stress-ulcer risk present"
+        ],
+        "fluid_diluent_flush_medication": [
+          "balanced crystalloid solution",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine local anesthetic if line placement required"
+        ],
+        "nutrition_electrolyte_medication": [
+          "levothyroxine after thyroid history review",
+          "potassium or magnesium replacement only if repeat labs indicate deficiency"
+        ],
+        "requires_review": [
+          "vancomycin indication and drug level monitoring",
+          "heparin prophylaxis with platelet count",
+          "levothyroxine dose and route",
+          "pantoprazole indication",
+          "renal dosing by eGFR"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "肾内/泌尿",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "覆盖脓毒症和吸入性肺炎，同时将AKI、OSA、吞咽困难、慢性肝炎和血小板减少纳入安全约束。",
+      "aggregate_score": 0.86
+    },
+    {
+      "plan_id": "B",
+      "plan_name": "较窄谱肺炎治疗与厌氧覆盖方案",
+      "drugs": [
+        "ceftriaxone",
+        "metronidazole",
+        "azithromycin if atypical pneumonia concern",
+        "balanced crystalloid solution",
+        "normal saline flush",
+        "acetaminophen",
+        "levothyroxine after thyroid history review",
+        "polyethylene glycol",
+        "senna as needed",
+        "heparin prophylaxis only if platelet count adequate"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "ceftriaxone",
+          "metronidazole",
+          "azithromycin if atypical pneumonia concern"
+        ],
+        "risk_modifying_therapy": [
+          "avoid nephrotoxic antibiotics",
+          "culture-guided antibiotic escalation or de-escalation"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "polyethylene glycol",
+          "senna as needed"
+        ],
+        "prophylaxis_prevention_medication": [
+          "heparin prophylaxis only if platelet count adequate"
+        ],
+        "fluid_diluent_flush_medication": [
+          "balanced crystalloid solution",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "none routinely required"
+        ],
+        "nutrition_electrolyte_medication": [
+          "levothyroxine after thyroid history review",
+          "electrolyte replacement only by repeat labs"
+        ],
+        "requires_review": [
+          "infection severity and resistance risk",
+          "platelet count before heparin",
+          "QT risk if azithromycin is used"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "肾内/泌尿",
+        "消化"
+      ],
+      "rationale": "降低广谱抗菌和肾毒性压力，但对重症脓毒症经验覆盖不如方案A。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "C",
+      "plan_name": "青霉素过敏或肾毒性担忧下的替代抗感染方案",
+      "drugs": [
+        "cefepime if beta-lactam acceptable",
+        "metronidazole",
+        "linezolid if MRSA coverage needed and platelet count acceptable",
+        "balanced crystalloid solution",
+        "normal saline flush",
+        "acetaminophen",
+        "polyethylene glycol",
+        "levothyroxine after thyroid history review",
+        "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "cefepime if beta-lactam acceptable",
+          "metronidazole",
+          "linezolid if MRSA coverage needed and platelet count acceptable"
+        ],
+        "risk_modifying_therapy": [
+          "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe",
+          "renal-dose adjustment for cefepime"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "polyethylene glycol"
+        ],
+        "prophylaxis_prevention_medication": [
+          "mechanical VTE prophylaxis if pharmacologic prophylaxis unsafe"
+        ],
+        "fluid_diluent_flush_medication": [
+          "balanced crystalloid solution",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "none routinely required"
+        ],
+        "nutrition_electrolyte_medication": [
+          "levothyroxine after thyroid history review"
+        ],
+        "requires_review": [
+          "beta-lactam allergy history",
+          "linezolid thrombocytopenia risk",
+          "cefepime neurotoxicity risk in renal impairment",
+          "MRSA indication"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "肾内/泌尿",
+        "神经"
+      ],
+      "rationale": "作为替代框架保留，但因血小板减少和肾功能风险，安全排序低于方案A和B。",
+      "aggregate_score": 0.62
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "A",
+      "plan_name": "肾功能复核下的吸入性肺炎脓毒症完整经验治疗方案",
+      "drugs": [
+        "piperacillin-tazobactam",
+        "vancomycin if MRSA risk or culture indication",
+        "balanced crystalloid solution",
+        "normal saline flush",
+        "acetaminophen",
+        "ipratropium-albuterol nebulization if bronchospasm",
+        "levothyroxine after thyroid history review",
+        "polyethylene glycol",
+        "senna as needed",
+        "heparin prophylaxis only if platelet count adequate",
+        "pantoprazole only if stress-ulcer risk present"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "piperacillin-tazobactam",
+          "vancomycin if MRSA risk or culture indication"
+        ],
+        "risk_modifying_therapy": [
+          "heparin prophylaxis only if platelet count adequate",
+          "renal-dose adjustment for antibiotics",
+          "culture-guided antibiotic de-escalation"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "ipratropium-albuterol nebulization if bronchospasm"
+        ],
+        "nursing_support_medication": [
+          "polyethylene glycol",
+          "senna as needed"
+        ],
+        "prophylaxis_prevention_medication": [
+          "heparin prophylaxis only if platelet count adequate",
+          "pantoprazole only if stress-ulcer risk present"
+        ],
+        "fluid_diluent_flush_medication": [
+          "balanced crystalloid solution",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [
+          "lidocaine local anesthetic if line placement required"
+        ],
+        "nutrition_electrolyte_medication": [
+          "levothyroxine after thyroid history review",
+          "potassium or magnesium replacement only if repeat labs indicate deficiency"
+        ],
+        "requires_review": [
+          "vancomycin indication and drug level monitoring",
+          "heparin prophylaxis with platelet count",
+          "levothyroxine dose and route",
+          "pantoprazole indication",
+          "renal dosing by eGFR"
+        ]
+      },
+      "supporting_specialties": [
+        "呼吸",
+        "肾内/泌尿",
+        "内分泌/代谢",
+        "神经",
+        "消化"
+      ],
+      "rationale": "方案A在覆盖脓毒症和吸入性肺炎方面最完整，同时通过条件性使用万古霉素、肝肾功能监测、血小板复核和镇静药规避控制主要安全风险。",
+      "aggregate_score": 0.86
+    },
+    "ranked_plans": [
+      {
+        "rank": 1,
+        "plan_id": "A",
+        "score": 0.86,
+        "safety_comment": "推荐为最终方案；需在执行前复核eGFR、培养、MRSA风险、血小板计数和甲状腺替代剂量。"
+      },
+      {
+        "rank": 2,
+        "plan_id": "B",
+        "score": 0.74,
+        "safety_comment": "较安全但覆盖较窄，适合病情稳定且耐药风险低时。"
+      },
+      {
+        "rank": 3,
+        "plan_id": "C",
+        "score": 0.62,
+        "safety_comment": "替代方案；linezolid与血小板减少、cefepime与肾功能相关神经毒性需重点审核。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "diagnosis_based_acute_kidney_failure_caution",
+        "severity": "caution",
+        "evidence": "诊断包含Acute kidney failure, creatinine_24h为1.4 mg/dL，接近但未达到知识库1.5 mg/dL中度阈值。",
+        "action": "所有肾排泄抗菌药和支持药物按eGFR/尿量复核，避免NSAIDs和氨基糖苷类。"
+      },
+      {
+        "risk_id": "sedation_respiratory_aspiration_caution",
+        "severity": "caution",
+        "evidence": "存在OSA、吸入性肺炎、吞咽困难、痴呆和Down综合征。",
+        "action": "避免苯二氮卓类、常规阿片和多药镇静；如必须使用需低剂量、短疗程并监测呼吸。"
+      },
+      {
+        "risk_id": "thrombocytopenia_anticoagulation_review",
+        "severity": "requires_review",
+        "evidence": "诊断包含Thrombocytopenia，输入未提供血小板数。",
+        "action": "药物性VTE预防前复核血小板计数和出血风险；不安全时采用机械预防。"
+      },
+      {
+        "risk_id": "chronic_hepatitis_hepatotoxicity_caution",
+        "severity": "caution",
+        "evidence": "慢性肝炎诊断存在，但bilirubin_total_24h 0.5 mg/dL、INR 1.2未触发肝胆高危阈值。",
+        "action": "限制对乙酰氨基酚总量，避免不必要肝毒性药物并监测肝功能。"
+      }
+    ],
+    "safety_summary": "最终选择方案A。该方案最符合脓毒症合并吸入性肺炎的疾病主线，同时将万古霉素、肝肾功能相关剂量、抗凝预防、PPI和甲状腺替代均设为复核项。当前钾4.2、葡萄糖89、钠145、INR1.2、胆红素0.5未触发知识库高危阈值；主要安全限制来自AKI诊断、OSA/误吸/认知障碍叠加、血小板减少和慢性肝炎。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": 1,
+      "agent": "诊断路由智能体",
+      "text": "识别主诊断为脓毒症，合并吸入性肺炎和细菌性肺炎，路由至呼吸牵头，并纳入内分泌/代谢、神经、肾内/泌尿和消化。"
+    },
+    {
+      "step": 2,
+      "agent": "呼吸专科智能体",
+      "text": "建议以覆盖吸入性肺炎和脓毒症的经验性抗感染为核心，优先哌拉西林-他唑巴坦，万古霉素需MRSA风险或培养证据。"
+    },
+    {
+      "step": 3,
+      "agent": "内分泌/代谢智能体",
+      "text": "血糖、电解质当前未触发高危阈值；甲状腺功能减退需复核后继续左甲状腺素，避免无指征降糖。"
+    },
+    {
+      "step": 4,
+      "agent": "神经智能体",
+      "text": "因OSA、痴呆、Down综合征和肺炎，建议避免苯二氮卓类和常规阿片，防止谵妄、跌倒、误吸和呼吸抑制。"
+    },
+    {
+      "step": 5,
+      "agent": "肾内/泌尿智能体",
+      "text": "AKI诊断要求抗菌药和支持药物按肾功能调整，避免NSAIDs和氨基糖苷类，动态监测肌酐、尿量和药物浓度。"
+    },
+    {
+      "step": 6,
+      "agent": "消化智能体",
+      "text": "吞咽困难和便秘需纳入处方层级；慢性肝炎下对乙酰氨基酚需限量，PPI仅在明确风险时使用。"
+    },
+    {
+      "step": 7,
+      "agent": "MDT协商智能体",
+      "text": "形成三个候选方案，综合覆盖强度、安全性和共病约束后，方案A得分最高。"
+    },
+    {
+      "step": 8,
+      "agent": "安全审核智能体",
+      "text": "未发现钾、糖、胆红素、INR触发高危阈值；触发AKI、镇静呼吸风险、血小板减少抗凝复核和慢性肝炎肝毒性谨慎项。"
+    },
+    {
+      "step": 9,
+      "agent": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1360" viewBox="0 0 1480 1360">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb" />
+    </marker>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 20px; font-weight: 700; fill: #0f172a; }
+      .body { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 15px; fill: #334155; }
+      .caption { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 30px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-family: Arial, 'Microsoft YaHei', sans-serif; font-size: 16px; fill: #475569; }
+      .arrow { stroke: #2563eb; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #94a3b8; stroke-width: 2; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1480" height="1360" />
+  <text x="740.0" y="28" text-anchor="middle" class="caption">cloud_mdt_case_0 MDT 会诊链路图</text>
+  <text x="740.0" y="54" text-anchor="middle" class="subtitle">召集 MDT → 多专科并行意见 → 协调共识 → 安全复核 → 最终方案</text>
+
+  <path class="arrow" d="M740,155 C740,182.5 740,182.5 740,210" />
+  <path class="arrow" d="M740,315 C740,342.5 740,342.5 740,370" />
+  <path class="arrow" d="M610,455 C610,487.5 370,487.5 370,520" />
+  <path class="arrow" d="M870,455 C870,487.5 1110,487.5 1110,520" />
+  <path class="arrow" d="M370,670 C370,702.5 610,702.5 610,735" />
+  <path class="arrow" d="M1110,670 C1110,702.5 870,702.5 870,735" />
+  <path class="arrow" d="M590,855 C590,892.5 285,892.5 285,930" />
+  <path class="arrow" d="M740,855 C740,892.5 740,892.5 740,930" />
+  <path class="arrow" d="M890,855 C890,892.5 1195,892.5 1195,930" />
+  <path class="arrow" d="M285,1055 C285,1082.5 610,1082.5 610,1110" />
+  <path class="arrow" d="M740,1055 C740,1082.5 740,1082.5 740,1110" />
+  <path class="arrow" d="M1195,1055 C1195,1082.5 870,1082.5 870,1110" />
+  <path class="arrow" d="M740,1215 C740,1235.0 740,1235.0 740,1255" />
+  <path class="dash" d="M650,595 C715,555 765,555 830,595" />
+  <text x="740" y="555" text-anchor="middle" class="subtitle">会诊交换/潜在用药冲突检查</text>
+  <rect x="440" y="40" width="600" height="115" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="2.4" />
+  <text x="740.0" y="72" text-anchor="middle" class="title">病例进入 MDT 池</text>
+  <text x="740.0" y="100" text-anchor="middle" class="body">hadm_id: 22927623；48岁女性</text>
+  <text x="740.0" y="122" text-anchor="middle" class="body">主诊断: Dysphagia, unspecified</text>
+  <text x="740.0" y="144" text-anchor="middle" class="body">关键检验: Cr 0.9 / BUN 8.0 / K 3.6 / Na 142 / INR 1.1 / TBil 1.0</text>
+  <rect x="440" y="210" width="600" height="105" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="2.4" />
+  <text x="740.0" y="242" text-anchor="middle" class="title">诊断路由 / MDT 召集</text>
+  <text x="740.0" y="270" text-anchor="middle" class="body">唤起专科: 消化 + 心血管</text>
+  <text x="740.0" y="292" text-anchor="middle" class="body">主导专科: 消化</text>
+  <text x="740.0" y="314" text-anchor="middle" class="body">依据: 各专科相关诊断数量</text>
+  <rect x="440" y="370" width="600" height="85" rx="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2.4" />
+  <text x="740.0" y="402" text-anchor="middle" class="title">MDT 并行专科讨论（Round 1）</text>
+  <text x="740.0" y="430" text-anchor="middle" class="body">各专科独立形成 proposal，再进入会诊协调</text>
+  <rect x="90" y="520" width="560" height="150" rx="16" fill="#fff7ed" stroke="#ea580c" stroke-width="2.4" />
+  <text x="370.0" y="552" text-anchor="middle" class="title">消化专科 proposal</text>
+  <text x="370.0" y="580" text-anchor="middle" class="body">相关诊断: 5个；风险提示: 0条</text>
+  <text x="370.0" y="602" text-anchor="middle" class="body">Top建议: pantoprazole, omeprazole, metronidazole,</text>
+  <text x="370.0" y="624" text-anchor="middle" class="body">polyethylene glycol, ciprofloxacin iv</text>
+  <text x="370.0" y="646" text-anchor="middle" class="body">低优先级/需谨慎: heparin 等</text>
+  <rect x="830" y="520" width="560" height="150" rx="16" fill="#fef2f2" stroke="#dc2626" stroke-width="2.4" />
+  <text x="1110.0" y="552" text-anchor="middle" class="title">心血管专科 proposal</text>
+  <text x="1110.0" y="580" text-anchor="middle" class="body">相关诊断: 4个；风险提示: 0条</text>
+  <text x="1110.0" y="602" text-anchor="middle" class="body">Top建议: furosemide, metoprolol tartrate, heparin,</text>
+  <text x="1110.0" y="624" text-anchor="middle" class="body">aspirin, warfarin</text>
+  <text x="1110.0" y="646" text-anchor="middle" class="body">参与会诊，但最终未进入用药主体</text>
+  <rect x="440" y="735" width="600" height="120" rx="16" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2.4" />
+  <text x="740.0" y="767" text-anchor="middle" class="title">MDT 协调 / 共识形成（Round 2）</text>
+  <text x="740.0" y="795" text-anchor="middle" class="body">汇总消化与心血管 proposal</text>
+  <text x="740.0" y="817" text-anchor="middle" class="body">以主导专科消化建议为核心</text>
+  <text x="740.0" y="839" text-anchor="middle" class="body">评估跨专科支持、低优先级药物与潜在冲突</text>
+  <rect x="90" y="930" width="390" height="125" rx="16" fill="#f8fafc" stroke="#64748b" stroke-width="2.4" />
+  <text x="285.0" y="962" text-anchor="middle" class="title">候选方案 A</text>
+  <text x="285.0" y="990" text-anchor="middle" class="body">主专科优先方案</text>
+  <text x="285.0" y="1012" text-anchor="middle" class="body">5药组合</text>
+  <text x="285.0" y="1034" text-anchor="middle" class="body">score: 10.53</text>
+  <rect x="545" y="930" width="390" height="125" rx="16" fill="#f8fafc" stroke="#64748b" stroke-width="2.4" />
+  <text x="740.0" y="962" text-anchor="middle" class="title">候选方案 B</text>
+  <text x="740.0" y="990" text-anchor="middle" class="body">多专科平衡方案</text>
+  <text x="740.0" y="1012" text-anchor="middle" class="body">同方案 A</text>
+  <text x="740.0" y="1034" text-anchor="middle" class="body">score: 10.53</text>
+  <rect x="1000" y="930" width="390" height="125" rx="16" fill="#f8fafc" stroke="#64748b" stroke-width="2.4" />
+  <text x="1195.0" y="962" text-anchor="middle" class="title">候选方案 C</text>
+  <text x="1195.0" y="990" text-anchor="middle" class="body">保守低负荷方案</text>
+  <text x="1195.0" y="1012" text-anchor="middle" class="body">3药组合</text>
+  <text x="1195.0" y="1034" text-anchor="middle" class="body">score: 6.54</text>
+  <rect x="440" y="1110" width="600" height="105" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.4" />
+  <text x="740.0" y="1142" text-anchor="middle" class="title">安全复核 / 二次筛查（Round 3）</text>
+  <text x="740.0" y="1170" text-anchor="middle" class="body">触发风险数量: 0</text>
+  <text x="740.0" y="1192" text-anchor="middle" class="body">risk_penalty: 0；无检验风险否决</text>
+  <rect x="440" y="1255" width="600" height="55" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2.4" />
+  <text x="740.0" y="1287" text-anchor="middle" class="title">最终 MDT 方案: plan_a 主专科优先方案</text>
+  <text x="740.0" y="1315" text-anchor="middle" class="body">pantoprazole, omeprazole, metronidazole, polyethylene glycol, ciprofloxacin iv</text>
+</svg>

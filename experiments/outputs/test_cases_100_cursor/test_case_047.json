@@ -1,0 +1,1716 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "17858629",
+      "hadm_id": "25140250",
+      "gender": "M",
+      "age": 65.0
+    },
+    "primary_diagnosis": "Aneurysm of artery of lower extremity",
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Aneurysm of artery of lower extremity",
+        "Embolism and thrombosis of arteries of the lower extremities",
+        "Obesity, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Body mass index [BMI] 25.0-25.9, adult",
+        "Essential (primary) hypertension",
+        "Paroxysmal atrial fibrillation",
+        "Pure hypercholesterolemia, unspecified"
+      ]
+    },
+    "comorbidity_list": [
+      "Body mass index [BMI] 25.0-25.9, adult",
+      "Embolism and thrombosis of arteries of the lower extremities",
+      "Essential (primary) hypertension",
+      "Obesity, unspecified",
+      "Paroxysmal atrial fibrillation",
+      "Personal history of nicotine dependence",
+      "Pure hypercholesterolemia, unspecified"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 47,
+      "subject_id": "17858629",
+      "hadm_id": "25140250",
+      "specialty_cnt": 2,
+      "specialty_list": "内分泌/代谢 | 心血管",
+      "gender": "M",
+      "anchor_age": 65,
+      "anchor_year_group": "2011 - 2013",
+      "admittime": "11/9/2120 03:47:00",
+      "dischtime": "13/9/2120 11:00:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Aneurysm of artery of lower extremity",
+      "comorbidity_list": "Body mass index [BMI] 25.0-25.9, adult | Embolism and thrombosis of arteries of the lower extremities | Essential (primary) hypertension | Obesity, unspecified | Paroxysmal atrial fibrillation | Personal history of nicotine dependence | Pure hypercholesterolemia, unspecified",
+      "specialty_agents": "内分泌/代谢 | 心血管",
+      "drug_list": "acetaminophen | aspirin | atorvastatin | diltiazem extended-release | heparin | hydralazine | hydromorphone (dilaudid) | lactated ringers | magnesium oxide | omeprazole | oxycodone (immediate release) | potassium chloride | potassium chloride (powder) | sodium chloride 0.9%  flush | valsartan",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "lead_specialty": "内分泌/代谢",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Aneurysm of artery of lower extremity",
+        "Embolism and thrombosis of arteries of the lower extremities",
+        "Obesity, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Body mass index [BMI] 25.0-25.9, adult",
+        "Essential (primary) hypertension",
+        "Paroxysmal atrial fibrillation",
+        "Pure hypercholesterolemia, unspecified"
+      ]
+    },
+    "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "semaglutide",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；activates GLP1 receptor to increase insulin secretion and satiety"
+        },
+        {
+          "rank": 2,
+          "drug_name": "insulin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+        },
+        {
+          "rank": 3,
+          "drug_name": "metformin",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+        },
+        {
+          "rank": 4,
+          "drug_name": "glipizide",
+          "confidence": 0.77,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+        },
+        {
+          "rank": 5,
+          "drug_name": "levothyroxine",
+          "confidence": 0.76,
+          "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "vitamin d",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Aneurysm of artery of lower extremity, Aneurysm of artery of lower extremity, Embolism and thrombosis of arteries of the lower extremities 生成候选药物，当前首选药物包括 semaglutide, insulin, metformin。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "warfarin",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits vitamin K dependent clotting factor synthesis"
+        },
+        {
+          "rank": 2,
+          "drug_name": "apixaban",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；directly inhibits factor Xa to reduce thrombin generation"
+        },
+        {
+          "rank": 3,
+          "drug_name": "metoprolol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
+        },
+        {
+          "rank": 4,
+          "drug_name": "carvedilol",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
+        },
+        {
+          "rank": 5,
+          "drug_name": "lisinopril",
+          "confidence": 0.95,
+          "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
+        }
+      ],
+      "recommendation_reasons": {
+        "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+        "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+        "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+        "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+      },
+      "risk_alerts": [],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "acetaminophen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ibuprofen",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "ketorolac",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "morphine",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "hydromorphone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "oxycodone",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "tramadol",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        },
+        {
+          "drug_name": "lorazepam",
+          "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+        }
+      ],
+      "overall_confidence": 0.95,
+      "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+      "conversation_text": "心血管智能体认为当前病例应优先围绕 Aneurysm of artery of lower extremity, Body mass index [BMI] 25.0-25.9, adult, Essential (primary) hypertension 生成候选药物，当前首选药物包括 warfarin, apixaban, metoprolol。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "warfarin",
+          "apixaban",
+          "metoprolol",
+          "carvedilol",
+          "lisinopril"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    ],
+    "consensus_notes": [
+      "本次MDT协商共纳入 2 个专科：内分泌/代谢, 心血管。",
+      "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+      "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+      "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "warfarin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin",
+            "warfarin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "warfarin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin",
+            "warfarin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "semaglutide",
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "warfarin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [
+          "insulin",
+          "warfarin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "semaglutide",
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    {
+      "plan_id": "lead_specialty_adjusted",
+      "plan_name": "主专科优先修订方案",
+      "drugs": [
+        "semaglutide",
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "warfarin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [
+          "insulin",
+          "warfarin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "semaglutide",
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管"
+      ],
+      "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+    },
+    {
+      "plan_id": "conservative_consensus",
+      "plan_name": "保守低冲突方案",
+      "drugs": [
+        "semaglutide",
+        "insulin",
+        "metformin",
+        "glipizide"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [],
+        "risk_modifying_therapy": [
+          "insulin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "semaglutide",
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢"
+      ],
+      "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "mdt_consensus",
+      "plan_name": "MDT多专科共识方案",
+      "drugs": [
+        "semaglutide",
+        "insulin",
+        "metformin",
+        "glipizide",
+        "levothyroxine",
+        "warfarin"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "levothyroxine"
+        ],
+        "risk_modifying_therapy": [
+          "insulin",
+          "warfarin"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen",
+          "morphine",
+          "hydromorphone",
+          "oxycodone",
+          "tramadol",
+          "lorazepam",
+          "ondansetron",
+          "senna"
+        ],
+        "nursing_support_medication": [],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "sodium chloride 0.9% flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [],
+        "requires_review": [
+          "semaglutide",
+          "metformin",
+          "glipizide",
+          "vitamin d",
+          "ibuprofen",
+          "ketorolac"
+        ]
+      },
+      "supporting_specialties": [
+        "内分泌/代谢",
+        "心血管"
+      ],
+      "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "mdt_consensus",
+        "plan_name": "MDT多专科共识方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "warfarin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin",
+            "warfarin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "warfarin",
+            "potential_impacts": [
+              "涉及抗凝或抗血小板相关出血风险"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+        "priority_order": 1
+      },
+      {
+        "plan_id": "lead_specialty_adjusted",
+        "plan_name": "主专科优先修订方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine",
+          "warfarin"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "levothyroxine"
+          ],
+          "risk_modifying_therapy": [
+            "insulin",
+            "warfarin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "levothyroxine",
+            "potential_impacts": [
+              "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          },
+          {
+            "drug_name": "warfarin",
+            "potential_impacts": [
+              "涉及抗凝或抗血小板相关出血风险"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+        "priority_order": 2
+      },
+      {
+        "plan_id": "conservative_consensus",
+        "plan_name": "保守低冲突方案",
+        "drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [],
+          "risk_modifying_therapy": [
+            "insulin"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen",
+            "morphine",
+            "hydromorphone",
+            "oxycodone",
+            "tramadol",
+            "lorazepam",
+            "ondansetron",
+            "senna"
+          ],
+          "nursing_support_medication": [],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "sodium chloride 0.9% flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [],
+          "requires_review": [
+            "semaglutide",
+            "metformin",
+            "glipizide",
+            "vitamin d",
+            "ibuprofen",
+            "ketorolac"
+          ]
+        },
+        "supporting_specialties": [
+          "内分泌/代谢"
+        ],
+        "review_flags": [
+          "未发现明确安全冲突"
+        ],
+        "safety_decision": "可作为候选",
+        "patient_context_flags": [],
+        "medication_impact_review": [
+          {
+            "drug_name": "insulin",
+            "potential_impacts": [
+              "影响血糖控制，需结合血糖趋势调整"
+            ],
+            "severity": "low",
+            "suggested_action": "保留，常规监测"
+          }
+        ],
+        "plan_adaptation_notes": [],
+        "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+        "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+        "priority_order": 3
+      }
+    ],
+    "triggered_risks": [],
+    "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+    "llm_safety_review": {
+      "status": "需人工复核后可考虑",
+      "preferred_plan_id": "mdt_consensus",
+      "baseline_risk_assessment": {
+        "overall_baseline_risk": "中高风险",
+        "risk_basis": [
+          "首24小时肌酐、BUN、电解质、血糖、INR、总胆红素及生命体征均缺失或不可判读，不能据此认定入院早期检验异常，也不能将风险归因于候选药物。",
+          "既往/当前诊断包含下肢动脉瘤、下肢动脉栓塞和血栓、阵发性房颤、高血压、高胆固醇血症、肥胖/超重及吸烟史，提示基线心血管和血栓栓塞风险较高。",
+          "因INR、肝肾功能、血压和围手术期出血信息缺失，抗凝相关出血风险无法量化，但在外科同日入院和血管疾病背景下需谨慎审核。"
+        ],
+        "causality_statement": "上述为患者入院基线风险和资料缺失风险，不代表候选药物导致任何首24小时异常。"
+      },
+      "medication_fit_review": [
+        {
+          "plan_id": "mdt_consensus",
+          "fit": "有条件适配",
+          "review": [
+            "warfarin与阵发性房颤及下肢动脉血栓/栓塞背景有潜在适配性，但缺少INR、肝肾功能、出血史和围手术期计划信息，需人工确认抗凝适应证、时机和监测。",
+            "insulin需结合实际血糖趋势；当前首24小时血糖缺失，低血糖风险无法评估，建议保留为需血糖监测的候选。",
+            "metformin在肌酐/eGFR缺失时不宜直接确认安全性，需先补充肾功能。",
+            "glipizide在血糖和进食状态不明时有低血糖风险，建议降权或仅在明确糖尿病及血糖需要时使用。",
+            "semaglutide缺少明确糖尿病或肥胖治疗目标及胃肠耐受信息，建议低优先级或人工复核。",
+            "levothyroxine缺少甲状腺疾病或甲功证据，且房颤背景下不当使用可能增加心率/心律风险，建议人工复核。"
+          ]
+        },
+        {
+          "plan_id": "lead_specialty_adjusted",
+          "fit": "与mdt_consensus基本相同",
+          "review": [
+            "药物组成与mdt_consensus相同，安全适配结论相同；不能因规则排序而忽略缺失的INR、肾功能、血糖和甲功信息。"
+          ]
+        },
+        {
+          "plan_id": "conservative_consensus",
+          "fit": "部分降低抗凝和甲状腺相关风险，但覆盖不足",
+          "review": [
+            "去除warfarin和levothyroxine可减少出血及房颤加重相关顾虑，但患者存在阵发性房颤和动脉血栓/栓塞背景，完全不纳入抗凝策略可能不充分。",
+            "仍包含semaglutide、insulin、metformin、glipizide，在无血糖和肾功能资料、且病例未列明糖尿病诊断时仍需复核。"
+          ]
+        }
+      ],
+      "monitoring_recommendations": [
+        "补充或确认首24小时及用药前肌酐/eGFR、BUN、钾、钠、血糖、INR、肝功能/胆红素。",
+        "若使用warfarin，需确认围手术期出血风险、抗凝适应证、目标INR、基线INR，并监测出血表现及凝血指标。",
+        "若使用insulin或glipizide，需床旁血糖监测并结合进食状态调整，重点防低血糖。",
+        "若考虑metformin，需先确认肾功能适合，并关注围手术期或低灌注风险背景。",
+        "若考虑levothyroxine，需确认甲状腺功能和既往适应证，并监测心率、房颤症状或心律变化。",
+        "semaglutide应在明确适应证后再使用，并关注胃肠道不良反应和围手术期进食状态。"
+      ],
+      "human_review_required": true,
+      "safety_explanation": "本审核仅基于病例已有信息评估基线风险与候选方案适配性，不判断药物导致入院早期检验异常。由于首24小时关键检验和生命体征均缺失，不能确认肾功能、凝血、血糖、电解质或肝胆安全边界。患者已有房颤、下肢动脉栓塞/血栓和血管动脉瘤背景，抗凝有潜在合理性但需严密人工复核；内分泌候选药物在缺少糖尿病、血糖、肾功能和甲状腺证据时应以监测、降权或复核为主。综合看，mdt_consensus覆盖心血管基线风险更完整，但必须在补充关键资料并人工确认后执行。",
+      "enabled": true,
+      "provider": "cursor_cloud_agent"
+    }
+  },
+  "transcript": [
+    {
+      "round_id": 0,
+      "speaker": "diagnosis_agent",
+      "message_type": "routing",
+      "content": {
+        "active_specialties": [
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "lead_specialty": "内分泌/代谢",
+        "specialty_related_diagnoses": {
+          "内分泌/代谢": [
+            "Aneurysm of artery of lower extremity",
+            "Embolism and thrombosis of arteries of the lower extremities",
+            "Obesity, unspecified",
+            "Personal history of nicotine dependence"
+          ],
+          "心血管": [
+            "Body mass index [BMI] 25.0-25.9, adult",
+            "Essential (primary) hypertension",
+            "Paroxysmal atrial fibrillation",
+            "Pure hypercholesterolemia, unspecified"
+          ]
+        },
+        "rationale": "根据病例中各专科相关诊断数量进行唤起，当前主专科判定为 内分泌/代谢。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "内分泌/代谢",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "semaglutide",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 疾病直接治疗；activates GLP1 receptor to increase insulin secretion and satiety"
+          },
+          {
+            "rank": 2,
+            "drug_name": "insulin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces or supplements insulin to reduce blood glucose"
+          },
+          {
+            "rank": 3,
+            "drug_name": "metformin",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；reduces hepatic glucose production and improves insulin sensitivity"
+          },
+          {
+            "rank": 4,
+            "drug_name": "glipizide",
+            "confidence": 0.77,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；stimulates pancreatic insulin secretion"
+          },
+          {
+            "rank": 5,
+            "drug_name": "levothyroxine",
+            "confidence": 0.76,
+            "reason": "来自公开药物功能知识，未找到更精确诊断匹配时作为本专科候选；治疗角色为 疾病直接治疗；replaces thyroxine hormone"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "vitamin d",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "内分泌/代谢智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "内分泌/代谢智能体认为当前病例应优先围绕 Aneurysm of artery of lower extremity, Aneurysm of artery of lower extremity, Embolism and thrombosis of arteries of the lower extremities 生成候选药物，当前首选药物包括 semaglutide, insulin, metformin。"
+      }
+    },
+    {
+      "round_id": 1,
+      "speaker": "心血管_agent",
+      "message_type": "proposal",
+      "content": {
+        "specialty_name": "心血管",
+        "recommended_drugs_topk": [
+          {
+            "rank": 1,
+            "drug_name": "warfarin",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits vitamin K dependent clotting factor synthesis"
+          },
+          {
+            "rank": 2,
+            "drug_name": "apixaban",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；directly inhibits factor Xa to reduce thrombin generation"
+          },
+          {
+            "rank": 3,
+            "drug_name": "metoprolol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；selective beta 1 blockade reduces heart rate and myocardial oxygen demand"
+          },
+          {
+            "rank": 4,
+            "drug_name": "carvedilol",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；beta and alpha blockade reduces sympathetic drive and afterload"
+          },
+          {
+            "rank": 5,
+            "drug_name": "lisinopril",
+            "confidence": 0.95,
+            "reason": "药物功能知识中的适用疾病背景与当前诊断相匹配；治疗角色为 风险控制治疗；inhibits ACE to reduce angiotensin II and aldosterone"
+          }
+        ],
+        "recommendation_reasons": {
+          "diagnosis_assessment": "已根据专科诊断知识对当前专科相关诊断进行初步评估。",
+          "diagnosis_alignment": "候选建议参考疾病诊断知识中的疾病名称、别名和诊断依据进行匹配。",
+          "knowledge_support": "候选药物来自公开药物功能知识中疾病直接治疗或风险控制角色的条目。",
+          "comorbidity_constraint": "已结合共病、既往史和外部治疗风险规则，对支持治疗或通用药物做低优先级标记。"
+        },
+        "risk_alerts": [],
+        "avoid_or_low_priority_drugs": [
+          {
+            "drug_name": "acetaminophen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ibuprofen",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "ketorolac",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "morphine",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "hydromorphone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "oxycodone",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "tramadol",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          },
+          {
+            "drug_name": "lorazepam",
+            "reason": "该条目属于支持治疗或住院通用药物，不作为疾病直接治疗首选"
+          }
+        ],
+        "overall_confidence": 0.95,
+        "summary_reason": "心血管智能体已基于疾病诊断知识、公开药物功能知识和外部治疗风险规则生成建议。",
+        "conversation_text": "心血管智能体认为当前病例应优先围绕 Aneurysm of artery of lower extremity, Body mass index [BMI] 25.0-25.9, adult, Essential (primary) hypertension 生成候选药物，当前首选药物包括 warfarin, apixaban, metoprolol。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "内分泌/代谢_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "semaglutide",
+          "insulin",
+          "metformin",
+          "glipizide",
+          "levothyroxine"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "内分泌/代谢建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "内分泌/代谢与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。 该专科为初始主导专科，在共识方案中给予适度优先权。"
+      }
+    },
+    {
+      "round_id": 2,
+      "speaker": "心血管_agent",
+      "message_type": "cross_review",
+      "content": {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "warfarin",
+          "apixaban",
+          "metoprolol",
+          "carvedilol",
+          "lisinopril"
+        ],
+        "cautioned_drugs": [],
+        "conflict_notes": [
+          "心血管建议未发现明显跨专科冲突。"
+        ],
+        "priority_comment": "心血管与当前病例 4 条诊断相关，建议保留 5 个无明显冲突候选药物。"
+      }
+    },
+    {
+      "round_id": 3,
+      "speaker": "mdt_discussion",
+      "message_type": "consensus_plans",
+      "content": {
+        "consensus_notes": [
+          "本次MDT协商共纳入 2 个专科：内分泌/代谢, 心血管。",
+          "初始主导专科为 内分泌/代谢，但最终方案由各专科交叉审阅后形成。",
+          "交叉审阅阶段共标记 0 个需降权或复核的候选药物。",
+          "共识阶段生成 3 个候选方案，并交由安全审核智能体进一步筛查。"
+        ],
+        "plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "warfarin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin",
+                "warfarin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管"
+            ],
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "warfarin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin",
+                "warfarin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管"
+            ],
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。"
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。"
+          }
+        ]
+      }
+    },
+    {
+      "round_id": 4,
+      "speaker": "safety_agent",
+      "message_type": "screening",
+      "content": {
+        "final_plan": {
+          "plan_id": "mdt_consensus",
+          "plan_name": "MDT多专科共识方案",
+          "drugs": [
+            "semaglutide",
+            "insulin",
+            "metformin",
+            "glipizide",
+            "levothyroxine",
+            "warfarin"
+          ],
+          "medication_layers": {
+            "disease_directed_therapy": [
+              "levothyroxine"
+            ],
+            "risk_modifying_therapy": [
+              "insulin",
+              "warfarin"
+            ],
+            "symptom_supportive_medication": [
+              "acetaminophen",
+              "morphine",
+              "hydromorphone",
+              "oxycodone",
+              "tramadol",
+              "lorazepam",
+              "ondansetron",
+              "senna"
+            ],
+            "nursing_support_medication": [],
+            "prophylaxis_prevention_medication": [],
+            "fluid_diluent_flush_medication": [
+              "sodium chloride 0.9% flush"
+            ],
+            "procedure_related_medication": [],
+            "nutrition_electrolyte_medication": [],
+            "requires_review": [
+              "semaglutide",
+              "metformin",
+              "glipizide",
+              "vitamin d",
+              "ibuprofen",
+              "ketorolac"
+            ]
+          },
+          "supporting_specialties": [
+            "内分泌/代谢",
+            "心血管"
+          ],
+          "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。"
+        },
+        "ranked_plans": [
+          {
+            "plan_id": "mdt_consensus",
+            "plan_name": "MDT多专科共识方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "warfarin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin",
+                "warfarin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "warfarin",
+                "potential_impacts": [
+                  "涉及抗凝或抗血小板相关出血风险"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "由各专科智能体交叉审阅后保留无明显冲突且共识度较高的建议。",
+            "priority_order": 1
+          },
+          {
+            "plan_id": "lead_specialty_adjusted",
+            "plan_name": "主专科优先修订方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide",
+              "levothyroxine",
+              "warfarin"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [
+                "levothyroxine"
+              ],
+              "risk_modifying_therapy": [
+                "insulin",
+                "warfarin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢",
+              "心血管"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "levothyroxine",
+                "potential_impacts": [
+                  "甲状腺激素相关治疗，需结合甲状腺功能和心血管背景"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              },
+              {
+                "drug_name": "warfarin",
+                "potential_impacts": [
+                  "涉及抗凝或抗血小板相关出血风险"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "在MDT共识基础上适度突出初始主导专科意见。",
+            "priority_order": 2
+          },
+          {
+            "plan_id": "conservative_consensus",
+            "plan_name": "保守低冲突方案",
+            "drugs": [
+              "semaglutide",
+              "insulin",
+              "metformin",
+              "glipizide"
+            ],
+            "medication_layers": {
+              "disease_directed_therapy": [],
+              "risk_modifying_therapy": [
+                "insulin"
+              ],
+              "symptom_supportive_medication": [
+                "acetaminophen",
+                "morphine",
+                "hydromorphone",
+                "oxycodone",
+                "tramadol",
+                "lorazepam",
+                "ondansetron",
+                "senna"
+              ],
+              "nursing_support_medication": [],
+              "prophylaxis_prevention_medication": [],
+              "fluid_diluent_flush_medication": [
+                "sodium chloride 0.9% flush"
+              ],
+              "procedure_related_medication": [],
+              "nutrition_electrolyte_medication": [],
+              "requires_review": [
+                "semaglutide",
+                "metformin",
+                "glipizide",
+                "vitamin d",
+                "ibuprofen",
+                "ketorolac"
+              ]
+            },
+            "supporting_specialties": [
+              "内分泌/代谢"
+            ],
+            "review_flags": [
+              "未发现明确安全冲突"
+            ],
+            "safety_decision": "可作为候选",
+            "patient_context_flags": [],
+            "medication_impact_review": [
+              {
+                "drug_name": "insulin",
+                "potential_impacts": [
+                  "影响血糖控制，需结合血糖趋势调整"
+                ],
+                "severity": "low",
+                "suggested_action": "保留，常规监测"
+              }
+            ],
+            "plan_adaptation_notes": [],
+            "safety_interpretation": "安全审核综合入院早期基线风险、患者多维临床背景、候选药物潜在影响和低优先级药物提示；不表示候选药物导致检验异常。",
+            "rationale": "剔除交叉审阅中被提示低优先级的候选药物，保留少量共识度较高建议。",
+            "priority_order": 3
+          }
+        ],
+        "triggered_risks": [],
+        "safety_summary": "安全智能体已综合入院早期检验、既往史、生命体征、操作/微生物/ICU 信息及候选药物潜在影响，对候选方案做风险适配审核；风险提示不表示候选药物导致检验异常。",
+        "llm_safety_review": {
+          "status": "需人工复核后可考虑",
+          "preferred_plan_id": "mdt_consensus",
+          "baseline_risk_assessment": {
+            "overall_baseline_risk": "中高风险",
+            "risk_basis": [
+              "首24小时肌酐、BUN、电解质、血糖、INR、总胆红素及生命体征均缺失或不可判读，不能据此认定入院早期检验异常，也不能将风险归因于候选药物。",
+              "既往/当前诊断包含下肢动脉瘤、下肢动脉栓塞和血栓、阵发性房颤、高血压、高胆固醇血症、肥胖/超重及吸烟史，提示基线心血管和血栓栓塞风险较高。",
+              "因INR、肝肾功能、血压和围手术期出血信息缺失，抗凝相关出血风险无法量化，但在外科同日入院和血管疾病背景下需谨慎审核。"
+            ],
+            "causality_statement": "上述为患者入院基线风险和资料缺失风险，不代表候选药物导致任何首24小时异常。"
+          },
+          "medication_fit_review": [
+            {
+              "plan_id": "mdt_consensus",
+              "fit": "有条件适配",
+              "review": [
+                "warfarin与阵发性房颤及下肢动脉血栓/栓塞背景有潜在适配性，但缺少INR、肝肾功能、出血史和围手术期计划信息，需人工确认抗凝适应证、时机和监测。",
+                "insulin需结合实际血糖趋势；当前首24小时血糖缺失，低血糖风险无法评估，建议保留为需血糖监测的候选。",
+                "metformin在肌酐/eGFR缺失时不宜直接确认安全性，需先补充肾功能。",
+                "glipizide在血糖和进食状态不明时有低血糖风险，建议降权或仅在明确糖尿病及血糖需要时使用。",
+                "semaglutide缺少明确糖尿病或肥胖治疗目标及胃肠耐受信息，建议低优先级或人工复核。",
+                "levothyroxine缺少甲状腺疾病或甲功证据，且房颤背景下不当使用可能增加心率/心律风险，建议人工复核。"
+              ]
+            },
+            {
+              "plan_id": "lead_specialty_adjusted",
+              "fit": "与mdt_consensus基本相同",
+              "review": [
+                "药物组成与mdt_consensus相同，安全适配结论相同；不能因规则排序而忽略缺失的INR、肾功能、血糖和甲功信息。"
+              ]
+            },
+            {
+              "plan_id": "conservative_consensus",
+              "fit": "部分降低抗凝和甲状腺相关风险，但覆盖不足",
+              "review": [
+                "去除warfarin和levothyroxine可减少出血及房颤加重相关顾虑，但患者存在阵发性房颤和动脉血栓/栓塞背景，完全不纳入抗凝策略可能不充分。",
+                "仍包含semaglutide、insulin、metformin、glipizide，在无血糖和肾功能资料、且病例未列明糖尿病诊断时仍需复核。"
+              ]
+            }
+          ],
+          "monitoring_recommendations": [
+            "补充或确认首24小时及用药前肌酐/eGFR、BUN、钾、钠、血糖、INR、肝功能/胆红素。",
+            "若使用warfarin，需确认围手术期出血风险、抗凝适应证、目标INR、基线INR，并监测出血表现及凝血指标。",
+            "若使用insulin或glipizide，需床旁血糖监测并结合进食状态调整，重点防低血糖。",
+            "若考虑metformin，需先确认肾功能适合，并关注围手术期或低灌注风险背景。",
+            "若考虑levothyroxine，需确认甲状腺功能和既往适应证，并监测心率、房颤症状或心律变化。",
+            "semaglutide应在明确适应证后再使用，并关注胃肠道不良反应和围手术期进食状态。"
+          ],
+          "human_review_required": true,
+          "safety_explanation": "本审核仅基于病例已有信息评估基线风险与候选方案适配性，不判断药物导致入院早期检验异常。由于首24小时关键检验和生命体征均缺失，不能确认肾功能、凝血、血糖、电解质或肝胆安全边界。患者已有房颤、下肢动脉栓塞/血栓和血管动脉瘤背景，抗凝有潜在合理性但需严密人工复核；内分泌候选药物在缺少糖尿病、血糖、肾功能和甲状腺证据时应以监测、降权或复核为主。综合看，mdt_consensus覆盖心血管基线风险更完整，但必须在补充关键资料并人工确认后执行。",
+          "enabled": true,
+          "provider": "cursor_cloud_agent"
+        }
+      }
+    }
+  ],
+  "llm_enabled": false,
+  "cursor_enabled": true
+}

@@ -54,4 +54,5 @@ export interface SafetyResult {
   ranked_plans: Array<Record<string, unknown>>;
   triggered_risks: Array<Record<string, unknown>>;
   safety_summary: string;
+  safety_review_source?: string;
 }

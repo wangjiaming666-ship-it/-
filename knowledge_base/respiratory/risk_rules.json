@@ -1,50 +1,120 @@
 [
   {
-    "rule_id": "respiratory_potassium_risk",
+    "rule_id": "respiratory_beta_agonist_potassium_risk",
+    "risk_target": "bronchodilator electrolyte risk",
+    "related_treatments": "beta agonists|diuretics|electrolyte replacement",
     "lab_name": "potassium_24h",
-    "lab_purpose": "评估电解质异常对呼吸肌功能及支持治疗安全性的影响",
+    "lab_purpose": "评估支气管扩张和利尿治疗中的血钾风险",
     "threshold_type": "range",
     "moderate_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.5,
       "high": 5.0,
-      "unit": "mmol/L",
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
+      "unit": "mmol/L",
       "low": 3.0,
       "high": 5.5,
-      "unit": "mmol/L",
       "outside_range_is_high_risk": true
     },
-    "risk_message": "钾异常可能影响呼吸肌收缩、心肺联合稳定性及支持治疗安全性。",
+    "risk_message": "钾异常可能影响呼吸肌收缩心肺稳定性和β受体激动剂安全性",
     "action": {
-      "moderate_risk": "增加监测提示，并降低可能加重电解质紊乱方案的优先级。",
-      "high_risk": "将病例标记为高风险，优先建议纠正电解质后再推荐强化治疗方案。"
+      "moderate_risk": "降低可能加重钾异常治疗的优先级并提示复核",
+      "high_risk": "标记为高呼吸电解质风险并建议先纠正电解质"
     },
-    "threshold_basis": "参考呼吸专科样本分布与临床常用电解质安全范围。"
+    "contraindication_or_caution": "使用大剂量β受体激动剂或利尿剂时需复核血钾",
+    "monitoring_advice": "监测血钾心率心电图和呼吸状态",
+    "reference_source": "KDIGO potassium management; DailyMed beta agonist labels",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考血钾范围和支气管扩张剂说明书风险"
   },
   {
-    "rule_id": "respiratory_glucose_risk",
+    "rule_id": "respiratory_steroid_glucose_risk",
+    "risk_target": "steroid metabolic risk",
+    "related_treatments": "systemic corticosteroids|infection treatment|dextrose fluids",
     "lab_name": "glucose_24h",
-    "lab_purpose": "评估感染、激素治疗及代谢失衡风险",
+    "lab_purpose": "评估感染激素治疗和代谢失衡风险",
     "threshold_type": "bidirectional",
     "moderate_risk_threshold": {
-      "low": 70,
-      "high": 180,
       "unit": "mg/dL",
+      "low": 70.0,
+      "high": 180.0,
       "outside_range_is_moderate_risk": true
     },
     "high_risk_threshold": {
-      "low": 54,
-      "high": 250,
       "unit": "mg/dL",
+      "low": 54.0,
+      "high": 250.0,
       "outside_range_is_high_risk": true
     },
-    "risk_message": "血糖过高或过低均会增加呼吸系统感染控制和全身代谢稳定风险，尤其在激素治疗场景下更明显。",
+    "risk_message": "血糖过高或过低均会增加感染控制和全身代谢稳定风险",
     "action": {
-      "moderate_risk": "对增加糖代谢负担的方案降权，并提示复核血糖管理。",
-      "high_risk": "标记为高代谢风险病例，暂停优先推荐高糖代谢负担方案。"
+      "moderate_risk": "对增加糖代谢负担的方案降权并提示复核血糖管理",
+      "high_risk": "标记为高代谢风险并暂停优先推荐高糖代谢负担方案"
     },
-    "threshold_basis": "参考住院常用血糖管理阈值，并结合呼吸专科样本中位数与上四分位数。"
+    "contraindication_or_caution": "系统激素或含糖补液治疗前需评估血糖风险",
+    "monitoring_advice": "监测床旁血糖感染指标和低血糖症状",
+    "reference_source": "ADA Standards of Care; DailyMed corticosteroid labels",
+    "reference_url": "https://diabetesjournals.org/care",
+    "threshold_basis": "参考 ADA 住院血糖管理目标和激素治疗风险"
+  },
+  {
+    "rule_id": "respiratory_sedation_hypercapnia_risk",
+    "risk_target": "respiratory depression risk",
+    "related_treatments": "opioids|benzodiazepines|sedatives",
+    "lab_name": "sodium_24h",
+    "lab_purpose": "评估水钠异常或意识改变背景下镇静药对呼吸抑制的影响",
+    "threshold_type": "range",
+    "moderate_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 135.0,
+      "high": 145.0,
+      "outside_range_is_moderate_risk": true
+    },
+    "high_risk_threshold": {
+      "unit": "mmol/L",
+      "low": 130.0,
+      "high": 150.0,
+      "outside_range_is_high_risk": true
+    },
+    "risk_message": "严重钠异常可伴随意识改变并放大镇静药导致的通气不足风险",
+    "action": {
+      "moderate_risk": "对镇静止痛药物提示降权和人工复核",
+      "high_risk": "标记为高意识和呼吸抑制风险并建议保守使用镇静药物"
+    },
+    "contraindication_or_caution": "避免多种中枢抑制药叠加并评估二氧化碳潴留",
+    "monitoring_advice": "监测意识呼吸频率氧饱和和血气",
+    "reference_source": "DailyMed opioid benzodiazepine labels; Merck Manual respiratory failure",
+    "reference_url": "https://www.merckmanuals.com",
+    "threshold_basis": "参考中枢抑制药说明书和呼吸衰竭风险解释"
+  },
+  {
+    "rule_id": "respiratory_renal_antibiotic_risk",
+    "risk_target": "renal dosing during respiratory infection",
+    "related_treatments": "vancomycin|piperacillin tazobactam|levofloxacin|aminoglycosides",
+    "lab_name": "creatinine_24h",
+    "lab_purpose": "评估呼吸感染治疗中抗感染药物肾功能剂量风险",
+    "threshold_type": "upper_bound",
+    "moderate_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 1.5,
+      "operator": ">="
+    },
+    "high_risk_threshold": {
+      "unit": "mg/dL",
+      "value": 2.5,
+      "operator": ">="
+    },
+    "risk_message": "肌酐升高时多种抗感染药物需要剂量调整或监测肾毒性",
+    "action": {
+      "moderate_risk": "提示复核抗感染药物剂量和肾毒性组合",
+      "high_risk": "标记为高肾功能风险并建议避免不必要肾毒性联用"
+    },
+    "contraindication_or_caution": "慎用肾毒性抗菌药并根据肾功能调整剂量",
+    "monitoring_advice": "监测肌酐尿量药物浓度和感染疗效",
+    "reference_source": "DailyMed antibiotic renal warnings; IDSA ATS pneumonia guidance",
+    "reference_url": "https://dailymed.nlm.nih.gov/dailymed",
+    "threshold_basis": "参考抗菌药说明书肾功能警示和肺炎治疗资料"
   }
 ]

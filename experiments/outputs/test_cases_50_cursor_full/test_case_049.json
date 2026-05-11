@@ -1,0 +1,779 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "10217048",
+      "hadm_id": "21992927",
+      "gender": "M",
+      "age": 51.0
+    },
+    "primary_diagnosis": "Viral infection, unspecified",
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Viral infection, unspecified",
+        "Myasthenia gravis without (acute) exacerbation"
+      ],
+      "神经": [
+        "Essential (primary) hypertension"
+      ],
+      "心血管": [
+        "Hyperlipidemia, unspecified"
+      ]
+    },
+    "comorbidity_list": [
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Myasthenia gravis without (acute) exacerbation"
+    ],
+    "key_labs": {
+      "creatinine_24h": 1.1,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.2,
+      "sodium_24h": 135.0,
+      "glucose_24h": 136.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 49,
+      "subject_id": "10217048",
+      "hadm_id": "21992927",
+      "specialty_cnt": 3,
+      "specialty_list": "内分泌/代谢 | 神经 | 心血管",
+      "gender": "M",
+      "anchor_age": 51,
+      "anchor_year_group": "2017 - 2019",
+      "admittime": "5/12/2135 01:31:00",
+      "dischtime": "6/12/2135 18:39:00",
+      "admission_type": "EU OBSERVATION",
+      "race": "WHITE",
+      "insurance": "Private",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Viral infection, unspecified",
+      "comorbidity_list": "Essential (primary) hypertension | Hyperlipidemia, unspecified | Myasthenia gravis without (acute) exacerbation",
+      "specialty_agents": "内分泌/代谢 | 神经 | 心血管",
+      "drug_list": "0.9% sodium chloride | acetaminophen | acyclovir | ampicillin sodium | cefepime | ceftriaxone | heparin | hydrochlorothiazide | iso-osmotic dextrose | losartan potassium | mycophenolate mofetil | potassium chloride | prednisone | pyridostigmine bromide | ranitidine | sodium chloride 0.9%  flush | sulfameth/trimethoprim ss | timolol maleate 0.25% | vancomycin | vial",
+      "creatinine_24h": 1.1,
+      "bun_24h": 12.0,
+      "potassium_24h": 3.2,
+      "sodium_24h": 135.0,
+      "glucose_24h": 136.0,
+      "inr_24h": 1.1,
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "内分泌/代谢",
+      "神经",
+      "心血管"
+    ],
+    "lead_specialty": "神经",
+    "specialty_related_diagnoses": {
+      "内分泌/代谢": [
+        "Viral infection, unspecified",
+        "低钾血症风险",
+        "应激性血糖波动风险"
+      ],
+      "神经": [
+        "Myasthenia gravis without acute exacerbation",
+        "Viral infection, unspecified"
+      ],
+      "心血管": [
+        "Essential primary hypertension",
+        "Hyperlipidemia unspecified",
+        "低钾相关心律失常风险"
+      ]
+    },
+    "rationale": "病例核心风险为病毒感染背景下合并重症肌无力、低钾和心血管危险因素；重症肌无力会显著影响抗感染、退热镇痛、心血管和电解质药物选择，因此神经专科作为牵头专科，心血管和内分泌/代谢共同参与。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "神经",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "pyridostigmine",
+          "confidence": 0.68,
+          "reason": "患者有重症肌无力病史且无急性加重，若既往正在使用或存在肌无力症状，应维持或复核胆碱酯酶抑制剂基础治疗，避免感染诱发加重。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "acetaminophen",
+          "confidence": 0.74,
+          "reason": "病毒感染的退热镇痛首选支持药物之一，对重症肌无力相对安全，较少影响神经肌接头传递。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "normal saline flush",
+          "confidence": 0.62,
+          "reason": "住院观察和可能静脉给药时可用于管路维护，避免使用可能加重水钠紊乱或含镁制剂的冲管方案。"
+        }
+      ],
+      "recommendation_reasons": {
+        "myasthenia_gravis": "病毒感染可能诱发重症肌无力症状波动，应优先避免可加重神经肌接头传递障碍的药物。",
+        "infection_support": "输入未提示细菌感染、培养阳性或脓毒症证据，因此不应经验性优先推荐抗菌药。",
+        "electrolyte_neurologic_risk": "钾3.2 mmol/L为低钾，可增加肌无力、疲乏和心律风险，应纠正。"
+      },
+      "risk_alerts": [
+        "避免氟喹诺酮类、大环内酯类、氨基糖苷类、镁剂和不必要镇静药，因为可加重重症肌无力或呼吸肌风险。",
+        "缺少呼吸频率、SpO2和肌力评估，若出现吞咽困难、呼吸困难或进行性无力，应立即升级评估。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "fluoroquinolones",
+          "reason": "可诱发或加重重症肌无力，病毒感染且无细菌证据时不推荐。"
+        },
+        {
+          "drug_name": "macrolides",
+          "reason": "可加重重症肌无力，除非有明确适应证并经专科复核。"
+        },
+        {
+          "drug_name": "aminoglycosides",
+          "reason": "影响神经肌接头传递，重症肌无力患者应避免。"
+        },
+        {
+          "drug_name": "magnesium sulfate",
+          "reason": "镁可抑制神经肌接头传递，重症肌无力患者慎用或避免。"
+        },
+        {
+          "drug_name": "benzodiazepines",
+          "reason": "可增加镇静和呼吸抑制风险，缺少呼吸监测资料时低优先级。"
+        }
+      ],
+      "overall_confidence": 0.69,
+      "summary_reason": "神经专科建议以重症肌无力安全边界为核心，采用病毒感染支持治疗、维持或复核既往MG基础药物，并纠正低钾。",
+      "conversation_text": "神经智能体认为当前没有重症肌无力急性危象证据，但病毒感染和低钾均可能诱发无力加重，推荐支持治疗、避免MG禁忌药，并将pyridostigmine列为需复核或延续的基础治疗。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "potassium chloride",
+          "confidence": 0.86,
+          "reason": "钾3.2 mmol/L低于安全范围，存在心律失常和肌无力加重风险，应优先补钾并复查。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "amlodipine",
+          "confidence": 0.57,
+          "reason": "有原发性高血压诊断，且相较β受体阻滞剂对重症肌无力影响较小；但当前无血压数据，应作为需根据实际血压启用或延续的药物。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "atorvastatin",
+          "confidence": 0.64,
+          "reason": "有高脂血症诊断，可作为心血管风险修饰治疗；需关注肌痛或肌无力主诉，避免将药物不良反应误认为MG波动。"
+        }
+      ],
+      "recommendation_reasons": {
+        "hypokalemia": "低钾是当前最明确的可干预风险，心血管和神经两方面均支持补钾。",
+        "hypertension": "存在高血压诊断但缺少血压记录，降压药应根据实际血压和既往用药复核。",
+        "hyperlipidemia": "高脂血症支持中等强度他汀治疗，但需监测肌肉症状和肝功能。"
+      },
+      "risk_alerts": [
+        "低钾状态下避免不必要使用排钾利尿剂。",
+        "β受体阻滞剂可能加重重症肌无力并掩盖低血糖症状，非强适应证时不作为首选。",
+        "ACEI/ARB启用前需复核血压、肾功能和钾趋势。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "furosemide",
+          "reason": "无容量超负荷证据且可加重低钾。"
+        },
+        {
+          "drug_name": "hydrochlorothiazide",
+          "reason": "可加重低钾，当前钾3.2 mmol/L时低优先级。"
+        },
+        {
+          "drug_name": "beta blockers",
+          "reason": "可能加重重症肌无力，除非存在明确心血管强适应证。"
+        }
+      ],
+      "overall_confidence": 0.71,
+      "summary_reason": "心血管专科优先处理低钾相关心律风险，并对高血压和高脂血症提供需结合生命体征复核的风险修饰治疗。",
+      "conversation_text": "心血管智能体认为补钾是当前最确定的治疗；降压药因缺少血压数据不应盲目强化，若需要可优先考虑对MG影响较小的amlodipine；高脂血症可考虑atorvastatin并监测肌肉症状。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "potassium chloride",
+          "confidence": 0.84,
+          "reason": "钾3.2 mmol/L为低钾，需补充并监测，尤其避免因胰岛素或碱化等治疗进一步降低血钾。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "oral rehydration solution or isotonic saline",
+          "confidence": 0.55,
+          "reason": "病毒感染观察期可用于轻度脱水或进食不足时的水电解质支持；钠135 mmol/L处于下限，应避免低张液。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "point-of-care glucose monitoring order",
+          "confidence": 0.52,
+          "reason": "血糖136 mg/dL未达高风险，但感染应激可导致波动，若使用含糖液或激素需监测。"
+        }
+      ],
+      "recommendation_reasons": {
+        "potassium": "低钾符合代谢风险规则的中度风险，应作为营养电解质支持层级重点。",
+        "sodium": "钠135 mmol/L处于正常下限，不建议低张补液或快速纠正。",
+        "glucose": "血糖136 mg/dL未超住院常用目标上限，暂不需要降糖药，仅建议监测。"
+      },
+      "risk_alerts": [
+        "低钾未纠正前避免强化胰岛素策略。",
+        "不建议常规使用系统性糖皮质激素治疗未明确并发症的病毒感染，因为可能升高血糖并影响感染过程。",
+        "避免低张液导致钠进一步下降。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "insulin",
+          "reason": "当前血糖136 mg/dL，无明确降糖适应证，且低钾状态下可加重钾内移。"
+        },
+        {
+          "drug_name": "systemic corticosteroids",
+          "reason": "病毒感染无明确适应证时不优先，可能引起血糖波动并影响感染。"
+        },
+        {
+          "drug_name": "dextrose-only fluids",
+          "reason": "无低血糖证据，可能造成不必要血糖波动。"
+        }
+      ],
+      "overall_confidence": 0.66,
+      "summary_reason": "内分泌/代谢专科重点为低钾纠正、避免低张液和不必要降糖/激素治疗。",
+      "conversation_text": "内分泌/代谢智能体认为当前血糖和肾功能尚可，最大代谢问题是低钾；补钾和等渗补液优先于降糖或激素治疗。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "神经",
+        "accepted_drugs": [
+          "acetaminophen",
+          "potassium chloride",
+          "normal saline flush",
+          "pyridostigmine if home medication or symptomatic MG"
+        ],
+        "cautioned_drugs": [
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "conflict_notes": [
+          "atorvastatin可能造成肌痛或无力感，需与MG症状区分。",
+          "amlodipine总体可接受，但需基于实际血压，不应因诊断 alone 强化降压。"
+        ],
+        "priority_comment": "神经安全优先级最高，避免MG加重药物是所有方案共同约束。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "potassium chloride",
+          "atorvastatin",
+          "amlodipine if hypertensive",
+          "acetaminophen"
+        ],
+        "cautioned_drugs": [
+          "pyridostigmine"
+        ],
+        "conflict_notes": [
+          "pyridostigmine可能影响心率和分泌物，需结合症状、既往用药和床旁监测。",
+          "低钾状态下应避免排钾利尿剂。"
+        ],
+        "priority_comment": "补钾是心血管首要安全干预；降压和调脂作为风险修饰层。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "potassium chloride",
+          "isotonic saline if intake poor",
+          "point-of-care glucose monitoring",
+          "acetaminophen"
+        ],
+        "cautioned_drugs": [
+          "insulin",
+          "systemic corticosteroids",
+          "dextrose fluids"
+        ],
+        "conflict_notes": [
+          "血糖136 mg/dL不支持主动降糖药。",
+          "若需补液，应优先等渗液并复查钠钾。"
+        ],
+        "priority_comment": "避免因不必要胰岛素、激素或低张液造成代谢风险。"
+      }
+    ],
+    "consensus_notes": [
+      "当前没有真实住院处方输入，所有候选方案仅基于诊断、共病、检验和知识库推理生成。",
+      "首要共识为病毒感染支持治疗、重症肌无力用药安全边界、低钾纠正和心血管风险修饰。",
+      "不推荐在无细菌感染证据时常规抗菌治疗，尤其避免可加重重症肌无力的抗菌药。",
+      "最终方案需由临床医生结合生命体征、肌力、吞咽/呼吸情况、既往用药和药物过敏史复核。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "MG安全优先的病毒感染支持与低钾纠正方案",
+        "drugs": [
+          "acetaminophen",
+          "potassium chloride",
+          "isotonic saline if clinically dehydrated or poor intake",
+          "normal saline flush",
+          "pyridostigmine if confirmed home MG therapy or symptomatic indication",
+          "atorvastatin",
+          "amlodipine if blood pressure remains elevated"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "acetaminophen for fever or pain related to viral syndrome",
+            "pyridostigmine if confirmed home MG therapy or symptomatic MG"
+          ],
+          "risk_modifying_therapy": [
+            "atorvastatin for hyperlipidemia after muscle symptom review",
+            "amlodipine for hypertension only if current BP supports treatment"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "normal saline flush"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "isotonic saline if needed",
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride"
+          ],
+          "requires_review": [
+            "pyridostigmine dose and prior use",
+            "atorvastatin if baseline muscle symptoms present",
+            "amlodipine pending blood pressure data"
+          ]
+        },
+        "supporting_specialties": [
+          "神经",
+          "心血管",
+          "内分泌/代谢"
+        ],
+        "rationale": "覆盖病毒感染支持、MG基础治疗复核、低钾纠正、高脂血症和高血压风险修饰，同时避免MG高风险药物。",
+        "aggregate_score": 0.82
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "保守观察与电解质优先方案",
+        "drugs": [
+          "potassium chloride",
+          "acetaminophen",
+          "oral rehydration solution or isotonic saline",
+          "normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "acetaminophen for symptomatic viral infection"
+          ],
+          "risk_modifying_therapy": [],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "normal saline flush"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "oral rehydration solution or isotonic saline",
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride"
+          ],
+          "requires_review": [
+            "whether chronic MG medication should be continued",
+            "whether chronic antihypertensive and statin therapy should be resumed"
+          ]
+        },
+        "supporting_specialties": [
+          "神经",
+          "内分泌/代谢",
+          "心血管"
+        ],
+        "rationale": "适合生命体征和症状信息不足时的低干预风险方案，优先纠正最明确异常并避免盲目新增慢病药物。",
+        "aggregate_score": 0.74
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "慢病风险同步管理方案",
+        "drugs": [
+          "potassium chloride",
+          "acetaminophen",
+          "atorvastatin",
+          "amlodipine",
+          "pyridostigmine if confirmed indicated",
+          "normal saline flush"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "acetaminophen",
+            "pyridostigmine if confirmed indicated"
+          ],
+          "risk_modifying_therapy": [
+            "atorvastatin",
+            "amlodipine"
+          ],
+          "symptom_supportive_medication": [
+            "acetaminophen"
+          ],
+          "nursing_support_medication": [
+            "normal saline flush"
+          ],
+          "prophylaxis_prevention_medication": [],
+          "fluid_diluent_flush_medication": [
+            "normal saline flush"
+          ],
+          "procedure_related_medication": [],
+          "nutrition_electrolyte_medication": [
+            "potassium chloride"
+          ],
+          "requires_review": [
+            "blood pressure before amlodipine",
+            "muscle symptoms before atorvastatin",
+            "MG severity before pyridostigmine"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "神经",
+          "内分泌/代谢"
+        ],
+        "rationale": "更积极覆盖高血压和高脂血症，但因缺少血压、既往用药和肌肉症状资料，安全审核中低于plan_A。",
+        "aggregate_score": 0.69
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "MG安全优先的病毒感染支持与低钾纠正方案",
+      "drugs": [
+        "acetaminophen",
+        "potassium chloride",
+        "isotonic saline if clinically dehydrated or poor intake",
+        "normal saline flush",
+        "pyridostigmine if confirmed home MG therapy or symptomatic indication",
+        "atorvastatin",
+        "amlodipine if blood pressure remains elevated"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "acetaminophen for fever or pain related to viral syndrome",
+          "pyridostigmine if confirmed home MG therapy or symptomatic MG"
+        ],
+        "risk_modifying_therapy": [
+          "atorvastatin for hyperlipidemia after muscle symptom review",
+          "amlodipine for hypertension only if current BP supports treatment"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "normal saline flush"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "isotonic saline if needed",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride"
+        ],
+        "requires_review": [
+          "pyridostigmine dose and prior use",
+          "atorvastatin if baseline muscle symptoms present",
+          "amlodipine pending blood pressure data"
+        ]
+      },
+      "supporting_specialties": [
+        "神经",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "覆盖病毒感染支持、MG基础治疗复核、低钾纠正、高脂血症和高血压风险修饰，同时避免MG高风险药物。",
+      "aggregate_score": 0.82
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "保守观察与电解质优先方案",
+      "drugs": [
+        "potassium chloride",
+        "acetaminophen",
+        "oral rehydration solution or isotonic saline",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "acetaminophen for symptomatic viral infection"
+        ],
+        "risk_modifying_therapy": [],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "normal saline flush"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "oral rehydration solution or isotonic saline",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride"
+        ],
+        "requires_review": [
+          "whether chronic MG medication should be continued",
+          "whether chronic antihypertensive and statin therapy should be resumed"
+        ]
+      },
+      "supporting_specialties": [
+        "神经",
+        "内分泌/代谢",
+        "心血管"
+      ],
+      "rationale": "适合生命体征和症状信息不足时的低干预风险方案，优先纠正最明确异常并避免盲目新增慢病药物。",
+      "aggregate_score": 0.74
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "慢病风险同步管理方案",
+      "drugs": [
+        "potassium chloride",
+        "acetaminophen",
+        "atorvastatin",
+        "amlodipine",
+        "pyridostigmine if confirmed indicated",
+        "normal saline flush"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "acetaminophen",
+          "pyridostigmine if confirmed indicated"
+        ],
+        "risk_modifying_therapy": [
+          "atorvastatin",
+          "amlodipine"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "normal saline flush"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride"
+        ],
+        "requires_review": [
+          "blood pressure before amlodipine",
+          "muscle symptoms before atorvastatin",
+          "MG severity before pyridostigmine"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "神经",
+        "内分泌/代谢"
+      ],
+      "rationale": "更积极覆盖高血压和高脂血症，但因缺少血压、既往用药和肌肉症状资料，安全审核中低于plan_A。",
+      "aggregate_score": 0.69
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "MG安全优先的病毒感染支持与低钾纠正方案",
+      "drugs": [
+        "acetaminophen",
+        "potassium chloride",
+        "isotonic saline if clinically dehydrated or poor intake",
+        "normal saline flush",
+        "pyridostigmine if confirmed home MG therapy or symptomatic indication",
+        "atorvastatin after muscle symptom review",
+        "amlodipine only if current blood pressure supports treatment"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "acetaminophen for fever or pain related to viral infection",
+          "pyridostigmine only if confirmed home therapy or symptomatic MG indication"
+        ],
+        "risk_modifying_therapy": [
+          "atorvastatin after review of baseline weakness or myalgia",
+          "amlodipine only with documented persistent hypertension"
+        ],
+        "symptom_supportive_medication": [
+          "acetaminophen"
+        ],
+        "nursing_support_medication": [
+          "normal saline flush"
+        ],
+        "prophylaxis_prevention_medication": [],
+        "fluid_diluent_flush_medication": [
+          "isotonic saline if oral intake is poor or dehydration is present",
+          "normal saline flush"
+        ],
+        "procedure_related_medication": [],
+        "nutrition_electrolyte_medication": [
+          "potassium chloride with repeat potassium and ECG monitoring"
+        ],
+        "requires_review": [
+          "verify allergy history",
+          "verify home MG regimen and last dose",
+          "assess respiratory status, swallowing and bedside muscle strength",
+          "repeat potassium after replacement",
+          "obtain current blood pressure before antihypertensive dosing",
+          "review statin tolerability and liver function when available"
+        ]
+      },
+      "supporting_specialties": [
+        "神经",
+        "心血管",
+        "内分泌/代谢"
+      ],
+      "rationale": "该方案在覆盖病毒感染支持治疗和慢病风险控制的同时，把重症肌无力禁忌药物和低钾安全风险作为硬约束，最符合当前资料不完整场景。",
+      "aggregate_score": 0.82
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "score": 0.82,
+        "reason": "覆盖面较完整且安全边界清晰，避免MG高风险抗菌药、镁剂、镇静药和排钾药。"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "score": 0.74,
+        "reason": "最保守安全，但对高血压、高脂血症和MG基础治疗覆盖不足。"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "score": 0.69,
+        "reason": "慢病管理更积极，但因缺少血压、既往用药和肌肉症状资料，需复核项更多。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "rule_id": "endocrinology_potassium_dka_adrenal_risk",
+        "severity": "moderate",
+        "evidence": "potassium_24h 3.2 mmol/L below 3.5 mmol/L",
+        "action": "补钾并避免强化胰岛素或可加重低钾的治疗。"
+      },
+      {
+        "rule_id": "cardiology_potassium_arrhythmia_risk",
+        "severity": "moderate",
+        "evidence": "potassium_24h 3.2 mmol/L below 3.5 mmol/L",
+        "action": "补钾、复查血钾并考虑心电监测。"
+      },
+      {
+        "rule_id": "neurology_sodium_seizure_cerebral_edema_risk",
+        "severity": "none_to_borderline",
+        "evidence": "sodium_24h 135 mmol/L at lower bound",
+        "action": "避免低张液和快速钠纠正。"
+      },
+      {
+        "rule_id": "neurology_intracranial_bleeding_risk",
+        "severity": "not_triggered",
+        "evidence": "INR 1.1 below risk threshold",
+        "action": "无凝血阈值触发，但无抗栓适应证时不新增抗栓药。"
+      },
+      {
+        "rule_id": "cardiology_renal_hemodynamic_risk",
+        "severity": "not_triggered",
+        "evidence": "creatinine_24h 1.1 mg/dL below risk threshold",
+        "action": "肾功能未触发风险，但ACEI/ARB或补钾仍需监测肌酐和钾。"
+      },
+      {
+        "rule_id": "endocrinology_glucose_treatment_risk",
+        "severity": "not_triggered",
+        "evidence": "glucose_24h 136 mg/dL within 70-180 mg/dL",
+        "action": "无需主动降糖药，感染期监测即可。"
+      }
+    ],
+    "safety_summary": "最终推荐plan_A。必须避免将该建议等同于真实处方；输入未提供当前住院drug_list。由于存在重症肌无力，应避免氟喹诺酮、大环内酯、氨基糖苷、镁剂、不必要β受体阻滞剂和镇静药。低钾为主要已触发风险，应优先补钾并复查。降压、调脂和pyridostigmine均需结合既往用药、生命体征和症状复核后执行。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "agent": "诊断路由",
+      "text": "识别到病毒感染、重症肌无力、高血压、高脂血症和低钾风险，选择神经为牵头专科，联合心血管和内分泌/代谢。"
+    },
+    {
+      "agent": "神经专科",
+      "text": "强调重症肌无力安全边界，支持acetaminophen、必要时延续或复核pyridostigmine，避免可加重MG的抗菌药、镁剂和镇静药。"
+    },
+    {
+      "agent": "心血管专科",
+      "text": "低钾触发心律风险，推荐potassium chloride优先；高血压和高脂血症治疗需结合血压、肌肉症状和既往用药复核。"
+    },
+    {
+      "agent": "内分泌/代谢专科",
+      "text": "血糖136 mg/dL未触发降糖治疗，钠135 mmol/L处于下限，建议等渗补液策略和补钾，避免低张液、非必要胰岛素和激素。"
+    },
+    {
+      "agent": "MDT协商",
+      "text": "形成三个候选方案，最终认为plan_A在覆盖完整性和安全性之间最平衡。"
+    },
+    {
+      "agent": "安全审核",
+      "text": "确认低钾为主要中度风险；未触发INR、肌酐和血糖高危阈值；最终方案需临床医生复核生命体征、MG状态、过敏史和既往用药。"
+    },
+    {
+      "agent": "系统",
+      "text": "王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}

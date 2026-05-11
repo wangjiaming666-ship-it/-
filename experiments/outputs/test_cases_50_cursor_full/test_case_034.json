@@ -1,0 +1,968 @@
+{
+  "case_record": {
+    "patient_info": {
+      "subject_id": "12683097",
+      "hadm_id": "25966295",
+      "gender": "F",
+      "age": 76.0
+    },
+    "primary_diagnosis": "Malignant neoplasm of upper lobe, right bronchus or lung",
+    "active_specialties": [
+      "内分泌/代谢",
+      "心血管"
+    ],
+    "specialty_diagnosis_map": {
+      "内分泌/代谢": [
+        "Malignant neoplasm of upper lobe, right bronchus or lung",
+        "Essential (primary) hypertension",
+        "Major depressive disorder, single episode, unspecified"
+      ],
+      "心血管": [
+        "Anxiety disorder, unspecified",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ]
+    },
+    "comorbidity_list": [
+      "Anxiety disorder, unspecified",
+      "Essential (primary) hypertension",
+      "Hyperlipidemia, unspecified",
+      "Major depressive disorder, single episode, unspecified",
+      "Personal history of nicotine dependence"
+    ],
+    "key_labs": {
+      "creatinine_24h": NaN,
+      "bun_24h": NaN,
+      "potassium_24h": NaN,
+      "sodium_24h": NaN,
+      "glucose_24h": NaN,
+      "inr_24h": NaN,
+      "bilirubin_total_24h": NaN
+    },
+    "past_history": {},
+    "key_vitals": {
+      "heart_rate_min_24h": null,
+      "heart_rate_mean_24h": null,
+      "heart_rate_max_24h": null,
+      "respiratory_rate_min_24h": null,
+      "respiratory_rate_mean_24h": null,
+      "respiratory_rate_max_24h": null,
+      "temperature_f_min_24h": null,
+      "temperature_f_mean_24h": null,
+      "temperature_f_max_24h": null,
+      "spo2_min_24h": null,
+      "spo2_mean_24h": null,
+      "spo2_max_24h": null,
+      "sbp_min_24h": null,
+      "sbp_mean_24h": null,
+      "sbp_max_24h": null,
+      "dbp_min_24h": null,
+      "dbp_mean_24h": null,
+      "dbp_max_24h": null,
+      "mbp_min_24h": null,
+      "mbp_mean_24h": null,
+      "mbp_max_24h": null
+    },
+    "procedure_features": {},
+    "microbiology_features": {},
+    "icu_features": {},
+    "outcome_features": {},
+    "raw_case_summary": {
+      "sample_id": 34,
+      "subject_id": "12683097",
+      "hadm_id": "25966295",
+      "specialty_cnt": 2,
+      "specialty_list": "内分泌/代谢 | 心血管",
+      "gender": "F",
+      "anchor_age": 76,
+      "anchor_year_group": "2020 - 2022",
+      "admittime": "6/2/2150 00:00:00",
+      "dischtime": "9/2/2150 14:31:00",
+      "admission_type": "SURGICAL SAME DAY ADMISSION",
+      "race": "WHITE - OTHER EUROPEAN",
+      "insurance": "Medicare",
+      "hospital_expire_flag": 0,
+      "primary_diagnosis": "Malignant neoplasm of upper lobe, right bronchus or lung",
+      "comorbidity_list": "Anxiety disorder, unspecified | Essential (primary) hypertension | Hyperlipidemia, unspecified | Major depressive disorder, single episode, unspecified | Personal history of nicotine dependence",
+      "specialty_agents": "精神 | 内分泌/代谢 | 心血管 | 肿瘤/血液",
+      "drug_list": "acetaminophen | albuterol 0.083% neb soln | bag | furosemide | heparin | hydromorphone (dilaudid) | lactated ringers | lidocaine 5% patch | magnesium sulfate | ondansetron | oxycodone (immediate release) | polyethylene glycol | senna | tramadol",
+      "creatinine_24h": "",
+      "bun_24h": "",
+      "potassium_24h": "",
+      "sodium_24h": "",
+      "glucose_24h": "",
+      "inr_24h": "",
+      "bilirubin_total_24h": ""
+    }
+  },
+  "routing": {
+    "active_specialties": [
+      "肿瘤/血液",
+      "心血管",
+      "内分泌/代谢",
+      "精神/心理"
+    ],
+    "lead_specialty": "肿瘤/血液",
+    "specialty_related_diagnoses": {
+      "肿瘤/血液": [
+        "Malignant neoplasm of upper lobe, right bronchus or lung",
+        "Personal history of nicotine dependence"
+      ],
+      "心血管": [
+        "Essential (primary) hypertension",
+        "Hyperlipidemia, unspecified",
+        "Personal history of nicotine dependence"
+      ],
+      "内分泌/代谢": [
+        "缺失血糖、钠、钾、肾功能等关键代谢实验室数据，需围手术期复核"
+      ],
+      "精神/心理": [
+        "Anxiety disorder, unspecified",
+        "Major depressive disorder, single episode, unspecified"
+      ]
+    },
+    "rationale": "主诊断为右肺上叶支气管或肺恶性肿瘤，住院类型提示围手术期管理场景；同时合并高血压、高脂血症、焦虑和抑郁病史，且关键实验室和生命体征缺失，因此以肿瘤/胸外科治疗路径为主，心血管风险控制和代谢安全复核为重要协同方向。"
+  },
+  "specialty_results": [
+    {
+      "specialty_name": "肿瘤/血液",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "对乙酰氨基酚",
+          "confidence": 0.72,
+          "reason": "肺部肿瘤围手术期或胸部病变相关疼痛可优先使用非阿片基础镇痛，老年患者相对可控，但需复核肝功能和总日剂量。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "低分子肝素或普通肝素预防剂量",
+          "confidence": 0.66,
+          "reason": "恶性肿瘤、老年和住院/术后状态均增加静脉血栓栓塞风险，若无活动性出血、凝血异常或手术禁忌，可考虑药物性血栓预防。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "昂丹司琼",
+          "confidence": 0.58,
+          "reason": "若存在围手术期、阿片使用或后续抗肿瘤治疗相关恶心呕吐风险，可作为症状支持药物；需注意QT间期和电解质。"
+        }
+      ],
+      "recommendation_reasons": {
+        "primary_cancer_context": "右肺上叶恶性肿瘤需要以肿瘤/胸外科方案为主，处方重点包括围手术期镇痛、恶心呕吐控制、血栓预防、呼吸道护理和后续病理分期后抗肿瘤方案复核。",
+        "data_gap": "当前未提供病理分型、分期、手术方式、肝肾功能、血常规和凝血指标，因此不宜直接给出化疗、免疫治疗或靶向治疗具体方案。"
+      },
+      "risk_alerts": [
+        "缺失INR、血小板、血红蛋白和近期手术出血风险信息，抗凝预防需人工复核。",
+        "缺失肝肾功能，镇痛、止吐和抗凝剂量需复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "经验性化疗药物组合",
+          "reason": "缺失病理类型、分期、性能状态、肝肾功能和治疗目标，不能在本轮直接优先推荐。"
+        },
+        {
+          "drug_name": "免疫检查点抑制剂",
+          "reason": "缺失PD-L1、分期、既往免疫病史和治疗线数，需肿瘤专科复核。"
+        },
+        {
+          "drug_name": "靶向治疗药物",
+          "reason": "缺失EGFR、ALK、ROS1、BRAF、MET、RET、NTRK等分子检测结果。"
+        }
+      ],
+      "overall_confidence": 0.62,
+      "summary_reason": "可推荐围手术期支持和风险预防类处方，但疾病特异性抗肿瘤药物需等待病理、分期和分子检测。",
+      "conversation_text": "肿瘤/血液智能体认为，本例主轴是右肺上叶恶性肿瘤，当前处方应以围手术期支持、血栓预防、镇痛和后续抗肿瘤治疗复核为核心，不应虚构当前真实处方或直接给出未分型的化疗方案。"
+    },
+    {
+      "specialty_name": "心血管",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "阿托伐他汀",
+          "confidence": 0.68,
+          "reason": "合并高脂血症和吸烟史，老年患者具有动脉粥样硬化风险；若无肝功能异常或药物相互作用，可作为风险修饰治疗。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "氨氯地平",
+          "confidence": 0.55,
+          "reason": "合并原发性高血压，若住院血压持续升高且无低血压，可作为相对平稳的降压选择；当前缺失血压数据，需复核后启用或延续。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "肝素类血栓预防剂量",
+          "confidence": 0.53,
+          "reason": "肿瘤和住院状态增加血栓风险，但需与围手术出血风险、INR和血小板共同评估。"
+        }
+      ],
+      "recommendation_reasons": {
+        "hypertension": "已知原发性高血压，但24小时血压缺失，降压药应以复核血压、容量状态和既往用药为前提。",
+        "hyperlipidemia": "高脂血症和吸烟史支持继续或启动中等至高强度他汀类药物，需复核肝功能和肌病风险。",
+        "thrombosis_context": "肿瘤住院患者存在VTE风险，但心血管抗栓策略受到凝血指标缺失限制。"
+      },
+      "risk_alerts": [
+        "potassium_24h缺失，ACEI/ARB、利尿剂和影响心律药物需谨慎。",
+        "creatinine_24h缺失，ACEI/ARB、利尿剂、肝素类药物选择和剂量需复核。",
+        "inr_24h缺失，抗凝或抗血小板强化治疗存在未量化出血风险。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "华法林或治疗剂量抗凝",
+          "reason": "未见明确房颤、血栓或机械瓣等适应证，且INR和出血风险缺失。"
+        },
+        {
+          "drug_name": "强效利尿剂经验性使用",
+          "reason": "缺失容量状态、血压、肌酐和电解质，可能导致肾前性损伤或低钾。"
+        },
+        {
+          "drug_name": "ACEI/ARB经验性新增",
+          "reason": "肾功能、血钾和血压缺失，新增前需复核。"
+        }
+      ],
+      "overall_confidence": 0.6,
+      "summary_reason": "心血管方面支持他汀和有条件降压管理，抗栓预防需基于凝血和围手术出血风险决定。",
+      "conversation_text": "心血管智能体建议优先处理高脂血症和血压风险，但由于血压、电解质、肌酐和INR均缺失，任何影响肾灌注、电解质或出血风险的药物都应设为需复核。"
+    },
+    {
+      "specialty_name": "内分泌/代谢",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "0.9%氯化钠注射液",
+          "confidence": 0.5,
+          "reason": "可作为基础补液、溶媒或冲管选择之一，但需结合容量状态、血钠和心肾功能。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "葡萄糖注射液按需使用",
+          "confidence": 0.36,
+          "reason": "仅在禁食、低血糖风险或特定溶媒需求时考虑；当前血糖缺失，不应常规大量使用。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "电解质补充剂按检验结果使用",
+          "confidence": 0.34,
+          "reason": "钾、钠、肌酐均缺失，不能经验性补钾或快速纠钠，应列入复核层。"
+        }
+      ],
+      "recommendation_reasons": {
+        "missing_labs": "glucose_24h、sodium_24h、potassium_24h、creatinine_24h均缺失，触发代谢安全不确定性。",
+        "fluid_electrolyte": "围手术期补液和冲管药物可作为基础层，但必须依据生命体征、尿量、血钠、血钾和肾功能调整。"
+      },
+      "risk_alerts": [
+        "血糖缺失，胰岛素、糖水、系统性激素均需复核。",
+        "血钠缺失，补液方案需避免不明情况下快速纠正水钠平衡。",
+        "血钾缺失，补钾、胰岛素和影响钾水平的心血管药物需复核。",
+        "肌酐缺失，肾排泄药物、二甲双胍和部分抗凝方案需复核。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "胰岛素强化方案",
+          "reason": "无糖尿病诊断且血糖缺失，不应经验性启用。"
+        },
+        {
+          "drug_name": "二甲双胍",
+          "reason": "无糖尿病诊断，且肌酐/eGFR缺失。"
+        },
+        {
+          "drug_name": "经验性补钾",
+          "reason": "potassium_24h缺失，补钾可能导致高钾风险。"
+        },
+        {
+          "drug_name": "系统性糖皮质激素",
+          "reason": "无明确适应证，可能引起血糖波动、感染风险和精神症状加重。"
+        }
+      ],
+      "overall_confidence": 0.46,
+      "summary_reason": "代谢专科主要提供安全边界：补液、溶媒和电解质支持必须在复核实验室后个体化。",
+      "conversation_text": "内分泌/代谢智能体认为本例没有明确糖尿病或内分泌急症诊断，重点不是新增降糖药，而是防止缺失实验室条件下的血糖、电解质和肾功能相关用药风险。"
+    },
+    {
+      "specialty_name": "精神/心理",
+      "recommended_drugs_topk": [
+        {
+          "rank": 1,
+          "drug_name": "褪黑素",
+          "confidence": 0.48,
+          "reason": "若住院期间睡眠障碍明显，可作为相对温和的睡眠支持选择，老年患者仍需监测嗜睡和跌倒风险。"
+        },
+        {
+          "rank": 2,
+          "drug_name": "舍曲林需复核后延续或启动",
+          "confidence": 0.42,
+          "reason": "抑郁和焦虑诊断存在，但缺失既往用药、症状严重度、QT风险和相互作用信息，宜列为需复核药物。"
+        },
+        {
+          "rank": 3,
+          "drug_name": "短期低剂量抗焦虑药需严格限制",
+          "confidence": 0.25,
+          "reason": "仅在严重焦虑影响治疗配合且非药物措施无效时考虑；老年患者谵妄、跌倒和呼吸抑制风险较高。"
+        }
+      ],
+      "recommendation_reasons": {
+        "psychiatric_comorbidity": "合并焦虑障碍和单次发作抑郁障碍，住院和肿瘤诊疗可能加重焦虑、失眠和疼痛感知。",
+        "geriatric_safety": "76岁患者应避免不必要镇静药物，特别是苯二氮卓类和强抗胆碱药。"
+      },
+      "risk_alerts": [
+        "老年患者镇静催眠药可增加跌倒、谵妄和呼吸抑制风险。",
+        "若合用昂丹司琼、某些抗抑郁药或电解质异常，需关注QT间期。"
+      ],
+      "avoid_or_low_priority_drugs": [
+        {
+          "drug_name": "苯二氮卓类常规使用",
+          "reason": "老年、肺部疾病和围手术期背景下增加谵妄、跌倒和呼吸抑制风险。"
+        },
+        {
+          "drug_name": "强抗胆碱镇静药",
+          "reason": "老年患者认知和尿潴留风险较高。"
+        }
+      ],
+      "overall_confidence": 0.4,
+      "summary_reason": "精神心理药物应以非药物支持和既往用药核对为主，必要时低风险短期支持。",
+      "conversation_text": "精神/心理智能体建议将焦虑和抑郁作为治疗依从性和安全风险因素处理，避免在缺失既往用药和心电图信息时贸然新增高风险镇静药。"
+    }
+  ],
+  "mdt_discussion": {
+    "review_round": [
+      {
+        "reviewer_specialty": "肿瘤/血液",
+        "accepted_drugs": [
+          "对乙酰氨基酚",
+          "昂丹司琼",
+          "低分子肝素或普通肝素预防剂量",
+          "0.9%氯化钠注射液"
+        ],
+        "cautioned_drugs": [
+          "阿托伐他汀",
+          "氨氯地平",
+          "舍曲林",
+          "电解质补充剂按检验结果使用"
+        ],
+        "conflict_notes": [
+          "抗肿瘤特异性药物不能在缺失病理分型、分期和分子检测时直接进入最终疾病治疗层。",
+          "血栓预防与围手术出血风险可能冲突。"
+        ],
+        "priority_comment": "优先保障围手术期安全、疼痛控制、血栓预防评估和后续肿瘤专科治疗决策。"
+      },
+      {
+        "reviewer_specialty": "心血管",
+        "accepted_drugs": [
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "肝素类血栓预防剂量需凝血复核后使用"
+        ],
+        "cautioned_drugs": [
+          "ACEI/ARB",
+          "利尿剂",
+          "治疗剂量抗凝",
+          "昂丹司琼"
+        ],
+        "conflict_notes": [
+          "缺失血压和电解质时，不应经验性强化降压或使用影响钾水平的药物。",
+          "昂丹司琼与电解质异常或QT风险叠加时需心电图复核。"
+        ],
+        "priority_comment": "心血管方案应定位为风险修饰和有条件延续治疗，不应覆盖肿瘤主线。"
+      },
+      {
+        "reviewer_specialty": "内分泌/代谢",
+        "accepted_drugs": [
+          "0.9%氯化钠注射液按容量状态使用",
+          "葡萄糖注射液按血糖和禁食状态使用"
+        ],
+        "cautioned_drugs": [
+          "胰岛素",
+          "系统性糖皮质激素",
+          "电解质补充剂",
+          "二甲双胍"
+        ],
+        "conflict_notes": [
+          "血糖、钠、钾、肌酐均缺失，任何补液和代谢干预都应有实验室触发条件。"
+        ],
+        "priority_comment": "将代谢相关药物放入需复核或条件使用层，避免凭空补钾、降糖或快速纠钠。"
+      },
+      {
+        "reviewer_specialty": "精神/心理",
+        "accepted_drugs": [
+          "褪黑素按需",
+          "既往抗抑郁药核对后延续"
+        ],
+        "cautioned_drugs": [
+          "苯二氮卓类",
+          "强抗胆碱镇静药",
+          "新启动SSRI"
+        ],
+        "conflict_notes": [
+          "老年肺部肿瘤患者镇静药与呼吸抑制、谵妄、跌倒风险冲突。",
+          "SSRI与抗凝、止吐药和QT风险存在交叉复核需求。"
+        ],
+        "priority_comment": "精神心理处方宜保守，优先非药物干预和药物史核对。"
+      }
+    ],
+    "consensus_notes": [
+      "本轮未见当前真实处方drug_list，因此所有推荐均为基于诊断、共病、缺失检验风险规则和MDT推理生成的候选方案。",
+      "最终方案应以围手术期支持、血栓风险评估、心血管风险修饰、症状控制和关键检验复核为主。",
+      "疾病特异性抗肿瘤药物、治疗剂量抗凝、ACEI/ARB/利尿剂、胰岛素和电解质补充均应在更多数据明确后再决定。"
+    ],
+    "candidate_plans": [
+      {
+        "plan_id": "plan_A",
+        "plan_name": "保守安全型围手术期支持处方",
+        "drugs": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "0.9%氯化钠注射液用于冲管/溶媒/基础补液",
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "低分子肝素或普通肝素预防剂量需出血风险复核后使用",
+          "褪黑素按需",
+          "聚乙二醇或番泻叶按需"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "抗肿瘤特异性治疗暂缓，待病理分型、分期、分子检测和肿瘤专科方案确定"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "氨氯地平需血压复核后使用",
+            "低分子肝素或普通肝素预防剂量需INR/血小板/出血风险复核后使用"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚",
+            "昂丹司琼按需",
+            "聚乙二醇或番泻叶按需",
+            "褪黑素按需"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液用于静脉通路冲管",
+            "局部伤口/管路护理相关药物按机构规范使用"
+          ],
+          "prophylaxis_prevention_medication": [
+            "肝素类VTE预防需复核后使用",
+            "机械预防作为药物预防禁忌时的替代"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液",
+            "葡萄糖注射液仅在溶媒要求或血糖策略允许时使用"
+          ],
+          "procedure_related_medication": [
+            "围手术期抗菌药物需依据手术记录、感染风险和机构路径决定",
+            "局麻或麻醉相关药物由麻醉/手术团队管理"
+          ],
+          "nutrition_electrolyte_medication": [
+            "电解质补充剂仅按钠、钾、镁、磷和肾功能结果补充",
+            "营养支持按进食状态和营养评估决定"
+          ],
+          "requires_review": [
+            "病理分型和肿瘤分期",
+            "EGFR/ALK/ROS1/BRAF/MET/RET/NTRK及PD-L1等检测",
+            "血压趋势",
+            "肌酐/eGFR",
+            "钾",
+            "钠",
+            "血糖",
+            "INR",
+            "血小板",
+            "血红蛋白",
+            "心电图QT间期",
+            "既往家庭用药"
+          ]
+        },
+        "supporting_specialties": [
+          "肿瘤/血液",
+          "心血管",
+          "内分泌/代谢",
+          "精神/心理"
+        ],
+        "rationale": "在关键实验室和生命体征缺失时，选择可逆、条件化、低侵袭的支持处方，并把高风险或疾病特异性药物放入复核层。",
+        "aggregate_score": 0.78
+      },
+      {
+        "plan_id": "plan_B",
+        "plan_name": "血栓与心血管风险强化候选处方",
+        "drugs": [
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "低分子肝素预防剂量",
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "0.9%氯化钠注射液",
+          "肠道通便药按需"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "抗肿瘤治疗待病理/分期后制定"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀",
+            "氨氯地平需血压复核后使用",
+            "低分子肝素预防剂量"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚",
+            "昂丹司琼按需",
+            "通便药按需"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "低分子肝素预防剂量"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液"
+          ],
+          "procedure_related_medication": [
+            "围手术期抗菌药物需按手术路径和感染风险复核"
+          ],
+          "nutrition_electrolyte_medication": [
+            "按实验室结果补充电解质和营养"
+          ],
+          "requires_review": [
+            "INR",
+            "血小板",
+            "血红蛋白",
+            "手术出血风险",
+            "肌酐/eGFR",
+            "钾",
+            "血压",
+            "心电图"
+          ]
+        },
+        "supporting_specialties": [
+          "心血管",
+          "肿瘤/血液"
+        ],
+        "rationale": "更强调恶性肿瘤住院相关血栓预防和心血管风险修饰，但因凝血和肾功能缺失，安全不确定性高于plan_A。",
+        "aggregate_score": 0.68
+      },
+      {
+        "plan_id": "plan_C",
+        "plan_name": "症状和心理支持优先候选处方",
+        "drugs": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "褪黑素按需",
+          "既往抗抑郁药核对后延续",
+          "0.9%氯化钠注射液",
+          "阿托伐他汀需肝功能复核后使用"
+        ],
+        "medication_layers": {
+          "disease_directed_therapy": [
+            "抗肿瘤治疗暂缓至专科分期和病理明确"
+          ],
+          "risk_modifying_therapy": [
+            "阿托伐他汀需肝功能复核后使用"
+          ],
+          "symptom_supportive_medication": [
+            "对乙酰氨基酚",
+            "昂丹司琼按需",
+            "褪黑素按需",
+            "既往抗抑郁药核对后延续"
+          ],
+          "nursing_support_medication": [
+            "0.9%氯化钠注射液冲管"
+          ],
+          "prophylaxis_prevention_medication": [
+            "VTE药物预防暂列复核，若出血风险低再启用"
+          ],
+          "fluid_diluent_flush_medication": [
+            "0.9%氯化钠注射液"
+          ],
+          "procedure_related_medication": [
+            "按手术/麻醉团队路径执行"
+          ],
+          "nutrition_electrolyte_medication": [
+            "按营养评估和实验室结果处理"
+          ],
+          "requires_review": [
+            "既往精神科用药",
+            "谵妄风险",
+            "QT间期",
+            "钠钾镁",
+            "肝肾功能",
+            "凝血指标",
+            "疼痛评分",
+            "恶心呕吐风险"
+          ]
+        },
+        "supporting_specialties": [
+          "精神/心理",
+          "肿瘤/血液",
+          "内分泌/代谢"
+        ],
+        "rationale": "适合焦虑、失眠、疼痛或恶心突出且抗凝暂不安全的场景，但对VTE预防和高血压控制覆盖不足。",
+        "aggregate_score": 0.6
+      }
+    ]
+  },
+  "candidate_plans": [
+    {
+      "plan_id": "plan_A",
+      "plan_name": "保守安全型围手术期支持处方",
+      "drugs": [
+        "对乙酰氨基酚",
+        "昂丹司琼按需",
+        "0.9%氯化钠注射液用于冲管/溶媒/基础补液",
+        "阿托伐他汀",
+        "氨氯地平需血压复核后使用",
+        "低分子肝素或普通肝素预防剂量需出血风险复核后使用",
+        "褪黑素按需",
+        "聚乙二醇或番泻叶按需"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "抗肿瘤特异性治疗暂缓，待病理分型、分期、分子检测和肿瘤专科方案确定"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "低分子肝素或普通肝素预防剂量需INR/血小板/出血风险复核后使用"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "聚乙二醇或番泻叶按需",
+          "褪黑素按需"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液用于静脉通路冲管",
+          "局部伤口/管路护理相关药物按机构规范使用"
+        ],
+        "prophylaxis_prevention_medication": [
+          "肝素类VTE预防需复核后使用",
+          "机械预防作为药物预防禁忌时的替代"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液",
+          "葡萄糖注射液仅在溶媒要求或血糖策略允许时使用"
+        ],
+        "procedure_related_medication": [
+          "围手术期抗菌药物需依据手术记录、感染风险和机构路径决定",
+          "局麻或麻醉相关药物由麻醉/手术团队管理"
+        ],
+        "nutrition_electrolyte_medication": [
+          "电解质补充剂仅按钠、钾、镁、磷和肾功能结果补充",
+          "营养支持按进食状态和营养评估决定"
+        ],
+        "requires_review": [
+          "病理分型和肿瘤分期",
+          "EGFR/ALK/ROS1/BRAF/MET/RET/NTRK及PD-L1等检测",
+          "血压趋势",
+          "肌酐/eGFR",
+          "钾",
+          "钠",
+          "血糖",
+          "INR",
+          "血小板",
+          "血红蛋白",
+          "心电图QT间期",
+          "既往家庭用药"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "心血管",
+        "内分泌/代谢",
+        "精神/心理"
+      ],
+      "rationale": "在关键实验室和生命体征缺失时，选择可逆、条件化、低侵袭的支持处方，并把高风险或疾病特异性药物放入复核层。",
+      "aggregate_score": 0.78
+    },
+    {
+      "plan_id": "plan_B",
+      "plan_name": "血栓与心血管风险强化候选处方",
+      "drugs": [
+        "阿托伐他汀",
+        "氨氯地平需血压复核后使用",
+        "低分子肝素预防剂量",
+        "对乙酰氨基酚",
+        "昂丹司琼按需",
+        "0.9%氯化钠注射液",
+        "肠道通便药按需"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "抗肿瘤治疗待病理/分期后制定"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "低分子肝素预防剂量"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "通便药按需"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "低分子肝素预防剂量"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "围手术期抗菌药物需按手术路径和感染风险复核"
+        ],
+        "nutrition_electrolyte_medication": [
+          "按实验室结果补充电解质和营养"
+        ],
+        "requires_review": [
+          "INR",
+          "血小板",
+          "血红蛋白",
+          "手术出血风险",
+          "肌酐/eGFR",
+          "钾",
+          "血压",
+          "心电图"
+        ]
+      },
+      "supporting_specialties": [
+        "心血管",
+        "肿瘤/血液"
+      ],
+      "rationale": "更强调恶性肿瘤住院相关血栓预防和心血管风险修饰，但因凝血和肾功能缺失，安全不确定性高于plan_A。",
+      "aggregate_score": 0.68
+    },
+    {
+      "plan_id": "plan_C",
+      "plan_name": "症状和心理支持优先候选处方",
+      "drugs": [
+        "对乙酰氨基酚",
+        "昂丹司琼按需",
+        "褪黑素按需",
+        "既往抗抑郁药核对后延续",
+        "0.9%氯化钠注射液",
+        "阿托伐他汀需肝功能复核后使用"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "抗肿瘤治疗暂缓至专科分期和病理明确"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀需肝功能复核后使用"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "褪黑素按需",
+          "既往抗抑郁药核对后延续"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液冲管"
+        ],
+        "prophylaxis_prevention_medication": [
+          "VTE药物预防暂列复核，若出血风险低再启用"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液"
+        ],
+        "procedure_related_medication": [
+          "按手术/麻醉团队路径执行"
+        ],
+        "nutrition_electrolyte_medication": [
+          "按营养评估和实验室结果处理"
+        ],
+        "requires_review": [
+          "既往精神科用药",
+          "谵妄风险",
+          "QT间期",
+          "钠钾镁",
+          "肝肾功能",
+          "凝血指标",
+          "疼痛评分",
+          "恶心呕吐风险"
+        ]
+      },
+      "supporting_specialties": [
+        "精神/心理",
+        "肿瘤/血液",
+        "内分泌/代谢"
+      ],
+      "rationale": "适合焦虑、失眠、疼痛或恶心突出且抗凝暂不安全的场景，但对VTE预防和高血压控制覆盖不足。",
+      "aggregate_score": 0.6
+    }
+  ],
+  "safety_result": {
+    "final_plan": {
+      "plan_id": "plan_A",
+      "plan_name": "保守安全型围手术期支持处方",
+      "drugs": [
+        "对乙酰氨基酚",
+        "昂丹司琼按需",
+        "0.9%氯化钠注射液用于冲管/溶媒/基础补液",
+        "阿托伐他汀",
+        "氨氯地平需血压复核后使用",
+        "低分子肝素或普通肝素预防剂量需出血风险复核后使用",
+        "褪黑素按需",
+        "聚乙二醇或番泻叶按需"
+      ],
+      "medication_layers": {
+        "disease_directed_therapy": [
+          "抗肿瘤特异性治疗暂缓，待病理分型、分期、分子检测和肿瘤专科方案确定"
+        ],
+        "risk_modifying_therapy": [
+          "阿托伐他汀",
+          "氨氯地平需血压复核后使用",
+          "低分子肝素或普通肝素预防剂量需INR/血小板/出血风险复核后使用"
+        ],
+        "symptom_supportive_medication": [
+          "对乙酰氨基酚",
+          "昂丹司琼按需",
+          "聚乙二醇或番泻叶按需",
+          "褪黑素按需"
+        ],
+        "nursing_support_medication": [
+          "0.9%氯化钠注射液用于静脉通路冲管",
+          "局部伤口/管路护理相关药物按机构规范使用"
+        ],
+        "prophylaxis_prevention_medication": [
+          "肝素类VTE预防需复核后使用",
+          "机械预防作为药物预防禁忌时的替代"
+        ],
+        "fluid_diluent_flush_medication": [
+          "0.9%氯化钠注射液",
+          "葡萄糖注射液仅在溶媒要求或血糖策略允许时使用"
+        ],
+        "procedure_related_medication": [
+          "围手术期抗菌药物需依据手术记录、感染风险和机构路径决定",
+          "局麻或麻醉相关药物由麻醉/手术团队管理"
+        ],
+        "nutrition_electrolyte_medication": [
+          "电解质补充剂仅按钠、钾、镁、磷和肾功能结果补充",
+          "营养支持按进食状态和营养评估决定"
+        ],
+        "requires_review": [
+          "病理分型和肿瘤分期",
+          "EGFR/ALK/ROS1/BRAF/MET/RET/NTRK及PD-L1等检测",
+          "血压趋势",
+          "肌酐/eGFR",
+          "钾",
+          "钠",
+          "血糖",
+          "INR",
+          "血小板",
+          "血红蛋白",
+          "心电图QT间期",
+          "既往家庭用药"
+        ]
+      },
+      "supporting_specialties": [
+        "肿瘤/血液",
+        "心血管",
+        "内分泌/代谢",
+        "精神/心理"
+      ],
+      "rationale": "在关键实验室和生命体征缺失时，选择可逆、条件化、低侵袭的支持处方，并把高风险或疾病特异性药物放入复核层。",
+      "aggregate_score": 0.78
+    },
+    "ranked_plans": [
+      {
+        "plan_id": "plan_A",
+        "rank": 1,
+        "score": 0.78,
+        "reason": "覆盖面最完整且对缺失检验采用条件化安全约束。"
+      },
+      {
+        "plan_id": "plan_B",
+        "rank": 2,
+        "score": 0.68,
+        "reason": "心血管和血栓预防更积极，但凝血、肾功能和围手术出血风险缺失导致安全不确定性更高。"
+      },
+      {
+        "plan_id": "plan_C",
+        "rank": 3,
+        "score": 0.6,
+        "reason": "症状和心理支持较安全，但对肿瘤住院VTE风险和高血压/高脂血症覆盖不足。"
+      }
+    ],
+    "triggered_risks": [
+      {
+        "risk_id": "missing_creatinine_renal_drug_risk",
+        "severity": "requires_review",
+        "message": "creatinine_24h缺失，肾功能敏感药物、ACEI/ARB、利尿剂、肝素类药物剂量和二甲双胍等均需复核。"
+      },
+      {
+        "risk_id": "missing_potassium_arrhythmia_risk",
+        "severity": "requires_review",
+        "message": "potassium_24h缺失，影响血钾或心律的药物需复核心电图和电解质。"
+      },
+      {
+        "risk_id": "missing_sodium_fluid_risk",
+        "severity": "requires_review",
+        "message": "sodium_24h缺失，补液和水钠纠正策略不可经验性强化。"
+      },
+      {
+        "risk_id": "missing_glucose_metabolic_risk",
+        "severity": "requires_review",
+        "message": "glucose_24h缺失，胰岛素、糖水和系统性激素均需谨慎。"
+      },
+      {
+        "risk_id": "missing_inr_bleeding_risk",
+        "severity": "requires_review",
+        "message": "inr_24h缺失，抗凝/抗血小板强化治疗和围手术出血风险需复核。"
+      },
+      {
+        "risk_id": "geriatric_sedation_risk",
+        "severity": "moderate",
+        "message": "76岁患者使用镇静催眠或苯二氮卓类药物有跌倒、谵妄和呼吸抑制风险。"
+      }
+    ],
+    "safety_summary": "安全审核选择plan_A作为最终候选处方。该方案不声称看到当前真实处方，不直接给出缺乏病理和分期依据的抗肿瘤药物；对抗凝、降压、补液、电解质、精神科用药均设置复核条件。最关键的安全前置项是补齐肌酐/eGFR、钾、钠、血糖、INR、血小板、血红蛋白、血压趋势、心电图和既往家庭用药。",
+    "llm_safety_review": {
+      "provider": "cursor_cloud_agent",
+      "status": "completed"
+    }
+  },
+  "transcript": [
+    {
+      "step": "1_诊断路由",
+      "speaker": "routing_agent",
+      "text": "识别主诊断为右肺上叶恶性肿瘤，合并高血压、高脂血症、焦虑、抑郁和吸烟史；将肿瘤/血液设为主导专科，心血管、内分泌/代谢和精神/心理参与协同。"
+    },
+    {
+      "step": "2_专科独立评估",
+      "speaker": "oncology_agent",
+      "text": "建议围绕肿瘤围手术期支持、镇痛、恶心控制和VTE风险预防；疾病特异性抗肿瘤药物需病理、分期和分子检测后决定。"
+    },
+    {
+      "step": "2_专科独立评估",
+      "speaker": "cardiology_agent",
+      "text": "建议高脂血症可考虑他汀，高血压治疗需复核血压趋势；抗凝预防需复核INR、血小板、血红蛋白和出血风险。"
+    },
+    {
+      "step": "2_专科独立评估",
+      "speaker": "endocrine_metabolic_agent",
+      "text": "指出血糖、钠、钾、肌酐均缺失，补液、电解质、胰岛素、糖水和肾功能敏感药物必须条件化处理。"
+    },
+    {
+      "step": "2_专科独立评估",
+      "speaker": "psychiatry_agent",
+      "text": "焦虑和抑郁需关注，但老年肺部疾病背景下应避免常规苯二氮卓类和强镇静药，优先既往用药核对和低风险睡眠支持。"
+    },
+    {
+      "step": "3_MDT交叉审阅",
+      "speaker": "mdt_board",
+      "text": "各专科一致认为可生成支持性完整候选处方，但需把抗肿瘤特异治疗、治疗剂量抗凝、ACEI/ARB、利尿剂、胰岛素和电解质补充列为复核项。"
+    },
+    {
+      "step": "4_候选处方生成",
+      "speaker": "plan_generator",
+      "text": "生成plan_A保守安全型、plan_B血栓与心血管风险强化型、plan_C症状和心理支持优先型三个候选方案。"
+    },
+    {
+      "step": "5_安全审核",
+      "speaker": "safety_agent",
+      "text": "因关键实验室和生命体征缺失，plan_A综合安全性和覆盖面最佳；plan_B抗凝积极但出血风险未知，plan_C较保守但风险控制覆盖不足。"
+    },
+    {
+      "step": "6_最终输出",
+      "speaker": "system",
+      "text": "最终推荐plan_A，所有剂量、给药途径和启停条件需由临床医生结合最新病理、手术记录、生命体征、实验室和既往用药核定。王老师，回答结束"
+    }
+  ],
+  "cursor_enabled": true,
+  "cursor_full_chain": true
+}
