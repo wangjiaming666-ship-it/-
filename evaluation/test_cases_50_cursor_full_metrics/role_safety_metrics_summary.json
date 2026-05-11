@@ -1,0 +1,42 @@
+[
+  {
+    "category": "治疗目标一致性",
+    "metric": "Treatment Role Precision",
+    "mean": 0.2018,
+    "median": 0.2222,
+    "case_count": 50,
+    "note": "final_plan medication_layers/role_map vs true prescription role_map"
+  },
+  {
+    "category": "治疗目标一致性",
+    "metric": "Treatment Role Coverage",
+    "mean": 0.4193,
+    "median": 0.5,
+    "case_count": 50,
+    "note": "final_plan medication_layers/role_map covers true prescription roles"
+  },
+  {
+    "category": "安全性",
+    "metric": "Risk Rule Trigger Count",
+    "mean": 5.46,
+    "median": 5.0,
+    "case_count": 50,
+    "note": "number of triggered baseline risk rules per case"
+  },
+  {
+    "category": "安全性",
+    "metric": "High Risk Count",
+    "mean": 0.0,
+    "median": 0.0,
+    "case_count": 50,
+    "note": "number of high-level triggered risk rules per case"
+  },
+  {
+    "category": "安全性",
+    "metric": "DDI Rate",
+    "mean": "N/A",
+    "median": "N/A",
+    "case_count": 50,
+    "note": "未提供 DDI 图谱或药物相互作用表，当前无法计算"
+  }
+]

@@ -1,0 +1,6 @@
+category,metric,mean,median,case_count,note
+治疗目标一致性,Treatment Role Precision,0.2018,0.2222,50,final_plan medication_layers/role_map vs true prescription role_map
+治疗目标一致性,Treatment Role Coverage,0.4193,0.5,50,final_plan medication_layers/role_map covers true prescription roles
+安全性,Risk Rule Trigger Count,5.46,5.0,50,number of triggered baseline risk rules per case
+安全性,High Risk Count,0.0,0.0,50,number of high-level triggered risk rules per case
+安全性,DDI Rate,N/A,N/A,50,未提供 DDI 图谱或药物相互作用表，当前无法计算
